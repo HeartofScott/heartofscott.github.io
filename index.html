@@ -1,207 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Druid Heart of Scotland</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Crimson+Text:ital,wght@0,400;1,400&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community · Druid Heart of Scotland</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1208; --parchment: #f5efe0; --parchment-dark: #e8dcc8;
+      --moss: #3d5a3e; --moss-light: #5a7a5b; --gold: #b8860b;
+      --gold-light: #d4a017; --mist: #8ca0a0; --stone: #6b6560;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background-color: var(--ink); color: var(--parchment); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 18px; line-height: 1.8; overflow-x: hidden; }
+    body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; z-index: 9999; opacity: 0.35; }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+    #top-nav { position: sticky; top: 0; z-index: 100; background: rgba(14,12,6,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(184,134,11,0.15); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .nav-home { font-family: 'Cinzel Decorative', serif; font-size: 0.7rem; letter-spacing: 0.2em; color: var(--gold); text-decoration: none; transition: color 0.3s; }
+    .nav-home:hover { color: var(--parchment); }
+    .nav-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .nav-links a { font-family: 'Cinzel Decorative', serif; font-size: 0.6rem; letter-spacing: 0.15em; color: var(--mist); text-decoration: none; transition: color 0.3s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold-light); }
 
-  body {
-    background-color: #0d0d1a;
-    color: #c9b8e8;
-    font-family: 'Crimson Text', serif;
-    font-size: 1.2rem;
-    line-height: 1.8;
-  }
+    .page-hero { text-align: center; padding: 5rem 2rem 4rem; background: radial-gradient(ellipse at 30% 50%, rgba(61,90,62,0.15) 0%, transparent 60%), radial-gradient(ellipse at 70% 30%, rgba(184,134,11,0.07) 0%, transparent 50%), #0e0c06; border-bottom: 1px solid rgba(184,134,11,0.12); }
+    .page-hero .icon { font-size: 2.5rem; margin-bottom: 1.5rem; display: block; animation: moonpulse 6s ease-in-out infinite; }
+    @keyframes moonpulse { 0%,100% { filter: drop-shadow(0 0 15px rgba(212,160,23,0.3)); } 50% { filter: drop-shadow(0 0 30px rgba(212,160,23,0.6)); } }
+    .page-hero h1 { font-family: 'Cinzel Decorative', serif; font-size: clamp(1.6rem, 5vw, 3rem); font-weight: 400; background: linear-gradient(135deg, #d4a017 0%, #f5efe0 50%, #b8860b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 1rem; }
+    .page-hero p { font-style: italic; color: var(--mist); font-size: 1.1rem; max-width: 560px; margin: 0 auto 2rem; }
+    .page-nav { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
+    .page-nav a { font-family: 'Cinzel Decorative', serif; font-size: 0.65rem; letter-spacing: 0.2em; color: var(--gold-light); text-decoration: none; border-bottom: 1px solid rgba(184,134,11,0.3); padding-bottom: 3px; transition: color 0.3s, border-color 0.3s; }
+    .page-nav a:hover { color: var(--parchment); border-color: var(--parchment); }
 
-  header {
-    background: linear-gradient(180deg, #0d0d1a 0%, #1a0a2e 100%);
-    text-align: center;
-    padding: 60px 20px 40px;
-    border-bottom: 1px solid #3d2060;
-  }
+    .container { max-width: 1100px; margin: 0 auto; padding: 5rem 2rem; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    @media (max-width: 720px) { .two-col { grid-template-columns: 1fr; gap: 3rem; } }
+    .section-label { font-family: 'Cinzel Decorative', serif; font-size: 0.6rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 0.5rem; }
+    h2 { font-family: 'Cinzel Decorative', serif; font-size: clamp(1.2rem, 3vw, 1.8rem); font-weight: 400; color: var(--parchment); margin-bottom: 2rem; line-height: 1.3; }
+    .section-divider { border: none; border-top: 1px solid rgba(184,134,11,0.15); margin: 5rem 0; }
+    .rune-divider { text-align: center; color: var(--gold); opacity: 0.25; font-size: 1rem; letter-spacing: 0.8em; padding: 0.5rem 0; margin: 1.5rem 0; }
 
-  header h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 2.8rem;
-    color: #e8d5ff;
-    text-shadow: 0 0 20px #7b2fff;
-    letter-spacing: 4px;
-    margin-bottom: 10px;
-  }
+    /* Events */
+    .events-intro { color: var(--parchment-dark); margin-bottom: 2.5rem; font-size: 1.05rem; }
+    .event-card { border: 1px solid rgba(184,134,11,0.2); background: rgba(61,90,62,0.06); padding: 1.5rem; margin-bottom: 1.25rem; position: relative; transition: background 0.3s, border-color 0.3s; }
+    .event-card:hover { background: rgba(61,90,62,0.12); border-color: rgba(184,134,11,0.4); }
+    .event-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: linear-gradient(to bottom, var(--gold), transparent); }
+    .event-date { font-family: 'Cinzel Decorative', serif; font-size: 0.65rem; letter-spacing: 0.2em; color: var(--gold-light); margin-bottom: 0.4rem; }
+    .event-card h3 { font-family: 'Cinzel Decorative', serif; font-size: 0.95rem; font-weight: 400; color: var(--parchment); margin-bottom: 0.5rem; }
+    .event-card p { color: var(--mist); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.5rem; }
+    .event-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 0.75rem; }
+    .event-meta span { font-size: 0.85rem; color: var(--stone); font-style: italic; }
+    .event-meta a { font-size: 0.85rem; color: var(--moss-light); text-decoration: none; }
+    .event-meta a:hover { color: var(--gold-light); text-decoration: underline; }
+    .event-tag { display: inline-block; font-family: 'Cinzel Decorative', serif; font-size: 0.55rem; letter-spacing: 0.15em; padding: 0.2rem 0.6rem; border: 1px solid rgba(61,90,62,0.5); color: var(--moss-light); margin-right: 0.4rem; margin-top: 0.4rem; }
 
-  header p {
-    color: #9d7fc4;
-    font-style: italic;
-    font-size: 1.1rem;
-    letter-spacing: 2px;
-  }
+    /* Submit form */
+    .submit-box { border: 1px solid rgba(184,134,11,0.2); background: rgba(14,12,6,0.6); padding: 2rem; }
+    .submit-box h3 { font-family: 'Cinzel Decorative', serif; font-size: 1rem; font-weight: 400; color: var(--gold-light); margin-bottom: 0.5rem; }
+    .submit-box .sub-note { font-size: 0.9rem; color: var(--stone); font-style: italic; margin-bottom: 1.5rem; }
+    .form-group { margin-bottom: 1.25rem; }
+    .form-group label { display: block; font-family: 'Cinzel Decorative', serif; font-size: 0.6rem; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 0.4rem; }
+    .form-group input, .form-group textarea, .form-group select { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(184,134,11,0.25); color: var(--parchment); font-family: 'Cormorant Garamond', serif; font-size: 1rem; padding: 0.75rem 1rem; outline: none; transition: border-color 0.3s; -webkit-appearance: none; }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--gold-light); background: rgba(255,255,255,0.06); }
+    .form-group textarea { min-height: 100px; resize: vertical; }
+    .form-group select option { background: #1a1208; }
+    .submit-btn { width: 100%; background: transparent; border: 1px solid rgba(184,134,11,0.5); color: var(--gold-light); font-family: 'Cinzel Decorative', serif; font-size: 0.7rem; letter-spacing: 0.2em; padding: 1rem; cursor: pointer; transition: all 0.3s; margin-top: 0.5rem; }
+    .submit-btn:hover { background: rgba(184,134,11,0.12); border-color: var(--gold-light); color: var(--parchment); }
+    .form-success { display: none; text-align: center; padding: 2rem; color: var(--moss-light); font-style: italic; font-size: 1.1rem; }
 
-  .moon {
-    font-size: 3rem;
-    display: block;
-    margin-bottom: 20px;
-    animation: glow 3s ease-in-out infinite alternate;
-  }
+    /* Orgs */
+    .org-card { border: 1px solid rgba(184,134,11,0.15); padding: 1.5rem; margin-bottom: 1.25rem; background: rgba(14,12,6,0.4); transition: border-color 0.3s, background 0.3s; }
+    .org-card:hover { border-color: rgba(184,134,11,0.35); background: rgba(61,90,62,0.07); }
+    .org-card h3 { font-family: 'Cinzel Decorative', serif; font-size: 0.9rem; font-weight: 400; color: var(--parchment); margin-bottom: 0.4rem; }
+    .org-card p { color: var(--mist); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.75rem; }
+    .org-type { font-size: 0.8rem; color: var(--stone); font-style: italic; margin-bottom: 0.5rem; }
+    .org-link { font-family: 'Cinzel Decorative', serif; font-size: 0.6rem; letter-spacing: 0.15em; color: var(--gold-light); text-decoration: none; border-bottom: 1px solid rgba(184,134,11,0.3); padding-bottom: 2px; transition: color 0.3s, border-color 0.3s; }
+    .org-link:hover { color: var(--parchment); border-color: var(--parchment); }
 
-  @keyframes glow {
-    from { text-shadow: 0 0 10px #7b2fff; }
-    to { text-shadow: 0 0 30px #bf80ff, 0 0 60px #7b2fff; }
-  }
+    /* DHoS Useful Links */
+    .useful-intro { color: var(--parchment-dark); font-size: 1.05rem; font-style: italic; margin-bottom: 3rem; max-width: 680px; border-left: 2px solid var(--moss); padding-left: 1.5rem; line-height: 1.7; }
+    .filter-tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .filter-btn { background: transparent; border: 1px solid rgba(184,134,11,0.25); color: var(--stone); font-family: 'Cinzel Decorative', serif; font-size: 0.6rem; letter-spacing: 0.15em; padding: 0.4rem 1rem; cursor: pointer; transition: all 0.25s; }
+    .filter-btn:hover, .filter-btn.active { background: rgba(184,134,11,0.12); border-color: var(--gold-light); color: var(--gold-light); }
+    .links-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; }
+    .link-card { border: 1px solid rgba(184,134,11,0.15); background: rgba(14,12,6,0.5); padding: 1.5rem; text-decoration: none; display: block; transition: all 0.3s; position: relative; overflow: hidden; }
+    .link-card::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: linear-gradient(to right, var(--moss), var(--gold)); transition: width 0.4s ease; }
+    .link-card:hover { background: rgba(61,90,62,0.1); border-color: rgba(184,134,11,0.35); transform: translateY(-2px); }
+    .link-card:hover::after { width: 100%; }
+    .link-cat { font-family: 'Cinzel Decorative', serif; font-size: 0.55rem; letter-spacing: 0.2em; color: var(--moss-light); margin-bottom: 0.5rem; display: block; }
+    .link-card h3 { font-family: 'Cinzel Decorative', serif; font-size: 0.85rem; font-weight: 400; color: var(--parchment); margin-bottom: 0.5rem; line-height: 1.3; }
+    .link-card p { color: var(--mist); font-size: 0.9rem; line-height: 1.55; margin-bottom: 0.75rem; }
+    .link-url { font-size: 0.8rem; color: var(--gold); opacity: 0.7; font-style: italic; }
 
-  nav {
-    background: #110820;
-    text-align: center;
-    padding: 15px;
-    border-bottom: 1px solid #3d2060;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
+    /* Edit guide */
+    #edit-guide { background: rgba(61,90,62,0.06); border: 1px solid rgba(61,90,62,0.2); padding: 2.5rem; }
+    .edit-step { display: flex; gap: 1.5rem; margin-bottom: 2rem; align-items: flex-start; }
+    .step-num { font-family: 'Cinzel Decorative', serif; font-size: 1.5rem; color: var(--gold); opacity: 0.4; line-height: 1; flex-shrink: 0; width: 2rem; text-align: center; }
+    .step-content h4 { font-family: 'Cinzel Decorative', serif; font-size: 0.75rem; letter-spacing: 0.1em; color: var(--gold-light); margin-bottom: 0.4rem; }
+    .step-content p { color: var(--mist); font-size: 0.95rem; line-height: 1.6; }
+    .code-hint { background: rgba(0,0,0,0.4); border: 1px solid rgba(184,134,11,0.15); padding: 0.5rem 1rem; font-family: monospace; font-size: 0.85rem; color: var(--moss-light); margin-top: 0.5rem; display: block; overflow-x: auto; }
 
-  nav a {
-    color: #bf80ff;
-    text-decoration: none;
-    margin: 0 20px;
-    font-family: 'Cinzel', serif;
-    font-size: 0.95rem;
-    letter-spacing: 2px;
-    transition: color 0.3s;
-  }
-
-  nav a:hover { color: #e8d5ff; }
-
-  section {
-    max-width: 800px;
-    margin: 60px auto;
-    padding: 0 20px;
-  }
-
-  section h2 {
-    font-family: 'Cinzel', serif;
-    color: #bf80ff;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    letter-spacing: 3px;
-    border-bottom: 1px solid #3d2060;
-    padding-bottom: 10px;
-  }
-
-  .about-card {
-    background: #110820;
-    border: 1px solid #3d2060;
-    border-radius: 8px;
-    padding: 30px;
-    box-shadow: 0 0 30px rgba(123, 47, 255, 0.1);
-  }
-
-  .blog-post {
-    background: #110820;
-    border: 1px solid #3d2060;
-    border-radius: 8px;
-    padding: 25px;
-    margin-bottom: 25px;
-    box-shadow: 0 0 20px rgba(123, 47, 255, 0.1);
-    transition: box-shadow 0.3s;
-  }
-
-  .blog-post:hover {
-    box-shadow: 0 0 40px rgba(123, 47, 255, 0.25);
-  }
-
-  .blog-post h3 {
-    font-family: 'Cinzel', serif;
-    color: #e8d5ff;
-    font-size: 1.3rem;
-    margin-bottom: 8px;
-  }
-
-  .blog-date {
-    color: #6b4d8a;
-    font-size: 0.9rem;
-    font-style: italic;
-    margin-bottom: 12px;
-  }
-
-  .divider {
-    text-align: center;
-    color: #3d2060;
-    font-size: 1.5rem;
-    margin: 40px 0;
-    letter-spacing: 10px;
-  }
-
-  footer {
-    text-align: center;
-    padding: 40px 20px;
-    border-top: 1px solid #3d2060;
-    color: #6b4d8a;
-    font-style: italic;
-    font-size: 0.95rem;
-  }
-</style>
+    footer { text-align: center; padding: 3rem 2rem; border-top: 1px solid rgba(184,134,11,0.1); color: var(--stone); font-size: 0.85rem; letter-spacing: 0.1em; }
+    .reveal { opacity: 0; transform: translateY(25px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+  </style>
 </head>
 <body>
 
-<header>
-  <span class="moon">🌙</span>
-  <h1>Druid Heart of Scotland</h1>
-  <p>walking the ancient paths between worlds</p>
-</header>
+  <nav id="top-nav">
+    <a href="index.html" class="nav-home">🌙 Druid Heart of Scotland</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#blog">Blog</a>
+      <a href="community.html" class="active">Community</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#blog">Blog</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<section id="about">
-  <h2>About</h2>
-  <div class="about-card">
-    <p>Welcome, wanderer. I am the Heart of Scotland — a druid walking the sacred lands of this ancient isle, seeking the wisdom hidden in stone, water, and the turning of the seasons.</p>
-    <br>
-    <p>This is a space where the old ways meet the modern world. Here I share my journey through nature, ritual, and the deep spiritual current that runs beneath the hills of Scotland.</p>
-    <br>
-    <p>May you find something here that speaks to your soul. 🌿</p>
-  </div>
-</section>
-
-<div class="divider">✦ ✦ ✦</div>
-
-<section id="blog">
-  <h2>The Blog</h2>
-
-  <div class="blog-post">
-    <h3>The First Step on the Path</h3>
-    <div class="blog-date">May 2025 · First Entry</div>
-    <p>Every journey begins with a single step onto the forest path. This is mine — a place to record what I see, feel, and discover as I walk the druid way in the heart of Scotland...</p>
+  <div class="page-hero">
+    <span class="icon">🌿</span>
+    <h1>The Gathering Place</h1>
+    <p>Events, organisations, and hand-picked resources for Scotland's earth-spirit community.</p>
+    <div class="page-nav">
+      <a href="#events">Events</a>
+      <a href="#orgs">Organisations</a>
+      <a href="#useful">DHoS Finds Useful</a>
+    </div>
   </div>
 
-  <div class="blog-post">
-    <h3>Listening to the Land</h3>
-    <div class="blog-date">May 2025</div>
-    <p>There is a language spoken by stones and rivers, by the wind through ancient oaks. It takes patience and stillness to begin to hear it. But once you do, you cannot unhear it...</p>
+  <div class="container">
+
+    <!-- EVENTS -->
+    <section id="events">
+      <span class="section-label reveal">What's Happening</span>
+      <h2 class="reveal">Community Events</h2>
+      <p class="events-intro reveal">Gatherings, rituals, talks, and walks across Scotland. All traditions welcome. Submit your own event below — approved events appear here within a day or two.</p>
+      <div class="two-col">
+        <div id="events-list">
+          <div class="event-card reveal">
+            <div class="event-date">21 June 2025 · Summer Solstice</div>
+            <h3>Callanish Solstice Gathering</h3>
+            <p>An informal gathering at the Callanish Standing Stones to mark Alban Hefin. Bring offerings, instruments, and an open heart. Sunrise ceremony from 4am.</p>
+            <div class="event-meta"><span>📍 Callanish, Isle of Lewis</span><span>🌅 From 4:00am</span></div>
+            <div><span class="event-tag">Solstice</span><span class="event-tag">Standing Stones</span><span class="event-tag">All Welcome</span></div>
+          </div>
+          <div class="event-card reveal">
+            <div class="event-date">1 August 2025 · Lughnasadh</div>
+            <h3>Harvest Ritual & Shared Feast</h3>
+            <p>A Lughnasadh celebration in the Trossachs — outdoor ritual followed by a shared harvest feast. OBOD members and friends welcome.</p>
+            <div class="event-meta"><span>📍 The Trossachs, Stirling</span><a href="#">Contact organiser →</a></div>
+            <div><span class="event-tag">Lughnasadh</span><span class="event-tag">Ritual</span><span class="event-tag">Feast</span></div>
+          </div>
+          <div class="event-card reveal">
+            <div class="event-date">Every New Moon</div>
+            <h3>Online Druid Circle — Scotland</h3>
+            <p>Monthly online gathering for Scottish druids and earth-path walkers. Seasonal reflection, shared readings, open discussion. All experience levels welcome.</p>
+            <div class="event-meta"><span>🌐 Online · Zoom</span><a href="#">Join the mailing list →</a></div>
+            <div><span class="event-tag">Online</span><span class="event-tag">Monthly</span><span class="event-tag">Beginners Welcome</span></div>
+          </div>
+          <p class="reveal" style="color:var(--stone);font-style:italic;font-size:0.9rem;margin-top:1rem;">✦ Submit your event below — all submissions are reviewed before appearing here.</p>
+        </div>
+        <div class="reveal">
+          <div class="submit-box">
+            <h3>Submit an Event</h3>
+            <p class="sub-note">Your event will be reviewed and added within 1–2 days.</p>
+            <div id="submit-form">
+              <div class="form-group"><label>Event Name *</label><input type="text" id="evt-name" placeholder="e.g. Beltane Fire Gathering"></div>
+              <div class="form-group"><label>Date *</label><input type="text" id="evt-date" placeholder="e.g. 1 May 2025"></div>
+              <div class="form-group"><label>Location *</label><input type="text" id="evt-location" placeholder="e.g. Arthur's Seat, Edinburgh"></div>
+              <div class="form-group"><label>Type</label>
+                <select id="evt-type">
+                  <option value="">— Select —</option>
+                  <option>Ritual / Ceremony</option><option>Walk / Pilgrimage</option>
+                  <option>Talk / Workshop</option><option>Gathering / Social</option>
+                  <option>Online Event</option><option>Seasonal Festival</option><option>Other</option>
+                </select>
+              </div>
+              <div class="form-group"><label>Description *</label><textarea id="evt-desc" placeholder="Tell us about the event..."></textarea></div>
+              <div class="form-group"><label>Your Contact / Website</label><input type="text" id="evt-contact" placeholder="Email or website for more info"></div>
+              <div class="form-group"><label>Your Name</label><input type="text" id="evt-submitter" placeholder="How should we credit you?"></div>
+              <button class="submit-btn" onclick="submitEvent()">✦ &nbsp; Submit for Review &nbsp; ✦</button>
+            </div>
+            <div class="form-success" id="form-success">
+              <div style="font-size:2rem;margin-bottom:1rem;">🌿</div>
+              <p>Thank you — your event has been received.<br>It will appear here once reviewed.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ORGANISATIONS -->
+    <section id="orgs">
+      <span class="section-label reveal">Find Your Grove</span>
+      <h2 class="reveal">Druid & Earth-Spirit Organisations in Scotland</h2>
+      <div class="two-col">
+        <div>
+          <div class="org-card reveal"><h3>The Order of Bards, Ovates & Druids</h3><div class="org-type">International · Strong Scotland presence</div><p>One of the world's largest druid orders, with groves and study groups across Scotland. Offers a correspondence course through the three grades of bard, ovate, and druid.</p><a href="https://druidry.org" target="_blank" class="org-link">druidry.org →</a></div>
+          <div class="org-card reveal"><h3>The British Druid Order</h3><div class="org-type">UK-wide · Bardic & Nature Focus</div><p>Emphasises nature spirituality, bardic arts, and working with the spirits of place. Active community with Scottish members.</p><a href="https://www.druidorder.demon.co.uk" target="_blank" class="org-link">druidorder.demon.co.uk →</a></div>
+          <div class="org-card reveal"><h3>The Druid Network</h3><div class="org-type">UK · Open & Inclusive</div><p>A charitable organisation supporting druids of all traditions, instrumental in gaining official recognition for druidry as a religion in the UK.</p><a href="https://druidnetwork.org" target="_blank" class="org-link">druidnetwork.org →</a></div>
+          <div class="org-card reveal"><h3>Ár nDraíocht Féin (ADF)</h3><div class="org-type">Indo-European · Reconstructionist</div><p>A reconstructionist druid organisation with a rigorous study programme rooted in scholarship of ancient Celtic and Indo-European traditions.</p><a href="https://www.adf.org" target="_blank" class="org-link">adf.org →</a></div>
+        </div>
+        <div>
+          <div class="org-card reveal"><h3>The Pagan Federation Scotland</h3><div class="org-type">Scotland · Pan-Pagan</div><p>The Scottish district of the Pagan Federation — organises moots, events, and Pagan Pride. Welcomes druids alongside witches, heathens, and all pagan paths.</p><a href="https://www.paganfederation.org" target="_blank" class="org-link">paganfederation.org →</a></div>
+          <div class="org-card reveal"><h3>Clan na Gàidheal</h3><div class="org-type">Scotland · Gaelic Spirituality</div><p>Dedicated to the living Gaelic spiritual tradition — language, land, ancestral connection, and the old ways of the Gàidhealtachd. Deeply rooted in Scottish soil.</p><a href="#" class="org-link">clannagaidheal.co.uk →</a></div>
+          <div class="org-card reveal"><h3>Caledonia Druid Network</h3><div class="org-type">Scotland · Informal Network</div><p>An informal network of druids and druid-friendly practitioners based in Scotland, sharing events, resources, and community across the country.</p><a href="#" class="org-link">Find them on Facebook →</a></div>
+          <div class="org-card reveal"><h3>Historic Environment Scotland</h3><div class="org-type">Scotland · Sacred Sites</div><p>Custodians of Scotland's sacred sites — Callanish, Skara Brae, the Clava Cairns, and hundreds more. Essential for land-based practice.</p><a href="https://www.historicenvironment.scot" target="_blank" class="org-link">historicenvironment.scot →</a></div>
+        </div>
+      </div>
+      <div class="rune-divider reveal">ᚠ ᚢ ᚦ ᚨ ᚱ ᚲ ᚷ ᚹ</div>
+      <p class="reveal" style="color:var(--stone);font-style:italic;font-size:0.95rem;text-align:center;">Know of an organisation that should be listed? <a href="mailto:Heartofscott@gmail.com" style="color:var(--moss-light);">Get in touch →</a></p>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- DHOS FINDS USEFUL -->
+    <section id="useful">
+      <span class="section-label reveal">Hand-Picked by DHoS</span>
+      <h2 class="reveal">DHoS Finds These Links Useful</h2>
+      <p class="useful-intro reveal">These are sites, podcasts, writers, and resources I keep coming back to — things that have genuinely fed my path. Not a comprehensive directory, just what I actually use and love. I'll keep adding as I find more worth sharing.</p>
+
+      <div class="filter-tabs reveal">
+        <button class="filter-btn active" onclick="filterLinks('all', this)">All</button>
+        <button class="filter-btn" onclick="filterLinks('podcast', this)">🎙 Podcasts</button>
+        <button class="filter-btn" onclick="filterLinks('website', this)">🌐 Websites</button>
+        <button class="filter-btn" onclick="filterLinks('writer', this)">✍️ Writers</button>
+        <button class="filter-btn" onclick="filterLinks('scotland', this)">🏔 Scotland</button>
+        <button class="filter-btn" onclick="filterLinks('mythology', this)">📖 Mythology</button>
+        <button class="filter-btn" onclick="filterLinks('nature', this)">🌿 Nature</button>
+      </div>
+
+      <div class="links-grid reveal">
+
+        <a href="https://druidcast.libsyn.com" target="_blank" class="link-card" data-cat="podcast">
+          <span class="link-cat">🎙 Podcast</span>
+          <h3>Druidcast</h3>
+          <p>The official OBOD podcast — interviews, music, and talks from the druid community worldwide. One of the longest-running pagan podcasts out there. A great companion on long walks.</p>
+          <span class="link-url">druidcast.libsyn.com</span>
+        </a>
+
+        <a href="https://www.houseoflegends.me/podcast" target="_blank" class="link-card" data-cat="podcast mythology scotland">
+          <span class="link-cat">🎙 Podcast · Mythology · Scotland</span>
+          <h3>House of Legends — Daniel Allison</h3>
+          <p>Scottish storyteller Daniel Allison tells Celtic legends, Norse myths, and Irish folk tales with real warmth and depth. A beautiful voice for the old stories — the Salmon of Wisdom, Ossian, and more.</p>
+          <span class="link-url">houseoflegends.me</span>
+        </a>
+
+        <a href="https://sharonblackie.substack.com" target="_blank" class="link-card" data-cat="writer podcast mythology nature">
+          <span class="link-cat">✍️ Writer · Podcast · Mythology</span>
+          <h3>Sharon Blackie — The Art of Enchantment</h3>
+          <p>Scottish author of <em>If Women Rose Rooted</em> and <em>Hagitude</em>. Her Substack and podcast explore Celtic myth, fairy tales, and the feminine in the landscape. Deeply nourishing work.</p>
+          <span class="link-url">sharonblackie.substack.com</span>
+        </a>
+
+        <a href="https://druidry.org" target="_blank" class="link-card" data-cat="website">
+          <span class="link-cat">🌐 Website</span>
+          <h3>OBOD — The Druid Way</h3>
+          <p>Beyond the organisation itself, the OBOD website is a rich resource — articles on druid philosophy, the Wheel of the Year, tree lore, and walking this path in the modern world.</p>
+          <span class="link-url">druidry.org</span>
+        </a>
+
+        <a href="https://www.historicenvironment.scot/visit-a-place/places/" target="_blank" class="link-card" data-cat="website scotland">
+          <span class="link-cat">🌐 Website · Scotland</span>
+          <h3>Historic Environment Scotland — Sacred Sites</h3>
+          <p>The definitive guide to Scotland's ancient sites — standing stones, cairns, brochs, and hillforts. Use it to plan pilgrimages. Callanish, Skara Brae, Clava Cairns and hundreds more.</p>
+          <span class="link-url">historicenvironment.scot</span>
+        </a>
+
+        <a href="https://www.canmore.org.uk" target="_blank" class="link-card" data-cat="website scotland">
+          <span class="link-cat">🌐 Website · Scotland</span>
+          <h3>Canmore — Scotland's Sites & Monuments</h3>
+          <p>The national record of the historic environment of Scotland. Search any area of the country and find every recorded ancient site and place of significance. An extraordinary resource.</p>
+          <span class="link-url">canmore.org.uk</span>
+        </a>
+
+        <a href="https://irishmyths.com" target="_blank" class="link-card" data-cat="website mythology">
+          <span class="link-cat">🌐 Website · Mythology</span>
+          <h3>Irish Myths</h3>
+          <p>Scholarly but accessible deep-dives into Celtic mythology — the gods, heroes, and the Otherworld. Covers Irish and Scottish myth with care and real academic rigour.</p>
+          <span class="link-url">irishmyths.com</span>
+        </a>
+
+        <a href="https://www.treesforlife.org.uk" target="_blank" class="link-card" data-cat="website nature scotland">
+          <span class="link-cat">🌿 Nature · Scotland</span>
+          <h3>Trees for Life</h3>
+          <p>Rewilding the Caledonian Forest in the Scottish Highlands. Rooted in the same reverence for ancient woodland that runs through druid practice. Volunteer, donate, or simply be inspired.</p>
+          <span class="link-url">treesforlife.org.uk</span>
+        </a>
+
+        <a href="https://www.sacred-texts.com/neu/celt/" target="_blank" class="link-card" data-cat="website mythology">
+          <span class="link-cat">📖 Texts · Mythology</span>
+          <h3>Sacred Texts — Celtic Archive</h3>
+          <p>Free access to a vast archive of Celtic texts and folklore collections — including the <em>Carmina Gadelica</em>, Alexander Carmichael's treasury of Gaelic prayers and incantations collected in Scotland.</p>
+          <span class="link-url">sacred-texts.com/neu/celt</span>
+        </a>
+
+        <a href="https://www.walkhighlands.co.uk" target="_blank" class="link-card" data-cat="website scotland nature">
+          <span class="link-cat">🏔 Scotland · Nature</span>
+          <h3>Walk Highlands</h3>
+          <p>The best guide to walking in Scotland — every hill, glen, and coastal path mapped and described. Essential for planning pilgrimages to sacred landscapes. The land awaits; this gets you there.</p>
+          <span class="link-url">walkhighlands.co.uk</span>
+        </a>
+
+        <a href="https://www.gaelicplacenames.org" target="_blank" class="link-card" data-cat="website scotland mythology">
+          <span class="link-cat">🏔 Scotland · Language</span>
+          <h3>Gaelic Place Names of Scotland</h3>
+          <p>Unlock the meaning hidden in the landscape. Every hill, loch, and glen has a Gaelic name that tells a story — this site helps you read the land in its original tongue.</p>
+          <span class="link-url">gaelicplacenames.org</span>
+        </a>
+
+        <a href="https://www.nts.org.uk" target="_blank" class="link-card" data-cat="website scotland nature">
+          <span class="link-cat">🏔 Scotland · Sacred Land</span>
+          <h3>National Trust for Scotland</h3>
+          <p>Protects some of Scotland's most sacred natural and historic places — Ben Lomond, Glencoe, Staffa and Fingal's Cave. Their properties are pilgrimage destinations for the earth-minded.</p>
+          <span class="link-url">nts.org.uk</span>
+        </a>
+
+        <a href="https://druidnetwork.org" target="_blank" class="link-card" data-cat="website">
+          <span class="link-cat">🌐 Website</span>
+          <h3>The Druid Network</h3>
+          <p>A generous resource hub for druids of all traditions — essays, book recommendations, and a community of practitioners. Good place to find others walking similar paths.</p>
+          <span class="link-url">druidnetwork.org</span>
+        </a>
+
+        <a href="https://www.imbas.org" target="_blank" class="link-card" data-cat="website mythology">
+          <span class="link-cat">🌐 Website · Mythology</span>
+          <h3>Imbas — Celtic Reconstructionism</h3>
+          <p>A deep resource for those drawn to reconstructing pre-Christian Celtic spiritual practice from the historical record. Rigorous scholarship in service of living tradition.</p>
+          <span class="link-url">imbas.org</span>
+        </a>
+
+        <a href="https://player.fm/podcasts/Celtic-Myth" target="_blank" class="link-card" data-cat="podcast mythology scotland">
+          <span class="link-cat">🎙 Podcast · Mythology</span>
+          <h3>The Triskele Podcast</h3>
+          <p>Three druids gather to share their paths — warm, honest conversations about what it actually looks and feels like to practice druidry week to week. Beginners and experienced practitioners alike.</p>
+          <span class="link-url">Available on Apple & Spotify</span>
+        </a>
+
+      </div>
+
+      <div class="rune-divider reveal" style="margin-top:2.5rem;">ᚠ ᚢ ᚦ ᚨ ᚱ ᚲ</div>
+      <p class="reveal" style="color:var(--stone);font-style:italic;font-size:0.95rem;text-align:center;margin-top:1rem;">
+        Found something worth sharing? <a href="mailto:Heartofscott@gmail.com" style="color:var(--moss-light);">Send it my way →</a>
+      </p>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- EDITING GUIDE -->
+    <section>
+      <div id="edit-guide" class="reveal">
+        <span class="section-label">For HeartofScott</span>
+        <h2>How to Keep This Page Updated</h2>
+        <div class="edit-step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h4>Add a New Event</h4>
+            <p>In <code style="color:var(--moss-light);">community.html</code>, find <code style="color:var(--moss-light);">&lt;div id="events-list"&gt;</code> and copy an existing event card. Update the date, title, location, description, and tags. Commit and it goes live automatically.</p>
+          </div>
+        </div>
+        <div class="edit-step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h4>Add a Link to "DHoS Finds Useful"</h4>
+            <p>Find the <code style="color:var(--moss-light);">links-grid</code> div and copy a link card. The <code style="color:var(--moss-light);">data-cat</code> controls which filter shows it. Use any of: <code style="color:var(--moss-light);">podcast website writer scotland mythology nature</code></p>
+            <span class="code-hint">&lt;a href="URL" target="_blank" class="link-card" data-cat="podcast scotland"&gt;</span>
+          </div>
+        </div>
+        <div class="edit-step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h4>Event Submissions Come to Your Email</h4>
+            <p>When someone fills in the submit form, it opens their email app with all details pre-filled to <strong style="color:var(--parchment);">Heartofscott@gmail.com</strong>. Review it, then add it as a new event card (step 1).</p>
+          </div>
+        </div>
+        <div class="edit-step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h4>Add Social Links When Ready</h4>
+            <p>When you create your social accounts, just ask me and I'll build you a proper social section to drop straight into this page.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </div>
 
-</section>
+  <footer>
+    <span style="display:block;font-size:1.2rem;margin-bottom:0.75rem;">🌙</span>
+    Druid Heart of Scotland · Walking the Old Ways · heartofscott.github.io
+    <br><br>
+    <a href="index.html" style="color:var(--gold);text-decoration:none;font-family:'Cinzel Decorative',serif;font-size:0.65rem;letter-spacing:0.15em;">← Return to the Home Grove</a>
+  </footer>
 
-<div class="divider">✦ ✦ ✦</div>
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 60);
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => observer.observe(el));
 
-<section id="contact">
-  <h2>Contact</h2>
-  <div class="about-card">
-    <p>Want to connect, share your own path, or simply say hello?</p>
-    <br>
-    <p>Reach me at: <a href="mailto:Heartofscott@gmail.com" style="color:#bf80ff;">Heartofscott@gmail.com</a></p>
-  </div>
-</section>
+    function filterLinks(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.link-card').forEach(card => {
+        if (cat === 'all') { card.style.display = 'block'; }
+        else {
+          const cats = (card.getAttribute('data-cat') || '').split(' ');
+          card.style.display = cats.includes(cat) ? 'block' : 'none';
+        }
+      });
+    }
 
-<footer>
-  <p>🌙 Druid Heart of Scotland · Walking the Old Ways · heartofscott.github.io 🌙</p>
-</footer>
-
+    function submitEvent() {
+      const name = document.getElementById('evt-name').value.trim();
+      const date = document.getElementById('evt-date').value.trim();
+      const location = document.getElementById('evt-location').value.trim();
+      const type = document.getElementById('evt-type').value;
+      const desc = document.getElementById('evt-desc').value.trim();
+      const contact = document.getElementById('evt-contact').value.trim();
+      const submitter = document.getElementById('evt-submitter').value.trim();
+      if (!name || !date || !location || !desc) {
+        alert('Please fill in the required fields: Event Name, Date, Location, and Description.');
+        return;
+      }
+      const subject = encodeURIComponent(`[Event Submission] ${name}`);
+      const body = encodeURIComponent(
+        `New event submission for Druid Heart of Scotland:\n\nEVENT NAME: ${name}\nDATE: ${date}\nLOCATION: ${location}\nTYPE: ${type || 'Not specified'}\n\nDESCRIPTION:\n${desc}\n\nCONTACT/WEBSITE: ${contact || 'Not provided'}\nSUBMITTED BY: ${submitter || 'Anonymous'}\n`
+      );
+      window.location.href = `mailto:Heartofscott@gmail.com?subject=${subject}&body=${body}`;
+      document.getElementById('submit-form').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }
+  </script>
 </body>
 </html>
