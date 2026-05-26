@@ -266,7 +266,103 @@
       margin: 2rem 0;
     }
 
-    /* ── ABOUT ── */
+/* ── THE HEARTH MANIFESTO ── */
+
+#the-hearth {
+position: relative;
+z-index: 1;
+padding: 7rem 5vw;
+background:
+linear-gradient(to bottom, var(--cream), var(--sky));
+}
+
+#the-hearth .inner {
+max-width: 900px;
+margin: 0 auto;
+}
+
+#the-hearth h2 {
+font-family: 'Playfair Display', serif;
+font-size: clamp(2rem, 5vw, 3.4rem);
+font-weight: 400;
+color: var(--earth);
+margin-bottom: 0.6rem;
+}
+
+#the-hearth .section-intro {
+font-size: 1.1rem;
+font-style: italic;
+color: var(--mist);
+margin-bottom: 3rem;
+max-width: 700px;
+line-height: 1.8;
+}
+
+.hearth-manifesto p {
+font-size: 1.05rem;
+line-height: 2;
+color: var(--earth-mid);
+margin-bottom: 1.6rem;
+}
+
+.hearth-single {
+font-family: 'Playfair Display', serif;
+font-size: 1.8rem !important;
+font-style: italic;
+text-align: center;
+color: var(--ember);
+margin: 2.5rem 0 !important;
+}
+
+.hearth-grid-boxes {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 1.2rem;
+margin: 3rem 0;
+}
+
+.hearth-box {
+background: rgba(255,255,255,0.55);
+border: 1px solid rgba(107,76,42,0.08);
+padding: 1.5rem;
+backdrop-filter: blur(4px);
+transition: transform 0.3s ease;
+}
+
+.hearth-box:hover {
+transform: translateY(-4px);
+}
+
+.hearth-box span {
+font-size: 1.6rem;
+display: block;
+margin-bottom: 0.7rem;
+}
+
+.hearth-box h4 {
+font-family: 'Cinzel', serif;
+font-size: 0.72rem;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+color: var(--bark);
+margin-bottom: 0.7rem;
+}
+
+.hearth-box p {
+font-size: 0.92rem;
+line-height: 1.7;
+margin: 0;
+color: var(--mist);
+}
+
+.hearth-closing {
+font-family: 'Playfair Display', serif;
+font-style: italic;
+font-size: 1.3rem !important;
+line-height: 1.8;
+color: var(--bark) !important;
+margin-top: 3rem !important;
+}
     #about {
       position: relative;
       z-index: 1;
@@ -782,8 +878,125 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about">
+</section>
+
+<!-- THE HEARTH -->
+<section id="the-hearth">
+  <div class="inner">
+    <span class="about-label reveal">The Hearth</span>
+
+    <h2 class="reveal">A Living Grove for a Louder Age</h2>
+
+    <p class="section-intro reveal">
+      Not a stage. Not a brand. A fire in the dark where people can gather,
+      breathe, and remember themselves again.
+    </p>
+
+    <div class="hearth-manifesto reveal">
+
+      <p>
+        There are places in the old stories where travellers crossed wild land
+        through rain, hunger, mist, and uncertainty — and then, at last,
+        saw firelight in the distance.
+      </p>
+
+      <p>
+        Not a fortress. Not a throne. Not a marketplace.
+      </p>
+
+      <p class="hearth-single">
+        A hearth.
+      </p>
+
+      <p>
+        A place where strangers became companions. Where stories were traded
+        for shelter. Where wisdom sat beside laughter. Where people remembered
+        that being human was never meant to be done alone.
+      </p>
+
+      <p>
+        This space was created in that spirit.
+      </p>
+
+      <p>
+        The world grows louder each year — faster, more fractured,
+        more artificial. Many of us feel the pressure to become brands instead
+        of people, to consume instead of belong, to optimise instead of live.
+      </p>
+
+      <p>
+        Somewhere beneath all that noise, something ancient in us grows thirsty:
+        for land, meaning, friendship, rhythm, and soul.
+      </p>
+
+      <p>
+        The Hearth exists as a small act of resistance against forgetting.
+      </p>
+
+      <div class="hearth-grid-boxes">
+
+        <div class="hearth-box">
+          <span>🌿</span>
+          <h4>Belonging</h4>
+          <p>
+            A place where people arrive without needing to perform.
+          </p>
+        </div>
+
+        <div class="hearth-box">
+          <span>🔥</span>
+          <h4>Gathering</h4>
+          <p>
+            Stories, camps, rituals, conversations, songs, and shared firelight.
+          </p>
+        </div>
+
+        <div class="hearth-box">
+          <span>🌍</span>
+          <h4>Living Culture</h4>
+          <p>
+            Ancient wisdom meeting modern life with honesty and care.
+          </p>
+        </div>
+
+        <div class="hearth-box">
+          <span>✨</span>
+          <h4>The Future</h4>
+          <p>
+            Exploring how we remain human in an age of speed, systems, and AI.
+          </p>
+        </div>
+
+      </div>
+
+      <p>
+        Some who arrive here are Druids. Some are artists. Some are leaders,
+        wanderers, technologists, healers, or seekers.
+      </p>
+
+      <p class="hearth-single">
+        All are welcome.
+      </p>
+
+      <p>
+        The old paths were never about escaping the world.
+        They were about learning how to walk through it with awareness,
+        courage, humour, and reverence.
+      </p>
+
+      <p class="hearth-closing">
+        So take off your boots awhile. Warm your hands.
+        Listen to the wind in the trees beyond the walls.
+        And if you have a story of your own —
+        pull up a chair.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
     <div class="about-inner">
       <div class="about-sidebar reveal">
         <span class="about-label">Who is Blaze?</span>
