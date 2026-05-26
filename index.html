@@ -1,1 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Druid Heart of Scotland</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Crimson+Text:ital,wght@0,400;1,400&display=swap');
 
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: #0d0d1a;
+    color: #c9b8e8;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+
+  header {
+    background: linear-gradient(180deg, #0d0d1a 0%, #1a0a2e 100%);
+    text-align: center;
+    padding: 60px 20px 40px;
+    border-bottom: 1px solid #3d2060;
+  }
+
+  header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.8rem;
+    color: #e8d5ff;
+    text-shadow: 0 0 20px #7b2fff;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+  }
+
+  header p {
+    color: #9d7fc4;
+    font-style: italic;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+  }
+
+  .moon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 20px;
+    animation: glow 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from { text-shadow: 0 0 10px #7b2fff; }
+    to { text-shadow: 0 0 30px #bf80ff, 0 0 60px #7b2fff; }
+  }
+
+  nav {
+    background: #110820;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #3d2060;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  nav a {
+    color: #bf80ff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    transition: color 0.3s;
+  }
+
+  nav a:hover { color: #e8d5ff; }
+
+  section {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+  }
+
+  section h2 {
+    font-family: 'Cinzel', serif;
+    color: #bf80ff;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    border-bottom: 1px solid #3d2060;
+    padding-bottom: 10px;
+  }
+
+  .about-card {
+    background: #110820;
+    border: 1px solid #3d2060;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 0 30px rgba(123, 47, 255, 0.1);
+  }
+
+  .blog-post {
+    background: #110820;
+    border: 1px solid #3d2060;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 20px rgba(123, 47, 255, 0.1);
+    transition: box-shadow 0.3s;
+  }
+
+  .blog-post:hover {
+    box-shadow: 0 0 40px rgba(123, 47, 255, 0.25);
+  }
+
+  .blog-post h3 {
+    font-family: 'Cinzel', serif;
+    color: #e8d5ff;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+
+  .blog-date {
+    color: #6b4d8a;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 12px;
+  }
+
+  .divider {
+    text-align: center;
+    color: #3d2060;
+    font-size: 1.5rem;
+    margin: 40px 0;
+    letter-spacing: 10px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid #3d2060;
+    color: #6b4d8a;
+    font-style: italic;
+    font-size: 0.95rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="moon">🌙</span>
+  <h1>Druid Heart of Scotland</h1>
+  <p>walking the ancient paths between worlds</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#blog">Blog</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About</h2>
+  <div class="about-card">
+    <p>Welcome, wanderer. I am the Heart of Scotland — a druid walking the sacred lands of this ancient isle, seeking the wisdom hidden in stone, water, and the turning of the seasons.</p>
+    <br>
+    <p>This is a space where the old ways meet the modern world. Here I share my journey through nature, ritual, and the deep spiritual current that runs beneath the hills of Scotland.</p>
+    <br>
+    <p>May you find something here that speaks to your soul. 🌿</p>
+  </div>
+</section>
+
+<div class="divider">✦ ✦ ✦</div>
+
+<section id="blog">
+  <h2>The Blog</h2>
+
+  <div class="blog-post">
+    <h3>The First Step on the Path</h3>
+    <div class="blog-date">May 2025 · First Entry</div>
+    <p>Every journey begins with a single step onto the forest path. This is mine — a place to record what I see, feel, and discover as I walk the druid way in the heart of Scotland...</p>
+  </div>
+
+  <div class="blog-post">
+    <h3>Listening to the Land</h3>
+    <div class="blog-date">May 2025</div>
+    <p>There is a language spoken by stones and rivers, by the wind through ancient oaks. It takes patience and stillness to begin to hear it. But once you do, you cannot unhear it...</p>
+  </div>
+
+</section>
+
+<div class="divider">✦ ✦ ✦</div>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="about-card">
+    <p>Want to connect, share your own path, or simply say hello?</p>
+    <br>
+    <p>Reach me at: <a href="mailto:Heartofscott@gmail.com" style="color:#bf80ff;">Heartofscott@gmail.com</a></p>
+  </div>
+</section>
+
+<footer>
+  <p>🌙 Druid Heart of Scotland · Walking the Old Ways · heartofscott.github.io 🌙</p>
+</footer>
+
+</body>
+</html>
