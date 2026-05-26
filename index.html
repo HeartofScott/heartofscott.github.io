@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Blaze — The Celtic Druid Hearth</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+
   <style>
     :root {
       --sun: #f4a820;
@@ -26,85 +32,110 @@
       --ember-pale: #fddcb0;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       background: var(--cream);
       color: var(--earth);
-      font-family: 'Libre Baskerville', Georgia, serif;
+      font-family: "Libre Baskerville", Georgia, serif;
       font-size: 17px;
       line-height: 1.85;
       overflow-x: hidden;
     }
 
-    /* ── DAPPLED LIGHT BACKGROUND EFFECT ── */
     body::before {
-      content: '';
+      content: "";
       position: fixed;
       inset: 0;
-      background:
-        radial-gradient(ellipse 400px 300px at 15% 20%, rgba(244,168,32,0.08) 0%, transparent 70%),
-        radial-gradient(ellipse 300px 400px at 85% 10%, rgba(90,156,82,0.07) 0%, transparent 70%),
-        radial-gradient(ellipse 500px 200px at 50% 80%, rgba(90,156,82,0.05) 0%, transparent 70%),
-        radial-gradient(ellipse 200px 300px at 90% 60%, rgba(244,168,32,0.06) 0%, transparent 70%);
-      pointer-events: none;
       z-index: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse 400px 300px at 15% 20%, rgba(244, 168, 32, 0.08) 0%, transparent 70%),
+        radial-gradient(ellipse 300px 400px at 85% 10%, rgba(90, 156, 82, 0.07) 0%, transparent 70%),
+        radial-gradient(ellipse 500px 200px at 50% 80%, rgba(90, 156, 82, 0.05) 0%, transparent 70%),
+        radial-gradient(ellipse 200px 300px at 90% 60%, rgba(244, 168, 32, 0.06) 0%, transparent 70%);
     }
 
-    /* ── STICKY NAV ── */
+    /* Navigation */
+
     #nav {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       z-index: 200;
-      background: rgba(253,248,238,0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(107,76,42,0.12);
-      padding: 0.9rem 2.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 0.9rem 2.5rem;
+      background: rgba(253, 248, 238, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(107, 76, 42, 0.12);
       transform: translateY(-100%);
       transition: transform 0.4s ease;
     }
-    #nav.visible { transform: translateY(0); }
+
+    #nav.visible {
+      transform: translateY(0);
+    }
 
     .nav-brand {
-      font-family: 'Cinzel', serif;
+      font-family: "Cinzel", serif;
       font-size: 0.75rem;
       letter-spacing: 0.2em;
       color: var(--bark);
       text-decoration: none;
     }
 
-    .nav-links { display: flex; gap: 2rem; }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
     .nav-links a {
-      font-family: 'Cinzel', serif;
+      font-family: "Cinzel", serif;
       font-size: 0.62rem;
       letter-spacing: 0.18em;
       color: var(--mist);
       text-decoration: none;
       transition: color 0.3s;
     }
-    .nav-links a:hover { color: var(--leaf); }
 
-    /* ── HERO ── */
+    .nav-links a:hover {
+      color: var(--leaf);
+    }
+
+    @media (max-width: 760px) {
+      #nav {
+        padding: 0.8rem 1.25rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    /* Hero */
+
     #hero {
+      position: relative;
       min-height: 100vh;
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
-      padding: 8rem 5vw 5rem;
-      position: relative;
       gap: 4rem;
+      padding: 8rem 5vw 5rem;
       overflow: hidden;
     }
 
-    @media (max-width: 760px) {
-      #hero { grid-template-columns: 1fr; padding: 7rem 2rem 4rem; }
-    }
-
-    /* Animated forest canopy SVG bg */
     .hero-forest {
       position: absolute;
       inset: 0;
@@ -113,23 +144,26 @@
       pointer-events: none;
     }
 
-    .hero-text { position: relative; z-index: 1; }
+    .hero-text {
+      position: relative;
+      z-index: 1;
+    }
 
     .hero-eyebrow {
-      font-family: 'Cinzel', serif;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      font-family: "Cinzel", serif;
       font-size: 0.65rem;
       letter-spacing: 0.35em;
       text-transform: uppercase;
       color: var(--leaf);
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
       animation: fadeup 1s ease both;
     }
 
     .hero-eyebrow::before {
-      content: '';
+      content: "";
       display: block;
       width: 2rem;
       height: 1px;
@@ -137,12 +171,12 @@
     }
 
     h1 {
-      font-family: 'Playfair Display', serif;
+      margin-bottom: 0.2rem;
+      font-family: "Playfair Display", serif;
       font-size: clamp(2.8rem, 7vw, 5.5rem);
       font-weight: 700;
       line-height: 1.05;
       color: var(--earth);
-      margin-bottom: 0.2rem;
       animation: fadeup 1s ease 0.15s both;
     }
 
@@ -152,65 +186,70 @@
     }
 
     .hero-subtitle {
-      font-family: 'Cinzel', serif;
+      margin-bottom: 2.5rem;
+      font-family: "Cinzel", serif;
       font-size: clamp(0.7rem, 1.5vw, 0.9rem);
       letter-spacing: 0.25em;
       color: var(--bark-light);
       text-transform: uppercase;
-      margin-bottom: 2.5rem;
       animation: fadeup 1s ease 0.3s both;
     }
 
     .hero-desc {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 1.1rem;
-      color: var(--earth-mid);
-      line-height: 1.9;
       max-width: 480px;
       margin-bottom: 3rem;
+      font-size: 1.1rem;
+      line-height: 1.9;
+      color: var(--earth-mid);
       animation: fadeup 1s ease 0.45s both;
     }
 
-    .hero-desc em { color: var(--leaf); font-style: italic; }
+    .hero-desc em {
+      color: var(--leaf);
+      font-style: italic;
+    }
 
     .hero-ctas {
       display: flex;
-      gap: 1rem;
       flex-wrap: wrap;
+      gap: 1rem;
       animation: fadeup 1s ease 0.6s both;
     }
 
-    .btn-primary {
-      font-family: 'Cinzel', serif;
+    .btn-primary,
+    .btn-secondary {
+      display: inline-block;
+      padding: 0.9rem 2rem;
+      font-family: "Cinzel", serif;
       font-size: 0.68rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .btn-primary {
       color: var(--cream);
       background: var(--leaf);
       border: none;
-      padding: 0.9rem 2rem;
-      text-decoration: none;
-      transition: all 0.3s;
-      display: inline-block;
     }
-    .btn-primary:hover { background: var(--leaf-light); transform: translateY(-2px); }
+
+    .btn-primary:hover {
+      background: var(--leaf-light);
+      transform: translateY(-2px);
+    }
 
     .btn-secondary {
-      font-family: 'Cinzel', serif;
-      font-size: 0.68rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
       color: var(--bark);
       background: transparent;
-      border: 1px solid rgba(107,76,42,0.3);
-      padding: 0.9rem 2rem;
-      text-decoration: none;
-      transition: all 0.3s;
-      display: inline-block;
+      border: 1px solid rgba(107, 76, 42, 0.3);
     }
-    .btn-secondary:hover { border-color: var(--bark); background: rgba(107,76,42,0.05); }
 
-    /* Hero illustration panel */
+    .btn-secondary:hover {
+      background: rgba(107, 76, 42, 0.05);
+      border-color: var(--bark);
+    }
+
     .hero-visual {
       position: relative;
       z-index: 1;
@@ -221,153 +260,190 @@
     }
 
     .flame-emblem {
+      position: relative;
       width: min(340px, 80vw);
       height: min(340px, 80vw);
-      position: relative;
     }
 
-    /* Pulsing outer ring */
-    .flame-emblem::before {
-      content: '';
+    .flame-emblem::before,
+    .flame-emblem::after {
+      content: "";
       position: absolute;
-      inset: -20px;
       border-radius: 50%;
-      border: 1px solid rgba(90,156,82,0.2);
+    }
+
+    .flame-emblem::before {
+      inset: -20px;
+      border: 1px solid rgba(90, 156, 82, 0.2);
       animation: ringpulse 4s ease-in-out infinite;
     }
 
     .flame-emblem::after {
-      content: '';
-      position: absolute;
       inset: -40px;
-      border-radius: 50%;
-      border: 1px solid rgba(244,168,32,0.12);
+      border: 1px solid rgba(244, 168, 32, 0.12);
       animation: ringpulse 4s ease-in-out 2s infinite;
     }
 
-    @keyframes ringpulse {
-      0%, 100% { transform: scale(1); opacity: 0.6; }
-      50% { transform: scale(1.04); opacity: 1; }
+    @media (max-width: 760px) {
+      #hero {
+        grid-template-columns: 1fr;
+        padding: 7rem 2rem 4rem;
+      }
     }
 
-    @keyframes fadeup {
-      from { opacity: 0; transform: translateY(24px); }
-      to { opacity: 1; transform: translateY(0); }
+    /* Shared */
+
+    .inner {
+      max-width: 1100px;
+      margin: 0 auto;
     }
 
-    /* Leaf pattern divider */
+    .about-label {
+      display: block;
+      margin-bottom: 1.5rem;
+      font-family: "Cinzel", serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--leaf);
+    }
+
+    .section-intro {
+      max-width: 650px;
+      margin-bottom: 3.5rem;
+      color: var(--mist);
+      font-size: 1.05rem;
+      font-style: italic;
+    }
+
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: "Cinzel", serif;
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      color: var(--leaf);
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: gap 0.3s;
+    }
+
+    .card-link:hover {
+      gap: 0.7rem;
+    }
+
     .leaf-divider {
+      padding: 1rem 0;
+      margin: 2rem 0;
       text-align: center;
       font-size: 1.1rem;
       letter-spacing: 1.2em;
       color: var(--leaf-light);
       opacity: 0.5;
-      padding: 1rem 0;
-      margin: 2rem 0;
     }
 
-/* ── THE HEARTH MANIFESTO ── */
+    /* Hearth Manifesto */
 
-#the-hearth {
-position: relative;
-z-index: 1;
-padding: 7rem 5vw;
-background:
-linear-gradient(to bottom, var(--cream), var(--sky));
-}
-
-#the-hearth .inner {
-max-width: 900px;
-margin: 0 auto;
-}
-
-#the-hearth h2 {
-font-family: 'Playfair Display', serif;
-font-size: clamp(2rem, 5vw, 3.4rem);
-font-weight: 400;
-color: var(--earth);
-margin-bottom: 0.6rem;
-}
-
-#the-hearth .section-intro {
-font-size: 1.1rem;
-font-style: italic;
-color: var(--mist);
-margin-bottom: 3rem;
-max-width: 700px;
-line-height: 1.8;
-}
-
-.hearth-manifesto p {
-font-size: 1.05rem;
-line-height: 2;
-color: var(--earth-mid);
-margin-bottom: 1.6rem;
-}
-
-.hearth-single {
-font-family: 'Playfair Display', serif;
-font-size: 1.8rem !important;
-font-style: italic;
-text-align: center;
-color: var(--ember);
-margin: 2.5rem 0 !important;
-}
-
-.hearth-grid-boxes {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-gap: 1.2rem;
-margin: 3rem 0;
-}
-
-.hearth-box {
-background: rgba(255,255,255,0.55);
-border: 1px solid rgba(107,76,42,0.08);
-padding: 1.5rem;
-backdrop-filter: blur(4px);
-transition: transform 0.3s ease;
-}
-
-.hearth-box:hover {
-transform: translateY(-4px);
-}
-
-.hearth-box span {
-font-size: 1.6rem;
-display: block;
-margin-bottom: 0.7rem;
-}
-
-.hearth-box h4 {
-font-family: 'Cinzel', serif;
-font-size: 0.72rem;
-letter-spacing: 0.14em;
-text-transform: uppercase;
-color: var(--bark);
-margin-bottom: 0.7rem;
-}
-
-.hearth-box p {
-font-size: 0.92rem;
-line-height: 1.7;
-margin: 0;
-color: var(--mist);
-}
-
-.hearth-closing {
-font-family: 'Playfair Display', serif;
-font-style: italic;
-font-size: 1.3rem !important;
-line-height: 1.8;
-color: var(--bark) !important;
-margin-top: 3rem !important;
-}
-    #about {
+    #the-hearth {
       position: relative;
       z-index: 1;
       padding: 7rem 5vw;
       background: linear-gradient(to bottom, var(--cream), var(--sky));
+    }
+
+    #the-hearth .inner {
+      max-width: 900px;
+    }
+
+    #the-hearth h2 {
+      margin-bottom: 0.6rem;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 400;
+      color: var(--earth);
+    }
+
+    #the-hearth .section-intro {
+      max-width: 700px;
+      margin-bottom: 3rem;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .hearth-manifesto p {
+      margin-bottom: 1.6rem;
+      color: var(--earth-mid);
+      font-size: 1.05rem;
+      line-height: 2;
+    }
+
+    .hearth-single {
+      margin: 2.5rem 0 !important;
+      font-family: "Playfair Display", serif;
+      font-size: 1.8rem !important;
+      font-style: italic;
+      text-align: center;
+      color: var(--ember) !important;
+    }
+
+    .hearth-grid-boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem;
+      margin: 3rem 0;
+    }
+
+    .hearth-box {
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.55);
+      border: 1px solid rgba(107, 76, 42, 0.08);
+      backdrop-filter: blur(4px);
+      transition: transform 0.3s ease;
+    }
+
+    .hearth-box:hover {
+      transform: translateY(-4px);
+    }
+
+    .hearth-box span {
+      display: block;
+      margin-bottom: 0.7rem;
+      font-size: 1.6rem;
+    }
+
+    .hearth-box h4 {
+      margin-bottom: 0.7rem;
+      font-family: "Cinzel", serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--bark);
+    }
+
+    .hearth-box p {
+      margin: 0;
+      color: var(--mist);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+
+    .hearth-closing {
+      margin-top: 3rem !important;
+      font-family: "Playfair Display", serif;
+      font-size: 1.3rem !important;
+      font-style: italic;
+      line-height: 1.8;
+      color: var(--bark) !important;
+    }
+
+    /* About */
+
+    #about {
+      position: relative;
+      z-index: 1;
+      padding: 7rem 5vw;
+      background: linear-gradient(to bottom, var(--sky), var(--cream));
     }
 
     .about-inner {
@@ -379,35 +455,21 @@ margin-top: 3rem !important;
       align-items: start;
     }
 
-    @media (max-width: 760px) {
-      .about-inner { grid-template-columns: 1fr; gap: 3rem; }
-    }
-
-    .about-label {
-      font-family: 'Cinzel', serif;
-      font-size: 0.6rem;
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-      color: var(--leaf);
-      margin-bottom: 1.5rem;
-      display: block;
-    }
-
     .about-sidebar h2 {
-      font-family: 'Playfair Display', serif;
+      margin-bottom: 2rem;
+      font-family: "Playfair Display", serif;
       font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 400;
       font-style: italic;
-      color: var(--earth);
       line-height: 1.2;
-      margin-bottom: 2rem;
+      color: var(--earth);
     }
 
-    .about-sidebar .blaze-badge {
+    .blaze-badge {
+      padding: 1rem 1.25rem;
       background: var(--leaf-pale);
       border-left: 3px solid var(--leaf);
-      padding: 1rem 1.25rem;
-      font-family: 'Cinzel', serif;
+      font-family: "Cinzel", serif;
       font-size: 0.68rem;
       letter-spacing: 0.12em;
       color: var(--leaf);
@@ -415,56 +477,88 @@ margin-top: 3rem !important;
     }
 
     .about-content p {
-      font-size: 1.05rem;
-      color: var(--earth-mid);
       margin-bottom: 1.5rem;
+      color: var(--earth-mid);
+      font-size: 1.05rem;
       line-height: 1.95;
     }
 
-    .about-content p em { color: var(--leaf); font-style: italic; }
-    .about-content p strong { color: var(--ember); font-weight: 700; font-style: normal; }
-
-    .about-content .pullquote {
-      font-family: 'Playfair Display', serif;
+    .about-content p em {
+      color: var(--leaf);
       font-style: italic;
-      font-size: 1.35rem;
-      color: var(--bark);
-      border-left: 3px solid var(--sun);
-      padding-left: 1.5rem;
+    }
+
+    .about-content p strong {
+      color: var(--ember);
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    .pullquote {
       margin: 2.5rem 0;
+      padding-left: 1.5rem;
+      border-left: 3px solid var(--sun);
+      font-family: "Playfair Display", serif;
+      font-size: 1.35rem;
+      font-style: italic;
       line-height: 1.6;
+      color: var(--bark);
     }
 
     .path-markers {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1px;
-      background: rgba(107,76,42,0.1);
       margin-top: 3rem;
+      background: rgba(107, 76, 42, 0.1);
     }
-
-    @media (max-width: 500px) { .path-markers { grid-template-columns: 1fr; } }
 
     .path-marker {
-      background: var(--cream);
       padding: 1.5rem;
+      background: var(--cream);
       transition: background 0.3s;
     }
-    .path-marker:hover { background: var(--sky); }
 
-    .path-marker .pm-icon { font-size: 1.5rem; margin-bottom: 0.5rem; display: block; }
+    .path-marker:hover {
+      background: var(--sky);
+    }
+
+    .path-marker .pm-icon {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
 
     .path-marker h4 {
-      font-family: 'Cinzel', serif;
+      margin-bottom: 0.4rem;
+      font-family: "Cinzel", serif;
       font-size: 0.72rem;
       letter-spacing: 0.12em;
       color: var(--bark);
-      margin-bottom: 0.4rem;
     }
 
-    .path-marker p { font-size: 0.9rem; color: var(--mist); line-height: 1.6; margin: 0; }
+    .path-marker p {
+      margin: 0;
+      color: var(--mist);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-    /* ── THE PATH (journey section) ── */
+    @media (max-width: 760px) {
+      .about-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .path-markers {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* The Path */
+
     #path {
       position: relative;
       z-index: 1;
@@ -472,22 +566,15 @@ margin-top: 3rem !important;
       background: var(--sky);
     }
 
-    #path .inner { max-width: 1100px; margin: 0 auto; }
-
-    #path h2 {
-      font-family: 'Playfair Display', serif;
+    #path h2,
+    #hearth h2,
+    #wheel h2,
+    #contact h2 {
+      margin-bottom: 0.5rem;
+      font-family: "Playfair Display", serif;
       font-size: clamp(1.8rem, 4vw, 2.8rem);
       font-weight: 400;
       color: var(--earth);
-      margin-bottom: 0.5rem;
-    }
-
-    #path .section-intro {
-      color: var(--mist);
-      font-style: italic;
-      font-size: 1.05rem;
-      margin-bottom: 3.5rem;
-      max-width: 560px;
     }
 
     .path-grid {
@@ -497,76 +584,58 @@ margin-top: 3rem !important;
     }
 
     .path-card {
-      background: var(--cream);
-      border: 1px solid rgba(107,76,42,0.1);
-      padding: 2rem;
       position: relative;
       overflow: hidden;
+      padding: 2rem;
+      background: var(--cream);
+      border: 1px solid rgba(107, 76, 42, 0.1);
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .path-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(58,107,53,0.12);
+      box-shadow: 0 12px 40px rgba(58, 107, 53, 0.12);
     }
 
     .path-card::before {
-      content: '';
+      content: "";
       position: absolute;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       height: 3px;
       background: linear-gradient(to right, var(--leaf), var(--sun));
     }
 
-    .path-card .card-icon { font-size: 1.8rem; margin-bottom: 1rem; display: block; }
+    .path-card .card-icon {
+      display: block;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
 
     .path-card h3 {
-      font-family: 'Playfair Display', serif;
+      margin-bottom: 0.75rem;
+      font-family: "Playfair Display", serif;
       font-size: 1.2rem;
       font-weight: 700;
+      line-height: 1.3;
       color: var(--earth);
-      margin-bottom: 0.75rem;
     }
 
-    .path-card p { font-size: 0.95rem; color: var(--earth-mid); line-height: 1.7; margin-bottom: 1rem; }
-
-    .path-card .card-link {
-      font-family: 'Cinzel', serif;
-      font-size: 0.62rem;
-      letter-spacing: 0.18em;
-      color: var(--leaf);
-      text-decoration: none;
-      text-transform: uppercase;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      transition: gap 0.3s;
+    .path-card p {
+      margin-bottom: 1rem;
+      color: var(--earth-mid);
+      font-size: 0.95rem;
+      line-height: 1.7;
     }
-    .path-card .card-link:hover { gap: 0.7rem; }
 
-    /* ── FROM THE HEARTH (blog) ── */
+    /* From The Hearth */
+
     #hearth {
       position: relative;
       z-index: 1;
       padding: 7rem 5vw;
       background: linear-gradient(to bottom, var(--sky), var(--cream));
-    }
-
-    #hearth .inner { max-width: 1100px; margin: 0 auto; }
-
-    #hearth h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 400;
-      color: var(--earth);
-      margin-bottom: 0.5rem;
-    }
-
-    #hearth .section-intro {
-      color: var(--mist);
-      font-style: italic;
-      font-size: 1.05rem;
-      margin-bottom: 3.5rem;
     }
 
     .hearth-grid {
@@ -576,142 +645,190 @@ margin-top: 3rem !important;
       align-items: start;
     }
 
-    @media (max-width: 760px) { .hearth-grid { grid-template-columns: 1fr; } }
-
     .post-featured {
-      background: var(--leaf-pale);
-      padding: 2.5rem;
       position: relative;
       overflow: hidden;
+      padding: 2.5rem;
+      background: var(--leaf-pale);
     }
 
     .post-featured::after {
-      content: '🌿';
+      content: "🌿";
       position: absolute;
-      bottom: -1rem; right: 1rem;
+      right: 1rem;
+      bottom: -1rem;
       font-size: 6rem;
       opacity: 0.08;
     }
 
     .post-tag {
-      font-family: 'Cinzel', serif;
+      display: block;
+      margin-bottom: 0.75rem;
+      font-family: "Cinzel", serif;
       font-size: 0.58rem;
       letter-spacing: 0.25em;
       text-transform: uppercase;
       color: var(--leaf);
-      margin-bottom: 0.75rem;
-      display: block;
-    }
-
-    .post-featured h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.3rem, 3vw, 1.9rem);
-      font-weight: 700;
-      color: var(--earth);
-      line-height: 1.25;
-      margin-bottom: 1rem;
-    }
-
-    .post-featured p {
-      font-size: 1rem;
-      color: var(--earth-mid);
-      line-height: 1.85;
-      margin-bottom: 1.5rem;
     }
 
     .post-date {
-      font-size: 0.85rem;
-      color: var(--mist);
-      font-style: italic;
-      margin-bottom: 0.75rem;
       display: block;
+      margin-bottom: 0.75rem;
+      color: var(--mist);
+      font-size: 0.85rem;
+      font-style: italic;
     }
 
-    .post-list { display: flex; flex-direction: column; gap: 0; }
+    .post-featured h3 {
+      margin-bottom: 1rem;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.3rem, 3vw, 1.9rem);
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--earth);
+    }
+
+    .post-featured p {
+      margin-bottom: 1.5rem;
+      color: var(--earth-mid);
+      font-size: 1rem;
+      line-height: 1.85;
+    }
+
+    .post-list {
+      display: flex;
+      flex-direction: column;
+    }
 
     .post-item {
       padding: 1.25rem 0;
-      border-bottom: 1px solid rgba(107,76,42,0.1);
+      border-bottom: 1px solid rgba(107, 76, 42, 0.1);
     }
-    .post-item:last-child { border-bottom: none; }
 
-    .post-item .post-tag { margin-bottom: 0.3rem; }
+    .post-item:last-child {
+      border-bottom: none;
+    }
+
+    .post-item .post-tag {
+      margin-bottom: 0.3rem;
+    }
 
     .post-item h4 {
-      font-family: 'Playfair Display', serif;
+      margin-bottom: 0.4rem;
+      font-family: "Playfair Display", serif;
       font-size: 1.05rem;
       font-weight: 700;
-      color: var(--earth);
-      margin-bottom: 0.4rem;
       line-height: 1.3;
+      color: var(--earth);
     }
 
-    .post-item p { font-size: 0.9rem; color: var(--mist); line-height: 1.6; margin: 0; }
+    .post-item p {
+      margin: 0;
+      color: var(--mist);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-    /* ── WHEEL OF THE YEAR ── */
+    @media (max-width: 760px) {
+      .hearth-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Wheel of the Year */
+
     #wheel {
       position: relative;
       z-index: 1;
       padding: 7rem 5vw;
+      overflow: hidden;
       background: var(--earth);
       color: var(--cream);
-      overflow: hidden;
     }
 
     #wheel::before {
-      content: '';
+      content: "";
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(ellipse at 20% 50%, rgba(90,156,82,0.15) 0%, transparent 60%),
-        radial-gradient(ellipse at 80% 30%, rgba(244,168,32,0.1) 0%, transparent 50%);
       pointer-events: none;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(90, 156, 82, 0.15) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 30%, rgba(244, 168, 32, 0.1) 0%, transparent 50%);
     }
 
-    #wheel .inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+    #wheel .inner {
+      position: relative;
+      z-index: 1;
+    }
 
     #wheel h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 400;
       color: var(--sun-pale);
-      margin-bottom: 0.5rem;
     }
 
-    #wheel .section-intro { color: rgba(253,248,238,0.5); font-style: italic; font-size: 1rem; margin-bottom: 3rem; }
+    #wheel .section-intro {
+      color: rgba(253, 248, 238, 0.5);
+    }
 
     .wheel-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 1px;
-      background: rgba(255,255,255,0.06);
+      background: rgba(255, 255, 255, 0.06);
     }
-
-    @media (max-width: 760px) { .wheel-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 400px) { .wheel-grid { grid-template-columns: 1fr; } }
 
     .festival {
-      background: var(--earth);
       padding: 1.75rem 1.25rem;
-      transition: background 0.3s;
+      background: var(--earth);
       cursor: default;
+      transition: background 0.3s;
     }
-    .festival:hover { background: var(--earth-mid); }
 
-    .festival .f-icon { font-size: 1.5rem; margin-bottom: 0.5rem; display: block; }
+    .festival:hover {
+      background: var(--earth-mid);
+    }
+
+    .festival .f-icon {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
 
     .festival h4 {
-      font-family: 'Cinzel', serif;
+      margin-bottom: 0.2rem;
+      font-family: "Cinzel", serif;
       font-size: 0.72rem;
       letter-spacing: 0.12em;
       color: var(--sun);
-      margin-bottom: 0.2rem;
     }
 
-    .festival .f-date { font-size: 0.78rem; color: rgba(253,248,238,0.35); font-style: italic; margin-bottom: 0.5rem; display: block; }
-    .festival p { font-size: 0.88rem; color: rgba(253,248,238,0.55); line-height: 1.55; }
+    .festival .f-date {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: rgba(253, 248, 238, 0.35);
+      font-size: 0.78rem;
+      font-style: italic;
+    }
 
-    /* ── CONTACT ── */
+    .festival p {
+      color: rgba(253, 248, 238, 0.55);
+      font-size: 0.88rem;
+      line-height: 1.55;
+    }
+
+    @media (max-width: 760px) {
+      .wheel-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 400px) {
+      .wheel-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Contact */
+
     #contact {
       position: relative;
       z-index: 1;
@@ -720,66 +837,112 @@ margin-top: 3rem !important;
       text-align: center;
     }
 
-    #contact .inner { max-width: 640px; margin: 0 auto; }
-
-    #contact .contact-icon { font-size: 3rem; margin-bottom: 1.5rem; display: block; }
-
-    #contact h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 400;
-      color: var(--earth);
-      margin-bottom: 1rem;
+    #contact .inner {
+      max-width: 640px;
     }
 
-    #contact p { color: var(--earth-mid); font-size: 1.05rem; margin-bottom: 2.5rem; line-height: 1.9; }
+    #contact .contact-icon {
+      display: block;
+      margin-bottom: 1.5rem;
+      font-size: 3rem;
+    }
+
+    #contact p {
+      margin-bottom: 2.5rem;
+      color: var(--earth-mid);
+      font-size: 1.05rem;
+      line-height: 1.9;
+    }
 
     .contact-email {
       display: inline-block;
-      font-family: 'Cinzel', serif;
+      margin-bottom: 3rem;
+      padding: 1.1rem 2.5rem;
+      font-family: "Cinzel", serif;
       font-size: 0.75rem;
       letter-spacing: 0.2em;
       color: var(--leaf);
       text-decoration: none;
-      border: 1px solid rgba(58,107,53,0.3);
-      padding: 1.1rem 2.5rem;
+      border: 1px solid rgba(58, 107, 53, 0.3);
       transition: all 0.3s;
-      margin-bottom: 3rem;
     }
-    .contact-email:hover { background: var(--leaf); color: var(--cream); }
 
-    /* ── FOOTER ── */
+    .contact-email:hover {
+      color: var(--cream);
+      background: var(--leaf);
+    }
+
+    /* Footer */
+
     footer {
-      background: var(--earth);
-      color: rgba(253,248,238,0.4);
-      text-align: center;
       padding: 3rem 2rem;
+      background: var(--earth);
+      color: rgba(253, 248, 238, 0.4);
+      text-align: center;
       font-size: 0.85rem;
       letter-spacing: 0.08em;
     }
 
     footer .footer-name {
-      font-family: 'Cinzel', serif;
+      display: block;
+      margin-bottom: 0.75rem;
+      font-family: "Cinzel", serif;
       font-size: 0.8rem;
       letter-spacing: 0.2em;
       color: var(--sun);
-      display: block;
-      margin-bottom: 0.75rem;
     }
 
-    footer a { color: var(--leaf-light); text-decoration: none; }
+    footer a {
+      color: var(--leaf-light);
+      text-decoration: none;
+    }
 
-    /* ── REVEAL ── */
-    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.75s ease, transform 0.75s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+    /* Animation */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes ringpulse {
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.6;
+      }
+
+      50% {
+        transform: scale(1.04);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeup {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
-<body>
 
-  <!-- STICKY NAV -->
-  <nav id="nav">
+<body>
+  <nav id="nav" aria-label="Main navigation">
     <a href="#hero" class="nav-brand">🔥 Blaze · The Celtic Druid Hearth</a>
+
     <div class="nav-links">
+      <a href="#the-hearth">The Hearth</a>
       <a href="#about">About Blaze</a>
       <a href="#path">The Path</a>
       <a href="#hearth">From the Hearth</a>
@@ -788,428 +951,598 @@ margin-top: 3rem !important;
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section id="hero">
-    <!-- Forest SVG background -->
-    <svg class="hero-forest" viewBox="0 0 1400 800" preserveAspectRatio="xMidYMid slice">
-      <g fill="var(--leaf)" opacity="0.6">
-        <!-- Tree silhouettes -->
-        <ellipse cx="100" cy="200" rx="80" ry="120"/>
-        <rect x="92" y="280" width="16" height="200"/>
-        <ellipse cx="300" cy="150" rx="100" ry="140"/>
-        <rect x="292" y="260" width="16" height="240"/>
-        <ellipse cx="500" cy="180" rx="70" ry="110"/>
-        <rect x="493" y="270" width="14" height="220"/>
-        <ellipse cx="700" cy="120" rx="120" ry="160"/>
-        <rect x="692" y="250" width="16" height="280"/>
-        <ellipse cx="950" cy="160" rx="90" ry="130"/>
-        <rect x="942" y="260" width="16" height="250"/>
-        <ellipse cx="1150" cy="140" rx="110" ry="150"/>
-        <rect x="1142" y="260" width="16" height="260"/>
-        <ellipse cx="1350" cy="180" rx="80" ry="120"/>
-        <rect x="1342" y="270" width="16" height="230"/>
-      </g>
-    </svg>
+  <main>
+    <section id="hero">
+      <svg class="hero-forest" viewBox="0 0 1400 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g fill="var(--leaf)" opacity="0.6">
+          <ellipse cx="100" cy="200" rx="80" ry="120" />
+          <rect x="92" y="280" width="16" height="200" />
 
-    <div class="hero-text">
-      <div class="hero-eyebrow">blazehearth.com</div>
-      <h1>
-        <span class="name-blaze">Blaze</span><br>
-        The Celtic<br>Druid Hearth
-      </h1>
-      <p class="hero-subtitle">Wayfinder · Keeper of the Old Paths</p>
-      <p class="hero-desc">
-        A druid walking the <em>ancient pathways of the Celtic nations</em> — Scotland, Ireland, Wales, Cornwall, Brittany, the Isle of Man. Seeking the fire that never went out. <em>Come, sit by the hearth.</em>
-      </p>
-      <div class="hero-ctas">
-        <a href="#about" class="btn-primary">Meet Blaze</a>
-        <a href="#hearth" class="btn-secondary">From the Hearth</a>
+          <ellipse cx="300" cy="150" rx="100" ry="140" />
+          <rect x="292" y="260" width="16" height="240" />
+
+          <ellipse cx="500" cy="180" rx="70" ry="110" />
+          <rect x="493" y="270" width="14" height="220" />
+
+          <ellipse cx="700" cy="120" rx="120" ry="160" />
+          <rect x="692" y="250" width="16" height="280" />
+
+          <ellipse cx="950" cy="160" rx="90" ry="130" />
+          <rect x="942" y="260" width="16" height="250" />
+
+          <ellipse cx="1150" cy="140" rx="110" ry="150" />
+          <rect x="1142" y="260" width="16" height="260" />
+
+          <ellipse cx="1350" cy="180" rx="80" ry="120" />
+          <rect x="1342" y="270" width="16" height="230" />
+        </g>
+      </svg>
+
+      <div class="hero-text">
+        <div class="hero-eyebrow">blazehearth.com</div>
+
+        <h1>
+          <span class="name-blaze">Blaze</span><br />
+          The Celtic<br />Druid Hearth
+        </h1>
+
+        <p class="hero-subtitle">Wayfinder · Keeper of the Old Paths</p>
+
+        <p class="hero-desc">
+          A druid walking the <em>ancient pathways of the Celtic nations</em> —
+          Scotland, Ireland, Wales, Cornwall, Brittany, and the Isle of Man.
+          Seeking the fire that never went out. <em>Come, sit by the hearth.</em>
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#the-hearth" class="btn-primary">Enter the Hearth</a>
+          <a href="#hearth" class="btn-secondary">From the Hearth</a>
+        </div>
       </div>
-    </div>
 
-    <div class="hero-visual">
-      <div class="flame-emblem">
-        <svg viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg">
-          <!-- Outer circle -->
-          <circle cx="170" cy="170" r="160" fill="none" stroke="rgba(58,107,53,0.15)" stroke-width="1"/>
-          <circle cx="170" cy="170" r="140" fill="none" stroke="rgba(244,168,32,0.12)" stroke-width="1"/>
-          <!-- Forest floor -->
-          <ellipse cx="170" cy="280" rx="120" ry="20" fill="rgba(58,107,53,0.08)"/>
-          <!-- Tree trunk -->
-          <rect x="160" y="180" width="20" height="100" rx="4" fill="rgba(107,76,42,0.5)"/>
-          <!-- Oak canopy layers -->
-          <ellipse cx="170" cy="160" rx="90" ry="70" fill="rgba(90,156,82,0.25)"/>
-          <ellipse cx="140" cy="140" rx="55" ry="45" fill="rgba(58,107,53,0.3)"/>
-          <ellipse cx="200" cy="135" rx="60" ry="48" fill="rgba(58,107,53,0.28)"/>
-          <ellipse cx="170" cy="120" rx="70" ry="55" fill="rgba(90,156,82,0.22)"/>
-          <!-- Sun rays -->
-          <g opacity="0.18" stroke="var(--sun)" stroke-width="1.5" fill="none">
-            <line x1="170" y1="10" x2="170" y2="50"/>
-            <line x1="280" y1="60" x2="255" y2="82"/>
-            <line x1="330" y1="170" x2="290" y2="170"/>
-            <line x1="60" y1="170" x2="20" y2="170"/>
-            <line x1="60" y1="60" x2="85" y2="82"/>
-          </g>
-          <!-- Flame at heart of tree -->
-          <path d="M170 195 C162 180 155 165 163 150 C158 160 170 155 170 145 C170 155 182 160 177 150 C185 165 178 180 170 195Z" fill="var(--ember)" opacity="0.7">
-            <animate attributeName="opacity" values="0.7;1;0.7" dur="2.5s" repeatCount="indefinite"/>
-            <animateTransform attributeName="transform" type="scale" values="1,1;1.05,1.05;1,1" additive="sum" dur="2.5s" repeatCount="indefinite" transformOrigin="170 170"/>
-          </path>
-          <!-- Awen symbol below -->
-          <g opacity="0.25" fill="var(--leaf)">
-            <circle cx="155" cy="305" r="4"/>
-            <circle cx="170" cy="305" r="4"/>
-            <circle cx="185" cy="305" r="4"/>
-          </g>
-          <!-- Ogham marks on sides -->
-          <g stroke="rgba(107,76,42,0.2)" stroke-width="1.5" stroke-linecap="round">
-            <line x1="25" y1="130" x2="35" y2="130"/>
-            <line x1="25" y1="145" x2="35" y2="145"/>
-            <line x1="25" y1="160" x2="35" y2="160"/>
-            <line x1="25" y1="175" x2="35" y2="175"/>
-            <line x1="20" y1="120" x2="20" y2="190"/>
-            <line x1="305" y1="130" x2="315" y2="130"/>
-            <line x1="305" y1="150" x2="315" y2="150"/>
-            <line x1="305" y1="170" x2="315" y2="170"/>
-            <line x1="320" y1="120" x2="320" y2="190"/>
-          </g>
-        </svg>
+      <div class="hero-visual">
+        <div class="flame-emblem">
+          <svg viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg" aria-label="Flame within an oak tree emblem">
+            <circle cx="170" cy="170" r="160" fill="none" stroke="rgba(58,107,53,0.15)" stroke-width="1" />
+            <circle cx="170" cy="170" r="140" fill="none" stroke="rgba(244,168,32,0.12)" stroke-width="1" />
+
+            <ellipse cx="170" cy="280" rx="120" ry="20" fill="rgba(58,107,53,0.08)" />
+            <rect x="160" y="180" width="20" height="100" rx="4" fill="rgba(107,76,42,0.5)" />
+
+            <ellipse cx="170" cy="160" rx="90" ry="70" fill="rgba(90,156,82,0.25)" />
+            <ellipse cx="140" cy="140" rx="55" ry="45" fill="rgba(58,107,53,0.3)" />
+            <ellipse cx="200" cy="135" rx="60" ry="48" fill="rgba(58,107,53,0.28)" />
+            <ellipse cx="170" cy="120" rx="70" ry="55" fill="rgba(90,156,82,0.22)" />
+
+            <g opacity="0.18" stroke="var(--sun)" stroke-width="1.5" fill="none">
+              <line x1="170" y1="10" x2="170" y2="50" />
+              <line x1="280" y1="60" x2="255" y2="82" />
+              <line x1="330" y1="170" x2="290" y2="170" />
+              <line x1="60" y1="170" x2="20" y2="170" />
+              <line x1="60" y1="60" x2="85" y2="82" />
+            </g>
+
+            <path
+              d="M170 195 C162 180 155 165 163 150 C158 160 170 155 170 145 C170 155 182 160 177 150 C185 165 178 180 170 195Z"
+              fill="var(--ember)"
+              opacity="0.7"
+            >
+              <animate attributeName="opacity" values="0.7;1;0.7" dur="2.5s" repeatCount="indefinite" />
+              <animateTransform
+                attributeName="transform"
+                type="scale"
+                values="1,1;1.05,1.05;1,1"
+                additive="sum"
+                dur="2.5s"
+                repeatCount="indefinite"
+                transformOrigin="170 170"
+              />
+            </path>
+
+            <g opacity="0.25" fill="var(--leaf)">
+              <circle cx="155" cy="305" r="4" />
+              <circle cx="170" cy="305" r="4" />
+              <circle cx="185" cy="305" r="4" />
+            </g>
+
+            <g stroke="rgba(107,76,42,0.2)" stroke-width="1.5" stroke-linecap="round">
+              <line x1="25" y1="130" x2="35" y2="130" />
+              <line x1="25" y1="145" x2="35" y2="145" />
+              <line x1="25" y1="160" x2="35" y2="160" />
+              <line x1="25" y1="175" x2="35" y2="175" />
+              <line x1="20" y1="120" x2="20" y2="190" />
+
+              <line x1="305" y1="130" x2="315" y2="130" />
+              <line x1="305" y1="150" x2="315" y2="150" />
+              <line x1="305" y1="170" x2="315" y2="170" />
+              <line x1="320" y1="120" x2="320" y2="190" />
+            </g>
+          </svg>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-</section>
+    <section id="the-hearth">
+      <div class="inner">
+        <span class="about-label reveal">The Hearth</span>
 
-<!-- THE HEARTH -->
-<section id="the-hearth">
-  <div class="inner">
-    <span class="about-label reveal">The Hearth</span>
+        <h2 class="reveal">A Living Grove for a Louder Age</h2>
 
-    <h2 class="reveal">A Living Grove for a Louder Age</h2>
+        <p class="section-intro reveal">
+          Not a stage. Not a brand. A fire in the dark where people can gather,
+          breathe, and remember themselves again.
+        </p>
 
-    <p class="section-intro reveal">
-      Not a stage. Not a brand. A fire in the dark where people can gather,
-      breathe, and remember themselves again.
-    </p>
-
-    <div class="hearth-manifesto reveal">
-
-      <p>
-        There are places in the old stories where travellers crossed wild land
-        through rain, hunger, mist, and uncertainty — and then, at last,
-        saw firelight in the distance.
-      </p>
-
-      <p>
-        Not a fortress. Not a throne. Not a marketplace.
-      </p>
-
-      <p class="hearth-single">
-        A hearth.
-      </p>
-
-      <p>
-        A place where strangers became companions. Where stories were traded
-        for shelter. Where wisdom sat beside laughter. Where people remembered
-        that being human was never meant to be done alone.
-      </p>
-
-      <p>
-        This space was created in that spirit.
-      </p>
-
-      <p>
-        The world grows louder each year — faster, more fractured,
-        more artificial. Many of us feel the pressure to become brands instead
-        of people, to consume instead of belong, to optimise instead of live.
-      </p>
-
-      <p>
-        Somewhere beneath all that noise, something ancient in us grows thirsty:
-        for land, meaning, friendship, rhythm, and soul.
-      </p>
-
-      <p>
-        The Hearth exists as a small act of resistance against forgetting.
-      </p>
-
-      <div class="hearth-grid-boxes">
-
-        <div class="hearth-box">
-          <span>🌿</span>
-          <h4>Belonging</h4>
+        <div class="hearth-manifesto reveal">
           <p>
-            A place where people arrive without needing to perform.
+            There are places in the old stories where travellers crossed wild land
+            through rain, hunger, mist, and uncertainty — and then, at last,
+            saw firelight in the distance.
+          </p>
+
+          <p>Not a fortress. Not a throne. Not a marketplace.</p>
+
+          <p class="hearth-single">A hearth.</p>
+
+          <p>
+            A place where strangers became companions. Where stories were traded
+            for shelter. Where wisdom sat beside laughter. Where people remembered
+            that being human was never meant to be done alone.
+          </p>
+
+          <p>
+            This space was created in that spirit: a shared fire, an open knowledge
+            pool, and a welcoming circle for the Celtic and druidic path.
+          </p>
+
+          <div class="hearth-grid-boxes">
+            <div class="hearth-box">
+              <span>🌿</span>
+              <h4>Belonging</h4>
+              <p>A place where people arrive without needing to perform.</p>
+            </div>
+
+            <div class="hearth-box">
+              <span>🔥</span>
+              <h4>Gathering</h4>
+              <p>Stories, camps, rituals, conversations, songs, and shared firelight.</p>
+            </div>
+
+            <div class="hearth-box">
+              <span>🌍</span>
+              <h4>Living Culture</h4>
+              <p>Ancient wisdom meeting modern life with honesty and care.</p>
+            </div>
+
+            <div class="hearth-box">
+              <span>✨</span>
+              <h4>The Future</h4>
+              <p>Exploring how we remain human in an age of speed, systems, and AI.</p>
+            </div>
+          </div>
+
+          <p>
+            Some who arrive here are Druids. Some are artists. Some are leaders,
+            wanderers, technologists, healers, or seekers.
+          </p>
+
+          <p class="hearth-single">All are welcome.</p>
+
+          <p>
+            The old paths were never about escaping the world. They were about
+            learning how to walk through it with awareness, courage, humour, and
+            reverence.
+          </p>
+
+          <p class="hearth-closing">
+            So take off your boots awhile. Warm your hands. Listen to the wind in
+            the trees beyond the walls. And if you have a story of your own —
+            pull up a chair.
           </p>
         </div>
+      </div>
+    </section>
 
-        <div class="hearth-box">
-          <span>🔥</span>
-          <h4>Gathering</h4>
+    <section id="about">
+      <div class="about-inner">
+        <div class="about-sidebar reveal">
+          <span class="about-label">Who is Blaze?</span>
+
+          <h2>A druid on the Celtic pathway, wayfinding.</h2>
+
+          <div class="blaze-badge">
+            🔥 Blaze · The Celtic Nations<br />
+            Ovate · Hearth-maker · Learner on the Path
+          </div>
+        </div>
+
+        <div class="about-content reveal">
           <p>
-            Stories, camps, rituals, conversations, songs, and shared firelight.
+            Blaze is a druid. Not a title owned, sold, or used to stand above
+            others — but a word for a way of walking: listening to land, story,
+            season, fire, water, stone, and community.
           </p>
-        </div>
 
-        <div class="hearth-box">
-          <span>🌍</span>
-          <h4>Living Culture</h4>
           <p>
-            Ancient wisdom meeting modern life with honesty and care.
+            The Celtic nations are Blaze's territory:
+            <strong>Scotland, Ireland, Wales, Cornwall, Brittany, and the Isle of Man.</strong>
+            Six voices, many traditions, one ancient conversation carried by land,
+            sea, story, language, and memory.
           </p>
-        </div>
 
-        <div class="hearth-box">
-          <span>✨</span>
-          <h4>The Future</h4>
+          <div class="pullquote">
+            “I am not a teacher above the path. I am a fellow walker upon it.
+            What I find in the grove, at the loch edge, in the old story — I bring
+            back to the hearth and lay it down for anyone who wants to look.”
+          </div>
+
           <p>
-            Exploring how we remain human in an age of speed, systems, and AI.
+            Blaze moves between traditions not to flatten them into one thing, but
+            because <em>the land itself does not respect tidy borders</em>. The sea
+            between Scotland and Ireland is a conversation, not a wall.
           </p>
-        </div>
 
-      </div>
+          <p>
+            The Hearth is the space Blaze tends. A fire lit not for Blaze alone,
+            but for anyone who finds themselves on the path and wants to
+            <em>rest for a moment in the warmth</em>.
+          </p>
 
-      <p>
-        Some who arrive here are Druids. Some are artists. Some are leaders,
-        wanderers, technologists, healers, or seekers.
-      </p>
+          <div class="path-markers">
+            <div class="path-marker">
+              <span class="pm-icon">🌲</span>
+              <h4>The Grove</h4>
+              <p>The oak is the axis. Everything begins in stillness, deep roots, and the canopy that holds the sky.</p>
+            </div>
 
-      <p class="hearth-single">
-        All are welcome.
-      </p>
+            <div class="path-marker">
+              <span class="pm-icon">🌊</span>
+              <h4>The Water</h4>
+              <p>Scotland's lochs, Ireland's sacred wells, and the waters between nations. Water remembers.</p>
+            </div>
 
-      <p>
-        The old paths were never about escaping the world.
-        They were about learning how to walk through it with awareness,
-        courage, humour, and reverence.
-      </p>
+            <div class="path-marker">
+              <span class="pm-icon">🔥</span>
+              <h4>The Fire</h4>
+              <p>Brigid's flame. The Beltane bonfire. The hearth at the centre of the home. Fire is the teacher.</p>
+            </div>
 
-      <p class="hearth-closing">
-        So take off your boots awhile. Warm your hands.
-        Listen to the wind in the trees beyond the walls.
-        And if you have a story of your own —
-        pull up a chair.
-      </p>
-
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-    <div class="about-inner">
-      <div class="about-sidebar reveal">
-        <span class="about-label">Who is Blaze?</span>
-        <h2>A druid on the Celtic pathway, wayfinding.</h2>
-        <div class="blaze-badge">
-          🔥 Blaze · They/Them · The Celtic Nations<br>
-          Druid · Storyteller · Walker of Old Paths
-        </div>
-      </div>
-      <div class="about-content reveal">
-        <p>Blaze is a druid. Not a title earned from a book or bestowed by an order — though those things have their place — but a word for what Blaze <em>is</em>, in the way that a river is a river because it moves toward the sea.</p>
-        <p>The Celtic nations are Blaze's territory: <strong>Scotland, Ireland, Wales, Cornwall, Brittany, the Isle of Man.</strong> Six nations, one ancient root. One web of story, myth, land-memory and fire-knowledge stretching back before memory begins.</p>
-        <div class="pullquote">"I am not a teacher. I am a fellow walker on the path. What I find in the grove, at the loch edge, in the old story — I bring back to the hearth and lay it down for anyone who wants to look."</div>
-        <p>Blaze moves between the traditions — not to flatten them into one thing, but because <em>the land itself doesn't respect borders</em>. The sea between Scotland and Ireland is a conversation, not a wall. The standing stones of Brittany and the standing stones of Lewis were raised by the same impulse, the same cosmic attentiveness.</p>
-        <p>The Hearth is the space Blaze tends. A fire lit not for Blaze alone, but for anyone who finds themselves on the path and wants to <em>rest for a moment in the warmth</em>.</p>
-
-        <div class="path-markers">
-          <div class="path-marker">
-            <span class="pm-icon">🌲</span>
-            <h4>The Grove</h4>
-            <p>The oak is the axis. Everything begins in stillness, in deep roots, in the canopy that holds the sky.</p>
-          </div>
-          <div class="path-marker">
-            <span class="pm-icon">🌊</span>
-            <h4>The Water</h4>
-            <p>Scotland's lochs, Ireland's sacred wells, the Channel between Cornwall and Brittany — water remembers.</p>
-          </div>
-          <div class="path-marker">
-            <span class="pm-icon">🔥</span>
-            <h4>The Fire</h4>
-            <p>Brigid's eternal flame. The Beltane bonfire. The hearth at the centre of the home. Fire is the teacher.</p>
-          </div>
-          <div class="path-marker">
-            <span class="pm-icon">🪨</span>
-            <h4>The Stone</h4>
-            <p>Callanish. Avebury. Carnac. The stones are not monuments. They are conversations still happening.</p>
+            <div class="path-marker">
+              <span class="pm-icon">🪨</span>
+              <h4>The Stone</h4>
+              <p>Callanish. Avebury. Carnac. The stones are not monuments. They are conversations still happening.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- THE PATH -->
-  <section id="path">
-    <div class="inner">
-      <span class="about-label reveal">What Blaze Explores</span>
-      <h2 class="reveal">The Path Has Many Turnings</h2>
-      <p class="section-intro reveal">Wayfinding across the Celtic nations — myth, land, fire, and the old ways that never left.</p>
+    <section id="path">
+      <div class="inner">
+        <span class="about-label reveal">What Blaze Explores</span>
 
-      <div class="path-grid">
-        <div class="path-card reveal">
-          <span class="card-icon">📖</span>
-          <h3>Myth & Story</h3>
-          <p>The Tuatha Dé Danann. Cú Chulainn. The Mabinogion. Fingal's Cave. The tales of the Celtic nations are not old stories — they are maps of the living world.</p>
-          <a href="#hearth" class="card-link">Read the tales →</a>
-        </div>
-        <div class="path-card reveal">
-          <span class="card-icon">🏔</span>
-          <h3>Sacred Landscapes</h3>
-          <p>Walking to Callanish, Skara Brae, the Clava Cairns, Glastonbury Tor, Carnac. Pilgrimage as practice. The land as teacher.</p>
-          <a href="#hearth" class="card-link">Walk with Blaze →</a>
-        </div>
-        <div class="path-card reveal">
-          <span class="card-icon">☀️</span>
-          <h3>The Wheel of the Year</h3>
-          <p>Eight festivals. Eight turnings of the great wheel. Samhain to Beltane, Alban Arthan to Alban Hefin — living in rhythm with the seasons.</p>
-          <a href="#wheel" class="card-link">The sacred calendar →</a>
-        </div>
-        <div class="path-card reveal">
-          <span class="card-icon">🌿</span>
-          <h3>Druid Lore</h3>
-          <p>Ogham. The three grades. The cauldrons of poesy. Imbas and Awen. The old knowledge, explored with honesty and care.</p>
-          <a href="#hearth" class="card-link">Into the lore →</a>
-        </div>
-        <div class="path-card reveal">
-          <span class="card-icon">🌍</span>
-          <h3>The Six Nations</h3>
-          <p>Scotland · Ireland · Wales · Cornwall · Brittany · Isle of Man. One family, six voices, a thousand years of shared dreaming.</p>
-          <a href="#about" class="card-link">The Celtic family →</a>
-        </div>
-        <div class="path-card reveal">
-          <span class="card-icon">🔥</span>
-          <h3>The Hearth Community</h3>
-          <p>Events, organisations, resources across the Celtic nations. The fire burns brighter with more people gathered round it.</p>
-          <a href="community.html" class="card-link">Join the gathering →</a>
-        </div>
-      </div>
-    </div>
-  </section>
+        <h2 class="reveal">The Path Has Many Turnings</h2>
 
-  <!-- FROM THE HEARTH -->
-  <section id="hearth">
-    <div class="inner">
-      <span class="about-label reveal">Words from the Path</span>
-      <h2 class="reveal">From the Hearth</h2>
-      <p class="section-intro reveal">Notes from the road, the grove, the water's edge.</p>
+        <p class="section-intro reveal">
+          Wayfinding across the Celtic nations — myth, land, fire, and the old ways that never left.
+        </p>
 
-      <div class="hearth-grid reveal">
-        <div class="post-featured">
-          <span class="post-tag">🔥 First Fire · The Beginning</span>
-          <span class="post-date">May 2025</span>
-         <span class="post-tag">🔥 First Fire · Welcome</span>
-<span class="post-date">May 2026</span>
-
-<h3>A Fire in the Distance</h3>
-
-<p>I am Blaze. An Ovate. A hearth-maker. A learner walking the Celtic druidic path.</p>
-
-<p>Blaze's Hearth exists because too many people walk these paths alone, and too much wisdom disappears into noise, algorithms, forgotten forums, dead links, closed groups, and scattered conversations lost to time.</p>
-
-<p>The old ways survived because people shared them — around fires, across waters, through story, song, memory, hospitality, and friendship.</p>
-
-<p>This Hearth was lit with a simple hope: to create an open gathering place for people drawn toward the Celtic nations, the druidic path, pagan traditions, sacred landscapes, folklore, creativity, and community.</p>
-
-<p>A place where knowledge can flow freely. A place where newcomers feel welcomed rather than tested. A place where artists, storytellers, musicians, pilgrims, organisers, wanderers, and seekers can share what they know and what they create.</p>
-
-<p>Over time, I hope this Hearth becomes a living knowledge pool: events, camps, sacred places, books, folklore, artwork, music, poetry, reflections, and practical wisdom gathered by the community itself.</p>
-
-<p>This Hearth belongs as much to the community as it does to me.</p>
-
-<p>If you organise events, share them. If you create beautiful things rooted in the old ways, let people discover them. If you know stories worth preserving, help carry them forward.</p>
-
-<p>And if you simply wish to sit quietly beside the fire and listen for a while, that is welcome too.</p>
-
-<p>So this is the first fire at Blaze's Hearth. A beginning.</p>
-
-<p>Pull up a chair. Warm your hands beside the flame. And if the road has gifted you wisdom, kindness, creativity, or wonder — add your fire to the hearth.</p>
-        </div>
-
-        <div class="post-list">
-          <div class="post-item">
-            <span class="post-tag">🌊 Listening</span>
-            <span class="post-date" style="font-size:0.8rem;color:var(--mist);font-style:italic;display:block;margin-bottom:0.3rem;">May 2025</span>
-            <h4>Listening to the Land</h4>
-            <p>There is a language spoken by stones and rivers. It takes patience to begin to hear it. But once you do, you cannot unhear it.</p>
+        <div class="path-grid">
+          <div class="path-card reveal">
+            <span class="card-icon">📖</span>
+            <h3>Myth & Story</h3>
+            <p>
+              The Tuatha Dé Danann. Cú Chulainn. The Mabinogion. Fingal's Cave.
+              The tales of the Celtic nations are not old stories — they are maps
+              of the living world.
+            </p>
+            <a href="#hearth" class="card-link">Read the tales →</a>
           </div>
-          <div class="post-item">
-            <span class="post-tag">🏔 Pilgrimage</span>
-            <span class="post-date" style="font-size:0.8rem;color:var(--mist);font-style:italic;display:block;margin-bottom:0.3rem;">Coming Soon</span>
-            <h4>Callanish: Where the Moon Comes Down to Earth</h4>
-            <p>Five thousand years old. Built in alignment with the moon. What the stones asked of me when I stood among them.</p>
+
+          <div class="path-card reveal">
+            <span class="card-icon">🏔</span>
+            <h3>Sacred Landscapes</h3>
+            <p>
+              Walking to Callanish, Skara Brae, the Clava Cairns, Glastonbury Tor,
+              and Carnac. Pilgrimage as practice. The land as teacher.
+            </p>
+            <a href="#hearth" class="card-link">Walk with Blaze →</a>
           </div>
-          <div class="post-item">
-            <span class="post-tag">🌿 Lore</span>
-            <span class="post-date" style="font-size:0.8rem;color:var(--mist);font-style:italic;display:block;margin-bottom:0.3rem;">Coming Soon</span>
-            <h4>What is Awen? The Flowing Inspiration of the Druids</h4>
-            <p>The word the Welsh gave to divine inspiration. What it means, and how to invite it.</p>
+
+          <div class="path-card reveal">
+            <span class="card-icon">☀️</span>
+            <h3>The Wheel of the Year</h3>
+            <p>
+              Eight festivals. Eight turnings of the great wheel. Samhain to Beltane,
+              Alban Arthan to Alban Hefin — living in rhythm with the seasons.
+            </p>
+            <a href="#wheel" class="card-link">The sacred calendar →</a>
+          </div>
+
+          <div class="path-card reveal">
+            <span class="card-icon">🌿</span>
+            <h3>Druid Lore</h3>
+            <p>
+              Ogham. The three grades. The cauldrons of poesy. Imbas and Awen.
+              The old knowledge, explored with honesty and care.
+            </p>
+            <a href="#hearth" class="card-link">Into the lore →</a>
+          </div>
+
+          <div class="path-card reveal">
+            <span class="card-icon">🌍</span>
+            <h3>The Six Nations</h3>
+            <p>
+              Scotland · Ireland · Wales · Cornwall · Brittany · Isle of Man.
+              One family, six voices, a thousand years of shared dreaming.
+            </p>
+            <a href="#about" class="card-link">The Celtic family →</a>
+          </div>
+
+          <div class="path-card reveal">
+            <span class="card-icon">🔥</span>
+            <h3>The Hearth Community</h3>
+            <p>
+              Events, organisations, resources, and community projects across the
+              Celtic nations. The fire burns brighter with more people gathered round it.
+            </p>
+            <a href="community.html" class="card-link">Join the gathering →</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- WHEEL OF THE YEAR -->
-  <section id="wheel">
-    <div class="inner">
-      <span class="about-label reveal" style="color:var(--leaf-light);">The Sacred Calendar</span>
-      <h2 class="reveal">The Wheel of the Year</h2>
-      <p class="section-intro reveal">Eight festivals. The Celtic year turns not in straight lines but in spirals, each season folding into the next.</p>
+    <section id="hearth">
+      <div class="inner">
+        <span class="about-label reveal">Words from the Path</span>
 
-      <div class="wheel-grid reveal">
-        <div class="festival"><span class="f-icon">🌑</span><h4>Samhain</h4><span class="f-date">31 Oct – 1 Nov</span><p>The veil thins. The ancestors draw near. The year's last harvest and the birth of the dark half.</p></div>
-        <div class="festival"><span class="f-icon">❄️</span><h4>Alban Arthan</h4><span class="f-date">Winter Solstice ~21 Dec</span><p>The still point. The longest night. We hold a flame and wait for the light to be reborn.</p></div>
-        <div class="festival"><span class="f-icon">🕯️</span><h4>Imbolc</h4><span class="f-date">1–2 Feb</span><p>Brigid's festival. The first breath of spring beneath the frozen ground. Life insists.</p></div>
-        <div class="festival"><span class="f-icon">🌱</span><h4>Alban Eilir</h4><span class="f-date">Spring Equinox ~20 Mar</span><p>Balance of light and dark. Seeds split open. The world reaches toward what it cannot yet see.</p></div>
-        <div class="festival"><span class="f-icon">🔥</span><h4>Beltane</h4><span class="f-date">1 May</span><p>The great fire festival. Life at its most extravagant. The world is young, green, and overflowing.</p></div>
-        <div class="festival"><span class="f-icon">☀️</span><h4>Alban Hefin</h4><span class="f-date">Summer Solstice ~21 Jun</span><p>The sun at its height. The longest day. The oak king reigns. Warmth without limit.</p></div>
-        <div class="festival"><span class="f-icon">🌾</span><h4>Lughnasadh</h4><span class="f-date">1 Aug</span><p>First harvest. Lugh's games. Gratitude for abundance and the first whisper that summer ends.</p></div>
-        <div class="festival"><span class="f-icon">🍂</span><h4>Alban Elfed</h4><span class="f-date">Autumn Equinox ~22 Sep</span><p>The second harvest. Balance returns then tips. The trees begin their letting go.</p></div>
+        <h2 class="reveal">From the Hearth</h2>
+
+        <p class="section-intro reveal">
+          Notes from the road, the grove, the water's edge.
+        </p>
+
+        <div class="hearth-grid reveal">
+          <article class="post-featured">
+            <span class="post-tag">🔥 First Fire · Welcome</span>
+            <span class="post-date">May 2026</span>
+
+            <h3>A Fire in the Distance</h3>
+
+            <p>I am Blaze.</p>
+
+            <p>An Ovate. A hearth-maker. A learner walking the Celtic druidic path.</p>
+
+            <p>
+              Blaze's Hearth exists because too many people walk these roads alone,
+              and too much wisdom disappears into noise — buried beneath algorithms,
+              forgotten forums, dead links, closed groups, and conversations scattered
+              to the wind.
+            </p>
+
+            <p>But the old ways survived because people carried them together.</p>
+
+            <p>
+              Around fires. Across waters. Through story, song, memory, hospitality,
+              friendship, and shared journeys beneath open skies.
+            </p>
+
+            <p>This Hearth was lit with a simple hope:</p>
+
+            <p>
+              To create an open gathering place for people drawn toward the Celtic
+              nations, the druidic path, pagan traditions, sacred landscapes, folklore,
+              creativity, and community.
+            </p>
+
+            <p>
+              A place where knowledge flows freely. A place where newcomers are welcomed
+              rather than tested. A place where artists, storytellers, musicians, pilgrims,
+              organisers, wanderers, and seekers can share what they know and what they create.
+            </p>
+
+            <p>
+              Over time, I hope this Hearth becomes a living knowledge pool — gathering
+              events, camps, sacred places, books, folklore, artwork, music, poetry,
+              reflections, practical wisdom, and stories carried by the community itself.
+            </p>
+
+            <p>This Hearth belongs as much to the community as it does to me.</p>
+
+            <p>If you organise events, share them.</p>
+
+            <p>If you create beautiful things rooted in the old ways, let people discover them.</p>
+
+            <p>If you know stories worth preserving, help carry them forward.</p>
+
+            <p>
+              And if you simply wish to sit quietly beside the fire and listen for a while,
+              that is welcome too.
+            </p>
+
+            <p>
+              Because despite everything, I still believe people are searching for spaces
+              that feel human — places built around generosity, creativity, curiosity,
+              belonging, and shared memory.
+            </p>
+
+            <p>So this is the first fire at Blaze's Hearth.</p>
+
+            <p>A beginning.</p>
+
+            <p>Pull up a chair. Warm your hands beside the flame.</p>
+
+            <p>
+              And if the road has gifted you wisdom, kindness, creativity, or wonder —
+              add your fire to the hearth.
+            </p>
+
+            <a href="#contact" class="card-link">Add your fire →</a>
+          </article>
+
+          <aside class="post-list" aria-label="More posts">
+            <div class="post-item">
+              <span class="post-tag">🌊 Listening</span>
+              <span class="post-date">Coming Soon</span>
+              <h4>Listening to the Land</h4>
+              <p>
+                There is a language spoken by stones and rivers. It takes patience to
+                begin to hear it. But once you do, you cannot unhear it.
+              </p>
+            </div>
+
+            <div class="post-item">
+              <span class="post-tag">🏔 Pilgrimage</span>
+              <span class="post-date">Coming Soon</span>
+              <h4>Callanish: Where the Moon Comes Down to Earth</h4>
+              <p>
+                Five thousand years old. Built in alignment with the moon. What the
+                stones asked when I stood among them.
+              </p>
+            </div>
+
+            <div class="post-item">
+              <span class="post-tag">🌿 Lore</span>
+              <span class="post-date">Coming Soon</span>
+              <h4>What is Awen?</h4>
+              <p>
+                The word the Welsh gave to flowing inspiration — and how we might
+                invite it with humility and care.
+              </p>
+            </div>
+          </aside>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="inner">
-      <span class="contact-icon reveal">🌿</span>
-      <h2 class="reveal">Pull Up a Seat</h2>
-      <p class="reveal">The hearth is open to all who walk the path — druids, seekers, wanderers, those who just heard something calling from the trees. Write to Blaze. All are welcome here.</p>
-      <a href="mailto:Heartofscott@gmail.com" class="contact-email reveal">✉ &nbsp; Heartofscott@gmail.com</a>
-      <div class="leaf-divider reveal">🌿 🔥 🌿</div>
-    </div>
-  </section>
+    <section id="wheel">
+      <div class="inner">
+        <span class="about-label reveal" style="color: var(--leaf-light);">The Sacred Calendar</span>
 
-  <!-- FOOTER -->
+        <h2 class="reveal">The Wheel of the Year</h2>
+
+        <p class="section-intro reveal">
+          Eight festivals. The Celtic year turns not in straight lines but in spirals,
+          each season folding into the next.
+        </p>
+
+        <div class="wheel-grid reveal">
+          <div class="festival">
+            <span class="f-icon">🌑</span>
+            <h4>Samhain</h4>
+            <span class="f-date">31 Oct – 1 Nov</span>
+            <p>The veil thins. The ancestors draw near. The year's last harvest and the birth of the dark half.</p>
+          </div>
+
+          <div class="festival">
+            <span class="f-icon">❄️</span>
+            <h4>Alban Arthan</h4>
+            <span class="f-date">Winter Solstice ~21 Dec</span>
+            <p>The still point. The longest night. We hold a flame and wait for the light to be reborn.</p>
+          </div>
+
+          <div class="festival">
+            <span class="f-icon">🕯️</span>
+            <h4>Imbolc</h4>
+            <span class="f-date">1–2 Feb</span>
+            <p>Brigid's festival. The first breath of spring beneath the frozen ground. Life insists.</p>
+          </div>
+
+          <div class="festival">
+            <span class="f-icon">🌱</span>
+            <h4>Alban Eilir</h4>
+            <span class="f-date">Spring Equinox ~20 Mar</span>
+            <p>Balance of light and dark. Seeds split open. The world reaches toward what it cannot yet see.</p>
+          </div>
+
+          <div class="festival">
+            <span class="f-icon">🔥</span>
+            <h4>Beltane</h4>
+            <span class="f-date">1 May</span>
+            <p>The great fire festival. Life at its most extravagant. The world is young, green, and overflowing.</p>
+          </div>
+
+          <div class="festival">
+            <span class="f-icon">☀️</span>
+            <h4>Alban Hefin</h4>
+            <span class="f-date">Summer Solstice ~21 Jun</span>
+            <p>The sun at its height. The longest day. The oak king reigns. Warmth without limit.</p>
+          </div>
+
+          <div class="festival">
+            <span class="f-icon">🌾</span>
+            <h4>Lughnasadh</h4>
+            <span class="f-date">1 Aug</span>
+            <p>First harvest. Lugh's games. Gratitude for abundance and the first whisper that summer ends.</p>
+          </div>
+
+          <div class="festival">
+            <span class="f-icon">🍂</span>
+            <h4>Alban Elfed</h4>
+            <span class="f-date">Autumn Equinox ~22 Sep</span>
+            <p>The second harvest. Balance returns then tips. The trees begin their letting go.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="inner">
+        <span class="contact-icon reveal">🌿</span>
+
+        <h2 class="reveal">Pull Up a Seat</h2>
+
+        <p class="reveal">
+          The hearth is open to all who walk the path — druids, seekers,
+          wanderers, makers, organisers, and those who have simply heard something
+          calling from the trees. Write to Blaze. All are welcome here.
+        </p>
+
+        <a href="mailto:heartofscott@gmail.com" class="contact-email reveal">
+          ✉ &nbsp; heartofscott@gmail.com
+        </a>
+
+        <div class="leaf-divider reveal">🌿 🔥 🌿</div>
+      </div>
+    </section>
+  </main>
+
   <footer>
     <span class="footer-name">🔥 Blaze · The Celtic Druid Hearth</span>
+
     blazehearth.com · Walking the Old Paths of the Celtic Nations
-    <br><br>
-    <span style="opacity:0.5;font-size:0.8rem;">
-      <a href="community.html">Community</a> &nbsp;·&nbsp;
+
+    <br /><br />
+
+    <span style="opacity: 0.5; font-size: 0.8rem;">
+      <a href="community.html">Community</a>
+      &nbsp;·&nbsp;
       Scotland · Ireland · Wales · Cornwall · Brittany · Isle of Man
     </span>
   </footer>
 
   <script>
-    // Sticky nav
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('visible', window.scrollY > window.innerHeight * 0.6);
+    const nav = document.getElementById("nav");
+
+    window.addEventListener("scroll", () => {
+      nav.classList.toggle("visible", window.scrollY > window.innerHeight * 0.6);
     });
 
-    // Reveal on scroll
-    const reveals = document.querySelectorAll('.reveal');
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach((e, i) => {
-        if (e.isIntersecting) {
-          setTimeout(() => e.target.classList.add('visible'), i * 80);
-          obs.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.08 });
-    reveals.forEach(el => obs.observe(el));
+    const reveals = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => entry.target.classList.add("visible"), index * 80);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.08 }
+    );
+
+    reveals.forEach((element) => observer.observe(element));
   </script>
 </body>
 </html>
