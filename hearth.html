@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>From the Hearth — Writing & Ideas | The Firewalkers</title>
 <meta name="description" content="Writing, stories, research and ideas from the Firewalkers community. Essays on technology, land, AI responsibility, and the future we are building together.">
@@ -16,7 +17,14 @@
 <meta name="twitter:title" content="From the Hearth — The Firewalkers">
 <meta name="twitter:description" content="Writing, stories and ideas from the Firewalkers community.">
 <meta name="twitter:image" content="https://images.unsplash.com/photo-1486915309851-b0cc1f8a0084?auto=format&fit=crop&w=1200&q=80">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"From the Hearth","url":"https://heartofscott.github.io/hearth.html","publisher":{"@type":"Organization","name":"The Firewalkers","url":"https://heartofscott.github.io"},"description":"Writing, stories and ideas from the Firewalkers community."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"From the Hearth","url":"https://heartofscott.github.io/hearth.html","publisher":{"@type":"Organization","name":"The Firewalkers","url":"https://heartofscott.github.io"},"description":"Writing, stories and ideas from the Firewalkers community."}
+// Mobile navigation
+function closeMM(){var m=document.getElementById('mobileMenu');if(m){m.classList.remove('open');document.body.style.overflow='';}}
+var _nt=document.getElementById('navToggle'),_mm=document.getElementById('mobileMenu');
+if(_nt)_nt.addEventListener('click',function(){_mm.classList.add('open');document.body.style.overflow='hidden';});
+if(_mm)_mm.addEventListener('click',function(e){if(e.target===_mm)closeMM();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMM();});
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
 <style>
@@ -80,6 +88,21 @@ footer{background:var(--earth);padding:3rem 4rem;border-top:2px solid var(--ambe
 .footer-base a{color:rgba(250,245,236,0.4);text-decoration:none;}
 @media(max-width:900px){.hearth-main{grid-template-columns:1fr;gap:3rem;padding:3rem 2rem;}.hearth-sidebar{position:static;}.page-header{padding:8rem 2rem 4rem;}nav{padding:1rem 2rem;}.nav-links{gap:1rem;}}
 @media(max-width:540px){.nav-links{display:none;}footer{padding:2rem;}.footer-base{flex-direction:column;gap:0.5rem;text-align:center;}}
+
+/* ── MOBILE NAVIGATION ── */
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:0.45rem;color:var(--amber);flex-shrink:0;line-height:0;transition:color 0.3s;}
+.nav-toggle:hover{color:var(--amber-bright);}
+.mobile-menu{display:none;position:fixed;inset:0;background:rgba(15,10,6,0.97);z-index:400;flex-direction:column;align-items:center;justify-content:center;gap:0;}
+.mobile-menu.open{display:flex;animation:mobilein 0.22s ease both;}
+@keyframes mobilein{from{opacity:0}to{opacity:1}}
+.mobile-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:1px solid rgba(253,248,238,0.12);color:rgba(253,248,238,0.45);cursor:pointer;font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;padding:0.45rem 0.85rem;transition:all 0.25s;}
+.mobile-close:hover{color:var(--parchment);border-color:rgba(253,248,238,0.3);}
+.mobile-brand{font-family:'Cinzel',serif;font-size:0.72rem;letter-spacing:0.22em;color:var(--amber-bright);text-decoration:none;margin-bottom:2.75rem;display:block;}
+.mobile-link{font-family:'Cinzel',serif;font-size:0.78rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(253,248,238,0.62);text-decoration:none;padding:1rem 2rem;border-bottom:1px solid rgba(253,248,238,0.05);width:100%;max-width:360px;text-align:center;transition:color 0.25s;}
+.mobile-link:hover,.mobile-link:focus{color:var(--amber-bright);}
+.mobile-cta{font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--parchment);background:var(--amber);padding:0.95rem 2.25rem;text-decoration:none;margin-top:2.25rem;transition:background 0.3s;display:inline-block;}
+.mobile-cta:hover{background:var(--amber-mid);}
+@media(max-width:760px){.nav-links{display:none!important;}.nav-toggle{display:block;}}
 </style>
 </head>
 <body>
@@ -92,7 +115,19 @@ footer{background:var(--earth);padding:3rem 4rem;border-top:2px solid var(--ambe
     <a href="index.html#signup">Join</a>
     <a href="index.html#submit">Contribute</a>
   </div>
+<button class="nav-toggle" id="navToggle" aria-label="Open navigation menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="22" height="22"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Site navigation">
+  <button class="mobile-close" onclick="closeMM()">✕ Close</button>
+  <a href="index.html" class="mobile-brand" onclick="closeMM()">⁂ The Firewalkers</a>
+  <a href="index.html#pattern" class="mobile-link" onclick="closeMM()">Why This Matters</a>
+  <a href="good-ai.html" class="mobile-link" onclick="closeMM()">Good AI Guide</a>
+  <a href="hearth.html" class="mobile-link" onclick="closeMM()">From the Hearth</a>
+  <a href="index.html#action" class="mobile-link" onclick="closeMM()">Take Action</a>
+  <a href="index.html#submit" class="mobile-link" onclick="closeMM()">Contribute</a>
+  <a href="index.html#signup" class="mobile-cta" onclick="closeMM()">Join the Movement</a>
+</div>
 
 <header class="page-header">
   <h1>From the <em>Hearth</em></h1>
