@@ -90,8 +90,8 @@ nav.visible { transform: translateY(0); }
 #hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(22,16,10,0.28) 0%, rgba(22,16,10,0.42) 35%, rgba(22,16,10,0.68) 65%, rgba(22,16,10,0.86) 100%); }
 #hero::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 380px; background: radial-gradient(ellipse 80% 100% at 50% 100%, rgba(217,98,0,0.22) 0%, rgba(244,168,32,0.08) 45%, transparent 72%); pointer-events: none; animation: emberpulse 5s ease-in-out infinite; z-index: 0; }
 .hero-content { position: relative; z-index: 1; max-width: 860px; margin: 0 auto; text-align: center; }
-.hero-eyebrow { font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.44em; text-transform: uppercase; color: var(--sage-light); margin-bottom: 2.5rem; display: flex; align-items: center; justify-content: center; gap: 1.25rem; animation: fadeup 1s ease both; }
-.hero-eyebrow::before, .hero-eyebrow::after { content: ''; width: 3rem; height: 1px; background: var(--sage-light); opacity: 0.5; }
+.hero-eyebrow { font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.44em; text-transform: uppercase; color: rgba(253,248,238,0.82); margin-bottom: 2.5rem; display: flex; align-items: center; justify-content: center; gap: 1.25rem; animation: fadeup 1s ease both; }
+.hero-eyebrow::before, .hero-eyebrow::after { content: ''; width: 3rem; height: 1px; background: rgba(253,248,238,0.4); opacity: 1; }
 h1.hero-title { font-family: 'Cinzel', serif; font-size: clamp(4.5rem, 14vw, 11rem); font-weight: 700; line-height: 0.9; color: var(--parchment); margin-bottom: 0.1rem; animation: fadeup 1s ease 0.18s both; text-shadow: 0 4px 40px rgba(22,16,10,0.6), 0 2px 12px rgba(22,16,10,0.4); letter-spacing: 0.01em; }
 .fire-word { color: var(--amber-bright); display: block; text-shadow: 0 0 60px rgba(217,98,0,0.4), 0 4px 30px rgba(22,16,10,0.5); }
 .hero-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(1.25rem, 2.5vw, 1.9rem); color: rgba(253,248,238,0.92); margin: 1.75rem 0 2.25rem; animation: fadeup 1s ease 0.34s both; text-shadow: 0 2px 12px rgba(22,16,10,0.5); }
@@ -118,6 +118,51 @@ h1.hero-title { font-family: 'Cinzel', serif; font-size: clamp(4.5rem, 14vw, 11r
 .strip-img:hover img { transform: scale(1.06); }
 .strip-cap { position: absolute; bottom: 0; left: 0; right: 0; padding: 0.5rem 0.75rem; background: linear-gradient(transparent, rgba(34,24,17,0.5)); font-family: 'Cinzel', serif; font-size: 0.46rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(250,245,236,0.9); opacity: 0; transition: opacity 0.3s; }
 .strip-img:hover .strip-cap { opacity: 1; }
+
+/* PLATFORM VISION */
+.platform-section{background:var(--earth);padding:7rem 4rem;}
+.platform-inner{max-width:1120px;margin:0 auto;}
+.platform-intro{font-size:1.05rem;color:rgba(253,248,238,0.6);max-width:680px;line-height:1.9;margin-top:1rem;}
+.build-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(253,248,238,0.06);margin-top:3.5rem;}
+.build-item{background:var(--earth);padding:2rem;transition:background 0.3s;position:relative;}
+.build-item:hover{background:var(--earth-mid);}
+.build-status{font-family:'Cinzel',serif;font-size:0.48rem;letter-spacing:0.18em;text-transform:uppercase;padding:0.28rem 0.65rem;display:inline-block;margin-bottom:1rem;}
+.build-status.live{color:var(--sage-light);background:rgba(90,144,96,0.15);border:1px solid rgba(90,144,96,0.25);}
+.build-status.building{color:var(--amber-bright);background:rgba(224,144,32,0.12);border:1px solid rgba(224,144,32,0.2);}
+.build-status.proposed{color:rgba(253,248,238,0.4);background:rgba(253,248,238,0.04);border:1px solid rgba(253,248,238,0.1);}
+.build-item h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--parchment);margin-bottom:0.5rem;line-height:1.3;}
+.build-item p{font-size:0.9rem;color:rgba(253,248,238,0.5);line-height:1.65;margin:0;}
+
+/* COMMUNITY CO-CREATION */
+.cocreate-section{background:var(--parchment-warm);padding:7rem 4rem;border-top:1px solid rgba(160,88,0,0.1);}
+.cocreate-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:6rem;align-items:start;}
+.cocreate-aside p{font-size:1.05rem;color:var(--earth-mid);line-height:1.88;margin-bottom:1.5rem;}
+.cocreate-aside p em{color:var(--sage);font-style:italic;}
+.needs-list{display:flex;flex-direction:column;gap:1px;background:rgba(160,88,0,0.08);margin-top:2rem;}
+.need-item{background:var(--parchment);padding:1.1rem 1.5rem;display:grid;grid-template-columns:1fr auto;align-items:center;gap:1rem;transition:background 0.3s;cursor:default;}
+.need-item:hover{background:var(--amber-pale);}
+.need-label{font-size:0.95rem;color:var(--earth-mid);}
+.need-label strong{color:var(--earth);}
+.need-votes{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.15em;color:var(--mist);text-transform:uppercase;}
+
+/* RESPONSIVE additions */
+.problem-section{background:var(--parchment);padding:6rem 4rem;border-bottom:1px solid rgba(160,88,0,0.1);}
+.problem-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5.5rem;align-items:start;}
+.scenario-opener{font-family:'Cinzel',serif;font-size:clamp(1.5rem,3vw,2.4rem);font-weight:700;color:var(--earth);line-height:1.1;margin-bottom:2rem;}
+.scenario-opener em{color:var(--amber);font-style:normal;}
+.problem-scenario p{font-size:1.05rem;color:var(--earth-mid);line-height:1.92;margin-bottom:1.25rem;}
+.scenario-question{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.55rem;color:var(--earth);line-height:1.45;margin:2rem 0 0;padding-top:2rem;border-top:1px solid rgba(160,88,0,0.12);}
+.scenario-question strong{color:var(--amber);font-style:normal;}
+.answer-heading{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:600;color:var(--earth);margin-bottom:1.5rem;line-height:1.25;}
+.answer-heading em{color:var(--sage);font-style:italic;}
+.answer-items{display:flex;flex-direction:column;gap:1px;background:rgba(160,88,0,0.08);margin-bottom:2rem;}
+.answer-item{background:var(--parchment);padding:1.1rem 1.5rem;display:flex;gap:1rem;align-items:flex-start;transition:background 0.3s;}
+.answer-item:hover{background:var(--amber-pale);}
+.answer-icon{font-size:1.1rem;flex-shrink:0;margin-top:0.1rem;}
+.answer-item p{font-size:0.95rem;color:var(--earth-mid);line-height:1.65;margin:0;}
+.answer-item p strong{color:var(--earth);}
+.answer-cta{font-family:'Cinzel',serif;font-size:0.64rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--parchment);background:var(--amber);border:none;padding:1rem 2.5rem;text-decoration:none;transition:all 0.3s;display:inline-block;cursor:pointer;}
+.answer-cta:hover{background:var(--amber-mid);transform:translateY(-2px);}
 
 /* WHO WALKS WITH US */
 .who-section { background: var(--parchment); padding: 7rem 4rem; border-top: 1px solid rgba(160,88,0,0.08); }
@@ -325,7 +370,9 @@ footer { background: var(--earth); padding: 4.5rem 4rem 3rem; border-top: 3px so
   nav { padding: 1rem 2rem; } .nav-links { gap: 1.25rem; }
   #hero, #pattern, .dc-section, .false-choice, .who-section, #principles, .use-ai-section, #action, .phrases-section, .founder-section, #signup, #submit, footer { padding-left: 2rem; padding-right: 2rem; }
   .mission-band { padding: 4rem 2rem; }
-  .pattern-grid, .signup-inner, .submit-inner, .founder-inner { grid-template-columns: 1fr; gap: 3.5rem; }
+  .problem-inner{grid-template-columns:1fr;gap:3.5rem;}
+  .build-grid{grid-template-columns:1fr;}
+  .cocreate-inner{grid-template-columns:1fr;gap:3rem;}
   .principles-grid, .action-grid, .ai-grid, .phrases-grid, .dc-grid { grid-template-columns: 1fr; }
   .choice-grid { grid-template-columns: repeat(2, 1fr); }
   #photostrip { height: 180px; grid-template-columns: repeat(3,1fr); }
@@ -416,6 +463,48 @@ footer { background: var(--earth); padding: 4.5rem 4rem 3rem; border-top: 3px so
       <a href="#use-ai" class="btn-sage">Use AI to Take Action</a>
       <a href="#pattern" class="btn-outline">Why This Matters</a>
     </div>
+  </div>
+</section>
+
+<!-- PROBLEM STATEMENT -->
+<section class="problem-section">
+  <div class="problem-inner">
+
+    <div class="problem-scenario reveal">
+      <h2 class="scenario-opener">You wake up to a <em>notification.</em></h2>
+      <p>A planning application just went live. A massive data centre has been proposed on the ancient woodland at the edge of your town — a place of real beauty, somewhere you have walked your whole life. The site is ecologically significant. The developer says it will be approved within 12 weeks.</p>
+      <p>You have never objected to a planning application before. You do not know where to start. You are not sure your voice will count.</p>
+      <p>This is happening in communities worldwide. New data centres, extraction projects and unsustainable developments are being fast-tracked through planning processes that most people do not know how to engage with.</p>
+      <p class="scenario-question">If you love a place, and that place is threatened — <strong>what do you do?</strong></p>
+    </div>
+
+    <div class="reveal">
+      <h3 class="answer-heading">The Firewalkers give you the <em>tools to act.</em></h3>
+      <div class="answer-items">
+        <div class="answer-item">
+          <span class="answer-icon">🤖</span>
+          <p><strong>AI tools</strong> to analyse planning documents in minutes — not weeks</p>
+        </div>
+        <div class="answer-item">
+          <span class="answer-icon">✍️</span>
+          <p><strong>Letter templates and objection guides</strong> that make your voice count in formal processes</p>
+        </div>
+        <div class="answer-item">
+          <span class="answer-icon">🌿</span>
+          <p><strong>A community</strong> of people who have fought these fights before, and can share what they learned</p>
+        </div>
+        <div class="answer-item">
+          <span class="answer-icon">📖</span>
+          <p><strong>The knowledge</strong> to understand what responsible, sustainable development actually looks like</p>
+        </div>
+        <div class="answer-item">
+          <span class="answer-icon">🔥</span>
+          <p><strong>A movement</strong> that believes technology and the living world belong together — and is building the tools to prove it</p>
+        </div>
+      </div>
+      <a href="good-ai.html" class="answer-cta">Get the AI Toolkit →</a>
+    </div>
+
   </div>
 </section>
 
@@ -586,8 +675,78 @@ footer { background: var(--earth); padding: 4.5rem 4rem 3rem; border-top: 3px so
   </div>
 </section>
 
+<!-- WHAT WE ARE BUILDING TOGETHER -->
+<section class="platform-section">
+  <div class="platform-inner">
+    <div class="section-label reveal" style="color:var(--amber-bright);">The Platform We Are Building</div>
+    <h2 class="section-title reveal" style="color:var(--parchment);">A living resource —<br><em style="color:var(--amber-bright);">not a monument</em></h2>
+    <p class="platform-intro reveal">The Firewalkers is not a finished thing. It is a growing platform — built by the community, for the community. Here is what exists, what is being built, and what we need your help to shape next.</p>
+    <div class="build-grid">
+      <div class="build-item reveal"><span class="build-status live">✓ Live now</span><h3>AI Prompt Library for Civic Action</h3><p>8 free prompts to analyse planning documents, draft objection letters, understand rights, build evidence. Works with any AI tool.</p></div>
+      <div class="build-item reveal"><span class="build-status live">✓ Live now</span><h3>Campaign Guides & Templates</h3><p>Step-by-step guides for planning objections, data centre investigations, community briefings, and open letters to power.</p></div>
+      <div class="build-item reveal"><span class="build-status live">✓ Live now</span><h3>Sustainable AI Models Guide</h3><p>Lower-carbon models. Running AI on your own hardware. Training on your own data without sending it to a corporation.</p></div>
+      <div class="build-item reveal"><span class="build-status building">⚙ Building</span><h3>Global Success Stories Database</h3><p>Verified wins from communities worldwide — what worked, what failed, what the next community can reuse immediately.</p></div>
+      <div class="build-item reveal"><span class="build-status building">⚙ Building</span><h3>AI Tools for Global Challenges</h3><p>Curated, tested tools helping communities tackle biodiversity loss, water rights, extraction, energy transition and more.</p></div>
+      <div class="build-item reveal"><span class="build-status building">⚙ Building</span><h3>Open Developer Toolkit</h3><p>Tools, APIs and datasets for technologists who want to build for regenerative impact rather than just commercial returns.</p></div>
+      <div class="build-item reveal"><span class="build-status proposed">💡 Proposed</span><h3>Responsible Development Tracker</h3><p>A community-built database of data centres and extraction projects — rated against the Firewalkers principles. Public. Searchable.</p></div>
+      <div class="build-item reveal"><span class="build-status proposed">💡 Proposed</span><h3>Local AI Training Guides</h3><p>How to train a small model on your community's own documents — planning history, ecological records — owned by you, not a platform.</p></div>
+      <div class="build-item reveal" style="background:rgba(61,110,72,0.1);border:1px solid rgba(90,144,96,0.15);"><span class="build-status proposed" style="color:var(--sage-light);background:rgba(90,144,96,0.12);border-color:rgba(90,144,96,0.2);">💡 You decide</span><h3>What should we build next?</h3><p>The roadmap is shaped by the community. Tell us what tool, guide or resource would help you most — and we will build it.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY CO-CREATION -->
+<section class="cocreate-section" id="build-with-us">
+  <div class="cocreate-inner">
+    <div class="cocreate-aside reveal">
+      <div class="section-label">Co-Create With Us</div>
+      <h2 class="section-title">What do <em>you</em> need?</h2>
+      <p>The most useful tools are not built by platforms — they are built by people who are actually in the fight. If you are facing a challenge that the right tool, template or guide could help with, tell us.</p>
+      <p>We will share it with the community, prioritise it on our build roadmap, and find the people who can help make it real.</p>
+      <p><em>You do not need to be technical. You just need to know what would help.</em></p>
+      <p style="font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--amber);margin-top:2rem;margin-bottom:1rem;">What the community is asking for</p>
+      <div class="needs-list">
+        <div class="need-item"><span class="need-label"><strong>AI prompt for biodiversity impact assessment</strong></span><span class="need-votes">12 requests</span></div>
+        <div class="need-item"><span class="need-label"><strong>Guide to running local AI models offline</strong></span><span class="need-votes">17 requests</span></div>
+        <div class="need-item"><span class="need-label"><strong>Right to repair letter template</strong></span><span class="need-votes">8 requests</span></div>
+        <div class="need-item"><span class="need-label"><strong>Success story template for campaign wins</strong></span><span class="need-votes">11 requests</span></div>
+      </div>
+    </div>
+    <div class="reveal">
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--earth);margin-bottom:0.5rem;">Request a tool or resource</h3>
+      <p style="font-size:0.95rem;color:var(--mist);margin-bottom:2rem;line-height:1.7;">Tell us what you are trying to do and what would help. Every request is read. The most-needed things get built first.</p>
+      <form id="toolRequestForm" action="https://formspree.io/f/xdajqvje" method="POST">
+        <input type="hidden" name="_subject" value="Tool Request — Firewalkers">
+        <input type="hidden" name="type" value="tool-request">
+        <div class="field-group"><label for="tr-challenge">What challenge are you facing?</label><textarea id="tr-challenge" name="challenge" style="min-height:100px;" placeholder="Describe the situation — a planning fight, a campaign, a technical problem..." required data-fs-field></textarea></div>
+        <div class="field-group">
+          <label for="tr-tool">What kind of help would make the biggest difference?</label>
+          <select id="tr-tool" name="tool_type" required data-fs-field>
+            <option value="">Choose one</option>
+            <option value="ai-prompt">An AI prompt I can use immediately</option>
+            <option value="template">A letter or document template</option>
+            <option value="guide">A step-by-step guide</option>
+            <option value="local-ai">Help running AI locally or on my own data</option>
+            <option value="research">Research or evidence on a specific issue</option>
+            <option value="connection">Connection to others facing the same issue</option>
+            <option value="tool">A technical tool or calculator</option>
+            <option value="other">Something else entirely</option>
+          </select>
+        </div>
+        <div class="field-group"><label for="tr-location">Where in the world are you? (optional)</label><input type="text" id="tr-location" name="location" placeholder="Country, region or city"></div>
+        <div class="field-group"><label for="tr-email">Email — if you'd like us to follow up (optional)</label><input type="email" id="tr-email" name="email" placeholder="your@email.com" data-fs-field></div>
+        <button type="submit" class="form-submit-btn" data-fs-submit-btn>Submit This Request</button>
+        <p class="form-note">Every request is read. Only share what you're comfortable with.</p>
+      </form>
+      <div class="form-success" data-fs-success>
+        <h4>Request received.</h4>
+        <p>We will read it, share it with the community, and make sure it shapes what gets built next. Thank you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ACTION -->
-<section id="action">
   <div class="section-inner">
     <div class="action-header reveal">
       <div class="section-label">Take Action</div>
@@ -846,7 +1005,7 @@ footer { background: var(--earth); padding: 4.5rem 4rem 3rem; border-top: 3px so
 <div class="footer-base">
     <span>⁂ The Firewalkers · firewalkers.earth</span>
     <a href="https://unsplash.com" target="_blank" rel="noopener">Photos: Unsplash</a>
-    <span>Scotland · Ireland · Wales · Cornwall · Brittany · Isle of Man · The World</span>
+    <span>Founded in Scotland · Built for everywhere that matters</span>
   </div>
 </footer>
 
