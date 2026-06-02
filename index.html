@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Firewalkers — Technology Should Leave the World Richer Than It Found It</title>
 <!-- PRIMARY SEO -->
@@ -85,22 +86,23 @@ nav.visible { transform: translateY(0); }
 .nav-links a:hover { color: var(--sage); }
 
 /* HERO */
-#hero { min-height: 100vh; position: relative; display: flex; flex-direction: column; justify-content: center; padding: 8rem 4rem 6rem; overflow: hidden; background-image: url('https://images.unsplash.com/photo-1601465364325-34b5b5fdb6c4?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center 40%; }
-#hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(160deg, rgba(250,245,236,0.5) 0%, rgba(250,245,236,0.78) 45%, rgba(250,245,236,0.96) 100%); }
+#hero { min-height: 100vh; position: relative; display: flex; flex-direction: column; justify-content: center; padding: 8rem 4rem 6rem; overflow: hidden; background-image: url('https://images.unsplash.com/photo-1601465364325-34b5b5fdb6c4?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center 30%; }
+#hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(22,16,10,0.28) 0%, rgba(22,16,10,0.42) 35%, rgba(22,16,10,0.68) 65%, rgba(22,16,10,0.86) 100%); }
+#hero::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 380px; background: radial-gradient(ellipse 80% 100% at 50% 100%, rgba(217,98,0,0.22) 0%, rgba(244,168,32,0.08) 45%, transparent 72%); pointer-events: none; animation: emberpulse 5s ease-in-out infinite; z-index: 0; }
 .hero-content { position: relative; z-index: 1; max-width: 860px; margin: 0 auto; text-align: center; }
-.hero-eyebrow { font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.44em; text-transform: uppercase; color: var(--sage); margin-bottom: 2.5rem; display: flex; align-items: center; justify-content: center; gap: 1.25rem; animation: fadeup 1s ease both; }
-.hero-eyebrow::before, .hero-eyebrow::after { content: ''; width: 3rem; height: 1px; background: var(--sage); opacity: 0.4; }
-h1.hero-title { font-family: 'Cinzel', serif; font-size: clamp(4rem, 12vw, 9.5rem); font-weight: 700; line-height: 0.92; color: var(--earth); margin-bottom: 0.1rem; animation: fadeup 1s ease 0.18s both; }
-.fire-word { color: var(--amber); display: block; }
-.hero-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(1.2rem, 2.5vw, 1.8rem); color: var(--earth-mid); margin: 1.75rem 0 2.25rem; animation: fadeup 1s ease 0.34s both; }
-.hero-statement { font-size: 1.05rem; color: rgba(34,24,17,0.65); max-width: 600px; margin: 0 auto 3.5rem; line-height: 1.92; animation: fadeup 1s ease 0.5s both; }
+.hero-eyebrow { font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.44em; text-transform: uppercase; color: var(--sage-light); margin-bottom: 2.5rem; display: flex; align-items: center; justify-content: center; gap: 1.25rem; animation: fadeup 1s ease both; }
+.hero-eyebrow::before, .hero-eyebrow::after { content: ''; width: 3rem; height: 1px; background: var(--sage-light); opacity: 0.5; }
+h1.hero-title { font-family: 'Cinzel', serif; font-size: clamp(4.5rem, 14vw, 11rem); font-weight: 700; line-height: 0.9; color: var(--parchment); margin-bottom: 0.1rem; animation: fadeup 1s ease 0.18s both; text-shadow: 0 4px 40px rgba(22,16,10,0.6), 0 2px 12px rgba(22,16,10,0.4); letter-spacing: 0.01em; }
+.fire-word { color: var(--amber-bright); display: block; text-shadow: 0 0 60px rgba(217,98,0,0.4), 0 4px 30px rgba(22,16,10,0.5); }
+.hero-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(1.25rem, 2.5vw, 1.9rem); color: rgba(253,248,238,0.92); margin: 1.75rem 0 2.25rem; animation: fadeup 1s ease 0.34s both; text-shadow: 0 2px 12px rgba(22,16,10,0.5); }
+.hero-statement { font-size: 1.05rem; color: rgba(253,248,238,0.72); max-width: 600px; margin: 0 auto 3.5rem; line-height: 1.92; animation: fadeup 1s ease 0.5s both; }
 .hero-ctas { display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap; animation: fadeup 1s ease 0.64s both; }
 .btn-amber { font-family: 'Cinzel', serif; font-size: 0.64rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--parchment); background: var(--amber); border: none; padding: 1rem 2.5rem; text-decoration: none; transition: all 0.3s; display: inline-block; cursor: pointer; }
 .btn-amber:hover { background: var(--amber-mid); transform: translateY(-2px); }
 .btn-sage { font-family: 'Cinzel', serif; font-size: 0.64rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--parchment); background: var(--sage); border: none; padding: 1rem 2.5rem; text-decoration: none; transition: all 0.3s; display: inline-block; cursor: pointer; }
 .btn-sage:hover { background: var(--sage-light); transform: translateY(-2px); }
-.btn-outline { font-family: 'Cinzel', serif; font-size: 0.64rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--earth); background: transparent; border: 1px solid rgba(34,24,17,0.28); padding: 1rem 2.5rem; text-decoration: none; transition: all 0.3s; display: inline-block; cursor: pointer; }
-.btn-outline:hover { border-color: var(--sage); color: var(--sage); }
+.btn-outline { font-family: 'Cinzel', serif; font-size: 0.64rem; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(253,248,238,0.88); background: transparent; border: 1px solid rgba(253,248,238,0.35); padding: 1rem 2.5rem; text-decoration: none; transition: all 0.3s; display: inline-block; cursor: pointer; }
+.btn-outline:hover { border-color: var(--sage-light); color: var(--sage-light); background: rgba(253,248,238,0.05); }
 @keyframes fadeup { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
 
 /* MISSION BAND */
@@ -342,6 +344,22 @@ footer { background: var(--earth); padding: 4.5rem 4rem 3rem; border-top: 3px so
   #photostrip .strip-img:nth-child(3) { display: none; }
   .choice-grid { grid-template-columns: 1fr; }
 }
+
+/* ── MOBILE NAVIGATION ── */
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:0.45rem;color:var(--amber);flex-shrink:0;line-height:0;transition:color 0.3s;}
+.nav-toggle:hover{color:var(--amber-bright);}
+.mobile-menu{display:none;position:fixed;inset:0;background:rgba(15,10,6,0.97);z-index:400;flex-direction:column;align-items:center;justify-content:center;gap:0;}
+.mobile-menu.open{display:flex;animation:mobilein 0.22s ease both;}
+@keyframes mobilein{from{opacity:0}to{opacity:1}}
+.mobile-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:1px solid rgba(253,248,238,0.12);color:rgba(253,248,238,0.45);cursor:pointer;font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;padding:0.45rem 0.85rem;transition:all 0.25s;}
+.mobile-close:hover{color:var(--parchment);border-color:rgba(253,248,238,0.3);}
+.mobile-brand{font-family:'Cinzel',serif;font-size:0.72rem;letter-spacing:0.22em;color:var(--amber-bright);text-decoration:none;margin-bottom:2.75rem;display:block;}
+.mobile-link{font-family:'Cinzel',serif;font-size:0.78rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(253,248,238,0.62);text-decoration:none;padding:1rem 2rem;border-bottom:1px solid rgba(253,248,238,0.05);width:100%;max-width:360px;text-align:center;transition:color 0.25s;}
+.mobile-link:hover,.mobile-link:focus{color:var(--amber-bright);}
+.mobile-cta{font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--parchment);background:var(--amber);padding:0.95rem 2.25rem;text-decoration:none;margin-top:2.25rem;transition:background 0.3s;display:inline-block;}
+.mobile-cta:hover{background:var(--amber-mid);}
+@media(max-width:760px){.nav-links{display:none!important;}.nav-toggle{display:block;}}
+@media(max-width:760px){#nav{transform:translateY(0)!important;background:rgba(15,10,6,0.95)!important;}.nav-brand{color:var(--amber-bright)!important;}}
 </style>
 </head>
 <body>
@@ -356,7 +374,20 @@ footer { background: var(--earth); padding: 4.5rem 4rem 3rem; border-top: 3px so
     <a href="#signup">Join</a>
     <a href="#submit">Contribute</a>
   </div>
+<button class="nav-toggle" id="navToggle" aria-label="Open navigation menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="22" height="22"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Site navigation">
+  <button class="mobile-close" onclick="closeMM()">✕ Close</button>
+  <a href="#hero" class="mobile-brand" onclick="closeMM()">⁂ The Firewalkers</a>
+  <a href="#pattern" class="mobile-link" onclick="closeMM()">Why This Matters</a>
+  <a href="#principles" class="mobile-link" onclick="closeMM()">What We Believe</a>
+  <a href="#use-ai" class="mobile-link" onclick="closeMM()">Use AI</a>
+  <a href="#action" class="mobile-link" onclick="closeMM()">Take Action</a>
+  <a href="good-ai.html" class="mobile-link" onclick="closeMM()">Good AI Guide</a>
+  <a href="hearth.html" class="mobile-link" onclick="closeMM()">From the Hearth</a>
+  <a href="#signup" class="mobile-cta" onclick="closeMM()">Join the Movement</a>
+</div>
 
 <!-- HERO -->
 <section id="hero">
@@ -815,6 +846,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
-<script src="https://cdn.sendfox.com/js/form.js" charset="utf-8"></script>
+<script src="https://cdn.sendfox.com/js/form.js" charset="utf-8">
+// Mobile navigation
+function closeMM(){var m=document.getElementById('mobileMenu');if(m){m.classList.remove('open');document.body.style.overflow='';}}
+var _nt=document.getElementById('navToggle'),_mm=document.getElementById('mobileMenu');
+if(_nt)_nt.addEventListener('click',function(){_mm.classList.add('open');document.body.style.overflow='hidden';});
+if(_mm)_mm.addEventListener('click',function(e){if(e.target===_mm)closeMM();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMM();});
+</script>
 </body>
 </html>
