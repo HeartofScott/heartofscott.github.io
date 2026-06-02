@@ -103,7 +103,17 @@ footer{background:var(--earth);padding:3rem 4rem;border-top:2px solid var(--ambe
 .mobile-cta{font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--parchment);background:var(--amber);padding:0.95rem 2.25rem;text-decoration:none;margin-top:2.25rem;transition:background 0.3s;display:inline-block;}
 .mobile-cta:hover{background:var(--amber-mid);}
 @media(max-width:760px){.nav-links{display:none!important;}.nav-toggle{display:block;}}
+
+/* FOOTER SOCIAL */
+.footer-social{max-width:1120px;margin:0 auto 2.5rem;padding-bottom:2rem;border-bottom:1px solid rgba(250,245,236,0.06);display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+.social-label{font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.28em;text-transform:uppercase;color:rgba(250,245,236,0.22);margin-right:0.5rem;flex-shrink:0;}
+.social-link{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border:1px solid rgba(250,245,236,0.1);color:rgba(250,245,236,0.4);transition:all 0.3s;text-decoration:none;flex-shrink:0;}
+.social-link:hover{border-color:var(--amber-bright);color:var(--amber-bright);}
+.social-link svg{width:15px;height:15px;}
 </style>
+<!-- Plausible Analytics (privacy-respecting, no cookies)
+     Sign up at plausible.io, add your domain, then replace YOUR-DOMAIN below -->
+<script defer data-domain="YOUR-DOMAIN.com" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
 <nav>
@@ -113,6 +123,7 @@ footer{background:var(--earth);padding:3rem 4rem;border-top:2px solid var(--ambe
     <a href="good-ai.html">Good AI</a>
     <a href="hearth.html" class="active">From the Hearth</a>
     <a href="index.html#signup">Join</a>
+    <a href="campaigns.html">Campaigns</a>
     <a href="index.html#submit">Contribute</a>
   </div>
 <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="22" height="22"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
@@ -125,6 +136,7 @@ footer{background:var(--earth);padding:3rem 4rem;border-top:2px solid var(--ambe
   <a href="good-ai.html" class="mobile-link" onclick="closeMM()">Good AI Guide</a>
   <a href="hearth.html" class="mobile-link" onclick="closeMM()">From the Hearth</a>
   <a href="index.html#action" class="mobile-link" onclick="closeMM()">Take Action</a>
+  <a href="campaigns.html" class="mobile-link" onclick="closeMM()">Campaigns</a>
   <a href="index.html#submit" class="mobile-link" onclick="closeMM()">Contribute</a>
   <a href="index.html#signup" class="mobile-cta" onclick="closeMM()">Join the Movement</a>
 </div>
@@ -247,7 +259,19 @@ footer{background:var(--earth);padding:3rem 4rem;border-top:2px solid var(--ambe
 </main>
 
 <footer>
-  <div class="footer-base">
+  <!-- ===================================================
+  SOCIAL LINKS — update the href="#" values with your actual social profile URLs
+  e.g. href="https://twitter.com/TheFirewalkers"
+  ==================================================== -->
+<div class="footer-social">
+  <span class="social-label">Follow the fire</span>
+  <a href="#" class="social-link" aria-label="X / Twitter" title="X / Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25z"/></svg></a>
+  <a href="#" class="social-link" aria-label="Threads" title="Threads"><svg viewBox="0 0 192 192" fill="currentColor"><path d="M141.537 88.988a66.667 66.667 0 00-2.518-1.143c-1.482-27.307-16.403-42.94-41.457-43.1h-.34c-14.986 0-27.449 6.396-35.12 18.036l13.779 9.452c5.73-8.695 14.724-10.548 21.348-10.548h.229c8.249.053 14.474 2.452 18.503 7.129 2.932 3.405 4.893 8.111 5.864 14.05-7.314-1.243-15.224-1.626-23.68-1.141-23.82 1.371-39.134 15.264-38.105 34.568.522 9.792 5.4 18.216 13.735 23.719 6.97 4.676 15.937 6.95 25.267 6.432 12.32-.684 21.987-5.4 28.733-14.012 5.147-6.613 8.388-15.192 9.813-26.049 5.892 3.554 10.246 8.243 12.606 13.785 4.033 9.421 4.273 24.912-8.57 37.385-11.186 10.868-24.702 15.568-44.986 15.703-22.565-.155-39.612-7.404-50.656-21.553C33.576 139.084 28 120.478 28 96c0-24.478 5.576-43.084 16.577-55.363C55.62 26.553 72.67 19.3 95.237 19.145c22.731.157 40.09 7.44 51.637 21.65 5.666 6.929 9.919 15.655 12.607 25.734l16.185-4.352c-3.289-12.346-8.754-23.103-16.382-32.03C143.958 11.955 122.678 2.667 95.31 2.5h-.074C68.01 2.667 46.932 11.99 33.384 30.405 21.216 47.05 14.911 70.359 14.842 96c.069 25.641 6.374 48.95 18.542 65.595 13.548 18.415 34.626 27.739 62.762 27.906h.073c24.654-.139 42.034-6.641 56.288-20.945 18.963-18.974 18.392-42.753 12.157-57.334-4.568-10.669-13.54-19.07-22.127-22.234z"/><path d="M105.95 124.712c-10.928.611-22.283-4.286-22.845-14.81-.397-7.45 5.296-15.769 22.844-16.77 7.988-.459 15.43.124 22.23 1.729-2.528 31.157-11.35 29.34-22.229 29.851z"/></svg></a>
+  <a href="#" class="social-link" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+  <a href="#" class="social-link" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+  <a href="#" class="social-link" aria-label="Substack" title="Substack Newsletter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 9H2v5h20zM2 4h20v3H2zM2 16l10 6 10-6z"/></svg></a>
+</div>
+<div class="footer-base">
     <span>⁂ The Firewalkers · heartofscott.github.io</span>
     <a href="index.html">← Back to home</a>
     <span>Technology should leave the world richer than it found it.</span>
