@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Does Good AI Look Like? — The Firewalkers Guide to Responsible AI</title>
+<meta name="description" content="The Firewalkers guide to responsible, sustainable and ethical AI. What good AI infrastructure looks like, how to use AI for civic action, and a free prompt library for community campaigns.">
+<meta name="keywords" content="good AI, responsible AI, sustainable AI infrastructure, ethical AI development, AI for communities, AI civic action, AI prompt library, responsible technology, AI and environment, data centre ethics, AI stewardship, what is good AI">
+<meta name="author" content="The Firewalkers">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://heartofscott.github.io/good-ai.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://heartofscott.github.io/good-ai.html">
+<meta property="og:title" content="What Does Good AI Look Like? — The Firewalkers">
+<meta property="og:description" content="A practical guide to responsible AI, sustainable infrastructure, and using AI as a tool for civic action and community protection.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1671271834624-c80b23aabfc8?auto=format&fit=crop&w=1200&q=80">
+<meta property="og:site_name" content="The Firewalkers">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What Does Good AI Look Like? — The Firewalkers">
+<meta name="twitter:description" content="A practical guide to responsible AI and a free prompt library for civic action.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1671271834624-c80b23aabfc8?auto=format&fit=crop&w=1200&q=80">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What Does Good AI Look Like?",
+  "description": "The Firewalkers guide to responsible, sustainable and ethical AI infrastructure and practice.",
+  "image": "https://images.unsplash.com/photo-1671271834624-c80b23aabfc8?auto=format&fit=crop&w=1200&q=80",
+  "datePublished": "2026-06-01",
+  "dateModified": "2026-06-01",
+  "author": { "@type": "Organization", "name": "The Firewalkers" },
+  "publisher": { "@type": "Organization", "name": "The Firewalkers", "url": "https://heartofscott.github.io" },
+  "url": "https://heartofscott.github.io/good-ai.html",
+  "keywords": ["good AI", "responsible AI", "sustainable AI", "ethical technology", "AI for communities", "AI civic action"]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+:root{--parchment:#faf5ec;--parchment-warm:#f4ebda;--stone:#e8dcc8;--amber:#a05800;--amber-mid:#c07010;--amber-bright:#e09020;--amber-pale:#fdf0d5;--sage:#3d6e48;--sage-light:#5a9060;--sage-pale:#cfe0d4;--earth:#221811;--earth-mid:#3d2e1e;--bark:#6b4c2a;--mist:#7a7262;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{background:var(--parchment);color:var(--earth);font-family:'Cormorant Garamond',Georgia,serif;font-size:18px;line-height:1.82;overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1rem 4rem;display:flex;justify-content:space-between;align-items:center;background:rgba(250,245,236,0.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(160,88,0,0.12);}
+.nav-brand{font-family:'Cinzel',serif;font-size:0.78rem;letter-spacing:0.2em;color:var(--amber);text-decoration:none;}
+.nav-links{display:flex;gap:2rem;}
+.nav-links a{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--mist);text-decoration:none;transition:color 0.3s;}
+.nav-links a:hover,.nav-links a.active{color:var(--sage);}
+.page-hero{padding:9rem 4rem 5rem;background:var(--sage);text-align:center;position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1671271834624-c80b23aabfc8?auto=format&fit=crop&w=1920&q=80');background-size:cover;background-position:center;opacity:0.15;}
+.page-hero h1{position:relative;font-family:'Cinzel',serif;font-size:clamp(2rem,5vw,4rem);font-weight:700;color:var(--parchment);margin-bottom:1rem;line-height:1.1;}
+.page-hero p{position:relative;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:rgba(250,245,236,0.8);max-width:640px;margin:0 auto;}
+.toc-band{background:var(--earth);padding:1.75rem 4rem;}
+.toc-inner{max-width:1120px;margin:0 auto;display:flex;gap:2rem;flex-wrap:wrap;align-items:center;}
+.toc-label{font-family:'Cinzel',serif;font-size:0.57rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--amber-bright);flex-shrink:0;}
+.toc-links{display:flex;gap:1.5rem;flex-wrap:wrap;}
+.toc-links a{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,245,236,0.55);text-decoration:none;transition:color 0.3s;}
+.toc-links a:hover{color:var(--amber-bright);}
+.page-section{padding:5rem 4rem;border-top:1px solid rgba(160,88,0,0.1);}
+.page-section:first-of-type{border-top:none;}
+.section-inner{max-width:1120px;margin:0 auto;}
+.section-eyebrow{font-family:'Cinzel',serif;font-size:0.57rem;letter-spacing:0.42em;text-transform:uppercase;color:var(--amber);margin-bottom:1.5rem;display:flex;align-items:center;gap:0.85rem;}
+.section-eyebrow::after{content:'';flex:0 0 70px;height:1px;background:rgba(160,88,0,0.22);}
+h2.page-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4.5vw,3.2rem);font-weight:600;line-height:1.1;color:var(--earth);margin-bottom:1.25rem;}
+h2.page-h2 em{color:var(--amber);font-style:italic;}
+.intro-text{font-size:1.05rem;color:var(--earth-mid);max-width:720px;line-height:1.9;margin-bottom:3rem;}
+/* Principles grid */
+.principles-list{display:flex;flex-direction:column;gap:1px;background:rgba(160,88,0,0.08);}
+.principle-row{background:var(--parchment);padding:1.75rem 2rem;display:grid;grid-template-columns:3rem 1fr;gap:1.5rem;align-items:start;transition:background 0.3s;}
+.principle-row:hover{background:var(--amber-pale);}
+.p-num{font-family:'Cinzel',serif;font-size:1.5rem;font-weight:700;color:rgba(160,88,0,0.2);line-height:1;}
+.p-body h3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--earth);margin-bottom:0.4rem;}
+.p-body p{font-size:0.95rem;color:var(--earth-mid);line-height:1.72;margin:0;}
+.p-body p em{color:var(--sage);font-style:italic;}
+/* The question */
+.question-block{background:var(--earth);padding:4rem;text-align:center;margin:3rem 0;}
+.question-block p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.4rem,3vw,2.2rem);color:var(--parchment);line-height:1.4;max-width:760px;margin:0 auto 1.25rem;}
+.question-block p em{color:var(--amber-bright);}
+.question-block span{font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(250,245,236,0.35);}
+/* Two column checks */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(160,88,0,0.1);margin-top:2.5rem;}
+.col-block{padding:2rem 2.25rem;}
+.col-block.oppose{background:rgba(253,240,213,0.5);}
+.col-block.support{background:rgba(207,224,212,0.4);}
+.col-block h3{font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:1.25rem;}
+.col-block.oppose h3{color:var(--amber);}
+.col-block.support h3{color:var(--sage);}
+.col-block ul{list-style:none;padding:0;}
+.col-block ul li{font-size:0.95rem;color:var(--earth-mid);padding:0.4rem 0 0.4rem 1.4rem;border-bottom:1px solid rgba(160,88,0,0.07);position:relative;line-height:1.5;}
+.col-block.oppose li::before{content:'✗';position:absolute;left:0;color:var(--amber);}
+.col-block.support li::before{content:'✓';position:absolute;left:0;color:var(--sage);}
+/* Prompt library */
+.prompt-intro{font-size:1.05rem;color:var(--earth-mid);max-width:680px;line-height:1.88;margin-bottom:3rem;}
+.prompt-intro strong{color:var(--sage);}
+.prompt-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;}
+.prompt-card{background:var(--parchment-warm);border:1px solid rgba(160,88,0,0.1);padding:2rem;border-top:2px solid var(--sage);}
+.prompt-icon{font-size:1.5rem;display:block;margin-bottom:0.75rem;}
+.prompt-card h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--earth);margin-bottom:0.5rem;}
+.prompt-card p{font-size:0.92rem;color:var(--earth-mid);line-height:1.72;margin-bottom:1.1rem;}
+.prompt-box{background:var(--parchment);border:1px solid rgba(61,110,72,0.2);border-left:2px solid var(--sage);padding:1rem 1.1rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.92rem;color:var(--earth-mid);line-height:1.6;margin-bottom:0.75rem;position:relative;}
+.prompt-box::before{content:'Prompt';font-family:'Cinzel',serif;font-style:normal;font-size:0.5rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--mist);display:block;margin-bottom:0.4rem;}
+.copy-prompt{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--sage);background:var(--sage-pale);border:1px solid rgba(61,110,72,0.2);padding:0.45rem 0.9rem;cursor:pointer;transition:all 0.3s;width:100%;}
+.copy-prompt:hover{background:var(--sage);color:var(--parchment);}
+/* Tips section */
+.tips-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;}
+.tip-card{background:var(--parchment-warm);border:1px solid rgba(160,88,0,0.1);padding:1.75rem;}
+.tip-num{font-family:'Cinzel',serif;font-size:2rem;font-weight:700;color:rgba(160,88,0,0.12);line-height:1;margin-bottom:0.75rem;display:block;}
+.tip-card h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--earth);margin-bottom:0.5rem;}
+.tip-card p{font-size:0.92rem;color:var(--earth-mid);line-height:1.7;margin:0;}
+/* Share */
+.share-bar{background:var(--parchment-warm);border:1px solid rgba(160,88,0,0.1);padding:1.25rem 2rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-top:3rem;}
+.share-label{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--mist);flex-shrink:0;}
+.share-btn{font-family:'Cinzel',serif;font-size:0.56rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--parchment);border:none;padding:0.55rem 1rem;cursor:pointer;text-decoration:none;transition:all 0.3s;display:inline-block;}
+.share-btn.twitter{background:#000;}.share-btn.linkedin{background:#0a66c2;}.share-btn.facebook{background:#1877f2;}.share-btn.whatsapp{background:#25d366;}.share-btn.copy{background:var(--amber);}
+/* CTA */
+.page-cta{background:var(--earth);padding:5rem 4rem;text-align:center;}
+.page-cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,3rem);color:var(--parchment);margin-bottom:1rem;}
+.page-cta p{font-size:1.05rem;color:rgba(250,245,236,0.6);max-width:560px;margin:0 auto 2.5rem;}
+.page-cta a{font-family:'Cinzel',serif;font-size:0.64rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--parchment);background:var(--amber);border:none;padding:1rem 2.5rem;text-decoration:none;transition:all 0.3s;display:inline-block;}
+.page-cta a:hover{background:var(--amber-mid);}
+footer{background:var(--earth);padding:2.5rem 4rem;border-top:2px solid var(--amber);}
+.footer-base{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.1em;color:rgba(250,245,236,0.25);}
+.footer-base a{color:rgba(250,245,236,0.4);text-decoration:none;}
+@media(max-width:900px){nav{padding:1rem 2rem;}.nav-links{gap:1.25rem;}.page-hero,.toc-band,.page-section,.page-cta,footer{padding-left:2rem;padding-right:2rem;}.two-col,.prompt-grid,.tips-grid{grid-template-columns:1fr;}}
+@media(max-width:540px){.nav-links{display:none;}.footer-base{flex-direction:column;gap:0.5rem;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand">⁂ The Firewalkers</a>
+  <div class="nav-links">
+    <a href="index.html#pattern">Why This Matters</a>
+    <a href="good-ai.html" class="active">Good AI</a>
+    <a href="hearth.html">From the Hearth</a>
+    <a href="index.html#signup">Join</a>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <h1>What Does <em>Good AI</em> Look Like?</h1>
+  <p>The Firewalkers guide to responsible, sustainable and wise technology — and how to use AI as a tool for civic action and community protection.</p>
+</header>
+
+<div class="toc-band">
+  <div class="toc-inner">
+    <span class="toc-label">On this page</span>
+    <div class="toc-links">
+      <a href="#principles">The 8 Principles</a>
+      <a href="#question">The Right Question</a>
+      <a href="#infrastructure">Data Centres</a>
+      <a href="#prompts">AI Prompt Library</a>
+      <a href="#tips">Using AI Wisely</a>
+    </div>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="page-section" style="background:var(--parchment);">
+  <div class="section-inner">
+    <div class="section-eyebrow">The Firewalkers Position</div>
+    <h2 class="page-h2">We are not anti-AI.<br>We are <em>pro-wisdom.</em></h2>
+    <p class="intro-text">The Firewalkers use AI. We celebrate innovation. We believe technology has a vital role in solving the greatest challenges of our time. The question is not whether AI is good. The question is: <strong>can we build an AI future that enriches life rather than extracting from it?</strong> This page is our answer — and a practical toolkit for anyone who shares that question.</p>
+  </div>
+</section>
+
+<!-- 8 PRINCIPLES -->
+<section class="page-section" id="principles" style="background:var(--parchment-warm);">
+  <div class="section-inner">
+    <div class="section-eyebrow">The Eight Principles of Good AI</div>
+    <h2 class="page-h2">What <em>good AI</em> looks like</h2>
+    <p class="intro-text">These principles apply to AI systems, AI infrastructure, and the organisations that build them. They are not aspirational. They are the standard we hold, and the questions we bring to every development decision.</p>
+    <div class="principles-list">
+      <div class="principle-row"><span class="p-num">1</span><div class="p-body"><h3>It serves life, not just returns</h3><p>Good AI is evaluated not only on profitability but on what it does for human flourishing, ecological health and long-term community wellbeing. <em>Economic value matters. Ecological value matters. Both belong in the assessment.</em></p></div></div>
+      <div class="principle-row"><span class="p-num">2</span><div class="p-body"><h3>It is honest about its costs</h3><p>Good AI infrastructure accounts transparently for energy consumption, water use, land use, rare earth extraction, and carbon emissions — across the full lifecycle, not just at the point of delivery.</p></div></div>
+      <div class="principle-row"><span class="p-num">3</span><div class="p-body"><h3>It is powered sustainably</h3><p>Good AI runs on renewable energy, pursues efficiency as a design goal rather than an afterthought, and commits to decarbonisation timelines that are real and verifiable — not greenwash.</p></div></div>
+      <div class="principle-row"><span class="p-num">4</span><div class="p-body"><h3>It respects the commons</h3><p>Good AI is built on open standards where possible, supports the right to repair, does not extract from public data while excluding public benefit, and treats the digital commons as a shared resource rather than a private resource to be enclosed.</p></div></div>
+      <div class="principle-row"><span class="p-num">5</span><div class="p-body"><h3>It gives communities a voice</h3><p>Good AI infrastructure is sited with genuine community involvement, not just procedural consultation. <em>Local knowledge, local impact, local voice.</em> Communities affected by AI infrastructure development are stakeholders, not obstacles.</p></div></div>
+      <div class="principle-row"><span class="p-num">6</span><div class="p-body"><h3>It is sized for real demand</h3><p>Good AI infrastructure is built to meet verified, real-world need — not speculative forecasts driven by capital allocation cycles. The lesson of the railway mania is not to stop building. It is to build to actual demand, not projected bubbles.</p></div></div>
+      <div class="principle-row"><span class="p-num">7</span><div class="p-body"><h3>It benefits those who host it</h3><p>Good AI development creates genuine value for the communities and landscapes that host its infrastructure — through employment, energy sharing, community benefit funds, ecological restoration, or other meaningful returns.</p></div></div>
+      <div class="principle-row"><span class="p-num">8</span><div class="p-body"><h3>It plans for the long term</h3><p>Good AI thinking extends beyond the next quarter. <em>Future generations are stakeholders.</em> The decisions we make about AI infrastructure today will shape landscapes, energy systems and communities for decades. That weight belongs in every boardroom and planning committee.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- THE QUESTION -->
+<section class="page-section" id="question" style="background:var(--parchment);padding-bottom:3rem;">
+  <div class="section-inner">
+    <div class="question-block">
+      <p>"Is this the right infrastructure, in the right place, at the right scale, <em>for the right future?</em>"</p>
+      <span>The Firewalkers — the question we bring to every development</span>
+    </div>
+    <p class="intro-text">This single question is the most useful tool in the Firewalkers toolkit. It does not oppose technology. It does not oppose data centres. It demands that every proposal justify itself against the future it is supposed to serve — not the future of the investors, but the future of the place, the community, and the people who will live there.</p>
+  </div>
+</section>
+
+<!-- DATA CENTRE POSITION -->
+<section class="page-section" id="infrastructure" style="background:var(--stone);">
+  <div class="section-inner">
+    <div class="section-eyebrow">Our Position on Data Centres</div>
+    <h2 class="page-h2">Not all data centres are <em>the same.</em></h2>
+    <p class="intro-text">The Firewalkers do not oppose data centres. We make distinctions. The same distinction a land steward makes between a well-tended field and a strip-mined hillside. Both are agriculture. The difference is whether you plan to come back.</p>
+    <div class="two-col">
+      <div class="col-block oppose">
+        <h3>Poorly designed AI infrastructure</h3>
+        <ul>
+          <li>Sited on productive agricultural or ecologically sensitive land</li>
+          <li>Water-intensive in drought-prone or fragile catchment areas</li>
+          <li>Fossil-powered with no credible transition timeline</li>
+          <li>Built to speculative demand forecasts, not verified need</li>
+          <li>Approved through inadequate environmental assessment</li>
+          <li>Zero community benefit or engagement</li>
+          <li>Secretive about energy, water and land use data</li>
+        </ul>
+      </div>
+      <div class="col-block support">
+        <h3>Responsible AI infrastructure</h3>
+        <ul>
+          <li>Sited on brownfield, industrial or otherwise compromised land</li>
+          <li>Designed for water efficiency; zero discharge where achievable</li>
+          <li>Renewable-powered with verified, auditable sourcing</li>
+          <li>Sized to real demand with transparent capacity planning</li>
+          <li>Rigorous, independent environmental assessment</li>
+          <li>Genuine community benefit: jobs, energy, funds, restoration</li>
+          <li>Transparent public reporting on environmental performance</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI PROMPT LIBRARY -->
+<section class="page-section" id="prompts" style="background:var(--parchment-warm);">
+  <div class="section-inner">
+    <div class="section-eyebrow">The Firewalkers Prompt Library</div>
+    <h2 class="page-h2">Use AI to protect <em>what you love</em></h2>
+    <p class="prompt-intro">Copy any of these prompts and paste them into <strong>Claude, ChatGPT, Gemini or any AI assistant</strong>. They are designed to help you understand, campaign and act effectively. Replace the bracketed text with your specific details.</p>
+
+    <div class="prompt-grid">
+
+      <div class="prompt-card">
+        <span class="prompt-icon">📄</span>
+        <h3>Analyse a planning application</h3>
+        <p>Decode planning documents in minutes — including what they are designed to obscure.</p>
+        <div class="prompt-box">I am reviewing a planning application for [type of development] in [location]. Here is the key content: [paste text or describe]. Please summarise: 1) The main proposed impacts on land, water, ecology and community. 2) What information appears to be missing or understated. 3) The strongest grounds a local resident or community group could use to object. 4) Which statutory consultees should be notified.</div>
+        <button class="copy-prompt" onclick="this.previousElementSibling.nextSibling;navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt\n',''));this.textContent='Copied! Paste into any AI tool.'">Copy this prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <span class="prompt-icon">✉️</span>
+        <h3>Draft a formal objection letter</h3>
+        <p>A well-argued letter to a planning authority or MP carries real weight when it is specific, evidenced and well-structured.</p>
+        <div class="prompt-box">Write a formal planning objection letter from a local resident about a proposed [type of development] at [location]. My specific concerns are: [list your concerns]. Please include: a clear statement of objection; the planning policy grounds for each concern; reference to any relevant national planning guidelines; and a request for the application to be refused or referred to committee. Keep the tone professional and evidence-based.</div>
+        <button class="copy-prompt" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt\n',''));this.textContent='Copied! Paste into any AI tool.'">Copy this prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <span class="prompt-icon">🌊</span>
+        <h3>Understand an environmental report</h3>
+        <p>Environmental Impact Assessments are designed to be read by regulators, not residents. AI can translate them.</p>
+        <div class="prompt-box">I have an Environmental Impact Assessment for [type of development]. Here is the executive summary and the ecology chapter: [paste text]. Please explain: 1) What the real environmental risks are, in plain language. 2) What has been assessed and what has been omitted. 3) Whether the mitigation measures proposed are standard, best practice, or inadequate. 4) What a community group would most want to challenge in this document.</div>
+        <button class="copy-prompt" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt\n',''));this.textContent='Copied! Paste into any AI tool.'">Copy this prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <span class="prompt-icon">⚖️</span>
+        <h3>Know your rights</h3>
+        <p>Most people do not know how much power they actually have in planning and regulatory processes.</p>
+        <div class="prompt-box">What rights do local residents and community groups have in the [UK/Scottish/Welsh/Irish] planning system when objecting to a [type of development]? Please explain: 1) How to make a valid representation. 2) What grounds can be used to object. 3) Whether a planning inspector or appeal process is available. 4) What environmental legislation applies. 5) Whether judicial review is an option and when it is used.</div>
+        <button class="copy-prompt" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt\n',''));this.textContent='Copied! Paste into any AI tool.'">Copy this prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <span class="prompt-icon">🔍</span>
+        <h3>Research alternatives and best practice</h3>
+        <p>The strongest campaigns propose better solutions, not just objections. AI can research international best practice fast.</p>
+        <div class="prompt-box">I am campaigning about a proposed [type of development] in [location/region]. Please research: 1) International best practice examples of how this type of development has been done sustainably. 2) What alternative sites or approaches have been used elsewhere. 3) Whether any community-benefit or cooperative models exist for this type of infrastructure. 4) What evidence base I could use to argue for higher environmental standards.</div>
+        <button class="copy-prompt" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt\n',''));this.textContent='Copied! Paste into any AI tool.'">Copy this prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <span class="prompt-icon">📊</span>
+        <h3>Build an evidence base</h3>
+        <p>Campaigns win on evidence. AI can help you quickly assemble the data, statistics and precedents you need.</p>
+        <div class="prompt-box">I need an evidence base for a campaign about [issue — e.g. data centre water use / rural land use / AI energy consumption]. Please provide: 1) Key statistics on the scale and impact of this issue in [country/region]. 2) The most credible sources and researchers in this area. 3) Any recent regulatory changes or policy developments. 4) Examples of successful community campaigns on this issue. 5) The most compelling framing for a public audience.</div>
+        <button class="copy-prompt" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt\n',''));this.textContent='Copied! Paste into any AI tool.'">Copy this prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <span class="prompt-icon">📣</span>
+        <h3>Generate a community briefing</h3>
+        <p>Turn complex technical proposals into clear, accessible summaries that your whole community can understand and act on.</p>
+        <div class="prompt-box">Write a one-page community briefing about a proposed [type of development] at [location]. The audience is local residents with no specialist knowledge. Include: a plain-language explanation of what is proposed; the main concerns; what residents can do (with specific deadlines if relevant: [deadlines]); and who to contact. Use clear, simple language. Avoid jargon.</div>
+        <button class="copy-prompt" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt\n',''));this.textContent='Copied! Paste into any AI tool.'">Copy this prompt</button>
+      </div>
+
+      <div class="prompt-card">
+        <span class="prompt-icon">🌿</span>
+        <h3>Assess ecological impact</h3>
+        <p>Understand what a development means for local biodiversity, water catchments and ecological connectivity.</p>
+        <div class="prompt-box">I need to understand the ecological impacts of a proposed [type of development] near [habitat type — e.g. upland bog, river corridor, ancient woodland] in [region]. Please explain: 1) What species and habitats are typically found in this environment. 2) What the likely direct and indirect impacts of this type of development are. 3) What mitigation and compensation measures should be required as a minimum. 4) What statutory protections may apply. 5) What ecological surveys I should ask to see.</div>
+        <button class="copy-prompt" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt\n',''));this.textContent='Copied! Paste into any AI tool.'">Copy this prompt</button>
+      </div>
+
+    </div>
+
+    <div class="share-bar" style="margin-top:3rem;">
+      <span class="share-label">Share this resource</span>
+      <a href="https://twitter.com/intent/tweet?text=Free+AI+prompt+library+for+civic+action+%E2%80%94+analyse+planning+applications%2C+draft+objection+letters+and+more&url=https%3A%2F%2Fheartofscott.github.io%2Fgood-ai.html" target="_blank" rel="noopener" class="share-btn twitter">X / Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fheartofscott.github.io%2Fgood-ai.html" target="_blank" rel="noopener" class="share-btn linkedin">LinkedIn</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fheartofscott.github.io%2Fgood-ai.html" target="_blank" rel="noopener" class="share-btn facebook">Facebook</a>
+      <a href="https://api.whatsapp.com/send?text=Free+AI+prompt+library+for+civic+action+%E2%80%94+The+Firewalkers+https%3A%2F%2Fheartofscott.github.io%2Fgood-ai.html" target="_blank" rel="noopener" class="share-btn whatsapp">WhatsApp</a>
+      <button class="share-btn copy" onclick="navigator.clipboard.writeText('https://heartofscott.github.io/good-ai.html');this.textContent='Copied!'">Copy link</button>
+    </div>
+  </div>
+</section>
+
+<!-- TIPS FOR USING AI WISELY -->
+<section class="page-section" id="tips" style="background:var(--parchment);">
+  <div class="section-inner">
+    <div class="section-eyebrow">Using AI Wisely</div>
+    <h2 class="page-h2">Five principles for <em>responsible AI use</em></h2>
+    <p class="intro-text">The Firewalkers teach people to use AI as a tool for justice and protection. Here is how to use it well.</p>
+    <div class="tips-grid">
+      <div class="tip-card"><span class="tip-num">1</span><h3>Verify everything</h3><p>AI can make mistakes, misread documents, or generate plausible-sounding but incorrect statistics. Always check key facts against primary sources before using them in a formal submission.</p></div>
+      <div class="tip-card"><span class="tip-num">2</span><h3>Be specific</h3><p>The more specific your prompt, the more useful the output. Include the location, the type of development, the specific concern, the audience. Vague prompts produce vague answers.</p></div>
+      <div class="tip-card"><span class="tip-num">3</span><h3>Use your own voice</h3><p>AI-generated letters are a starting point, not a finished document. Add your personal experience, your local knowledge, your voice. Personal testimony carries weight that generic text does not.</p></div>
+      <div class="tip-card"><span class="tip-num">4</span><h3>Ask for sources</h3><p>When AI gives you a statistic or a claim, ask: "What is your source for this?" Then verify it. Good AI use means treating the output as a research assistant, not an oracle.</p></div>
+      <div class="tip-card"><span class="tip-num">5</span><h3>Iterate and improve</h3><p>If the first answer is not quite right, say so. "That's good but can you make it more formal / add a section on water use / cut it to one page." AI responds well to specific feedback.</p></div>
+      <div class="tip-card"><span class="tip-num">6</span><h3>Share what works</h3><p>If you develop a prompt that works particularly well for your local context, share it at the Firewalkers hearth. The movement is built from accumulated practical knowledge.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="page-cta">
+  <h2>The future is still ours to build.</h2>
+  <p>Join the Firewalkers community — new resources, campaign updates, and a growing network of people using technology wisely to protect the places they love.</p>
+  <a href="index.html#signup">Keep me informed</a>
+</section>
+
+<footer>
+  <div class="footer-base">
+    <span>⁂ The Firewalkers · heartofscott.github.io</span>
+    <a href="index.html">Home</a>
+    <a href="hearth.html">From the Hearth</a>
+    <a href="index.html#submit">Contribute</a>
+  </div>
+</footer>
+</body>
+</html>
