@@ -1,2 +1,3 @@
 # heartofscott.github.io
-The personal site and druid blog of Heart of Scotland
+Where the firewalkers meet and move
+
