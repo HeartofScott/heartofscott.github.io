@@ -168,7 +168,18 @@ h2.section-title em { color: var(--amber); font-style: italic; }
 .field-group textarea { min-height: 150px; resize: vertical; line-height: 1.75; }
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .form-submit-btn { font-family: 'Cinzel', serif; font-size: 0.64rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--parchment); background: var(--amber); border: none; padding: 1.1rem 2.5rem; cursor: pointer; transition: all 0.3s; width: 100%; display: block; margin-top: 0.25rem; }
-.form-submit-btn:hover { background: var(--amber-mid); }
+.form-submit-btn:disabled { opacity: 0.65; cursor: not-allowed; background: var(--amber); }
+[data-fs-error]:not(:empty) {
+  padding: 0.9rem 1.1rem;
+  background: rgba(160,88,0,0.08);
+  border-left: 3px solid var(--amber);
+  font-size: 0.9rem;
+  color: var(--amber-mid);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+[data-fs-success] { display: none; }
+[data-fs-success][data-visible] { display: block; }
 .form-note { font-size: 0.85rem; color: var(--mist); font-style: italic; text-align: center; margin-top: 0.75rem; }
 .form-success { display: none; padding: 2.5rem; background: var(--sage-pale); border: 1px solid rgba(61,110,72,0.2); border-left: 3px solid var(--sage); text-align: center; }
 .form-success h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.65rem; font-weight: 600; color: var(--sage); margin-bottom: 0.5rem; }
@@ -434,21 +445,24 @@ footer { background: var(--earth); padding: 4.5rem 4rem 3rem; border-top: 3px so
     <div class="reveal">
       <div class="section-label">Speak at the Hearth</div>
       <h2 class="section-title" style="margin-bottom:2rem;">Submit your <em>voice</em></h2>
+
+      <div data-fs-error class="fs-error-display"></div>
+
       <form id="submitForm" action="https://formspree.io/f/xdajqvje" method="POST">
         <input type="hidden" name="_subject" value="New voice at the Firewalkers hearth" />
         <div class="field-row">
           <div class="field-group">
             <label for="v-name">Your name</label>
-            <input type="text" id="v-name" name="name" placeholder="How you'd like to be known" required />
+            <input type="text" id="v-name" name="name" placeholder="How you'd like to be known" required data-fs-field />
           </div>
           <div class="field-group">
             <label for="v-email">Email</label>
-            <input type="email" id="v-email" name="email" placeholder="your@email.com" required />
+            <input type="email" id="v-email" name="email" placeholder="your@email.com" required data-fs-field />
           </div>
         </div>
         <div class="field-group">
           <label for="v-type">What are you bringing to the fire?</label>
-          <select id="v-type" name="type" required>
+          <select id="v-type" name="type" required data-fs-field>
             <option value="">Choose a type</option>
             <option value="blog">A blog post or essay</option>
             <option value="resource">A resource, guide, or research</option>
@@ -460,20 +474,21 @@ footer { background: var(--earth); padding: 4.5rem 4rem 3rem; border-top: 3px so
         </div>
         <div class="field-group">
           <label for="v-title">Title or subject</label>
-          <input type="text" id="v-title" name="title" placeholder="Give it a name" required />
+          <input type="text" id="v-title" name="title" placeholder="Give it a name" required data-fs-field />
         </div>
         <div class="field-group">
           <label for="v-content">Your message, post, or idea</label>
-          <textarea id="v-content" name="message" style="min-height:220px;" placeholder="Write freely. The hearth has space for long fires and short sparks alike." required></textarea>
+          <textarea id="v-content" name="message" style="min-height:220px;" placeholder="Write freely. The hearth has space for long fires and short sparks alike." required data-fs-field></textarea>
         </div>
         <div class="field-group">
           <label for="v-links">Links or sources (optional)</label>
-          <input type="text" id="v-links" name="links" placeholder="Any relevant URLs or references" />
+          <input type="text" id="v-links" name="links" placeholder="Any relevant URLs or references" data-fs-field />
         </div>
-        <button type="submit" class="form-submit-btn">Bring This to the Hearth</button>
+        <button type="submit" class="form-submit-btn" data-fs-submit-btn>Bring This to the Hearth</button>
         <p class="form-note">All submissions are read before publication. We may reach out before sharing your words.</p>
       </form>
-      <div class="form-success" id="submitSuccess" style="display:none;">
+
+      <div class="form-success" data-fs-success>
         <h4>Your voice has been heard.</h4>
         <p>We'll read what you've brought and reach out if we have questions.<br>Thank you for tending the fire.</p>
       </div>
@@ -538,16 +553,8 @@ document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
 const submitForm = document.getElementById('submitForm');
 if (submitForm) {
-  submitForm.addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const btn = this.querySelector('button[type="submit"]');
-    btn.textContent = 'Carrying it to the fire...'; btn.disabled = true;
-    try {
-      const res = await fetch(this.action, { method: 'POST', body: new FormData(this), headers: { 'Accept': 'application/json' } });
-      if (res.ok) { this.style.display = 'none'; document.getElementById('submitSuccess').style.display = 'block'; }
-      else { btn.textContent = 'Something went wrong — please try again'; btn.disabled = false; }
-    } catch { btn.textContent = 'Something went wrong — please try again'; btn.disabled = false; }
-  });
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#submitForm', formId: 'xdajqvje' });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -555,6 +562,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (sf) { sf.addEventListener('sfx:success', () => { sf.style.display = 'none'; document.getElementById('signupSuccess').style.display = 'block'; }); }
 });
 </script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 <script src="https://cdn.sendfox.com/js/form.js" charset="utf-8"></script>
 </body>
 </html>
