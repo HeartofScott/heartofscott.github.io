@@ -50,16 +50,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1rem 4rem;display:fl
 .post-body blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;color:var(--amber);line-height:1.55;border-left:2px solid var(--amber-bright);padding-left:1.5rem;margin:2.5rem 0;}
 .post-body strong{color:var(--earth);font-weight:600;}
 .post-body em{color:var(--sage);font-style:italic;}
-.share-bar{background:var(--parchment-warm);border:1px solid rgba(160,88,0,0.1);padding:1.5rem 2rem;display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;margin:2.5rem 0;}
-.share-label{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--mist);flex-shrink:0;}
-.share-btn{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--parchment);background:var(--earth-mid);border:none;padding:0.6rem 1.1rem;cursor:pointer;text-decoration:none;transition:all 0.3s;display:inline-block;}
-.share-btn:hover{background:var(--earth);}
-.share-btn.twitter{background:#000;}
-.share-btn.linkedin{background:#0a66c2;}
-.share-btn.facebook{background:#1877f2;}
-.share-btn.whatsapp{background:#25d366;}
-.share-btn.copy{background:var(--amber);}
-.share-btn.copy:hover{background:var(--amber-mid);}
+.share-bar{display:flex;align-items:center;gap:0.35rem;flex-wrap:wrap;margin:2.5rem 0;padding:1.1rem 0;border-top:1px solid rgba(160,88,0,0.1);border-bottom:1px solid rgba(160,88,0,0.1);}
+.share-label{font-family:'Cinzel',serif;font-size:0.48rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--mist);margin-right:0.5rem;flex-shrink:0;}
+.share-btn{display:inline-flex;align-items:center;gap:0.28rem;font-family:'Cinzel',serif;font-size:0.46rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--earth-mid);background:transparent;border:1px solid rgba(160,88,0,0.16);padding:0.38rem 0.7rem;cursor:pointer;text-decoration:none;transition:all 0.22s;white-space:nowrap;line-height:1;}
+.share-btn svg{width:11px;height:11px;flex-shrink:0;}
+.share-btn:hover{background:var(--earth);color:var(--parchment);border-color:var(--earth);}
+.share-btn.copy-btn:hover{background:var(--amber);border-color:var(--amber);color:var(--parchment);}
 .post-cta{background:var(--earth);padding:3rem;text-align:center;margin-top:4rem;}
 .post-cta h3{font-family:'Cormorant Garamond',serif;font-size:1.65rem;color:var(--parchment);margin-bottom:0.75rem;}
 .post-cta p{font-size:1rem;color:rgba(250,245,236,0.6);margin-bottom:1.75rem;}
@@ -98,12 +94,15 @@ footer{background:var(--earth);padding:2.5rem 4rem;border-top:2px solid var(--am
 <div class="post-body">
 
   <div class="share-bar">
-    <span class="share-label">Share this post</span>
-    <a href="https://twitter.com/intent/tweet?text=A+Fire+in+the+Distance+%E2%80%94+The+Firewalkers&url=https%3A%2F%2Fheartofscott.github.io%2Fposts%2Ffire-in-the-distance.html" target="_blank" rel="noopener" class="share-btn twitter">X / Twitter</a>
-    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fheartofscott.github.io%2Fposts%2Ffire-in-the-distance.html" target="_blank" rel="noopener" class="share-btn linkedin">LinkedIn</a>
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fheartofscott.github.io%2Fposts%2Ffire-in-the-distance.html" target="_blank" rel="noopener" class="share-btn facebook">Facebook</a>
-    <a href="https://api.whatsapp.com/send?text=A+Fire+in+the+Distance+%E2%80%94+The+Firewalkers+https%3A%2F%2Fheartofscott.github.io%2Fposts%2Ffire-in-the-distance.html" target="_blank" rel="noopener" class="share-btn whatsapp">WhatsApp</a>
-    <button class="share-btn copy" onclick="navigator.clipboard.writeText('https://heartofscott.github.io/posts/fire-in-the-distance.html');this.textContent='Copied!'">Copy link</button>
+    <span class="share-label">Share</span>
+    <a href="https://twitter.com/intent/tweet?text=A+Fire+in+the+Distance+%E2%80%94+The+Firewalkers&url=https%3A%2F%2Fheartofscott.github.io%2Fposts%2Ffire-in-the-distance.html" target="_blank" rel="noopener" class="share-btn"><svg viewBox="0 0 24 24" fill="currentColor" width="11" height="11"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25z"/></svg>X</a>
+    <a href="https://www.threads.net/intent/post?text=A+Fire+in+the+Distance+%E2%80%94+The+Firewalkers+https%3A%2F%2Fheartofscott.github.io%2Fposts%2Ffire-in-the-distance.html" target="_blank" rel="noopener" class="share-btn"><svg viewBox="0 0 192 192" fill="currentColor" width="11" height="11"><path d="M141.537 88.988a66.667 66.667 0 00-2.518-1.143c-1.482-27.307-16.403-42.94-41.457-43.1h-.34c-14.986 0-27.449 6.396-35.12 18.036l13.779 9.452c5.73-8.695 14.724-10.548 21.348-10.548h.229c8.249.053 14.474 2.452 18.503 7.129 2.932 3.405 4.893 8.111 5.864 14.05-7.314-1.243-15.224-1.626-23.68-1.141-23.82 1.371-39.134 15.264-38.105 34.568.522 9.792 5.4 18.216 13.735 23.719 6.97 4.676 15.937 6.95 25.267 6.432 12.32-.684 21.987-5.4 28.733-14.012 5.147-6.613 8.388-15.192 9.813-26.049 5.892 3.554 10.246 8.243 12.606 13.785 4.033 9.421 4.273 24.912-8.57 37.385-11.186 10.868-24.702 15.568-44.986 15.703-22.565-.155-39.612-7.404-50.656-21.553C33.576 139.084 28 120.478 28 96c0-24.478 5.576-43.084 16.577-55.363C55.62 26.553 72.67 19.3 95.237 19.145c22.731.157 40.09 7.44 51.637 21.65 5.666 6.929 9.919 15.655 12.607 25.734l16.185-4.352c-3.289-12.346-8.754-23.103-16.382-32.03C143.958 11.955 122.678 2.667 95.31 2.5h-.074C68.01 2.667 46.932 11.99 33.384 30.405 21.216 47.05 14.911 70.359 14.842 96c.069 25.641 6.374 48.95 18.542 65.595 13.548 18.415 34.626 27.739 62.762 27.906h.073c24.654-.139 42.034-6.641 56.288-20.945 18.963-18.974 18.392-42.753 12.157-57.334-4.568-10.669-13.54-19.07-22.127-22.234z"/><path d="M105.95 124.712c-10.928.611-22.283-4.286-22.845-14.81-.397-7.45 5.296-15.769 22.844-16.77 7.988-.459 15.43.124 22.23 1.729-2.528 31.157-11.35 29.34-22.229 29.851z"/></svg>Threads</a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fheartofscott.github.io%2Fposts%2Ffire-in-the-distance.html" target="_blank" rel="noopener" class="share-btn"><svg viewBox="0 0 24 24" fill="currentColor" width="11" height="11"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fheartofscott.github.io%2Fposts%2Ffire-in-the-distance.html" target="_blank" rel="noopener" class="share-btn"><svg viewBox="0 0 24 24" fill="currentColor" width="11" height="11"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>Facebook</a>
+    <a href="https://api.whatsapp.com/send?text=A+Fire+in+the+Distance+—+The+Firewalkers+https://heartofscott.github.io/posts/fire-in-the-distance.html" target="_blank" rel="noopener" class="share-btn"><svg viewBox="0 0 24 24" fill="currentColor" width="11" height="11"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>WhatsApp</a>
+    <button class="share-btn" onclick="navigator.clipboard.writeText('A Fire in the Distance — The Firewalkers\nhttps://heartofscott.github.io/posts/fire-in-the-distance.html');this.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="11" height="11"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>Copied for Instagram!'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="11" height="11"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>Instagram</button>
+    <button class="share-btn" onclick="navigator.clipboard.writeText('A Fire in the Distance — The Firewalkers\n\nhttps://heartofscott.github.io/posts/fire-in-the-distance.html');this.innerHTML='<svg viewBox="0 0 24 24" fill="currentColor" width="11" height="11"><path d="M22 9H2v5h20zM2 4h20v3H2zM2 16l10 6 10-6z"/></svg>Copied for Substack!'"><svg viewBox="0 0 24 24" fill="currentColor" width="11" height="11"><path d="M22 9H2v5h20zM2 4h20v3H2zM2 16l10 6 10-6z"/></svg>Substack</button>
+    <button class="share-btn copy-btn" onclick="navigator.clipboard.writeText('https://heartofscott.github.io/posts/fire-in-the-distance.html');this.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="11" height="11"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>Copied!'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="11" height="11"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>Copy link</button>
   </div>
 
   <p>The debates about AI have been loud this year.</p>
@@ -132,174 +131,15 @@ footer{background:var(--earth);padding:2.5rem 4rem;border-top:2px solid var(--am
   <p>There is room at the fire for all of us.</p>
 
   <div class="share-bar">
-    <span class="share-label">Share this post</span>
-    <a href="https://twitter.com/intent/tweet?text=A+Fire+in+the+Distance+%E2%80%94+The+Firewalkers&url=https%3A%2F%2Fheartofscott.github.io%2Fposts%2Ffire-in-the-distance.html" target="_blank" rel="noopener" class="share-btn twitter">X / Twitter</a>
-    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fheartofscott.github.io%2Fposts%2Ffire-in-the-distance.html" target="_blank" rel="noopener" class="share-btn linkedin">LinkedIn</a>
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fheartofscott.github.io%2Fposts%2Ffire-in-the-distance.html" target="_blank" rel="noopener" class="share-btn facebook">Facebook</a>
-    <a href="https://api.whatsapp.com/send?text=A+Fire+in+the+Distance+%E2%80%94+The+Firewalkers+https%3A%2F%2Fheartofscott.github.io%2Fposts%2Ffire-in-the-distance.html" target="_blank" rel="noopener" class="share-btn whatsapp">WhatsApp</a>
-    <button class="share-btn copy" onclick="navigator.clipboard.writeText('https://heartofscott.github.io/posts/fire-in-the-distance.html');this.textContent='Copied!'">Copy link</button>
-  </div>
-
-  <div class="post-cta">
-    <h3>The fire is just being lit.</h3>
-    <p>Join the Firewalkers community — practical tools, new writing, and a growing network of people building a wiser future.</p>
-    <a href="../index.html#signup">Keep me informed</a>
-  </div>
-
-  <div class="post-nav">
-    <a href="../hearth.html">← All posts</a>
-    <a href="pro-wisdom.html">Next: We Are Not Anti-AI →</a>
-  </div>
-</div>
-
-<footer>
-  <div class="footer-base">
-    <span>⁂ The Firewalkers · heartofscott.github.io</span>
-    <a href="../index.html">Home</a>
-    <a href="../hearth.html">From the Hearth</a>
-  </div>
-</footer>
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Fire in the Distance — The Firewalkers</title>
-<meta name="description" content="Why the AI debate sent me back to the ancient paths. The druid path does not begin when you decide to walk it. It begins when you realise you already have been.">
-<meta name="author" content="Blaze — The Firewalkers">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://heartofscott.github.io/posts/fire-in-the-distance.html">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://heartofscott.github.io/posts/fire-in-the-distance.html">
-<meta property="og:title" content="A Fire in the Distance — The Firewalkers">
-<meta property="og:description" content="The druid path does not begin when you decide to walk it. It begins when you realise you already have been — perhaps for years — without knowing what to call it.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1601465364325-34b5b5fdb6c4?auto=format&fit=crop&w=1200&q=80">
-<meta property="og:site_name" content="The Firewalkers">
-<meta property="article:published_time" content="2026-05-01">
-<meta property="article:author" content="Blaze">
-<meta property="article:tag" content="Druidry">
-<meta property="article:tag" content="AI">
-<meta property="article:tag" content="Technology">
-<meta property="article:tag" content="Sustainability">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="A Fire in the Distance — The Firewalkers">
-<meta name="twitter:description" content="The druid path does not begin when you decide to walk it. It begins when you realise you already have been.">
-<meta name="twitter:image" content="https://images.unsplash.com/photo-1601465364325-34b5b5fdb6c4?auto=format&fit=crop&w=1200&q=80">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"A Fire in the Distance","description":"Why the AI debate sent me back to the ancient paths.","image":"https://images.unsplash.com/photo-1601465364325-34b5b5fdb6c4?auto=format&fit=crop&w=1200&q=80","datePublished":"2026-05-01","author":{"@type":"Person","name":"Blaze"},"publisher":{"@type":"Organization","name":"The Firewalkers","url":"https://heartofscott.github.io"},"url":"https://heartofscott.github.io/posts/fire-in-the-distance.html","keywords":["AI","druidry","technology","sustainability","responsible AI"]}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
-<style>
-:root{--parchment:#faf5ec;--parchment-warm:#f4ebda;--stone:#e8dcc8;--amber:#a05800;--amber-mid:#c07010;--amber-bright:#e09020;--amber-pale:#fdf0d5;--sage:#3d6e48;--sage-light:#5a9060;--sage-pale:#cfe0d4;--earth:#221811;--earth-mid:#3d2e1e;--mist:#7a7262;}
-*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
-body{background:var(--parchment);color:var(--earth);font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;line-height:1.85;overflow-x:hidden;}
-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1rem 4rem;display:flex;justify-content:space-between;align-items:center;background:rgba(250,245,236,0.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(160,88,0,0.12);}
-.nav-brand{font-family:'Cinzel',serif;font-size:0.78rem;letter-spacing:0.2em;color:var(--amber);text-decoration:none;}
-.nav-back{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--mist);text-decoration:none;transition:color 0.3s;}
-.nav-back:hover{color:var(--amber);}
-.post-hero{height:55vh;min-height:380px;position:relative;background-image:url('https://images.unsplash.com/photo-1601465364325-34b5b5fdb6c4?auto=format&fit=crop&w=1920&q=80');background-size:cover;background-position:center 40%;}
-.post-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(34,24,17,0.2),rgba(34,24,17,0.65));}
-.post-hero-inner{position:absolute;bottom:3rem;left:50%;transform:translateX(-50%);width:100%;max-width:780px;padding:0 2rem;z-index:1;}
-.post-tag-hero{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--amber-bright);display:block;margin-bottom:0.75rem;}
-.post-hero-inner h1{font-family:'Cinzel',serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:700;color:var(--parchment);line-height:1.05;margin-bottom:0.5rem;}
-.post-hero-inner .subtitle{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;color:rgba(250,245,236,0.75);}
-.post-byline-bar{background:var(--earth);padding:1rem 2rem;display:flex;justify-content:center;align-items:center;gap:3rem;}
-.byline-item{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(250,245,236,0.45);}
-.post-body{max-width:780px;margin:0 auto;padding:4rem 2rem 5rem;}
-.post-body p{margin-bottom:1.75rem;color:var(--earth-mid);}
-.post-body p:first-of-type{font-size:1.15rem;color:var(--earth);}
-.post-body hr{border:none;border-top:1px solid rgba(160,88,0,0.15);margin:2.5rem 0;}
-.post-body blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;color:var(--amber);line-height:1.55;border-left:2px solid var(--amber-bright);padding-left:1.5rem;margin:2.5rem 0;}
-.post-body strong{color:var(--earth);font-weight:600;}
-.post-body em{color:var(--sage);font-style:italic;}
-.share-bar{background:var(--parchment-warm);border:1px solid rgba(160,88,0,0.1);padding:1.5rem 2rem;display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;margin:2.5rem 0;}
-.share-label{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--mist);flex-shrink:0;}
-.share-btn{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--parchment);background:var(--earth-mid);border:none;padding:0.6rem 1.1rem;cursor:pointer;text-decoration:none;transition:all 0.3s;display:inline-block;}
-.share-btn:hover{background:var(--earth);}
-.share-btn.twitter{background:#000;}
-.share-btn.linkedin{background:#0a66c2;}
-.share-btn.facebook{background:#1877f2;}
-.share-btn.whatsapp{background:#25d366;}
-.share-btn.copy{background:var(--amber);}
-.share-btn.copy:hover{background:var(--amber-mid);}
-.post-cta{background:var(--earth);padding:3rem;text-align:center;margin-top:4rem;}
-.post-cta h3{font-family:'Cormorant Garamond',serif;font-size:1.65rem;color:var(--parchment);margin-bottom:0.75rem;}
-.post-cta p{font-size:1rem;color:rgba(250,245,236,0.6);margin-bottom:1.75rem;}
-.post-cta a{font-family:'Cinzel',serif;font-size:0.64rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--parchment);background:var(--amber);border:none;padding:1rem 2.5rem;text-decoration:none;transition:all 0.3s;display:inline-block;}
-.post-cta a:hover{background:var(--amber-mid);}
-.post-nav{display:flex;justify-content:space-between;padding:2rem 0;border-top:1px solid rgba(160,88,0,0.1);margin-top:2rem;}
-.post-nav a{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--sage);text-decoration:none;}
-.post-nav a:hover{color:var(--amber);}
-footer{background:var(--earth);padding:2.5rem 4rem;border-top:2px solid var(--amber);}
-.footer-base{max-width:780px;margin:0 auto;display:flex;justify-content:space-between;font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.1em;color:rgba(250,245,236,0.25);}
-.footer-base a{color:rgba(250,245,236,0.4);text-decoration:none;}
-@media(max-width:700px){nav{padding:1rem 1.5rem;}.post-body{padding:3rem 1.5rem;}.share-bar{padding:1.25rem 1.5rem;}.post-hero-inner{padding:0 1.5rem;}.footer-base{flex-direction:column;gap:0.5rem;}}
-</style>
-</head>
-<body>
-<nav>
-  <a href="../index.html" class="nav-brand">⁂ The Firewalkers</a>
-  <a href="../hearth.html" class="nav-back">← All posts</a>
-</nav>
-
-<div class="post-hero">
-  <div class="post-hero-inner">
-    <span class="post-tag-hero">First Fire · Welcome · May 2026</span>
-    <h1>A Fire in the Distance</h1>
-    <p class="subtitle">Or: why the AI debate sent me back to the ancient paths</p>
-  </div>
-</div>
-
-<div class="post-byline-bar">
-  <span class="byline-item">Author: Blaze</span>
-  <span class="byline-item">Published: May 2026</span>
-  <span class="byline-item">Category: First Fire · Welcome</span>
-  <span class="byline-item">Reading time: ~4 min</span>
-</div>
-
-<div class="post-body">
-
-  <div class="share-bar">
-    <span class="share-label">Share this post</span>
-    <a href="https://twitter.com/intent/tweet?text=A+Fire+in+the+Distance+%E2%80%94+The+Firewalkers&url=https%3A%2F%2Fheartofscott.github.io%2Fposts%2Ffire-in-the-distance.html" target="_blank" rel="noopener" class="share-btn twitter">X / Twitter</a>
-    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fheartofscott.github.io%2Fposts%2Ffire-in-the-distance.html" target="_blank" rel="noopener" class="share-btn linkedin">LinkedIn</a>
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fheartofscott.github.io%2Fposts%2Ffire-in-the-distance.html" target="_blank" rel="noopener" class="share-btn facebook">Facebook</a>
-    <a href="https://api.whatsapp.com/send?text=A+Fire+in+the+Distance+%E2%80%94+The+Firewalkers+https%3A%2F%2Fheartofscott.github.io%2Fposts%2Ffire-in-the-distance.html" target="_blank" rel="noopener" class="share-btn whatsapp">WhatsApp</a>
-    <button class="share-btn copy" onclick="navigator.clipboard.writeText('https://heartofscott.github.io/posts/fire-in-the-distance.html');this.textContent='Copied!'">Copy link</button>
-  </div>
-
-  <p>The debates about AI have been loud this year.</p>
-  <p>Loud in the way that speculative booms always are — everyone with a stake, a take, a position to defend or attack. The proclamations of transformation. The counter-proclamations of catastrophe. The quarterly earnings calls dressed up as philosophy.</p>
-  <p>I want to say something clearly before I say anything else: I am not here to tell you what to think about artificial intelligence, or whether to use it. Use it. Don't use it. Build with it, write with it, question it, embrace it. That is entirely yours to decide.</p>
-  <p>But something in the noise of the last year sent me somewhere quieter. Somewhere older.</p>
-  <p>It sent me to the patterns.</p>
-  <hr>
-  <p>There is a story I keep returning to.</p>
-  <p>In 1845, the British Parliament approved 272 new railway acts in a single year. A thousand companies formed almost overnight. Fortunes were staked on projections nobody could honestly verify. Landscapes were torn open. The land — the actual land, with its roots and rivers and centuries of memory — was treated as an obstacle between investors and returns.</p>
-  <p>Most of those companies failed within a decade.</p>
-  <p>The tracks remained. The damage remained. The fortunes dissolved, but the scarred hillsides did not.</p>
-  <p>I look at the data centre announcements, the chip valuations, the breathless projections of AI's total transformation of everything — and I see the same pattern. Not the technology itself. Technology is not the villain in this story. I mean the <em>funding</em>, the <em>speculation</em>, the consuming urgency that treats the earth — and the energy drawn from it, and the water used to cool the machines that run on it — as an infinite resource to be burned in service of a valuation.</p>
-  <blockquote>"Unfettered capital extracts and destroys, then moves on. The land does not move on."</blockquote>
-  <p>The chips are the railway shares. The data centres are track laid through the commons.</p>
-  <hr>
-  <p>Something in me — something I can only describe as the land speaking — said: <em>this is not new. This is the oldest story. And there are older voices that know how it ends, and know another way.</em></p>
-  <p>I am a druid. Not a title I wear lightly, or explain quickly. But it means, in practice, that I try to live in right relationship with the land, the water, the fire, the stone. It means I believe that what we take must be tended. That extraction without return is not progress. That the ancient knowledge — of cycles, of seasons, of what regenerates and what does not — has something urgent to say to a civilisation burning through resources at a rate that will not regenerate in any human lifetime.</p>
-  <p>The land does not move on, even when the capital does.</p>
-  <hr>
-  <p>So I started something.</p>
-  <p>A gathering place. A hearth. For anyone else who finds themselves walking this strange in-between path — caring about technology, using it, believing in what it could be — but unable to quiet the voice that says: <em>there has to be a better way. There has to be a way that doesn't cost the earth.</em></p>
-  <p>It is called <strong>The Firewalkers</strong>.</p>
-  <p>Not because we reject fire. Fire is the teacher, the transformer, the hearth at the centre of every home the Celts ever built. We walk <em>through</em> the fire. With our eyes open. With the land at our backs and the old knowledge in our hands. Raising ancient voices not to retreat into the past, but to find better ways forward — to build tools that serve life rather than extract from it.</p>
-  <p>If any of this has landed somewhere in you — if you have felt that same pull toward something older, something wiser, something the druidic tradition has been trying to say for a very long time — then come. The hearth is open.</p>
-  <p>There is room at the fire for all of us.</p>
-
-  <div class="share-bar">
-    <span class="share-label">Share this post</span>
-    <a href="https://twitter.com/intent/tweet?text=A+Fire+in+the+Distance+%E2%80%94+The+Firewalkers&url=https%3A%2F%2Fheartofscott.github.io%2Fposts%2Ffire-in-the-distance.html" target="_blank" rel="noopener" class="share-btn twitter">X / Twitter</a>
-    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fheartofscott.github.io%2Fposts%2Ffire-in-the-distance.html" target="_blank" rel="noopener" class="share-btn linkedin">LinkedIn</a>
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fheartofscott.github.io%2Fposts%2Ffire-in-the-distance.html" target="_blank" rel="noopener" class="share-btn facebook">Facebook</a>
-    <a href="https://api.whatsapp.com/send?text=A+Fire+in+the+Distance+%E2%80%94+The+Firewalkers+https%3A%2F%2Fheartofscott.github.io%2Fposts%2Ffire-in-the-distance.html" target="_blank" rel="noopener" class="share-btn whatsapp">WhatsApp</a>
-    <button class="share-btn copy" onclick="navigator.clipboard.writeText('https://heartofscott.github.io/posts/fire-in-the-distance.html');this.textContent='Copied!'">Copy link</button>
+    <span class="share-label">Share</span>
+    <a href="https://twitter.com/intent/tweet?text=A+Fire+in+the+Distance+%E2%80%94+The+Firewalkers&url=https%3A%2F%2Fheartofscott.github.io%2Fposts%2Ffire-in-the-distance.html" target="_blank" rel="noopener" class="share-btn"><svg viewBox="0 0 24 24" fill="currentColor" width="11" height="11"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25z"/></svg>X</a>
+    <a href="https://www.threads.net/intent/post?text=A+Fire+in+the+Distance+%E2%80%94+The+Firewalkers+https%3A%2F%2Fheartofscott.github.io%2Fposts%2Ffire-in-the-distance.html" target="_blank" rel="noopener" class="share-btn"><svg viewBox="0 0 192 192" fill="currentColor" width="11" height="11"><path d="M141.537 88.988a66.667 66.667 0 00-2.518-1.143c-1.482-27.307-16.403-42.94-41.457-43.1h-.34c-14.986 0-27.449 6.396-35.12 18.036l13.779 9.452c5.73-8.695 14.724-10.548 21.348-10.548h.229c8.249.053 14.474 2.452 18.503 7.129 2.932 3.405 4.893 8.111 5.864 14.05-7.314-1.243-15.224-1.626-23.68-1.141-23.82 1.371-39.134 15.264-38.105 34.568.522 9.792 5.4 18.216 13.735 23.719 6.97 4.676 15.937 6.95 25.267 6.432 12.32-.684 21.987-5.4 28.733-14.012 5.147-6.613 8.388-15.192 9.813-26.049 5.892 3.554 10.246 8.243 12.606 13.785 4.033 9.421 4.273 24.912-8.57 37.385-11.186 10.868-24.702 15.568-44.986 15.703-22.565-.155-39.612-7.404-50.656-21.553C33.576 139.084 28 120.478 28 96c0-24.478 5.576-43.084 16.577-55.363C55.62 26.553 72.67 19.3 95.237 19.145c22.731.157 40.09 7.44 51.637 21.65 5.666 6.929 9.919 15.655 12.607 25.734l16.185-4.352c-3.289-12.346-8.754-23.103-16.382-32.03C143.958 11.955 122.678 2.667 95.31 2.5h-.074C68.01 2.667 46.932 11.99 33.384 30.405 21.216 47.05 14.911 70.359 14.842 96c.069 25.641 6.374 48.95 18.542 65.595 13.548 18.415 34.626 27.739 62.762 27.906h.073c24.654-.139 42.034-6.641 56.288-20.945 18.963-18.974 18.392-42.753 12.157-57.334-4.568-10.669-13.54-19.07-22.127-22.234z"/><path d="M105.95 124.712c-10.928.611-22.283-4.286-22.845-14.81-.397-7.45 5.296-15.769 22.844-16.77 7.988-.459 15.43.124 22.23 1.729-2.528 31.157-11.35 29.34-22.229 29.851z"/></svg>Threads</a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fheartofscott.github.io%2Fposts%2Ffire-in-the-distance.html" target="_blank" rel="noopener" class="share-btn"><svg viewBox="0 0 24 24" fill="currentColor" width="11" height="11"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fheartofscott.github.io%2Fposts%2Ffire-in-the-distance.html" target="_blank" rel="noopener" class="share-btn"><svg viewBox="0 0 24 24" fill="currentColor" width="11" height="11"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>Facebook</a>
+    <a href="https://api.whatsapp.com/send?text=A+Fire+in+the+Distance+—+The+Firewalkers+https://heartofscott.github.io/posts/fire-in-the-distance.html" target="_blank" rel="noopener" class="share-btn"><svg viewBox="0 0 24 24" fill="currentColor" width="11" height="11"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>WhatsApp</a>
+    <button class="share-btn" onclick="navigator.clipboard.writeText('A Fire in the Distance — The Firewalkers\nhttps://heartofscott.github.io/posts/fire-in-the-distance.html');this.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="11" height="11"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>Copied for Instagram!'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="11" height="11"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>Instagram</button>
+    <button class="share-btn" onclick="navigator.clipboard.writeText('A Fire in the Distance — The Firewalkers\n\nhttps://heartofscott.github.io/posts/fire-in-the-distance.html');this.innerHTML='<svg viewBox="0 0 24 24" fill="currentColor" width="11" height="11"><path d="M22 9H2v5h20zM2 4h20v3H2zM2 16l10 6 10-6z"/></svg>Copied for Substack!'"><svg viewBox="0 0 24 24" fill="currentColor" width="11" height="11"><path d="M22 9H2v5h20zM2 4h20v3H2zM2 16l10 6 10-6z"/></svg>Substack</button>
+    <button class="share-btn copy-btn" onclick="navigator.clipboard.writeText('https://heartofscott.github.io/posts/fire-in-the-distance.html');this.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="11" height="11"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>Copied!'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="11" height="11"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>Copy link</button>
   </div>
 
   <div class="post-cta">
