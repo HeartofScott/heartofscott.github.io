@@ -306,6 +306,9 @@ h2.section-title em { color: var(--amber); font-style: italic; }
 .sendfox-form input[type="text"], .sendfox-form input[type="email"], .sendfox-form input[type="number"] { background: var(--parchment); border: 1px solid rgba(160,88,0,0.18); color: var(--earth); padding: 0.88rem 1.1rem; font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; outline: none; transition: border-color 0.3s; width: 100%; }
 .sendfox-form input:focus { border-color: var(--sage); }
 .sendfox-form input::placeholder { color: rgba(122,114,98,0.55); }
+.sendfox-form select { background: var(--parchment); border: 1px solid rgba(160,88,0,0.18); color: var(--earth); padding: 0.88rem 1.1rem; font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; outline: none; transition: border-color 0.3s; width: 100%; appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23a05800' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; cursor: pointer; }
+.sendfox-form select:focus { border-color: var(--sage); }
+.sendfox-form select option { font-family: 'Cormorant Garamond', serif; }
 .sendfox-form p label { display: flex; flex-direction: row; align-items: flex-start; gap: 0.75rem; font-size: 0.9rem; letter-spacing: 0.02em; text-transform: none; color: var(--earth-mid); line-height: 1.55; cursor: pointer; }
 .sendfox-form input[type="checkbox"] { width: 16px; height: 16px; flex-shrink: 0; margin-top: 0.2rem; accent-color: var(--sage); cursor: pointer; }
 .sendfox-form button[type="submit"] { font-family: 'Cinzel', serif; font-size: 0.64rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--parchment); background: var(--amber); border: none; padding: 1.1rem 2.5rem; cursor: pointer; transition: all 0.3s; width: 100%; margin-top: 0.25rem; }
@@ -436,6 +439,7 @@ footer { background: var(--earth); padding: 4.5rem 4rem 3rem; border-top: 3px so
   .sendfox-form input[type="text"],
   .sendfox-form input[type="email"],
   .sendfox-form input[type="number"],
+  .sendfox-form select,
   .field-group input, .field-group select, .field-group textarea {
     font-size:16px!important;
   }
@@ -915,14 +919,44 @@ footer { background: var(--earth); padding: 4.5rem 4rem 3rem; border-top: 3px so
     </div>
     <div class="reveal">
       <form method="post" action="https://sendfox.com/form/19npyy/1xx6rz" class="sendfox-form" id="1xx6rz" data-async="true" data-recaptcha="false">
-        <p><label for="sendfox_form_name">First Name</label><input type="text" id="sendfox_form_name" placeholder="First Name" name="first_name" required /></p>
-        <p><label for="sendfox_form_last_name">Last Name</label><input type="text" id="sendfox_form_last_name" placeholder="Last Name" name="last_name" required /></p>
-        <p><label for="sendfox_form_age">Age</label><input type="number" id="sendfox_form_age" name="contact_fields[age]" placeholder="Age" /></p>
-        <p><label for="sendfox_form_your_pathways_to_spiritual_connection_to_the_land">Your pathways to spiritual connection to the land</label><input type="text" id="sendfox_form_your_pathways_to_spiritual_connection_to_the_land" name="contact_fields[your_pathways_to_spiritual_connection_to_the_land]" placeholder="Your pathways to spiritual connection to the land" /></p>
-        <p><label for="sendfox_form_email">Email</label><input type="email" id="sendfox_form_email" placeholder="Email" name="email" required /></p>
-        <p><label><input type="checkbox" name="gdpr" value="1" required /> I agree to receive email updates from the Firewalkers. Unsubscribe any time.</label></p>
+
+        <p><label for="sendfox_form_called">What do we call you?</label>
+        <input type="text" id="sendfox_form_called" name="contact_fields[called]" placeholder="Blaze, Scott, the person who loves a particular hill..." /></p>
+
+        <p><label for="sendfox_form_email">Email</label>
+        <input type="email" id="sendfox_form_email" placeholder="your@email.com" name="email" required /></p>
+
+        <p><label for="sendfox_form_place">What place do you love?</label>
+        <input type="text" id="sendfox_form_place" name="contact_fields[what_place_do_you_love]" placeholder="A forest, a coastline, a city park, a river, a hillside..." /></p>
+
+        <p><label for="sendfox_form_walk">How do you walk with the land?</label>
+        <select id="sendfox_form_walk" name="contact_fields[how_do_you_walk_with_the_land]">
+          <option value="">Choose one...</option>
+          <option value="I walk it">I walk it — presence, hiking, being in nature</option>
+          <option value="I tend it">I tend it — gardener, farmer, steward</option>
+          <option value="I fight for it">I fight for it — campaigner, activist</option>
+          <option value="I study it">I study it — researcher, scientist, ecologist</option>
+          <option value="I build on it">I build on it — tech or engineer, trying to do it right</option>
+          <option value="I dream of it">I dream of it — spiritual, druid, faith, contemplative</option>
+          <option value="I just know it matters">I just know it matters</option>
+        </select></p>
+
+        <p><label for="sendfox_form_threatens">What threatens your place right now? <span style="font-family:'Cormorant Garamond',serif;font-style:italic;text-transform:none;letter-spacing:0;font-size:0.95rem;color:var(--mist);">optional</span></label>
+        <select id="sendfox_form_threatens" name="contact_fields[what_threatens_your_place_right_now]">
+          <option value="">Choose one...</option>
+          <option value="Data centre or tech infrastructure">Data centre or tech infrastructure</option>
+          <option value="Extraction or mining">Extraction or mining</option>
+          <option value="Development or planning">Development or planning</option>
+          <option value="Climate or environmental change">Climate or environmental change</option>
+          <option value="Nothing yet — just keeping watch">Nothing yet — just keeping watch</option>
+          <option value="Something else">Something else</option>
+        </select></p>
+
+        <p><label><input type="checkbox" name="gdpr" value="1" required /> I agree to receive updates from The Firewalkers. Unsubscribe any time.</label></p>
+        <!-- no botz please -->
         <div style="position:absolute;left:-5000px;" aria-hidden="true"><input type="text" name="a_password" tabindex="-1" value="" autocomplete="off" /></div>
         <p><button type="submit">Keep me informed</button></p>
+
       </form>
       <div class="form-success" id="signupSuccess" style="display:none;">
         <h4>Welcome to the fire.</h4>
