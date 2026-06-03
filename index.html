@@ -373,6 +373,7 @@ footer { background: var(--earth); padding: 4.5rem 4rem 3rem; border-top: 3px so
   .problem-inner{grid-template-columns:1fr;gap:3.5rem;}
   .build-grid{grid-template-columns:1fr;}
   .cocreate-inner{grid-template-columns:1fr;gap:3rem;}
+  .pattern-grid, .signup-inner, .submit-inner, .founder-inner { grid-template-columns: 1fr; gap: 3rem; }
   .principles-grid, .action-grid, .ai-grid, .phrases-grid, .dc-grid { grid-template-columns: 1fr; }
   .choice-grid { grid-template-columns: repeat(2, 1fr); }
   #photostrip { height: 180px; grid-template-columns: repeat(3,1fr); }
@@ -414,6 +415,31 @@ footer { background: var(--earth); padding: 4.5rem 4rem 3rem; border-top: 3px so
 .social-link{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border:1px solid rgba(250,245,236,0.1);color:rgba(250,245,236,0.4);transition:all 0.3s;text-decoration:none;flex-shrink:0;}
 .social-link:hover{border-color:var(--amber-bright);color:var(--amber-bright);}
 .social-link svg{width:15px;height:15px;}
+
+/* MOBILE SIGNUP FIX */
+@media(max-width:960px){
+  .signup-inner{grid-template-columns:1fr!important;gap:2.5rem!important;}
+}
+@media(max-width:600px){
+  .signup-inner{grid-template-columns:1fr!important;gap:2rem!important;padding:0;}
+  .sendfox-form p{flex-direction:column!important;}
+  .sendfox-form input[type="text"],
+  .sendfox-form input[type="email"],
+  .sendfox-form input[type="number"]{font-size:16px!important;}
+  #signup{padding-left:1.5rem!important;padding-right:1.5rem!important;}
+  .hearth-badge{flex-direction:column;gap:0.5rem;}
+}
+
+/* iOS INPUT ZOOM FIX — prevents page zooming on input focus */
+@media(max-width:768px){
+  input, select, textarea,
+  .sendfox-form input[type="text"],
+  .sendfox-form input[type="email"],
+  .sendfox-form input[type="number"],
+  .field-group input, .field-group select, .field-group textarea {
+    font-size:16px!important;
+  }
+}
 </style>
 <!-- Privacy-friendly analytics by Plausible -->
 <script async src="https://plausible.io/js/pa-OWigJj1V5aW2Wwon7a10u.js"></script>
@@ -888,7 +914,7 @@ footer { background: var(--earth); padding: 4.5rem 4rem 3rem; border-top: 3px so
       </div>
     </div>
     <div class="reveal">
-      <form method="post" action="https://sendfox.com/form/19npyy/1xx6rz" class="sendfox-form" id="1xx6rz" data-async="true" data-recaptcha="true">
+      <form method="post" action="https://sendfox.com/form/19npyy/1xx6rz" class="sendfox-form" id="1xx6rz" data-async="true" data-recaptcha="false">
         <p><label for="sendfox_form_name">First Name</label><input type="text" id="sendfox_form_name" placeholder="First Name" name="first_name" required /></p>
         <p><label for="sendfox_form_last_name">Last Name</label><input type="text" id="sendfox_form_last_name" placeholder="Last Name" name="last_name" required /></p>
         <p><label for="sendfox_form_age">Age</label><input type="number" id="sendfox_form_age" name="contact_fields[age]" placeholder="Age" /></p>
