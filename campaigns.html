@@ -78,7 +78,6 @@ h2.section-h2 em{color:var(--amber);font-style:italic;}
 /* CAMPAIGN GRID */
 .campaigns-section{background:var(--parchment-warm);padding:7rem 4rem;border-top:1px solid rgba(160,88,0,0.1);}
 .campaigns-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem;}
-/* Add a new campaign: copy .campaign-card block and update content */
 .campaign-card{background:var(--parchment);border:1px solid rgba(160,88,0,0.1);padding:2.25rem;position:relative;}
 .campaign-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--sage);}
 .campaign-card.urgent::before{background:var(--amber);}
@@ -87,7 +86,8 @@ h2.section-h2 em{color:var(--amber);font-style:italic;}
 .campaign-status.urgent{color:var(--amber);background:var(--amber-pale);}
 .campaign-status.ongoing{color:var(--mist);background:var(--stone);}
 .campaign-card h3{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--earth);margin-bottom:0.7rem;line-height:1.2;}
-.campaign-card p{font-size:0.93rem;color:var(--earth-mid);line-height:1.75;margin-bottom:1.5rem;}
+.campaign-card p{font-size:0.93rem;color:var(--earth-mid);line-height:1.75;margin-bottom:1rem;}
+.campaign-action-note{font-size:0.88rem;color:var(--sage);margin-bottom:1.25rem;font-style:italic;line-height:1.65;}
 .campaign-tags{display:flex;flex-wrap:wrap;gap:0.35rem;margin-bottom:1.25rem;}
 .ctag{font-family:'Cinzel',serif;font-size:0.46rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--mist);background:var(--stone);padding:0.28rem 0.6rem;}
 .campaign-link{font-family:'Cinzel',serif;font-size:0.56rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--amber);text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;transition:gap 0.3s;}
@@ -96,7 +96,6 @@ h2.section-h2 em{color:var(--amber);font-style:italic;}
 /* EVENTS */
 .events-section{background:var(--parchment);padding:7rem 4rem;border-top:1px solid rgba(160,88,0,0.08);}
 .events-list{display:flex;flex-direction:column;gap:1px;background:rgba(160,88,0,0.08);margin-top:3rem;}
-/* Add a new event: copy .event-row block and update content */
 .event-row{background:var(--parchment);padding:1.75rem 2rem;display:grid;grid-template-columns:120px 1fr auto;gap:2rem;align-items:center;transition:background 0.3s;}
 .event-row:hover{background:var(--amber-pale);}
 .event-date{text-align:center;}
@@ -104,11 +103,14 @@ h2.section-h2 em{color:var(--amber);font-style:italic;}
 .event-month{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--mist);display:block;}
 .event-body h4{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--earth);margin-bottom:0.3rem;}
 .event-body p{font-size:0.9rem;color:var(--mist);line-height:1.6;}
+.event-capacity{font-size:0.82rem;color:var(--mist);margin-top:0.4rem;font-style:italic;}
 .event-meta{display:flex;flex-direction:column;align-items:flex-end;gap:0.5rem;}
 .event-type{font-family:'Cinzel',serif;font-size:0.48rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--sage);background:var(--sage-pale);padding:0.3rem 0.6rem;}
+.event-deadline{font-family:'Cinzel',serif;font-size:0.48rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--amber);background:var(--amber-pale);padding:0.28rem 0.65rem;display:inline-block;}
 .event-register{font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--amber);text-decoration:none;white-space:nowrap;}
 .event-register:hover{color:var(--amber-mid);}
 .events-note{margin-top:2rem;padding:1.5rem;background:var(--parchment-warm);border-left:2px solid var(--sage);font-size:0.95rem;color:var(--mist);font-style:italic;}
+.events-note strong{font-style:normal;color:var(--earth-mid);}
 
 /* START A CAMPAIGN */
 .start-section{background:var(--stone);padding:7rem 4rem;border-top:1px solid rgba(160,88,0,0.1);}
@@ -143,11 +145,32 @@ footer{background:var(--earth);padding:3rem 4rem;border-top:2px solid var(--ambe
 .social-link svg{width:15px;height:15px;}
 .footer-base{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.1em;color:rgba(250,245,236,0.22);}
 .footer-base a{color:rgba(250,245,236,0.4);text-decoration:none;}
-@media(max-width:900px){nav{padding:1rem 2rem;}.nav-links{gap:1rem;}.featured-campaign,.campaigns-section,.events-section,.start-section,.page-cta,footer{padding-left:2rem;padding-right:2rem;}.fc-inner,.start-inner{grid-template-columns:1fr;gap:3rem;}.campaigns-grid{grid-template-columns:1fr;}.event-row{grid-template-columns:80px 1fr;}.event-meta{display:none;}}
-@media(max-width:540px){.nav-links{display:none!important;}.nav-toggle{display:block;}.page-header{padding:8rem 1.5rem 4rem;}}
+
+/* Host an event banner */
+.events-host{margin-top:2.5rem;padding:2rem;background:var(--parchment-warm);border:1px solid rgba(160,88,0,0.1);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;}
+.events-host-label{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--amber);margin-bottom:0.5rem;}
+.events-host p{font-size:1rem;color:var(--earth-mid);line-height:1.7;max-width:520px;}
+.btn-sage{font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--parchment);background:var(--sage);border:none;padding:0.9rem 2rem;text-decoration:none;transition:all 0.3s;display:inline-block;white-space:nowrap;cursor:pointer;}
+.btn-sage:hover{background:var(--sage-light);transform:translateY(-2px);}
+
+@media(max-width:900px){
+  nav{padding:1rem 2rem;}
+  .nav-links{gap:1rem;}
+  .featured-campaign,.campaigns-section,.events-section,.start-section,.page-cta,footer{padding-left:2rem;padding-right:2rem;}
+  .fc-inner,.start-inner{grid-template-columns:1fr;gap:3rem;}
+  .campaigns-grid{grid-template-columns:1fr;}
+  .event-row{grid-template-columns:80px 1fr;}
+  .event-meta{display:none;}
+}
+@media(max-width:540px){
+  .nav-links{display:none!important;}
+  .nav-toggle{display:block;}
+  .page-header{padding:8rem 1.5rem 4rem;}
+}
 </style>
 </head>
 <body>
+
 <nav>
   <a href="index.html" class="nav-brand">⁂ The Firewalkers</a>
   <div class="nav-links">
@@ -157,7 +180,13 @@ footer{background:var(--earth);padding:3rem 4rem;border-top:2px solid var(--ambe
     <a href="campaigns.html" class="active">Campaigns</a>
     <a href="index.html#signup">Join</a>
   </div>
-  <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="22" height="22"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="22" height="22">
+      <line x1="3" y1="6" x2="21" y2="6"/>
+      <line x1="3" y1="12" x2="21" y2="12"/>
+      <line x1="3" y1="18" x2="21" y2="18"/>
+    </svg>
+  </button>
 </nav>
 
 <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true">
@@ -213,66 +242,70 @@ footer{background:var(--earth);padding:3rem 4rem;border-top:2px solid var(--ambe
 </section>
 
 <!-- ACTIVE CAMPAIGNS -->
-<!--
-  ================================================================
-  TO ADD A NEW CAMPAIGN: copy one .campaign-card article below,
-  paste it at the top of .campaigns-grid, and update:
-  - .campaign-status class: active / urgent / ongoing
-  - title, description, tags, link
-  ================================================================
--->
 <section class="campaigns-section">
   <div class="section-inner">
     <div class="section-eyebrow">Active Campaigns</div>
     <h2 class="section-h2">Fires worth <em>joining</em></h2>
-    <p style="font-size:1.05rem;color:var(--mist);max-width:640px;margin-top:1rem;">These campaigns need more voices. Each one has practical actions you can take today — from writing a letter to sharing a prompt.</p>
+    <p style="font-size:1.05rem;color:var(--mist);max-width:640px;margin-top:1rem;">Each campaign has a specific target, a deadline, and one clear action you can take today. Pick the one that fits where you are.</p>
 
     <div class="campaigns-grid">
 
+      <!--
+        TO ADD A NEW CAMPAIGN: copy one article.campaign-card block,
+        paste at the top of .campaigns-grid, and update the content.
+        Status classes: urgent / active / ongoing
+      -->
+
       <article class="campaign-card urgent">
-        <span class="campaign-status urgent">Active — urgent</span>
+        <span class="campaign-status urgent">Urgent · Closes 31 Aug 2026</span>
         <h3>Right to Repair is a Right</h3>
-        <p>Legislation that would force manufacturers to provide repair parts, software and manuals is moving through Westminster and Holyrood. Public voices in the consultation period matter — right now.</p>
-        <div class="campaign-tags"><span class="ctag">Policy</span><span class="ctag">Technology</span><span class="ctag">Sustainability</span></div>
-        <a href="index.html#submit" class="campaign-link">Add your voice →</a>
+        <p>The UK Product Security and Telecommunications Infrastructure Act review is open for public consultation until 31 August. This is a direct window to demand that manufacturers must supply repair parts, software and manuals — and close it permanently if we miss it.</p>
+        <p class="campaign-action-note">One action: submit a response to the DSIT consultation before 31 August. Use the AI prompt below to draft yours in under ten minutes.</p>
+        <div class="campaign-tags"><span class="ctag">Policy</span><span class="ctag">Technology</span><span class="ctag">Consultation Open</span></div>
+        <a href="good-ai.html#prompts" class="campaign-link">Get the AI prompt to draft your response →</a>
       </article>
 
       <article class="campaign-card">
-        <span class="campaign-status active">Active</span>
-        <h3>AI Energy Transparency Now</h3>
-        <p>AI companies should be required to publicly report energy consumption, water use, and carbon emissions for their data centre operations. No accountability without transparency.</p>
-        <div class="campaign-tags"><span class="ctag">AI Policy</span><span class="ctag">Environment</span><span class="ctag">Regulation</span></div>
-        <a href="good-ai.html#prompts" class="campaign-link">Use AI to draft a letter →</a>
+        <span class="campaign-status active">Active · Write now</span>
+        <h3>Demand AI Energy Transparency</h3>
+        <p>The UK Energy Bill currently before Parliament does not require AI companies to disclose data centre energy consumption, water use, or carbon output. It should. MPs on the Energy Security and Net Zero Committee are accepting written submissions.</p>
+        <p class="campaign-action-note">One action: write to your MP asking them to support mandatory disclosure requirements before the Bill completes its Committee Stage.</p>
+        <div class="campaign-tags"><span class="ctag">AI Policy</span><span class="ctag">Environment</span><span class="ctag">Parliament</span></div>
+        <a href="good-ai.html#prompts" class="campaign-link">Draft your letter with AI →</a>
       </article>
 
       <article class="campaign-card">
-        <span class="campaign-status active">Active</span>
+        <span class="campaign-status active">Active · Planning season</span>
         <h3>Community Benefit by Default</h3>
-        <p>Any AI infrastructure development that benefits from public land, public energy grid, or public planning processes should provide measurable community benefit in return. Advocate for this standard locally.</p>
-        <div class="campaign-tags"><span class="ctag">Planning</span><span class="ctag">Community</span><span class="ctag">Policy</span></div>
-        <a href="index.html#submit" class="campaign-link">Share your local campaign →</a>
+        <p>Large-scale data centre planning applications are live across Scotland, Wales, and the north of England — many on greenfield or ecologically sensitive land. Planning committees are making decisions now, without community benefit clauses as standard.</p>
+        <p class="campaign-action-note">One action: find your local application, analyse it with AI, and submit a formal representation before the statutory consultation period closes.</p>
+        <div class="campaign-tags"><span class="ctag">Planning</span><span class="ctag">Community</span><span class="ctag">Live Applications</span></div>
+        <a href="good-ai.html#prompts" class="campaign-link">Use AI to analyse your local application →</a>
       </article>
 
       <article class="campaign-card">
-        <span class="campaign-status ongoing">Ongoing</span>
+        <span class="campaign-status ongoing">Ongoing · Scotland focus</span>
         <h3>Know Your Planning Rights</h3>
-        <p>Most people don't know the power they have to influence planning decisions. This campaign produces plain-language guides for communities across Scotland, England, Wales and Ireland.</p>
-        <div class="campaign-tags"><span class="ctag">Planning</span><span class="ctag">Education</span><span class="ctag">Rights</span></div>
-        <a href="good-ai.html#prompts" class="campaign-link">Get the AI prompt guide →</a>
+        <p>Scotland's Planning (NPF4) framework introduced new community rights in 2023 that most people have never heard of — including the right to be notified of major applications and the right to appear at hearings. We are building plain-language guides for every home nation.</p>
+        <p class="campaign-action-note">One action: download the Scotland guide, share it with your community group, and tell us what is missing for your area.</p>
+        <div class="campaign-tags"><span class="ctag">Planning Rights</span><span class="ctag">Scotland</span><span class="ctag">Education</span></div>
+        <a href="index.html#submit" class="campaign-link">Request a guide for your area →</a>
       </article>
 
       <article class="campaign-card">
-        <span class="campaign-status ongoing">Ongoing</span>
+        <span class="campaign-status ongoing">Ongoing · Procurement watch</span>
         <h3>Open Source for Public Good</h3>
-        <p>Any AI system funded by or used by public bodies should default to open-source principles. Public money should produce publicly accessible tools — not proprietary lock-in.</p>
-        <div class="campaign-tags"><span class="ctag">Open Source</span><span class="ctag">Public Sector</span><span class="ctag">AI</span></div>
-        <a href="index.html#submit" class="campaign-link">Contribute research →</a>
+        <p>Multiple UK local authorities have signed multi-year AI procurement contracts with no open-source requirement and no exit clause. Public money is building proprietary lock-in that communities will pay for for a decade.</p>
+        <p class="campaign-action-note">One action: submit a Freedom of Information request to your council about their AI procurement decisions. We provide the template.</p>
+        <div class="campaign-tags"><span class="ctag">Open Source</span><span class="ctag">Public Sector</span><span class="ctag">FOI</span></div>
+        <a href="index.html#submit" class="campaign-link">Get the FOI template →</a>
       </article>
 
       <article class="campaign-card" style="background:var(--sage-pale);border-color:rgba(61,110,72,0.2);border-top-color:var(--sage);">
         <span class="campaign-status active" style="color:var(--sage);background:rgba(61,110,72,0.1);">Your campaign here</span>
-        <h3>Is something happening near you?</h3>
-        <p>A planning application. A development proposal. A policy consultation. A technology decision that will affect your community. Bring it to the hearth and we will help you build the case.</p>
+        <h3>Something happening near you?</h3>
+        <p>A planning application. A procurement decision. A consultation closing this month. A development that will change a place you love. You know your landscape better than any campaign consultant ever will.</p>
+        <p class="campaign-action-note" style="color:var(--sage-light);">Bring it to the hearth. We will help you research it, frame it, and find others who have fought the same fight in a different place.</p>
         <div class="campaign-tags"><span class="ctag">Local</span><span class="ctag">Community</span><span class="ctag">Your Area</span></div>
         <a href="index.html#submit" class="campaign-link">Submit your campaign →</a>
       </article>
@@ -282,59 +315,86 @@ footer{background:var(--earth);padding:3rem 4rem;border-top:2px solid var(--ambe
 </section>
 
 <!-- EVENTS -->
-<!--
-  ================================================================
-  TO ADD A NEW EVENT: copy one .event-row article below,
-  paste it at the TOP of .events-list, and update:
-  - event-day, event-month, title, description, type, register link
-  ================================================================
--->
 <section class="events-section">
   <div class="section-inner">
     <div class="section-eyebrow">Events &amp; Gatherings</div>
     <h2 class="section-h2">Come to the <em>fire</em></h2>
-    <p style="font-size:1.05rem;color:var(--mist);max-width:580px;margin-top:1rem;">Online and in-person gatherings for the Firewalkers community. All are welcome — no experience required.</p>
+    <p style="font-size:1.05rem;color:var(--mist);max-width:580px;margin-top:1rem;">Online and in-person gatherings for the Firewalkers community. All are welcome — no experience required. All events are free.</p>
 
     <div class="events-list">
 
+      <!--
+        TO ADD A NEW EVENT: copy one article.event-row block,
+        paste at the TOP of .events-list, and update the content.
+      -->
+
       <article class="event-row">
-        <div class="event-date"><span class="event-day">15</span><span class="event-month">Jul 2026</span></div>
+        <div class="event-date">
+          <span class="event-day">15</span>
+          <span class="event-month">Jul 2026</span>
+        </div>
         <div class="event-body">
-          <h4>Monthly Firewalkers Gathering — Online</h4>
-          <p>Open circle for the community. Introductions, updates on campaigns, sharing of resources. One hour, relaxed, everyone welcome.</p>
+          <h4>Monthly Firewalkers Gathering — Open Circle</h4>
+          <p>One hour, online, relaxed. Introductions, campaign updates, sharing what we have learned. New members especially welcome — no experience of campaigning needed, just a willingness to show up.</p>
+          <p class="event-capacity">Zoom · 7pm BST · 60 minutes · No preparation needed</p>
         </div>
         <div class="event-meta">
           <span class="event-type">Online · Free</span>
-          <a href="index.html#signup" class="event-register">Register via newsletter →</a>
+          <span class="event-deadline">Register by 13 Jul</span>
+          <a href="index.html#signup" class="event-register">Join the list to get the link →</a>
         </div>
       </article>
 
       <article class="event-row">
-        <div class="event-date"><span class="event-day">22</span><span class="event-month">Jul 2026</span></div>
+        <div class="event-date">
+          <span class="event-day">22</span>
+          <span class="event-month">Jul 2026</span>
+        </div>
         <div class="event-body">
-          <h4>AI Toolkit for Campaigners — Workshop</h4>
-          <p>A practical session on using AI to analyse planning applications, draft objection letters, and build evidence bases. Bring a real local issue if you have one.</p>
+          <h4>AI Toolkit for Campaigners — Practical Workshop</h4>
+          <p>A hands-on session using AI to analyse planning applications, draft formal objection letters, and build an evidence base from scratch. Bring a real local issue if you have one — we will work on it live. You only need a free AI account to participate.</p>
+          <p class="event-capacity">Zoom · 6:30pm BST · 90 minutes · Bring a laptop</p>
         </div>
         <div class="event-meta">
-          <span class="event-type">Online · Free</span>
-          <a href="index.html#signup" class="event-register">Register via newsletter →</a>
+          <span class="event-type">Workshop · Free</span>
+          <span class="event-deadline">Register by 20 Jul</span>
+          <a href="index.html#signup" class="event-register">Reserve your place →</a>
         </div>
       </article>
 
       <article class="event-row">
-        <div class="event-date"><span class="event-day">01</span><span class="event-month">Aug 2026</span></div>
+        <div class="event-date">
+          <span class="event-day">01</span>
+          <span class="event-month">Aug 2026</span>
+        </div>
         <div class="event-body">
-          <h4>Lughnasadh — First Harvest Reflection</h4>
-          <p>A gathering at the wheel of the year. What has the movement harvested since Beltane? What do we carry into the dark half? Writing, reflection, community.</p>
+          <h4>Lughnasadh — First Harvest Gathering</h4>
+          <p>At the wheel of the year, we pause to ask: what has the movement harvested since Beltane? What do we carry into the dark half? An evening of writing, reflection and community — slower and more contemplative than the monthly circle. All traditions welcome.</p>
+          <p class="event-capacity">Zoom · 8pm BST · 75 minutes · Writing materials optional</p>
         </div>
         <div class="event-meta">
-          <span class="event-type">Online · Free</span>
-          <a href="index.html#signup" class="event-register">Register via newsletter →</a>
+          <span class="event-type">Gathering · Free</span>
+          <span class="event-deadline">Register by 30 Jul</span>
+          <a href="index.html#signup" class="event-register">Join the list to attend →</a>
         </div>
       </article>
 
     </div>
-    <p class="events-note">All events are announced to subscribers first. Join the Firewalkers list to receive invitations directly.</p>
+
+    <p class="events-note">
+      All events are free and announced to subscribers first.
+      <strong>Joining the Firewalkers list is the only way to receive the meeting link</strong> — we do not publish Zoom links publicly.
+      <a href="index.html#signup" style="color:var(--sage);text-decoration:none;font-family:'Cinzel',serif;font-size:0.85em;letter-spacing:0.1em;margin-left:0.5rem;">Join the list →</a>
+    </p>
+
+    <div class="events-host">
+      <div>
+        <p class="events-host-label">Want to host something?</p>
+        <p>A local meeting, a woodland walk, a planning surgery for your community, a workshop in your town. The hearth is wherever people gather. We can help you organise it and connect you with others nearby.</p>
+      </div>
+      <a href="index.html#submit" class="btn-sage">Propose an event →</a>
+    </div>
+
   </div>
 </section>
 
@@ -346,22 +406,67 @@ footer{background:var(--earth);padding:3rem 4rem;border-top:2px solid var(--ambe
       <h2 class="section-h2">Something happening <em>near you?</em></h2>
       <p style="font-size:1.05rem;color:var(--earth-mid);line-height:1.88;margin-bottom:2rem;">The most powerful campaigns are local. A community that knows a place, loves a place, and is willing to fight for it is more credible than any campaign consultant. Here is how to begin.</p>
       <div class="start-steps">
-        <div class="step"><span class="step-num">1</span><div class="step-body"><h4>Name the issue clearly</h4><p>What is happening, where, and who is behind it? <em>A clear, specific statement is the foundation of every successful campaign.</em> Use AI to help you research and articulate it.</p></div></div>
-        <div class="step"><span class="step-num">2</span><div class="step-body"><h4>Understand the process</h4><p>Is this a planning application? A policy consultation? A procurement decision? Each has different deadlines and different pressure points. <em>Know the rules before you play.</em></p></div></div>
-        <div class="step"><span class="step-num">3</span><div class="step-body"><h4>Build your evidence</h4><p>Data, precedents, policy references, expert voices. AI can help you find and synthesise evidence that would have taken weeks to assemble by hand.</p></div></div>
-        <div class="step"><span class="step-num">4</span><div class="step-body"><h4>Gather your community</h4><p>Who else cares about this place? Who has standing to object? <em>A coordinated community response is exponentially more powerful than individual letters.</em></p></div></div>
-        <div class="step"><span class="step-num">5</span><div class="step-body"><h4>Bring it to the hearth</h4><p>Share your campaign here. Other Firewalkers may have faced the same issue in a different place and can share what they learned.</p></div></div>
+        <div class="step">
+          <span class="step-num">1</span>
+          <div class="step-body">
+            <h4>Name the issue clearly</h4>
+            <p>What is happening, where, and who is behind it? <em>A clear, specific statement is the foundation of every successful campaign.</em> Use AI to help you research and articulate it.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <div class="step-body">
+            <h4>Understand the process</h4>
+            <p>Is this a planning application? A policy consultation? A procurement decision? Each has different deadlines and different pressure points. <em>Know the rules before you play.</em></p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <div class="step-body">
+            <h4>Build your evidence</h4>
+            <p>Data, precedents, policy references, expert voices. AI can help you find and synthesise evidence that would have taken weeks to assemble by hand.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">4</span>
+          <div class="step-body">
+            <h4>Gather your community</h4>
+            <p>Who else cares about this place? Who has standing to object? <em>A coordinated community response is exponentially more powerful than individual letters.</em></p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">5</span>
+          <div class="step-body">
+            <h4>Bring it to the hearth</h4>
+            <p>Share your campaign here. Other Firewalkers may have faced the same issue in a different place and can share what they learned.</p>
+          </div>
+        </div>
       </div>
     </div>
     <div class="start-aside">
       <h3>Campaign resources</h3>
       <p>Everything you need to get started. Free, open, and available to anyone who wants to use them.</p>
       <ul class="resource-list">
-        <li><a href="good-ai.html#prompts">AI Prompt Library →</a><span class="r-desc">8 prompts for planning analysis, letter writing, rights research and more.</span></li>
-        <li><a href="good-ai.html#question">The Right Question →</a><span class="r-desc">"Is this the right infrastructure, in the right place, at the right scale?"</span></li>
-        <li><a href="good-ai.html#infrastructure">Data Centre Position →</a><span class="r-desc">Our nuanced position on data centre development — what we oppose and what we support.</span></li>
-        <li><a href="posts/pro-wisdom.html">We Are Not Anti-AI →</a><span class="r-desc">How to frame your campaign as pro-wisdom, not anti-technology.</span></li>
-        <li><a href="index.html#submit">Submit your campaign →</a><span class="r-desc">Bring your fight to the hearth. We will read it and help if we can.</span></li>
+        <li>
+          <a href="good-ai.html#prompts">AI Prompt Library →</a>
+          <span class="r-desc">8 prompts for planning analysis, letter writing, rights research and more.</span>
+        </li>
+        <li>
+          <a href="good-ai.html#question">The Right Question →</a>
+          <span class="r-desc">"Is this the right infrastructure, in the right place, at the right scale?"</span>
+        </li>
+        <li>
+          <a href="good-ai.html#infrastructure">Data Centre Position →</a>
+          <span class="r-desc">Our nuanced position on data centre development — what we oppose and what we support.</span>
+        </li>
+        <li>
+          <a href="posts/pro-wisdom.html">We Are Not Anti-AI →</a>
+          <span class="r-desc">How to frame your campaign as pro-wisdom, not anti-technology.</span>
+        </li>
+        <li>
+          <a href="index.html#submit">Submit your campaign →</a>
+          <span class="r-desc">Bring your fight to the hearth. We will read it and help if we can.</span>
+        </li>
       </ul>
     </div>
   </div>
@@ -377,11 +482,22 @@ footer{background:var(--earth);padding:3rem 4rem;border-top:2px solid var(--ambe
 <footer>
   <div class="footer-social">
     <span class="social-label">Follow the fire</span>
-    <a href="#" class="social-link" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25z"/></svg></a>
-    <a href="#" class="social-link" aria-label="Threads"><svg viewBox="0 0 192 192" fill="currentColor" width="15" height="15"><path d="M141.537 88.988a66.667 66.667 0 00-2.518-1.143c-1.482-27.307-16.403-42.94-41.457-43.1h-.34c-14.986 0-27.449 6.396-35.12 18.036l13.779 9.452c5.73-8.695 14.724-10.548 21.348-10.548h.229c8.249.053 14.474 2.452 18.503 7.129 2.932 3.405 4.893 8.111 5.864 14.05-7.314-1.243-15.224-1.626-23.68-1.141-23.82 1.371-39.134 15.264-38.105 34.568.522 9.792 5.4 18.216 13.735 23.719 6.97 4.676 15.937 6.95 25.267 6.432 12.32-.684 21.987-5.4 28.733-14.012 5.147-6.613 8.388-15.192 9.813-26.049 5.892 3.554 10.246 8.243 12.606 13.785 4.033 9.421 4.273 24.912-8.57 37.385-11.186 10.868-24.702 15.568-44.986 15.703-22.565-.155-39.612-7.404-50.656-21.553C33.576 139.084 28 120.478 28 96c0-24.478 5.576-43.084 16.577-55.363C55.62 26.553 72.67 19.3 95.237 19.145c22.731.157 40.09 7.44 51.637 21.65 5.666 6.929 9.919 15.655 12.607 25.734l16.185-4.352c-3.289-12.346-8.754-23.103-16.382-32.03C143.958 11.955 122.678 2.667 95.31 2.5h-.074C68.01 2.667 46.932 11.99 33.384 30.405 21.216 47.05 14.911 70.359 14.842 96c.069 25.641 6.374 48.95 18.542 65.595 13.548 18.415 34.626 27.739 62.762 27.906h.073c24.654-.139 42.034-6.641 56.288-20.945 18.963-18.974 18.392-42.753 12.157-57.334-4.568-10.669-13.54-19.07-22.127-22.234z"/><path d="M105.95 124.712c-10.928.611-22.283-4.286-22.845-14.81-.397-7.45 5.296-15.769 22.844-16.77 7.988-.459 15.43.124 22.23 1.729-2.528 31.157-11.35 29.34-22.229 29.851z"/></svg></a>
-    <a href="#" class="social-link" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-    <a href="#" class="social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
-    <a href="#" class="social-link" aria-label="Substack"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M22 9H2v5h20zM2 4h20v3H2zM2 16l10 6 10-6z"/></svg></a>
+    <!-- Replace href="#" with your actual social profile URLs when ready -->
+    <a href="#" class="social-link" aria-label="X / Twitter">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25z"/></svg>
+    </a>
+    <a href="#" class="social-link" aria-label="Threads">
+      <svg viewBox="0 0 192 192" fill="currentColor" width="15" height="15"><path d="M141.537 88.988a66.667 66.667 0 00-2.518-1.143c-1.482-27.307-16.403-42.94-41.457-43.1h-.34c-14.986 0-27.449 6.396-35.12 18.036l13.779 9.452c5.73-8.695 14.724-10.548 21.348-10.548h.229c8.249.053 14.474 2.452 18.503 7.129 2.932 3.405 4.893 8.111 5.864 14.05-7.314-1.243-15.224-1.626-23.68-1.141-23.82 1.371-39.134 15.264-38.105 34.568.522 9.792 5.4 18.216 13.735 23.719 6.97 4.676 15.937 6.95 25.267 6.432 12.32-.684 21.987-5.4 28.733-14.012 5.147-6.613 8.388-15.192 9.813-26.049 5.892 3.554 10.246 8.243 12.606 13.785 4.033 9.421 4.273 24.912-8.57 37.385-11.186 10.868-24.702 15.568-44.986 15.703-22.565-.155-39.612-7.404-50.656-21.553C33.576 139.084 28 120.478 28 96c0-24.478 5.576-43.084 16.577-55.363C55.62 26.553 72.67 19.3 95.237 19.145c22.731.157 40.09 7.44 51.637 21.65 5.666 6.929 9.919 15.655 12.607 25.734l16.185-4.352c-3.289-12.346-8.754-23.103-16.382-32.03C143.958 11.955 122.678 2.667 95.31 2.5h-.074C68.01 2.667 46.932 11.99 33.384 30.405 21.216 47.05 14.911 70.359 14.842 96c.069 25.641 6.374 48.95 18.542 65.595 13.548 18.415 34.626 27.739 62.762 27.906h.073c24.654-.139 42.034-6.641 56.288-20.945 18.963-18.974 18.392-42.753 12.157-57.334-4.568-10.669-13.54-19.07-22.127-22.234z"/><path d="M105.95 124.712c-10.928.611-22.283-4.286-22.845-14.81-.397-7.45 5.296-15.769 22.844-16.77 7.988-.459 15.43.124 22.23 1.729-2.528 31.157-11.35 29.34-22.229 29.851z"/></svg>
+    </a>
+    <a href="#" class="social-link" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    </a>
+    <a href="#" class="social-link" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+    </a>
+    <a href="#" class="social-link" aria-label="Substack">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M22 9H2v5h20zM2 4h20v3H2zM2 16l10 6 10-6z"/></svg>
+    </a>
   </div>
   <div class="footer-base">
     <span>⁂ The Firewalkers · firewalkers.earth</span>
