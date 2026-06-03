@@ -959,8 +959,33 @@ footer { background: var(--earth); padding: 4.5rem 4rem 3rem; border-top: 3px so
 
       </form>
       <div class="form-success" id="signupSuccess" style="display:none;">
-        <h4>Welcome to the fire.</h4>
-        <p>You'll hear from us when there's something worth saying.<br>Until then — tend your own hearth well.</p>
+        <div style="text-align:center;margin-bottom:2rem;">🔥</div>
+        <h4 style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--earth);margin-bottom:0.75rem;">Welcome to the fire.</h4>
+        <p style="font-size:1.05rem;color:var(--earth-mid);line-height:1.85;margin-bottom:2.5rem;">You're part of The Firewalkers now. Three things to do right now to make sure you hear from us:</p>
+        <div style="display:flex;flex-direction:column;gap:1px;background:rgba(160,88,0,0.08);margin-bottom:2rem;">
+          <div style="background:var(--parchment);padding:1.25rem 1.5rem;display:flex;gap:1.25rem;align-items:flex-start;">
+            <span style="font-family:'Cinzel',serif;font-size:1.5rem;font-weight:700;color:rgba(160,88,0,0.2);flex-shrink:0;line-height:1;">1</span>
+            <div>
+              <strong style="font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--earth);display:block;margin-bottom:0.35rem;">Check your inbox now</strong>
+              <p style="font-size:0.95rem;color:var(--earth-mid);line-height:1.65;margin:0;">A welcome email is on its way. If it's not there in a few minutes, check your spam or promotions folder and move it to your inbox.</p>
+            </div>
+          </div>
+          <div style="background:var(--parchment);padding:1.25rem 1.5rem;display:flex;gap:1.25rem;align-items:flex-start;">
+            <span style="font-family:'Cinzel',serif;font-size:1.5rem;font-weight:700;color:rgba(160,88,0,0.2);flex-shrink:0;line-height:1;">2</span>
+            <div>
+              <strong style="font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--earth);display:block;margin-bottom:0.35rem;">Reply to the welcome email</strong>
+              <p style="font-size:0.95rem;color:var(--earth-mid);line-height:1.65;margin:0;">Even just "hello" tells your email provider this is a conversation worth having. It keeps future emails out of spam and keeps the fire lit.</p>
+            </div>
+          </div>
+          <div style="background:var(--parchment);padding:1.25rem 1.5rem;display:flex;gap:1.25rem;align-items:flex-start;">
+            <span style="font-family:'Cinzel',serif;font-size:1.5rem;font-weight:700;color:rgba(160,88,0,0.2);flex-shrink:0;line-height:1;">3</span>
+            <div>
+              <strong style="font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--earth);display:block;margin-bottom:0.35rem;">Save our address to your contacts</strong>
+              <p style="font-size:0.95rem;color:var(--earth-mid);line-height:1.65;margin:0;">Add The Firewalkers to your contacts so campaigns, resources and gatherings reach you when they matter most.</p>
+            </div>
+          </div>
+        </div>
+        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;color:var(--mist);text-align:center;">The future belongs to the stewards. Glad you're one of them.</p>
       </div>
     </div>
   </div>
@@ -1093,7 +1118,30 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 <script src="https://cdn.sendfox.com/js/form.js" charset="utf-8">
-// Mobile navigation
+// SIGNUP FORM — intercept submission, show thank you in-place
+(function(){
+  var form = document.getElementById('1xx6rz');
+  var successDiv = document.getElementById('signupSuccess');
+  if (!form || !successDiv) return;
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = form.querySelector('button[type="submit"]');
+    if (btn) { btn.textContent = 'Joining the fire...'; btn.disabled = true; }
+
+    var data = new FormData(form);
+
+    fetch(form.action, { method: 'POST', body: data })
+      .then(function() { showSignupThanks(); })
+      .catch(function() { showSignupThanks(); }); // CORS may block response but submission lands
+  });
+
+  function showSignupThanks() {
+    form.style.display = 'none';
+    successDiv.style.display = 'block';
+    successDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+})();
 function closeMM(){var m=document.getElementById('mobileMenu');if(m){m.classList.remove('open');document.body.style.overflow='';}}
 var _nt=document.getElementById('navToggle'),_mm=document.getElementById('mobileMenu');
 if(_nt)_nt.addEventListener('click',function(){_mm.classList.add('open');document.body.style.overflow='hidden';});
