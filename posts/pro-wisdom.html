@@ -23,14 +23,17 @@
 <meta name="twitter:title" content="We Are Not Anti-AI. We Are Pro-Wisdom.">
 <meta name="twitter:description" content="We use AI every day. The question is whether we use it wisely. — The Firewalkers">
 <meta name="twitter:image" content="https://images.unsplash.com/photo-1486915309851-b0cc1f8a0084?auto=format&fit=crop&w=1200&q=80">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"We Are Not Anti-AI. We Are Pro-Wisdom.","description":"The Firewalkers use AI every day. The question is whether we use it wisely.","image":"https://images.unsplash.com/photo-1486915309851-b0cc1f8a0084?auto=format&fit=crop&w=1200&q=80","datePublished":"2026-06-01","author":{"@type":"Person","name":"Blaze"},"publisher":{"@type":"Organization","name":"The Firewalkers","url":"https://firewalkers.earth"},"url":"https://firewalkers.earth/posts/pro-wisdom.html","keywords":["responsible AI","ethical AI","sustainable technology","AI stewardship","technology and nature","good AI"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"We Are Not Anti-AI. We Are Pro-Wisdom.","description":"The Firewalkers use AI every day. The question is whether we use it wisely.","image":"https://images.unsplash.com/photo-1486915309851-b0cc1f8a0084?auto=format&fit=crop&w=1200&q=80","datePublished":"2026-06-01","author":{"@type":"Person","name":"Blaze"},"publisher":{"@type":"Organization","name":"The Firewalkers","url":"https://firewalkers.earth"},"url":"https://firewalkers.earth/posts/pro-wisdom.html","keywords":["responsible AI","ethical AI","sustainable technology","AI stewardship","technology and nature","good AI"]}
+(function(){var nav=document.getElementById('nav');if(!nav)return;window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>60);},{passive:true});nav.classList.toggle('scrolled',window.scrollY>60);})();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
 <style>
-:root{--parchment:#faf5ec;--parchment-warm:#f4ebda;--stone:#e8dcc8;--amber:#a05800;--amber-mid:#c07010;--amber-bright:#e09020;--amber-pale:#fdf0d5;--sage:#3d6e48;--sage-light:#5a9060;--sage-pale:#cfe0d4;--earth:#221811;--earth-mid:#3d2e1e;--mist:#7a7262;}
+:root{--parchment:#faf5ec;--parchment-warm:#f4ebda;--stone:#e8dcc8;--amber:#a05800;--amber-mid:#c07010;--amber-bright:#e09020;--amber-pale:#fdf0d5;--sage:#3d6e48;--sage-light:#5a9060;--sage-pale:#cfe0d4;--earth:#221811;--earth-mid:#3d2e1e;--mist:#7a7262;--ocean:#0d3d56;--canopy:#1a3d2b;--urgent:#8b2a0f;}
 *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
 body{background:var(--parchment);color:var(--earth);font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;line-height:1.85;overflow-x:hidden;}
-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1rem 4rem;display:flex;justify-content:space-between;align-items:center;background:rgba(250,245,236,0.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(160,88,0,0.12);}
+#nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:1rem 4rem;display:flex;justify-content:space-between;align-items:center;background:rgba(250,245,236,0);backdrop-filter:blur(0px);transition:background 0.4s,backdrop-filter 0.4s,border-color 0.4s;border-bottom:1px solid transparent;}
+#nav.scrolled{background:rgba(250,245,236,0.94);backdrop-filter:blur(14px);border-bottom-color:rgba(160,88,0,0.12);}
 .nav-brand{font-family:'Cinzel',serif;font-size:0.78rem;letter-spacing:0.2em;color:var(--amber);text-decoration:none;}
 .nav-back{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--mist);text-decoration:none;transition:color 0.3s;}
 .nav-back:hover{color:var(--amber);}
@@ -168,11 +171,28 @@ footer{background:var(--earth);padding:2.5rem 4rem;border-top:2px solid var(--am
   </div>
 </div>
 
-<footer>
-  <div class="footer-base">
-    <span>The Firewalkers · firewalkers.earth</span>
-    <a href="../index.html">Home</a>
-    <a href="../hearth.html">From the Hearth</a>
+<footer style="background:#221811;padding:2.5rem 4rem;border-top:1px solid rgba(250,245,236,0.06);">
+  <div style="max-width:780px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(250,245,236,0.06);margin-bottom:1.5rem;">
+      <div>
+        <img src="../images/logos/firewalker-logo.png" alt="The Firewalkers" style="height:24px;width:auto;opacity:0.6;margin-bottom:0.6rem;display:block;">
+        <p style="font-size:0.82rem;color:rgba(250,245,236,0.25);line-height:1.7;">Technology in service of the living world.</p>
+      </div>
+      <div>
+        <a href="../good-ai.html" style="display:block;font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,245,236,0.35);text-decoration:none;margin-bottom:0.5rem;">Good AI</a>
+        <a href="../campaigns.html" style="display:block;font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,245,236,0.35);text-decoration:none;margin-bottom:0.5rem;">Campaigns</a>
+        <a href="../hearth.html" style="display:block;font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,245,236,0.35);text-decoration:none;margin-bottom:0.5rem;">The Hearth</a>
+        <a href="../community.html" style="display:block;font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,245,236,0.35);text-decoration:none;">Community</a>
+      </div>
+      <div>
+        <a href="../index.html#signup" style="display:block;font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,245,236,0.35);text-decoration:none;margin-bottom:0.5rem;">Join the movement</a>
+        <a href="../index.html#submit" style="display:block;font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,245,236,0.35);text-decoration:none;margin-bottom:0.5rem;">Contribute</a>
+        <a href="../media.html" style="display:block;font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,245,236,0.35);text-decoration:none;">Media</a>
+      </div>
+    </div>
+    <div style="font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.1em;color:rgba(250,245,236,0.18);text-align:center;">
+      The Firewalkers · firewalkers.earth · Founded June 2026
+    </div>
   </div>
 </footer>
 <script>
