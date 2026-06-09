@@ -1,0 +1,77 @@
+<!--
+  FIREWALKERS SHARED NAV + FOOTER COMPONENT
+  Copy this block into every page.
+  Replace class="active" on the link that matches the current page.
+  Replace YOUR_FORM_ID in any form action with your Formspree endpoint.
+-->
+
+<!-- ═══ SITE NAV ═══ -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="/index.html" class="nav-logo">
+      <img src="/images/logos/Smaller logo.png" alt="The Firewalkers">
+      <span class="nav-logo-text">The Firewalkers</span>
+    </a>
+    <div class="nav-links">
+      <a href="/index.html#pattern">Why This Matters</a>
+      <a href="/good-ai.html">Good AI</a>
+      <a href="/campaigns.html">Campaigns</a>
+      <a href="/datacentre-watch.html">Data Centre Watch</a>
+      <a href="/hearth.html">From the Hearth</a>
+      <a href="/community.html">Community</a>
+      <a href="/media.html">Media</a>
+      <a href="/index.html#signup" class="nav-cta">Join the Fire</a>
+    </div>
+    <button class="nav-hamburger" onclick="document.getElementById('mobileMenu').classList.add('open')" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div id="mobileMenu" class="nav-mobile-menu">
+  <button class="nav-mobile-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">&#x2715; Close</button>
+  <a href="/index.html#pattern">Why This Matters</a>
+  <a href="/good-ai.html">Good AI</a>
+  <a href="/campaigns.html">Campaigns</a>
+  <a href="/datacentre-watch.html">Data Centre Watch</a>
+  <a href="/hearth.html">From the Hearth</a>
+  <a href="/community.html">Community</a>
+  <a href="/media.html">Media</a>
+  <a href="/index.html#signup" class="cta">Join the Fire &rarr;</a>
+</div>
+
+<!-- ═══ SITE FOOTER ═══ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="/images/logos/firewalker-logo.png" alt="The Firewalkers">
+        <p>A global movement using AI to protect the places we love. Founded in Scotland. Built for everywhere that matters.</p>
+      </div>
+      <div class="footer-col">
+        <h4>The Platform</h4>
+        <ul>
+          <li><a href="/good-ai.html">Good AI</a></li>
+          <li><a href="/campaigns.html">Campaigns</a></li>
+          <li><a href="/datacentre-watch.html">Data Centre Watch</a></li>
+          <li><a href="/hearth.html">From the Hearth</a></li>
+          <li><a href="/community.html">Community</a></li>
+          <li><a href="/media.html">Media &amp; Press</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Join</h4>
+        <ul>
+          <li><a href="/index.html#signup">Join the mailing list</a></li>
+          <li><a href="/index.html#submit">Contribute something</a></li>
+          <li><a href="/posts/come-help-us-build-this.html">Help build this</a></li>
+          <li><a href="/media.html#media-contact">Media enquiries</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>The Firewalkers &middot; firewalkers.earth &middot; Founded June 2026</span>
+      <span>The future belongs to the stewards, not the extractors.</span>
+    </div>
+  </div>
+</footer>
