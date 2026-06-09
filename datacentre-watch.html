@@ -249,38 +249,24 @@ button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 </head>
 <body>
 
-<nav class="site-nav">
-  <div class="nav-inner">
-    <a href="/index.html" class="nav-logo">
-      <img src="/images/logos/firewalker-logo.png" alt="The Firewalkers">
-      <span class="nav-logo-text">The Firewalkers</span>
-    </a>
-    <div class="nav-links">
-      <a href="/index.html#pattern">Why This Matters</a>
-      <a href="/good-ai.html">Good AI</a>
-      <a href="/campaigns.html">Campaigns</a>
-      <a href="/datacentre-watch.html" class="active">Data Centre Watch</a>
-      <a href="/hearth.html">From the Hearth</a>
-      <a href="/community.html">Community</a>
-      <a href="/media.html">Media</a>
-      <a href="/index.html#signup" class="nav-cta">Join the Fire</a>
-    </div>
-    <button class="nav-hamburger" onclick="document.getElementById('mobileMenuDCW').classList.add('open')" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
+<a href="#main" class="skip-link" style="position:absolute;top:-100px;left:1rem;background:#a05800;color:#faf5ec;padding:0.6rem 1.2rem;font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;z-index:9999;transition:top 0.2s;">Skip to main content</a>
+<nav class="site-nav" style="position:fixed;top:0;left:0;right:0;z-index:300;padding:1rem 4rem;display:flex;justify-content:space-between;align-items:center;background:rgba(250,245,236,0.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(160,88,0,0.12);">
+  <a href="/index.html" style="display:flex;align-items:center;gap:0.6rem;text-decoration:none;">
+    <img src="/images/logos/firewalker-logo.png" alt="The Firewalkers" style="height:36px;width:auto;display:block;">
+  </a>
+  <div style="display:flex;gap:1.75rem;align-items:center;">
+    <a href="/index.html#protect" style="font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.16em;text-transform:uppercase;color:#221811;text-decoration:none;opacity:0.65;">What We Protect</a>
+    <a href="/good-ai.html" style="font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.16em;text-transform:uppercase;color:#221811;text-decoration:none;opacity:0.65;">Good AI</a>
+    <a href="/campaigns.html" style="font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.16em;text-transform:uppercase;color:#221811;text-decoration:none;opacity:0.65;">Campaigns</a>
+    <a href="/datacentre-watch.html" style="font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.16em;text-transform:uppercase;color:#a05800;text-decoration:none;opacity:1;">Data Centre Watch</a>
+    <a href="/hearth.html" style="font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.16em;text-transform:uppercase;color:#221811;text-decoration:none;opacity:0.65;">From the Hearth</a>
+    <a href="/community.html" style="font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.16em;text-transform:uppercase;color:#221811;text-decoration:none;opacity:0.65;">Community</a>
+    <a href="/tools.html" style="font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.16em;text-transform:uppercase;color:#221811;text-decoration:none;opacity:0.65;">Tools</a>
+    <a href="/media.html" style="font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.16em;text-transform:uppercase;color:#221811;text-decoration:none;opacity:0.65;">Media</a>
+    <a href="/index.html#signup" style="font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.16em;text-transform:uppercase;background:#a05800;color:#faf5ec;padding:0.55rem 1.25rem;text-decoration:none;">Join the Fire</a>
   </div>
 </nav>
-<div id="mobileMenuDCW" class="nav-mobile-menu">
-  <button class="nav-mobile-close" onclick="document.getElementById('mobileMenuDCW').classList.remove('open')">&#x2715; Close</button>
-  <a href="/index.html#pattern">Why This Matters</a>
-  <a href="/good-ai.html">Good AI</a>
-  <a href="/campaigns.html">Campaigns</a>
-  <a href="/datacentre-watch.html" class="active">Data Centre Watch</a>
-  <a href="/hearth.html">From the Hearth</a>
-  <a href="/community.html">Community</a>
-  <a href="/media.html">Media</a>
-  <a href="/index.html#signup" class="cta">Join the Fire &rarr;</a>
-</div>
+<div style="height:68px;"></div>
 
 <section class="page-hero">
   <div class="page-hero-inner">
