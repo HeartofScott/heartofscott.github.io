@@ -220,37 +220,70 @@ button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
   .wall-card:last-child{border-bottom:none !important}
 }
 @media(prefers-reduced-motion:reduce){.live-dot{animation:none}html{scroll-behavior:auto}}
+
+/* ─── SKIP LINK ─── */
+.skip-link{position:absolute;top:-100px;left:1rem;background:var(--amber);color:var(--parchment);padding:0.6rem 1.2rem;font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;z-index:9999;transition:top 0.2s;}
+.skip-link:focus{top:1rem;}
+/* ─── CONTRAST FIX ─── */
+:root{--mist:#5c5548;}
+/* ─── NAV UNIFICATION ─── */
+#nav,nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:1rem 4rem;display:flex;justify-content:space-between;align-items:center;background:rgba(250,245,236,0.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(160,88,0,0.12);}
+.nav-logo{display:flex;align-items:center;gap:0.6rem;text-decoration:none;}
+.nav-logo img{height:36px;width:auto;display:block;}
+.nav-links a{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--earth);text-decoration:none;transition:color 0.25s;opacity:0.65;}
+.nav-links a:hover,.nav-links a.active{color:var(--amber);opacity:1;}
+.nav-cta{font-family:'Cinzel',serif!important;background:var(--amber)!important;color:var(--parchment)!important;padding:0.55rem 1.25rem!important;opacity:1!important;}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:0.4rem;color:var(--earth);min-height:44px;}
+.mobile-menu{display:none;position:fixed;inset:0;background:rgba(15,8,4,0.97);z-index:500;flex-direction:column;align-items:center;justify-content:center;}
+.mobile-menu.open{display:flex;}
+.mobile-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:1px solid rgba(250,245,236,0.12);color:rgba(250,245,236,0.4);cursor:pointer;font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.2em;text-transform:uppercase;padding:0.4rem 0.8rem;min-height:44px;}
+.mobile-logo{margin-bottom:2.5rem;display:block;}
+.mobile-link{font-family:'Cinzel',serif;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(250,245,236,0.55);text-decoration:none;padding:0.9rem 2rem;border-bottom:1px solid rgba(250,245,236,0.05);width:100%;max-width:340px;text-align:center;transition:color 0.2s;min-height:44px;display:flex;align-items:center;justify-content:center;}
+.mobile-link:hover{color:var(--amber-bright);}
+.mobile-cta-link{font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--parchment);background:var(--amber);padding:0.9rem 2.25rem;text-decoration:none;margin-top:2rem;display:inline-flex;align-items:center;min-height:44px;}
+@media(max-width:960px){#nav,nav{padding:1rem 2rem;}.nav-links{display:none!important;}.nav-toggle{display:block!important;}}
+/* ─── FOOTER FIX ─── */
+footer .footer-base,footer .footer-bottom{color:rgba(250,245,236,0.22);}
+
 </style>
 </head>
 <body>
+<main id="main">
 
-<nav class="site-nav">
-  <div class="nav-inner">
-    <a href="/index.html" class="nav-logo"><img src="/images/logos/Smaller logo.png" alt="The Firewalkers"><span class="nav-logo-text">The Firewalkers</span></a>
-    <div class="nav-links">
-      <a href="/index.html#pattern">Why This Matters</a>
-      <a href="/good-ai.html">Good AI</a>
-      <a href="/campaigns.html">Campaigns</a>
-      <a href="/datacentre-watch.html">Data Centre Watch</a>
-      <a href="/hearth.html">From the Hearth</a>
-      <a href="/community.html" class="active">Community</a>
-      <a href="/media.html">Media</a>
-      <a href="/index.html#signup" class="nav-cta">Join the Fire</a>
-    </div>
-    <button class="nav-hamburger" onclick="document.getElementById('mobileMenuC').classList.add('open')" aria-label="Open menu"><span></span><span></span><span></span></button>
+<!-- ═══ UNIFIED NAV ═══ -->
+<a href="#main" class="skip-link">Skip to main content</a>
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <a href="/index.html" class="nav-logo" aria-label="The Firewalkers — home">
+    <img src="/images/logos/firewalker-logo.png" alt="The Firewalkers" style="height:36px;width:auto;display:block;">
+  </a>
+  <div class="nav-links">
+    <a href="/index.html#protect">What We Protect</a>
+    <a href="/good-ai.html">Good AI</a>
+    <a href="/campaigns.html">Campaigns</a>
+    <a href="/datacentre-watch.html">Data Centre Watch</a>
+    <a href="/hearth.html">From the Hearth</a>
+    <a href="/community.html">Community</a>
+    <a href="/media.html">Media</a>
+    <a href="/index.html#signup" class="nav-cta" style="background:var(--amber);color:var(--parchment);padding:0.55rem 1.25rem;opacity:1;">Join the Fire</a>
   </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="22" height="22" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
 </nav>
-<div id="mobileMenuC" class="nav-mobile-menu">
-  <button class="nav-mobile-close" onclick="document.getElementById('mobileMenuC').classList.remove('open')">&#x2715; Close</button>
-  <a href="/index.html#pattern">Why This Matters</a>
-  <a href="/good-ai.html">Good AI</a>
-  <a href="/campaigns.html">Campaigns</a>
-  <a href="/datacentre-watch.html">Data Centre Watch</a>
-  <a href="/hearth.html">From the Hearth</a>
-  <a href="/community.html" class="active">Community</a>
-  <a href="/media.html">Media</a>
-  <a href="/index.html#signup" class="cta">Join the Fire &rarr;</a>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Site navigation">
+  <button class="mobile-close" onclick="closeMM()" aria-label="Close menu">&#x2715; Close</button>
+  <a href="/index.html" class="mobile-logo" onclick="closeMM()"><img src="/images/logos/firewalker-logo.png" alt="The Firewalkers" style="height:32px;width:auto;filter:brightness(1.3);"></a>
+  <a href="/index.html#protect" class="mobile-link" onclick="closeMM()">What We Protect</a>
+  <a href="/good-ai.html" class="mobile-link" onclick="closeMM()">Good AI</a>
+  <a href="/campaigns.html" class="mobile-link" onclick="closeMM()">Campaigns</a>
+  <a href="/datacentre-watch.html" class="mobile-link" onclick="closeMM()">Data Centre Watch</a>
+  <a href="/hearth.html" class="mobile-link" onclick="closeMM()">From the Hearth</a>
+  <a href="/community.html" class="mobile-link" onclick="closeMM()">Community</a>
+  <a href="/media.html" class="mobile-link" onclick="closeMM()">Media</a>
+  <a href="/index.html#signup" class="mobile-cta-link" onclick="closeMM()">Join the Fire</a>
 </div>
+<!-- ═══════════════════════════════════════════════════ -->
+
 
 <section class="page-hero">
   <div class="page-hero-inner">
@@ -382,7 +415,22 @@ button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
     </div>
     <div class="footer-bottom"><span>The Firewalkers &middot; firewalkers.earth &middot; Founded June 2026</span><span>The future belongs to the stewards, not the extractors.</span></div>
   </div>
+</main>
 </footer>
+
+
+<script>
+/* NAV */
+function closeMM(){var m=document.getElementById('mobileMenu');var t=document.getElementById('navToggle');if(m){m.classList.remove('open');document.body.style.overflow='';}if(t){t.setAttribute('aria-expanded','false');}}
+(function(){
+  var t=document.getElementById('navToggle');
+  var m=document.getElementById('mobileMenu');
+  if(t)t.addEventListener('click',function(){m.classList.add('open');document.body.style.overflow='hidden';t.setAttribute('aria-expanded','true');});
+  if(m)m.addEventListener('click',function(e){if(e.target===m)closeMM();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMM();});
+})();
+/* SKIP LINK */
+</script>
 
 </body>
 </html>

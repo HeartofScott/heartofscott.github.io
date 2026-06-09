@@ -31,78 +31,86 @@
   --parchment:#faf5ec;--parchment-warm:#f4ebda;--stone:#e8dcc8;
   --amber:#a05800;--amber-mid:#c07010;--amber-bright:#e09020;--amber-pale:#fdf0d5;
   --sage:#3d6e48;--sage-light:#5a9060;--sage-pale:#cfe0d4;
-  --earth:#221811;--earth-mid:#3d2e1e;--mist:#7a7262;
+  --earth:#221811;--earth-mid:#3d2e1e;--mist:#5c5548;
   --ocean:#0d3d56;--canopy:#1a3d2b;--urgent:#8b2a0f;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{background:var(--parchment);color:var(--earth);font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;line-height:1.85;overflow-x:hidden;}
 
+/* ─── SKIP LINK (accessibility) ──────────────────── */
+.skip-link{position:absolute;top:-100px;left:1rem;background:var(--amber);color:var(--parchment);padding:0.6rem 1.2rem;font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;z-index:9999;transition:top 0.2s;}
+.skip-link:focus{top:1rem;}
+
 /* ─── NAV ─────────────────────────────────────────── */
 #nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:1rem 4rem;display:flex;justify-content:space-between;align-items:center;background:rgba(250,245,236,0);backdrop-filter:blur(0px);transition:background 0.4s,backdrop-filter 0.4s,border-color 0.4s;border-bottom:1px solid transparent;}
-#nav.scrolled{background:rgba(250,245,236,0.94);backdrop-filter:blur(14px);border-bottom-color:rgba(160,88,0,0.12);}
-.nav-brand{color:var(--amber);text-decoration:none;}
-.nav-links{display:flex;gap:1.75rem;}
-.nav-links a{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--earth);text-decoration:none;transition:color 0.25s;opacity:0.6;}
+#nav.scrolled{background:rgba(250,245,236,0.96);backdrop-filter:blur(16px);border-bottom-color:rgba(160,88,0,0.12);}
+.nav-logo{display:flex;align-items:center;gap:0.6rem;text-decoration:none;}
+.nav-logo img{height:36px;width:auto;display:block;}
+.nav-logo-text{font-family:'Cinzel',serif;font-size:0.68rem;letter-spacing:0.18em;color:var(--amber);display:none;}
+.nav-links{display:flex;gap:1.75rem;align-items:center;}
+.nav-links a{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--earth);text-decoration:none;transition:color 0.25s;opacity:0.65;}
 .nav-links a:hover{color:var(--amber);opacity:1;}
-.nav-cta{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;background:var(--amber);color:var(--parchment);padding:0.55rem 1.25rem;text-decoration:none;transition:background 0.25s;opacity:1!important;}
-.nav-cta:hover{background:var(--amber-mid);}
+.nav-cta{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;background:var(--amber);color:var(--parchment)!important;padding:0.55rem 1.25rem;text-decoration:none;transition:background 0.25s;opacity:1!important;}
+.nav-cta:hover{background:var(--amber-mid)!important;}
 .nav-toggle{display:none;background:none;border:none;cursor:pointer;color:var(--earth);padding:0.4rem;}
 
-/* ─── MOBILE MENU ────────────────────────────────── */
+/* ─── MOBILE MENU ─────────────────────────────────── */
 .mobile-menu{display:none;position:fixed;inset:0;background:rgba(15,8,4,0.97);z-index:500;flex-direction:column;align-items:center;justify-content:center;gap:0;}
-.mobile-menu.open{display:flex;}
-.mobile-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:1px solid rgba(250,245,236,0.12);color:rgba(250,245,236,0.4);cursor:pointer;font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.2em;text-transform:uppercase;padding:0.4rem 0.8rem;}
-.mobile-brand{display:block;margin-bottom:2.5rem;}
-.mobile-link{font-family:'Cinzel',serif;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(250,245,236,0.55);text-decoration:none;padding:0.9rem 2rem;border-bottom:1px solid rgba(250,245,236,0.05);width:100%;max-width:340px;text-align:center;transition:color 0.2s;}
+.mobile-menu.open{display:flex;animation:mmin 0.2s ease both;}
+@keyframes mmin{from{opacity:0}to{opacity:1}}
+.mobile-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:1px solid rgba(250,245,236,0.12);color:rgba(250,245,236,0.4);cursor:pointer;font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.2em;text-transform:uppercase;padding:0.4rem 0.8rem;min-height:44px;}
+.mobile-logo{margin-bottom:2.5rem;display:block;}
+.mobile-logo img{height:32px;width:auto;filter:brightness(1.3);}
+.mobile-link{font-family:'Cinzel',serif;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(250,245,236,0.55);text-decoration:none;padding:0.9rem 2rem;border-bottom:1px solid rgba(250,245,236,0.05);width:100%;max-width:340px;text-align:center;transition:color 0.2s;min-height:44px;display:flex;align-items:center;justify-content:center;}
 .mobile-link:hover{color:var(--amber-bright);}
-.mobile-cta-link{font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--parchment);background:var(--amber);padding:0.9rem 2.25rem;text-decoration:none;margin-top:2rem;display:inline-block;}
+.mobile-cta-link{font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--parchment);background:var(--amber);padding:0.9rem 2.25rem;text-decoration:none;margin-top:2rem;display:inline-block;min-height:44px;display:flex;align-items:center;}
 
-/* ─── HERO ────────────────────────────────────────── */
+/* ─── HERO ─────────────────────────────────────────── */
 #hero{min-height:100vh;background:var(--earth);position:relative;display:flex;align-items:center;padding:0;}
 .hero-bg{position:absolute;inset:0;}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 35%;display:block;}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(15,8,4,0.82) 0%,rgba(34,24,17,0.65) 60%,rgba(13,61,86,0.45) 100%);}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(15,8,4,0.85) 0%,rgba(34,24,17,0.68) 60%,rgba(13,61,86,0.45) 100%);}
 .hero-content{position:relative;z-index:2;padding:10rem 4rem 6rem;max-width:1120px;margin:0 auto;width:100%;}
-.hero-eyebrow{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.42em;text-transform:uppercase;color:var(--amber-bright);display:block;margin-bottom:2rem;opacity:0.9;}
+.hero-eyebrow{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.42em;text-transform:uppercase;color:var(--amber-bright);display:block;margin-bottom:2rem;}
 .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,8vw,7rem);font-weight:300;color:var(--parchment);line-height:1.0;margin-bottom:0.5rem;letter-spacing:-0.01em;}
 .hero-title em{font-style:italic;color:var(--amber-bright);}
 .hero-title strong{font-weight:700;font-style:normal;display:block;font-size:0.55em;font-family:'Cinzel',serif;letter-spacing:0.22em;color:rgba(250,245,236,0.45);margin-bottom:1rem;}
-.hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2.2vw,1.5rem);color:rgba(250,245,236,0.72);line-height:1.7;max-width:620px;margin:1.75rem 0 2.5rem;font-weight:300;}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2.2vw,1.5rem);color:rgba(250,245,236,0.75);line-height:1.7;max-width:620px;margin:1.75rem 0 2.5rem;font-weight:300;}
 .hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;}
-.btn-primary{font-family:'Cinzel',serif;font-size:0.64rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--parchment);background:var(--amber);padding:1.1rem 2.5rem;text-decoration:none;transition:all 0.3s;display:inline-block;border:none;}
+.btn-primary{font-family:'Cinzel',serif;font-size:0.64rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--parchment);background:var(--amber);padding:1.1rem 2.5rem;text-decoration:none;transition:all 0.3s;display:inline-block;border:none;min-height:44px;display:inline-flex;align-items:center;}
 .btn-primary:hover{background:var(--amber-mid);transform:translateY(-2px);}
-.btn-secondary{font-family:'Cinzel',serif;font-size:0.64rem;letter-spacing:0.28em;text-transform:uppercase;color:rgba(250,245,236,0.75);background:transparent;padding:1.1rem 2.5rem;text-decoration:none;transition:all 0.3s;display:inline-block;border:1px solid rgba(250,245,236,0.25);}
+.btn-secondary{font-family:'Cinzel',serif;font-size:0.64rem;letter-spacing:0.28em;text-transform:uppercase;color:rgba(250,245,236,0.75);background:transparent;padding:1.1rem 2.5rem;text-decoration:none;transition:all 0.3s;display:inline-flex;align-items:center;border:1px solid rgba(250,245,236,0.25);min-height:44px;}
 .btn-secondary:hover{border-color:var(--amber-bright);color:var(--amber-bright);}
 .hero-share{margin-top:2.5rem;font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(250,245,236,0.3);}
-.hero-share a{color:rgba(250,245,236,0.45);text-decoration:none;margin-left:0.75rem;transition:color 0.2s;}
+.hero-share a{color:rgba(250,245,236,0.5);text-decoration:none;margin-left:0.75rem;transition:color 0.2s;}
 .hero-share a:hover{color:var(--amber-bright);}
 
-/* ─── URGENCY BAND ────────────────────────────────── */
+/* ─── URGENCY BAND ─────────────────────────────────── */
 .urgency-band{background:var(--urgent);padding:1.5rem 4rem;display:flex;justify-content:center;gap:0;flex-wrap:wrap;}
 .u-stat{text-align:center;padding:0.5rem 2.5rem;border-right:1px solid rgba(255,255,255,0.15);}
 .u-stat:last-child{border-right:none;}
 .u-num{font-family:'Cinzel',serif;font-size:1.5rem;font-weight:700;color:#fff;display:block;line-height:1;}
-.u-label{font-family:'Cinzel',serif;font-size:0.46rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.55);display:block;margin-top:0.25rem;}
+.u-label{font-family:'Cinzel',serif;font-size:0.46rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.65);display:block;margin-top:0.25rem;}
 
-/* ─── BIOMES ─────────────────────────────────────── */
+/* ─── BIOMES ──────────────────────────────────────── */
 .biomes-section{background:var(--earth);padding:7rem 4rem;}
 .biomes-inner{max-width:1120px;margin:0 auto;}
 .section-eyebrow{font-family:'Cinzel',serif;font-size:0.56rem;letter-spacing:0.42em;text-transform:uppercase;color:var(--amber-bright);display:block;margin-bottom:1.25rem;}
 .biomes-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4.5vw,3.5rem);font-weight:300;color:var(--parchment);line-height:1.1;margin-bottom:0.75rem;}
 .biomes-title em{font-style:italic;color:var(--amber-bright);}
-.biomes-intro{font-size:1.05rem;color:rgba(250,245,236,0.55);max-width:680px;line-height:1.85;margin-bottom:3.5rem;}
+.biomes-intro{font-size:1.05rem;color:rgba(250,245,236,0.6);max-width:680px;line-height:1.85;margin-bottom:3.5rem;}
 .biomes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;}
-.biome-card{position:relative;height:280px;overflow:hidden;cursor:pointer;}
+.biome-card{position:relative;height:280px;overflow:hidden;}
 .biome-card img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease,filter 0.6s ease;filter:saturate(0.5) brightness(0.6);}
-.biome-card:hover img{transform:scale(1.06);filter:saturate(0.8) brightness(0.55);}
-.biome-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,8,4,0.9) 0%,rgba(15,8,4,0.3) 60%,transparent 100%);transition:background 0.4s;}
+.biome-card:hover img{transform:scale(1.05);filter:saturate(0.75) brightness(0.55);}
+.biome-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,8,4,0.92) 0%,rgba(15,8,4,0.3) 60%,transparent 100%);}
 .biome-content{position:absolute;bottom:0;left:0;right:0;padding:1.5rem;}
 .biome-tag{font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--amber-bright);display:block;margin-bottom:0.4rem;}
 .biome-name{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--parchment);line-height:1.2;margin-bottom:0.3rem;}
-.biome-threat{font-size:0.82rem;color:rgba(250,245,236,0.5);line-height:1.5;font-family:'Cormorant Garamond',serif;font-style:italic;}
+.biome-threat{font-size:0.82rem;color:rgba(250,245,236,0.55);line-height:1.5;font-style:italic;}
 
-/* ─── SPIRITUAL ──────────────────────────────────── */
+/* ─── SPIRITUAL ────────────────────────────────────── */
 .spirit-section{background:var(--canopy);padding:8rem 4rem;position:relative;overflow:hidden;}
 .spirit-section::before{content:'';position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1671271834624-c80b23aabfc8?auto=format&fit=crop&w=1920&q=80');background-size:cover;background-position:center;opacity:0.07;}
 .spirit-inner{position:relative;z-index:1;max-width:860px;margin:0 auto;text-align:center;}
@@ -111,26 +119,26 @@ body{background:var(--parchment);color:var(--earth);font-family:'Cormorant Garam
 .traditions{display:flex;flex-direction:column;gap:0;margin:3rem 0;border-top:1px solid rgba(250,245,236,0.08);}
 .tradition{padding:1.1rem 0;border-bottom:1px solid rgba(250,245,236,0.08);display:grid;grid-template-columns:160px 1fr;gap:1.5rem;text-align:left;}
 .tradition-faith{font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber-bright);padding-top:0.15rem;}
-.tradition-knowing{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:rgba(250,245,236,0.72);line-height:1.6;}
+.tradition-knowing{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:rgba(250,245,236,0.75);line-height:1.6;}
 .spirit-close{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:rgba(250,245,236,0.55);margin-top:3rem;line-height:1.75;font-style:italic;}
 .spirit-close strong{color:var(--parchment);font-style:normal;font-weight:400;}
 
-/* ─── SECTION SHARED ─────────────────────────────── */
+/* ─── SHARED SECTION STYLES ────────────────────────── */
 .section-inner{max-width:1120px;margin:0 auto;}
 .section-label{font-family:'Cinzel',serif;font-size:0.57rem;letter-spacing:0.42em;text-transform:uppercase;color:var(--amber);margin-bottom:1.75rem;display:flex;align-items:center;gap:0.85rem;}
 .section-label::after{content:'';flex:0 0 70px;height:1px;background:rgba(160,88,0,0.22);}
 h2.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,5vw,3.5rem);font-weight:600;line-height:1.1;color:var(--earth);margin-bottom:1.5rem;}
 h2.section-title em{color:var(--amber);font-style:italic;}
 
-/* ─── PROBLEM STATEMENT ──────────────────────────── */
+/* ─── PROBLEM STATEMENT ────────────────────────────── */
 .problem-section{background:var(--parchment);padding:7rem 4rem;}
 .problem-story{font-size:1.05rem;color:var(--earth-mid);line-height:1.9;max-width:760px;}
 .problem-story p{margin-bottom:1.5rem;}
 .problem-story p strong{color:var(--earth);font-weight:600;}
-.problem-highlight{background:var(--earth);color:var(--parchment);padding:2.5rem 3rem;margin:3rem 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;line-height:1.6;position:relative;}
+.problem-highlight{background:var(--earth);color:var(--parchment);padding:2.5rem 3rem 2.5rem 4rem;margin:3rem 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;line-height:1.6;position:relative;}
 .problem-highlight::before{content:'"';font-size:4rem;color:var(--amber-bright);position:absolute;top:-1rem;left:2rem;font-family:'Cormorant Garamond',serif;line-height:1;}
 
-/* ─── WHO SECTION ─────────────────────────────────── */
+/* ─── WHO SECTION ──────────────────────────────────── */
 .who-section{background:var(--parchment-warm);padding:7rem 4rem;border-top:1px solid rgba(160,88,0,0.08);}
 .who-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(160,88,0,0.08);margin:3rem 0;}
 .who-card{background:var(--parchment);padding:1.75rem 1.5rem;transition:background 0.3s;}
@@ -139,35 +147,34 @@ h2.section-title em{color:var(--amber);font-style:italic;}
 .who-card h3{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--earth);margin-bottom:0.6rem;}
 .who-card p{font-size:0.88rem;color:var(--mist);line-height:1.65;}
 
-/* ─── PLATFORM VISION ────────────────────────────── */
+/* ─── PLATFORM VISION ───────────────────────────────── */
 .platform-section{background:var(--earth);padding:7rem 4rem;}
 .platform-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(250,245,236,0.06);margin:3rem 0;}
 .platform-card{background:rgba(250,245,236,0.03);padding:2rem;border-top:2px solid transparent;transition:all 0.3s;}
 .platform-card.live{border-top-color:var(--sage);}
 .platform-card.building{border-top-color:var(--amber);}
-.platform-card.proposed{border-top-color:rgba(250,245,236,0.15);}
 .platform-card:hover{background:rgba(250,245,236,0.06);}
 .pc-status{font-family:'Cinzel',serif;font-size:0.48rem;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:0.75rem;display:block;}
 .live .pc-status{color:var(--sage-light);}
 .building .pc-status{color:var(--amber-bright);}
-.proposed .pc-status{color:rgba(250,245,236,0.3);}
 .platform-card h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--parchment);margin-bottom:0.5rem;}
-.platform-card p{font-size:0.88rem;color:rgba(250,245,236,0.45);line-height:1.65;}
+.platform-card p{font-size:0.88rem;color:rgba(250,245,236,0.5);line-height:1.65;}
 
-/* ─── COMMUNITY PREVIEW ──────────────────────────── */
+/* ─── COMMUNITY PREVIEW ────────────────────────────── */
 .community-preview{background:var(--parchment-warm);padding:7rem 4rem;border-top:1px solid rgba(160,88,0,0.08);}
 .cp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(160,88,0,0.08);margin:3rem 0;}
 .cp-card{background:var(--parchment);padding:1.75rem;display:flex;flex-direction:column;gap:0.65rem;}
-.cp-initial{width:48px;height:48px;border-radius:50%;background:var(--earth);display:flex;align-items:center;justify-content:center;font-family:'Cinzel',serif;font-size:1.25rem;font-weight:700;color:var(--amber-bright);}
-.cp-initial.founder{background:var(--amber);color:var(--parchment);}
+.cp-initial{width:48px;height:48px;border-radius:50%;background:var(--amber);display:flex;align-items:center;justify-content:center;font-family:'Cinzel',serif;font-size:1.25rem;font-weight:700;color:var(--parchment);}
 .cp-location{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--mist);}
 .cp-path{display:inline-block;font-family:'Cinzel',serif;font-size:0.48rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.22rem 0.6rem;border:1px solid rgba(160,88,0,0.15);color:var(--amber);}
 .cp-place{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.9rem;color:var(--earth-mid);line-height:1.5;}
-.cp-empty{background:var(--parchment);padding:1.75rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:160px;border:1px dashed rgba(160,88,0,0.12);}
-.cp-empty p{font-size:0.82rem;color:rgba(122,114,98,0.55);font-style:italic;line-height:1.6;margin-bottom:0.75rem;}
-.cp-empty a{font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--amber);text-decoration:none;}
+/* IMPROVED: honest invitation instead of fake empty slots */
+.cp-invitation{background:var(--parchment);padding:1.75rem;display:flex;flex-direction:column;justify-content:center;border:1px dashed rgba(160,88,0,0.15);}
+.cp-invitation p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.95rem;color:var(--earth-mid);line-height:1.65;margin-bottom:1rem;}
+.cp-invitation a{font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--amber);text-decoration:none;}
+.cp-invitation a:hover{color:var(--amber-mid);}
 
-/* ─── HEARTH PREVIEW ─────────────────────────────── */
+/* ─── HEARTH PREVIEW ────────────────────────────────── */
 .hearth-preview{background:var(--parchment);padding:7rem 4rem;border-top:1px solid rgba(160,88,0,0.08);}
 .hearth-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(160,88,0,0.08);margin:3rem 0;}
 .post-card{background:var(--parchment);padding:2.5rem;border-top:2px solid var(--amber);transition:background 0.3s;}
@@ -184,16 +191,16 @@ h2.section-title em{color:var(--amber);font-style:italic;}
 .post-card.urgent .post-read{color:var(--urgent);}
 .post-byline{font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.1em;color:var(--mist);}
 
-/* ─── SHARE PHRASES ─────────────────────────────── */
+/* ─── SHARE PHRASES ─────────────────────────────────── */
 .phrases-section{background:var(--earth);padding:6rem 4rem;}
 .phrases-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;max-width:900px;margin:2.5rem auto 0;background:rgba(250,245,236,0.06);}
 .phrase-item{background:rgba(250,245,236,0.03);padding:1.5rem 2rem;cursor:pointer;transition:background 0.25s;border:none;width:100%;text-align:left;}
 .phrase-item:hover{background:rgba(250,245,236,0.07);}
-.phrase-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:rgba(250,245,236,0.75);line-height:1.5;display:block;margin-bottom:0.5rem;}
+.phrase-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:rgba(250,245,236,0.78);line-height:1.5;display:block;margin-bottom:0.5rem;}
 .phrase-copy{font-family:'Cinzel',serif;font-size:0.44rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--amber-bright);opacity:0.5;transition:opacity 0.2s;}
 .phrase-item:hover .phrase-copy{opacity:1;}
 
-/* ─── SIGN UP ─────────────────────────────────────── */
+/* ─── SIGN UP ─────────────────────────────────────────── */
 #signup{background:var(--parchment);padding:7rem 4rem;border-top:1px solid rgba(160,88,0,0.08);}
 .signup-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;}
 .signup-left h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4.5vw,3.2rem);font-weight:300;color:var(--earth);line-height:1.15;margin-bottom:1.25rem;}
@@ -204,70 +211,62 @@ h2.section-title em{color:var(--amber);font-style:italic;}
 .signup-promises li::before{content:'✓';color:var(--sage);}
 .field-group{margin-bottom:1.1rem;}
 .field-group label{font-family:'Cinzel',serif;font-size:0.56rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--earth-mid);display:block;margin-bottom:0.45rem;}
-.field-group input,.field-group select,.field-group textarea{width:100%;background:var(--parchment-warm);border:1px solid rgba(160,88,0,0.18);color:var(--earth);padding:0.75rem 1rem;font-family:'Cormorant Garamond',serif;font-size:1rem;outline:none;transition:border-color 0.3s;-webkit-appearance:none;appearance:none;}
+.field-group input,.field-group select,.field-group textarea{width:100%;background:var(--parchment-warm);border:1px solid rgba(160,88,0,0.18);color:var(--earth);padding:0.75rem 1rem;font-family:'Cormorant Garamond',serif;font-size:1rem;outline:none;transition:border-color 0.3s;-webkit-appearance:none;appearance:none;font-size:16px;}
 .field-group input:focus,.field-group select:focus{border-color:var(--amber);}
-.field-group input::placeholder{color:var(--mist);font-style:italic;}
 .field-group select{background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23a05800' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;background-size:12px;padding-right:2.5rem;}
 .gdpr-label{display:flex;align-items:flex-start;gap:0.75rem;cursor:pointer;font-size:0.88rem;color:var(--mist);line-height:1.5;}
 .gdpr-label input{flex-shrink:0;margin-top:0.2rem;accent-color:var(--amber);}
-.form-submit-btn{font-family:'Cinzel',serif;font-size:0.64rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--parchment);background:var(--amber);border:none;padding:1rem 2.5rem;cursor:pointer;transition:all 0.3s;width:100%;margin-top:0.5rem;}
+.form-submit-btn{font-family:'Cinzel',serif;font-size:0.64rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--parchment);background:var(--amber);border:none;padding:1rem 2.5rem;cursor:pointer;transition:all 0.3s;width:100%;margin-top:0.5rem;min-height:44px;}
 .form-submit-btn:hover{background:var(--amber-mid);}
 .form-success{display:none;background:var(--sage-pale);border-left:3px solid var(--sage);padding:2rem;margin-top:1.5rem;}
 .form-success h4{font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--sage);margin-bottom:0.6rem;}
 .form-success p{font-size:0.9rem;color:var(--earth-mid);line-height:1.7;}
 
-/* ─── CONTRIBUTE ─────────────────────────────────── */
+/* ─── CONTRIBUTE ─────────────────────────────────────── */
 #submit{background:var(--earth);padding:7rem 4rem;}
 .submit-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;}
 .submit-left h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:300;color:var(--parchment);line-height:1.15;margin-bottom:1.25rem;}
 .submit-left h2 em{color:var(--amber-bright);font-style:italic;}
-.submit-left p{font-size:1rem;color:rgba(250,245,236,0.55);line-height:1.85;}
+.submit-left p{font-size:1rem;color:rgba(250,245,236,0.6);line-height:1.85;}
 .submit-ways{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-top:1.5rem;}
-.submit-ways li{font-family:'Cinzel',serif;font-size:0.54rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,245,236,0.4);padding:0.5rem 0;border-bottom:1px solid rgba(250,245,236,0.06);}
+.submit-ways li{font-family:'Cinzel',serif;font-size:0.54rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,245,236,0.45);padding:0.5rem 0;border-bottom:1px solid rgba(250,245,236,0.06);}
 .submit-ways li::before{content:'→ ';color:var(--amber-bright);}
-.dark-field input,.dark-field select,.dark-field textarea{background:rgba(250,245,236,0.05);border:1px solid rgba(250,245,236,0.12);color:var(--parchment);}
-.dark-field label{color:rgba(250,245,236,0.5);}
-.dark-field input::placeholder,.dark-field textarea::placeholder{color:rgba(250,245,236,0.2);}
+.dark-field input,.dark-field select,.dark-field textarea{background:rgba(250,245,236,0.05);border:1px solid rgba(250,245,236,0.12);color:var(--parchment);font-size:16px;}
+.dark-field label{color:rgba(250,245,236,0.55);}
+.dark-field input::placeholder,.dark-field textarea::placeholder{color:rgba(250,245,236,0.22);}
 .dark-field select{background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23e09020' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;background-size:12px;padding-right:2.5rem;color:var(--parchment);}
 .dark-field input:focus,.dark-field select:focus{border-color:rgba(224,144,32,0.45);}
-.dark-submit-btn{font-family:'Cinzel',serif;font-size:0.64rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--parchment);background:transparent;border:1px solid rgba(250,245,236,0.25);padding:1rem 2.5rem;cursor:pointer;transition:all 0.3s;width:100%;margin-top:0.5rem;}
+.dark-submit-btn{font-family:'Cinzel',serif;font-size:0.64rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--parchment);background:transparent;border:1px solid rgba(250,245,236,0.25);padding:1rem 2.5rem;cursor:pointer;transition:all 0.3s;width:100%;margin-top:0.5rem;min-height:44px;}
 .dark-submit-btn:hover{background:var(--amber);border-color:var(--amber);}
 .dark-success{display:none;background:rgba(61,110,72,0.12);border-left:3px solid var(--sage-light);padding:2rem;margin-top:1.5rem;}
 .dark-success h4{font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--sage-light);margin-bottom:0.6rem;}
-.dark-success p{font-size:0.9rem;color:rgba(250,245,236,0.5);line-height:1.7;}
+.dark-success p{font-size:0.9rem;color:rgba(250,245,236,0.55);line-height:1.7;}
 
-/* ─── FOOTER ─────────────────────────────────────── */
+/* ─── FOOTER ─────────────────────────────────────────── */
 footer{background:var(--earth);padding:3rem 4rem 2rem;border-top:1px solid rgba(250,245,236,0.06);}
 .footer-inner{max-width:1120px;margin:0 auto;}
 .footer-top{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(250,245,236,0.06);margin-bottom:2rem;}
-.footer-brand{}
-.footer-brand p{font-size:0.88rem;color:rgba(250,245,236,0.3);line-height:1.8;margin-top:0.75rem;max-width:280px;}
+.footer-brand p{font-size:0.88rem;color:rgba(250,245,236,0.35);line-height:1.8;margin-top:0.75rem;max-width:280px;}
 .footer-nav-col h4{font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(250,245,236,0.3);margin-bottom:1rem;}
-.footer-nav-col a{display:block;font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,245,236,0.4);text-decoration:none;margin-bottom:0.6rem;transition:color 0.2s;}
+.footer-nav-col a{display:block;font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,245,236,0.45);text-decoration:none;margin-bottom:0.6rem;transition:color 0.2s;}
 .footer-nav-col a:hover{color:var(--amber-bright);}
-.footer-base{display:flex;justify-content:space-between;align-items:center;font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.1em;color:rgba(250,245,236,0.2);}
-.footer-social{display:flex;gap:0.5rem;}
-.social-icon{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border:1px solid rgba(250,245,236,0.08);color:rgba(250,245,236,0.3);text-decoration:none;transition:all 0.2s;}
-.social-icon:hover{border-color:var(--amber-bright);color:var(--amber-bright);}
-.social-icon svg{width:14px;height:14px;}
+.footer-base{display:flex;justify-content:space-between;align-items:center;font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.1em;color:rgba(250,245,236,0.22);}
+.footer-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.9rem;color:rgba(250,245,236,0.25);}
 
-/* ─── REVEAL ANIMATIONS ──────────────────────────── */
+/* ─── REVEAL ANIMATIONS ────────────────────────────── */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease;}
 .reveal.visible{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
 
-/* ─── RESPONSIVE ─────────────────────────────────── */
+/* ─── RESPONSIVE ─────────────────────────────────────── */
 @media(max-width:960px){
   #nav{padding:1rem 2rem;}
   .hero-content{padding:8rem 2rem 4rem;}
   .nav-links{display:none;}
   .nav-toggle{display:block;}
-  .urgency-band{padding:1.25rem 2rem;gap:0;}
-  .u-stat{padding:0.5rem 1.25rem;}
-  .biomes-section,.spirit-section,.problem-section,.who-section,.platform-section,.community-preview,.hearth-preview,.phrases-section,#signup,#submit,footer{padding-left:2rem;padding-right:2rem;}
+  .urgency-band,.biomes-section,.spirit-section,.problem-section,.who-section,.platform-section,.community-preview,.hearth-preview,.phrases-section,#signup,#submit,footer{padding-left:2rem;padding-right:2rem;}
   .biomes-grid{grid-template-columns:1fr 1fr;}
-  .who-grid{grid-template-columns:1fr 1fr;}
-  .platform-grid{grid-template-columns:1fr 1fr;}
-  .cp-grid{grid-template-columns:1fr 1fr;}
+  .who-grid,.platform-grid,.cp-grid{grid-template-columns:1fr 1fr;}
   .signup-inner,.submit-inner{grid-template-columns:1fr;gap:3rem;}
   .hearth-grid{grid-template-columns:1fr;}
   .footer-top{grid-template-columns:1fr 1fr;}
@@ -275,54 +274,62 @@ footer{background:var(--earth);padding:3rem 4rem 2rem;border-top:1px solid rgba(
   .tradition{grid-template-columns:1fr;gap:0.4rem;}
 }
 @media(max-width:640px){
-  .biomes-grid{grid-template-columns:1fr;}
-  .who-grid{grid-template-columns:1fr;}
-  .platform-grid{grid-template-columns:1fr;}
+  .biomes-grid,.who-grid,.platform-grid{grid-template-columns:1fr;}
   .cp-grid{grid-template-columns:1fr 1fr;}
   .footer-top{grid-template-columns:1fr;}
   .footer-base{flex-direction:column;gap:0.75rem;text-align:center;}
+  .u-stat{padding:0.5rem 1rem;}
   .u-num{font-size:1.1rem;}
-  .hero-title{font-size:clamp(2.8rem,12vw,4.5rem);}
+  .u-label{font-size:0.42rem;}
 }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="nav">
-  <a href="#hero" class="nav-brand"><img src="images/logos/firewalker-logo.png" alt="The Firewalkers" style="height:30px;width:auto;vertical-align:middle;"></a>
+<!-- SKIP LINK -->
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- ═══ NAV ═══ -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <a href="/index.html" class="nav-logo" aria-label="The Firewalkers — home">
+    <img src="images/logos/firewalker-logo.png" alt="The Firewalkers">
+  </a>
   <div class="nav-links">
-    <a href="#protect">What We Protect</a>
-    <a href="#platform">What We Build</a>
-    <a href="good-ai.html">Good AI</a>
-    <a href="hearth.html">The Hearth</a>
-    <a href="campaigns.html">Campaigns</a>
-    <a href="community.html">Community</a>
-    <a href="media.html">Media</a>
-    <a href="#signup" class="nav-cta">Join the Fire</a>
+    <a href="/index.html#protect">What We Protect</a>
+    <a href="/good-ai.html">Good AI</a>
+    <a href="/campaigns.html">Campaigns</a>
+    <a href="/datacentre-watch.html">Data Centre Watch</a>
+    <a href="/hearth.html">From the Hearth</a>
+    <a href="/community.html">Community</a>
+    <a href="/media.html">Media</a>
+    <a href="/index.html#signup" class="nav-cta">Join the Fire</a>
   </div>
-  <button class="nav-toggle" id="navToggle" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="22" height="22"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="22" height="22" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
 </nav>
 
-<div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-close" onclick="closeMM()">✕ Close</button>
-  <a href="#hero" class="mobile-brand" onclick="closeMM()"><img src="images/logos/firewalker-logo.png" alt="The Firewalkers" style="height:26px;width:auto;vertical-align:middle;filter:brightness(1.2);"></a>
-  <a href="#protect" class="mobile-link" onclick="closeMM()">What We Protect</a>
-  <a href="#platform" class="mobile-link" onclick="closeMM()">What We Build</a>
-  <a href="good-ai.html" class="mobile-link" onclick="closeMM()">Good AI</a>
-  <a href="hearth.html" class="mobile-link" onclick="closeMM()">The Hearth</a>
-  <a href="campaigns.html" class="mobile-link" onclick="closeMM()">Campaigns</a>
-  <a href="community.html" class="mobile-link" onclick="closeMM()">Community</a>
-  <a href="media.html" class="mobile-link" onclick="closeMM()">Media</a>
-  <a href="#signup" class="mobile-cta-link" onclick="closeMM()">Join the Fire</a>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Site navigation">
+  <button class="mobile-close" onclick="closeMM()" aria-label="Close menu">✕ Close</button>
+  <a href="/index.html" class="mobile-logo" onclick="closeMM()"><img src="images/logos/firewalker-logo.png" alt="The Firewalkers"></a>
+  <a href="/index.html#protect" class="mobile-link" onclick="closeMM()">What We Protect</a>
+  <a href="/good-ai.html" class="mobile-link" onclick="closeMM()">Good AI</a>
+  <a href="/campaigns.html" class="mobile-link" onclick="closeMM()">Campaigns</a>
+  <a href="/datacentre-watch.html" class="mobile-link" onclick="closeMM()">Data Centre Watch</a>
+  <a href="/hearth.html" class="mobile-link" onclick="closeMM()">From the Hearth</a>
+  <a href="/community.html" class="mobile-link" onclick="closeMM()">Community</a>
+  <a href="/media.html" class="mobile-link" onclick="closeMM()">Media</a>
+  <a href="/index.html#signup" class="mobile-cta-link" onclick="closeMM()">Join the Fire</a>
 </div>
 
-<!-- ═══════════════════════════════ HERO ════════════════════════════════ -->
-<section id="hero">
+<main id="main">
+
+<!-- ═══ HERO ═══ -->
+<section id="hero" aria-label="Hero">
   <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1601465364325-34b5b5fdb6c4?auto=format&fit=crop&w=1920&q=80" alt="Ring of Brodgar, Scotland — ancient land under ancient skies">
+    <img src="https://images.unsplash.com/photo-1601465364325-34b5b5fdb6c4?auto=format&fit=crop&w=1920&q=80" alt="Ring of Brodgar, Orkney — standing stones at dusk, ancient land under vast skies" loading="eager">
   </div>
-  <div class="hero-overlay"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
   <div class="hero-content">
     <span class="hero-eyebrow">A global movement · for the living world</span>
     <h1 class="hero-title">
@@ -334,7 +341,7 @@ footer{background:var(--earth);padding:3rem 4rem 2rem;border-top:1px solid rgba(
       <a href="#signup" class="btn-primary">Join the fire</a>
       <a href="#protect" class="btn-secondary">What is at stake</a>
     </div>
-    <div class="hero-share">
+    <div class="hero-share" aria-label="Share this page">
       Share this:
       <a href="https://twitter.com/intent/tweet?text=Every+place+you+love+is+being+decided+right+now.+%F0%9F%94%A5+firewalkers.earth" target="_blank" rel="noopener">X</a>
       <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ffirewalkers.earth" target="_blank" rel="noopener">LinkedIn</a>
@@ -343,85 +350,52 @@ footer{background:var(--earth);padding:3rem 4rem 2rem;border-top:1px solid rgba(
   </div>
 </section>
 
-<!-- ═══════════════════════════ URGENCY BAND ═════════════════════════════ -->
-<div class="urgency-band">
+<!-- ═══ URGENCY BAND ═══ -->
+<div class="urgency-band" role="region" aria-label="Key statistics">
   <div class="u-stat"><span class="u-num">2,000+</span><span class="u-label">New data centres planned globally</span></div>
   <div class="u-stat"><span class="u-num">12 weeks</span><span class="u-label">Average community consultation window</span></div>
   <div class="u-stat"><span class="u-num">22%</span><span class="u-label">Of Ireland's electricity consumed by data centres</span></div>
   <div class="u-stat"><span class="u-num">Now</span><span class="u-label">The moment to act</span></div>
 </div>
 
-<!-- ════════════════════════ WHAT WE PROTECT ════════════════════════════ -->
+<!-- ═══ WHAT WE PROTECT ═══ -->
 <section id="protect" class="biomes-section">
   <div class="biomes-inner">
     <span class="section-eyebrow reveal">What is at stake</span>
     <h2 class="biomes-title reveal">The living world<br>we are <em>fighting for</em></h2>
     <p class="biomes-intro reveal">Not abstract concepts. Specific places. The forest you walked as a child. The river your ancestors named. The wetland no planning application has ever called beautiful. All of it matters. All of it is under threat.</p>
-
-    <div class="biomes-grid">
-
-      <div class="biome-card">
-        <img src="https://images.unsplash.com/photo-1671271834624-c80b23aabfc8?auto=format&fit=crop&w=800&q=75" alt="Ancient forest">
-        <div class="biome-overlay"></div>
-        <div class="biome-content">
-          <span class="biome-tag">Ancient forests</span>
-          <div class="biome-name">Woodland & Forest</div>
-          <div class="biome-threat">Being cleared for server farms. Ancient groves replaced with cooling towers.</div>
-        </div>
+    <div class="biomes-grid" role="list">
+      <div class="biome-card reveal" role="listitem">
+        <img src="https://images.unsplash.com/photo-1671271834624-c80b23aabfc8?auto=format&fit=crop&w=800&q=75" alt="Ancient misty forest" loading="lazy">
+        <div class="biome-overlay" aria-hidden="true"></div>
+        <div class="biome-content"><span class="biome-tag">Ancient forests</span><div class="biome-name">Woodland &amp; Forest</div><div class="biome-threat">Being cleared for server farms. Ancient groves replaced with cooling towers.</div></div>
       </div>
-
-      <div class="biome-card">
-        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=75" alt="River and stream">
-        <div class="biome-overlay"></div>
-        <div class="biome-content">
-          <span class="biome-tag">Rivers & streams</span>
-          <div class="biome-name">Freshwater</div>
-          <div class="biome-threat">AI cooling systems drawing billions of litres from aquifers and rivers daily.</div>
-        </div>
+      <div class="biome-card reveal" role="listitem">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=75" alt="River flowing through mountain landscape" loading="lazy">
+        <div class="biome-overlay" aria-hidden="true"></div>
+        <div class="biome-content"><span class="biome-tag">Rivers &amp; streams</span><div class="biome-name">Freshwater</div><div class="biome-threat">AI cooling systems drawing billions of litres from aquifers and rivers daily.</div></div>
       </div>
-
-      <div class="biome-card">
-        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=800&q=75" alt="Wetlands and farmland">
-        <div class="biome-overlay"></div>
-        <div class="biome-content">
-          <span class="biome-tag">Wetlands & farmland</span>
-          <div class="biome-name">Living Soil</div>
-          <div class="biome-threat">Drained and developed before communities know what has been approved.</div>
-        </div>
+      <div class="biome-card reveal" role="listitem">
+        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=800&q=75" alt="Farmland and wetland aerial view" loading="lazy">
+        <div class="biome-overlay" aria-hidden="true"></div>
+        <div class="biome-content"><span class="biome-tag">Wetlands &amp; farmland</span><div class="biome-name">Living Soil</div><div class="biome-threat">Drained and developed before communities know what has been approved.</div></div>
       </div>
-
-      <div class="biome-card">
-        <img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=800&q=75" alt="Coastline and ocean">
-        <div class="biome-overlay"></div>
-        <div class="biome-content">
-          <span class="biome-tag">Coastlines & oceans</span>
-          <div class="biome-name">Sea & Shore</div>
-          <div class="biome-threat">Warming, acidifying — and now under industrial pressure from offshore infrastructure.</div>
-        </div>
+      <div class="biome-card reveal" role="listitem">
+        <img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=800&q=75" alt="Coastline and ocean" loading="lazy">
+        <div class="biome-overlay" aria-hidden="true"></div>
+        <div class="biome-content"><span class="biome-tag">Coastlines &amp; oceans</span><div class="biome-name">Sea &amp; Shore</div><div class="biome-threat">Warming, acidifying — and now under industrial pressure from offshore infrastructure.</div></div>
       </div>
-
-      <div class="biome-card">
-        <img src="https://images.unsplash.com/photo-1601465364325-34b5b5fdb6c4?auto=format&fit=crop&w=800&q=75" alt="Sacred sites">
-        <div class="biome-overlay"></div>
-        <div class="biome-content">
-          <span class="biome-tag">Sacred sites</span>
-          <div class="biome-name">Ancient Places</div>
-          <div class="biome-threat">Planning applications that treat five thousand years of human relationship as a footnote.</div>
-        </div>
+      <div class="biome-card reveal" role="listitem">
+        <img src="https://images.unsplash.com/photo-1601465364325-34b5b5fdb6c4?auto=format&fit=crop&w=800&q=75" alt="Standing stones at dusk — sacred ancient site" loading="lazy">
+        <div class="biome-overlay" aria-hidden="true"></div>
+        <div class="biome-content"><span class="biome-tag">Sacred sites</span><div class="biome-name">Ancient Places</div><div class="biome-threat">Planning applications that treat five thousand years of human relationship as a footnote.</div></div>
       </div>
-
-      <div class="biome-card">
-        <img src="https://images.unsplash.com/photo-1626078296870-c2c2bfaaa037?auto=format&fit=crop&w=800&q=75" alt="Mountains and uplands">
-        <div class="biome-overlay"></div>
-        <div class="biome-content">
-          <span class="biome-tag">Mountains & uplands</span>
-          <div class="biome-name">High Ground</div>
-          <div class="biome-threat">Windswept and vast — and increasingly subject to industrial extraction on a planetary scale.</div>
-        </div>
+      <div class="biome-card reveal" role="listitem">
+        <img src="https://images.unsplash.com/photo-1626078296870-c2c2bfaaa037?auto=format&fit=crop&w=800&q=75" alt="Scottish Highlands landscape" loading="lazy">
+        <div class="biome-overlay" aria-hidden="true"></div>
+        <div class="biome-content"><span class="biome-tag">Mountains &amp; uplands</span><div class="biome-name">High Ground</div><div class="biome-threat">Windswept and vast — and increasingly subject to industrial extraction on a planetary scale.</div></div>
       </div>
-
     </div>
-
     <p style="text-align:center;margin-top:2.5rem;font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(250,245,236,0.35);">
       Every biome. Every bioregion. Every continent.
       <a href="campaigns.html" style="color:var(--amber-bright);text-decoration:none;margin-left:1rem;">See active campaigns →</a>
@@ -429,75 +403,30 @@ footer{background:var(--earth);padding:3rem 4rem 2rem;border-top:1px solid rgba(
   </div>
 </section>
 
-<!-- ═══════════════════════════ SPIRITUAL ════════════════════════════════ -->
-<section id="spirit" class="spirit-section">
+<!-- ═══ SPIRITUAL ═══ -->
+<section id="spirit" class="spirit-section" aria-label="Spiritual traditions">
   <div class="spirit-inner">
-    <p class="spirit-opening reveal">
-      Every tradition that has survived<br>long enough to know the earth<br>carries <em>the same knowing.</em>
-    </p>
-
-    <div class="traditions">
-
-      <div class="tradition reveal">
-        <span class="tradition-faith">Druidry</span>
-        <span class="tradition-knowing">We are the voice of the grove. The land speaks through us when we are still enough to listen.</span>
-      </div>
-
-      <div class="tradition reveal">
-        <span class="tradition-faith">Islam</span>
-        <span class="tradition-knowing">We are khalifa — stewards of creation, accountable before God for what we leave behind.</span>
-      </div>
-
-      <div class="tradition reveal">
-        <span class="tradition-faith">Celtic Christianity</span>
-        <span class="tradition-knowing">The whole earth is a thin place. The sacred is barely concealed beneath the surface of every stone and stream.</span>
-      </div>
-
-      <div class="tradition reveal">
-        <span class="tradition-faith">Buddhism</span>
-        <span class="tradition-knowing">Every thread pulled affects the whole web. The harm done to any one living thing is the diminishment of all.</span>
-      </div>
-
-      <div class="tradition reveal">
-        <span class="tradition-faith">Indigenous traditions</span>
-        <span class="tradition-knowing">The land is not property. It is ancestor, teacher, relative. You cannot own what you belong to.</span>
-      </div>
-
-      <div class="tradition reveal">
-        <span class="tradition-faith">Judaism</span>
-        <span class="tradition-knowing">Bal tashchit. We are forbidden to destroy. What we were given, we must return intact.</span>
-      </div>
-
-      <div class="tradition reveal">
-        <span class="tradition-faith">Hinduism</span>
-        <span class="tradition-knowing">The rivers are sacred. The earth is mother. She is not a resource. She is the ground of all being.</span>
-      </div>
-
-      <div class="tradition reveal">
-        <span class="tradition-faith">Quaker</span>
-        <span class="tradition-knowing">There is that of God in every living thing. To destroy it carelessly is to refuse to see what is there.</span>
-      </div>
-
-      <div class="tradition reveal">
-        <span class="tradition-faith">No faith</span>
-        <span class="tradition-knowing">You don't need a tradition to feel it. Some things are simply worth protecting. You already know which ones.</span>
-      </div>
-
+    <p class="spirit-opening reveal">Every tradition that has survived<br>long enough to know the earth<br>carries <em>the same knowing.</em></p>
+    <div class="traditions" role="list">
+      <div class="tradition reveal" role="listitem"><span class="tradition-faith">Druidry</span><span class="tradition-knowing">We are the voice of the grove. The land speaks through us when we are still enough to listen.</span></div>
+      <div class="tradition reveal" role="listitem"><span class="tradition-faith">Islam</span><span class="tradition-knowing">We are khalifa — stewards of creation, accountable before God for what we leave behind.</span></div>
+      <div class="tradition reveal" role="listitem"><span class="tradition-faith">Celtic Christianity</span><span class="tradition-knowing">The whole earth is a thin place. The sacred is barely concealed beneath the surface of every stone and stream.</span></div>
+      <div class="tradition reveal" role="listitem"><span class="tradition-faith">Buddhism</span><span class="tradition-knowing">Every thread pulled affects the whole web. The harm done to any one living thing is the diminishment of all.</span></div>
+      <div class="tradition reveal" role="listitem"><span class="tradition-faith">Indigenous traditions</span><span class="tradition-knowing">The land is not property. It is ancestor, teacher, relative. You cannot own what you belong to.</span></div>
+      <div class="tradition reveal" role="listitem"><span class="tradition-faith">Judaism</span><span class="tradition-knowing">Bal tashchit. We are forbidden to destroy. What we were given, we must return intact.</span></div>
+      <div class="tradition reveal" role="listitem"><span class="tradition-faith">Hinduism</span><span class="tradition-knowing">The rivers are sacred. The earth is mother. She is not a resource. She is the ground of all being.</span></div>
+      <div class="tradition reveal" role="listitem"><span class="tradition-faith">Quaker</span><span class="tradition-knowing">There is that of God in every living thing. To destroy it carelessly is to refuse to see what is there.</span></div>
+      <div class="tradition reveal" role="listitem"><span class="tradition-faith">No faith</span><span class="tradition-knowing">You don't need a tradition to feel it. Some things are simply worth protecting. You already know which ones.</span></div>
     </div>
-
-    <p class="spirit-close reveal">
-      The Firewalkers is where all those voices meet —<br>
-      <strong>at the intersection of ancient knowing and modern tools.</strong>
-    </p>
+    <p class="spirit-close reveal">The Firewalkers is where all those voices meet —<br><strong>at the intersection of ancient knowing and modern tools.</strong></p>
   </div>
 </section>
 
-<!-- ════════════════════ THE PROBLEM STATEMENT ══════════════════════════ -->
+<!-- ═══ PROBLEM STATEMENT ═══ -->
 <section id="pattern" class="problem-section">
   <div class="section-inner">
     <div class="section-label reveal">The Moment We Are In</div>
     <h2 class="section-title reveal">We have seen this <em>pattern before.</em></h2>
-
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:2.5rem;">
       <div class="problem-story reveal">
         <p>In the 1840s, railway mania transformed Britain in a decade. Genuine innovation. Real transformation. And vast speculative excess that extracted, consolidated and moved on — leaving the damage behind.</p>
@@ -506,9 +435,7 @@ footer{background:var(--earth);padding:3rem 4rem 2rem;border-top:1px solid rgba(
         <p><strong>The AI revolution is the fastest land grab in human history.</strong> And most of it is happening in 12-week planning windows that communities don't know exist.</p>
       </div>
       <div class="reveal">
-        <div class="problem-highlight">
-          We are not anti-AI. We are not against progress. We are against the idea that the earth is a blank space on a planning map — and that the future belongs only to those who move fastest.
-        </div>
+        <div class="problem-highlight">We are not anti-AI. We are not against progress. We are against the idea that the earth is a blank space on a planning map — and that the future belongs only to those who move fastest.</div>
         <p style="font-size:0.92rem;color:var(--mist);line-height:1.8;margin-top:1.5rem;">Technology should leave the world richer than it found it. That is not a constraint on innovation. It is the condition under which innovation becomes worth having.</p>
         <a href="good-ai.html" style="display:inline-block;margin-top:1.5rem;font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber);text-decoration:none;">Use AI to fight back →</a>
       </div>
@@ -516,148 +443,80 @@ footer{background:var(--earth);padding:3rem 4rem 2rem;border-top:1px solid rgba(
   </div>
 </section>
 
-<!-- ══════════════════════ WHO WALKS WITH US ════════════════════════════ -->
+<!-- ═══ WHO WALKS WITH US ═══ -->
 <section class="who-section">
   <div class="section-inner">
     <div class="section-label reveal">Who Belongs Here</div>
     <h2 class="section-title reveal">If you love a place,<br>you <em>belong here.</em></h2>
     <p class="reveal" style="max-width:680px;color:var(--earth-mid);margin-bottom:0.5rem;">Any age. Any background. Any tradition. Any skill level. The Firewalkers is a big tent — and it is held up by everyone who shows up.</p>
-
-    <div class="who-grid" style="margin-top:2.5rem;">
-      <div class="who-card reveal">
-        <span class="who-icon">🤖</span>
-        <h3>AI & Tech builders</h3>
-        <p>Engineers, data scientists, product people who want their work to mean something beyond the next sprint.</p>
-      </div>
-      <div class="who-card reveal">
-        <span class="who-icon">🌿</span>
-        <h3>Ecologists & scientists</h3>
-        <p>People whose knowledge of the living world should be in every planning objection but rarely is.</p>
-      </div>
-      <div class="who-card reveal">
-        <span class="who-icon">✊</span>
-        <h3>Community organisers</h3>
-        <p>People who know how to build a campaign — and want better tools to do it with.</p>
-      </div>
-      <div class="who-card reveal">
-        <span class="who-icon">🔥</span>
-        <h3>People of faith & spirit</h3>
-        <p>Druids, Muslims, Quakers, Buddhists, Christians, pagans — anyone whose practice is rooted in the living world.</p>
-      </div>
-      <div class="who-card reveal">
-        <span class="who-icon">⚖️</span>
-        <h3>Lawyers & planners</h3>
-        <p>Your knowledge of how the system works is exactly what communities fighting it don't have.</p>
-      </div>
-      <div class="who-card reveal">
-        <span class="who-icon">✍️</span>
-        <h3>Writers & communicators</h3>
-        <p>The people who can make a planning objection feel like what it is — a declaration of love for a place.</p>
-      </div>
-      <div class="who-card reveal">
-        <span class="who-icon">🌾</span>
-        <h3>Farmers & land workers</h3>
-        <p>People who know the land from the inside and have been watching decisions made about it from far away.</p>
-      </div>
-      <div class="who-card reveal">
-        <span class="who-icon">📱</span>
-        <h3>Students & digital natives</h3>
-        <p>School kids, students, anyone under 30 who understands how this all works and wants to use it for the right things.</p>
-      </div>
+    <div class="who-grid" style="margin-top:2.5rem;" role="list">
+      <div class="who-card reveal" role="listitem"><span class="who-icon" aria-hidden="true">🤖</span><h3>AI &amp; Tech builders</h3><p>Engineers, data scientists, product people who want their work to mean something beyond the next sprint.</p></div>
+      <div class="who-card reveal" role="listitem"><span class="who-icon" aria-hidden="true">🌿</span><h3>Ecologists &amp; scientists</h3><p>People whose knowledge of the living world should be in every planning objection but rarely is.</p></div>
+      <div class="who-card reveal" role="listitem"><span class="who-icon" aria-hidden="true">✊</span><h3>Community organisers</h3><p>People who know how to build a campaign — and want better tools to do it with.</p></div>
+      <div class="who-card reveal" role="listitem"><span class="who-icon" aria-hidden="true">🔥</span><h3>People of faith &amp; spirit</h3><p>Druids, Muslims, Quakers, Buddhists, Christians, pagans — anyone whose practice is rooted in the living world.</p></div>
+      <div class="who-card reveal" role="listitem"><span class="who-icon" aria-hidden="true">⚖️</span><h3>Lawyers &amp; planners</h3><p>Your knowledge of how the system works is exactly what communities fighting it don't have.</p></div>
+      <div class="who-card reveal" role="listitem"><span class="who-icon" aria-hidden="true">✍️</span><h3>Writers &amp; communicators</h3><p>The people who can make a planning objection feel like what it is — a declaration of love for a place.</p></div>
+      <div class="who-card reveal" role="listitem"><span class="who-icon" aria-hidden="true">🌾</span><h3>Farmers &amp; land workers</h3><p>People who know the land from the inside and have been watching decisions made about it from far away.</p></div>
+      <div class="who-card reveal" role="listitem"><span class="who-icon" aria-hidden="true">📱</span><h3>Students &amp; digital natives</h3><p>School kids, students, anyone under 30 who understands how this all works and wants to use it for the right things.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════ PLATFORM VISION ══════════════════════════════ -->
+<!-- ═══ PLATFORM VISION ═══ -->
 <section id="platform" class="platform-section">
   <div class="section-inner">
     <div class="section-label reveal" style="color:var(--amber-bright);">What We Are Building Together</div>
     <h2 class="section-title reveal" style="color:var(--parchment);">A living resource —<br><em style="color:var(--amber-bright);">not a monument</em></h2>
-    <p class="reveal" style="max-width:680px;color:rgba(250,245,236,0.5);margin-bottom:0.5rem;font-size:1rem;line-height:1.85;">Built by the community. Shaped by what people actually need. Growing every week.</p>
-
-    <div class="platform-grid" style="margin-top:2.5rem;">
-      <div class="platform-card live reveal">
-        <span class="pc-status">Live now</span>
-        <h3>AI Planning Toolkit</h3>
-        <p>Free prompts to analyse planning applications, draft objection letters and understand community rights — no technical knowledge needed.</p>
-      </div>
-      <div class="platform-card live reveal">
-        <span class="pc-status">Live now</span>
-        <h3>Sustainable AI Guide</h3>
-        <p>Models and tools that run locally, use less energy, and keep your data off corporate servers. AI that costs less to the earth.</p>
-      </div>
-      <div class="platform-card live reveal">
-        <span class="pc-status">Live now</span>
-        <h3>Campaigns Hub</h3>
-        <p>Active campaigns from the community — with tools, templates and contacts for the fights that are happening right now.</p>
-      </div>
-      <div class="platform-card live reveal">
-        <span class="pc-status">Live now</span>
-        <h3>From the Hearth</h3>
-        <p>Writing, ideas, stories and analysis from the community. The fire that keeps the conversation alive between campaigns.</p>
-      </div>
-      <div class="platform-card building reveal">
-        <span class="pc-status">Building</span>
-        <h3>Community Wall</h3>
-        <p>The growing global community of Firewalkers — who they are, where they are, what they protect and how they walk with the land.</p>
-      </div>
-      <div class="platform-card building reveal">
-        <span class="pc-status">Building</span>
-        <h3>Global Not-for-profit</h3>
-        <p>Establishing the legal structure that will let this grow into the global resource it needs to be. Help wanted.</p>
-      </div>
+    <p class="reveal" style="max-width:680px;color:rgba(250,245,236,0.55);margin-bottom:0.5rem;font-size:1rem;line-height:1.85;">Built by the community. Shaped by what people actually need. Growing every week.</p>
+    <div class="platform-grid" style="margin-top:2.5rem;" role="list">
+      <div class="platform-card live reveal" role="listitem"><span class="pc-status">Live now</span><h3>AI Planning Toolkit</h3><p>Free prompts to analyse planning applications, draft objection letters and understand community rights — no technical knowledge needed.</p></div>
+      <div class="platform-card live reveal" role="listitem"><span class="pc-status">Live now</span><h3>Sustainable AI Guide</h3><p>Models and tools that run locally, use less energy, and keep your data off corporate servers. AI that costs less to the earth.</p></div>
+      <div class="platform-card live reveal" role="listitem"><span class="pc-status">Live now</span><h3>Campaigns Hub</h3><p>Active campaigns from the community — with tools, templates and contacts for the fights that are happening right now.</p></div>
+      <div class="platform-card live reveal" role="listitem"><span class="pc-status">Live now</span><h3>Data Centre Watch</h3><p>Intelligence on planned and approved data centre developments. Report a site. Know what is coming before it arrives.</p></div>
+      <div class="platform-card live reveal" role="listitem"><span class="pc-status">Live now</span><h3>From the Hearth</h3><p>Writing, ideas, stories and analysis from the community. The fire that keeps the conversation alive between campaigns.</p></div>
+      <div class="platform-card building reveal" role="listitem"><span class="pc-status">Building</span><h3>Global Not-for-profit</h3><p>Establishing the legal structure that will let this grow into the global resource it needs to be. Help wanted.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════ COMMUNITY PREVIEW ════════════════════════════ -->
+<!-- ═══ COMMUNITY PREVIEW ═══ -->
 <section class="community-preview">
   <div class="section-inner">
     <div class="section-label reveal">Around the Hearth</div>
     <h2 class="section-title reveal">The fire burns<br>brighter with more <em>around it.</em></h2>
-    <p class="reveal" style="max-width:680px;color:var(--earth-mid);margin-bottom:0.5rem;font-size:1rem;line-height:1.85;">Firewalkers from around the world — every bioregion, every tradition, every skill. Growing every day.</p>
-
+    <p class="reveal" style="max-width:680px;color:var(--earth-mid);margin-bottom:0.5rem;font-size:1rem;line-height:1.85;">Firewalkers from around the world — every bioregion, every tradition, every skill. The first hundred names on this wall are the foundation.</p>
     <div class="cp-grid" style="margin-top:2.5rem;">
-
-      <!-- FOUNDER -->
       <div class="cp-card reveal">
-        <div class="cp-initial founder">S.</div>
+        <div class="cp-initial">S.</div>
         <div class="cp-location">Edinburgh, Scotland</div>
         <div class="cp-path">Tends the land</div>
         <div class="cp-place">"The sacred landscapes of Rosslyn and ancient Britain"</div>
       </div>
-
-      <!-- EMPTY SLOTS -->
-      <div class="cp-empty reveal">
-        <p>The next Firewalker<br>to come to the fire.</p>
-        <a href="#signup">Join the community →</a>
+      <div class="cp-invitation reveal">
+        <p>Be among the first 100 Firewalkers. Every name on this wall is a statement — that somewhere matters to someone, and that someone showed up.</p>
+        <a href="#signup">Join the movement →</a>
       </div>
-      <div class="cp-empty reveal">
-        <p>A place loved<br>and worth protecting,<br>waiting to be named.</p>
-        <a href="#signup">Join the community →</a>
+      <div class="cp-invitation reveal">
+        <p>What place do you love? What would you walk through fire to protect? Add your voice to the wall.</p>
+        <a href="#signup">Come to the fire →</a>
       </div>
-      <div class="cp-empty reveal">
-        <p>Perhaps<br>you.</p>
-        <a href="#signup">Join the community →</a>
+      <div class="cp-invitation reveal">
+        <p>The Firewalkers grows one person at a time. Each one knows a place worth protecting. Your place is waiting to be named.</p>
+        <a href="#signup">Name it here →</a>
       </div>
-
     </div>
-
     <div style="text-align:center;margin-top:2rem;">
       <a href="community.html" style="font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber);text-decoration:none;">See everyone around the hearth →</a>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════ FROM THE HEARTH ══════════════════════════════ -->
+<!-- ═══ FROM THE HEARTH ═══ -->
 <section class="hearth-preview">
   <div class="section-inner">
     <div class="section-label reveal">From the Hearth</div>
     <h2 class="section-title reveal">Words from <em>the path</em></h2>
-
     <div class="hearth-grid" style="margin-top:2.5rem;">
-
-      <!-- LATEST POST -->
       <article class="post-card urgent reveal">
         <span class="post-tag">Open Invitation · Urgent</span>
         <h3>The Land Is Being Taken. Come Help Us Fight Back.</h3>
@@ -667,8 +526,6 @@ footer{background:var(--earth);padding:3rem 4rem 2rem;border-top:1px solid rgba(
           <span class="post-byline">Scott Seivwright · June 2026</span>
         </div>
       </article>
-
-      <!-- PREVIOUS POST -->
       <article class="post-card reveal">
         <span class="post-tag">Founding Story</span>
         <h3>A Technologist, an AI Expert, and a Druid</h3>
@@ -678,112 +535,97 @@ footer{background:var(--earth);padding:3rem 4rem 2rem;border-top:1px solid rgba(
           <span class="post-byline">Scott Seivwright · June 2026</span>
         </div>
       </article>
-
     </div>
-
     <div style="text-align:center;margin-top:2rem;">
       <a href="hearth.html" style="font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber);text-decoration:none;">All posts from the Hearth →</a>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════ SHAREABLE PHRASES ════════════════════════════ -->
-<section class="phrases-section">
+<!-- ═══ SHAREABLE PHRASES ═══ -->
+<section class="phrases-section" aria-label="Shareable phrases">
   <div class="section-inner" style="text-align:center;">
     <span class="section-eyebrow" style="justify-content:center;margin-bottom:1rem;">Share the fire</span>
     <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.5vw,2.5rem);font-weight:300;color:var(--parchment);margin-bottom:0.75rem;">Say it. Send it. Start a conversation.</h2>
-    <p style="font-size:0.95rem;color:rgba(250,245,236,0.4);margin-bottom:0;">Click any line to copy it.</p>
+    <p style="font-size:0.95rem;color:rgba(250,245,236,0.45);margin-bottom:0;">Click any line to copy it.</p>
   </div>
-
-  <div class="phrases-grid" style="max-width:900px;margin:2.5rem auto 0;">
-    <button class="phrase-item" onclick="copyPhrase(this)">
-      <span class="phrase-text">Technology should leave the world richer than it found it.</span>
-      <span class="phrase-copy">Copy →</span>
-    </button>
-    <button class="phrase-item" onclick="copyPhrase(this)">
-      <span class="phrase-text">We are not anti-AI. We are pro-wisdom.</span>
-      <span class="phrase-copy">Copy →</span>
-    </button>
-    <button class="phrase-item" onclick="copyPhrase(this)">
-      <span class="phrase-text">Every place you love is being decided right now.</span>
-      <span class="phrase-copy">Copy →</span>
-    </button>
-    <button class="phrase-item" onclick="copyPhrase(this)">
-      <span class="phrase-text">The land has always survived because someone kept showing up.</span>
-      <span class="phrase-copy">Copy →</span>
-    </button>
-    <button class="phrase-item" onclick="copyPhrase(this)">
-      <span class="phrase-text">The question is not whether to build the future. The question is whether we build it wisely.</span>
-      <span class="phrase-copy">Copy →</span>
-    </button>
-    <button class="phrase-item" onclick="copyPhrase(this)">
-      <span class="phrase-text">Communities are given 12 weeks to object to decisions that will last a century.</span>
-      <span class="phrase-copy">Copy →</span>
-    </button>
+  <div class="phrases-grid">
+    <button class="phrase-item" onclick="copyPhrase(this)" aria-label="Copy: Technology should leave the world richer than it found it."><span class="phrase-text">Technology should leave the world richer than it found it.</span><span class="phrase-copy" aria-hidden="true">Copy →</span></button>
+    <button class="phrase-item" onclick="copyPhrase(this)" aria-label="Copy: We are not anti-AI. We are pro-wisdom."><span class="phrase-text">We are not anti-AI. We are pro-wisdom.</span><span class="phrase-copy" aria-hidden="true">Copy →</span></button>
+    <button class="phrase-item" onclick="copyPhrase(this)" aria-label="Copy: Every place you love is being decided right now."><span class="phrase-text">Every place you love is being decided right now.</span><span class="phrase-copy" aria-hidden="true">Copy →</span></button>
+    <button class="phrase-item" onclick="copyPhrase(this)" aria-label="Copy: The land has always survived because someone kept showing up."><span class="phrase-text">The land has always survived because someone kept showing up.</span><span class="phrase-copy" aria-hidden="true">Copy →</span></button>
+    <button class="phrase-item" onclick="copyPhrase(this)" aria-label="Copy: The question is not whether to build the future. The question is whether we build it wisely."><span class="phrase-text">The question is not whether to build the future. The question is whether we build it wisely.</span><span class="phrase-copy" aria-hidden="true">Copy →</span></button>
+    <button class="phrase-item" onclick="copyPhrase(this)" aria-label="Copy: Communities are given 12 weeks to object to decisions that will last a century."><span class="phrase-text">Communities are given 12 weeks to object to decisions that will last a century.</span><span class="phrase-copy" aria-hidden="true">Copy →</span></button>
   </div>
 </section>
 
-<!-- ════════════════════════ SIGN UP ════════════════════════════════════ -->
-<section id="signup">
+<!-- ═══ SIGN UP ═══ -->
+<section id="signup" aria-labelledby="signup-heading">
   <div class="signup-inner">
     <div class="signup-left">
       <div class="section-label">Join the Movement</div>
-      <h2>The fire burns <em>brighter</em><br>with more around it</h2>
+      <h2 id="signup-heading">The fire burns <em>brighter</em><br>with more around it</h2>
       <p>Join the Firewalkers. Tell us what you're called, what place you love, and how you walk with the land. We'll write when there's something worth saying.</p>
-      <ul class="signup-promises">
+      <ul class="signup-promises" role="list">
         <li>No noise — only signal</li>
         <li>Campaign alerts when action is needed</li>
         <li>New tools as they're built</li>
         <li>Unsubscribe any time</li>
       </ul>
     </div>
-
-    <div class="signup-right">
-      <form method="post" action="https://sendfox.com/form/19npyy/1xx6rz" class="sendfox-form" id="1xx6rz" data-async="true" data-recaptcha="false">
-
-        <div class="field-group"><label for="sendfox_form_called">What do we call you?</label>
-        <input type="text" id="sendfox_form_called" name="contact_fields[called]" placeholder="Blaze, Scott, the person who loves a particular hill..." /></div>
-
-        <div class="field-group"><label for="sendfox_form_email">Email <span style="color:var(--urgent);font-size:0.8em;">*</span></label>
-        <input type="email" id="sendfox_form_email" placeholder="your@email.com" name="email" required /></div>
-
-        <div class="field-group"><label for="sendfox_form_location">Where in the world are you? <span style="font-style:italic;text-transform:none;letter-spacing:0;font-size:0.9rem;color:var(--mist);">optional</span></label>
-        <input type="text" id="sendfox_form_location" name="contact_fields[where_in_the_world]" placeholder="Edinburgh, Kilkenny, Melbourne, anywhere..." /></div>
-
-        <div class="field-group"><label for="sendfox_form_what_place_do_you_love">What place do you love?</label>
-        <input type="text" id="sendfox_form_what_place_do_you_love" name="contact_fields[what_place_do_you_love]" placeholder="A forest, a river, a coastline, a city park..." /></div>
-
-        <div class="field-group"><label for="sendfox_form_how_do_you_walk_with_the_land">How do you walk with the land?</label>
-        <select id="sendfox_form_how_do_you_walk_with_the_land" name="contact_fields[how_do_you_walk_with_the_land]">
-          <option value="">Choose one...</option>
-          <option value="I walk it">I walk it — presence, hiking, being in nature</option>
-          <option value="I tend it">I tend it — gardener, farmer, steward</option>
-          <option value="I fight for it">I fight for it — campaigner, activist</option>
-          <option value="I study it">I study it — researcher, scientist, ecologist</option>
-          <option value="I build on it">I build on it — tech or engineer, trying to do it right</option>
-          <option value="I dream of it">I dream of it — spiritual, druid, faith, contemplative</option>
-          <option value="I just know it matters">I just know it matters</option>
-        </select></div>
-
-        <div class="field-group"><label for="sendfox_form_what_threatens_your_place_right_now">What threatens your place? <span style="font-style:italic;text-transform:none;letter-spacing:0;font-size:0.9rem;color:var(--mist);">optional</span></label>
-        <select id="sendfox_form_what_threatens_your_place_right_now" name="contact_fields[what_threatens_your_place_right_now]">
-          <option value="">Choose one...</option>
-          <option value="Data centre or tech infrastructure">Data centre or tech infrastructure</option>
-          <option value="Extraction or mining">Extraction or mining</option>
-          <option value="Development or planning">Development or planning</option>
-          <option value="Climate or environmental change">Climate or environmental change</option>
-          <option value="Nothing yet — just keeping watch">Nothing yet — just keeping watch</option>
-          <option value="Something else">Something else</option>
-        </select></div>
-
+    <div>
+      <form method="post" action="https://sendfox.com/form/19npyy/1xx6rz" class="sendfox-form" id="1xx6rz" data-async="true" data-recaptcha="false" novalidate>
         <div class="field-group">
-        <label class="gdpr-label"><input type="checkbox" name="gdpr" value="1" required style="width:auto;"> I agree to receive updates from The Firewalkers. Unsubscribe any time.</label></div>
-
-        <div style="position:absolute;left:-5000px;" aria-hidden="true"><input type="text" name="a_password" tabindex="-1" value="" autocomplete="off" /></div>
+          <label for="sf_called">What do we call you?</label>
+          <input type="text" id="sf_called" name="contact_fields[called]" placeholder="Blaze, Scott, the person who loves a particular hill...">
+        </div>
+        <div class="field-group">
+          <label for="sf_email">Email <span style="color:var(--urgent);" aria-label="required">*</span></label>
+          <input type="email" id="sf_email" placeholder="your@email.com" name="email" required autocomplete="email">
+        </div>
+        <div class="field-group">
+          <label for="sf_location">Where in the world are you? <span style="font-style:italic;text-transform:none;letter-spacing:0;font-size:0.9rem;color:var(--mist);">optional</span></label>
+          <input type="text" id="sf_location" name="contact_fields[where_in_the_world]" placeholder="Edinburgh, Kilkenny, Melbourne, anywhere...">
+        </div>
+        <div class="field-group">
+          <label for="sf_place">What place do you love?</label>
+          <input type="text" id="sf_place" name="contact_fields[what_place_do_you_love]" placeholder="A forest, a river, a coastline, a city park...">
+        </div>
+        <div class="field-group">
+          <label for="sf_how">How do you walk with the land?</label>
+          <select id="sf_how" name="contact_fields[how_do_you_walk_with_the_land]">
+            <option value="">Choose one...</option>
+            <option value="I walk it">I walk it — presence, hiking, being in nature</option>
+            <option value="I tend it">I tend it — gardener, farmer, steward</option>
+            <option value="I fight for it">I fight for it — campaigner, activist</option>
+            <option value="I study it">I study it — researcher, scientist, ecologist</option>
+            <option value="I build on it">I build on it — tech or engineer, trying to do it right</option>
+            <option value="I dream of it">I dream of it — spiritual, druid, faith, contemplative</option>
+            <option value="I just know it matters">I just know it matters</option>
+          </select>
+        </div>
+        <div class="field-group">
+          <label for="sf_threat">What threatens your place? <span style="font-style:italic;text-transform:none;letter-spacing:0;font-size:0.9rem;color:var(--mist);">optional</span></label>
+          <select id="sf_threat" name="contact_fields[what_threatens_your_place_right_now]">
+            <option value="">Choose one...</option>
+            <option value="Data centre or tech infrastructure">Data centre or tech infrastructure</option>
+            <option value="Extraction or mining">Extraction or mining</option>
+            <option value="Development or planning">Development or planning</option>
+            <option value="Climate or environmental change">Climate or environmental change</option>
+            <option value="Nothing yet — just keeping watch">Nothing yet — just keeping watch</option>
+            <option value="Something else">Something else</option>
+          </select>
+        </div>
+        <div class="field-group">
+          <label class="gdpr-label">
+            <input type="checkbox" name="gdpr" value="1" required style="width:auto;">
+            I agree to receive updates from The Firewalkers. Unsubscribe any time.
+          </label>
+        </div>
+        <div style="position:absolute;left:-5000px;" aria-hidden="true"><input type="text" name="a_password" tabindex="-1" value="" autocomplete="off"></div>
         <button type="submit" class="form-submit-btn" id="signupBtn">Let's start the journey</button>
       </form>
-
-      <div class="form-success" id="signupSuccess">
+      <div class="form-success" id="signupSuccess" role="alert">
         <h4>Welcome to the fire 🔥</h4>
         <p>Check your inbox and reply to the welcome email — even just "hello" — to make sure our messages reach you. Then save our address and you won't miss a thing.</p>
       </div>
@@ -791,14 +633,14 @@ footer{background:var(--earth);padding:3rem 4rem 2rem;border-top:1px solid rgba(
   </div>
 </section>
 
-<!-- ════════════════════════ CONTRIBUTE ═════════════════════════════════ -->
-<section id="submit">
+<!-- ═══ CONTRIBUTE ═══ -->
+<section id="submit" aria-labelledby="submit-heading">
   <div class="submit-inner">
     <div class="submit-left">
       <div class="section-label" style="color:rgba(250,245,236,0.3);">Speak at the Hearth</div>
-      <h2>Shape what<br>this <em>becomes.</em></h2>
+      <h2 id="submit-heading">Shape what<br>this <em>becomes.</em></h2>
       <p>The platform is built by the community. Tell us what you need, what you know, what you've built. Every contribution shapes what gets built next.</p>
-      <ul class="submit-ways">
+      <ul class="submit-ways" role="list">
         <li>Request a tool or resource</li>
         <li>Submit a blog post or article</li>
         <li>Share a campaign that needs support</li>
@@ -806,31 +648,36 @@ footer{background:var(--earth);padding:3rem 4rem 2rem;border-top:1px solid rgba(
         <li>Suggest an organisation to partner with</li>
       </ul>
     </div>
-
     <div>
-      <form id="submitForm" action="https://formspree.io/f/xdajqvje" method="POST">
+      <form id="submitForm" action="https://formspree.io/f/xdajqvje" method="POST" novalidate>
         <input type="hidden" name="_subject" value="Firewalkers Contribution">
-
-        <div class="field-group dark-field"><label>Your name</label><input type="text" name="name" placeholder="How you'd like to be known" required /></div>
-        <div class="field-group dark-field"><label>Email</label><input type="email" name="email" placeholder="your@email.com" required /></div>
-
-        <div class="field-group dark-field"><label>What are you sharing?</label>
-        <select name="type" required>
-          <option value="">Choose one...</option>
-          <option value="tool-request">A tool or resource I need built</option>
-          <option value="blog-post">A blog post or article</option>
-          <option value="campaign">A campaign that needs support</option>
-          <option value="expertise">Expertise or skills I can offer</option>
-          <option value="partnership">An organisation to partner with</option>
-          <option value="other">Something else</option>
-        </select></div>
-
-        <div class="field-group dark-field"><label>Tell us</label><textarea name="message" style="min-height:160px;" placeholder="Write freely. The hearth has space for long fires and short sparks alike." required></textarea></div>
-
+        <div class="field-group dark-field">
+          <label for="sub_name">Your name</label>
+          <input type="text" id="sub_name" name="name" placeholder="How you'd like to be known" required autocomplete="name">
+        </div>
+        <div class="field-group dark-field">
+          <label for="sub_email">Email</label>
+          <input type="email" id="sub_email" name="email" placeholder="your@email.com" required autocomplete="email">
+        </div>
+        <div class="field-group dark-field">
+          <label for="sub_type">What are you sharing?</label>
+          <select id="sub_type" name="type" required>
+            <option value="">Choose one...</option>
+            <option value="tool-request">A tool or resource I need built</option>
+            <option value="blog-post">A blog post or article</option>
+            <option value="campaign">A campaign that needs support</option>
+            <option value="expertise">Expertise or skills I can offer</option>
+            <option value="partnership">An organisation to partner with</option>
+            <option value="other">Something else</option>
+          </select>
+        </div>
+        <div class="field-group dark-field">
+          <label for="sub_message">Tell us</label>
+          <textarea id="sub_message" name="message" style="min-height:160px;background:rgba(250,245,236,0.05);border:1px solid rgba(250,245,236,0.12);color:var(--parchment);padding:0.75rem 1rem;font-family:'Cormorant Garamond',serif;font-size:16px;width:100%;outline:none;resize:vertical;" placeholder="Write freely. The hearth has space for long fires and short sparks alike." required></textarea>
+        </div>
         <button type="submit" class="dark-submit-btn" id="submitBtn">Bring it to the hearth</button>
       </form>
-
-      <div class="dark-success" id="submitSuccess">
+      <div class="dark-success" id="submitSuccess" role="alert">
         <h4>Received — thank you</h4>
         <p>We read every submission. The best contributions shape what gets built next.</p>
       </div>
@@ -838,78 +685,89 @@ footer{background:var(--earth);padding:3rem 4rem 2rem;border-top:1px solid rgba(
   </div>
 </section>
 
-<!-- ════════════════════════ FOOTER ══════════════════════════════════════ -->
-<footer>
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer role="contentinfo">
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="images/logos/firewalker-logo.png" alt="The Firewalkers" style="height:28px;width:auto;opacity:0.7;">
+        <img src="images/logos/firewalker-logo.png" alt="The Firewalkers" style="height:36px;width:auto;opacity:0.7;display:block;">
         <p>A global movement using AI to protect the places we love. Founded in Scotland. Built for everywhere that matters.</p>
       </div>
       <div class="footer-nav-col">
         <h4>The Platform</h4>
-        <a href="good-ai.html">Good AI</a>
-        <a href="campaigns.html">Campaigns</a>
-        <a href="hearth.html">From the Hearth</a>
-        <a href="community.html">Community</a>
-        <a href="media.html">Media & Press</a>
+        <a href="/good-ai.html">Good AI</a>
+        <a href="/campaigns.html">Campaigns</a>
+        <a href="/datacentre-watch.html">Data Centre Watch</a>
+        <a href="/hearth.html">From the Hearth</a>
+        <a href="/community.html">Community</a>
+        <a href="/media.html">Media &amp; Press</a>
       </div>
       <div class="footer-nav-col">
         <h4>Join</h4>
-        <a href="#signup">Join the mailing list</a>
-        <a href="#submit">Contribute something</a>
-        <a href="posts/come-help-us-build-this.html">Help build this</a>
-        <a href="media.html#media-contact">Media enquiries</a>
+        <a href="/index.html#signup">Join the mailing list</a>
+        <a href="/index.html#submit">Contribute something</a>
+        <a href="/posts/come-help-us-build-this.html">Help build this</a>
+        <a href="/media.html#media-contact">Media enquiries</a>
       </div>
     </div>
     <div class="footer-base">
       <span>The Firewalkers · firewalkers.earth · Founded June 2026</span>
-      <div class="footer-social">
-        <a href="#" class="social-icon" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25z"/></svg></a>
-        <a href="#" class="social-icon" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-        <a href="#" class="social-icon" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
-      </div>
+      <span class="footer-tagline">The future belongs to the stewards, not the extractors.</span>
     </div>
   </div>
 </footer>
 
 <script>
-/* NAV SCROLL */
+/* ─── NAV SCROLL ─── */
 (function(){
   var nav=document.getElementById('nav');
-  window.addEventListener('scroll',function(){
-    nav.classList.toggle('scrolled',window.scrollY>60);
-  },{passive:true});
+  function checkScroll(){nav.classList.toggle('scrolled',window.scrollY>60);}
+  checkScroll();
+  window.addEventListener('scroll',checkScroll,{passive:true});
 })();
 
-/* MOBILE MENU */
-function closeMM(){var m=document.getElementById('mobileMenu');if(m){m.classList.remove('open');document.body.style.overflow='';}}
+/* ─── MOBILE MENU ─── */
+function closeMM(){
+  var m=document.getElementById('mobileMenu');
+  var t=document.getElementById('navToggle');
+  if(m){m.classList.remove('open');document.body.style.overflow='';}
+  if(t){t.setAttribute('aria-expanded','false');}
+}
 document.getElementById('navToggle').addEventListener('click',function(){
-  var m=document.getElementById('mobileMenu');m.classList.add('open');document.body.style.overflow='hidden';
+  var m=document.getElementById('mobileMenu');
+  m.classList.add('open');
+  document.body.style.overflow='hidden';
+  this.setAttribute('aria-expanded','true');
+  m.querySelector('.mobile-close').focus();
 });
 document.getElementById('mobileMenu').addEventListener('click',function(e){if(e.target===this)closeMM();});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMM();});
 
-/* REVEAL ON SCROLL */
+/* ─── REVEAL ON SCROLL ─── */
 (function(){
   var obs=new IntersectionObserver(function(entries){
     entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');}});
-  },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+  },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
 })();
 
-/* COPY PHRASES */
+/* ─── COPY PHRASES ─── */
 function copyPhrase(btn){
   var text=btn.querySelector('.phrase-text').textContent;
+  var copyEl=btn.querySelector('.phrase-copy');
+  var orig=copyEl.textContent;
   navigator.clipboard.writeText(text).then(function(){
-    var c=btn.querySelector('.phrase-copy');
-    var orig=c.textContent;
-    c.textContent='Copied!';
-    setTimeout(function(){c.textContent=orig;},2000);
+    copyEl.textContent='Copied!';
+    setTimeout(function(){copyEl.textContent=orig;},2000);
+  }).catch(function(){
+    copyEl.textContent='Copied!';
+    setTimeout(function(){copyEl.textContent=orig;},2000);
   });
 }
 
-/* SENDFOX FORM */
+/* ─── SENDFOX SIGNUP ─── */
 (function(){
   var form=document.getElementById('1xx6rz');
   var success=document.getElementById('signupSuccess');
@@ -919,12 +777,17 @@ function copyPhrase(btn){
     e.preventDefault();
     if(btn){btn.textContent='Starting the journey...';btn.disabled=true;}
     fetch(form.action,{method:'POST',body:new FormData(form),mode:'no-cors'})
-      .then(function(){form.style.display='none';success.style.display='block';success.scrollIntoView({behavior:'smooth',block:'center'});})
+      .then(function(){
+        form.style.display='none';
+        success.style.display='block';
+        success.scrollIntoView({behavior:'smooth',block:'center'});
+        if(typeof plausible!=='undefined')plausible('Signup');
+      })
       .catch(function(){form.style.display='none';success.style.display='block';});
   });
 })();
 
-/* CONTRIBUTE FORM */
+/* ─── CONTRIBUTE FORM ─── */
 (function(){
   var form=document.getElementById('submitForm');
   var success=document.getElementById('submitSuccess');
@@ -933,8 +796,13 @@ function copyPhrase(btn){
   form.addEventListener('submit',function(e){
     e.preventDefault();
     if(btn){btn.textContent='Sending...';btn.disabled=true;}
-    fetch(form.action,{method:'POST',body:new FormData(form),mode:'no-cors'})
-      .then(function(){form.style.display='none';success.style.display='block';success.scrollIntoView({behavior:'smooth',block:'center'});})
+    fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
+      .then(function(r){
+        form.style.display='none';
+        success.style.display='block';
+        success.scrollIntoView({behavior:'smooth',block:'center'});
+        if(typeof plausible!=='undefined')plausible('Contribute');
+      })
       .catch(function(){form.style.display='none';success.style.display='block';});
   });
 })();
