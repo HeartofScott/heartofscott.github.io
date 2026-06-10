@@ -17,104 +17,120 @@
 <meta property="og:image" content="https://images.unsplash.com/photo-1626078296870-c2c2bfaaa037?auto=format&fit=crop&w=1200&q=80">
 <meta property="og:site_name" content="The Firewalkers">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="From the Hearth — The Firewalkers">
-<meta name="twitter:image" content="https://images.unsplash.com/photo-1626078296870-c2c2bfaaa037?auto=format&fit=crop&w=1200&q=80">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
 <script async src="https://plausible.io/js/pa-OWigJj1V5aW2Wwon7a10u.js"></script>
 <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
 <style>
-:root{--parchment:#faf5ec;--parchment-warm:#f4ebda;--stone:#e8dcc8;--amber:#a05800;--amber-mid:#c07010;--amber-bright:#e09020;--amber-pale:#fdf0d5;--sage:#3d6e48;--sage-light:#5a9060;--sage-pale:#cfe0d4;--earth:#221811;--earth-mid:#3d2e1e;--mist:#7a7262;--urgent:#8b2a0f;}
+:root{--parchment:#faf5ec;--parchment-warm:#f4ebda;--amber:#a05800;--amber-mid:#c07010;--amber-bright:#e09020;--amber-pale:#fdf0d5;--sage:#3d6e48;--sage-light:#5a9060;--sage-pale:#cfe0d4;--earth:#221811;--earth-mid:#3d2e1e;--mist:#7a7262;--urgent:#8b2a0f;}
 *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
-body{background:var(--parchment);color:var(--earth);font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;line-height:1.85;overflow-x:hidden;}
+body{background:var(--parchment);color:var(--earth);font-family:'Cormorant Garamond',Georgia,serif;font-size:18px;line-height:1.85;overflow-x:hidden;}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1rem 4rem;display:flex;justify-content:space-between;align-items:center;background:rgba(250,245,236,0.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(160,88,0,0.12);}
-.nav-brand{font-family:'Cinzel',serif;font-size:0.78rem;letter-spacing:0.2em;color:var(--amber);text-decoration:none;}
-.nav-links{display:flex;gap:2rem;align-items:center;}
-.nav-links a{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--mist);text-decoration:none;transition:color 0.3s;}
-.nav-links a:hover,.nav-links a.active{color:var(--amber);}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0.9rem 2rem;display:flex;justify-content:space-between;align-items:center;background:rgba(34,24,17,0.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(160,88,0,0.2);}
+.nav-brand{font-family:'Cinzel',serif;font-size:0.72rem;letter-spacing:0.2em;color:var(--amber-bright);text-decoration:none;}
+.nav-links{display:flex;gap:1.5rem;align-items:center;}
+.nav-links a{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(250,245,236,0.6);text-decoration:none;transition:color 0.3s;}
+.nav-links a:hover,.nav-links a.active{color:var(--amber-bright);}
+.nav-cta{color:var(--parchment)!important;background:var(--amber);padding:0.5rem 1.1rem;transition:background 0.3s!important;}
+.nav-cta:hover{background:var(--amber-mid)!important;}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
+.nav-hamburger span{display:block;width:22px;height:2px;background:rgba(250,245,236,0.7);}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(34,24,17,0.98);z-index:300;flex-direction:column;justify-content:center;align-items:center;gap:2rem;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(250,245,236,0.7);text-decoration:none;}
+.mobile-menu-close{position:absolute;top:1.5rem;right:1.5rem;font-size:1.5rem;color:rgba(250,245,236,0.5);cursor:pointer;background:none;border:none;}
+.mobile-menu .mobile-cta{color:var(--parchment);background:var(--amber);padding:0.75rem 2rem;}
 
 /* PAGE HEADER */
-.page-header{padding:9rem 4rem 4rem;background:var(--earth);position:relative;overflow:hidden;}
+.page-header{padding:9rem 2rem 4rem;background:var(--earth);position:relative;overflow:hidden;}
 .page-header::before{content:'';position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1486915309851-b0cc1f8a0084?auto=format&fit=crop&w=1920&q=80');background-size:cover;background-position:center;opacity:0.1;}
-.page-header::after{content:'';position:absolute;inset:0;background:linear-gradient(to right, rgba(34,24,17,0.95) 50%, rgba(34,24,17,0.7));}
-.page-header-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;}
-.page-header-eyebrow{font-family:'Cinzel',serif;font-size:0.54rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--amber-bright);display:block;margin-bottom:1rem;}
-.page-header h1{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(2.5rem,6vw,4.5rem);font-weight:600;color:var(--parchment);line-height:1.05;margin-bottom:1rem;}
-.page-header p{font-size:1.05rem;color:rgba(250,245,236,0.55);max-width:520px;line-height:1.8;}
+.page-header::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(34,24,17,0.95) 50%,rgba(34,24,17,0.7));}
+.page-header-inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;}
+.page-eyebrow{font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--amber-bright);display:block;margin-bottom:1rem;}
+.page-header h1{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(2.5rem,6vw,4rem);font-weight:600;color:var(--parchment);line-height:1.05;margin-bottom:1rem;}
+.page-header p{font-size:1rem;color:rgba(250,245,236,0.5);max-width:500px;line-height:1.8;}
 
-/* MAIN CONTENT */
-.hearth-main{max-width:1200px;margin:0 auto;padding:4rem 4rem 6rem;}
+/* MAIN */
+.hearth-main{max-width:1100px;margin:0 auto;padding:4rem 2rem 6rem;}
 
-/* PINNED POST */
-.pinned-label{font-family:'Cinzel',serif;font-size:0.54rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--amber);border-top:2px solid var(--amber);padding-top:1rem;margin-bottom:2rem;display:flex;align-items:center;gap:0.75rem;}
-.pinned-label::after{content:'';flex:1;height:1px;background:rgba(160,88,0,0.15);}
+/* PINNED */
+.section-rule{font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--amber);border-top:2px solid var(--amber);padding-top:1rem;margin-bottom:2rem;display:flex;align-items:center;gap:0.75rem;}
+.section-rule::after{content:'';flex:1;height:1px;background:rgba(160,88,0,0.15);}
+.section-rule.muted{color:var(--mist);border-top-color:rgba(160,88,0,0.15);border-top-width:1px;margin-top:3.5rem;}
 
 .pinned-post{background:var(--earth);overflow:hidden;margin-bottom:4rem;position:relative;}
-.pinned-post::before{content:'';position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1626078296870-c2c2bfaaa037?auto=format&fit=crop&w=1920&q=80');background-size:cover;background-position:center 40%;opacity:0.12;}
-.pinned-post-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr 0.9fr;min-height:400px;}
-
-.pinned-video{padding:3rem 2.5rem 3rem 3rem;display:flex;flex-direction:column;justify-content:center;gap:1rem;}
-.pin-badge{font-family:'Cinzel',serif;font-size:0.48rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--amber-bright);background:rgba(224,144,32,0.12);border:1px solid rgba(224,144,32,0.25);padding:0.3rem 0.8rem;display:inline-block;width:fit-content;}
+.pinned-post::before{content:'';position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1626078296870-c2c2bfaaa037?auto=format&fit=crop&w=1920&q=80');background-size:cover;background-position:center 40%;opacity:0.1;}
+.pinned-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr 0.9fr;min-height:380px;}
+.pinned-video{padding:2.5rem 2rem 2.5rem 2.5rem;display:flex;flex-direction:column;justify-content:center;gap:0.75rem;}
+.pin-badge{font-family:'Cinzel',serif;font-size:0.46rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--amber-bright);background:rgba(224,144,32,0.1);border:1px solid rgba(224,144,32,0.2);padding:0.28rem 0.7rem;display:inline-block;width:fit-content;}
 .video-embed{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:#000;}
 .video-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
-.video-caption{font-family:'Cinzel',serif;font-size:0.46rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(250,245,236,0.25);padding-top:0.5rem;}
-
-.pinned-text{padding:3rem 3rem 3rem 2.5rem;display:flex;flex-direction:column;justify-content:center;border-left:1px solid rgba(160,88,0,0.2);}
-.pinned-text .post-meta{font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(250,245,236,0.3);display:block;margin-bottom:1rem;}
-.pinned-text h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:600;color:var(--parchment);line-height:1.05;margin-bottom:1rem;}
+.video-caption{font-family:'Cinzel',serif;font-size:0.44rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(250,245,236,0.22);}
+.pinned-text{padding:2.5rem 2.5rem 2.5rem 2rem;display:flex;flex-direction:column;justify-content:center;border-left:1px solid rgba(160,88,0,0.18);}
+.pinned-meta{font-family:'Cinzel',serif;font-size:0.48rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(250,245,236,0.28);display:block;margin-bottom:0.9rem;}
+.pinned-text h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.7rem,2.8vw,2.4rem);font-weight:600;color:var(--parchment);line-height:1.05;margin-bottom:1rem;}
 .pinned-text h2 em{color:var(--amber-bright);font-style:normal;}
-.pinned-text p{font-size:1rem;color:rgba(250,245,236,0.55);line-height:1.75;margin-bottom:2rem;}
-.btn-read-fire{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--parchment);background:var(--amber);padding:0.9rem 1.75rem;text-decoration:none;display:inline-block;transition:all 0.3s;width:fit-content;}
-.btn-read-fire:hover{background:var(--amber-mid);transform:translateY(-2px);}
+.pinned-text p{font-size:0.95rem;color:rgba(250,245,236,0.52);line-height:1.75;margin-bottom:1.75rem;}
+.btn-read{font-family:'Cinzel',serif;font-size:0.56rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--parchment);background:var(--amber);padding:0.85rem 1.6rem;text-decoration:none;display:inline-block;transition:all 0.3s;width:fit-content;}
+.btn-read:hover{background:var(--amber-mid);transform:translateY(-2px);}
 
-/* ALL POSTS SECTION */
-.all-posts-label{font-family:'Cinzel',serif;font-size:0.54rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--mist);border-top:1px solid rgba(160,88,0,0.12);padding-top:1.5rem;margin-bottom:2.5rem;display:flex;align-items:center;gap:0.75rem;}
-.all-posts-label::after{content:'';flex:1;height:1px;background:rgba(160,88,0,0.08);}
+/* POSTS GRID */
+.posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem;}
 
-.posts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:2rem;}
-
-.post-card{background:white;overflow:hidden;box-shadow:0 2px 12px rgba(34,24,17,0.07);transition:transform 0.3s,box-shadow 0.3s;display:flex;flex-direction:column;}
-.post-card:hover{transform:translateY(-4px);box-shadow:0 10px 36px rgba(34,24,17,0.13);}
-.post-card-img{height:210px;overflow:hidden;position:relative;flex-shrink:0;}
-.post-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s;}
+.post-card{background:white;overflow:hidden;box-shadow:0 2px 10px rgba(34,24,17,0.07);transition:transform 0.3s,box-shadow 0.3s;display:flex;flex-direction:column;}
+.post-card:hover{transform:translateY(-4px);box-shadow:0 10px 32px rgba(34,24,17,0.12);}
+.post-card-img{height:190px;overflow:hidden;flex-shrink:0;position:relative;}
+.post-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s;}
 .post-card:hover .post-card-img img{transform:scale(1.05);}
-.post-card-body{padding:1.5rem 1.75rem 2rem;display:flex;flex-direction:column;flex:1;}
-.post-card-tag{font-family:'Cinzel',serif;font-size:0.48rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:0.4rem;}
-.post-card-date{font-family:'Cinzel',serif;font-size:0.46rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--mist);display:block;margin-bottom:0.75rem;}
-.post-card-body h3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--earth);line-height:1.25;margin-bottom:0.75rem;}
-.post-card-body p{font-size:0.88rem;color:var(--earth-mid);line-height:1.65;margin-bottom:1.5rem;flex:1;}
-.post-card-link{font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--sage);text-decoration:none;display:inline-flex;align-items:center;gap:0.3rem;transition:gap 0.3s,color 0.3s;margin-top:auto;}
-.post-card-link:hover{gap:0.6rem;color:var(--amber);}
+.live-badge{position:absolute;top:0.75rem;left:0.75rem;font-family:'Cinzel',serif;font-size:0.42rem;letter-spacing:0.18em;text-transform:uppercase;color:#fff;background:var(--urgent);padding:0.25rem 0.55rem;}
+.post-card-body{padding:1.25rem 1.5rem 1.75rem;display:flex;flex-direction:column;flex:1;}
+.post-card-tag{font-family:'Cinzel',serif;font-size:0.46rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:0.3rem;}
+.post-card-tag.urgent{color:var(--urgent);}
+.post-card-tag.sage{color:var(--sage);}
+.post-card-date{font-family:'Cinzel',serif;font-size:0.44rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--mist);display:block;margin-bottom:0.65rem;}
+.post-card-body h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--earth);line-height:1.25;margin-bottom:0.6rem;}
+.post-card-body p{font-size:0.86rem;color:var(--earth-mid);line-height:1.6;margin-bottom:1.25rem;flex:1;}
+.post-link{font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--sage);text-decoration:none;display:inline-flex;align-items:center;gap:0.3rem;transition:gap 0.3s,color 0.3s;margin-top:auto;}
+.post-link:hover{gap:0.6rem;color:var(--amber);}
+.post-link.urgent{color:var(--urgent);}
 
-/* SUBSCRIBE BAND */
-.subscribe-band{background:var(--parchment-warm);border-top:1px solid rgba(160,88,0,0.12);border-bottom:1px solid rgba(160,88,0,0.12);padding:3rem 4rem;margin-top:5rem;text-align:center;}
-.subscribe-band h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.8rem;color:var(--earth);margin-bottom:0.5rem;}
+/* SUBSCRIBE */
+.subscribe-band{background:var(--parchment-warm);border-top:1px solid rgba(160,88,0,0.12);padding:3.5rem 2rem;margin-top:5rem;text-align:center;}
+.subscribe-band h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.9rem;color:var(--earth);margin-bottom:0.5rem;}
 .subscribe-band p{font-size:0.95rem;color:var(--mist);margin-bottom:1.75rem;}
-.btn-subscribe{font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--parchment);background:var(--amber);padding:1rem 2.25rem;text-decoration:none;display:inline-block;transition:all 0.3s;}
+.btn-subscribe{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--parchment);background:var(--amber);padding:1rem 2.25rem;text-decoration:none;display:inline-block;transition:all 0.3s;}
 .btn-subscribe:hover{background:var(--amber-mid);transform:translateY(-2px);}
 
 /* FOOTER */
-footer{background:var(--earth);padding:2.5rem 4rem;border-top:2px solid var(--amber);}
-.footer-base{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.1em;color:rgba(250,245,236,0.25);}
-.footer-base a{color:rgba(250,245,236,0.4);text-decoration:none;transition:color 0.3s;}
-.footer-base a:hover{color:var(--amber);}
-.footer-links{display:flex;gap:2rem;}
+footer{background:var(--earth);padding:2.5rem 2rem;border-top:2px solid var(--amber);}
+.footer-base{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.1em;color:rgba(250,245,236,0.22);}
+.footer-links{display:flex;gap:1.75rem;}
+.footer-links a{color:rgba(250,245,236,0.38);text-decoration:none;transition:color 0.3s;}
+.footer-links a:hover{color:var(--amber-bright);}
 
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* MOBILE */
 @media(max-width:900px){
-  nav{padding:1rem 1.5rem;}
-  .nav-links{gap:1rem;}
-  .page-header{padding:8rem 1.5rem 3rem;}
-  .hearth-main{padding:3rem 1.5rem 4rem;}
-  .pinned-post-inner{grid-template-columns:1fr;}
-  .pinned-video{padding:2rem 1.5rem 1rem;}
-  .pinned-text{padding:1.25rem 1.5rem 2rem;border-left:none;border-top:1px solid rgba(160,88,0,0.2);}
+  nav{padding:0.85rem 1.25rem;}
+  .nav-links{display:none;}
+  .nav-hamburger{display:flex;}
+  .page-header{padding:7.5rem 1.25rem 3rem;}
+  .hearth-main{padding:3rem 1.25rem 4rem;}
+  .pinned-inner{grid-template-columns:1fr;}
+  .pinned-video{padding:2rem 1.25rem 1rem;}
+  .pinned-text{padding:1rem 1.25rem 2rem;border-left:none;border-top:1px solid rgba(160,88,0,0.18);}
   .posts-grid{grid-template-columns:1fr;}
-  .subscribe-band{padding:2.5rem 1.5rem;}
-  footer{padding:2rem 1.5rem;}
+  .subscribe-band{padding:2.5rem 1.25rem;}
+  footer{padding:2rem 1.25rem;}
   .footer-base{flex-direction:column;gap:1rem;text-align:center;}
-  .footer-links{gap:1.25rem;}
+  .footer-links{flex-wrap:wrap;justify-content:center;gap:1rem;}
+}
+@media(min-width:600px) and (max-width:900px){
+  .posts-grid{grid-template-columns:repeat(2,1fr);}
 }
 </style>
 </head>
@@ -123,17 +139,29 @@ footer{background:var(--earth);padding:2.5rem 4rem;border-top:2px solid var(--am
 <nav>
   <a href="index.html" class="nav-brand">⁂ The Firewalkers</a>
   <div class="nav-links">
-    <a href="index.html">Home</a>
     <a href="hearth.html" class="active">From the Hearth</a>
     <a href="datacentre-watch.html">Data Centre Watch</a>
     <a href="community.html">Community</a>
+    <a href="tools.html">Tools</a>
+    <a href="index.html#signup" class="nav-cta">Join</a>
+  </div>
+  <div class="nav-hamburger" onclick="document.querySelector('.mobile-menu').classList.add('open')">
+    <span></span><span></span><span></span>
   </div>
 </nav>
 
-<!-- PAGE HEADER -->
+<div class="mobile-menu">
+  <button class="mobile-menu-close" onclick="document.querySelector('.mobile-menu').classList.remove('open')">✕</button>
+  <a href="hearth.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">From the Hearth</a>
+  <a href="datacentre-watch.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Data Centre Watch</a>
+  <a href="community.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Community</a>
+  <a href="tools.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Tools</a>
+  <a href="index.html#signup" class="mobile-cta" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Join the movement</a>
+</div>
+
 <div class="page-header">
   <div class="page-header-inner">
-    <span class="page-header-eyebrow">The Firewalkers · Dispatches</span>
+    <span class="page-eyebrow">The Firewalkers · Dispatches</span>
     <h1>From the Hearth</h1>
     <p>Words from the field. On land, AI, data centres, druidry, and the fight to protect the natural world from the infrastructure consuming it.</p>
   </div>
@@ -142,91 +170,162 @@ footer{background:var(--earth);padding:2.5rem 4rem;border-top:2px solid var(--am
 <div class="hearth-main">
 
   <!-- PINNED -->
-  <div class="pinned-label">🔥 Pinned — Latest from Scott</div>
+  <div class="section-rule">🔥 Pinned — Latest from Scott</div>
 
-  <div class="pinned-post">
-    <div class="pinned-post-inner">
-
+  <div class="pinned-post reveal">
+    <div class="pinned-inner">
       <div class="pinned-video">
         <span class="pin-badge">🔥 Video · June 2026</span>
         <div class="video-embed">
-          <iframe
-            src="https://www.youtube.com/embed/0vd-tP03_G8"
-            title="The Land Is Being Taken. Meet The Firewalkers. — Scott Seivwright"
-            allowfullscreen
-            loading="lazy">
-          </iframe>
+          <iframe src="https://www.youtube.com/embed/0vd-tP03_G8" title="The Land Is Being Taken. Meet The Firewalkers." allowfullscreen loading="lazy"></iframe>
         </div>
         <span class="video-caption">Filmed on the Bathgate Hills, Scotland · June 2026</span>
       </div>
-
       <div class="pinned-text">
-        <span class="post-meta">Bathgate Hills, Scotland · June 10, 2026</span>
+        <span class="pinned-meta">Bathgate Hills, Scotland · June 10, 2026</span>
         <h2>The land is being taken.<br><em>Meet The Firewalkers.</em></h2>
-        <p>I stood on the Bathgate Hills and said what I've been carrying for years. Thirty years in AI and digital transformation. A practising druid. Ancient ground. No script — just the wind, the land, and the truth about what is happening to it.</p>
-        <a href="posts/bathgate-hills-intro.html" class="btn-read-fire">Watch & read the full post →</a>
+        <p>I stood on the Bathgate Hills and said what I've been carrying for years. Thirty years in AI. A practising druid. Ancient ground. No script — just the wind, the land, and the truth about what is happening to it.</p>
+        <a href="posts/bathgate-hills-intro.html" class="btn-read">Watch & read →</a>
       </div>
-
     </div>
   </div>
 
   <!-- ALL POSTS -->
-  <div class="all-posts-label">All posts from the hearth</div>
+  <div class="section-rule muted">All posts from the hearth</div>
 
   <div class="posts-grid">
 
-    <!-- Post: Come Help Us Build This -->
-    <div class="post-card">
+    <!-- June 10 -->
+    <div class="post-card reveal">
       <div class="post-card-img">
-        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=75" alt="Wind turbines in landscape">
+        <img src="https://images.unsplash.com/photo-1626078296870-c2c2bfaaa037?auto=format&fit=crop&w=800&q=75" alt="Bathgate Hills" loading="lazy">
+      </div>
+      <div class="post-card-body">
+        <span class="post-card-tag">🔥 Video</span>
+        <span class="post-card-date">June 10, 2026</span>
+        <h3>The Land Is Being Taken. Meet The Firewalkers.</h3>
+        <p>Standing on the Bathgate Hills. Thirty years in AI. A druid. Ancient ground. No script.</p>
+        <a href="posts/bathgate-hills-intro.html" class="post-link">Watch & read →</a>
+      </div>
+    </div>
+
+    <!-- June 5 — Seven Harms -->
+    <div class="post-card reveal">
+      <div class="post-card-img">
+        <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&w=800&q=75" alt="AI network" loading="lazy">
+      </div>
+      <div class="post-card-body">
+        <span class="post-card-tag">📋 Guide</span>
+        <span class="post-card-date">June 5, 2026</span>
+        <h3>Seven Ways AI Is Harming Our Planet — and Six Kinder Choices</h3>
+        <p>Seven harms. Six greener choices. No expertise required — just care.</p>
+        <a href="posts/seven-harms-six-choices.html" class="post-link">Read more →</a>
+      </div>
+    </div>
+
+    <!-- June 5 — Save the Lammermuirs -->
+    <div class="post-card reveal">
+      <div class="post-card-img" style="position:relative;">
+        <img src="https://images.unsplash.com/photo-1626078296870-c2c2bfaaa037?auto=format&fit=crop&w=800&q=75" alt="Lammermuir Hills" loading="lazy" style="filter:saturate(0.6);">
+        <span class="live-badge">🔴 Live Campaign</span>
+      </div>
+      <div class="post-card-body">
+        <span class="post-card-tag urgent">⚔️ Campaign</span>
+        <span class="post-card-date">June 5, 2026</span>
+        <h3>Save the Lammermuirs — Stop the Data Centre</h3>
+        <p>Ancient moorland. Sacred landscape. A petition is live and moving fast. Sign and share.</p>
+        <a href="posts/save-the-lammermuirs.html" class="post-link urgent">Join the campaign →</a>
+      </div>
+    </div>
+
+    <!-- June 5 — AI That Doesn't Cost the Earth -->
+    <div class="post-card reveal">
+      <div class="post-card-img">
+        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=75" alt="Wind turbines" loading="lazy">
+      </div>
+      <div class="post-card-body">
+        <span class="post-card-tag sage">🌱 Green AI</span>
+        <span class="post-card-date">June 5, 2026</span>
+        <h3>AI That Doesn't Cost the Earth</h3>
+        <p>We need AI. We also need the earth. These are not in conflict — but only if we choose to use technology wisely.</p>
+        <a href="posts/ai-that-doesnt-cost-the-earth.html" class="post-link">Read more →</a>
+      </div>
+    </div>
+
+    <!-- June 4 — Come Help Us -->
+    <div class="post-card reveal">
+      <div class="post-card-img">
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=75" alt="People gathered" loading="lazy">
       </div>
       <div class="post-card-body">
         <span class="post-card-tag">🌍 Open Invitation</span>
         <span class="post-card-date">June 4, 2026</span>
         <h3>The Land Is Being Taken. Come Help Us Fight Back.</h3>
-        <p>An urgent call to AI builders, movement organisers, people of faith, students and digital natives — anyone who loves a place and is not willing to watch it disappear.</p>
-        <a href="posts/come-help-us-build-this.html" class="post-card-link">Read more →</a>
+        <p>An urgent call to AI builders, movement organisers, people of faith, anyone who loves a place.</p>
+        <a href="posts/come-help-us-build-this.html" class="post-link">Read more →</a>
       </div>
     </div>
 
-    <!-- Post: Bathgate Hills (also in grid, smaller) -->
-    <div class="post-card">
+    <!-- June 4 — Why I Built -->
+    <div class="post-card reveal">
       <div class="post-card-img">
-        <img src="https://images.unsplash.com/photo-1626078296870-c2c2bfaaa037?auto=format&fit=crop&w=800&q=75" alt="Scottish Highlands landscape">
+        <img src="https://images.unsplash.com/photo-1671271834624-c80b23aabfc8?auto=format&fit=crop&w=800&q=75" alt="Misty forest" loading="lazy">
       </div>
       <div class="post-card-body">
-        <span class="post-card-tag">🔥 Video · Piece to Camera</span>
-        <span class="post-card-date">June 10, 2026</span>
-        <h3>The Land Is Being Taken. Meet The Firewalkers.</h3>
-        <p>Standing on the Bathgate Hills. Thirty years in AI. A druid. Ancient ground. This is why The Firewalkers exists.</p>
-        <a href="posts/bathgate-hills-intro.html" class="post-card-link">Watch & read →</a>
+        <span class="post-card-tag">🔥 Origin</span>
+        <span class="post-card-date">June 4, 2026</span>
+        <h3>A Technologist, an AI Expert, and a Druid — Why I Built the Firewalkers</h3>
+        <p>Scott Seivwright on the tension that became unbearable — and why he built firewalkers.earth in seven hours.</p>
+        <a href="posts/why-i-built-the-firewalkers.html" class="post-link">Read more →</a>
       </div>
     </div>
 
-    <!--
-    ═══════════════════════════════════════════════
-    ADD NEW POST CARDS HERE — copy this block:
-
-    <div class="post-card">
+    <!-- June 2 — You Might Be a Firewalker -->
+    <div class="post-card reveal">
       <div class="post-card-img">
-        <img src="IMAGE_URL" alt="Description">
+        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=800&q=75" alt="Farmland" loading="lazy">
       </div>
       <div class="post-card-body">
-        <span class="post-card-tag">CATEGORY</span>
-        <span class="post-card-date">MONTH DAY, YEAR</span>
-        <h3>POST TITLE</h3>
-        <p>One or two sentence description.</p>
-        <a href="posts/FILENAME.html" class="post-card-link">Read more →</a>
+        <span class="post-card-tag">🤔 Are you?</span>
+        <span class="post-card-date">June 2, 2026</span>
+        <h3>You Might Be a Firewalker</h3>
+        <p>You don't have to be a druid. You don't have to be an activist. You don't have to work in technology. But you might be a Firewalker.</p>
+        <a href="posts/you-might-be-a-firewalker.html" class="post-link">Find out →</a>
       </div>
     </div>
-    ═══════════════════════════════════════════════
-    -->
+
+    <!-- June 1 — Pro Wisdom -->
+    <div class="post-card reveal">
+      <div class="post-card-img">
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=75" alt="Digital earth" loading="lazy">
+      </div>
+      <div class="post-card-body">
+        <span class="post-card-tag sage">🌿 Manifesto</span>
+        <span class="post-card-date">June 1, 2026</span>
+        <h3>We Are Not Anti-AI. We Are Pro-Wisdom.</h3>
+        <p>We use AI every day. The question was never whether to use the technology — it was whether we'd use it wisely.</p>
+        <a href="posts/pro-wisdom.html" class="post-link">Read more →</a>
+      </div>
+    </div>
+
+    <!-- May 1 — Fire in the Distance -->
+    <div class="post-card reveal">
+      <div class="post-card-img">
+        <img src="https://images.unsplash.com/photo-1510374629110-439facca79ba?auto=format&fit=crop&w=800&q=75" alt="Bonfire at night" loading="lazy">
+      </div>
+      <div class="post-card-body">
+        <span class="post-card-tag">✨ First Fire</span>
+        <span class="post-card-date">May 1, 2026</span>
+        <h3>A Fire in the Distance</h3>
+        <p>Why the AI debate sent me back to the ancient paths. The druid path does not begin when you decide to walk it.</p>
+        <a href="posts/fire-in-the-distance.html" class="post-link">Read more →</a>
+      </div>
+    </div>
 
   </div>
-
 </div>
 
-<!-- SUBSCRIBE BAND -->
+<!-- SUBSCRIBE -->
 <div class="subscribe-band">
   <h2>Stay close to the fire.</h2>
   <p>New dispatches from the hearth — on land, AI, data centres and the movement building to protect the natural world.</p>
@@ -245,5 +344,15 @@ footer{background:var(--earth);padding:2.5rem 4rem;border-top:2px solid var(--am
   </div>
 </footer>
 
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e,i) => {
+    if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*60);obs.unobserve(e.target);}
+  });
+},{threshold:0.06});
+reveals.forEach(el=>obs.observe(el));
+document.querySelector('.mobile-menu').addEventListener('click',function(e){if(e.target===this)this.classList.remove('open');});
+</script>
 </body>
 </html>
