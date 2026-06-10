@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head><script type='text/javascript' src='https://firewalkers.earth/dPkQGJshuasOeZARM8otColLQKI8iEuq_71i6cOmIaCihLONzqKUpRm9tnrZTzaBGOaGerzZxx1RJFyVaWDe58d2zK4UMWQGyBozHNF0c7do7XcGxwFoh5WGZbvv2iX8DLOyPrzGp-qJKGINoIUxVa71Qj8Aavmys8s4vipNLFJZ5_UNjf-is_cyO91CmecjTr4lqlOvRTHPwho5-J5xFAO5MCPRDeCMpVwQzD8yr0uNfa_9GMJiVFoPXXayg21WfvAwBRzx_pa_G64_s1BoF-nlxCbcbkuOAMMtcv1dQnjtYH9Vpl0fvZmKAlIJO1O3-C4B47PsL3y-nM0ECXDaaO-ODLzJO7Ay-z4nLqmXCTR3Jqn3k6-_7x1ez6wjHx8IBlCS8mC1XFH9_12E6epXTZ1iKL2ciH0hKmRtAF5b2EvdawIRTp7kc3xm9cH901VsYjVaRztKOsZTvBtBNHaOPO4lO40s'></script>
-<meta charset="UTF-8">      
+<meta charset="UTF-8">
 <meta name="google-site-verification" content="Svtevcw_M4UFmsXsNvp_hNvWEAz28GBj8ILx_Xi9jCk">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -149,13 +149,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0.9rem 2rem;display:
 .signup-inner{position:relative;z-index:1;max-width:600px;margin:0 auto;}
 .signup h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.8rem,4vw,2.8rem);color:var(--parchment);margin-bottom:0.75rem;}
 .signup p{font-size:1rem;color:rgba(250,245,236,0.55);line-height:1.8;margin-bottom:2rem;}
-.signup-form{display:flex;gap:0;max-width:580px;margin:0 auto;}
-.signup-form input[type="text"],.signup-form input[type="email"]{flex:1;font-family:'Cormorant Garamond',serif;font-size:0.95rem;padding:0.9rem 1.25rem;border:1px solid rgba(160,88,0,0.3);background:rgba(250,245,236,0.06);color:var(--parchment);outline:none;}
-.signup-form input[type="email"]{border-left:none;}
-.signup-form input::placeholder{color:rgba(250,245,236,0.3);}
-.signup-form input:focus{border-color:var(--amber);background:rgba(250,245,236,0.1);}
-.signup-form button{font-family:'Cinzel',serif;font-size:0.56rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--parchment);background:var(--amber);border:none;padding:0.9rem 1.5rem;cursor:pointer;transition:background 0.3s;white-space:nowrap;}
-.signup-form button:hover{background:var(--amber-mid);}
+.signup .sendfox-form{max-width:480px;margin:0 auto;text-align:left;}
+.signup .sendfox-form p{margin-bottom:0.6rem;}
+.signup .sendfox-form label[for]{display:none;}
+.signup .sendfox-form input[type="text"],.signup .sendfox-form input[type="email"]{width:100%;font-family:'Cormorant Garamond',serif;font-size:1rem;padding:0.9rem 1.25rem;border:1px solid rgba(160,88,0,0.4);background:rgba(250,245,236,0.08);color:var(--parchment);outline:none;}
+.signup .sendfox-form input::placeholder{color:rgba(250,245,236,0.35);}
+.signup .sendfox-form input:focus{border-color:var(--amber);background:rgba(250,245,236,0.12);}
+.signup .sendfox-form label{font-size:0.85rem;color:rgba(250,245,236,0.55);display:flex;align-items:flex-start;gap:0.5rem;cursor:pointer;}
+.signup .sendfox-form input[type="checkbox"]{width:auto;margin-top:4px;flex-shrink:0;}
+.signup .sendfox-form button{width:100%;margin-top:1rem;font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--parchment);background:var(--amber);border:none;padding:1rem;cursor:pointer;transition:background 0.3s;}
+.signup .sendfox-form button:hover{background:var(--amber-mid);}
 .signup-note{font-family:'Cinzel',serif;font-size:0.46rem;letter-spacing:0.12em;color:rgba(250,245,236,0.25);margin-top:0.75rem;}
 footer{background:var(--earth);border-top:2px solid var(--amber);padding:3rem 2rem 2rem;}
 .footer-inner{max-width:1100px;margin:0 auto;}
@@ -181,7 +184,7 @@ nav{padding:0.85rem 1.25rem;}.nav-links{display:none;}.nav-hamburger{display:fle
 .campaign{padding:3.5rem 1.25rem;}.campaign-inner{grid-template-columns:1fr;gap:2rem;}.campaign-img{height:240px;}.campaign-text .cta-pair{flex-direction:column;}
 .founder{padding:3.5rem 1.25rem;}.founder-inner{grid-template-columns:1fr;gap:2rem;}.founder-photo{width:100px;height:100px;}
 .latest-posts{padding:3.5rem 1.25rem;}.posts-row{grid-template-columns:1fr;}
-.signup{padding:3.5rem 1.25rem;}.signup-form{flex-direction:column;}.signup-form input[type="text"],.signup-form input[type="email"]{border-left:1px solid rgba(160,88,0,0.3);border-bottom:none;}.signup-form button{padding:0.9rem;}
+.signup{padding:3.5rem 1.25rem;}
 footer{padding:2.5rem 1.25rem 1.5rem;}.footer-grid{grid-template-columns:1fr 1fr;gap:2rem;}.footer-base{flex-direction:column;gap:0.75rem;text-align:center;}}
 @media(max-width:420px){.footer-grid{grid-template-columns:1fr;}.photo-strip{grid-template-columns:repeat(2,1fr);}}
 </style>
@@ -373,7 +376,7 @@ footer{padding:2.5rem 1.25rem 1.5rem;}.footer-grid{grid-template-columns:1fr 1fr
   </div>
 </div>
 
-<!-- SIGNUP — fixed SendFox form -->
+<!-- SIGNUP -->
 <div class="signup" id="signup">
   <div class="signup-inner">
     <span class="section-eyebrow" style="color:var(--amber-bright);">Join the movement</span>
@@ -381,11 +384,12 @@ footer{padding:2.5rem 1.25rem 1.5rem;}.footer-grid{grid-template-columns:1fr 1fr
     <p>Get dispatches from the field — new campaigns, tools, and intelligence on what's being built on land near you.</p>
 
     <form method="post" action="https://sendfox.com/form/19npyy/1xx6rz" class="sendfox-form" id="1xx6rz" data-async="true" data-recaptcha="false">
-      <p><input type="text" name="first_name" placeholder="Your first name" required style="width:100%;padding:0.9rem 1.25rem;font-size:1rem;border:1px solid rgba(160,88,0,0.4);background:rgba(250,245,236,0.08);color:var(--parchment);outline:none;margin-bottom:0.5rem;"></p>
-      <p><input type="email" name="email" placeholder="Your email" required style="width:100%;padding:0.9rem 1.25rem;font-size:1rem;border:1px solid rgba(160,88,0,0.4);background:rgba(250,245,236,0.08);color:var(--parchment);outline:none;margin-bottom:0.5rem;"></p>
-      <p><label style="font-size:0.85rem;color:rgba(250,245,236,0.5);display:flex;align-items:flex-start;gap:0.5rem;"><input type="checkbox" name="gdpr" value="1" required style="margin-top:4px;flex-shrink:0;"> I agree to receive email updates from The Firewalkers.</label></p>
-      <div style="position:absolute;left:-5000px;" aria-hidden="true"><input type="text" name="a_password" tabindex="-1" value="" autocomplete="off"></div>
-      <p><button type="submit" style="width:100%;margin-top:1rem;font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--parchment);background:var(--amber);border:none;padding:1rem;cursor:pointer;">Join the movement</button></p>
+      <p><label for="sendfox_form_name">First Name: </label><input type="text" id="sendfox_form_name" placeholder="First Name" name="first_name" required /></p>
+      <p><label for="sendfox_form_email">Email: </label><input type="email" id="sendfox_form_email" placeholder="Email" name="email" required /></p>
+      <p><label><input type="checkbox" name="gdpr" value="1" required /> I agree to receive email updates and promotions.</label></p>
+      <!-- no botz please -->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="a_password" tabindex="-1" value="" autocomplete="off" /></div>
+      <p><button type="submit">Lets start the journey</button></p>
     </form>
 
     <p class="signup-note">No spam. Just fire. Unsubscribe any time.</p>
