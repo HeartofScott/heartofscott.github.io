@@ -5,807 +5,590 @@
 <meta name="google-site-verification" content="Svtevcw_M4UFmsXsNvp_hNvWEAz28GBj8ILx_Xi9jCk">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Firewalkers — Technology in Service of the Living World</title>
-<meta name="description" content="A global movement using AI to protect the places we love. Rivers, forests, wetlands, coastlines, sacred sites — all biomes, all faiths, all people. Join the fire.">
-<meta name="robots" content="index, follow">
+<title>The Firewalkers — Protecting the Natural World from AI's Hidden Cost</title>
+<meta name="description" content="The AI revolution is consuming the earth. Data centres are being built on ancient landscapes, draining water tables, destroying communities. The Firewalkers exists to change that.">
 <meta name="author" content="Scott Seivwright">
+<meta name="robots" content="index, follow">
 <link rel="canonical" href="https://firewalkers.earth/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://firewalkers.earth/">
-<meta property="og:title" content="The Firewalkers — Technology in Service of the Living World">
-<meta property="og:description" content="A global movement using AI to protect the places we love. Join the fire.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1601465364325-34b5b5fdb6c4?auto=format&fit=crop&w=1200&q=80">
+<meta property="og:title" content="The Firewalkers — Protecting the Natural World from AI's Hidden Cost">
+<meta property="og:description" content="The AI revolution is consuming the earth. The Firewalkers uses AI to protect the natural world from the environmental impact of data centre infrastructure.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1626078296870-c2c2bfaaa037?auto=format&fit=crop&w=1200&q=80">
 <meta property="og:site_name" content="The Firewalkers">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The Firewalkers — Technology in Service of the Living World">
-<meta name="twitter:description" content="A global movement using AI to protect the places we love. Join the fire.">
-<meta name="twitter:image" content="https://images.unsplash.com/photo-1601465364325-34b5b5fdb6c4?auto=format&fit=crop&w=1200&q=80">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"The Firewalkers","url":"https://firewalkers.earth","description":"A global movement using AI to protect the places we love.","founder":{"@type":"Person","name":"Scott Seivwright"},"sameAs":["https://firewalkers.earth"]}</script>
+<meta name="twitter:title" content="The Firewalkers — Protecting the Natural World from AI's Hidden Cost">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1626078296870-c2c2bfaaa037?auto=format&fit=crop&w=1200&q=80">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"The Firewalkers","url":"https://firewalkers.earth","description":"A global movement using AI to protect the natural world from the environmental impact of data centre infrastructure.","founder":{"@type":"Person","name":"Scott Seivwright"}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
 <script async src="https://plausible.io/js/pa-OWigJj1V5aW2Wwon7a10u.js"></script>
 <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
 <style>
-/* ─── TOKENS ─────────────────────────────────────── */
 :root{
-  --parchment:#faf5ec;--parchment-warm:#f4ebda;--stone:#e8dcc8;
-  --amber:#a05800;--amber-mid:#c07010;--amber-bright:#e09020;--amber-pale:#fdf0d5;
-  --sage:#3d6e48;--sage-light:#5a9060;--sage-pale:#cfe0d4;
-  --earth:#221811;--earth-mid:#3d2e1e;--mist:#5c5548;
-  --ocean:#0d3d56;--canopy:#1a3d2b;--urgent:#8b2a0f;
+  --parchment:#faf5ec;
+  --parchment-warm:#f4ebda;
+  --stone:#e8dcc8;
+  --amber:#a05800;
+  --amber-mid:#c07010;
+  --amber-bright:#e09020;
+  --amber-pale:#fdf0d5;
+  --sage:#3d6e48;
+  --sage-light:#5a9060;
+  --sage-pale:#cfe0d4;
+  --earth:#221811;
+  --earth-mid:#3d2e1e;
+  --mist:#7a7262;
+  --urgent:#8b2a0f;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{background:var(--parchment);color:var(--earth);font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;line-height:1.85;overflow-x:hidden;}
+body{background:var(--parchment);color:var(--earth);font-family:'Cormorant Garamond',Georgia,serif;font-size:18px;line-height:1.85;overflow-x:hidden;}
 
-/* ─── SKIP LINK (accessibility) ──────────────────── */
-.skip-link{position:absolute;top:-100px;left:1rem;background:var(--amber);color:var(--parchment);padding:0.6rem 1.2rem;font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;z-index:9999;transition:top 0.2s;}
-.skip-link:focus{top:1rem;}
-
-/* ─── NAV ─────────────────────────────────────────── */
-#nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:1rem 4rem;display:flex;justify-content:space-between;align-items:center;background:rgba(250,245,236,0);backdrop-filter:blur(0px);transition:background 0.4s,backdrop-filter 0.4s,border-color 0.4s;border-bottom:1px solid transparent;}
-#nav.scrolled{background:rgba(250,245,236,0.96);backdrop-filter:blur(16px);border-bottom-color:rgba(160,88,0,0.12);}
-.nav-logo{display:flex;align-items:center;gap:0.6rem;text-decoration:none;}
-.nav-logo img{height:36px;width:auto;display:block;}
-.nav-logo-text{font-family:'Cinzel',serif;font-size:0.68rem;letter-spacing:0.18em;color:var(--amber);display:none;}
-.nav-links{display:flex;gap:1.75rem;align-items:center;}
-.nav-links a{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--earth);text-decoration:none;transition:color 0.25s;opacity:0.65;}
-.nav-links a:hover{color:var(--amber);opacity:1;}
-.nav-cta{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;background:var(--amber);color:var(--parchment)!important;padding:0.55rem 1.25rem;text-decoration:none;transition:background 0.25s;opacity:1!important;}
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0.9rem 2rem;display:flex;justify-content:space-between;align-items:center;background:rgba(34,24,17,0.85);backdrop-filter:blur(16px);border-bottom:1px solid rgba(160,88,0,0.2);}
+.nav-brand{font-family:'Cinzel',serif;font-size:0.72rem;letter-spacing:0.2em;color:var(--amber-bright);text-decoration:none;display:flex;align-items:center;gap:0.5rem;}
+.nav-links{display:flex;gap:1.5rem;align-items:center;}
+.nav-links a{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(250,245,236,0.6);text-decoration:none;transition:color 0.3s;}
+.nav-links a:hover{color:var(--amber-bright);}
+.nav-cta{font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--parchment)!important;background:var(--amber);padding:0.5rem 1.1rem;transition:background 0.3s!important;}
 .nav-cta:hover{background:var(--amber-mid)!important;}
-.nav-toggle{display:none;background:none;border:none;cursor:pointer;color:var(--earth);padding:0.4rem;}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
+.nav-hamburger span{display:block;width:22px;height:2px;background:rgba(250,245,236,0.7);transition:all 0.3s;}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(34,24,17,0.98);z-index:300;flex-direction:column;justify-content:center;align-items:center;gap:2rem;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(250,245,236,0.7);text-decoration:none;transition:color 0.3s;}
+.mobile-menu a:hover{color:var(--amber-bright);}
+.mobile-menu-close{position:absolute;top:1.5rem;right:1.5rem;font-size:1.5rem;color:rgba(250,245,236,0.5);cursor:pointer;background:none;border:none;line-height:1;}
+.mobile-menu .mobile-cta{color:var(--parchment);background:var(--amber);padding:0.75rem 2rem;}
 
-/* ─── MOBILE MENU ─────────────────────────────────── */
-.mobile-menu{display:none;position:fixed;inset:0;background:rgba(15,8,4,0.97);z-index:500;flex-direction:column;align-items:center;justify-content:center;gap:0;}
-.mobile-menu.open{display:flex;animation:mmin 0.2s ease both;}
-@keyframes mmin{from{opacity:0}to{opacity:1}}
-.mobile-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:1px solid rgba(250,245,236,0.12);color:rgba(250,245,236,0.4);cursor:pointer;font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.2em;text-transform:uppercase;padding:0.4rem 0.8rem;min-height:44px;}
-.mobile-logo{margin-bottom:2.5rem;display:block;}
-.mobile-logo img{height:32px;width:auto;filter:brightness(1.3);}
-.mobile-link{font-family:'Cinzel',serif;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(250,245,236,0.55);text-decoration:none;padding:0.9rem 2rem;border-bottom:1px solid rgba(250,245,236,0.05);width:100%;max-width:340px;text-align:center;transition:color 0.2s;min-height:44px;display:flex;align-items:center;justify-content:center;}
-.mobile-link:hover{color:var(--amber-bright);}
-.mobile-cta-link{font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--parchment);background:var(--amber);padding:0.9rem 2.25rem;text-decoration:none;margin-top:2rem;display:inline-block;min-height:44px;display:flex;align-items:center;}
+/* ── HERO — VIDEO FULL BLEED ── */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;background:var(--earth);overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1601465364325-34b5b5fdb6c4?auto=format&fit=crop&w=1920&q=80');background-size:cover;background-position:center;opacity:0.15;}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom, rgba(34,24,17,0.3) 0%, rgba(34,24,17,0.6) 40%, rgba(34,24,17,0.95) 100%);}
 
-/* ─── HERO ─────────────────────────────────────────── */
-#hero{min-height:100vh;background:var(--earth);position:relative;display:flex;align-items:center;padding:0;}
-.hero-bg{position:absolute;inset:0;}
-.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 35%;display:block;}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(15,8,4,0.85) 0%,rgba(34,24,17,0.68) 60%,rgba(13,61,86,0.45) 100%);}
-.hero-content{position:relative;z-index:2;padding:10rem 4rem 6rem;max-width:1120px;margin:0 auto;width:100%;}
-.hero-eyebrow{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.42em;text-transform:uppercase;color:var(--amber-bright);display:block;margin-bottom:2rem;}
-.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,8vw,7rem);font-weight:300;color:var(--parchment);line-height:1.0;margin-bottom:0.5rem;letter-spacing:-0.01em;}
-.hero-title em{font-style:italic;color:var(--amber-bright);}
-.hero-title strong{font-weight:700;font-style:normal;display:block;font-size:0.55em;font-family:'Cinzel',serif;letter-spacing:0.22em;color:rgba(250,245,236,0.45);margin-bottom:1rem;}
-.hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2.2vw,1.5rem);color:rgba(250,245,236,0.75);line-height:1.7;max-width:620px;margin:1.75rem 0 2.5rem;font-weight:300;}
-.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;}
-.btn-primary{font-family:'Cinzel',serif;font-size:0.64rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--parchment);background:var(--amber);padding:1.1rem 2.5rem;text-decoration:none;transition:all 0.3s;display:inline-block;border:none;min-height:44px;display:inline-flex;align-items:center;}
-.btn-primary:hover{background:var(--amber-mid);transform:translateY(-2px);}
-.btn-secondary{font-family:'Cinzel',serif;font-size:0.64rem;letter-spacing:0.28em;text-transform:uppercase;color:rgba(250,245,236,0.75);background:transparent;padding:1.1rem 2.5rem;text-decoration:none;transition:all 0.3s;display:inline-flex;align-items:center;border:1px solid rgba(250,245,236,0.25);min-height:44px;}
-.btn-secondary:hover{border-color:var(--amber-bright);color:var(--amber-bright);}
-.hero-share{margin-top:2.5rem;font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(250,245,236,0.3);}
-.hero-share a{color:rgba(250,245,236,0.5);text-decoration:none;margin-left:0.75rem;transition:color 0.2s;}
-.hero-share a:hover{color:var(--amber-bright);}
+.hero-content{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding:7rem 2rem 0;}
+.hero-eyebrow{font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.38em;text-transform:uppercase;color:var(--amber-bright);display:block;margin-bottom:1rem;opacity:0;animation:fadeup 0.8s ease 0.2s forwards;}
+.hero h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(2.6rem,8vw,5.5rem);line-height:1.02;color:var(--parchment);margin-bottom:1.25rem;opacity:0;animation:fadeup 0.8s ease 0.4s forwards;}
+.hero h1 em{color:var(--amber-bright);font-style:italic;}
+.hero-standfirst{font-size:clamp(1rem,2.5vw,1.2rem);color:rgba(250,245,236,0.65);max-width:600px;line-height:1.7;margin-bottom:2rem;opacity:0;animation:fadeup 0.8s ease 0.6s forwards;}
+.hero-ctas{display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:2.5rem;opacity:0;animation:fadeup 0.8s ease 0.8s forwards;}
 
-/* ─── URGENCY BAND ─────────────────────────────────── */
-.urgency-band{background:var(--urgent);padding:1.5rem 4rem;display:flex;justify-content:center;gap:0;flex-wrap:wrap;}
-.u-stat{text-align:center;padding:0.5rem 2.5rem;border-right:1px solid rgba(255,255,255,0.15);}
-.u-stat:last-child{border-right:none;}
+/* VIDEO EMBED IN HERO */
+.hero-video-wrap{position:relative;z-index:1;width:100%;background:rgba(0,0,0,0.5);border-top:1px solid rgba(160,88,0,0.2);}
+.hero-video-inner{max-width:900px;margin:0 auto;padding:1.5rem 2rem 0;}
+.hero-video-label{font-family:'Cinzel',serif;font-size:0.48rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--amber-bright);display:flex;align-items:center;gap:0.5rem;margin-bottom:0.75rem;}
+.hero-video-label::before{content:'▶';font-size:0.6rem;}
+.video-embed{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;}
+.video-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
+.hero-video-caption{font-family:'Cinzel',serif;font-size:0.44rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(250,245,236,0.25);text-align:center;padding:0.75rem 0 1.5rem;}
+
+/* BUTTONS */
+.btn-fire{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--parchment);background:var(--amber);border:none;padding:1rem 1.75rem;text-decoration:none;transition:all 0.3s;display:inline-block;cursor:pointer;}
+.btn-fire:hover{background:var(--amber-mid);transform:translateY(-2px);}
+.btn-sage{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--parchment);background:var(--sage);border:none;padding:1rem 1.75rem;text-decoration:none;transition:all 0.3s;display:inline-block;}
+.btn-sage:hover{background:var(--sage-light);transform:translateY(-2px);}
+.btn-ghost-light{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(250,245,236,0.8);background:transparent;border:1px solid rgba(250,245,236,0.3);padding:1rem 1.75rem;text-decoration:none;transition:all 0.3s;display:inline-block;}
+.btn-ghost-light:hover{border-color:var(--amber-bright);color:var(--amber-bright);}
+.btn-ghost-dark{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--amber);background:transparent;border:1px solid rgba(160,88,0,0.3);padding:1rem 1.75rem;text-decoration:none;transition:all 0.3s;display:inline-block;}
+.btn-ghost-dark:hover{background:var(--amber);color:var(--parchment);border-color:var(--amber);}
+
+/* ── URGENCY BAND ── */
+.urgency-band{background:var(--urgent);padding:1.25rem 2rem;display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap;}
+.u-stat{text-align:center;}
 .u-num{font-family:'Cinzel',serif;font-size:1.5rem;font-weight:700;color:#fff;display:block;line-height:1;}
-.u-label{font-family:'Cinzel',serif;font-size:0.46rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.65);display:block;margin-top:0.25rem;}
+.u-label{font-family:'Cinzel',serif;font-size:0.46rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.6);display:block;margin-top:0.2rem;}
+.u-div{width:1px;height:2rem;background:rgba(255,255,255,0.2);}
 
-/* ─── BIOMES ──────────────────────────────────────── */
-.biomes-section{background:var(--earth);padding:7rem 4rem;}
-.biomes-inner{max-width:1120px;margin:0 auto;}
-.section-eyebrow{font-family:'Cinzel',serif;font-size:0.56rem;letter-spacing:0.42em;text-transform:uppercase;color:var(--amber-bright);display:block;margin-bottom:1.25rem;}
-.biomes-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4.5vw,3.5rem);font-weight:300;color:var(--parchment);line-height:1.1;margin-bottom:0.75rem;}
-.biomes-title em{font-style:italic;color:var(--amber-bright);}
-.biomes-intro{font-size:1.05rem;color:rgba(250,245,236,0.6);max-width:680px;line-height:1.85;margin-bottom:3.5rem;}
-.biomes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;}
-.biome-card{position:relative;height:280px;overflow:hidden;}
-.biome-card img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease,filter 0.6s ease;filter:saturate(0.5) brightness(0.6);}
-.biome-card:hover img{transform:scale(1.05);filter:saturate(0.75) brightness(0.55);}
-.biome-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,8,4,0.92) 0%,rgba(15,8,4,0.3) 60%,transparent 100%);}
-.biome-content{position:absolute;bottom:0;left:0;right:0;padding:1.5rem;}
-.biome-tag{font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--amber-bright);display:block;margin-bottom:0.4rem;}
-.biome-name{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--parchment);line-height:1.2;margin-bottom:0.3rem;}
-.biome-threat{font-size:0.82rem;color:rgba(250,245,236,0.55);line-height:1.5;font-style:italic;}
+/* ── WHAT IS THIS ── */
+.what-section{padding:5rem 2rem;background:var(--parchment);}
+.what-inner{max-width:900px;margin:0 auto;text-align:center;}
+.section-eyebrow{font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:1.25rem;}
+.what-inner h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(2rem,5vw,3.2rem);font-weight:600;color:var(--earth);line-height:1.1;margin-bottom:1.5rem;}
+.what-inner h2 em{color:var(--amber);font-style:normal;}
+.what-inner p{font-size:1.1rem;color:var(--earth-mid);line-height:1.9;max-width:700px;margin:0 auto 1.5rem;}
+.what-inner p.lead{font-size:1.25rem;font-style:italic;color:var(--earth);}
 
-/* ─── SPIRITUAL ────────────────────────────────────── */
-.spirit-section{background:var(--canopy);padding:8rem 4rem;position:relative;overflow:hidden;}
-.spirit-section::before{content:'';position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1671271834624-c80b23aabfc8?auto=format&fit=crop&w=1920&q=80');background-size:cover;background-position:center;opacity:0.07;}
-.spirit-inner{position:relative;z-index:1;max-width:860px;margin:0 auto;text-align:center;}
-.spirit-opening{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.6rem,3.5vw,2.6rem);font-weight:300;color:var(--parchment);line-height:1.35;margin-bottom:3rem;}
-.spirit-opening em{color:var(--amber-bright);font-style:normal;}
-.traditions{display:flex;flex-direction:column;gap:0;margin:3rem 0;border-top:1px solid rgba(250,245,236,0.08);}
-.tradition{padding:1.1rem 0;border-bottom:1px solid rgba(250,245,236,0.08);display:grid;grid-template-columns:160px 1fr;gap:1.5rem;text-align:left;}
-.tradition-faith{font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber-bright);padding-top:0.15rem;}
-.tradition-knowing{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:rgba(250,245,236,0.75);line-height:1.6;}
-.spirit-close{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:rgba(250,245,236,0.55);margin-top:3rem;line-height:1.75;font-style:italic;}
-.spirit-close strong{color:var(--parchment);font-style:normal;font-weight:400;}
+/* ── THREE PILLARS ── */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(160,88,0,0.1);margin:4rem 0 0;}
+.pillar{background:var(--parchment);padding:2.5rem 2rem;text-align:center;transition:background 0.3s;}
+.pillar:hover{background:var(--parchment-warm);}
+.pillar-icon{font-size:2rem;display:block;margin-bottom:1rem;}
+.pillar h3{font-family:'Cinzel',serif;font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--earth);margin-bottom:0.75rem;}
+.pillar p{font-size:0.9rem;color:var(--mist);line-height:1.65;}
 
-/* ─── SHARED SECTION STYLES ────────────────────────── */
-.section-inner{max-width:1120px;margin:0 auto;}
-.section-label{font-family:'Cinzel',serif;font-size:0.57rem;letter-spacing:0.42em;text-transform:uppercase;color:var(--amber);margin-bottom:1.75rem;display:flex;align-items:center;gap:0.85rem;}
-.section-label::after{content:'';flex:0 0 70px;height:1px;background:rgba(160,88,0,0.22);}
-h2.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,5vw,3.5rem);font-weight:600;line-height:1.1;color:var(--earth);margin-bottom:1.5rem;}
-h2.section-title em{color:var(--amber);font-style:italic;}
+/* ── THE THREAT ── */
+.threat-section{background:var(--earth);padding:5rem 2rem;position:relative;overflow:hidden;}
+.threat-section::before{content:'';position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1920&q=80');background-size:cover;background-position:center;opacity:0.07;}
+.threat-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1;}
+.threat-inner .section-eyebrow{color:var(--urgent);border-color:var(--urgent);}
+.threat-inner h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(2rem,5vw,3rem);color:var(--parchment);line-height:1.1;margin-bottom:3rem;max-width:700px;}
+.threat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,0.06);}
+.threat-card{background:rgba(250,245,236,0.03);padding:2rem;border-left:3px solid transparent;transition:all 0.3s;}
+.threat-card:hover{background:rgba(250,245,236,0.06);}
+.threat-card.red{border-left-color:var(--urgent);}
+.threat-card.amber{border-left-color:var(--amber);}
+.threat-card h4{font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--amber-bright);margin-bottom:0.75rem;}
+.threat-card p{font-size:0.9rem;color:rgba(250,245,236,0.55);line-height:1.7;}
+.threat-card .stat{font-family:'Cinzel',serif;font-size:1.6rem;font-weight:700;color:#fff;display:block;margin-bottom:0.25rem;line-height:1;}
 
-/* ─── PROBLEM STATEMENT ────────────────────────────── */
-.problem-section{background:var(--parchment);padding:7rem 4rem;}
-.problem-story{font-size:1.05rem;color:var(--earth-mid);line-height:1.9;max-width:760px;}
-.problem-story p{margin-bottom:1.5rem;}
-.problem-story p strong{color:var(--earth);font-weight:600;}
-.problem-highlight{background:var(--earth);color:var(--parchment);padding:2.5rem 3rem 2.5rem 4rem;margin:3rem 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;line-height:1.6;position:relative;}
-.problem-highlight::before{content:'"';font-size:4rem;color:var(--amber-bright);position:absolute;top:-1rem;left:2rem;font-family:'Cormorant Garamond',serif;line-height:1;}
+/* ── PHOTO STRIP ── */
+.photo-strip{display:grid;grid-template-columns:repeat(4,1fr);height:220px;overflow:hidden;}
+.strip-img{overflow:hidden;position:relative;}
+.strip-img img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(0.7);transition:filter 0.4s,transform 0.4s;}
+.strip-img:hover img{filter:saturate(1);transform:scale(1.04);}
 
-/* ─── WHO SECTION ──────────────────────────────────── */
-.who-section{background:var(--parchment-warm);padding:7rem 4rem;border-top:1px solid rgba(160,88,0,0.08);}
-.who-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(160,88,0,0.08);margin:3rem 0;}
-.who-card{background:var(--parchment);padding:1.75rem 1.5rem;transition:background 0.3s;}
-.who-card:hover{background:var(--amber-pale);}
-.who-icon{font-size:1.5rem;display:block;margin-bottom:0.75rem;}
-.who-card h3{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--earth);margin-bottom:0.6rem;}
-.who-card p{font-size:0.88rem;color:var(--mist);line-height:1.65;}
+/* ── WHAT WE DO ── */
+.what-we-do{padding:5rem 2rem;background:var(--parchment-warm);}
+.what-we-do-inner{max-width:1100px;margin:0 auto;}
+.what-we-do-inner h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.8rem,4vw,2.8rem);color:var(--earth);margin-bottom:3rem;}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem;}
+.tool-card{background:white;padding:2rem;border-top:3px solid var(--amber);box-shadow:0 2px 12px rgba(34,24,17,0.06);transition:transform 0.3s,box-shadow 0.3s;}
+.tool-card:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(34,24,17,0.1);}
+.tool-card .t-icon{font-size:1.6rem;display:block;margin-bottom:0.75rem;}
+.tool-card h3{font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--earth);margin-bottom:0.6rem;}
+.tool-card p{font-size:0.88rem;color:var(--earth-mid);line-height:1.65;}
 
-/* ─── PLATFORM VISION ───────────────────────────────── */
-.platform-section{background:var(--earth);padding:7rem 4rem;}
-.platform-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(250,245,236,0.06);margin:3rem 0;}
-.platform-card{background:rgba(250,245,236,0.03);padding:2rem;border-top:2px solid transparent;transition:all 0.3s;}
-.platform-card.live{border-top-color:var(--sage);}
-.platform-card.building{border-top-color:var(--amber);}
-.platform-card:hover{background:rgba(250,245,236,0.06);}
-.pc-status{font-family:'Cinzel',serif;font-size:0.48rem;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:0.75rem;display:block;}
-.live .pc-status{color:var(--sage-light);}
-.building .pc-status{color:var(--amber-bright);}
-.platform-card h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--parchment);margin-bottom:0.5rem;}
-.platform-card p{font-size:0.88rem;color:rgba(250,245,236,0.5);line-height:1.65;}
+/* ── CAMPAIGN SPOTLIGHT ── */
+.campaign{padding:5rem 2rem;background:var(--parchment);border-top:1px solid rgba(160,88,0,0.1);}
+.campaign-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.campaign-img{position:relative;height:360px;overflow:hidden;}
+.campaign-img img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(0.75);}
+.campaign-img-badge{position:absolute;top:1.5rem;left:1.5rem;font-family:'Cinzel',serif;font-size:0.46rem;letter-spacing:0.2em;text-transform:uppercase;color:#fff;background:var(--urgent);padding:0.35rem 0.75rem;}
+.campaign-text .section-eyebrow{text-align:left;}
+.campaign-text h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--earth);line-height:1.1;margin-bottom:1.25rem;}
+.campaign-text p{font-size:1rem;color:var(--earth-mid);line-height:1.85;margin-bottom:1.75rem;}
+.campaign-text .cta-pair{display:flex;gap:0.75rem;flex-wrap:wrap;}
 
-/* ─── COMMUNITY PREVIEW ────────────────────────────── */
-.community-preview{background:var(--parchment-warm);padding:7rem 4rem;border-top:1px solid rgba(160,88,0,0.08);}
-.cp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(160,88,0,0.08);margin:3rem 0;}
-.cp-card{background:var(--parchment);padding:1.75rem;display:flex;flex-direction:column;gap:0.65rem;}
-.cp-initial{width:48px;height:48px;border-radius:50%;background:var(--amber);display:flex;align-items:center;justify-content:center;font-family:'Cinzel',serif;font-size:1.25rem;font-weight:700;color:var(--parchment);}
-.cp-location{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--mist);}
-.cp-path{display:inline-block;font-family:'Cinzel',serif;font-size:0.48rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.22rem 0.6rem;border:1px solid rgba(160,88,0,0.15);color:var(--amber);}
-.cp-place{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.9rem;color:var(--earth-mid);line-height:1.5;}
-/* IMPROVED: honest invitation instead of fake empty slots */
-.cp-invitation{background:var(--parchment);padding:1.75rem;display:flex;flex-direction:column;justify-content:center;border:1px dashed rgba(160,88,0,0.15);}
-.cp-invitation p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.95rem;color:var(--earth-mid);line-height:1.65;margin-bottom:1rem;}
-.cp-invitation a{font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--amber);text-decoration:none;}
-.cp-invitation a:hover{color:var(--amber-mid);}
+/* ── FOUNDER ── */
+.founder{padding:5rem 2rem;background:var(--earth);position:relative;overflow:hidden;}
+.founder::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%, rgba(160,88,0,0.12) 0%, transparent 60%);}
+.founder-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:3.5rem;align-items:start;position:relative;z-index:1;}
+.founder-photo{width:160px;height:160px;border-radius:50%;overflow:hidden;border:3px solid rgba(160,88,0,0.4);flex-shrink:0;}
+.founder-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.founder-text .section-eyebrow{color:var(--amber-bright);text-align:left;}
+.founder-text h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--parchment);line-height:1.1;margin-bottom:1.25rem;}
+.founder-text p{font-size:1rem;color:rgba(250,245,236,0.6);line-height:1.85;margin-bottom:1.25rem;}
+.founder-credentials{display:flex;flex-wrap:wrap;gap:0.5rem;margin:1.5rem 0;}
+.cred{font-family:'Cinzel',serif;font-size:0.48rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(250,245,236,0.5);background:rgba(250,245,236,0.06);border:1px solid rgba(250,245,236,0.12);padding:0.3rem 0.7rem;}
 
-/* ─── HEARTH PREVIEW ────────────────────────────────── */
-.hearth-preview{background:var(--parchment);padding:7rem 4rem;border-top:1px solid rgba(160,88,0,0.08);}
-.hearth-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(160,88,0,0.08);margin:3rem 0;}
-.post-card{background:var(--parchment);padding:2.5rem;border-top:2px solid var(--amber);transition:background 0.3s;}
-.post-card:hover{background:var(--parchment-warm);}
-.post-card.urgent{border-top-color:var(--urgent);}
-.post-tag{font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.22em;text-transform:uppercase;display:block;margin-bottom:0.85rem;}
-.post-card .post-tag{color:var(--amber);}
-.post-card.urgent .post-tag{color:var(--urgent);}
-.post-card h3{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:600;color:var(--earth);margin-bottom:0.65rem;line-height:1.2;}
-.post-card p{font-size:0.92rem;color:var(--earth-mid);line-height:1.78;margin-bottom:1.35rem;}
-.post-card-footer{display:flex;justify-content:space-between;align-items:center;}
-.post-read{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;transition:color 0.2s;}
-.post-card .post-read{color:var(--amber);}
-.post-card.urgent .post-read{color:var(--urgent);}
-.post-byline{font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.1em;color:var(--mist);}
+/* ── FROM THE HEARTH ── */
+.latest-posts{padding:5rem 2rem;background:var(--parchment-warm);}
+.latest-inner{max-width:1100px;margin:0 auto;}
+.latest-inner h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.8rem,4vw,2.5rem);color:var(--earth);margin-bottom:2.5rem;}
+.posts-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;margin-bottom:2.5rem;}
+.post-card{background:white;overflow:hidden;box-shadow:0 2px 10px rgba(34,24,17,0.07);transition:transform 0.3s,box-shadow 0.3s;}
+.post-card:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(34,24,17,0.12);}
+.post-card-img{height:190px;overflow:hidden;}
+.post-card-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s;}
+.post-card:hover .post-card-img img{transform:scale(1.05);}
+.post-card-body{padding:1.25rem 1.5rem 1.75rem;}
+.post-card-tag{font-family:'Cinzel',serif;font-size:0.46rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:0.35rem;}
+.post-card-body h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--earth);line-height:1.25;margin-bottom:0.6rem;}
+.post-card-body p{font-size:0.85rem;color:var(--earth-mid);line-height:1.6;margin-bottom:1rem;}
+.post-link{font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--sage);text-decoration:none;display:inline-flex;align-items:center;gap:0.3rem;transition:gap 0.3s,color 0.3s;}
+.post-link:hover{gap:0.6rem;color:var(--amber);}
 
-/* ─── SHARE PHRASES ─────────────────────────────────── */
-.phrases-section{background:var(--earth);padding:6rem 4rem;}
-.phrases-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;max-width:900px;margin:2.5rem auto 0;background:rgba(250,245,236,0.06);}
-.phrase-item{background:rgba(250,245,236,0.03);padding:1.5rem 2rem;cursor:pointer;transition:background 0.25s;border:none;width:100%;text-align:left;}
-.phrase-item:hover{background:rgba(250,245,236,0.07);}
-.phrase-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:rgba(250,245,236,0.78);line-height:1.5;display:block;margin-bottom:0.5rem;}
-.phrase-copy{font-family:'Cinzel',serif;font-size:0.44rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--amber-bright);opacity:0.5;transition:opacity 0.2s;}
-.phrase-item:hover .phrase-copy{opacity:1;}
+/* ── SIGNUP ── */
+.signup{background:var(--earth);padding:5rem 2rem;text-align:center;position:relative;overflow:hidden;}
+.signup::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 100%, rgba(160,88,0,0.2) 0%, transparent 65%);}
+.signup-inner{position:relative;z-index:1;max-width:600px;margin:0 auto;}
+.signup h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.8rem,4vw,2.8rem);color:var(--parchment);margin-bottom:0.75rem;}
+.signup p{font-size:1rem;color:rgba(250,245,236,0.55);line-height:1.8;margin-bottom:2rem;}
+.signup-form{display:flex;gap:0;max-width:480px;margin:0 auto;}
+.signup-form input{flex:1;font-family:'Cormorant Garamond',serif;font-size:0.95rem;padding:0.9rem 1.25rem;border:1px solid rgba(160,88,0,0.3);border-right:none;background:rgba(250,245,236,0.06);color:var(--parchment);outline:none;}
+.signup-form input::placeholder{color:rgba(250,245,236,0.3);}
+.signup-form input:focus{border-color:var(--amber);background:rgba(250,245,236,0.1);}
+.signup-form button{font-family:'Cinzel',serif;font-size:0.56rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--parchment);background:var(--amber);border:none;padding:0.9rem 1.5rem;cursor:pointer;transition:background 0.3s;white-space:nowrap;}
+.signup-form button:hover{background:var(--amber-mid);}
+.signup-note{font-family:'Cinzel',serif;font-size:0.46rem;letter-spacing:0.12em;color:rgba(250,245,236,0.25);margin-top:0.75rem;}
 
-/* ─── SIGN UP ─────────────────────────────────────────── */
-#signup{background:var(--parchment);padding:7rem 4rem;border-top:1px solid rgba(160,88,0,0.08);}
-.signup-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;}
-.signup-left h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4.5vw,3.2rem);font-weight:300;color:var(--earth);line-height:1.15;margin-bottom:1.25rem;}
-.signup-left h2 em{font-style:italic;color:var(--amber);}
-.signup-left p{font-size:1rem;color:var(--earth-mid);line-height:1.85;margin-bottom:1.75rem;}
-.signup-promises{list-style:none;display:flex;flex-direction:column;gap:0.6rem;}
-.signup-promises li{font-family:'Cinzel',serif;font-size:0.56rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--mist);display:flex;align-items:center;gap:0.6rem;}
-.signup-promises li::before{content:'✓';color:var(--sage);}
-.field-group{margin-bottom:1.1rem;}
-.field-group label{font-family:'Cinzel',serif;font-size:0.56rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--earth-mid);display:block;margin-bottom:0.45rem;}
-.field-group input:not([type="checkbox"]),.field-group select,.field-group textarea{width:100%;background:var(--parchment-warm);border:1px solid rgba(160,88,0,0.18);color:var(--earth);padding:0.75rem 1rem;font-family:'Cormorant Garamond',serif;font-size:1rem;outline:none;transition:border-color 0.3s;-webkit-appearance:none;appearance:none;font-size:16px;}
-.field-group input:focus,.field-group select:focus{border-color:var(--amber);}
-.field-group select{background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23a05800' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;background-size:12px;padding-right:2.5rem;}
-.gdpr-label{display:flex;align-items:flex-start;gap:0.75rem;cursor:pointer;font-size:0.88rem;color:var(--mist);line-height:1.5;}
-.gdpr-label input[type="checkbox"]{flex-shrink:0;margin-top:0.2rem;accent-color:var(--amber);width:18px!important;height:18px!important;min-width:18px!important;padding:0!important;background:transparent!important;border:1px solid rgba(160,88,0,0.4)!important;-webkit-appearance:checkbox!important;appearance:checkbox!important;cursor:pointer;}
-.form-submit-btn{font-family:'Cinzel',serif;font-size:0.64rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--parchment);background:var(--amber);border:none;padding:1rem 2.5rem;cursor:pointer;transition:all 0.3s;width:100%;margin-top:0.5rem;min-height:44px;}
-.form-submit-btn:hover{background:var(--amber-mid);}
-.form-success{display:none;background:var(--sage-pale);border-left:3px solid var(--sage);padding:2rem;margin-top:1.5rem;}
-.form-success h4{font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--sage);margin-bottom:0.6rem;}
-.form-success p{font-size:0.9rem;color:var(--earth-mid);line-height:1.7;}
+/* ── FOOTER ── */
+footer{background:var(--earth);border-top:2px solid var(--amber);padding:3rem 2rem 2rem;}
+.footer-inner{max-width:1100px;margin:0 auto;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;}
+.footer-brand .footer-logo{font-family:'Cinzel',serif;font-size:0.9rem;letter-spacing:0.2em;color:var(--amber-bright);display:block;margin-bottom:0.75rem;}
+.footer-brand p{font-size:0.85rem;color:rgba(250,245,236,0.35);line-height:1.65;max-width:240px;}
+.footer-col h4{font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(250,245,236,0.3);margin-bottom:1rem;}
+.footer-col a{display:block;font-family:'Cinzel',serif;font-size:0.54rem;letter-spacing:0.12em;color:rgba(250,245,236,0.45);text-decoration:none;margin-bottom:0.6rem;transition:color 0.3s;}
+.footer-col a:hover{color:var(--amber-bright);}
+.footer-base{border-top:1px solid rgba(250,245,236,0.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.1em;color:rgba(250,245,236,0.2);}
+.footer-base a{color:rgba(250,245,236,0.3);text-decoration:none;}
 
-/* ─── CONTRIBUTE ─────────────────────────────────────── */
-#submit{background:var(--earth);padding:7rem 4rem;}
-.submit-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;}
-.submit-left h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:300;color:var(--parchment);line-height:1.15;margin-bottom:1.25rem;}
-.submit-left h2 em{color:var(--amber-bright);font-style:italic;}
-.submit-left p{font-size:1rem;color:rgba(250,245,236,0.6);line-height:1.85;}
-.submit-ways{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-top:1.5rem;}
-.submit-ways li{font-family:'Cinzel',serif;font-size:0.54rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,245,236,0.45);padding:0.5rem 0;border-bottom:1px solid rgba(250,245,236,0.06);}
-.submit-ways li::before{content:'→ ';color:var(--amber-bright);}
-.dark-field input,.dark-field select,.dark-field textarea{background:rgba(250,245,236,0.05);border:1px solid rgba(250,245,236,0.12);color:var(--parchment);font-size:16px;}
-.dark-field label{color:rgba(250,245,236,0.55);}
-.dark-field input::placeholder,.dark-field textarea::placeholder{color:rgba(250,245,236,0.22);}
-.dark-field select{background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23e09020' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;background-size:12px;padding-right:2.5rem;color:var(--parchment);}
-.dark-field input:focus,.dark-field select:focus{border-color:rgba(224,144,32,0.45);}
-.dark-submit-btn{font-family:'Cinzel',serif;font-size:0.64rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--parchment);background:transparent;border:1px solid rgba(250,245,236,0.25);padding:1rem 2.5rem;cursor:pointer;transition:all 0.3s;width:100%;margin-top:0.5rem;min-height:44px;}
-.dark-submit-btn:hover{background:var(--amber);border-color:var(--amber);}
-.dark-success{display:none;background:rgba(61,110,72,0.12);border-left:3px solid var(--sage-light);padding:2rem;margin-top:1.5rem;}
-.dark-success h4{font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--sage-light);margin-bottom:0.6rem;}
-.dark-success p{font-size:0.9rem;color:rgba(250,245,236,0.55);line-height:1.7;}
-
-/* ─── FOOTER ─────────────────────────────────────────── */
-footer{background:var(--earth);padding:3rem 4rem 2rem;border-top:1px solid rgba(250,245,236,0.06);}
-.footer-inner{max-width:1120px;margin:0 auto;}
-.footer-top{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(250,245,236,0.06);margin-bottom:2rem;}
-.footer-brand p{font-size:0.88rem;color:rgba(250,245,236,0.35);line-height:1.8;margin-top:0.75rem;max-width:280px;}
-.footer-nav-col h4{font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(250,245,236,0.3);margin-bottom:1rem;}
-.footer-nav-col a{display:block;font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,245,236,0.45);text-decoration:none;margin-bottom:0.6rem;transition:color 0.2s;}
-.footer-nav-col a:hover{color:var(--amber-bright);}
-.footer-base{display:flex;justify-content:space-between;align-items:center;font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.1em;color:rgba(250,245,236,0.22);}
-.footer-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.9rem;color:rgba(250,245,236,0.25);}
-
-/* ─── REVEAL ANIMATIONS ────────────────────────────── */
+/* ── ANIMATIONS ── */
+@keyframes fadeup{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease;}
-.reveal.visible{opacity:1;transform:none;}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
+.reveal.visible{opacity:1;transform:translateY(0);}
 
-/* ─── RESPONSIVE ─────────────────────────────────────── */
-@media(max-width:960px){
-  #nav{padding:1rem 2rem;}
-  .hero-content{padding:8rem 2rem 4rem;}
+/* ── MOBILE ── */
+@media(max-width:760px){
+  nav{padding:0.85rem 1.25rem;}
   .nav-links{display:none;}
-  .nav-toggle{display:block;}
-  .urgency-band,.biomes-section,.spirit-section,.problem-section,.who-section,.platform-section,.community-preview,.hearth-preview,.phrases-section,#signup,#submit,footer{padding-left:2rem;padding-right:2rem;}
-  .biomes-grid{grid-template-columns:1fr 1fr;}
-  .who-grid,.platform-grid,.cp-grid{grid-template-columns:1fr 1fr;}
-  .signup-inner,.submit-inner{grid-template-columns:1fr;gap:3rem;}
-  .hearth-grid{grid-template-columns:1fr;}
-  .footer-top{grid-template-columns:1fr 1fr;}
-  .phrases-grid{grid-template-columns:1fr;}
-  .tradition{grid-template-columns:1fr;gap:0.4rem;}
-}
-@media(max-width:640px){
-  .biomes-grid,.who-grid,.platform-grid{grid-template-columns:1fr;}
-  .cp-grid{grid-template-columns:1fr 1fr;}
-  .footer-top{grid-template-columns:1fr;}
+  .nav-hamburger{display:flex;}
+
+  .hero{min-height:100svh;}
+  .hero-content{padding:5.5rem 1.25rem 0;}
+  .hero h1{font-size:clamp(2.2rem,9vw,3rem);}
+  .hero-standfirst{font-size:1rem;}
+  .hero-ctas{flex-direction:column;align-items:stretch;}
+  .hero-ctas a{text-align:center;}
+  .hero-video-inner{padding:1.25rem 1.25rem 0;}
+
+  .urgency-band{gap:1rem;padding:1rem 1.25rem;}
+  .u-div{display:none;}
+  .u-num{font-size:1.2rem;}
+
+  .what-section{padding:3.5rem 1.25rem;}
+  .pillars{grid-template-columns:1fr;}
+  .pillar{padding:2rem 1.5rem;}
+
+  .threat-section{padding:3.5rem 1.25rem;}
+  .threat-grid{grid-template-columns:1fr;}
+
+  .photo-strip{grid-template-columns:repeat(2,1fr);height:300px;}
+
+  .what-we-do{padding:3.5rem 1.25rem;}
+  .tools-grid{grid-template-columns:1fr;}
+
+  .campaign{padding:3.5rem 1.25rem;}
+  .campaign-inner{grid-template-columns:1fr;gap:2rem;}
+  .campaign-img{height:240px;}
+  .campaign-text .cta-pair{flex-direction:column;}
+
+  .founder{padding:3.5rem 1.25rem;}
+  .founder-inner{grid-template-columns:1fr;gap:2rem;}
+  .founder-photo{width:100px;height:100px;}
+
+  .latest-posts{padding:3.5rem 1.25rem;}
+  .posts-row{grid-template-columns:1fr;}
+
+  .signup{padding:3.5rem 1.25rem;}
+  .signup-form{flex-direction:column;}
+  .signup-form input{border-right:1px solid rgba(160,88,0,0.3);border-bottom:none;}
+  .signup-form button{padding:0.9rem;}
+
+  footer{padding:2.5rem 1.25rem 1.5rem;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem;}
   .footer-base{flex-direction:column;gap:0.75rem;text-align:center;}
-  .u-stat{padding:0.5rem 1rem;}
-  .u-num{font-size:1.1rem;}
-  .u-label{font-size:0.42rem;}
+}
+@media(max-width:420px){
+  .footer-grid{grid-template-columns:1fr;}
+  .photo-strip{grid-template-columns:repeat(2,1fr);}
 }
 </style>
 </head>
 <body>
 
-<!-- SKIP LINK -->
-<a href="#main" class="skip-link">Skip to main content</a>
-
-<!-- ═══ NAV ═══ -->
-<nav id="nav" role="navigation" aria-label="Main navigation">
-  <a href="/index.html" class="nav-logo" aria-label="The Firewalkers — home">
-    <img src="images/logos/firewalker-logo.png" alt="The Firewalkers">
-  </a>
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-brand">⁂ The Firewalkers</a>
   <div class="nav-links">
-    <a href="/index.html#protect">What We Protect</a>
-    <a href="/good-ai.html">Good AI</a>
-    <a href="/campaigns.html">Campaigns</a>
-    <a href="/datacentre-watch.html">Data Centre Watch</a>
-    <a href="/hearth.html">From the Hearth</a>
-    <a href="/community.html">Community</a>
-    <a href="/media.html">Media</a>
-    <a href="/index.html#signup" class="nav-cta">Join the Fire</a>
+    <a href="hearth.html">From the Hearth</a>
+    <a href="datacentre-watch.html">Data Centre Watch</a>
+    <a href="community.html">Community</a>
+    <a href="tools.html">Tools</a>
+    <a href="index.html#signup" class="nav-cta">Join</a>
   </div>
-  <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="22" height="22" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-  </button>
+  <div class="nav-hamburger" onclick="document.querySelector('.mobile-menu').classList.add('open')" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </div>
 </nav>
 
-<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Site navigation">
-  <button class="mobile-close" onclick="closeMM()" aria-label="Close menu">✕ Close</button>
-  <a href="/index.html" class="mobile-logo" onclick="closeMM()"><img src="images/logos/firewalker-logo.png" alt="The Firewalkers"></a>
-  <a href="/index.html#protect" class="mobile-link" onclick="closeMM()">What We Protect</a>
-  <a href="/good-ai.html" class="mobile-link" onclick="closeMM()">Good AI</a>
-  <a href="/campaigns.html" class="mobile-link" onclick="closeMM()">Campaigns</a>
-  <a href="/datacentre-watch.html" class="mobile-link" onclick="closeMM()">Data Centre Watch</a>
-  <a href="/hearth.html" class="mobile-link" onclick="closeMM()">From the Hearth</a>
-  <a href="/community.html" class="mobile-link" onclick="closeMM()">Community</a>
-  <a href="/media.html" class="mobile-link" onclick="closeMM()">Media</a>
-  <a href="/index.html#signup" class="mobile-cta-link" onclick="closeMM()">Join the Fire</a>
+<!-- MOBILE MENU -->
+<div class="mobile-menu" role="dialog" aria-label="Navigation">
+  <button class="mobile-menu-close" onclick="document.querySelector('.mobile-menu').classList.remove('open')" aria-label="Close menu">✕</button>
+  <a href="hearth.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">From the Hearth</a>
+  <a href="datacentre-watch.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Data Centre Watch</a>
+  <a href="community.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Community</a>
+  <a href="tools.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Tools</a>
+  <a href="index.html#signup" class="mobile-cta" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Join the movement</a>
 </div>
 
-<main id="main">
-
-<!-- ═══ HERO ═══ -->
-<section id="hero" aria-label="Hero">
-  <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1601465364325-34b5b5fdb6c4?auto=format&fit=crop&w=1920&q=80" alt="Ring of Brodgar, Orkney — standing stones at dusk, ancient land under vast skies" loading="eager">
-  </div>
-  <div class="hero-overlay" aria-hidden="true"></div>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
   <div class="hero-content">
-    <span class="hero-eyebrow">A global movement · for the living world</span>
-    <h1 class="hero-title">
-      <strong>The Firewalkers</strong>
-      Every place<br>you love is being<br>decided <em>right now.</em>
-    </h1>
-    <p class="hero-sub">Ancient forests. Sacred rivers. Wetlands. Coastlines. The biosphere itself. The AI revolution is consuming the earth. We are building the tools — and the community — to protect it.</p>
+    <span class="hero-eyebrow">A global movement · firewalkers.earth</span>
+    <h1>The AI revolution<br>is consuming <em>the earth.</em></h1>
+    <p class="hero-standfirst">Data centres are being built on ancient land, draining water tables, destroying the places we love — before communities even know it's happening. We exist to change that.</p>
     <div class="hero-ctas">
-      <a href="#signup" class="btn-primary">Join the fire</a>
-      <a href="#protect" class="btn-secondary">What is at stake</a>
-    </div>
-    <div class="hero-share" aria-label="Share this page">
-      Share this:
-      <a href="https://twitter.com/intent/tweet?text=Every+place+you+love+is+being+decided+right+now.+%F0%9F%94%A5+firewalkers.earth" target="_blank" rel="noopener">X</a>
-      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ffirewalkers.earth" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://api.whatsapp.com/send?text=Every+place+you+love+is+being+decided+right+now+%F0%9F%94%A5+https%3A%2F%2Ffirewalkers.earth" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="#signup" class="btn-fire">Join the movement</a>
+      <a href="datacentre-watch.html" class="btn-ghost-light">Watch what's coming</a>
     </div>
   </div>
-</section>
 
-<!-- ═══ URGENCY BAND ═══ -->
-<div class="urgency-band" role="region" aria-label="Key statistics">
-  <div class="u-stat"><span class="u-num">2,000+</span><span class="u-label">New data centres planned globally</span></div>
-  <div class="u-stat"><span class="u-num">12 weeks</span><span class="u-label">Average community consultation window</span></div>
-  <div class="u-stat"><span class="u-num">22%</span><span class="u-label">Of Ireland's electricity consumed by data centres</span></div>
+  <div class="hero-video-wrap">
+    <div class="hero-video-inner">
+      <div class="hero-video-label">Scott Seivwright · Founder · Bathgate Hills, Scotland</div>
+      <div class="video-embed">
+        <iframe
+          src="https://www.youtube.com/embed/0vd-tP03_G8"
+          title="The Land Is Being Taken. Meet The Firewalkers. — Scott Seivwright"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+      <p class="hero-video-caption">Filmed June 2026 · No script · Just the land and the truth</p>
+    </div>
+  </div>
+</div>
+
+<!-- URGENCY BAND -->
+<div class="urgency-band">
+  <div class="u-stat"><span class="u-num">2,000+</span><span class="u-label">Data centres planned globally</span></div>
+  <div class="u-div"></div>
+  <div class="u-stat"><span class="u-num">12 weeks</span><span class="u-label">Community consultation window</span></div>
+  <div class="u-div"></div>
+  <div class="u-stat"><span class="u-num">Billions</span><span class="u-label">Litres of water consumed daily</span></div>
+  <div class="u-div"></div>
   <div class="u-stat"><span class="u-num">Now</span><span class="u-label">The moment to act</span></div>
 </div>
 
-<!-- ═══ WHAT WE PROTECT ═══ -->
-<section id="protect" class="biomes-section">
-  <div class="biomes-inner">
-    <span class="section-eyebrow reveal">What is at stake</span>
-    <h2 class="biomes-title reveal">The living world<br>we are <em>fighting for</em></h2>
-    <p class="biomes-intro reveal">Not abstract concepts. Specific places. The forest you walked as a child. The river your ancestors named. The wetland no planning application has ever called beautiful. All of it matters. All of it is under threat.</p>
-    <div class="biomes-grid" role="list">
-      <div class="biome-card reveal" role="listitem">
-        <img src="https://images.unsplash.com/photo-1671271834624-c80b23aabfc8?auto=format&fit=crop&w=800&q=75" alt="Ancient misty forest" loading="lazy">
-        <div class="biome-overlay" aria-hidden="true"></div>
-        <div class="biome-content"><span class="biome-tag">Ancient forests</span><div class="biome-name">Woodland &amp; Forest</div><div class="biome-threat">Being cleared for server farms. Ancient groves replaced with cooling towers.</div></div>
+<!-- WHAT IS THIS -->
+<div class="what-section">
+  <div class="what-inner">
+    <span class="section-eyebrow reveal">What is The Firewalkers?</span>
+    <h2 class="reveal">We use <em>AI</em> to protect<br>the natural world from AI.</h2>
+    <p class="lead reveal">The technology is not the enemy. How it is being built — at speed, without consent, on land that cannot speak for itself in planning applications — that is the problem.</p>
+    <p class="reveal">The Firewalkers is a global movement that watches what's coming, equips communities with tools to understand and fight back, and connects the people who care — technologists, activists, ecologists, people of faith, anyone who loves a place.</p>
+    <div class="pillars reveal">
+      <div class="pillar">
+        <span class="pillar-icon">👁</span>
+        <h3>Watch</h3>
+        <p>Monitoring data centre planning applications globally before communities run out of time to respond.</p>
       </div>
-      <div class="biome-card reveal" role="listitem">
-        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=75" alt="River flowing through mountain landscape" loading="lazy">
-        <div class="biome-overlay" aria-hidden="true"></div>
-        <div class="biome-content"><span class="biome-tag">Rivers &amp; streams</span><div class="biome-name">Freshwater</div><div class="biome-threat">AI cooling systems drawing billions of litres from aquifers and rivers daily.</div></div>
+      <div class="pillar">
+        <span class="pillar-icon">🛠</span>
+        <h3>Equip</h3>
+        <p>AI tools that translate complex planning documents into plain language communities can actually use.</p>
       </div>
-      <div class="biome-card reveal" role="listitem">
-        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=800&q=75" alt="Farmland and wetland aerial view" loading="lazy">
-        <div class="biome-overlay" aria-hidden="true"></div>
-        <div class="biome-content"><span class="biome-tag">Wetlands &amp; farmland</span><div class="biome-name">Living Soil</div><div class="biome-threat">Drained and developed before communities know what has been approved.</div></div>
-      </div>
-      <div class="biome-card reveal" role="listitem">
-        <img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=800&q=75" alt="Coastline and ocean" loading="lazy">
-        <div class="biome-overlay" aria-hidden="true"></div>
-        <div class="biome-content"><span class="biome-tag">Coastlines &amp; oceans</span><div class="biome-name">Sea &amp; Shore</div><div class="biome-threat">Warming, acidifying — and now under industrial pressure from offshore infrastructure.</div></div>
-      </div>
-      <div class="biome-card reveal" role="listitem">
-        <img src="https://images.unsplash.com/photo-1601465364325-34b5b5fdb6c4?auto=format&fit=crop&w=800&q=75" alt="Standing stones at dusk — sacred ancient site" loading="lazy">
-        <div class="biome-overlay" aria-hidden="true"></div>
-        <div class="biome-content"><span class="biome-tag">Sacred sites</span><div class="biome-name">Ancient Places</div><div class="biome-threat">Planning applications that treat five thousand years of human relationship as a footnote.</div></div>
-      </div>
-      <div class="biome-card reveal" role="listitem">
-        <img src="https://images.unsplash.com/photo-1626078296870-c2c2bfaaa037?auto=format&fit=crop&w=800&q=75" alt="Scottish Highlands landscape" loading="lazy">
-        <div class="biome-overlay" aria-hidden="true"></div>
-        <div class="biome-content"><span class="biome-tag">Mountains &amp; uplands</span><div class="biome-name">High Ground</div><div class="biome-threat">Windswept and vast — and increasingly subject to industrial extraction on a planetary scale.</div></div>
-      </div>
-    </div>
-    <p style="text-align:center;margin-top:2.5rem;font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(250,245,236,0.35);">
-      Every biome. Every bioregion. Every continent.
-      <a href="campaigns.html" style="color:var(--amber-bright);text-decoration:none;margin-left:1rem;">See active campaigns →</a>
-    </p>
-  </div>
-</section>
-
-<!-- ═══ SPIRITUAL ═══ -->
-<section id="spirit" class="spirit-section" aria-label="Spiritual traditions">
-  <div class="spirit-inner">
-    <p class="spirit-opening reveal">Every tradition that has survived<br>long enough to know the earth<br>carries <em>the same knowing.</em></p>
-    <div class="traditions" role="list">
-      <div class="tradition reveal" role="listitem"><span class="tradition-faith">Druidry</span><span class="tradition-knowing">We are the voice of the grove. The land speaks through us when we are still enough to listen.</span></div>
-      <div class="tradition reveal" role="listitem"><span class="tradition-faith">Islam</span><span class="tradition-knowing">We are khalifa — stewards of creation, accountable before God for what we leave behind.</span></div>
-      <div class="tradition reveal" role="listitem"><span class="tradition-faith">Celtic Christianity</span><span class="tradition-knowing">The whole earth is a thin place. The sacred is barely concealed beneath the surface of every stone and stream.</span></div>
-      <div class="tradition reveal" role="listitem"><span class="tradition-faith">Buddhism</span><span class="tradition-knowing">Every thread pulled affects the whole web. The harm done to any one living thing is the diminishment of all.</span></div>
-      <div class="tradition reveal" role="listitem"><span class="tradition-faith">Indigenous traditions</span><span class="tradition-knowing">The land is not property. It is ancestor, teacher, relative. You cannot own what you belong to.</span></div>
-      <div class="tradition reveal" role="listitem"><span class="tradition-faith">Judaism</span><span class="tradition-knowing">Bal tashchit. We are forbidden to destroy. What we were given, we must return intact.</span></div>
-      <div class="tradition reveal" role="listitem"><span class="tradition-faith">Hinduism</span><span class="tradition-knowing">The rivers are sacred. The earth is mother. She is not a resource. She is the ground of all being.</span></div>
-      <div class="tradition reveal" role="listitem"><span class="tradition-faith">Quaker</span><span class="tradition-knowing">There is that of God in every living thing. To destroy it carelessly is to refuse to see what is there.</span></div>
-      <div class="tradition reveal" role="listitem"><span class="tradition-faith">No faith</span><span class="tradition-knowing">You don't need a tradition to feel it. Some things are simply worth protecting. You already know which ones.</span></div>
-    </div>
-    <p class="spirit-close reveal">The Firewalkers is where all those voices meet —<br><strong>at the intersection of ancient knowing and modern tools.</strong></p>
-  </div>
-</section>
-
-<!-- ═══ PROBLEM STATEMENT ═══ -->
-<section id="pattern" class="problem-section">
-  <div class="section-inner">
-    <div class="section-label reveal">The Moment We Are In</div>
-    <h2 class="section-title reveal">We have seen this <em>pattern before.</em></h2>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:2.5rem;">
-      <div class="problem-story reveal">
-        <p>In the 1840s, railway mania transformed Britain in a decade. Genuine innovation. Real transformation. And vast speculative excess that extracted, consolidated and moved on — leaving the damage behind.</p>
-        <p>The communities who lived along the routes were rarely consulted. The land was surveyed, acquired and built upon before anyone thought to ask.</p>
-        <p>We are watching the same pattern now. Dressed in silicon. Moving faster. With far greater consequences for the living systems that sustain everything.</p>
-        <p><strong>The AI revolution is the fastest land grab in human history.</strong> And most of it is happening in 12-week planning windows that communities don't know exist.</p>
-      </div>
-      <div class="reveal">
-        <div class="problem-highlight">We are not anti-AI. We are not against progress. We are against the idea that the earth is a blank space on a planning map — and that the future belongs only to those who move fastest.</div>
-        <p style="font-size:0.92rem;color:var(--mist);line-height:1.8;margin-top:1.5rem;">Technology should leave the world richer than it found it. That is not a constraint on innovation. It is the condition under which innovation becomes worth having.</p>
-        <a href="good-ai.html" style="display:inline-block;margin-top:1.5rem;font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber);text-decoration:none;">Use AI to fight back →</a>
+      <div class="pillar">
+        <span class="pillar-icon">🔥</span>
+        <h3>Connect</h3>
+        <p>Building the network of people who won't watch the earth be consumed without a fight.</p>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<!-- ═══ WHO WALKS WITH US ═══ -->
-<section class="who-section">
-  <div class="section-inner">
-    <div class="section-label reveal">Who Belongs Here</div>
-    <h2 class="section-title reveal">If you love a place,<br>you <em>belong here.</em></h2>
-    <p class="reveal" style="max-width:680px;color:var(--earth-mid);margin-bottom:0.5rem;">Any age. Any background. Any tradition. Any skill level. The Firewalkers is a big tent — and it is held up by everyone who shows up.</p>
-    <div class="who-grid" style="margin-top:2.5rem;" role="list">
-      <div class="who-card reveal" role="listitem"><span class="who-icon" aria-hidden="true">🤖</span><h3>AI &amp; Tech builders</h3><p>Engineers, data scientists, product people who want their work to mean something beyond the next sprint.</p></div>
-      <div class="who-card reveal" role="listitem"><span class="who-icon" aria-hidden="true">🌿</span><h3>Ecologists &amp; scientists</h3><p>People whose knowledge of the living world should be in every planning objection but rarely is.</p></div>
-      <div class="who-card reveal" role="listitem"><span class="who-icon" aria-hidden="true">✊</span><h3>Community organisers</h3><p>People who know how to build a campaign — and want better tools to do it with.</p></div>
-      <div class="who-card reveal" role="listitem"><span class="who-icon" aria-hidden="true">🔥</span><h3>People of faith &amp; spirit</h3><p>Druids, Muslims, Quakers, Buddhists, Christians, pagans — anyone whose practice is rooted in the living world.</p></div>
-      <div class="who-card reveal" role="listitem"><span class="who-icon" aria-hidden="true">⚖️</span><h3>Lawyers &amp; planners</h3><p>Your knowledge of how the system works is exactly what communities fighting it don't have.</p></div>
-      <div class="who-card reveal" role="listitem"><span class="who-icon" aria-hidden="true">✍️</span><h3>Writers &amp; communicators</h3><p>The people who can make a planning objection feel like what it is — a declaration of love for a place.</p></div>
-      <div class="who-card reveal" role="listitem"><span class="who-icon" aria-hidden="true">🌾</span><h3>Farmers &amp; land workers</h3><p>People who know the land from the inside and have been watching decisions made about it from far away.</p></div>
-      <div class="who-card reveal" role="listitem"><span class="who-icon" aria-hidden="true">📱</span><h3>Students &amp; digital natives</h3><p>School kids, students, anyone under 30 who understands how this all works and wants to use it for the right things.</p></div>
+<!-- THE THREAT -->
+<div class="threat-section">
+  <div class="threat-inner">
+    <span class="section-eyebrow reveal" style="color:rgba(224,144,32,0.8);">The scale of what is happening</span>
+    <h2 class="reveal">This is the fastest land grab<br>in human history.</h2>
+    <div class="threat-grid reveal">
+      <div class="threat-card red">
+        <span class="stat">12 weeks</span>
+        <h4>The consultation window</h4>
+        <p>The average time communities have to object to a data centre planning application. Most don't know the clock is running until it has nearly stopped.</p>
+      </div>
+      <div class="threat-card amber">
+        <span class="stat">2,000+</span>
+        <h4>Planned globally</h4>
+        <p>New data centres in the pipeline worldwide. Sacred landscapes, green belt land, ancient hillsides — all in the crosshairs of infrastructure that moves faster than regulation.</p>
+      </div>
+      <div class="threat-card amber">
+        <span class="stat">Billions</span>
+        <h4>Litres of water daily</h4>
+        <p>The amount of water consumed by AI cooling systems every day. In drought-prone areas, on top of already-stressed water tables, in communities that were never asked.</p>
+      </div>
+      <div class="threat-card red">
+        <span class="stat">Now</span>
+        <h4>The Lammermuirs</h4>
+        <p>A data centre proposed for the Lammermuir Hills — a Special Landscape Area in Scotland. One of dozens of live campaigns. The fight is already here.</p>
+      </div>
     </div>
   </div>
-</section>
+</div>
 
-<!-- ═══ PLATFORM VISION ═══ -->
-<section id="platform" class="platform-section">
-  <div class="section-inner">
-    <div class="section-label reveal" style="color:var(--amber-bright);">What We Are Building Together</div>
-    <h2 class="section-title reveal" style="color:var(--parchment);">A living resource —<br><em style="color:var(--amber-bright);">not a monument</em></h2>
-    <p class="reveal" style="max-width:680px;color:rgba(250,245,236,0.55);margin-bottom:0.5rem;font-size:1rem;line-height:1.85;">Built by the community. Shaped by what people actually need. Growing every week.</p>
-    <div class="platform-grid" style="margin-top:2.5rem;" role="list">
-      <div class="platform-card live reveal" role="listitem"><span class="pc-status">Live now</span><h3>AI Planning Toolkit</h3><p>Free prompts to analyse planning applications, draft objection letters and understand community rights — no technical knowledge needed.</p></div>
-      <div class="platform-card live reveal" role="listitem"><span class="pc-status">Live now</span><h3>Sustainable AI Guide</h3><p>Models and tools that run locally, use less energy, and keep your data off corporate servers. AI that costs less to the earth.</p></div>
-      <div class="platform-card live reveal" role="listitem"><span class="pc-status">Live now</span><h3>Campaigns Hub</h3><p>Active campaigns from the community — with tools, templates and contacts for the fights that are happening right now.</p></div>
-      <div class="platform-card live reveal" role="listitem"><span class="pc-status">Live now</span><h3>Data Centre Watch</h3><p>Intelligence on planned and approved data centre developments. Report a site. Know what is coming before it arrives.</p></div>
-      <div class="platform-card live reveal" role="listitem"><span class="pc-status">Live now</span><h3>From the Hearth</h3><p>Writing, ideas, stories and analysis from the community. The fire that keeps the conversation alive between campaigns.</p></div>
-      <div class="platform-card building reveal" role="listitem"><span class="pc-status">Building</span><h3>Global Not-for-profit</h3><p>Establishing the legal structure that will let this grow into the global resource it needs to be. Help wanted.</p></div>
+<!-- PHOTO STRIP -->
+<div class="photo-strip">
+  <div class="strip-img"><img src="https://images.unsplash.com/photo-1671271834624-c80b23aabfc8?auto=format&fit=crop&w=600&q=75" alt="Misty forest path" loading="lazy"></div>
+  <div class="strip-img"><img src="https://images.unsplash.com/photo-1626078296870-c2c2bfaaa037?auto=format&fit=crop&w=600&q=75" alt="Scottish Highlands" loading="lazy"></div>
+  <div class="strip-img"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=75" alt="Data centre server room" loading="lazy"></div>
+  <div class="strip-img"><img src="https://images.unsplash.com/photo-1486915309851-b0cc1f8a0084?auto=format&fit=crop&w=600&q=75" alt="Bonfire in forest" loading="lazy"></div>
+</div>
+
+<!-- WHAT WE DO -->
+<div class="what-we-do" id="build-with-us">
+  <div class="what-we-do-inner">
+    <span class="section-eyebrow reveal">The platform</span>
+    <h2 class="reveal">Tools communities can actually use.</h2>
+    <div class="tools-grid reveal">
+      <div class="tool-card">
+        <span class="t-icon">📡</span>
+        <h3>Data Centre Watch</h3>
+        <p>Real-time intelligence on planning applications, AI Growth Zone proposals, and threats to protected landscapes around the world.</p>
+      </div>
+      <div class="tool-card">
+        <span class="t-icon">📄</span>
+        <h3>Planning Decoder</h3>
+        <p>Paste in a planning document. Get back plain-language summaries, key dates, grounds for objection, and suggested next steps.</p>
+      </div>
+      <div class="tool-card">
+        <span class="t-icon">✍️</span>
+        <h3>Objection Builder</h3>
+        <p>AI-assisted tools for drafting formal objections, community letters, and consultation responses that land with weight.</p>
+      </div>
+      <div class="tool-card">
+        <span class="t-icon">🌍</span>
+        <h3>Campaign Network</h3>
+        <p>Connect with other communities fighting the same battles. Share what worked. Learn from what didn't. Build collective power.</p>
+      </div>
     </div>
   </div>
-</section>
+</div>
 
-<!-- ═══ COMMUNITY PREVIEW ═══ -->
-<section class="community-preview">
-  <div class="section-inner">
-    <div class="section-label reveal">Around the Hearth</div>
-    <h2 class="section-title reveal">The fire burns<br>brighter with more <em>around it.</em></h2>
-    <p class="reveal" style="max-width:680px;color:var(--earth-mid);margin-bottom:0.5rem;font-size:1rem;line-height:1.85;">Firewalkers from around the world — every bioregion, every tradition, every skill. The first hundred names on this wall are the foundation.</p>
-    <div class="cp-grid" style="margin-top:2.5rem;">
-      <div class="cp-card reveal">
-        <div class="cp-initial">S.</div>
-        <div class="cp-location">Edinburgh, Scotland</div>
-        <div class="cp-path">Tends the land</div>
-        <div class="cp-place">"The sacred landscapes of Rosslyn and ancient Britain"</div>
-      </div>
-      <div class="cp-invitation reveal">
-        <p>Be among the first 100 Firewalkers. Every name on this wall is a statement — that somewhere matters to someone, and that someone showed up.</p>
-        <a href="#signup">Join the movement →</a>
-      </div>
-      <div class="cp-invitation reveal">
-        <p>What place do you love? What would you walk through fire to protect? Add your voice to the wall.</p>
-        <a href="#signup">Come to the fire →</a>
-      </div>
-      <div class="cp-invitation reveal">
-        <p>The Firewalkers grows one person at a time. Each one knows a place worth protecting. Your place is waiting to be named.</p>
-        <a href="#signup">Name it here →</a>
-      </div>
+<!-- CAMPAIGN SPOTLIGHT -->
+<div class="campaign">
+  <div class="campaign-inner reveal">
+    <div class="campaign-img">
+      <img src="https://images.unsplash.com/photo-1626078296870-c2c2bfaaa037?auto=format&fit=crop&w=800&q=75" alt="Scottish Highlands — Lammermuir Hills" loading="lazy">
+      <span class="campaign-img-badge">🔴 Live Campaign</span>
     </div>
-    <div style="text-align:center;margin-top:2rem;">
-      <a href="community.html" style="font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber);text-decoration:none;">See everyone around the hearth →</a>
+    <div class="campaign-text">
+      <span class="section-eyebrow">Save the Lammermuirs</span>
+      <h2>Ancient land. A data centre. Twelve weeks to fight back.</h2>
+      <p>The Lammermuir Hills are a Special Landscape Area in Scotland — ancient, protected, and currently the subject of a data centre planning application that most of the local community didn't know about until it was nearly too late.</p>
+      <p>This is one of dozens of live campaigns. It is the one on our doorstep. And it is the template for what is happening everywhere.</p>
+      <div class="cta-pair">
+        <a href="datacentre-watch.html" class="btn-fire">See all campaigns</a>
+        <a href="community.html" class="btn-ghost-dark">Join the fight</a>
+      </div>
     </div>
   </div>
-</section>
+</div>
 
-<!-- ═══ FROM THE HEARTH ═══ -->
-<section class="hearth-preview">
-  <div class="section-inner">
-    <div class="section-label reveal">From the Hearth</div>
-    <h2 class="section-title reveal">Words from <em>the path</em></h2>
-    <div class="hearth-grid" style="margin-top:2.5rem;">
-      <article class="post-card urgent reveal">
-        <span class="post-tag">Open Invitation · Urgent</span>
-        <h3>The Land Is Being Taken. Come Help Us Fight Back.</h3>
-        <p>An urgent open invitation to AI builders, movement organisers, people of faith, students and digital natives. The platform is live. The tools are ready. Now we need the people.</p>
-        <div class="post-card-footer">
-          <a href="posts/come-help-us-build-this.html" class="post-read">Read the full post →</a>
-          <span class="post-byline">Scott Seivwright · June 2026</span>
+<!-- FOUNDER -->
+<div class="founder">
+  <div class="founder-inner reveal">
+    <div class="founder-photo">
+      <img src="images/Scottprofile.png" alt="Scott Seivwright" onerror="this.parentElement.style.display='none'">
+    </div>
+    <div class="founder-text">
+      <span class="section-eyebrow">The founder</span>
+      <h2>Thirty years building the machine. Now protecting the land it's consuming.</h2>
+      <p>I am Scott Seivwright. I've spent three decades in AI and digital transformation — building the systems, leading the programmes, working globally with some of the world's largest organisations.</p>
+      <p>I am also a practising druid. An Ovate of OBOD. A member of the Elder and Gorse Druids at Roslin. Someone whose spiritual practice is rooted in this land — and who cannot in good conscience stay silent about what is being done to it in the name of technological progress.</p>
+      <p>Those two things are not as far apart as you might think. They are, in fact, exactly why The Firewalkers exists.</p>
+      <div class="founder-credentials">
+        <span class="cred">30 years in AI & digital transformation</span>
+        <span class="cred">Oxford AI Programme</span>
+        <span class="cred">OBOD Ovate</span>
+        <span class="cred">Elder & Gorse Druids, Roslin</span>
+        <span class="cred">Green Software Foundation</span>
+        <span class="cred">Co-founder, GreenPO.org</span>
+      </div>
+      <a href="posts/bathgate-hills-intro.html" class="btn-ghost-light">Watch Scott on the Bathgate Hills →</a>
+    </div>
+  </div>
+</div>
+
+<!-- FROM THE HEARTH -->
+<div class="latest-posts">
+  <div class="latest-inner">
+    <span class="section-eyebrow reveal">From the Hearth</span>
+    <h2 class="reveal">Latest dispatches.</h2>
+    <div class="posts-row reveal">
+
+      <div class="post-card">
+        <div class="post-card-img">
+          <img src="https://images.unsplash.com/photo-1626078296870-c2c2bfaaa037?auto=format&fit=crop&w=800&q=75" alt="Bathgate Hills" loading="lazy">
         </div>
-      </article>
-      <article class="post-card reveal">
-        <span class="post-tag">Founding Story</span>
-        <h3>A Technologist, an AI Expert, and a Druid</h3>
-        <p>Scott Seivwright on the tension that became impossible to hold in separate pockets — and why he built the Firewalkers in seven hours.</p>
-        <div class="post-card-footer">
-          <a href="posts/why-i-built-the-firewalkers.html" class="post-read">Read the full post →</a>
-          <span class="post-byline">Scott Seivwright · June 2026</span>
+        <div class="post-card-body">
+          <span class="post-card-tag">🔥 Video · June 10, 2026</span>
+          <h3>The Land Is Being Taken. Meet The Firewalkers.</h3>
+          <p>Standing on the Bathgate Hills. Thirty years in AI. A druid. Ancient ground. No script.</p>
+          <a href="posts/bathgate-hills-intro.html" class="post-link">Watch & read →</a>
         </div>
-      </article>
-    </div>
-    <div style="text-align:center;margin-top:2rem;">
-      <a href="hearth.html" style="font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber);text-decoration:none;">All posts from the Hearth →</a>
-    </div>
-  </div>
-</section>
+      </div>
 
-<!-- ═══ SHAREABLE PHRASES ═══ -->
-<section class="phrases-section" aria-label="Shareable phrases">
-  <div class="section-inner" style="text-align:center;">
-    <span class="section-eyebrow" style="justify-content:center;margin-bottom:1rem;">Share the fire</span>
-    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.5vw,2.5rem);font-weight:300;color:var(--parchment);margin-bottom:0.75rem;">Say it. Send it. Start a conversation.</h2>
-    <p style="font-size:0.95rem;color:rgba(250,245,236,0.45);margin-bottom:0;">Click any line to copy it.</p>
-  </div>
-  <div class="phrases-grid">
-    <button class="phrase-item" onclick="copyPhrase(this)" aria-label="Copy: Technology should leave the world richer than it found it."><span class="phrase-text">Technology should leave the world richer than it found it.</span><span class="phrase-copy" aria-hidden="true">Copy →</span></button>
-    <button class="phrase-item" onclick="copyPhrase(this)" aria-label="Copy: We are not anti-AI. We are pro-wisdom."><span class="phrase-text">We are not anti-AI. We are pro-wisdom.</span><span class="phrase-copy" aria-hidden="true">Copy →</span></button>
-    <button class="phrase-item" onclick="copyPhrase(this)" aria-label="Copy: Every place you love is being decided right now."><span class="phrase-text">Every place you love is being decided right now.</span><span class="phrase-copy" aria-hidden="true">Copy →</span></button>
-    <button class="phrase-item" onclick="copyPhrase(this)" aria-label="Copy: The land has always survived because someone kept showing up."><span class="phrase-text">The land has always survived because someone kept showing up.</span><span class="phrase-copy" aria-hidden="true">Copy →</span></button>
-    <button class="phrase-item" onclick="copyPhrase(this)" aria-label="Copy: The question is not whether to build the future. The question is whether we build it wisely."><span class="phrase-text">The question is not whether to build the future. The question is whether we build it wisely.</span><span class="phrase-copy" aria-hidden="true">Copy →</span></button>
-    <button class="phrase-item" onclick="copyPhrase(this)" aria-label="Copy: Communities are given 12 weeks to object to decisions that will last a century."><span class="phrase-text">Communities are given 12 weeks to object to decisions that will last a century.</span><span class="phrase-copy" aria-hidden="true">Copy →</span></button>
-  </div>
-</section>
+      <div class="post-card">
+        <div class="post-card-img">
+          <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=75" alt="Wind turbines" loading="lazy">
+        </div>
+        <div class="post-card-body">
+          <span class="post-card-tag">🌍 Open Invitation · June 4, 2026</span>
+          <h3>The Land Is Being Taken. Come Help Us Fight Back.</h3>
+          <p>An urgent call to AI builders, movement organisers, people of faith, anyone who loves a place.</p>
+          <a href="posts/come-help-us-build-this.html" class="post-link">Read more →</a>
+        </div>
+      </div>
 
-<!-- ═══ SIGN UP ═══ -->
-<section id="signup" aria-labelledby="signup-heading">
+    </div>
+    <a href="hearth.html" class="btn-ghost-dark">All posts from the hearth →</a>
+  </div>
+</div>
+
+<!-- SIGNUP -->
+<div class="signup" id="signup">
   <div class="signup-inner">
-    <div class="signup-left">
-      <div class="section-label">Join the Movement</div>
-      <h2 id="signup-heading">The fire burns <em>brighter</em><br>with more around it</h2>
-      <p>Join the Firewalkers. Tell us what you're called, what place you love, and how you walk with the land. We'll write when there's something worth saying.</p>
-      <ul class="signup-promises" role="list">
-        <li>No noise — only signal</li>
-        <li>Campaign alerts when action is needed</li>
-        <li>New tools as they're built</li>
-        <li>Unsubscribe any time</li>
-      </ul>
-    </div>
-    <div>
-      <form method="post" action="https://sendfox.com/form/19npyy/1xx6rz" class="sendfox-form" id="1xx6rz" data-async="true" data-recaptcha="false" novalidate>
-        <div class="field-group">
-          <label for="sf_called">What do we call you?</label>
-          <input type="text" id="sf_called" name="contact_fields[called]" placeholder="Blaze, Scott, the person who loves a particular hill...">
-        </div>
-        <div class="field-group">
-          <label for="sf_email">Email <span style="color:var(--urgent);" aria-label="required">*</span></label>
-          <input type="email" id="sf_email" placeholder="your@email.com" name="email" required autocomplete="email">
-        </div>
-        <div class="field-group">
-          <label for="sf_location">Where in the world are you? <span style="font-style:italic;text-transform:none;letter-spacing:0;font-size:0.9rem;color:var(--mist);">optional</span></label>
-          <input type="text" id="sf_location" name="contact_fields[where_in_the_world]" placeholder="Edinburgh, Kilkenny, Melbourne, anywhere...">
-        </div>
-        <div class="field-group">
-          <label for="sf_place">What place do you love?</label>
-          <input type="text" id="sf_place" name="contact_fields[what_place_do_you_love]" placeholder="A forest, a river, a coastline, a city park...">
-        </div>
-        <div class="field-group">
-          <label for="sf_how">How do you walk with the land?</label>
-          <select id="sf_how" name="contact_fields[how_do_you_walk_with_the_land]">
-            <option value="">Choose one...</option>
-            <option value="I walk it">I walk it — presence, hiking, being in nature</option>
-            <option value="I tend it">I tend it — gardener, farmer, steward</option>
-            <option value="I fight for it">I fight for it — campaigner, activist</option>
-            <option value="I study it">I study it — researcher, scientist, ecologist</option>
-            <option value="I build on it">I build on it — tech or engineer, trying to do it right</option>
-            <option value="I dream of it">I dream of it — spiritual, druid, faith, contemplative</option>
-            <option value="I just know it matters">I just know it matters</option>
-          </select>
-        </div>
-        <div class="field-group">
-          <label for="sf_threat">What threatens your place? <span style="font-style:italic;text-transform:none;letter-spacing:0;font-size:0.9rem;color:var(--mist);">optional</span></label>
-          <select id="sf_threat" name="contact_fields[what_threatens_your_place_right_now]">
-            <option value="">Choose one...</option>
-            <option value="Data centre or tech infrastructure">Data centre or tech infrastructure</option>
-            <option value="Extraction or mining">Extraction or mining</option>
-            <option value="Development or planning">Development or planning</option>
-            <option value="Climate or environmental change">Climate or environmental change</option>
-            <option value="Nothing yet — just keeping watch">Nothing yet — just keeping watch</option>
-            <option value="Something else">Something else</option>
-          </select>
-        </div>
-        <div class="field-group">
-          <label class="gdpr-label">
-            <input type="checkbox" name="gdpr" value="1" required>
-            I agree to receive updates from The Firewalkers. Unsubscribe any time.
-          </label>
-        </div>
-        <div style="position:absolute;left:-5000px;" aria-hidden="true"><input type="text" name="a_password" tabindex="-1" value="" autocomplete="off"></div>
-        <button type="submit" class="form-submit-btn" id="signupBtn">Let's start the journey</button>
-      </form>
-      <div class="form-success" id="signupSuccess" role="alert">
-        <h4>Welcome to the fire 🔥</h4>
-        <p>Check your inbox and reply to the welcome email — even just "hello" — to make sure our messages reach you. Then save our address and you won't miss a thing.</p>
-      </div>
-    </div>
+    <span class="section-eyebrow" style="color:var(--amber-bright);">Join the movement</span>
+    <h2>The fire is lit.<br>Come walk with us.</h2>
+    <p>Get dispatches from the field — new campaigns, tools, and intelligence on what's being built on land near you.</p>
+    <form class="signup-form" action="https://sendfox.com/form/19npyy/1xx6rz" method="POST" accept-charset="utf-8">
+      <input type="text" name="first_name" placeholder="Your first name" required>
+      <input type="email" name="email" placeholder="Your email" required style="border-left:none;">
+      <button type="submit">Join</button>
+    </form>
+    <p class="signup-note">No spam. Just fire. Unsubscribe any time.</p>
   </div>
-</section>
+</div>
 
-<!-- ═══ CONTRIBUTE ═══ -->
-<section id="submit" aria-labelledby="submit-heading">
-  <div class="submit-inner">
-    <div class="submit-left">
-      <div class="section-label" style="color:rgba(250,245,236,0.3);">Speak at the Hearth</div>
-      <h2 id="submit-heading">Shape what<br>this <em>becomes.</em></h2>
-      <p>The platform is built by the community. Tell us what you need, what you know, what you've built. Every contribution shapes what gets built next.</p>
-      <ul class="submit-ways" role="list">
-        <li>Request a tool or resource</li>
-        <li>Submit a blog post or article</li>
-        <li>Share a campaign that needs support</li>
-        <li>Offer expertise or skills</li>
-        <li>Suggest an organisation to partner with</li>
-      </ul>
-    </div>
-    <div>
-      <form id="submitForm" action="https://formspree.io/f/xdajqvje" method="POST" novalidate>
-        <input type="hidden" name="_subject" value="Firewalkers Contribution">
-        <div class="field-group dark-field">
-          <label for="sub_name">Your name</label>
-          <input type="text" id="sub_name" name="name" placeholder="How you'd like to be known" required autocomplete="name">
-        </div>
-        <div class="field-group dark-field">
-          <label for="sub_email">Email</label>
-          <input type="email" id="sub_email" name="email" placeholder="your@email.com" required autocomplete="email">
-        </div>
-        <div class="field-group dark-field">
-          <label for="sub_type">What are you sharing?</label>
-          <select id="sub_type" name="type" required>
-            <option value="">Choose one...</option>
-            <option value="tool-request">A tool or resource I need built</option>
-            <option value="blog-post">A blog post or article</option>
-            <option value="campaign">A campaign that needs support</option>
-            <option value="expertise">Expertise or skills I can offer</option>
-            <option value="partnership">An organisation to partner with</option>
-            <option value="other">Something else</option>
-          </select>
-        </div>
-        <div class="field-group dark-field">
-          <label for="sub_message">Tell us</label>
-          <textarea id="sub_message" name="message" style="min-height:160px;background:rgba(250,245,236,0.05);border:1px solid rgba(250,245,236,0.12);color:var(--parchment);padding:0.75rem 1rem;font-family:'Cormorant Garamond',serif;font-size:16px;width:100%;outline:none;resize:vertical;" placeholder="Write freely. The hearth has space for long fires and short sparks alike." required></textarea>
-        </div>
-        <button type="submit" class="dark-submit-btn" id="submitBtn">Bring it to the hearth</button>
-      </form>
-      <div class="dark-success" id="submitSuccess" role="alert">
-        <h4>Received — thank you</h4>
-        <p>We read every submission. The best contributions shape what gets built next.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<!-- ═══ FOOTER ═══ -->
-<footer role="contentinfo">
+<!-- FOOTER -->
+<footer>
   <div class="footer-inner">
-    <div class="footer-top">
+    <div class="footer-grid">
       <div class="footer-brand">
-        <img src="images/logos/firewalker-logo.png" alt="The Firewalkers" style="height:36px;width:auto;opacity:0.7;display:block;">
-        <p>A global movement using AI to protect the places we love. Founded in Scotland. Built for everywhere that matters.</p>
+        <span class="footer-logo">⁂ The Firewalkers</span>
+        <p>A global movement using AI to protect the natural world from the environmental impact of data centre infrastructure.</p>
       </div>
-      <div class="footer-nav-col">
-        <h4>The Platform</h4>
-        <a href="/good-ai.html">Good AI</a>
-        <a href="/campaigns.html">Campaigns</a>
-        <a href="/datacentre-watch.html">Data Centre Watch</a>
-        <a href="/hearth.html">From the Hearth</a>
-        <a href="/community.html">Community</a>
-        <a href="/media.html">Media &amp; Press</a>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a href="hearth.html">From the Hearth</a>
+        <a href="datacentre-watch.html">Data Centre Watch</a>
+        <a href="tools.html">Tools</a>
+        <a href="community.html">Community</a>
       </div>
-      <div class="footer-nav-col">
-        <h4>Join</h4>
-        <a href="/index.html#signup">Join the mailing list</a>
-        <a href="/index.html#submit">Contribute something</a>
-        <a href="/posts/come-help-us-build-this.html">Help build this</a>
-        <a href="/media.html#media-contact">Media enquiries</a>
+      <div class="footer-col">
+        <h4>Movement</h4>
+        <a href="posts/come-help-us-build-this.html">Come build this</a>
+        <a href="posts/bathgate-hills-intro.html">Watch the video</a>
+        <a href="index.html#signup">Join the list</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://www.youtube.com/@firewalkersearth" target="_blank" rel="noopener">YouTube</a>
+        <a href="community.html#whatsapp">WhatsApp</a>
+        <a href="community.html#discord">Discord</a>
+        <a href="mailto:hello@firewalkers.earth">Email</a>
       </div>
     </div>
     <div class="footer-base">
-      <span>The Firewalkers · firewalkers.earth · Founded June 2026</span>
-      <span class="footer-tagline">The future belongs to the stewards, not the extractors.</span>
+      <span>© 2026 The Firewalkers · firewalkers.earth · Edinburgh, Scotland</span>
+      <a href="privacy.html">Privacy</a>
     </div>
   </div>
 </footer>
 
 <script>
-/* ─── NAV SCROLL ─── */
-(function(){
-  var nav=document.getElementById('nav');
-  function checkScroll(){nav.classList.toggle('scrolled',window.scrollY>60);}
-  checkScroll();
-  window.addEventListener('scroll',checkScroll,{passive:true});
-})();
+// Reveal on scroll
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 60);
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08 });
+reveals.forEach(el => obs.observe(el));
 
-/* ─── MOBILE MENU ─── */
-function closeMM(){
-  var m=document.getElementById('mobileMenu');
-  var t=document.getElementById('navToggle');
-  if(m){m.classList.remove('open');document.body.style.overflow='';}
-  if(t){t.setAttribute('aria-expanded','false');}
-}
-document.getElementById('navToggle').addEventListener('click',function(){
-  var m=document.getElementById('mobileMenu');
-  m.classList.add('open');
-  document.body.style.overflow='hidden';
-  this.setAttribute('aria-expanded','true');
-  m.querySelector('.mobile-close').focus();
+// Close mobile menu on outside click
+document.querySelector('.mobile-menu').addEventListener('click', function(e){
+  if(e.target === this) this.classList.remove('open');
 });
-document.getElementById('mobileMenu').addEventListener('click',function(e){if(e.target===this)closeMM();});
-document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMM();});
-
-/* ─── REVEAL ON SCROLL ─── */
-(function(){
-  var obs=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');}});
-  },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
-  document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
-})();
-
-/* ─── COPY PHRASES ─── */
-function copyPhrase(btn){
-  var text=btn.querySelector('.phrase-text').textContent;
-  var copyEl=btn.querySelector('.phrase-copy');
-  var orig=copyEl.textContent;
-  navigator.clipboard.writeText(text).then(function(){
-    copyEl.textContent='Copied!';
-    setTimeout(function(){copyEl.textContent=orig;},2000);
-  }).catch(function(){
-    copyEl.textContent='Copied!';
-    setTimeout(function(){copyEl.textContent=orig;},2000);
-  });
-}
-
-/* ─── SENDFOX SIGNUP ─── */
-(function(){
-  var form=document.getElementById('1xx6rz');
-  var success=document.getElementById('signupSuccess');
-  var btn=document.getElementById('signupBtn');
-  if(!form)return;
-  form.addEventListener('submit',function(e){
-    e.preventDefault();
-    if(btn){btn.textContent='Starting the journey...';btn.disabled=true;}
-    fetch(form.action,{method:'POST',body:new FormData(form),mode:'no-cors'})
-      .then(function(){
-        form.style.display='none';
-        success.style.display='block';
-        success.scrollIntoView({behavior:'smooth',block:'center'});
-        if(typeof plausible!=='undefined')plausible('Signup');
-      })
-      .catch(function(){form.style.display='none';success.style.display='block';});
-  });
-})();
-
-/* ─── CONTRIBUTE FORM ─── */
-(function(){
-  var form=document.getElementById('submitForm');
-  var success=document.getElementById('submitSuccess');
-  var btn=document.getElementById('submitBtn');
-  if(!form)return;
-  form.addEventListener('submit',function(e){
-    e.preventDefault();
-    if(btn){btn.textContent='Sending...';btn.disabled=true;}
-    fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
-      .then(function(r){
-        form.style.display='none';
-        success.style.display='block';
-        success.scrollIntoView({behavior:'smooth',block:'center'});
-        if(typeof plausible!=='undefined')plausible('Contribute');
-      })
-      .catch(function(){form.style.display='none';success.style.display='block';});
-  });
-})();
 </script>
+
 </body>
 </html>
