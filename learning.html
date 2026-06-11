@@ -124,6 +124,24 @@ body{background:var(--fw-parchment);color:var(--fw-earth);font-family:var(--fw-f
 .share-btn-copy{font-family:var(--fw-font-mono);font-size:0.56rem;letter-spacing:0.08em;text-transform:none;}
 .share-btn-copy:hover{border-color:var(--fw-forest);color:var(--fw-forest);}
 
+/* PRESS & READING */
+.press-section{padding:4rem 2rem;background:var(--fw-parchment-warm);border-top:1px solid var(--fw-stone);}
+.press-inner{max-width:1100px;margin:0 auto;}
+.press-inner > h2{font-family:var(--fw-font-body);font-style:italic;font-size:clamp(1.8rem,4vw,2.5rem);color:var(--fw-earth);margin-bottom:0.5rem;}
+.press-inner > p{font-size:0.95rem;color:var(--fw-mist);margin-bottom:3rem;line-height:1.7;}
+.press-category{margin-bottom:2.5rem;}
+.press-category-label{font-family:var(--fw-font-display);font-size:0.48rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--fw-amber);display:block;margin-bottom:1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--fw-stone);}
+.press-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--fw-stone);}
+.press-card{background:white;padding:1.5rem;display:flex;flex-direction:column;gap:0.5rem;transition:background 0.2s;}
+.press-card:hover{background:var(--fw-parchment);}
+.press-card-source{font-family:var(--fw-font-display);font-size:0.42rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--fw-mist);}
+.press-card-source span{color:var(--fw-slate);margin-left:0.5rem;font-size:0.38rem;}
+.press-card h3{font-family:var(--fw-font-body);font-weight:600;font-size:1rem;color:var(--fw-earth);line-height:1.3;}
+.press-card p{font-size:0.85rem;color:var(--fw-mist);line-height:1.6;flex:1;}
+.press-card-link{font-family:var(--fw-font-display);font-size:0.44rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--fw-amber);text-decoration:none;display:inline-flex;align-items:center;gap:0.35rem;margin-top:0.25rem;transition:gap 0.2s;}
+.press-card-link:hover{gap:0.6rem;}
+.press-update-note{font-family:var(--fw-font-mono);font-size:0.58rem;color:var(--fw-mist);margin-top:2rem;padding-top:1rem;border-top:1px solid var(--fw-stone);}
+
 /* FEATURED VIDEO */
 .featured-section{padding:4rem 2rem;background:var(--fw-parchment);border-bottom:1px solid var(--fw-stone);}
 .featured-inner{max-width:1100px;margin:0 auto;}
@@ -211,6 +229,7 @@ body{background:var(--fw-parchment);color:var(--fw-earth);font-family:var(--fw-f
   body{padding-top:56px;}
   .fw-primary-links{display:none;}.fw-nav-secondary{display:none;}.fw-nav-hamburger{display:flex;}
   .videos-grid{grid-template-columns:1fr;}
+  .press-grid{grid-template-columns:1fr;}
   .fw-footer-grid{grid-template-columns:1fr 1fr;gap:2rem;}
   .fw-footer-base{flex-direction:column;gap:0.75rem;text-align:center;}
 }
@@ -476,14 +495,198 @@ body{background:var(--fw-parchment);color:var(--fw-earth);font-family:var(--fw-f
   </div>
 </div>
 
+<!-- PRESS & READING -->
+<div class="press-section">
+  <div class="press-inner">
+    <span class="section-eyebrow reveal">Press &amp; Reading</span>
+    <h2 class="reveal">The evidence is everywhere.</h2>
+    <p class="reveal">Twenty of the most important articles on data centre harm, community resistance, and the fight to hold the industry to account. Updated periodically as the story develops.</p>
+
+    <!-- CATEGORY 1 -->
+    <div class="press-category reveal">
+      <span class="press-category-label">The Scale of the Problem</span>
+      <div class="press-grid">
+
+        <div class="press-card">
+          <span class="press-card-source">The Ecologist <span>Feb 2026 · UK</span></span>
+          <h3>Hyperscale Data Centre Protests Across the UK</h3>
+          <p>Global Action Plan coordinating national days of action. Communities and campaigners calling for stronger climate protection in the face of rapid hyperscale expansion.</p>
+          <a href="https://theecologist.org/2026/feb/27/hyperscale-data-centre-protests" target="_blank" rel="noopener" class="press-card-link">Read article →</a>
+        </div>
+
+        <div class="press-card">
+          <span class="press-card-source">The Scotsman <span>Mar 2026 · Scotland</span></span>
+          <h3>The Environmental Questions Around Scotland's AI Data Centre Revolution</h3>
+          <p>Plans for a hyperscale cluster in Scotland's central belt that would be more than twice the size of leading global campuses. The environmental questions no one is answering.</p>
+          <a href="https://www.scotsman.com/news/the-environmental-questions-around-scotlands-ai-data-centre-revolution-6039377" target="_blank" rel="noopener" class="press-card-link">Read article →</a>
+        </div>
+
+        <div class="press-card">
+          <span class="press-card-source">Computer Weekly <span>Feb 2026 · UK</span></span>
+          <h3>UK Government Data Centre Planning Decisions Queried Over Environmental Oversight</h3>
+          <p>The government admitted a "serious logical error" in approving a hyperscale data centre in Buckinghamshire without an environmental impact assessment.</p>
+          <a href="https://www.computerweekly.com/news/366638940/UK-government-datacentre-planning-decisions-queried-over-environmental-oversight-admission" target="_blank" rel="noopener" class="press-card-link">Read article →</a>
+        </div>
+
+        <div class="press-card">
+          <span class="press-card-source">ERCS Scotland <span>Apr 2026 · Scotland</span></span>
+          <h3>Data Centres in the Scottish Planning System Would Double Scotland's Energy Demands</h3>
+          <p>The pipeline of applications in Scotland, if built at capacity, could consume more energy than Scotland's entire current domestic demand combined.</p>
+          <a href="https://www.ercs.scot/news/data-centres-in-the-scottish-planning-system-would-double-scotlands-energy-demands-press-release/" target="_blank" rel="noopener" class="press-card-link">Read article →</a>
+        </div>
+
+        <div class="press-card">
+          <span class="press-card-source">House of Commons Library <span>May 2026 · UK</span></span>
+          <h3>Data Centres: Planning Policy, Sustainability and Resilience</h3>
+          <p>Official parliamentary research. UK data centre electricity consumption expected to rise four-fold by 2030. Questions about compatibility with net zero commitments.</p>
+          <a href="https://commonslibrary.parliament.uk/research-briefings/cbp-10315/" target="_blank" rel="noopener" class="press-card-link">Read article →</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CATEGORY 2 -->
+    <div class="press-category reveal">
+      <span class="press-category-label">Water, Land &amp; Environment</span>
+      <div class="press-grid">
+
+        <div class="press-card">
+          <span class="press-card-source">The Conversation <span>Jun 2026 · Academic</span></span>
+          <h3>5 Ways Data Centres Endanger Their Local Communities</h3>
+          <p>Energy, water, air pollution, noise, and health. Academic rigour in accessible language — one of the clearest explainers on the full range of community harms.</p>
+          <a href="https://theconversation.com/5-ways-data-centers-endanger-their-local-communities-and-the-country-as-a-whole-282348" target="_blank" rel="noopener" class="press-card-link">Read article →</a>
+        </div>
+
+        <div class="press-card">
+          <span class="press-card-source">Mongabay <span>Nov 2025 · Global</span></span>
+          <h3>AI Data Centre Revolution Sucks Up World's Energy, Water, Materials</h3>
+          <p>The global south angle — communities in drought-prone Mexico facing 32 new data centres while freshwater access is already at risk. AI infrastructure as new extractive colonialism.</p>
+          <a href="https://news.mongabay.com/2025/11/ai-data-center-revolution-sucks-up-worlds-energy-water-materials/" target="_blank" rel="noopener" class="press-card-link">Read article →</a>
+        </div>
+
+        <div class="press-card">
+          <span class="press-card-source">BBC / FOI Research <span>Oct 2025 · Scotland</span></span>
+          <h3>Scotland's Data Centres Consuming Enough Water to Fill 27 Million Bottles Annually</h3>
+          <p>BBC investigation using Freedom of Information requests. Scotland's data centre water use has quadrupled since 2021. The data is stark — and was hidden until someone asked.</p>
+          <a href="https://leadershipthroughdata.com/latest-news/ai-data-centres-water-usage-what-can-information-leaders-do-to-reduce-the-environmental-impact/" target="_blank" rel="noopener" class="press-card-link">Read article →</a>
+        </div>
+
+        <div class="press-card">
+          <span class="press-card-source">United Nations University <span>Jun 2026 · Global</span></span>
+          <h3>Rising Emissions, Depleting Water and Vanishing Land — AI Is Threatening Natural Resources</h3>
+          <p>UN scientists. Land footprint over 14,500 sq km. Water footprint projected at 9.3 trillion litres by 2030. The environmental costs cannot be understood through carbon alone.</p>
+          <a href="https://unu.edu/inweh/news/environmental-cost-of-AIs-Enrgy-use-carbon-water-and-land-footprints" target="_blank" rel="noopener" class="press-card-link">Read article →</a>
+        </div>
+
+        <div class="press-card">
+          <span class="press-card-source">PBS NewsHour <span>Jun 2026 · US</span></span>
+          <h3>Energy, Water Use and Pollution of AI and Data Centres Rival Most Countries</h3>
+          <p>University report predicts water and energy use will double in four years as AI grows. Data centres already rank among the top 10 industrial water users in the United States.</p>
+          <a href="https://www.pbs.org/newshour/science/energy-water-use-and-pollution-of-ai-and-data-centers-rival-most-countries" target="_blank" rel="noopener" class="press-card-link">Read article →</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CATEGORY 3 -->
+    <div class="press-category reveal">
+      <span class="press-category-label">Community Power &amp; Resistance</span>
+      <div class="press-grid">
+
+        <div class="press-card">
+          <span class="press-card-source">Construction Connect <span>May 2026 · Global</span></span>
+          <h3>AI Rebellion: The Raging Backlash Against Data Centres</h3>
+          <p>$64bn in projects blocked or delayed. Cancellations quadrupled in 2025. "Data centres are the new NIMBY flashpoint" — even the construction industry is taking notice.</p>
+          <a href="https://canada.constructconnect.com/dcn/news/technology/2026/05/ai-rebellion-the-raging-backlash-against-data-centres" target="_blank" rel="noopener" class="press-card-link">Read article →</a>
+        </div>
+
+        <div class="press-card">
+          <span class="press-card-source">World Resources Institute <span>Feb 2026 · US</span></span>
+          <h3>From Energy Use to Air Quality: The Many Ways Data Centres Affect Communities</h3>
+          <p>80% of Virginia municipalities with data centres have NDAs with developers. Major governance gaps persist even as community involvement grows.</p>
+          <a href="https://www.wri.org/insights/us-data-center-growth-impacts" target="_blank" rel="noopener" class="press-card-link">Read article →</a>
+        </div>
+
+        <div class="press-card">
+          <span class="press-card-source">Consumer Reports <span>Mar 2026 · US</span></span>
+          <h3>AI Data Centres: Big Tech's Impact on Electric Bills, Water and More</h3>
+          <p>78% of Americans concerned about data centre impact. Electricity prices up 267% over five years in data centre-heavy areas. The public is waking up.</p>
+          <a href="https://www.consumerreports.org/data-centers/ai-data-centers-impact-on-electric-bills-water-and-more-a1040338678/" target="_blank" rel="noopener" class="press-card-link">Read article →</a>
+        </div>
+
+        <div class="press-card">
+          <span class="press-card-source">Washington Times <span>Jun 2026 · US</span></span>
+          <h3>Erin Brockovich's Data Centre Map Tops 5,000 Community Reports</h3>
+          <p>Erin Brockovich. 5,000+ community submissions. Over 50 US cities have enacted bans or moratoriums on new data centre construction. The movement is real and it is growing.</p>
+          <a href="https://www.washingtontimes.com/news/2026/jun/10/erin-brockovichs-data-center-map-tops-5000-community-reports-amid/" target="_blank" rel="noopener" class="press-card-link">Read article →</a>
+        </div>
+
+        <div class="press-card">
+          <span class="press-card-source">Data Center Watch <span>2025 · US</span></span>
+          <h3>$64 Billion of Data Centre Projects Blocked or Delayed by Local Opposition</h3>
+          <p>The definitive tracker. 142 activist groups across 24 states. This is the evidence base that proves community resistance works — when it is organised, early, and sustained.</p>
+          <a href="https://www.datacenterwatch.org/report" target="_blank" rel="noopener" class="press-card-link">Read article →</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CATEGORY 4 -->
+    <div class="press-category reveal">
+      <span class="press-category-label">Greenwashing &amp; the Planning System</span>
+      <div class="press-grid">
+
+        <div class="press-card">
+          <span class="press-card-source">Environmental Health Project <span>Feb 2026 · US</span></span>
+          <h3>The Dangers of Data Centres</h3>
+          <p>Health impacts, air pollution from diesel generators, noise and water harm examined through a community health lens. Essential reading for anyone preparing a planning objection.</p>
+          <a href="https://www.environmentalhealthproject.org/post/the-dangers-of-data-centers" target="_blank" rel="noopener" class="press-card-link">Read article →</a>
+        </div>
+
+        <div class="press-card">
+          <span class="press-card-source">MultiState <span>Oct 2025 · US</span></span>
+          <h3>Data Centres Confront Local Opposition Across America</h3>
+          <p>Only 44% of Americans would welcome a data centre nearby — making them less popular than gas plants, wind farms, or even nuclear facilities. The public mood has shifted.</p>
+          <a href="https://www.multistate.us/insider/2025/10/2/data-centers-confront-local-opposition-across-america" target="_blank" rel="noopener" class="press-card-link">Read article →</a>
+        </div>
+
+        <div class="press-card">
+          <span class="press-card-source">Canary Media <span>2025 · US</span></span>
+          <h3>How the Data Centre Boom Could Harm Black Communities</h3>
+          <p>Environmental justice angle. The data centre boom disproportionately impacts communities of colour — siting decisions that would never pass scrutiny in wealthier postcodes.</p>
+          <a href="https://www.canarymedia.com/articles/fossil-fuels/how-the-data-center-boom-could-harm-black-communities" target="_blank" rel="noopener" class="press-card-link">Read article →</a>
+        </div>
+
+        <div class="press-card">
+          <span class="press-card-source">Milldam PR <span>Dec 2025 · Industry</span></span>
+          <h3>Data Centre Community Engagement Comes of Age</h3>
+          <p>From the industry's own PR firm — even they admit that secrecy backfired and opposition hardened. NDAs, unnamed end users, and opaque structures repeatedly fuelled resistance.</p>
+          <a href="https://milldampr.com/2025/12/23/data-center-community-engagement-comes-of-age-lessons-from-2025-imperatives-for-2026/" target="_blank" rel="noopener" class="press-card-link">Read article →</a>
+        </div>
+
+        <div class="press-card">
+          <span class="press-card-source">The Scotsman <span>Jun 2026 · Scotland</span></span>
+          <h3>'Green Data Centres' Could Derail Scotland's Net-Zero Plans</h3>
+          <p>Scotland's own "green" data centre charter raises more questions than it answers. How can energy and water-hungry facilities be classed as green in any meaningful sense?</p>
+          <a href="https://www.scotsman.com/business/green-data-centre-charter-for-scotland-is-launched-8664771" target="_blank" rel="noopener" class="press-card-link">Read article →</a>
+        </div>
+
+      </div>
+    </div>
+
+    <p class="press-update-note">Last updated: June 2026 · Got an article we should add? <a href="mailto:hello@firewalkers.earth" style="color:var(--fw-amber);">hello@firewalkers.earth</a></p>
+
+  </div>
+</div>
+
 <!-- DIGITAL WARDENS CALLOUT -->
 <div class="warden-section">
   <div class="warden-inner">
     <div class="reveal">
       <span class="section-eyebrow" style="color:var(--fw-sage);">Digital Wardens</span>
       <h2>Warrior training for a better world.</h2>
-      <p>The Learning section is the foundation of Digital Wardens — a community forming inside OBOD for people who want to use digital tools not as passive consumers, but as active protectors of land, community, and the living world.</p>
-      <p>Practical skills. Ethical grounding. Druidic spine.</p>
+      <p>Digital Wardens is for anyone who wants to fight digital overreach — the unchecked expansion of AI infrastructure into land, water, and communities that never consented to it. No technical background required. Just the will to act.</p>
+      <p>Practical skills. Ethical grounding. Spine.</p>
       <a href="community.html" class="btn-sage">Join the community →</a>
     </div>
     <div class="reveal">
@@ -491,8 +694,9 @@ body{background:var(--fw-parchment);color:var(--fw-earth);font-family:var(--fw-f
         <li>Research and challenge planning decisions using open data</li>
         <li>Use AI tools to write, organise, and amplify campaigns</li>
         <li>Understand how data centres and algorithmic systems affect land and communities</li>
+        <li>Recognise and expose greenwashing in data centre planning applications</li>
         <li>Build and sustain digital movements rooted in place and purpose</li>
-        <li>Connect with others doing this work across the Celtic nations and beyond</li>
+        <li>Connect with others fighting this battle across the world</li>
       </ul>
     </div>
   </div>
