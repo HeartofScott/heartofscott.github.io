@@ -605,11 +605,24 @@ footer{background:var(--earth);padding:2.5rem 2.5rem;border-top:2px solid var(--
     <a href="../media.html">Media &amp; Press</a>
     <a href="../research.html">Research</a>
     <a href="../hearth.html">From the Hearth</a>
+    <a href="../sitemap-visitor.html">Site directory</a>
   </div>
 </footer>
 
 <script>
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();document.querySelector(a.getAttribute('href'))?.scrollIntoView({behavior:'smooth'});});});
+</script>
+
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top" style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:150;background:var(--amber,#9c5500);color:#fff;border:none;width:44px;height:44px;border-radius:50%;font-size:20px;cursor:pointer;opacity:0;transition:opacity 0.3s;box-shadow:0 2px 12px rgba(0,0,0,0.2);display:flex;align-items:center;justify-content:center;">↑</button>
+<script>
+(function(){
+  var btn=document.getElementById('scroll-top');
+  if(!btn)return;
+  window.addEventListener('scroll',function(){
+    btn.style.opacity=window.scrollY>400?'1':'0';
+    btn.style.pointerEvents=window.scrollY>400?'auto':'none';
+  },{passive:true});
+})();
 </script>
 </body>
 </html>
