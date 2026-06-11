@@ -14,12 +14,18 @@
 <meta property="og:url" content="https://firewalkers.earth/posts/seven-harms-six-choices.html">
 <meta property="og:title" content="Seven Ways AI Is Harming Our Planet — and Six Kinder Choices">
 <meta property="og:description" content="A plain-language guide to AI and the environment. Seven harms. Six greener choices. No expertise required — just care.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80">
+<meta property="og:image" content="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&h=630&q=80">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="The Firewalkers">
 <meta property="article:published_time" content="2026-06-05">
+<meta name="twitter:site" content="@firewalkersearth">
+<meta name="twitter:creator" content="@firewalkersearth">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Seven Ways AI Is Harming Our Planet — and Six Kinder Choices">
-<meta name="twitter:image" content="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&h=630&q=80">
+<meta name="twitter:image:alt" content="The Firewalkers — AI, land and communities">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Seven Ways AI Is Harming Our Planet — and Six Kinder Choices","description":"A plain-language guide to AI and the environment.","datePublished":"2026-06-05","author":{"@type":"Person","name":"Scott Seivwright"},"publisher":{"@type":"Organization","name":"The Firewalkers","url":"https://firewalkers.earth"}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
@@ -169,44 +175,91 @@ body{background:var(--parchment);color:var(--earth);font-family:'Cormorant Garam
 /* ─── FOOTER FIX ─── */
 footer .footer-base,footer .footer-bottom{color:rgba(250,245,236,0.22);}
 
+
+/* ── TWO-TIER NAV (matching main site) ── */
+body{padding-top:90px;}
+.fw-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(247,242,232,0.97);backdrop-filter:blur(14px);border-bottom:1px solid #d6cbb4;}
+.fw-nav-primary{padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px;border-bottom:1px solid #d6cbb4;}
+.fw-nav-secondary{padding:0 2rem;display:flex;align-items:center;justify-content:flex-end;height:34px;background:#ede4d0;}
+.fw-nav-logo{display:flex;align-items:center;gap:0.6rem;text-decoration:none;flex-shrink:0;}
+.fw-nav-logo img{height:26px;width:auto;display:block;}
+.fw-nav-logo-text{font-family:'Cinzel',serif;font-size:0.68rem;letter-spacing:0.2em;color:#1e1610;}
+.fw-primary-links{display:flex;align-items:center;gap:1.75rem;}
+.fw-primary-links a{font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:#3a2c1c;text-decoration:none;transition:color 0.2s;padding-bottom:3px;border-bottom:2px solid transparent;}
+.fw-primary-links a:hover{color:#9c5500;}
+.fw-nav-cta{color:#f7f2e8!important;background:#9c5500;padding:0.5rem 1.1rem;text-decoration:none;border-bottom:none!important;transition:background 0.2s!important;white-space:nowrap;}
+.fw-nav-cta:hover{background:#b86810!important;}
+.fw-secondary-links{display:flex;align-items:center;gap:1.75rem;}
+.fw-secondary-links a{font-family:'Cinzel',serif;font-size:0.42rem;letter-spacing:0.2em;text-transform:uppercase;color:#7a7262;text-decoration:none;transition:color 0.2s;}
+.fw-secondary-links a:hover{color:#9c5500;}
+.fw-nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+.fw-nav-hamburger span{display:block;width:22px;height:2px;background:#3a2c1c;}
+.fw-mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#1e1610;z-index:300;flex-direction:column;justify-content:center;align-items:center;gap:0;padding:2rem;}
+.fw-mobile-menu.open{display:flex;}
+.fw-mobile-close{position:absolute;top:1.25rem;right:1.5rem;font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(247,242,232,0.45);background:none;border:none;cursor:pointer;}
+.fw-mobile-section-label{font-family:'Cinzel',serif;font-size:0.4rem;letter-spacing:0.32em;text-transform:uppercase;color:rgba(247,242,232,0.25);display:block;margin:1.5rem 0 0.75rem;width:100%;text-align:center;border-top:1px solid rgba(247,242,232,0.08);padding-top:1.5rem;}
+.fw-mobile-section-label:first-of-type{border-top:none;margin-top:0;padding-top:0;}
+.fw-mobile-menu a{font-family:'Cinzel',serif;font-size:0.9rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(247,242,232,0.65);text-decoration:none;transition:color 0.2s;padding:0.5rem 0;display:block;text-align:center;}
+.fw-mobile-menu a:hover{color:#d4881c;}
+.fw-mobile-cta{color:#f7f2e8!important;background:#9c5500;padding:0.9rem 2.5rem!important;margin-top:1.5rem;display:inline-block!important;}
+@media(max-width:760px){
+  body{padding-top:56px;}
+  .fw-primary-links{display:none;}
+  .fw-nav-secondary{display:none;}
+  .fw-nav-hamburger{display:flex;}
+}
+
 </style>
 </head>
 <body>
 <main id="main">
 
 <!-- ═══ UNIFIED NAV ═══ -->
-<a href="#main" class="skip-link">Skip to main content</a>
-<nav id="nav" role="navigation" aria-label="Main navigation">
-  <a href="/index.html" class="nav-logo" aria-label="The Firewalkers — home">
-    <img src="/images/logos/firewalker-logo.png" alt="The Firewalkers" style="height:36px;width:auto;display:block;">
-  </a>
-  <div class="nav-links">
-    <a href="/index.html#protect">What We Protect</a>
-    <a href="/good-ai.html">Good AI</a>
-    <a href="/campaigns.html">Campaigns</a>
-    <a href="/datacentre-watch.html">Data Centre Watch</a>
-    <a href="/hearth.html">From the Hearth</a>
-    <a href="/community.html">Community</a>
-    <a href="/media.html">Media</a>
-    <a href="/index.html#signup" class="nav-cta" style="background:var(--amber);color:var(--parchment);padding:0.55rem 1.25rem;opacity:1;">Join the Fire</a>
+<!-- NAV -->
+<nav class="fw-nav" role="navigation" aria-label="Main navigation">
+  <div class="fw-nav-primary">
+    <a href="../index.html" class="fw-nav-logo">
+      <img src="../images/logos/firewalker-logo.png" alt="The Firewalkers" onerror="this.style.display='none'">
+      <span class="fw-nav-logo-text">The Firewalkers</span>
+    </a>
+    <div class="fw-primary-links">
+      <a href="../campaigns.html">Campaigns</a>
+      <a href="../hearth.html">From the Hearth</a>
+      <a href="../datacentre-watch.html">Data Centre Watch</a>
+      <a href="../community.html">Community</a>
+      <a href="../index.html#signup" class="fw-nav-cta">Join the Movement</a>
+    </div>
+    <button class="fw-nav-hamburger" onclick="document.getElementById('fw-mobile-menu').classList.add('open')" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
-  <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="22" height="22" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-  </button>
+  <div class="fw-nav-secondary">
+    <div class="fw-secondary-links">
+      <a href="../good-ai.html">Good AI</a>
+      <a href="../tools.html">Tools</a>
+      <a href="../research.html">Research</a>
+      <a href="../learning.html">Learning</a>
+      <a href="../media.html">Media</a>
+    </div>
+  </div>
 </nav>
-<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Site navigation">
-  <button class="mobile-close" onclick="closeMM()" aria-label="Close menu">&#x2715; Close</button>
-  <a href="/index.html" class="mobile-logo" onclick="closeMM()"><img src="/images/logos/firewalker-logo.png" alt="The Firewalkers" style="height:32px;width:auto;filter:brightness(1.3);"></a>
-  <a href="/index.html#protect" class="mobile-link" onclick="closeMM()">What We Protect</a>
-  <a href="/good-ai.html" class="mobile-link" onclick="closeMM()">Good AI</a>
-  <a href="/campaigns.html" class="mobile-link" onclick="closeMM()">Campaigns</a>
-  <a href="/datacentre-watch.html" class="mobile-link" onclick="closeMM()">Data Centre Watch</a>
-  <a href="/hearth.html" class="mobile-link" onclick="closeMM()">From the Hearth</a>
-  <a href="/community.html" class="mobile-link" onclick="closeMM()">Community</a>
-  <a href="/media.html" class="mobile-link" onclick="closeMM()">Media</a>
-  <a href="/index.html#signup" class="mobile-cta-link" onclick="closeMM()">Join the Fire</a>
+
+<!-- MOBILE MENU -->
+<div id="fw-mobile-menu" class="fw-mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="fw-mobile-close" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')" aria-label="Close menu">✕ Close</button>
+  <span class="fw-mobile-section-label">Navigate</span>
+  <a href="../campaigns.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Campaigns</a>
+  <a href="../hearth.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">From the Hearth</a>
+  <a href="../datacentre-watch.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Data Centre Watch</a>
+  <a href="../community.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Community</a>
+  <span class="fw-mobile-section-label">Platform</span>
+  <a href="../good-ai.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Good AI</a>
+  <a href="../tools.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Tools</a>
+  <a href="../research.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Research</a>
+  <a href="../learning.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Learning</a>
+  <a href="../media.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Media</a>
+  <a href="../index.html#signup" class="fw-mobile-cta" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Join the Movement →</a>
 </div>
-<!-- ═══════════════════════════════════════════════════ -->
 <div class="post-hero">
   <div class="post-hero-inner">
     <span class="hero-eyebrow">Plain language guide · AI & the environment · June 2026</span>
