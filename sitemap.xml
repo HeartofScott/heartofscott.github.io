@@ -1,23 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- CORE PAGES -->
   <url><loc>https://firewalkers.earth/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://firewalkers.earth/hearth.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://firewalkers.earth/campaigns.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://firewalkers.earth/datacentre-watch.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://firewalkers.earth/community.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://firewalkers.earth/research.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://firewalkers.earth/good-ai.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://firewalkers.earth/learning.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://firewalkers.earth/good-ai.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://firewalkers.earth/tools.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://firewalkers.earth/memes.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://firewalkers.earth/media.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://firewalkers.earth/sitemap-visitor.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://firewalkers.earth/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
+  <!-- BLOG POSTS -->
   <url><loc>https://firewalkers.earth/posts/bathgate-hills-intro.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://firewalkers.earth/posts/great-data-centre-gamble.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://firewalkers.earth/posts/come-help-us-build-this.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://firewalkers.earth/posts/save-the-lammermuirs.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://firewalkers.earth/posts/data-centre-water-consumption-uk.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://firewalkers.earth/posts/come-help-us-build-this.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://firewalkers.earth/posts/why-i-built-the-firewalkers.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://firewalkers.earth/posts/seven-harms-six-choices.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://firewalkers.earth/posts/ai-that-doesnt-cost-the-earth.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://firewalkers.earth/posts/you-might-be-a-firewalker.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://firewalkers.earth/posts/pro-wisdom.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://firewalkers.earth/posts/fire-in-the-distance.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- PRESS RELEASES -->
+  <url><loc>https://firewalkers.earth/press/pr-001-data-centre-gamble.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://firewalkers.earth/press/pr-001-data-centre-gamble-tldr.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://firewalkers.earth/press/pr-002-water-consumption-ai-cooling.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://firewalkers.earth/press/pr-002-water-tldr.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
 </urlset>

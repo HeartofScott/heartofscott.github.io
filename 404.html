@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
+<title>Page not found — The Firewalkers</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{height:100%;}
+body{
+  background:#f7f2e8;
+  color:#1e1610;
+  font-family:'Cormorant Garamond',Georgia,serif;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  min-height:100vh;padding:2rem;text-align:center;
+}
+.fire{font-size:72px;margin-bottom:1.5rem;animation:flicker 3s ease-in-out infinite;}
+@keyframes flicker{0%,100%{transform:scale(1) rotate(-2deg);}50%{transform:scale(1.08) rotate(2deg);}}
+.code{font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.3em;text-transform:uppercase;color:#9c5500;display:block;margin-bottom:1rem;}
+h1{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.8rem,5vw,3rem);color:#1e1610;line-height:1.15;margin-bottom:1rem;max-width:560px;}
+p{font-size:1rem;color:#7a7262;line-height:1.75;max-width:440px;margin-bottom:2.5rem;}
+.links{display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;margin-bottom:3rem;}
+.link-btn{font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.16em;text-transform:uppercase;padding:0.75rem 1.4rem;text-decoration:none;transition:all 0.2s;}
+.link-btn.primary{background:#1e1610;color:#f7f2e8;}
+.link-btn.primary:hover{background:#9c5500;}
+.link-btn.secondary{border:1px solid rgba(30,22,16,0.2);color:#1e1610;}
+.link-btn.secondary:hover{border-color:#9c5500;color:#9c5500;}
+.sitemap-hint{font-family:'Cinzel',serif;font-size:0.46rem;letter-spacing:0.18em;text-transform:uppercase;color:#b0a898;}
+.sitemap-hint a{color:#9c5500;text-decoration:none;}
+.sitemap-hint a:hover{text-decoration:underline;}
+</style>
+</head>
+<body>
+
+<span class="fire">🔥</span>
+<span class="code">404 — Page not found</span>
+<h1>The path leads somewhere else.</h1>
+<p>The page you were looking for has moved, or never existed. The land is still here. So are we.</p>
+
+<div class="links">
+  <a href="index.html" class="link-btn primary">Return home →</a>
+  <a href="campaigns.html" class="link-btn secondary">Campaigns</a>
+  <a href="datacentre-watch.html" class="link-btn secondary">Data Centre Watch</a>
+  <a href="hearth.html" class="link-btn secondary">From the Hearth</a>
+  <a href="community.html" class="link-btn secondary">Community</a>
+</div>
+
+<p class="sitemap-hint">Looking for something specific? <a href="sitemap-visitor.html">Browse the full site directory →</a></p>
+
+</body>
+</html>
