@@ -11,11 +11,14 @@
 <link rel="canonical" href="https://firewalkers.earth/learning.html">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://firewalkers.earth/learning.html">
-<meta property="og:title" content="Learning — The Firewalkers">
-<meta property="og:description" content="Learn how AI, data centres, and digital systems really work — and how to push back.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80">
+<meta property="og:title" content="What's wrong with AI funding, data centres &amp; the subscription model">
+<meta property="og:description" content="The money behind AI is not neutral. This video breaks down how VC funding, subscription lock-in and the infrastructure race are driving a data centre crisis communities never voted for. Watch free at The Firewalkers.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630&q=80">
 <meta property="og:site_name" content="The Firewalkers">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What's wrong with AI funding, data centres &amp; the subscription model">
+<meta name="twitter:description" content="The money behind AI is not neutral. Watch this video to understand what's really driving the data centre boom — and what we can do about it.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630&q=80">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script async src="https://plausible.io/js/pa-OWigJj1V5aW2Wwon7a10u.js"></script>
@@ -92,6 +95,35 @@ body{background:var(--fw-parchment);color:var(--fw-earth);font-family:var(--fw-f
 .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.55s ease,transform 0.55s ease;}
 .reveal.visible{opacity:1;transform:none;}
 
+/* SHARE BAR */
+.share-bar{
+  display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;
+  padding:1.25rem 1.75rem;
+  background:var(--fw-parchment-warm);
+  border-top:1px solid var(--fw-stone);
+}
+.share-label{
+  font-family:var(--fw-font-display);font-size:0.46rem;
+  letter-spacing:0.24em;text-transform:uppercase;
+  color:var(--fw-mist);margin-right:0.25rem;white-space:nowrap;
+}
+.share-btn{
+  display:inline-flex;align-items:center;gap:0.45rem;
+  font-family:var(--fw-font-display);font-size:0.46rem;
+  letter-spacing:0.16em;text-transform:uppercase;
+  padding:0.5rem 1rem;text-decoration:none;
+  border:1px solid var(--fw-stone);background:white;
+  color:var(--fw-earth-mid);cursor:pointer;
+  transition:all 0.2s;white-space:nowrap;
+}
+.share-btn:hover{border-color:var(--fw-amber);color:var(--fw-amber);}
+.share-btn svg{width:14px;height:14px;flex-shrink:0;}
+.share-btn-linkedin:hover{border-color:#0a66c2;color:#0a66c2;}
+.share-btn-x:hover{border-color:#000;color:#000;}
+.share-btn-whatsapp:hover{border-color:#25d366;color:#25d366;}
+.share-btn-copy{font-family:var(--fw-font-mono);font-size:0.56rem;letter-spacing:0.08em;text-transform:none;}
+.share-btn-copy:hover{border-color:var(--fw-forest);color:var(--fw-forest);}
+
 /* FEATURED VIDEO */
 .featured-section{padding:4rem 2rem;background:var(--fw-parchment);border-bottom:1px solid var(--fw-stone);}
 .featured-inner{max-width:1100px;margin:0 auto;}
@@ -110,6 +142,11 @@ body{background:var(--fw-parchment);color:var(--fw-earth);font-family:var(--fw-f
 .video-why{background:var(--fw-parchment-warm);border-left:3px solid var(--fw-forest);padding:1rem 1.25rem;margin-top:auto;}
 .video-why-label{font-family:var(--fw-font-display);font-size:0.42rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--fw-forest);display:block;margin-bottom:0.4rem;}
 .video-why p{font-size:0.85rem;color:var(--fw-earth-mid);line-height:1.6;margin:0;}
+
+.video-card-series{font-family:var(--fw-font-display);font-size:0.42rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--fw-forest);display:block;margin-bottom:0.4rem;}
+.video-card-share{display:flex;gap:0.4rem;flex-wrap:wrap;margin-top:0.85rem;padding-top:0.85rem;border-top:1px solid var(--fw-stone);}
+.vshare-btn{font-family:var(--fw-font-display);font-size:0.4rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.3rem 0.7rem;border:1px solid var(--fw-stone);background:var(--fw-parchment);color:var(--fw-mist);text-decoration:none;transition:all 0.2s;white-space:nowrap;}
+.vshare-btn:hover{border-color:var(--fw-amber);color:var(--fw-amber);}
 
 /* VIDEO GRID */
 .videos-section{padding:4rem 2rem;background:var(--fw-parchment);}
@@ -269,43 +306,169 @@ body{background:var(--fw-parchment);color:var(--fw-earth);font-family:var(--fw-f
         </div>
       </div>
     </div>
+
+    <!-- SHARE BAR -->
+    <div class="share-bar reveal">
+      <span class="share-label">Share this video</span>
+
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ffirewalkers.earth%2Flearning.html"
+         target="_blank" rel="noopener" class="share-btn share-btn-linkedin"
+         title="Share on LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+
+      <a href="https://twitter.com/intent/tweet?text=The%20money%20behind%20AI%20is%20not%20neutral.%20This%20video%20breaks%20down%20what%27s%20really%20driving%20the%20data%20centre%20boom%20%E2%80%94%20and%20what%20we%20can%20do%20about%20it.%20%40firewalkersearth&url=https%3A%2F%2Ffirewalkers.earth%2Flearning.html"
+         target="_blank" rel="noopener" class="share-btn share-btn-x"
+         title="Share on X">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25z"/></svg>
+        X / Twitter
+      </a>
+
+      <a href="https://wa.me/?text=Worth%20watching%20%E2%80%94%20this%20video%20explains%20what%27s%20really%20wrong%20with%20AI%20funding%2C%20data%20centres%20and%20the%20subscription%20model.%20The%20Firewalkers%3A%20https%3A%2F%2Ffirewalkers.earth%2Flearning.html"
+         target="_blank" rel="noopener" class="share-btn share-btn-whatsapp"
+         title="Share on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+
+      <button class="share-btn share-btn-copy"
+              onclick="navigator.clipboard.writeText('https://firewalkers.earth/learning.html').then(()=>{this.textContent='✓ Copied';setTimeout(()=>{this.textContent='Copy link'},2000)})"
+              title="Copy link">
+        Copy link
+      </button>
+    </div>
+
   </div>
 </div>
 
 <!-- MORE VIDEOS -->
 <div class="videos-section">
   <div class="videos-inner">
-    <span class="section-eyebrow reveal">More to explore</span>
-    <h2 class="reveal">Building the library.</h2>
+
+    <!-- SERIES: THE BIG PICTURE -->
+    <span class="section-eyebrow reveal">The Big Picture</span>
+    <h2 class="reveal">What is really going on.</h2>
     <div class="videos-grid reveal">
 
-      <div class="video-card placeholder">
+      <div class="video-card">
+        <div class="video-card-thumb">
+          <iframe src="https://www.youtube.com/embed/5p426fSlYH4"
+                  title="We Saw What AI Data Centers Don't Want You to See"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen loading="lazy"></iframe>
+        </div>
         <div class="video-card-body">
-          <div>
-            <h3>How to challenge a data centre planning application</h3>
-            <p>A practical walkthrough — finding applications, reading documents, writing effective objections, and making your voice count in the planning process.</p>
+          <span class="video-card-series">Essential Viewing</span>
+          <h3>We Saw What AI Data Centers Don't Want You to See</h3>
+          <p>Thermal drone footage exposes the hidden pollution powering the AI boom. One of the most striking pieces of visual journalism on this subject.</p>
+          <div class="video-card-share">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fyoutu.be%2F5p426fSlYH4" target="_blank" rel="noopener" class="vshare-btn">LinkedIn</a>
+            <a href="https://twitter.com/intent/tweet?text=Thermal%20drone%20footage%20reveals%20what%20AI%20data%20centres%20don%27t%20want%20you%20to%20see.%20Via%20%40firewalkersearth&url=https%3A%2F%2Fyoutu.be%2F5p426fSlYH4" target="_blank" rel="noopener" class="vshare-btn">X</a>
+            <a href="https://wa.me/?text=Worth%20watching%20%E2%80%94%20thermal%20drone%20footage%20reveals%20the%20hidden%20pollution%20from%20AI%20data%20centres%3A%20https%3A%2F%2Fyoutu.be%2F5p426fSlYH4" target="_blank" rel="noopener" class="vshare-btn">WhatsApp</a>
           </div>
-          <span class="video-card-meta">Coming soon · Digital Wardens series</span>
         </div>
       </div>
 
-      <div class="video-card placeholder">
+      <div class="video-card">
+        <div class="video-card-thumb">
+          <iframe src="https://www.youtube.com/embed/ND7owjmtPNo"
+                  title="The dark side of AI — Exploitation of humans and nature | DW Documentary"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen loading="lazy"></iframe>
+        </div>
         <div class="video-card-body">
-          <div>
-            <h3>Using AI tools to run a community campaign</h3>
-            <p>How to use the same AI tools driving the infrastructure boom to research, write, organise, and amplify your response. Practical, no-jargon, values-first.</p>
+          <span class="video-card-series">The Big Picture</span>
+          <h3>The Dark Side of AI — Exploitation of Humans and Nature</h3>
+          <p>DW Documentary examines how AI is already causing harm to people and land while tech companies promise a better future. Credible, international, essential.</p>
+          <div class="video-card-share">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fyoutu.be%2FND7owjmtPNo" target="_blank" rel="noopener" class="vshare-btn">LinkedIn</a>
+            <a href="https://twitter.com/intent/tweet?text=DW%20Documentary%3A%20the%20dark%20side%20of%20AI%20%E2%80%94%20exploitation%20of%20humans%20and%20nature.%20Via%20%40firewalkersearth&url=https%3A%2F%2Fyoutu.be%2FND7owjmtPNo" target="_blank" rel="noopener" class="vshare-btn">X</a>
+            <a href="https://wa.me/?text=DW%20Documentary%20on%20the%20real%20cost%20of%20AI%20%E2%80%94%20worth%20an%20hour%20of%20your%20time%3A%20https%3A%2F%2Fyoutu.be%2FND7owjmtPNo" target="_blank" rel="noopener" class="vshare-btn">WhatsApp</a>
           </div>
-          <span class="video-card-meta">Coming soon · Digital Wardens series</span>
         </div>
       </div>
 
-      <div class="video-card placeholder">
+      <div class="video-card">
+        <div class="video-card-thumb">
+          <iframe src="https://www.youtube.com/embed/-O3CQ8EQmEQ"
+                  title="Why Edinburgh rejected this green data centre"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen loading="lazy"></iframe>
+        </div>
         <div class="video-card-body">
-          <div>
-            <h3>Water, land, and the hidden cost of a data centre</h3>
-            <p>What the planning documents don't always make clear — the cumulative environmental footprint of large-scale data centre infrastructure on local ecosystems.</p>
+          <span class="video-card-series">The Big Picture · Scotland</span>
+          <h3>Why Edinburgh Rejected This "Green" Data Centre</h3>
+          <p>Right on our doorstep. A so-called green data centre rejected in Edinburgh — cutting straight to the greenwashing argument communities face everywhere.</p>
+          <div class="video-card-share">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fyoutu.be%2F-O3CQ8EQmEQ" target="_blank" rel="noopener" class="vshare-btn">LinkedIn</a>
+            <a href="https://twitter.com/intent/tweet?text=Why%20Edinburgh%20rejected%20a%20so-called%20%22green%22%20data%20centre.%20Greenwashing%20exposed.%20Via%20%40firewalkersearth&url=https%3A%2F%2Fyoutu.be%2F-O3CQ8EQmEQ" target="_blank" rel="noopener" class="vshare-btn">X</a>
+            <a href="https://wa.me/?text=Edinburgh%20rejected%20a%20%22green%22%20data%20centre%20%E2%80%94%20here%27s%20why%3A%20https%3A%2F%2Fyoutu.be%2F-O3CQ8EQmEQ" target="_blank" rel="noopener" class="vshare-btn">WhatsApp</a>
           </div>
-          <span class="video-card-meta">Coming soon · Environment series</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SERIES: COMMUNITY ACTION -->
+    <span class="section-eyebrow reveal" style="margin-top:4rem;display:block;">Community Action</span>
+    <h2 class="reveal">Communities that fought back — and won.</h2>
+    <div class="videos-grid reveal">
+
+      <div class="video-card">
+        <div class="video-card-thumb">
+          <iframe src="https://www.youtube.com/embed/2PkPmb7IVps"
+                  title="Local pushback grows against AI data centers"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-card-body">
+          <span class="video-card-series">Community Action</span>
+          <h3>Local Pushback Grows Against AI Data Centers</h3>
+          <p>Communities across the world are saying they don't want data centres in their backyard. This is what organised resistance looks like — and why it matters.</p>
+          <div class="video-card-share">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fyoutu.be%2F2PkPmb7IVps" target="_blank" rel="noopener" class="vshare-btn">LinkedIn</a>
+            <a href="https://twitter.com/intent/tweet?text=Communities%20are%20pushing%20back%20against%20AI%20data%20centres%20%E2%80%94%20and%20winning.%20Via%20%40firewalkersearth&url=https%3A%2F%2Fyoutu.be%2F2PkPmb7IVps" target="_blank" rel="noopener" class="vshare-btn">X</a>
+            <a href="https://wa.me/?text=Communities%20fighting%20back%20against%20data%20centres%20%E2%80%94%20inspiring%20watch%3A%20https%3A%2F%2Fyoutu.be%2F2PkPmb7IVps" target="_blank" rel="noopener" class="vshare-btn">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-card-thumb">
+          <iframe src="https://www.youtube.com/embed/Z6lwXWayi6U"
+                  title="Hamilton rejects proposal after hundreds protest"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-card-body">
+          <span class="video-card-series">Community Action · Win</span>
+          <h3>Hamilton Rejects Data Centre Proposal After Hundreds Protest</h3>
+          <p>A planning committee denies an application after the community showed up. Proof that organised objection works — and a template for how to do it.</p>
+          <div class="video-card-share">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fyoutu.be%2FZ6lwXWayi6U" target="_blank" rel="noopener" class="vshare-btn">LinkedIn</a>
+            <a href="https://twitter.com/intent/tweet?text=Hamilton%20rejected%20a%20data%20centre%20after%20hundreds%20protested.%20Community%20action%20works.%20Via%20%40firewalkersearth&url=https%3A%2F%2Fyoutu.be%2FZ6lwXWayi6U" target="_blank" rel="noopener" class="vshare-btn">X</a>
+            <a href="https://wa.me/?text=Hundreds%20of%20people%20stopped%20a%20data%20centre%20in%20Hamilton.%20This%20is%20how%20it%20was%20done%3A%20https%3A%2F%2Fyoutu.be%2FZ6lwXWayi6U" target="_blank" rel="noopener" class="vshare-btn">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-card-thumb">
+          <iframe src="https://www.youtube.com/embed/rPWGTfEgXGo"
+                  title="Data centres cancelled: Every data centre has local opposition"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-card-body">
+          <span class="video-card-series">Community Action · Strategy</span>
+          <h3>"Every Data Centre Has Local Opposition"</h3>
+          <p>Co-founder of the Better Path Coalition: developers would rather bail than face organised opposition. The power is with communities — if they use it in time.</p>
+          <div class="video-card-share">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fyoutu.be%2FrPWGTfEgXGo" target="_blank" rel="noopener" class="vshare-btn">LinkedIn</a>
+            <a href="https://twitter.com/intent/tweet?text=%22Every%20data%20centre%20has%20local%20opposition%22%20%E2%80%94%20developers%20would%20rather%20bail%20than%20face%20organised%20communities.%20Via%20%40firewalkersearth&url=https%3A%2F%2Fyoutu.be%2FrPWGTfEgXGo" target="_blank" rel="noopener" class="vshare-btn">X</a>
+            <a href="https://wa.me/?text=%22Every%20data%20centre%20has%20local%20opposition%22%20%E2%80%94%20and%20developers%20know%20it%3A%20https%3A%2F%2Fyoutu.be%2FrPWGTfEgXGo" target="_blank" rel="noopener" class="vshare-btn">WhatsApp</a>
+          </div>
         </div>
       </div>
 
@@ -319,8 +482,8 @@ body{background:var(--fw-parchment);color:var(--fw-earth);font-family:var(--fw-f
     <div class="reveal">
       <span class="section-eyebrow" style="color:var(--fw-sage);">Digital Wardens</span>
       <h2>Warrior training for a better world.</h2>
-      <p>The Learning section is the foundation of Digital Wardens — a community forming inside OBOD for people who want to use digital tools not as passive consumers, but as active protectors of land, community, and the living world.</p>
-      <p>Practical skills. Ethical grounding. Druidic spine.</p>
+      <p>Digital Wardens is for anyone who wants to fight digital overreach — the unchecked expansion of AI infrastructure into land, water, and communities that never consented to it. No technical background required. Just the will to act.</p>
+      <p>Practical skills. Ethical grounding. Spine.</p>
       <a href="community.html" class="btn-sage">Join the community →</a>
     </div>
     <div class="reveal">
@@ -328,8 +491,9 @@ body{background:var(--fw-parchment);color:var(--fw-earth);font-family:var(--fw-f
         <li>Research and challenge planning decisions using open data</li>
         <li>Use AI tools to write, organise, and amplify campaigns</li>
         <li>Understand how data centres and algorithmic systems affect land and communities</li>
+        <li>Recognise and expose greenwashing in data centre planning applications</li>
         <li>Build and sustain digital movements rooted in place and purpose</li>
-        <li>Connect with others doing this work across the Celtic nations and beyond</li>
+        <li>Connect with others fighting this battle across the world</li>
       </ul>
     </div>
   </div>
@@ -362,7 +526,7 @@ body{background:var(--fw-parchment);color:var(--fw-earth);font-family:var(--fw-f
         <a href="good-ai.html">Good AI</a>
       </div>
       <div class="fw-footer-col">
-        <h4>Research &amp; Learning</h4>
+        <h4>Knowledge</h4>
         <a href="research.html">Research</a>
         <a href="learning.html">Learning</a>
         <a href="hearth.html">From the Hearth</a>
