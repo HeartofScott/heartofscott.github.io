@@ -1,77 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
 <!--
-  FIREWALKERS SHARED NAV + FOOTER COMPONENT
-  Copy this block into every page.
-  Replace class="active" on the link that matches the current page.
-  Replace YOUR_FORM_ID in any form action with your Formspree endpoint.
--->
+  ════════════════════════════════════════════════════════════════
+  THE FIREWALKERS — _nav.html
+  Navigation + Footer reference component · v2.0 · June 2026
+  ════════════════════════════════════════════════════════════════
 
-<!-- ═══ SITE NAV ═══ -->
-<nav class="site-nav">
-  <div class="nav-inner">
-    <a href="/index.html" class="nav-logo">
-      <img src="/images/logos/Smaller logo.png" alt="The Firewalkers">
-      <span class="nav-logo-text">The Firewalkers</span>
+  This file is a DEVELOPER REFERENCE — it is not served as a page.
+  GitHub Pages ignores files starting with underscore (_).
+
+  HOW TO USE
+  ──────────
+  When building or updating any page on firewalkers.earth:
+
+  STEP 1 — Copy the <link> tag from SECTION A into your page <head>
+  STEP 2 — Copy the CSS block from SECTION B into your page <style> tag
+  STEP 3 — Copy the :root token block from SECTION C into your <style> tag
+             (skip if already present — one :root block per page is enough)
+  STEP 4 — Copy the NAV HTML from SECTION D immediately after <body>
+  STEP 5 — Copy the MOBILE MENU HTML from SECTION E after the nav
+  STEP 6 — Copy the FOOTER HTML from SECTION F just before </body>
+  STEP 7 — Set class="active" on the nav link that matches the current page
+  STEP 8 — Set body { padding-top: 90px } for full two-tier nav,
+             or body { padding-top: 56px } on mobile (handled by the CSS)
+
+  ACTIVE STATE GUIDE — add class="active" to the correct link:
+  ─────────────────────────────────────────────────────────────
+  /index.html              →  no active link (homepage)
+  /campaigns.html          →  <a href="campaigns.html" class="active">
+  /hearth.html             →  <a href="hearth.html" class="active">
+  /datacentre-watch.html   →  <a href="datacentre-watch.html" class="active">
+  /community.html          →  <a href="community.html" class="active">
+  /good-ai.html            →  secondary link: <a href="good-ai.html" class="active">
+  /tools.html              →  secondary link: <a href="tools.html" class="active">
+  /media.html              →  secondary link: <a href="media.html" class="active">
+  /posts/*.html            →  use the POST NAV VARIANT at the bottom of this file
+
+  PATH NOTE
+  ─────────
+  Root pages use:   href="campaigns.html"  (no slash prefix needed)
+  Posts subfolder:  href="../campaigns.html" (one level up)
+  ════════════════════════════════════════════════════════════════
+-->
+<head>
+<meta charset="UTF-8">
+<title>_nav reference — The Firewalkers</title>
+
+<!--
+  ════════════════════════════════════════════════════════════════
+  SECTION A — GOOGLE FONTS
+  Paste into every page <head>, replacing the existing fonts link.
+  ════════════════════════════════════════════════════════════════
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+
+/* ════════════════════════════════════════════════════════════════
+   SECTION B — BRAND TOKENS
+   Paste into every page :root block. One per page, in <style>.
+   ════════════════════════════════════════════════════════════════ */
+:root {
+  /* Grounds */
+  --fw-parchment:      #f7f2e8;
+  --fw-parchment-warm: #ede4d0;
+  --fw-stone:          #d6cbb4;
+
+  /* Text */
+  --fw-earth:          #1e1610;
+  --fw-earth-mid:      #3a2c1c;
+  --fw-mist:           #7a7262;
+
+  /* Amber — primary action colour */
+  --fw-amber:          #9c5500;
+  --fw-amber-mid:      #b86810;
+  --fw-amber-bright:   #d4881c;
+  --fw-amber-pale:     #f5e6c8;
+
+  /* Forest — community / environmental */
+  --fw-forest:         #2d5a38;
+  --fw-sage:           #4a7c58;
+  --fw-sage-pale:      #c8dece;
+
+  /* Slate — data / intelligence */
+  --fw-slate:          #3a4f5c;
+  --fw-slate-mid:      #5a7282;
+  --fw-slate-pale:     #d0dce4;
+
+  /* Urgent — live campaigns / alerts only */
+  --fw-urgent:         #7a2010;
+  --fw-urgent-pale:    #f2d4cc;
+
+  /* Fonts */
+  --fw-font-display:   'Cinzel', serif;
+  --fw-font-body:      'Cormorant Garamond', Georgia, serif;
+  --fw-font-mono:      'IBM Plex Mono', 'Courier New', monospace;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   SECTION C — NAV + FOOTER CSS
+   Paste into every page <style> block.
+   ════════════════════════════════════════════════════════════════ */
+
+/* Body offset — accounts for fixed two-tier nav height */
+body { padding-top: 90px; } /* 56px primary + 34px secondary */
+
+/* ── Two-tier nav wrapper ── */
+.fw-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(247,242,232,0.97);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--fw-stone);
+}
+
+/* Primary bar — logo + main links */
+.fw-nav-primary {
+  padding: 0 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 56px;
+  border-bottom: 1px solid var(--fw-stone);
+}
+
+/* Secondary bar — supporting links */
+.fw-nav-secondary {
+  padding: 0 2rem;
+  display: flex; align-items: center; justify-content: flex-end;
+  height: 34px;
+  background: var(--fw-parchment-warm);
+}
+
+/* Logo */
+.fw-nav-logo {
+  display: flex; align-items: center; gap: 0.6rem;
+  text-decoration: none; flex-shrink: 0;
+}
+.fw-nav-logo img { height: 26px; width: auto; display: block; }
+.fw-nav-logo-text {
+  font-family: var(--fw-font-display);
+  font-size: 0.68rem; letter-spacing: 0.2em;
+  color: var(--fw-earth);
+}
+
+/* Primary links */
+.fw-primary-links { display: flex; align-items: center; gap: 1.75rem; }
+.fw-primary-links a {
+  font-family: var(--fw-font-display);
+  font-size: 0.52rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--fw-earth-mid); text-decoration: none;
+  transition: color 0.2s;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+}
+.fw-primary-links a:hover { color: var(--fw-amber); }
+.fw-primary-links a.active {
+  color: var(--fw-amber);
+  border-bottom-color: var(--fw-amber);
+}
+
+/* CTA button in nav */
+.fw-nav-cta {
+  font-family: var(--fw-font-display);
+  font-size: 0.5rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--fw-parchment) !important;
+  background: var(--fw-amber);
+  padding: 0.5rem 1.1rem;
+  text-decoration: none;
+  border-bottom: none !important;
+  transition: background 0.2s !important;
+  white-space: nowrap;
+}
+.fw-nav-cta:hover { background: var(--fw-amber-mid) !important; }
+
+/* Secondary links */
+.fw-secondary-links { display: flex; align-items: center; gap: 1.75rem; }
+.fw-secondary-links a {
+  font-family: var(--fw-font-display);
+  font-size: 0.42rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--fw-mist); text-decoration: none;
+  transition: color 0.2s;
+}
+.fw-secondary-links a:hover { color: var(--fw-amber); }
+.fw-secondary-links a.active { color: var(--fw-amber); }
+
+/* Hamburger button */
+.fw-nav-hamburger {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 4px;
+}
+.fw-nav-hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: var(--fw-earth-mid); transition: all 0.3s;
+}
+
+/* ── Mobile full-screen menu ── */
+.fw-mobile-menu {
+  display: none; position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--fw-earth); z-index: 300;
+  flex-direction: column; justify-content: center; align-items: center;
+  gap: 0; padding: 2rem;
+}
+.fw-mobile-menu.open { display: flex; }
+
+.fw-mobile-close {
+  position: absolute; top: 1.25rem; right: 1.5rem;
+  font-family: var(--fw-font-display);
+  font-size: 0.52rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(247,242,232,0.45); background: none; border: none; cursor: pointer;
+}
+
+.fw-mobile-section-label {
+  font-family: var(--fw-font-display);
+  font-size: 0.4rem; letter-spacing: 0.32em; text-transform: uppercase;
+  color: rgba(247,242,232,0.25); display: block;
+  margin: 1.5rem 0 0.75rem; width: 100%; text-align: center;
+  border-top: 1px solid rgba(247,242,232,0.08); padding-top: 1.5rem;
+}
+.fw-mobile-section-label:first-of-type {
+  border-top: none; margin-top: 0; padding-top: 0;
+}
+
+.fw-mobile-menu a {
+  font-family: var(--fw-font-display);
+  font-size: 0.9rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: rgba(247,242,232,0.65); text-decoration: none;
+  transition: color 0.2s; padding: 0.5rem 0;
+  display: block; text-align: center;
+}
+.fw-mobile-menu a:hover { color: var(--fw-amber-bright); }
+
+.fw-mobile-cta {
+  color: var(--fw-parchment) !important;
+  background: var(--fw-amber);
+  padding: 0.9rem 2.5rem !important;
+  margin-top: 1.5rem;
+  display: inline-block !important;
+}
+
+/* ── Footer ── */
+.fw-footer {
+  background: var(--fw-earth);
+  border-top: 2px solid var(--fw-amber);
+  padding: 3.5rem 2rem 2rem;
+}
+.fw-footer-inner { max-width: 1100px; margin: 0 auto; }
+.fw-footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem; margin-bottom: 3rem;
+}
+.fw-footer-brand-logo {
+  font-family: var(--fw-font-display);
+  font-size: 0.82rem; letter-spacing: 0.2em;
+  color: var(--fw-amber-bright); display: block; margin-bottom: 0.75rem;
+}
+.fw-footer-brand p {
+  font-size: 0.85rem; color: rgba(247,242,232,0.35);
+  line-height: 1.65; max-width: 240px;
+}
+.fw-footer-tagline {
+  font-family: var(--fw-font-body); font-style: italic;
+  font-size: 0.88rem; color: rgba(247,242,232,0.22);
+  margin-top: 1rem; display: block;
+}
+.fw-footer-col h4 {
+  font-family: var(--fw-font-display);
+  font-size: 0.46rem; letter-spacing: 0.24em; text-transform: uppercase;
+  color: rgba(247,242,232,0.25); margin-bottom: 1rem;
+}
+.fw-footer-col a {
+  display: block; font-family: var(--fw-font-display);
+  font-size: 0.5rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(247,242,232,0.45); text-decoration: none;
+  margin-bottom: 0.6rem; transition: color 0.2s;
+}
+.fw-footer-col a:hover { color: var(--fw-amber-bright); }
+.fw-footer-base {
+  border-top: 1px solid rgba(247,242,232,0.06); padding-top: 1.5rem;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 0.5rem;
+  font-family: var(--fw-font-mono);
+  font-size: 0.58rem; color: rgba(247,242,232,0.18);
+}
+.fw-footer-base a { color: rgba(247,242,232,0.3); text-decoration: none; }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .fw-primary-links { gap: 1.25rem; }
+}
+@media (max-width: 760px) {
+  body { padding-top: 56px; } /* secondary strip hidden on mobile */
+  .fw-primary-links { display: none; }
+  .fw-nav-secondary { display: none; }
+  .fw-nav-hamburger { display: flex; }
+  .fw-footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .fw-footer-base { flex-direction: column; gap: 0.75rem; text-align: center; }
+}
+@media (max-width: 420px) {
+  .fw-footer-grid { grid-template-columns: 1fr; }
+}
+
+</style>
+</head>
+<body>
+
+<!--
+  ════════════════════════════════════════════════════════════════
+  SECTION D — NAV HTML
+  Paste immediately after <body> on every root-level page.
+  Change class="active" to match the current page (see guide above).
+  For posts/ subfolder pages use the POST NAV VARIANT below instead.
+  ════════════════════════════════════════════════════════════════
+-->
+<nav class="fw-nav" role="navigation" aria-label="Main navigation">
+  <div class="fw-nav-primary">
+    <a href="index.html" class="fw-nav-logo">
+      <img src="images/logos/firewalker-logo.png" alt="The Firewalkers" onerror="this.style.display='none'">
+      <span class="fw-nav-logo-text">The Firewalkers</span>
     </a>
-    <div class="nav-links">
-      <a href="/index.html#pattern">Why This Matters</a>
-      <a href="/good-ai.html">Good AI</a>
-      <a href="/campaigns.html">Campaigns</a>
-      <a href="/datacentre-watch.html">Data Centre Watch</a>
-      <a href="/hearth.html">From the Hearth</a>
-      <a href="/community.html">Community</a>
-      <a href="/media.html">Media</a>
-      <a href="/index.html#signup" class="nav-cta">Join the Fire</a>
+    <div class="fw-primary-links">
+      <a href="campaigns.html">Campaigns</a>
+      <a href="hearth.html">From the Hearth</a>
+      <a href="datacentre-watch.html">Data Centre Watch</a>
+      <a href="community.html">Community</a>
+      <a href="index.html#signup" class="fw-nav-cta">Join the Movement</a>
     </div>
-    <button class="nav-hamburger" onclick="document.getElementById('mobileMenu').classList.add('open')" aria-label="Open menu">
+    <button class="fw-nav-hamburger"
+            onclick="document.getElementById('fw-mobile-menu').classList.add('open')"
+            aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
+  <div class="fw-nav-secondary" aria-label="Secondary navigation">
+    <div class="fw-secondary-links">
+      <a href="good-ai.html">Good AI</a>
+      <a href="tools.html">Tools</a>
+      <a href="media.html">Media</a>
+    </div>
+  </div>
 </nav>
 
-<div id="mobileMenu" class="nav-mobile-menu">
-  <button class="nav-mobile-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">&#x2715; Close</button>
-  <a href="/index.html#pattern">Why This Matters</a>
-  <a href="/good-ai.html">Good AI</a>
-  <a href="/campaigns.html">Campaigns</a>
-  <a href="/datacentre-watch.html">Data Centre Watch</a>
-  <a href="/hearth.html">From the Hearth</a>
-  <a href="/community.html">Community</a>
-  <a href="/media.html">Media</a>
-  <a href="/index.html#signup" class="cta">Join the Fire &rarr;</a>
+<!--
+  ════════════════════════════════════════════════════════════════
+  SECTION E — MOBILE MENU HTML
+  Paste immediately after the <nav> block above.
+  ════════════════════════════════════════════════════════════════
+-->
+<div id="fw-mobile-menu" class="fw-mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="fw-mobile-close"
+          onclick="document.getElementById('fw-mobile-menu').classList.remove('open')"
+          aria-label="Close menu">✕ Close</button>
+
+  <span class="fw-mobile-section-label">Navigate</span>
+  <a href="campaigns.html"       onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Campaigns</a>
+  <a href="hearth.html"          onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">From the Hearth</a>
+  <a href="datacentre-watch.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Data Centre Watch</a>
+  <a href="community.html"       onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Community</a>
+
+  <span class="fw-mobile-section-label">Platform</span>
+  <a href="good-ai.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Good AI</a>
+  <a href="tools.html"   onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Tools</a>
+  <a href="media.html"   onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Media</a>
+
+  <a href="index.html#signup" class="fw-mobile-cta"
+     onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Join the Movement →</a>
 </div>
 
-<!-- ═══ SITE FOOTER ═══ -->
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <img src="/images/logos/firewalker-logo.png" alt="The Firewalkers">
-        <p>A global movement using AI to protect the places we love. Founded in Scotland. Built for everywhere that matters.</p>
+
+<!--
+  ════════════════════════════════════════════════════════════════
+  SECTION F — FOOTER HTML
+  Paste just before </body> on every page.
+  ════════════════════════════════════════════════════════════════
+-->
+<footer class="fw-footer">
+  <div class="fw-footer-inner">
+    <div class="fw-footer-grid">
+
+      <div class="fw-footer-brand">
+        <span class="fw-footer-brand-logo">The Firewalkers</span>
+        <p>A global movement using AI to protect the natural world from the environmental impact of data centre infrastructure. Founded in Scotland. Built for everywhere that matters.</p>
+        <span class="fw-footer-tagline">The future belongs to the stewards, not the extractors.</span>
       </div>
-      <div class="footer-col">
-        <h4>The Platform</h4>
-        <ul>
-          <li><a href="/good-ai.html">Good AI</a></li>
-          <li><a href="/campaigns.html">Campaigns</a></li>
-          <li><a href="/datacentre-watch.html">Data Centre Watch</a></li>
-          <li><a href="/hearth.html">From the Hearth</a></li>
-          <li><a href="/community.html">Community</a></li>
-          <li><a href="/media.html">Media &amp; Press</a></li>
-        </ul>
+
+      <div class="fw-footer-col">
+        <h4>The Movement</h4>
+        <a href="campaigns.html">Campaigns</a>
+        <a href="datacentre-watch.html">Data Centre Watch</a>
+        <a href="community.html">Community</a>
+        <a href="good-ai.html">Good AI</a>
       </div>
-      <div class="footer-col">
-        <h4>Join</h4>
-        <ul>
-          <li><a href="/index.html#signup">Join the mailing list</a></li>
-          <li><a href="/index.html#submit">Contribute something</a></li>
-          <li><a href="/posts/come-help-us-build-this.html">Help build this</a></li>
-          <li><a href="/media.html#media-contact">Media enquiries</a></li>
-        </ul>
+
+      <div class="fw-footer-col">
+        <h4>From the Hearth</h4>
+        <a href="hearth.html">All Posts</a>
+        <a href="posts/come-help-us-build-this.html">Help Build This</a>
+        <a href="tools.html">Tools</a>
+        <a href="media.html">Media &amp; Press</a>
       </div>
+
+      <div class="fw-footer-col">
+        <h4>Connect</h4>
+        <a href="index.html#signup">Join the Mailing List</a>
+        <a href="https://www.youtube.com/@firewalkersearth" target="_blank" rel="noopener">YouTube</a>
+        <a href="community.html#whatsapp">WhatsApp</a>
+        <a href="community.html#discord">Discord</a>
+        <a href="mailto:hello@firewalkers.earth">hello@firewalkers.earth</a>
+      </div>
+
     </div>
-    <div class="footer-bottom">
-      <span>The Firewalkers &middot; firewalkers.earth &middot; Founded June 2026</span>
-      <span>The future belongs to the stewards, not the extractors.</span>
+    <div class="fw-footer-base">
+      <span>© 2026 The Firewalkers · firewalkers.earth · Edinburgh, Scotland</span>
+      <a href="privacy.html">Privacy</a>
     </div>
   </div>
 </footer>
+
+
+<!--
+  ════════════════════════════════════════════════════════════════
+  SECTION G — MOBILE MENU SCRIPT
+  Paste just before </body> on every page, after the footer.
+  ════════════════════════════════════════════════════════════════
+-->
+<script>
+document.getElementById('fw-mobile-menu').addEventListener('click', function(e) {
+  if (e.target === this) this.classList.remove('open');
+});
+</script>
+
+
+<!--
+  ════════════════════════════════════════════════════════════════
+  POST NAV VARIANT
+  Use this INSTEAD of Sections D+E on pages inside posts/ subfolder.
+  Note the ../ prefix on all hrefs — one level up from posts/.
+  ════════════════════════════════════════════════════════════════
+
+<nav class="fw-nav" role="navigation" aria-label="Page navigation">
+  <div class="fw-nav-primary">
+    <a href="../index.html" class="fw-nav-logo">
+      <img src="../images/logos/firewalker-logo.png" alt="The Firewalkers" onerror="this.style.display='none'">
+      <span class="fw-nav-logo-text">The Firewalkers</span>
+    </a>
+    <a href="../hearth.html"
+       style="font-family:var(--fw-font-display);font-size:0.5rem;
+              letter-spacing:0.2em;text-transform:uppercase;
+              color:var(--fw-mist);text-decoration:none;
+              transition:color 0.2s;"
+       onmouseover="this.style.color='var(--fw-amber)'"
+       onmouseout="this.style.color='var(--fw-mist)'">← All Posts</a>
+  </div>
+</nav>
+
+  Post pages also need body { padding-top: 56px } not 90px
+  since there is no secondary strip.
+-->
+
+
+<!--
+  ════════════════════════════════════════════════════════════════
+  POSTS SUBFOLDER — path adjustments
+  When copying nav/footer into a file inside posts/, change:
+
+  Nav logo:      href="index.html"          →  href="../index.html"
+                 src="images/logos/..."     →  src="../images/logos/..."
+  Nav links:     href="campaigns.html"      →  href="../campaigns.html"
+                 href="hearth.html"         →  href="../hearth.html"
+                 href="datacentre-watch…"   →  href="../datacentre-watch.html"
+                 href="community.html"      →  href="../community.html"
+                 href="good-ai.html"        →  href="../good-ai.html"
+                 href="tools.html"          →  href="../tools.html"
+                 href="media.html"          →  href="../media.html"
+                 href="index.html#signup"   →  href="../index.html#signup"
+  Footer links:  same pattern — add ../ prefix to all internal hrefs
+  ════════════════════════════════════════════════════════════════
+-->
+
+</body>
+</html>
