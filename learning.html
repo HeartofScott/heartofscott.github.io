@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="Svtevcw_M4UFmsXsNvp_hNvWEAz28GBj8ILx_Xi9jCk">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x25A0;</text></svg>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learning — The Firewalkers</title>
+<meta name="description" content="Learn how AI, data centres, and digital systems really work — and how to push back. Resources, videos, and tools for active, values-driven digital citizens.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://firewalkers.earth/learning.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://firewalkers.earth/learning.html">
+<meta property="og:title" content="Learning — The Firewalkers">
+<meta property="og:description" content="Learn how AI, data centres, and digital systems really work — and how to push back.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80">
+<meta property="og:site_name" content="The Firewalkers">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script async src="https://plausible.io/js/pa-OWigJj1V5aW2Wwon7a10u.js"></script>
+<script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
+<style>
+:root {
+  --fw-parchment:      #f7f2e8;
+  --fw-parchment-warm: #ede4d0;
+  --fw-stone:          #d6cbb4;
+  --fw-earth:          #1e1610;
+  --fw-earth-mid:      #3a2c1c;
+  --fw-mist:           #7a7262;
+  --fw-amber:          #9c5500;
+  --fw-amber-mid:      #b86810;
+  --fw-amber-bright:   #d4881c;
+  --fw-amber-pale:     #f5e6c8;
+  --fw-forest:         #2d5a38;
+  --fw-sage:           #4a7c58;
+  --fw-sage-pale:      #c8dece;
+  --fw-slate:          #3a4f5c;
+  --fw-slate-mid:      #5a7282;
+  --fw-slate-pale:     #d0dce4;
+  --fw-urgent:         #7a2010;
+  --fw-urgent-pale:    #f2d4cc;
+  --fw-font-display:   'Cinzel', serif;
+  --fw-font-body:      'Cormorant Garamond', Georgia, serif;
+  --fw-font-mono:      'IBM Plex Mono', 'Courier New', monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--fw-parchment);color:var(--fw-earth);font-family:var(--fw-font-body);font-size:18px;line-height:1.85;overflow-x:hidden;padding-top:90px;}
+
+/* NAV */
+.fw-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(247,242,232,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--fw-stone);}
+.fw-nav-primary{padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px;border-bottom:1px solid var(--fw-stone);}
+.fw-nav-secondary{padding:0 2rem;display:flex;align-items:center;justify-content:flex-end;height:34px;background:var(--fw-parchment-warm);}
+.fw-nav-logo{display:flex;align-items:center;gap:0.6rem;text-decoration:none;flex-shrink:0;}
+.fw-nav-logo img{height:26px;width:auto;display:block;}
+.fw-nav-logo-text{font-family:var(--fw-font-display);font-size:0.68rem;letter-spacing:0.2em;color:var(--fw-earth);}
+.fw-primary-links{display:flex;align-items:center;gap:1.75rem;}
+.fw-primary-links a{font-family:var(--fw-font-display);font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--fw-earth-mid);text-decoration:none;transition:color 0.2s;padding-bottom:3px;border-bottom:2px solid transparent;}
+.fw-primary-links a:hover{color:var(--fw-amber);}
+.fw-primary-links a.active{color:var(--fw-amber);border-bottom-color:var(--fw-amber);}
+.fw-nav-cta{font-family:var(--fw-font-display);font-size:0.5rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--fw-parchment)!important;background:var(--fw-amber);padding:0.5rem 1.1rem;text-decoration:none;border-bottom:none!important;transition:background 0.2s!important;white-space:nowrap;}
+.fw-nav-cta:hover{background:var(--fw-amber-mid)!important;}
+.fw-secondary-links{display:flex;align-items:center;gap:1.75rem;}
+.fw-secondary-links a{font-family:var(--fw-font-display);font-size:0.42rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--fw-mist);text-decoration:none;transition:color 0.2s;}
+.fw-secondary-links a:hover{color:var(--fw-amber);}
+.fw-secondary-links a.active{color:var(--fw-amber);}
+.fw-nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+.fw-nav-hamburger span{display:block;width:22px;height:2px;background:var(--fw-earth-mid);}
+.fw-mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--fw-earth);z-index:300;flex-direction:column;justify-content:center;align-items:center;gap:0;padding:2rem;}
+.fw-mobile-menu.open{display:flex;}
+.fw-mobile-close{position:absolute;top:1.25rem;right:1.5rem;font-family:var(--fw-font-display);font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(247,242,232,0.45);background:none;border:none;cursor:pointer;}
+.fw-mobile-section-label{font-family:var(--fw-font-display);font-size:0.4rem;letter-spacing:0.32em;text-transform:uppercase;color:rgba(247,242,232,0.25);display:block;margin:1.5rem 0 0.75rem;width:100%;text-align:center;border-top:1px solid rgba(247,242,232,0.08);padding-top:1.5rem;}
+.fw-mobile-section-label:first-of-type{border-top:none;margin-top:0;padding-top:0;}
+.fw-mobile-menu a{font-family:var(--fw-font-display);font-size:0.9rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(247,242,232,0.65);text-decoration:none;transition:color 0.2s;padding:0.5rem 0;display:block;text-align:center;}
+.fw-mobile-menu a:hover{color:var(--fw-amber-bright);}
+.fw-mobile-cta{color:var(--fw-parchment)!important;background:var(--fw-amber);padding:0.9rem 2.5rem!important;margin-top:1.5rem;display:inline-block!important;}
+
+/* PAGE HERO — forest register for learning */
+.page-hero{background:var(--fw-forest);position:relative;overflow:hidden;border-bottom:3px solid var(--fw-sage);}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1516912481808-3406841bd33c?auto=format&fit=crop&w=1920&q=80');background-size:cover;background-position:center;opacity:0.07;}
+.page-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(45,90,56,0.97) 0%,rgba(45,90,56,0.82) 100%);}
+.page-hero-inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:4rem 2rem 3.5rem;}
+.page-hero-eyebrow{font-family:var(--fw-font-mono);font-size:0.58rem;letter-spacing:0.2em;color:rgba(200,222,206,0.6);display:block;margin-bottom:1rem;}
+.page-hero h1{font-family:var(--fw-font-body);font-style:italic;font-weight:600;font-size:clamp(2.2rem,5vw,3.8rem);color:#fff;line-height:1.05;margin-bottom:1rem;}
+.page-hero-desc{font-size:1.05rem;color:rgba(200,222,206,0.7);max-width:640px;line-height:1.75;}
+
+/* SECTION LABELS */
+.section-eyebrow{font-family:var(--fw-font-display);font-size:0.5rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--fw-amber);display:block;margin-bottom:1rem;}
+
+/* REVEAL ANIMATION */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity 0.55s ease,transform 0.55s ease;}
+.reveal.visible{opacity:1;transform:none;}
+
+/* FEATURED VIDEO */
+.featured-section{padding:4rem 2rem;background:var(--fw-parchment);border-bottom:1px solid var(--fw-stone);}
+.featured-inner{max-width:1100px;margin:0 auto;}
+.featured-inner h2{font-family:var(--fw-font-body);font-style:italic;font-size:clamp(1.8rem,4vw,2.5rem);color:var(--fw-earth);margin-bottom:2.5rem;}
+
+.video-feature{display:grid;grid-template-columns:1fr 1fr;gap:0;background:white;border-top:4px solid var(--fw-forest);box-shadow:0 2px 20px rgba(30,22,16,0.1);}
+.video-embed{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:#000;}
+.video-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;}
+.video-body{padding:2.5rem;display:flex;flex-direction:column;justify-content:space-between;}
+.video-series{font-family:var(--fw-font-display);font-size:0.44rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--fw-forest);display:block;margin-bottom:0.5rem;}
+.video-body h3{font-family:var(--fw-font-body);font-weight:600;font-size:clamp(1.2rem,2.5vw,1.75rem);color:var(--fw-earth);line-height:1.2;margin-bottom:1rem;}
+.video-body p{font-size:0.95rem;color:var(--fw-earth-mid);line-height:1.8;margin-bottom:1.25rem;}
+.video-tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.5rem;}
+.vtag{font-family:var(--fw-font-display);font-size:0.42rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.2rem 0.55rem;color:var(--fw-forest);background:var(--fw-sage-pale);}
+.vtag-amber{color:var(--fw-amber);background:var(--fw-amber-pale);}
+.video-why{background:var(--fw-parchment-warm);border-left:3px solid var(--fw-forest);padding:1rem 1.25rem;margin-top:auto;}
+.video-why-label{font-family:var(--fw-font-display);font-size:0.42rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--fw-forest);display:block;margin-bottom:0.4rem;}
+.video-why p{font-size:0.85rem;color:var(--fw-earth-mid);line-height:1.6;margin:0;}
+
+/* VIDEO GRID */
+.videos-section{padding:4rem 2rem;background:var(--fw-parchment);}
+.videos-inner{max-width:1100px;margin:0 auto;}
+.videos-inner h2{font-family:var(--fw-font-body);font-style:italic;font-size:clamp(1.6rem,3.5vw,2.2rem);color:var(--fw-earth);margin-bottom:2.5rem;}
+.videos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--fw-stone);}
+.video-card{background:white;padding:0;border-top:3px solid var(--fw-stone);}
+.video-card-thumb{position:relative;padding-bottom:56.25%;background:#1a1a1a;overflow:hidden;}
+.video-card-thumb iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;}
+.video-card-body{padding:1.5rem;}
+.video-card h3{font-family:var(--fw-font-body);font-size:1.05rem;font-weight:600;color:var(--fw-earth);line-height:1.3;margin-bottom:0.5rem;}
+.video-card p{font-size:0.85rem;color:var(--fw-mist);line-height:1.6;margin-bottom:0.85rem;}
+.video-card-meta{font-family:var(--fw-font-mono);font-size:0.56rem;color:var(--fw-mist);}
+.video-card.placeholder{background:var(--fw-parchment);border-top-style:dashed;border-top-color:rgba(214,203,180,0.8);}
+.video-card.placeholder .video-card-body{min-height:140px;display:flex;flex-direction:column;justify-content:space-between;}
+.video-card.placeholder h3{color:var(--fw-mist);}
+
+/* WARDEN CALLOUT */
+.warden-section{padding:4rem 2rem;background:var(--fw-earth);position:relative;overflow:hidden;}
+.warden-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 100% 0%,rgba(45,90,56,0.25) 0%,transparent 60%);}
+.warden-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.warden-inner h2{font-family:var(--fw-font-body);font-style:italic;font-size:clamp(1.8rem,4vw,2.8rem);color:var(--fw-parchment);margin-bottom:1rem;}
+.warden-inner p{font-size:1rem;color:rgba(247,242,232,0.6);line-height:1.8;margin-bottom:1.25rem;}
+.warden-inner p:last-of-type{margin-bottom:0;}
+.warden-list{list-style:none;padding:0;}
+.warden-list li{font-size:0.9rem;color:rgba(247,242,232,0.55);padding:0.5rem 0;border-bottom:1px solid rgba(247,242,232,0.06);display:flex;gap:0.75rem;line-height:1.55;align-items:flex-start;}
+.warden-list li:last-child{border-bottom:none;}
+.warden-list li::before{content:'→';font-family:var(--fw-font-mono);color:var(--fw-sage);flex-shrink:0;margin-top:0.1rem;}
+.btn-sage{font-family:var(--fw-font-display);font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--fw-parchment);background:var(--fw-forest);border:none;padding:0.9rem 1.75rem;text-decoration:none;transition:background 0.25s;display:inline-block;margin-top:1.5rem;}
+.btn-sage:hover{background:var(--fw-sage);}
+
+/* SUGGEST A VIDEO */
+.suggest-section{padding:4rem 2rem;background:var(--fw-parchment-warm);border-top:1px solid var(--fw-stone);}
+.suggest-inner{max-width:700px;margin:0 auto;text-align:center;}
+.suggest-inner h2{font-family:var(--fw-font-body);font-style:italic;font-size:clamp(1.6rem,3.5vw,2.2rem);color:var(--fw-earth);margin-bottom:1rem;}
+.suggest-inner p{font-size:1rem;color:var(--fw-earth-mid);line-height:1.8;margin-bottom:0.5rem;}
+.suggest-inner a{color:var(--fw-amber);text-decoration:none;font-weight:600;}
+.suggest-inner a:hover{text-decoration:underline;}
+
+/* FOOTER */
+.fw-footer{background:var(--fw-earth-mid);border-top:3px solid var(--fw-amber);}
+.fw-footer-inner{max-width:1100px;margin:0 auto;padding:3.5rem 2rem 2rem;}
+.fw-footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;}
+.fw-footer-brand-logo{font-family:var(--fw-font-display);font-size:0.72rem;letter-spacing:0.2em;color:var(--fw-amber-bright);display:block;margin-bottom:1rem;}
+.fw-footer-brand p{font-size:0.85rem;color:rgba(247,242,232,0.45);line-height:1.7;margin-bottom:0.75rem;}
+.fw-footer-tagline{font-family:var(--fw-font-body);font-style:italic;font-size:0.95rem;color:rgba(247,242,232,0.25);display:block;}
+.fw-footer-col h4{font-family:var(--fw-font-display);font-size:0.44rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(247,242,232,0.3);margin-bottom:1.25rem;}
+.fw-footer-col a{display:block;font-size:0.88rem;color:rgba(247,242,232,0.5);text-decoration:none;padding:0.2rem 0;transition:color 0.2s;}
+.fw-footer-col a:hover{color:var(--fw-amber-bright);}
+.fw-footer-base{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(247,242,232,0.08);padding-top:1.5rem;font-size:0.8rem;color:rgba(247,242,232,0.2);font-family:var(--fw-font-mono);}
+.fw-footer-base a{color:rgba(247,242,232,0.3);text-decoration:none;}
+.fw-footer-base a:hover{color:var(--fw-amber);}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .video-feature{grid-template-columns:1fr;}
+  .warden-inner{grid-template-columns:1fr;}
+  .videos-grid{grid-template-columns:1fr 1fr;}
+  .fw-footer-grid{grid-template-columns:1fr 1fr;gap:2rem;}
+}
+@media(max-width:760px){
+  body{padding-top:56px;}
+  .fw-primary-links{display:none;}.fw-nav-secondary{display:none;}.fw-nav-hamburger{display:flex;}
+  .videos-grid{grid-template-columns:1fr;}
+  .fw-footer-grid{grid-template-columns:1fr 1fr;gap:2rem;}
+  .fw-footer-base{flex-direction:column;gap:0.75rem;text-align:center;}
+}
+@media(max-width:480px){
+  .fw-footer-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="fw-nav" role="navigation" aria-label="Main navigation">
+  <div class="fw-nav-primary">
+    <a href="index.html" class="fw-nav-logo">
+      <img src="images/logos/firewalker-logo.png" alt="The Firewalkers" onerror="this.style.display='none'">
+      <span class="fw-nav-logo-text">The Firewalkers</span>
+    </a>
+    <div class="fw-primary-links">
+      <a href="campaigns.html">Campaigns</a>
+      <a href="hearth.html">From the Hearth</a>
+      <a href="datacentre-watch.html">Data Centre Watch</a>
+      <a href="community.html">Community</a>
+      <a href="index.html#signup" class="fw-nav-cta">Join the Movement</a>
+    </div>
+    <button class="fw-nav-hamburger" onclick="document.getElementById('fw-mobile-menu').classList.add('open')" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="fw-nav-secondary">
+    <div class="fw-secondary-links">
+      <a href="good-ai.html">Good AI</a>
+      <a href="tools.html">Tools</a>
+      <a href="research.html">Research</a>
+      <a href="learning.html" class="active">Learning</a>
+      <a href="media.html">Media</a>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="fw-mobile-menu" class="fw-mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="fw-mobile-close" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')" aria-label="Close menu">✕ Close</button>
+  <span class="fw-mobile-section-label">Navigate</span>
+  <a href="campaigns.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Campaigns</a>
+  <a href="hearth.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">From the Hearth</a>
+  <a href="datacentre-watch.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Data Centre Watch</a>
+  <a href="community.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Community</a>
+  <span class="fw-mobile-section-label">Platform</span>
+  <a href="good-ai.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Good AI</a>
+  <a href="tools.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Tools</a>
+  <a href="research.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Research</a>
+  <a href="learning.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Learning</a>
+  <a href="media.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Media</a>
+  <a href="index.html#signup" class="fw-mobile-cta" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Join the Movement →</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="page-hero-eyebrow">The Firewalkers · Learning</span>
+    <h1>Understand the systems.<br>Change the outcome.</h1>
+    <p class="page-hero-desc">Videos, resources, and practical guides for people who want to move from passive consumer to active, values-driven digital citizen. No prior tech knowledge required — just curiosity and the will to act.</p>
+  </div>
+</div>
+
+<!-- FEATURED VIDEO -->
+<div class="featured-section">
+  <div class="featured-inner">
+    <span class="section-eyebrow reveal">Featured</span>
+    <h2 class="reveal">Start here.</h2>
+
+    <div class="video-feature reveal">
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/UfApUobqN8Y"
+                title="What's wrong with AI funding, data centres and the subscription model"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="video-body">
+        <div>
+          <span class="video-series">Learning · Essential viewing</span>
+          <h3>What's wrong with AI funding, data centres and the subscription model</h3>
+          <p>The money behind AI is not neutral. This video breaks down how the funding model for artificial intelligence — from venture capital to subscription lock-in to the infrastructure race — is driving the very overcapacity crisis that communities are now being asked to host in their landscapes.</p>
+          <div class="video-tags">
+            <span class="vtag">AI Economics</span>
+            <span class="vtag">Data Centres</span>
+            <span class="vtag vtag-amber">Essential</span>
+          </div>
+        </div>
+        <div class="video-why">
+          <span class="video-why-label">Why this matters</span>
+          <p>Understanding the financial incentives behind the data centre boom is the first step to challenging it effectively. This is the context behind every planning application, every campaign, every argument.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MORE VIDEOS -->
+<div class="videos-section">
+  <div class="videos-inner">
+    <span class="section-eyebrow reveal">More to explore</span>
+    <h2 class="reveal">Building the library.</h2>
+    <div class="videos-grid reveal">
+
+      <div class="video-card placeholder">
+        <div class="video-card-body">
+          <div>
+            <h3>How to challenge a data centre planning application</h3>
+            <p>A practical walkthrough — finding applications, reading documents, writing effective objections, and making your voice count in the planning process.</p>
+          </div>
+          <span class="video-card-meta">Coming soon · Digital Wardens series</span>
+        </div>
+      </div>
+
+      <div class="video-card placeholder">
+        <div class="video-card-body">
+          <div>
+            <h3>Using AI tools to run a community campaign</h3>
+            <p>How to use the same AI tools driving the infrastructure boom to research, write, organise, and amplify your response. Practical, no-jargon, values-first.</p>
+          </div>
+          <span class="video-card-meta">Coming soon · Digital Wardens series</span>
+        </div>
+      </div>
+
+      <div class="video-card placeholder">
+        <div class="video-card-body">
+          <div>
+            <h3>Water, land, and the hidden cost of a data centre</h3>
+            <p>What the planning documents don't always make clear — the cumulative environmental footprint of large-scale data centre infrastructure on local ecosystems.</p>
+          </div>
+          <span class="video-card-meta">Coming soon · Environment series</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- DIGITAL WARDENS CALLOUT -->
+<div class="warden-section">
+  <div class="warden-inner">
+    <div class="reveal">
+      <span class="section-eyebrow" style="color:var(--fw-sage);">Digital Wardens</span>
+      <h2>Warrior training for a better world.</h2>
+      <p>The Learning section is the foundation of Digital Wardens — a community forming inside OBOD for people who want to use digital tools not as passive consumers, but as active protectors of land, community, and the living world.</p>
+      <p>Practical skills. Ethical grounding. Druidic spine.</p>
+      <a href="community.html" class="btn-sage">Join the community →</a>
+    </div>
+    <div class="reveal">
+      <ul class="warden-list">
+        <li>Research and challenge planning decisions using open data</li>
+        <li>Use AI tools to write, organise, and amplify campaigns</li>
+        <li>Understand how data centres and algorithmic systems affect land and communities</li>
+        <li>Build and sustain digital movements rooted in place and purpose</li>
+        <li>Connect with others doing this work across the Celtic nations and beyond</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- SUGGEST -->
+<div class="suggest-section">
+  <div class="suggest-inner reveal">
+    <span class="section-eyebrow">Shape what we build</span>
+    <h2>What do you need to learn?</h2>
+    <p>The learning library grows based on what this community actually needs. If there's a topic, a tool, a question you can't find a good answer to — tell us.</p>
+    <p style="margin-top:1rem;"><a href="mailto:hello@firewalkers.earth">hello@firewalkers.earth</a></p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="fw-footer">
+  <div class="fw-footer-inner">
+    <div class="fw-footer-grid">
+      <div class="fw-footer-brand">
+        <span class="fw-footer-brand-logo">The Firewalkers</span>
+        <p>A global movement using AI to protect the natural world from the environmental impact of data centre infrastructure. Founded in Scotland. Built for everywhere that matters.</p>
+        <span class="fw-footer-tagline">The future belongs to the stewards, not the extractors.</span>
+      </div>
+      <div class="fw-footer-col">
+        <h4>The Movement</h4>
+        <a href="campaigns.html">Campaigns</a>
+        <a href="datacentre-watch.html">Data Centre Watch</a>
+        <a href="community.html">Community</a>
+        <a href="good-ai.html">Good AI</a>
+      </div>
+      <div class="fw-footer-col">
+        <h4>Knowledge</h4>
+        <a href="research.html">Research</a>
+        <a href="learning.html">Learning</a>
+        <a href="hearth.html">From the Hearth</a>
+        <a href="media.html">Media &amp; Press</a>
+      </div>
+      <div class="fw-footer-col">
+        <h4>Connect</h4>
+        <a href="index.html#signup">Join the Mailing List</a>
+        <a href="https://www.youtube.com/@firewalkersearth" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://chat.whatsapp.com/DHQ7dczKNOt7gn85wwijp4" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:hello@firewalkers.earth">hello@firewalkers.earth</a>
+      </div>
+    </div>
+    <div class="fw-footer-base">
+      <span>© 2026 The Firewalkers · firewalkers.earth · Edinburgh, Scotland</span>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*70);obs.unobserve(e.target);}});
+},{threshold:0.05});
+reveals.forEach(el=>obs.observe(el));
+document.getElementById('fw-mobile-menu').addEventListener('click',function(e){if(e.target===this)this.classList.remove('open');});
+</script>
+</body>
+</html>

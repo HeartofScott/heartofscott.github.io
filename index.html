@@ -620,6 +620,94 @@ body{
 }
 .fw-footer-base a{color:rgba(247,242,232,0.3);text-decoration:none;}
 
+/* ══════════════════════════════════════════
+   PERSONA JOURNEYS
+   ══════════════════════════════════════════ */
+.persona-section{
+  padding:5rem 2rem;
+  background:var(--fw-earth);
+  position:relative;overflow:hidden;
+}
+.persona-section::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% 100%,rgba(45,90,56,0.2) 0%,transparent 65%);
+}
+.persona-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1;}
+.persona-inner > h2{
+  font-family:var(--fw-font-body);font-style:italic;
+  font-size:clamp(1.8rem,4vw,2.8rem);
+  color:var(--fw-parchment);
+  margin-bottom:0.5rem;line-height:1.1;
+}
+.persona-inner > p{
+  font-size:1rem;color:rgba(247,242,232,0.45);
+  margin-bottom:3rem;
+}
+.persona-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:rgba(255,255,255,0.06);
+}
+.persona-card{
+  background:rgba(247,242,232,0.02);
+  display:flex;flex-direction:column;
+  overflow:hidden;
+  transition:background 0.3s;
+  cursor:default;
+}
+.persona-card:hover{background:rgba(247,242,232,0.05);}
+.persona-img{
+  height:220px;overflow:hidden;position:relative;
+}
+.persona-img img{
+  width:100%;height:100%;object-fit:cover;
+  display:block;
+  filter:saturate(0.55) brightness(0.85);
+  transition:filter 0.5s,transform 0.5s;
+}
+.persona-card:hover .persona-img img{
+  filter:saturate(0.8) brightness(0.9);
+  transform:scale(1.03);
+}
+.persona-img-label{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:0.6rem 1.25rem;
+  background:linear-gradient(to top,rgba(30,22,16,0.85) 0%,transparent 100%);
+  font-family:var(--fw-font-display);font-size:0.42rem;
+  letter-spacing:0.28em;text-transform:uppercase;
+  color:rgba(247,242,232,0.5);
+}
+.persona-body{
+  padding:1.75rem;flex:1;
+  display:flex;flex-direction:column;
+  border-top:3px solid transparent;
+}
+.persona-card:nth-child(1) .persona-body{border-top-color:var(--fw-amber);}
+.persona-card:nth-child(2) .persona-body{border-top-color:var(--fw-slate-mid);}
+.persona-card:nth-child(3) .persona-body{border-top-color:var(--fw-forest);}
+.persona-body h3{
+  font-family:var(--fw-font-body);font-weight:600;font-style:italic;
+  font-size:1.3rem;color:var(--fw-parchment);
+  line-height:1.2;margin-bottom:0.75rem;
+}
+.persona-body p{
+  font-size:0.88rem;color:rgba(247,242,232,0.5);
+  line-height:1.7;margin-bottom:1.25rem;flex:1;
+}
+.persona-links{display:flex;flex-direction:column;gap:0.5rem;margin-top:auto;}
+.persona-link{
+  font-family:var(--fw-font-display);font-size:0.46rem;
+  letter-spacing:0.16em;text-transform:uppercase;
+  color:rgba(247,242,232,0.55);text-decoration:none;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0.6rem 0;
+  border-bottom:1px solid rgba(247,242,232,0.07);
+  transition:color 0.2s;
+}
+.persona-link:last-child{border-bottom:none;}
+.persona-link:hover{color:var(--fw-amber-bright);}
+.persona-link::after{content:'→';font-family:var(--fw-font-mono);opacity:0.4;}
+.persona-link:hover::after{opacity:1;}
+
 /* ── UTILITIES ── */
 @keyframes fadeup{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease;}
@@ -645,6 +733,8 @@ body{
   .urgency-band{gap:1rem;padding:1rem 1.25rem;}
   .u-div{display:none;}
   .u-num{font-size:1.3rem;}
+  .persona-grid{grid-template-columns:1fr;}
+  .persona-img{height:180px;}
   .what-section{padding:3.5rem 1.25rem;}
   .pillars{grid-template-columns:1fr;}
   .pillar{padding:2rem 1.5rem;}
@@ -699,6 +789,7 @@ body{
       <a href="good-ai.html">Good AI</a>
       <a href="tools.html">Tools</a>
       <a href="research.html">Research</a>
+      <a href="learning.html">Learning</a>
       <a href="media.html">Media</a>
     </div>
   </div>
@@ -718,6 +809,7 @@ body{
   <a href="good-ai.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Good AI</a>
   <a href="tools.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Tools</a>
   <a href="research.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Research</a>
+  <a href="learning.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Learning</a>
   <a href="media.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Media</a>
   <a href="index.html#signup" class="fw-mobile-cta" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Join the Movement →</a>
 </div>
@@ -779,6 +871,69 @@ body{
         <h3>Connect</h3>
         <p>Building the network of people who won't watch the earth be consumed without a fight.</p>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ PERSONA JOURNEYS ════ -->
+<div class="persona-section">
+  <div class="persona-inner">
+    <span class="section-eyebrow reveal" style="color:var(--fw-amber-bright);">Where do you start?</span>
+    <h2 class="reveal">This movement is for you.<br>Whoever you are.</h2>
+    <p class="reveal">Find your path in.</p>
+    <div class="persona-grid reveal">
+
+      <div class="persona-card">
+        <div class="persona-img">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80"
+               alt="Person looking out over a landscape" loading="lazy">
+          <span class="persona-img-label">For residents</span>
+        </div>
+        <div class="persona-body">
+          <h3>"There's a data centre planned near me. What do I do?"</h3>
+          <p>You have less time than you think — but you have more power than you know. Start with the Watch, understand what's being proposed, and use the tools to fight back.</p>
+          <div class="persona-links">
+            <a href="datacentre-watch.html" class="persona-link">Data Centre Watch</a>
+            <a href="tools.html" class="persona-link">Objection Builder</a>
+            <a href="campaigns.html" class="persona-link">Active Campaigns</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="persona-card">
+        <div class="persona-img">
+          <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80"
+               alt="Technologist working on a laptop" loading="lazy">
+          <span class="persona-img-label">For technologists</span>
+        </div>
+        <div class="persona-body">
+          <h3>"I work in tech. I can see this is wrong. I want to help."</h3>
+          <p>You understand what's being built better than most. We need your skills — code, data, AI expertise, infrastructure knowledge. Come build tools that communities can actually use.</p>
+          <div class="persona-links">
+            <a href="posts/come-help-us-build-this.html" class="persona-link">Help Build This</a>
+            <a href="good-ai.html" class="persona-link">Good AI Principles</a>
+            <a href="community.html" class="persona-link">Join the Community</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="persona-card">
+        <div class="persona-img">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80"
+               alt="Activist walking through ancient forest" loading="lazy">
+          <span class="persona-img-label">For activists &amp; ecologists</span>
+        </div>
+        <div class="persona-body">
+          <h3>"I've been fighting for the land for years. This is the next battle."</h3>
+          <p>You already know how to organise, campaign, and sustain a movement. What you may need is data, tools, and connection to others fighting the same fight in different places.</p>
+          <div class="persona-links">
+            <a href="research.html" class="persona-link">Research &amp; Evidence</a>
+            <a href="campaigns.html" class="persona-link">Campaign Network</a>
+            <a href="learning.html" class="persona-link">Digital Wardens</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
@@ -981,10 +1136,10 @@ body{
         <a href="good-ai.html">Good AI</a>
       </div>
       <div class="fw-footer-col">
-        <h4>From the Hearth</h4>
-        <a href="hearth.html">All Posts</a>
-        <a href="posts/come-help-us-build-this.html">Help Build This</a>
-        <a href="tools.html">Tools</a>
+        <h4>Knowledge</h4>
+        <a href="research.html">Research</a>
+        <a href="learning.html">Learning</a>
+        <a href="hearth.html">From the Hearth</a>
         <a href="media.html">Media &amp; Press</a>
       </div>
       <div class="fw-footer-col">
