@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Firewalkers — Brand Guide v1.0</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* ── COLOUR TOKENS ── */
+  --fw-parchment:       #f7f2e8;   /* page background, warm off-white */
+  --fw-parchment-warm:  #ede4d0;   /* section alternate, cards */
+  --fw-stone:           #d6cbb4;   /* borders, dividers */
+
+  --fw-earth:           #1e1610;   /* primary text, near-black */
+  --fw-earth-mid:       #3a2c1c;   /* body text */
+  --fw-mist:            #7a7262;   /* secondary text, captions */
+
+  --fw-amber:           #9c5500;   /* primary accent — CTA, links */
+  --fw-amber-mid:       #b86810;   /* hover state */
+  --fw-amber-bright:    #d4881c;   /* highlight, eyebrows */
+  --fw-amber-pale:      #f5e6c8;   /* tinted backgrounds */
+
+  --fw-forest:          #2d5a38;   /* deep forest green — primary brand green */
+  --fw-sage:            #4a7c58;   /* secondary green */
+  --fw-sage-pale:       #c8dece;   /* green tint backgrounds */
+
+  --fw-slate:           #3a4f5c;   /* data/intelligence colour — stats, watch pages */
+  --fw-slate-mid:       #5a7282;   /* slate secondary */
+  --fw-slate-pale:      #d0dce4;   /* slate tint backgrounds */
+
+  --fw-urgent:          #7a2010;   /* urgent red — campaigns, alerts */
+  --fw-urgent-pale:     #f2d4cc;   /* urgent tint */
+
+  /* ── TYPE SCALE ── */
+  --fw-font-display:    'Cinzel', serif;
+  --fw-font-body:       'Cormorant Garamond', Georgia, serif;
+  --fw-font-mono:       'IBM Plex Mono', 'Courier New', monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--fw-parchment); color: var(--fw-earth); font-family: var(--fw-font-body); font-size: 18px; line-height: 1.85; }
+
+/* ── GUIDE NAV ── */
+.guide-nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--fw-earth); border-bottom: 2px solid var(--fw-amber);
+  padding: 0.85rem 3rem;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.guide-nav-brand { font-family: var(--fw-font-display); font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--fw-amber-bright); }
+.guide-nav-links { display: flex; gap: 2rem; }
+.guide-nav-links a { font-family: var(--fw-font-display); font-size: 0.48rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(247,242,232,0.5); text-decoration: none; transition: color 0.2s; }
+.guide-nav-links a:hover { color: var(--fw-amber-bright); }
+
+/* ── LAYOUT ── */
+.guide-body { max-width: 1100px; margin: 0 auto; padding: 4rem 3rem 6rem; }
+.section { margin-bottom: 5rem; }
+.section-label {
+  font-family: var(--fw-font-display); font-size: 0.52rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: var(--fw-amber); display: block;
+  margin-bottom: 0.75rem; border-top: 2px solid var(--fw-amber); padding-top: 1.25rem;
+}
+.section h2 { font-family: var(--fw-font-display); font-size: 1.1rem; font-weight: 600; letter-spacing: 0.08em; color: var(--fw-earth); margin-bottom: 0.5rem; }
+.section > p { font-size: 1rem; color: var(--fw-earth-mid); max-width: 720px; line-height: 1.8; margin-bottom: 2rem; }
+
+/* ── HERO TITLE ── */
+.guide-hero { background: var(--fw-earth); padding: 5rem 3rem 4rem; margin-bottom: 0; border-bottom: 4px solid var(--fw-amber); }
+.guide-hero-inner { max-width: 1100px; margin: 0 auto; }
+.guide-hero .label { font-family: var(--fw-font-display); font-size: 0.52rem; letter-spacing: 0.4em; text-transform: uppercase; color: var(--fw-amber-bright); display: block; margin-bottom: 1.25rem; }
+.guide-hero h1 { font-family: var(--fw-font-body); font-style: italic; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 600; color: var(--fw-parchment); line-height: 1.05; margin-bottom: 1rem; }
+.guide-hero p { font-size: 1rem; color: rgba(247,242,232,0.55); max-width: 600px; line-height: 1.7; }
+.version-tag { display: inline-block; font-family: var(--fw-font-mono); font-size: 0.72rem; color: var(--fw-slate-mid); background: rgba(58,79,92,0.2); border: 1px solid rgba(58,79,92,0.3); padding: 0.25rem 0.65rem; margin-top: 1.5rem; }
+
+/* ── COLOUR SWATCHES ── */
+.swatch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1px; background: var(--fw-stone); margin-bottom: 1rem; }
+.swatch { display: flex; flex-direction: column; }
+.swatch-colour { height: 80px; }
+.swatch-info { background: white; padding: 0.75rem 1rem; }
+.swatch-name { font-family: var(--fw-font-display); font-size: 0.52rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--fw-earth); display: block; }
+.swatch-hex { font-family: var(--fw-font-mono); font-size: 0.72rem; color: var(--fw-mist); display: block; margin-top: 0.15rem; }
+.swatch-token { font-family: var(--fw-font-mono); font-size: 0.62rem; color: var(--fw-slate); display: block; margin-top: 0.1rem; }
+.swatch-use { font-size: 0.82rem; color: var(--fw-mist); line-height: 1.5; margin-top: 0.4rem; display: block; border-top: 1px solid var(--fw-stone); padding-top: 0.4rem; }
+.colour-group-label { font-family: var(--fw-font-display); font-size: 0.48rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--fw-mist); margin: 2rem 0 0.5rem; display: block; }
+
+/* ── TYPOGRAPHY ── */
+.type-specimen { margin-bottom: 2.5rem; padding: 2rem; background: white; border-left: 3px solid var(--fw-stone); }
+.type-specimen.accent-amber { border-left-color: var(--fw-amber); }
+.type-specimen.accent-forest { border-left-color: var(--fw-forest); }
+.type-specimen.accent-slate { border-left-color: var(--fw-slate); }
+.type-meta { font-family: var(--fw-font-mono); font-size: 0.65rem; color: var(--fw-mist); margin-bottom: 0.75rem; display: block; }
+.t-cinzel-xl { font-family: var(--fw-font-display); font-size: 2.5rem; font-weight: 700; letter-spacing: 0.06em; color: var(--fw-earth); line-height: 1.1; }
+.t-cinzel-lg { font-family: var(--fw-font-display); font-size: 1.4rem; font-weight: 600; letter-spacing: 0.08em; color: var(--fw-earth); line-height: 1.2; }
+.t-cinzel-label { font-family: var(--fw-font-display); font-size: 0.58rem; letter-spacing: 0.36em; text-transform: uppercase; color: var(--fw-amber); }
+.t-cinzel-nav { font-family: var(--fw-font-display); font-size: 0.52rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--fw-earth-mid); }
+.t-cormorant-hero { font-family: var(--fw-font-body); font-style: italic; font-size: 2.5rem; font-weight: 600; color: var(--fw-earth); line-height: 1.05; }
+.t-cormorant-body { font-family: var(--fw-font-body); font-size: 1.05rem; color: var(--fw-earth-mid); line-height: 1.9; max-width: 600px; }
+.t-cormorant-lead { font-family: var(--fw-font-body); font-style: italic; font-size: 1.3rem; color: var(--fw-earth); line-height: 1.65; max-width: 580px; }
+.t-mono-stat { font-family: var(--fw-font-mono); font-size: 2.4rem; font-weight: 500; color: var(--fw-slate); letter-spacing: -0.02em; line-height: 1; }
+.t-mono-data { font-family: var(--fw-font-mono); font-size: 0.82rem; color: var(--fw-mist); }
+.t-mono-code { font-family: var(--fw-font-mono); font-size: 0.78rem; color: var(--fw-slate); background: var(--fw-slate-pale); padding: 0.15rem 0.5rem; }
+
+/* ── COMPONENTS ── */
+.component-row { display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: flex-start; margin-bottom: 2rem; }
+
+/* Buttons */
+.btn { font-family: var(--fw-font-display); font-size: 0.56rem; letter-spacing: 0.26em; text-transform: uppercase; border: none; padding: 0.9rem 1.75rem; cursor: pointer; text-decoration: none; display: inline-block; transition: all 0.25s; font-weight: 600; }
+.btn-primary    { background: var(--fw-amber);   color: var(--fw-parchment); }
+.btn-primary:hover { background: var(--fw-amber-mid); }
+.btn-forest     { background: var(--fw-forest);  color: var(--fw-parchment); }
+.btn-forest:hover { background: var(--fw-sage); }
+.btn-urgent     { background: var(--fw-urgent);  color: #fff; }
+.btn-slate      { background: var(--fw-slate);   color: #fff; }
+.btn-ghost-dark { background: transparent; color: var(--fw-amber); border: 1px solid var(--fw-amber); }
+.btn-ghost-dark:hover { background: var(--fw-amber); color: var(--fw-parchment); }
+.btn-ghost-light { background: transparent; color: var(--fw-parchment); border: 1px solid rgba(247,242,232,0.35); }
+.btn-ghost-light:hover { border-color: var(--fw-amber-bright); color: var(--fw-amber-bright); }
+
+/* Tags / badges */
+.badge { font-family: var(--fw-font-display); font-size: 0.46rem; letter-spacing: 0.16em; text-transform: uppercase; padding: 0.25rem 0.65rem; display: inline-block; }
+.badge-amber   { background: var(--fw-amber-pale); color: var(--fw-amber); }
+.badge-forest  { background: var(--fw-sage-pale);  color: var(--fw-forest); }
+.badge-urgent  { background: var(--fw-urgent); color: #fff; }
+.badge-slate   { background: var(--fw-slate-pale); color: var(--fw-slate); }
+.badge-live    { background: var(--fw-urgent); color: #fff; }
+
+/* Cards */
+.card-demo { background: white; padding: 1.75rem; border-top: 3px solid var(--fw-amber); box-shadow: 0 2px 10px rgba(30,22,16,0.07); max-width: 280px; }
+.card-demo-forest { border-top-color: var(--fw-forest); }
+.card-demo-slate  { border-top-color: var(--fw-slate); }
+.card-demo-urgent { border-top-color: var(--fw-urgent); }
+.card-demo h4 { font-family: var(--fw-font-display); font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--fw-earth); margin-bottom: 0.5rem; }
+.card-demo p  { font-size: 0.88rem; color: var(--fw-mist); line-height: 1.6; }
+
+/* Stat block */
+.stat-block { background: var(--fw-slate); color: white; padding: 2rem 2.5rem; display: inline-block; min-width: 180px; }
+.stat-block .num { font-family: var(--fw-font-mono); font-size: 2.6rem; font-weight: 500; color: white; display: block; line-height: 1; }
+.stat-block .lbl { font-family: var(--fw-font-display); font-size: 0.46rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.55); display: block; margin-top: 0.4rem; }
+
+.stat-block-urgent { background: var(--fw-urgent); }
+
+/* Pullquote */
+.pullquote { font-family: var(--fw-font-body); font-style: italic; font-size: 1.5rem; color: var(--fw-earth); border-left: 3px solid var(--fw-amber); padding: 0.5rem 0 0.5rem 2rem; margin: 2rem 0; line-height: 1.5; max-width: 620px; }
+
+/* ── ICONOGRAPHY ── */
+.icon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 1px; background: var(--fw-stone); margin-bottom: 1rem; }
+.icon-item { background: white; padding: 1.5rem 1rem; text-align: center; }
+.icon-item svg { width: 28px; height: 28px; display: block; margin: 0 auto 0.75rem; }
+.icon-item span { font-family: var(--fw-font-display); font-size: 0.44rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--fw-mist); }
+
+/* ── NAV PREVIEW ── */
+.nav-preview { border: 1px solid var(--fw-stone); overflow: hidden; margin-bottom: 1rem; }
+.nav-preview-label { font-family: var(--fw-font-mono); font-size: 0.65rem; color: var(--fw-mist); padding: 0.5rem 1rem; background: var(--fw-parchment-warm); border-bottom: 1px solid var(--fw-stone); }
+
+/* ── VOICE EXAMPLES ── */
+.voice-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--fw-stone); margin-bottom: 1.5rem; }
+.voice-item { padding: 1.5rem; background: white; }
+.voice-item.no  { background: #fdf5f5; }
+.voice-item.yes { background: #f5fdf7; }
+.voice-label { font-family: var(--fw-font-display); font-size: 0.46rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 0.75rem; display: block; }
+.voice-item.no  .voice-label { color: var(--fw-urgent); }
+.voice-item.yes .voice-label { color: var(--fw-forest); }
+.voice-item p { font-size: 0.95rem; color: var(--fw-earth-mid); line-height: 1.7; font-family: var(--fw-font-body); }
+
+/* ── SPACING ── */
+.spacing-row { display: flex; align-items: flex-end; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.spacing-item { text-align: center; }
+.spacing-block { background: var(--fw-amber-pale); border: 1px solid var(--fw-amber); display: block; margin: 0 auto 0.5rem; }
+.spacing-item span { font-family: var(--fw-font-mono); font-size: 0.65rem; color: var(--fw-mist); display: block; }
+
+/* ── TABLE ── */
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin-bottom: 2rem; }
+th { font-family: var(--fw-font-display); font-size: 0.48rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--fw-mist); text-align: left; border-bottom: 2px solid var(--fw-stone); padding: 0.75rem 1rem; }
+td { font-family: var(--fw-font-body); font-size: 0.9rem; color: var(--fw-earth-mid); padding: 0.65rem 1rem; border-bottom: 1px solid var(--fw-stone); vertical-align: top; }
+td code { font-family: var(--fw-font-mono); font-size: 0.78rem; color: var(--fw-slate); background: var(--fw-slate-pale); padding: 0.1rem 0.4rem; }
+
+@media (max-width: 760px) {
+  .guide-hero { padding: 3.5rem 1.5rem 3rem; }
+  .guide-body { padding: 2.5rem 1.5rem 4rem; }
+  .guide-nav { padding: 0.85rem 1.5rem; }
+  .guide-nav-links { display: none; }
+  .swatch-grid { grid-template-columns: repeat(2, 1fr); }
+  .voice-pair { grid-template-columns: 1fr; }
+  .component-row { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<nav class="guide-nav">
+  <span class="guide-nav-brand">The Firewalkers — Brand Guide v1.0</span>
+  <div class="guide-nav-links">
+    <a href="#identity">Identity</a>
+    <a href="#colour">Colour</a>
+    <a href="#typography">Typography</a>
+    <a href="#components">Components</a>
+    <a href="#voice">Voice</a>
+    <a href="#navigation">Navigation</a>
+  </div>
+</nav>
+
+<div class="guide-hero">
+  <div class="guide-hero-inner">
+    <span class="label">The Firewalkers · Brand Standards</span>
+    <h1>The visual and verbal identity<br>of a movement.</h1>
+    <p>Everything needed to build, write, and design consistently across firewalkers.earth — from colour tokens to copy principles. The future belongs to the stewards, not the extractors.</p>
+    <span class="version-tag">v1.0 · June 2026 · firewalkers.earth</span>
+  </div>
+</div>
+
+<div class="guide-body">
+
+  <!-- ═══ SECTION: IDENTITY ═══ -->
+  <div class="section" id="identity">
+    <span class="section-label">01 · Identity</span>
+    <h2>Who We Are</h2>
+    <p>The Firewalkers is a global movement using AI to protect the natural world from the environmental impact of data centre infrastructure. Founded in Scotland in June 2026. Credible, factual, urgent — rooted in land stewardship and driven by evidence.</p>
+
+    <table>
+      <thead><tr><th>Element</th><th>Value</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Full name</td><td>The Firewalkers</td><td>Always "The" — never drop the article</td></tr>
+        <tr><td>Domain</td><td>firewalkers.earth</td><td>Lowercase in all uses</td></tr>
+        <tr><td>Founded</td><td>June 2026 · Edinburgh, Scotland</td><td>Use in press, footers, boilerplate</td></tr>
+        <tr><td>One-line</td><td>A global movement using AI to protect the natural world from the environmental impact of data centre infrastructure.</td><td>Use verbatim in bios, press, social</td></tr>
+        <tr><td>Tagline</td><td>The future belongs to the stewards, not the extractors.</td><td>Footer, email sign-off, slide decks</td></tr>
+        <tr><td>YouTube</td><td>@firewalkersearth</td><td>Canonical social handle</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:2.5rem;">The Logo</h2>
+    <p style="margin-bottom:1rem;">The primary logo is <code style="font-family:'IBM Plex Mono',monospace;font-size:0.82rem;background:var(--fw-parchment-warm);padding:0.15rem 0.4rem;">/images/logos/firewalker-logo.png</code> — a flame/standing stone mark. Use this for all page navs, favicons, and printed material.</p>
+
+    <div style="background:var(--fw-earth);padding:2.5rem;display:flex;gap:3rem;align-items:center;flex-wrap:wrap;">
+      <div style="text-align:center;">
+        <img src="/images/logos/firewalker-logo.png" alt="The Firewalkers logo" style="height:80px;display:block;margin:0 auto 0.75rem;" onerror="this.style.display='none'">
+        <span style="font-family:'IBM Plex Mono','Courier New',monospace;font-size:0.6rem;color:rgba(247,242,232,0.4);">Logo on dark</span>
+      </div>
+      <div style="text-align:center;background:var(--fw-parchment);padding:1.5rem 2rem;">
+        <img src="/images/logos/firewalker-logo.png" alt="The Firewalkers logo" style="height:80px;display:block;margin:0 auto 0.75rem;" onerror="this.style.display='none'">
+        <span style="font-family:'IBM Plex Mono','Courier New',monospace;font-size:0.6rem;color:var(--fw-mist);">Logo on light</span>
+      </div>
+    </div>
+
+    <p style="margin-top:1.5rem;font-size:0.9rem;color:var(--fw-mist);">
+      <strong style="color:var(--fw-earth);">Do not:</strong> stretch, recolour, add drop shadows, or place on busy photographic backgrounds without a dark overlay. Minimum display size: 32px height.
+    </p>
+  </div>
+
+  <!-- ═══ SECTION: COLOUR ═══ -->
+  <div class="section" id="colour">
+    <span class="section-label">02 · Colour</span>
+    <h2>The Palette</h2>
+    <p>Lightened and modernised from the original earth palette. Amber is the primary action colour. Forest green anchors environmental content. Slate blue is the data and intelligence register. Urgent red is used sparingly — campaigns, alerts, live events only.</p>
+
+    <span class="colour-group-label">Grounds — backgrounds and surfaces</span>
+    <div class="swatch-grid">
+      <div class="swatch">
+        <div class="swatch-colour" style="background:#f7f2e8;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Parchment</span>
+          <span class="swatch-hex">#f7f2e8</span>
+          <span class="swatch-token">--fw-parchment</span>
+          <span class="swatch-use">Page background. Primary surface.</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-colour" style="background:#ede4d0;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Parchment Warm</span>
+          <span class="swatch-hex">#ede4d0</span>
+          <span class="swatch-token">--fw-parchment-warm</span>
+          <span class="swatch-use">Alternate sections. Card backgrounds.</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-colour" style="background:#d6cbb4;border:1px solid #c8bda0;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Stone</span>
+          <span class="swatch-hex">#d6cbb4</span>
+          <span class="swatch-token">--fw-stone</span>
+          <span class="swatch-use">Borders, dividers, rule lines.</span>
+        </div>
+      </div>
+    </div>
+
+    <span class="colour-group-label">Earth — text and deep backgrounds</span>
+    <div class="swatch-grid">
+      <div class="swatch">
+        <div class="swatch-colour" style="background:#1e1610;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Earth</span>
+          <span class="swatch-hex">#1e1610</span>
+          <span class="swatch-token">--fw-earth</span>
+          <span class="swatch-use">Primary text. Dark backgrounds.</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-colour" style="background:#3a2c1c;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Earth Mid</span>
+          <span class="swatch-hex">#3a2c1c</span>
+          <span class="swatch-token">--fw-earth-mid</span>
+          <span class="swatch-use">Body text. Secondary text on light.</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-colour" style="background:#7a7262;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Mist</span>
+          <span class="swatch-hex">#7a7262</span>
+          <span class="swatch-token">--fw-mist</span>
+          <span class="swatch-use">Captions. Metadata. Subdued text.</span>
+        </div>
+      </div>
+    </div>
+
+    <span class="colour-group-label">Amber — primary action colour</span>
+    <div class="swatch-grid">
+      <div class="swatch">
+        <div class="swatch-colour" style="background:#9c5500;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Amber</span>
+          <span class="swatch-hex">#9c5500</span>
+          <span class="swatch-token">--fw-amber</span>
+          <span class="swatch-use">Primary CTAs. Active nav. Links.</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-colour" style="background:#b86810;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Amber Mid</span>
+          <span class="swatch-hex">#b86810</span>
+          <span class="swatch-token">--fw-amber-mid</span>
+          <span class="swatch-use">Button hover. Interactive states.</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-colour" style="background:#d4881c;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Amber Bright</span>
+          <span class="swatch-hex">#d4881c</span>
+          <span class="swatch-token">--fw-amber-bright</span>
+          <span class="swatch-use">Eyebrows. Highlights on dark BGs.</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-colour" style="background:#f5e6c8;border:1px solid #e8d0a0;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Amber Pale</span>
+          <span class="swatch-hex">#f5e6c8</span>
+          <span class="swatch-token">--fw-amber-pale</span>
+          <span class="swatch-use">Tinted card backgrounds.</span>
+        </div>
+      </div>
+    </div>
+
+    <span class="colour-group-label">Forest — environmental and action content</span>
+    <div class="swatch-grid">
+      <div class="swatch">
+        <div class="swatch-colour" style="background:#2d5a38;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Forest</span>
+          <span class="swatch-hex">#2d5a38</span>
+          <span class="swatch-token">--fw-forest</span>
+          <span class="swatch-use">Secondary CTA. Community. Join.</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-colour" style="background:#4a7c58;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Sage</span>
+          <span class="swatch-hex">#4a7c58</span>
+          <span class="swatch-token">--fw-sage</span>
+          <span class="swatch-use">Forest hover. Post links.</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-colour" style="background:#c8dece;border:1px solid #a8c8b0;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Sage Pale</span>
+          <span class="swatch-hex">#c8dece</span>
+          <span class="swatch-token">--fw-sage-pale</span>
+          <span class="swatch-use">Community section tints.</span>
+        </div>
+      </div>
+    </div>
+
+    <span class="colour-group-label">Slate — data, intelligence, watch content</span>
+    <div class="swatch-grid">
+      <div class="swatch">
+        <div class="swatch-colour" style="background:#3a4f5c;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Slate</span>
+          <span class="swatch-hex">#3a4f5c</span>
+          <span class="swatch-token">--fw-slate</span>
+          <span class="swatch-use">Data Centre Watch. Stats. Numbers.</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-colour" style="background:#5a7282;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Slate Mid</span>
+          <span class="swatch-hex">#5a7282</span>
+          <span class="swatch-token">--fw-slate-mid</span>
+          <span class="swatch-use">Code. Monospace text. Meta.</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-colour" style="background:#d0dce4;border:1px solid #b8ccd8;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Slate Pale</span>
+          <span class="swatch-hex">#d0dce4</span>
+          <span class="swatch-token">--fw-slate-pale</span>
+          <span class="swatch-use">Data card tints. Table headers.</span>
+        </div>
+      </div>
+    </div>
+
+    <span class="colour-group-label">Urgent — campaigns, alerts, live events only</span>
+    <div class="swatch-grid">
+      <div class="swatch">
+        <div class="swatch-colour" style="background:#7a2010;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Urgent</span>
+          <span class="swatch-hex">#7a2010</span>
+          <span class="swatch-token">--fw-urgent</span>
+          <span class="swatch-use">Live campaigns. Alerts. Use sparingly.</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-colour" style="background:#f2d4cc;border:1px solid #e0b8ac;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Urgent Pale</span>
+          <span class="swatch-hex">#f2d4cc</span>
+          <span class="swatch-token">--fw-urgent-pale</span>
+          <span class="swatch-use">Alert banners. Warning backgrounds.</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:var(--fw-parchment-warm);border-left:3px solid var(--fw-amber);padding:1.5rem 2rem;margin-top:2rem;">
+      <p style="font-size:0.9rem;color:var(--fw-earth-mid);line-height:1.7;"><strong style="font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--fw-amber);">Accessibility rule:</strong> All text on coloured backgrounds must meet WCAG AA contrast (4.5:1 for body, 3:1 for large text). Amber on parchment passes. White on Forest passes. White on Slate passes. Never use Amber Bright as body text on white.</p>
+    </div>
+  </div>
+
+  <!-- ═══ SECTION: TYPOGRAPHY ═══ -->
+  <div class="section" id="typography">
+    <span class="section-label">03 · Typography</span>
+    <h2>Type System</h2>
+    <p>Three families. Each with a distinct register. Cinzel for identity and wayfinding. Cormorant Garamond for editorial voice. IBM Plex Mono for data, stats, and code. Never mix roles.</p>
+
+    <table style="margin-bottom:2.5rem;">
+      <thead><tr><th>Family</th><th>Role</th><th>Google Fonts</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Cinzel</strong></td><td>Display headings, nav labels, eyebrows, buttons, badges</td><td><code>Cinzel:wght@400;600;700</code></td></tr>
+        <tr><td><strong>Cormorant Garamond</strong></td><td>Body text, editorial headlines, pullquotes, long-form reading</td><td><code>Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700</code></td></tr>
+        <tr><td><strong>IBM Plex Mono</strong></td><td>Stats, urgency numbers, data values, code, tokens</td><td><code>IBM+Plex+Mono:wght@400;500</code></td></tr>
+      </tbody>
+    </table>
+
+    <div class="type-specimen accent-amber">
+      <span class="type-meta">Cinzel 700 · 2.5rem · display heading · letter-spacing: 0.06em</span>
+      <div class="t-cinzel-xl">The AI Revolution Is Consuming the Earth</div>
+    </div>
+
+    <div class="type-specimen accent-amber">
+      <span class="type-meta">Cinzel 600 · 1.4rem · section heading · letter-spacing: 0.08em</span>
+      <div class="t-cinzel-lg">Data Centre Watch — Live Intelligence</div>
+    </div>
+
+    <div class="type-specimen accent-amber">
+      <span class="type-meta">Cinzel 400 · 0.58rem · section eyebrow · letter-spacing: 0.36em · uppercase</span>
+      <div class="t-cinzel-label">The Scale of What Is Happening</div>
+    </div>
+
+    <div class="type-specimen accent-amber">
+      <span class="type-meta">Cinzel 400 · 0.52rem · nav link · letter-spacing: 0.22em · uppercase</span>
+      <div class="t-cinzel-nav">Campaigns &nbsp;·&nbsp; Data Centre Watch &nbsp;·&nbsp; From the Hearth</div>
+    </div>
+
+    <div class="type-specimen accent-forest">
+      <span class="type-meta">Cormorant Garamond Italic 600 · 2.5rem · editorial hero headline</span>
+      <div class="t-cormorant-hero">Ancient land. A data centre. Twelve weeks to fight back.</div>
+    </div>
+
+    <div class="type-specimen accent-forest">
+      <span class="type-meta">Cormorant Garamond Italic 400 · 1.3rem · article lead paragraph</span>
+      <div class="t-cormorant-lead">While you are reading this, planning applications are being processed. Land is being cleared. Communities are running out of time to object.</div>
+    </div>
+
+    <div class="type-specimen accent-forest">
+      <span class="type-meta">Cormorant Garamond 400 · 1.05rem · body text · line-height: 1.9</span>
+      <div class="t-cormorant-body">The technology revolution is the fastest land grab in human history. And most of it is happening in the 12-week window between a planning application going live and the public consultation closing — a window that most people don't know exists.</div>
+    </div>
+
+    <div class="type-specimen accent-slate">
+      <span class="type-meta">IBM Plex Mono 500 · 2.4rem · urgency stat number</span>
+      <div class="t-mono-stat">2,000+</div>
+    </div>
+
+    <div class="type-specimen accent-slate">
+      <span class="type-meta">IBM Plex Mono 400 · 0.82rem · data label / metadata</span>
+      <div class="t-mono-data">Planning ref: LB-2026-0412 &nbsp;·&nbsp; Submitted: 14 May 2026 &nbsp;·&nbsp; Closes: 8 Aug 2026</div>
+    </div>
+
+    <div class="pullquote">
+      The technology is not the enemy. How it is being built — at speed, without consent, on land that cannot speak for itself — that is the problem.
+    </div>
+    <p style="font-size:0.82rem;color:var(--fw-mist);font-family:'IBM Plex Mono',monospace;">↑ Pullquote: Cormorant Garamond Italic · 1.5rem · amber left border · 3px</p>
+  </div>
+
+  <!-- ═══ SECTION: COMPONENTS ═══ -->
+  <div class="section" id="components">
+    <span class="section-label">04 · Components</span>
+    <h2>Buttons</h2>
+    <p>All buttons: Cinzel, 0.56rem, letter-spacing 0.26em, uppercase. No border radius. Sharp and editorial.</p>
+
+    <div class="component-row">
+      <a class="btn btn-primary" href="#">Join the Movement</a>
+      <a class="btn btn-forest" href="#">Join the Community</a>
+      <a class="btn btn-slate" href="#">Watch Intelligence</a>
+      <a class="btn btn-urgent" href="#">Live Campaign</a>
+    </div>
+    <div class="component-row">
+      <a class="btn btn-ghost-dark" href="#">Learn More</a>
+      <div style="background:var(--fw-earth);padding:1rem;">
+        <a class="btn btn-ghost-light" href="#">Read the Post</a>
+      </div>
+    </div>
+
+    <h2 style="margin-top:2.5rem;">Badges &amp; Tags</h2>
+    <div class="component-row" style="align-items:center;">
+      <span class="badge badge-amber">Campaign</span>
+      <span class="badge badge-forest">Community</span>
+      <span class="badge badge-slate">Intelligence</span>
+      <span class="badge badge-live">Live · Active</span>
+      <span class="badge badge-amber">Good AI</span>
+    </div>
+
+    <h2 style="margin-top:2.5rem;">Stat Blocks</h2>
+    <p>IBM Plex Mono for numbers. Cinzel for labels. Used in urgency bands and data pages.</p>
+    <div class="component-row">
+      <div class="stat-block">
+        <span class="num">2,000+</span>
+        <span class="lbl">Data centres planned globally</span>
+      </div>
+      <div class="stat-block">
+        <span class="num">12 wks</span>
+        <span class="lbl">Community consultation window</span>
+      </div>
+      <div class="stat-block stat-block-urgent">
+        <span class="num">Now</span>
+        <span class="lbl">The moment to act</span>
+      </div>
+    </div>
+
+    <h2 style="margin-top:2.5rem;">Cards</h2>
+    <p>Top border indicates content type: amber for general/editorial, forest for community, slate for data, urgent for live campaigns. No border radius. Shadow on hover only.</p>
+    <div class="component-row">
+      <div class="card-demo">
+        <span class="badge badge-amber" style="margin-bottom:0.75rem;display:inline-block;">Editorial</span>
+        <h4>Why This Matters</h4>
+        <p>Amber top border. Used for posts, tools, editorial content.</p>
+      </div>
+      <div class="card-demo card-demo-forest">
+        <span class="badge badge-forest" style="margin-bottom:0.75rem;display:inline-block;">Community</span>
+        <h4>Join the Network</h4>
+        <p>Forest top border. Used for community, join, partner cards.</p>
+      </div>
+      <div class="card-demo card-demo-slate">
+        <span class="badge badge-slate" style="margin-bottom:0.75rem;display:inline-block;">Intelligence</span>
+        <h4>Planning Application</h4>
+        <p>Slate top border. Used for data, watch, planning cards.</p>
+      </div>
+      <div class="card-demo card-demo-urgent">
+        <span class="badge badge-live" style="margin-bottom:0.75rem;display:inline-block;">Live</span>
+        <h4>Save the Lammermuirs</h4>
+        <p>Urgent top border. Reserved for active campaigns only.</p>
+      </div>
+    </div>
+
+    <h2 style="margin-top:2.5rem;">Spacing Scale</h2>
+    <div class="spacing-row">
+      <div class="spacing-item"><div class="spacing-block" style="width:16px;height:4px;"></div><span>0.25rem</span><span style="font-size:0.6rem;color:var(--fw-mist);">4px · xs</span></div>
+      <div class="spacing-item"><div class="spacing-block" style="width:32px;height:8px;"></div><span>0.5rem</span><span style="font-size:0.6rem;color:var(--fw-mist);">8px · sm</span></div>
+      <div class="spacing-item"><div class="spacing-block" style="width:48px;height:16px;"></div><span>1rem</span><span style="font-size:0.6rem;color:var(--fw-mist);">16px · md</span></div>
+      <div class="spacing-item"><div class="spacing-block" style="width:64px;height:24px;"></div><span>1.5rem</span><span style="font-size:0.6rem;color:var(--fw-mist);">24px · lg</span></div>
+      <div class="spacing-item"><div class="spacing-block" style="width:80px;height:32px;"></div><span>2rem</span><span style="font-size:0.6rem;color:var(--fw-mist);">32px · xl</span></div>
+      <div class="spacing-item"><div class="spacing-block" style="width:96px;height:48px;"></div><span>3rem</span><span style="font-size:0.6rem;color:var(--fw-mist);">48px · 2xl</span></div>
+      <div class="spacing-item"><div class="spacing-block" style="width:112px;height:64px;"></div><span>4rem</span><span style="font-size:0.6rem;color:var(--fw-mist);">64px · 3xl</span></div>
+      <div class="spacing-item"><div class="spacing-block" style="width:120px;height:80px;"></div><span>5rem</span><span style="font-size:0.6rem;color:var(--fw-mist);">80px · section</span></div>
+    </div>
+  </div>
+
+  <!-- ═══ SECTION: VOICE ═══ -->
+  <div class="section" id="voice">
+    <span class="section-label">05 · Voice &amp; Tone</span>
+    <h2>How The Firewalkers Sounds</h2>
+    <p>Authoritative and factual, grounded in data and evidence. Not a charity appeal. Not a protest slogan. A credible movement with a clear argument. The register is that of a well-sourced investigative reporter who also happens to love the land.</p>
+
+    <table style="margin-bottom:2.5rem;">
+      <thead><tr><th>We are</th><th>We are not</th></tr></thead>
+      <tbody>
+        <tr><td>Factual and evidenced</td><td>Alarmist or catastrophising</td></tr>
+        <tr><td>Urgent but measured</td><td>Sentimental or romantic</td></tr>
+        <tr><td>Direct and clear</td><td>Vague or corporate</td></tr>
+        <tr><td>Grounded in place and data</td><td>Abstract or ideological</td></tr>
+        <tr><td>Respectful of the reader's intelligence</td><td>Lecturing or preachy</td></tr>
+        <tr><td>Specific — names, dates, places</td><td>General — "the planet," "the future"</td></tr>
+      </tbody>
+    </table>
+
+    <div class="voice-pair">
+      <div class="voice-item no">
+        <span class="voice-label">Avoid</span>
+        <p>"Our beautiful planet is under attack from the forces of greed and technology. We must stand together before it is too late for our children and their children."</p>
+      </div>
+      <div class="voice-item yes">
+        <span class="voice-label">Preferred</span>
+        <p>"A data centre has been proposed for the Lammermuir Hills — a Special Landscape Area. The consultation closes in 12 weeks. Most of the local community don't know it's happening."</p>
+      </div>
+    </div>
+
+    <div class="voice-pair">
+      <div class="voice-item no">
+        <span class="voice-label">Avoid</span>
+        <p>"Join us on this incredible journey as we fight for the earth and harness the power of community to make a difference!"</p>
+      </div>
+      <div class="voice-item yes">
+        <span class="voice-label">Preferred</span>
+        <p>"We watch planning applications. We translate them into plain language. We connect the people who know how to fight back and win."</p>
+      </div>
+    </div>
+
+    <div class="voice-pair">
+      <div class="voice-item no">
+        <span class="voice-label">Avoid</span>
+        <p>"AI is destroying everything sacred. The algorithms don't care about your forest or your hills. It's all profit and extraction."</p>
+      </div>
+      <div class="voice-item yes">
+        <span class="voice-label">Preferred</span>
+        <p>"The technology is not the enemy. How it is being built — at speed, in 12-week planning windows, on protected land — that is the problem."</p>
+      </div>
+    </div>
+
+    <h2 style="margin-top:2.5rem;">Writing Rules</h2>
+    <table>
+      <thead><tr><th>Rule</th><th>Detail</th></tr></thead>
+      <tbody>
+        <tr><td>Lead with the specific</td><td>Name the place, the date, the planning reference. Numbers before adjectives.</td></tr>
+        <tr><td>Active voice</td><td>"A developer filed a planning application" not "A planning application was filed"</td></tr>
+        <tr><td>No superlatives</td><td>Avoid "incredible," "amazing," "transformative" — let the facts do the work</td></tr>
+        <tr><td>Short sentences for urgency</td><td>One fact per sentence when pace matters. Longer prose for context.</td></tr>
+        <tr><td>Headline structure</td><td>Statement · Place · Consequence. "A Data Centre on the Lammermuirs. Twelve Weeks to Object."</td></tr>
+        <tr><td>Sign-off line</td><td>Always end major pieces with: <em>The future belongs to the stewards, not the extractors.</em></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══ SECTION: NAVIGATION ═══ -->
+  <div class="section" id="navigation">
+    <span class="section-label">06 · Navigation</span>
+    <h2>Two-Tier Navigation</h2>
+    <p>Primary bar: the four highest-traffic destinations plus the Join CTA. Secondary strip: supporting pages shown below on all pages except the homepage hero. Light parchment background — warm and editorial.</p>
+
+    <div class="nav-preview">
+      <div class="nav-preview-label">Primary navigation bar</div>
+      <div style="background:var(--fw-parchment);border-bottom:1px solid var(--fw-stone);padding:0.9rem 2rem;display:flex;align-items:center;justify-content:space-between;">
+        <div style="display:flex;align-items:center;gap:0.6rem;">
+          <div style="width:28px;height:28px;background:var(--fw-stone);display:flex;align-items:center;justify-content:center;font-size:0.6rem;color:var(--fw-mist);">logo</div>
+          <span style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.18em;color:var(--fw-earth);">The Firewalkers</span>
+        </div>
+        <div style="display:flex;gap:2rem;align-items:center;">
+          <span style="font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--fw-earth-mid);">Campaigns</span>
+          <span style="font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--fw-earth-mid);">From the Hearth</span>
+          <span style="font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--fw-earth-mid);">Data Centre Watch</span>
+          <span style="font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--fw-earth-mid);">Community</span>
+          <span style="font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--fw-parchment);background:var(--fw-amber);padding:0.45rem 1rem;">Join the Movement</span>
+        </div>
+      </div>
+      <div style="background:var(--fw-parchment-warm);border-bottom:1px solid var(--fw-stone);padding:0.55rem 2rem;display:flex;gap:2rem;justify-content:flex-end;">
+        <span style="font-family:'Cinzel',serif;font-size:0.44rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--fw-mist);">Good AI</span>
+        <span style="font-family:'Cinzel',serif;font-size:0.44rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--fw-mist);">Tools</span>
+        <span style="font-family:'Cinzel',serif;font-size:0.44rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--fw-mist);">Media</span>
+      </div>
+    </div>
+
+    <table style="margin-top:2rem;">
+      <thead><tr><th>Page</th><th>Nav tier</th><th>URL</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Campaigns</td><td>Primary · 1st</td><td><code>/campaigns.html</code></td><td>Highest urgency — leads the nav</td></tr>
+        <tr><td>From the Hearth</td><td>Primary · 2nd</td><td><code>/hearth.html</code></td><td>Editorial hub</td></tr>
+        <tr><td>Data Centre Watch</td><td>Primary · 3rd</td><td><code>/datacentre-watch.html</code></td><td>Intelligence hub</td></tr>
+        <tr><td>Community</td><td>Primary · 4th</td><td><code>/community.html</code></td><td>Join / connect</td></tr>
+        <tr><td>Join the Movement</td><td>Primary CTA</td><td><code>/index.html#signup</code></td><td>Amber button, always rightmost</td></tr>
+        <tr><td>Good AI</td><td>Secondary</td><td><code>/good-ai.html</code></td><td>Secondary strip</td></tr>
+        <tr><td>Tools</td><td>Secondary</td><td><code>/tools.html</code></td><td>Secondary strip</td></tr>
+        <tr><td>Media</td><td>Secondary</td><td><code>/media.html</code></td><td>Secondary strip</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:2.5rem;">Post / Inner Page Nav</h2>
+    <p style="margin-bottom:1rem;">Blog posts and inner pages show a simplified nav: logo left, "← All posts" or "← Back" right. No primary or secondary strips — the reading experience is not interrupted by full navigation.</p>
+
+    <div class="nav-preview">
+      <div class="nav-preview-label">Post page navigation (simplified)</div>
+      <div style="background:var(--fw-parchment);border-bottom:1px solid var(--fw-stone);padding:0.9rem 2rem;display:flex;align-items:center;justify-content:space-between;">
+        <div style="display:flex;align-items:center;gap:0.6rem;">
+          <div style="width:22px;height:22px;background:var(--fw-stone);display:flex;align-items:center;justify-content:center;font-size:0.5rem;color:var(--fw-mist);">⁂</div>
+          <span style="font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.18em;color:var(--fw-amber);">The Firewalkers</span>
+        </div>
+        <span style="font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--fw-mist);">← All Posts</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ CSS TOKENS ═══ -->
+  <div class="section" id="tokens">
+    <span class="section-label">07 · CSS Tokens</span>
+    <h2>Copy into every page <code style="font-family:'IBM Plex Mono',monospace;font-size:0.82rem;color:var(--fw-slate);background:var(--fw-slate-pale);padding:0.15rem 0.5rem;">&lt;style&gt;</code> block</h2>
+    <p>The canonical CSS custom properties. All colours and font references should use these tokens — never hardcode hex values in page CSS.</p>
+
+    <div style="background:var(--fw-earth);padding:2rem;overflow-x:auto;">
+<pre style="font-family:'IBM Plex Mono','Courier New',monospace;font-size:0.75rem;color:rgba(247,242,232,0.8);line-height:1.9;white-space:pre;">:root {
+  /* Grounds */
+  --fw-parchment:       #f7f2e8;
+  --fw-parchment-warm:  #ede4d0;
+  --fw-stone:           #d6cbb4;
+
+  /* Earth / Text */
+  --fw-earth:           #1e1610;
+  --fw-earth-mid:       #3a2c1c;
+  --fw-mist:            #7a7262;
+
+  /* Amber — primary action */
+  --fw-amber:           #9c5500;
+  --fw-amber-mid:       #b86810;
+  --fw-amber-bright:    #d4881c;
+  --fw-amber-pale:      #f5e6c8;
+
+  /* Forest — environmental/community */
+  --fw-forest:          #2d5a38;
+  --fw-sage:            #4a7c58;
+  --fw-sage-pale:       #c8dece;
+
+  /* Slate — data/intelligence */
+  --fw-slate:           #3a4f5c;
+  --fw-slate-mid:       #5a7282;
+  --fw-slate-pale:      #d0dce4;
+
+  /* Urgent — campaigns/alerts only */
+  --fw-urgent:          #7a2010;
+  --fw-urgent-pale:     #f2d4cc;
+
+  /* Fonts */
+  --fw-font-display:    'Cinzel', serif;
+  --fw-font-body:       'Cormorant Garamond', Georgia, serif;
+  --fw-font-mono:       'IBM Plex Mono', 'Courier New', monospace;
+}</pre>
+    </div>
+
+    <div style="margin-top:1.5rem;background:var(--fw-earth);padding:2rem;overflow-x:auto;">
+<pre style="font-family:'IBM Plex Mono','Courier New',monospace;font-size:0.75rem;color:rgba(247,242,232,0.8);line-height:1.9;white-space:pre;">/* Google Fonts import — paste in &lt;head&gt; */
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700
+  &amp;family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700
+  &amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet"&gt;</pre>
+    </div>
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <div style="border-top:2px solid var(--fw-amber);padding-top:2rem;margin-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+    <span style="font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--fw-mist);">The Firewalkers · Brand Guide v1.0 · June 2026</span>
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:0.65rem;color:var(--fw-mist);">firewalkers.earth</span>
+  </div>
+
+</div>
+</body>
+</html>
