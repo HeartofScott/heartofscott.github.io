@@ -976,6 +976,7 @@ document.querySelectorAll('.filter-tab').forEach(btn => {
 </script>
 
 
+
 <script>
 (function(){
   var form = document.getElementById('fw-form-intel');
@@ -986,9 +987,11 @@ document.querySelectorAll('.filter-tab').forEach(btn => {
     var orig = btn ? btn.textContent : '';
     if(btn){ btn.textContent = 'Sending…'; btn.disabled = true; }
     var data = new FormData(form);
+    data.delete('a_password');
     data.append('access_key', '17e64310-dd7a-443a-95db-c11ef8ba9379');
     data.append('subject', 'Data Centre Watch Report — The Firewalkers');
     data.append('from_name', 'Firewalkers Website');
+    data.append('botcheck', '');
     fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       body: data
@@ -999,10 +1002,10 @@ document.querySelectorAll('.filter-tab').forEach(btn => {
         form.innerHTML = '<p style="font-family:var(--fw-font-display,Cinzel,serif);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;padding:1.5rem 0;color:inherit;">Thank you — message received.</p>';
       } else {
         if(btn){ btn.textContent = orig; btn.disabled = false; }
-        alert('Something went wrong — please email hello@firewalkers.earth directly.');
+        alert('Error: ' + (res.message || 'Unknown error') + ' — please email hello@firewalkers.earth directly.');
       }
     })
-    .catch(function(){
+    .catch(function(err){
       if(btn){ btn.textContent = orig; btn.disabled = false; }
       alert('Something went wrong — please email hello@firewalkers.earth directly.');
     });
