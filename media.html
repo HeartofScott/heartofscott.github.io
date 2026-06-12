@@ -14,12 +14,7 @@
 <meta property="og:title" content="Media &amp; Press — The Firewalkers">
 <meta property="og:description" content="Press information, media assets, founder biography, and contact for The Firewalkers.">
 <meta property="og:image" content="https://images.unsplash.com/photo-1626078296870-c2c2bfaaa037?auto=format&fit=crop&w=1200&q=80">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="The Firewalkers">
-<meta name="twitter:site" content="@firewalkersearth">
-<meta name="twitter:creator" content="@firewalkersearth">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -203,7 +198,6 @@ body{background:var(--fw-parchment);color:var(--fw-earth);font-family:var(--fw-f
     <div class="fw-secondary-links">
       <a href="good-ai.html">Good AI</a>
       <a href="tools.html">Tools</a>
-      <a href="memes.html">Memes</a>
       <a href="research.html">Research</a>
       <a href="learning.html">Learning</a>
       <a href="media.html" class="active">Media</a>
@@ -221,7 +215,6 @@ body{background:var(--fw-parchment);color:var(--fw-earth);font-family:var(--fw-f
   <span class="fw-mobile-section-label">Platform</span>
   <a href="good-ai.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Good AI</a>
   <a href="tools.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Tools</a>
-  <a href="memes.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Memes</a>
   <a href="research.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Research</a>
   <a href="learning.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Learning</a>
   <a href="media.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Media</a>
@@ -346,33 +339,25 @@ body{background:var(--fw-parchment);color:var(--fw-earth);font-family:var(--fw-f
     <div class="press-grid reveal">
 
       <div class="press-card">
-        <span class="press-meta">June 11, 2026 · For immediate release · Embargo: none</span>
+        <span class="press-meta">PR-001 · June 11, 2026 · For immediate release · Embargo: none</span>
         <h3>New research shows GB data centre queue running at 3–5 times independent need estimates</h3>
         <p>Analysis of Ofgem and NESO data reveals the GB data centre pipeline is running at 3.4 to 5.1 times what the grid operator's own scenarios require by 2050. Communities are being asked to make permanent sacrifices of land, water, and landscape for infrastructure that may never be built.</p>
         <div class="press-actions">
-          <button class="btn-press" onclick="this.closest('.press-card').querySelector('.press-body').classList.toggle('open');this.textContent=this.textContent==='Read full release'?'Close release':'Read full release'">Read full release</button>
+          <a href="press/pr-001-data-centre-gamble.html" class="btn-press">Read full release</a>
+          <a href="press/pr-001-data-centre-gamble-tldr.html" class="btn-press-ghost">60-second version</a>
           <a href="research/Data%20Centre%20Demand%20and%20Speculative%20Overcapacity.pdf" download class="btn-press-ghost">Download paper</a>
-        </div>
-        <div class="press-body">
-          <p><strong>FOR IMMEDIATE RELEASE — June 11, 2026</strong></p>
-          <p><strong>New research shows GB data centre pipeline running at 3–5 times the scale independent models say is needed</strong></p>
-          <p>The Firewalkers today published original research showing that the current pipeline of data centre connection applications in Great Britain — approximately 50 GW according to Ofgem's May 2026 call for input — represents between 3.4 and 5.1 times the 9.9–14.6 GW that the National Energy System Operator's own Future Energy Scenarios identify as the credible long-run requirement to 2050.</p>
-          <p>The research, <em>Data Centre Demand and Speculative Overcapacity</em> (FW-RP-2026-01), draws on regulatory filings, grid operator scenarios, and independent academic review including the IEA-4E critical analysis of global demand forecasts. It finds that the most widely-cited industry projections span a 40-fold range — and that the upper end of those projections is not supported by credible independent modelling.</p>
-          <p>"The queue is best described as optionality-seeking rather than fixed demand," said Scott Seivwright, founder of The Firewalkers. "Communities in Scotland, England, Wales, and Ireland are being asked to make permanent sacrifices — of moorland, of water, of protected landscape — for infrastructure that a significant portion of credible analysis suggests will not be needed at the scale currently proposed."</p>
-          <p>The research also notes that NESO's March 2026 analysis found that a majority of responding data centre projects had not secured an end-customer or off-taker when they applied for grid connection — further evidence that a substantial portion of the pipeline is speculative rather than demand-led.</p>
-          <p>The Firewalkers calls on planning authorities to require applicants to demonstrate genuine committed demand — not developer optionality — before approving data centres on protected, sensitive, or agricultural land.</p>
-          <p>The full paper is available for free download at firewalkers.earth/research. Scott Seivwright is available for interview and comment.</p>
-          <span class="pr-contact">Media contact: hello@firewalkers.earth · Scott Seivwright · Founder, The Firewalkers · Edinburgh, Scotland · firewalkers.earth</span>
+          <button class="btn-press-ghost" data-copy="https://firewalkers.earth/press/pr-001-data-centre-gamble.html" onclick="fwCopyLink(this)">Copy link</button>
         </div>
       </div>
 
-      <div class="press-card placeholder">
-        <span class="press-meta">Expected Q3 2026</span>
-        <h3>Press release: Water Consumption and the Unaccounted Cost of AI Cooling</h3>
-        <p>To accompany Research Paper No. 02. Will cover cumulative water consumption figures across UK and Irish data centres, regulatory gaps in water impact assessment, and at-risk catchment areas.</p>
-        <p style="font-family:var(--fw-font-display);font-size:0.46rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--fw-stone);">Join the mailing list to receive on publication</p>
+      <div class="press-card">
+        <span class="press-meta">PR-002 · For immediate release · Embargo: none</span>
+        <h3>Water consumption and the unaccounted cost of AI cooling</h3>
+        <p>One data centre in Ireland used enough water in a year to supply 18,000 people — and no planning authority required it to disclose that. New research examines cumulative water use across UK and Irish data centres, the regulatory gaps in water impact assessment, and the catchments most at risk.</p>
         <div class="press-actions">
-          <a href="index.html#signup" class="btn-press-ghost">Get notified</a>
+          <a href="press/pr-002-water-consumption-ai-cooling.html" class="btn-press">Read full release</a>
+          <a href="press/pr-002-water-tldr.html" class="btn-press-ghost">60-second version</a>
+          <button class="btn-press-ghost" data-copy="https://firewalkers.earth/press/pr-002-water-consumption-ai-cooling.html" onclick="fwCopyLink(this)">Copy link</button>
         </div>
       </div>
 
@@ -452,7 +437,6 @@ body{background:var(--fw-parchment);color:var(--fw-earth);font-family:var(--fw-f
       <div class="fw-footer-col">
         <h4>Knowledge</h4>
         <a href="research.html">Research</a>
-        <a href="memes.html">Memes</a>
         <a href="learning.html">Learning</a>
         <a href="hearth.html">From the Hearth</a>
         <a href="media.html">Media &amp; Press</a>
@@ -461,7 +445,6 @@ body{background:var(--fw-parchment);color:var(--fw-earth);font-family:var(--fw-f
         <h4>Connect</h4>
         <a href="index.html#signup">Join the Mailing List</a>
         <a href="https://www.youtube.com/@firewalkersearth" target="_blank" rel="noopener">YouTube</a>
-        <a href="https://www.instagram.com/the.firewalkers.earth" target="_blank" rel="noopener">Instagram</a>
         <a href="https://chat.whatsapp.com/DHQ7dczKNOt7gn85wwijp4" target="_blank" rel="noopener">WhatsApp</a>
         <a href="mailto:hello@firewalkers.earth">hello@firewalkers.earth</a>
       </div>
@@ -469,7 +452,6 @@ body{background:var(--fw-parchment);color:var(--fw-earth);font-family:var(--fw-f
     <div class="fw-footer-base">
       <span>© 2026 The Firewalkers · firewalkers.earth · Edinburgh, Scotland</span>
       <a href="privacy.html">Privacy</a>
-      <a href="sitemap-visitor.html">Site directory</a>
     </div>
   </div>
 </footer>
@@ -481,6 +463,15 @@ const obs = new IntersectionObserver((entries) => {
 },{threshold:0.06});
 reveals.forEach(el=>obs.observe(el));
 document.getElementById('fw-mobile-menu').addEventListener('click',function(e){if(e.target===this)this.classList.remove('open');});
+function fwCopyLink(btn){
+  var url = btn.getAttribute('data-copy');
+  var done = function(){ var o=btn.textContent; btn.textContent='Link copied!'; setTimeout(function(){btn.textContent=o;},1800); };
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(url).then(done).catch(function(){ window.prompt('Copy this link:', url); });
+  } else {
+    window.prompt('Copy this link:', url);
+  }
+}
 </script>
 
 
