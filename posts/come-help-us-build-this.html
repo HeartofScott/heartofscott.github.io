@@ -422,10 +422,14 @@ body{padding-top:90px;}
       The Firewalkers · firewalkers.earth · Founded June 2026
     </div>
   </div>
+  <a href="../sitemap-visitor.html" style="font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,245,236,0.35);text-decoration:none;display:block;text-align:center;padding:0.5rem 0;">Site directory</a>
 </footer>
 
 <script>
 document.getElementById('fw-mobile-menu').addEventListener('click',function(e){if(e.target===this)this.classList.remove('open');});
 </script>
+
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top" style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:150;background:var(--amber,#9c5500);color:#fff;border:none;width:44px;height:44px;border-radius:50%;font-size:20px;cursor:pointer;opacity:0;transition:opacity 0.3s;box-shadow:0 2px 12px rgba(0,0,0,0.2);display:flex;align-items:center;justify-content:center;line-height:1;">↑</button>
+<script>(function(){var b=document.getElementById('scroll-top');if(!b)return;window.addEventListener('scroll',function(){b.style.opacity=window.scrollY>400?'1':'0';b.style.pointerEvents=window.scrollY>400?'auto':'none';},{passive:true});})();</script>
 </body>
 </html>
