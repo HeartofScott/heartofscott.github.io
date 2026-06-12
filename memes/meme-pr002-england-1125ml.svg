@@ -1,0 +1,27 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background - urgent pale -->
+  <rect width="400" height="400" fill="#f7f2e8"/>
+  <!-- Top urgent red bar -->
+  <rect x="0" y="0" width="400" height="8" fill="#7a1a0a"/>
+  <!-- Warning triangle area -->
+  <rect x="0" y="8" width="400" height="72" fill="#7a1a0a"/>
+  <!-- Warning symbol -->
+  <text x="36" y="62" font-family="Georgia,serif" font-size="42" fill="rgba(255,255,255,0.9)">⚠</text>
+  <text x="88" y="48" font-family="Georgia,serif" font-size="14" fill="rgba(255,255,255,0.6)" letter-spacing="2">THE PLANNING SYSTEM</text>
+  <text x="88" y="68" font-family="Georgia,serif" font-size="17" fill="white" font-weight="bold">Is approving data centres</text>
+  <!-- Main stat -->
+  <text x="200" y="170" font-family="Georgia,serif" font-size="72" font-weight="bold" fill="#7a1a0a" text-anchor="middle" letter-spacing="-2">1,125</text>
+  <text x="200" y="200" font-family="Georgia,serif" font-size="17" fill="#3d2e1e" text-anchor="middle" font-style="italic">megalitres consumed per year</text>
+  <text x="200" y="222" font-family="Georgia,serif" font-size="14" fill="#7a7262" text-anchor="middle">in England alone</text>
+  <!-- Divider -->
+  <line x1="40" y1="242" x2="360" y2="242" stroke="rgba(122,26,10,0.15)" stroke-width="1"/>
+  <!-- Sub-facts -->
+  <text x="200" y="272" font-family="Georgia,serif" font-size="16" fill="#1e1610" text-anchor="middle" font-weight="bold">83% in already water-scarce South East.</text>
+  <text x="200" y="298" font-family="Georgia,serif" font-size="15" fill="#3d2e1e" text-anchor="middle">Peaks in summer.</text>
+  <text x="200" y="320" font-family="Georgia,serif" font-size="15" fill="#3d2e1e" text-anchor="middle">When rivers run lowest.</text>
+  <text x="200" y="346" font-family="Georgia,serif" font-size="14" fill="#7a1a0a" text-anchor="middle" font-style="italic">The Environment Agency says this is an undercount.</text>
+  <!-- Footer -->
+  <line x1="40" y1="364" x2="360" y2="364" stroke="rgba(122,26,10,0.12)" stroke-width="1"/>
+  <text x="200" y="380" font-family="Georgia,serif" font-size="11" fill="#7a7262" text-anchor="middle" letter-spacing="2">THE FIREWALKERS · PR-002</text>
+  <text x="360" y="395" font-family="Georgia,serif" font-size="11" fill="#9c5500" text-anchor="end">firewalkers.earth</text>
+</svg>
