@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Press Release Style Guide — The Firewalkers</title>
+<meta name="description" content="The complete style guide for Firewalkers press releases. Standards, templates, boilerplate, writing rules, and shareability requirements.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --parchment:     #faf5ec;
+  --parchment-warm:#f4ebda;
+  --stone:         #e8dcc8;
+  --amber:         #a05800;
+  --amber-mid:     #c07010;
+  --amber-bright:  #e09020;
+  --amber-pale:    #fdf0d5;
+  --sage:          #3d6e48;
+  --sage-pale:     #cfe0d4;
+  --earth:         #221811;
+  --earth-mid:     #3d2e1e;
+  --mist:          #7a7262;
+  --slate:         #3a4f5c;
+  --slate-pale:    #d0dce4;
+  --urgent:        #8b2a0f;
+  --urgent-pale:   #f2d4cc;
+  --rule:          #c8c0b0;
+  --font-display:  'Cinzel', serif;
+  --font-body:     'Cormorant Garamond', Georgia, serif;
+  --font-mono:     'IBM Plex Mono', monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--parchment);color:var(--earth);font-family:var(--font-body);font-size:18px;line-height:1.85;overflow-x:hidden;}
+
+/* NAV */
+.sg-nav{position:sticky;top:0;z-index:100;background:var(--earth);padding:0.85rem 2rem;display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid var(--amber);}
+.sg-nav-brand{font-family:var(--font-display);font-size:0.65rem;letter-spacing:0.2em;color:var(--amber-bright);text-decoration:none;}
+.sg-nav-tag{font-family:var(--font-mono);font-size:0.6rem;color:rgba(250,245,236,0.35);letter-spacing:0.1em;}
+
+/* HERO */
+.sg-hero{background:var(--earth);padding:5rem 2rem 4rem;border-bottom:3px solid var(--amber);position:relative;overflow:hidden;}
+.sg-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(160,88,0,0.15) 0%,transparent 60%);}
+.sg-hero-inner{max-width:860px;margin:0 auto;position:relative;z-index:1;}
+.sg-hero-eyebrow{font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.22em;color:rgba(250,245,236,0.35);display:block;margin-bottom:1.25rem;}
+.sg-hero h1{font-family:var(--font-body);font-style:italic;font-weight:600;font-size:clamp(2.4rem,5vw,4rem);color:var(--parchment);line-height:1.05;margin-bottom:1.25rem;}
+.sg-hero h1 em{color:var(--amber-bright);font-style:normal;}
+.sg-hero-desc{font-size:1.1rem;color:rgba(250,245,236,0.6);max-width:640px;line-height:1.75;margin-bottom:2rem;}
+.sg-hero-version{font-family:var(--font-mono);font-size:0.58rem;color:rgba(250,245,236,0.2);letter-spacing:0.12em;}
+
+/* SECTION STRUCTURE */
+.sg-section{max-width:860px;margin:0 auto;padding:3.5rem 2rem;border-bottom:1px solid var(--stone);}
+.sg-section:last-child{border-bottom:none;}
+.sg-section-number{font-family:var(--font-mono);font-size:0.6rem;color:var(--amber);letter-spacing:0.1em;display:block;margin-bottom:0.5rem;}
+.sg-section h2{font-family:var(--font-body);font-style:italic;font-size:clamp(1.6rem,3.5vw,2.4rem);color:var(--earth);margin-bottom:0.5rem;line-height:1.1;}
+.sg-section-intro{font-size:1rem;color:var(--mist);margin-bottom:2.5rem;line-height:1.75;max-width:680px;}
+
+/* RULE BLOCKS */
+.sg-rule{margin-bottom:1.5rem;}
+.sg-rule-label{font-family:var(--font-display);font-size:0.46rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:0.4rem;}
+.sg-rule p{font-size:0.95rem;color:var(--earth-mid);line-height:1.75;}
+
+/* DO / DON'T */
+.do-dont{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--stone);margin:2rem 0;}
+.do-col{background:var(--parchment);padding:1.5rem;}
+.dont-col{background:var(--parchment-warm);padding:1.5rem;}
+.do-col-label{font-family:var(--font-display);font-size:0.44rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--sage);display:block;margin-bottom:1rem;}
+.dont-col-label{font-family:var(--font-display);font-size:0.44rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--urgent);display:block;margin-bottom:1rem;}
+.do-col li,.dont-col li{font-size:0.88rem;color:var(--earth-mid);line-height:1.65;margin-bottom:0.5rem;padding-left:1.1rem;position:relative;}
+.do-col li::before{content:'✓';position:absolute;left:0;color:var(--sage);font-weight:700;}
+.dont-col li::before{content:'✗';position:absolute;left:0;color:var(--urgent);font-weight:700;}
+
+/* CODE BLOCKS */
+.sg-code{background:var(--earth);color:rgba(250,245,236,0.85);font-family:var(--font-mono);font-size:0.72rem;line-height:1.7;padding:1.75rem 2rem;overflow-x:auto;margin:1.5rem 0;}
+.sg-code .comment{color:rgba(250,245,236,0.3);}
+.sg-code .key{color:var(--amber-bright);}
+.sg-code .val{color:var(--sage-pale);}
+
+/* EXAMPLE BLOCKS */
+.sg-example{border:1px solid var(--stone);margin:2rem 0;}
+.sg-example-label{background:var(--slate);padding:0.5rem 1rem;font-family:var(--font-mono);font-size:0.56rem;color:rgba(208,220,228,0.7);letter-spacing:0.1em;}
+.sg-example-body{padding:2rem;}
+
+/* ANATOMY DIAGRAM */
+.anatomy{border:1px solid var(--stone);margin:2rem 0;font-size:0.88rem;}
+.anatomy-row{display:grid;grid-template-columns:180px 1fr;border-bottom:1px solid var(--stone);}
+.anatomy-row:last-child{border-bottom:none;}
+.anatomy-label{background:var(--earth);padding:1rem 1.25rem;font-family:var(--font-display);font-size:0.42rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--amber-bright);display:flex;align-items:flex-start;padding-top:1rem;}
+.anatomy-content{padding:1rem 1.5rem;background:var(--parchment);}
+.anatomy-content p{font-size:0.88rem;color:var(--earth-mid);line-height:1.65;margin-bottom:0.4rem;}
+.anatomy-content p:last-child{margin-bottom:0;}
+.anatomy-content .rule{font-family:var(--font-mono);font-size:0.62rem;color:var(--amber);display:block;margin-top:0.3rem;}
+
+/* PERSONA TAGS */
+.persona-tags{display:flex;gap:0.5rem;flex-wrap:wrap;margin:1rem 0;}
+.ptag{font-family:var(--font-display);font-size:0.42rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.3rem 0.75rem;border:1px solid;}
+.ptag-resident{color:var(--amber);border-color:var(--amber);background:var(--amber-pale);}
+.ptag-tech{color:var(--slate);border-color:var(--slate);background:var(--slate-pale);}
+.ptag-activist{color:var(--sage);border-color:var(--sage);background:var(--sage-pale);}
+.ptag-media{color:var(--urgent);border-color:var(--urgent);background:var(--urgent-pale);}
+
+/* TONE SCALE */
+.tone-scale{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--stone);margin:1.5rem 0;}
+.tone-cell{background:var(--parchment);padding:1rem;text-align:center;}
+.tone-cell .t-label{font-family:var(--font-display);font-size:0.4rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--mist);display:block;margin-bottom:0.3rem;}
+.tone-cell .t-val{font-family:var(--font-body);font-style:italic;font-size:0.95rem;color:var(--earth);}
+.tone-cell.active{background:var(--earth);}
+.tone-cell.active .t-label{color:rgba(250,245,236,0.4);}
+.tone-cell.active .t-val{color:var(--amber-bright);}
+
+/* AUTHOR BIO */
+.author-bio{display:grid;grid-template-columns:100px 1fr;gap:1.75rem;align-items:start;background:var(--parchment-warm);border-left:4px solid var(--amber);padding:1.75rem;margin:2rem 0;}
+.author-photo{width:100px;height:100px;border-radius:50%;overflow:hidden;flex-shrink:0;}
+.author-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(0.7);}
+.author-info .author-name{font-family:var(--font-display);font-size:0.68rem;letter-spacing:0.16em;color:var(--earth);display:block;margin-bottom:0.3rem;}
+.author-info .author-title{font-family:var(--font-display);font-size:0.46rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:0.75rem;}
+.author-info .author-desc{font-size:0.88rem;color:var(--earth-mid);line-height:1.7;margin-bottom:0.75rem;}
+.author-creds{display:flex;flex-wrap:wrap;gap:0.4rem;}
+.author-cred{font-family:var(--font-display);font-size:0.38rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.2rem 0.55rem;color:var(--mist);border:1px solid var(--stone);}
+
+/* SHARE BAR DEMO */
+.share-bar-demo{display:flex;align-items:center;gap:0.6rem;flex-wrap:wrap;padding:1.25rem 1.75rem;background:var(--parchment-warm);border:1px solid var(--stone);margin:1.5rem 0;}
+.share-label{font-family:var(--font-display);font-size:0.46rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--mist);margin-right:0.25rem;}
+.share-btn{display:inline-flex;align-items:center;gap:0.4rem;font-family:var(--font-display);font-size:0.46rem;letter-spacing:0.16em;text-transform:uppercase;padding:0.5rem 1rem;text-decoration:none;border:1px solid var(--stone);background:white;color:var(--earth-mid);cursor:pointer;transition:all 0.2s;}
+.share-btn:hover{border-color:var(--amber);color:var(--amber);}
+.share-btn svg{width:14px;height:14px;flex-shrink:0;}
+
+/* COPYRIGHT */
+.copyright-box{background:var(--earth-mid);padding:1.5rem 2rem;margin:2rem 0;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;}
+.copyright-box p{font-size:0.85rem;color:rgba(250,245,236,0.55);line-height:1.7;}
+.copyright-box p strong{color:var(--amber-bright);}
+.copyright-badge{font-family:var(--font-mono);font-size:0.58rem;color:rgba(250,245,236,0.3);white-space:nowrap;text-align:center;line-height:1.6;}
+
+/* CHECKLIST */
+.checklist{list-style:none;padding:0;margin:1.5rem 0;}
+.checklist li{font-size:0.9rem;color:var(--earth-mid);padding:0.5rem 0;border-bottom:1px solid var(--stone);display:flex;gap:0.75rem;align-items:flex-start;line-height:1.55;}
+.checklist li:last-child{border-bottom:none;}
+.checklist li::before{content:'☐';font-size:1rem;color:var(--mist);flex-shrink:0;margin-top:-0.05rem;}
+.checklist-section{font-family:var(--font-display);font-size:0.44rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber);display:block;margin:1.5rem 0 0.5rem;}
+
+/* REFERENCE LINKS */
+.ref-list{margin:1.5rem 0;}
+.ref-item{display:grid;grid-template-columns:120px 1fr;gap:1.5rem;padding:0.85rem 0;border-bottom:1px solid var(--stone);align-items:start;}
+.ref-item:last-child{border-bottom:none;}
+.ref-source{font-family:var(--font-display);font-size:0.42rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--mist);}
+.ref-item a{font-size:0.88rem;color:var(--sage);text-decoration:none;line-height:1.55;}
+.ref-item a:hover{color:var(--amber);}
+
+/* TABLES */
+.sg-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.88rem;}
+.sg-table th{font-family:var(--font-display);font-size:0.42rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--parchment);background:var(--earth);padding:0.7rem 1rem;text-align:left;}
+.sg-table td{padding:0.65rem 1rem;border-bottom:1px solid var(--stone);color:var(--earth-mid);vertical-align:top;}
+.sg-table tr:nth-child(even) td{background:var(--parchment-warm);}
+.tag-must{font-family:var(--font-display);font-size:0.38rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.15rem 0.45rem;background:var(--urgent-pale);color:var(--urgent);}
+.tag-rec{font-family:var(--font-display);font-size:0.38rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.15rem 0.45rem;background:var(--amber-pale);color:var(--amber);}
+.tag-opt{font-family:var(--font-display);font-size:0.38rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.15rem 0.45rem;background:var(--slate-pale);color:var(--slate);}
+
+/* CALLOUT */
+.sg-callout{border-left:4px solid var(--amber);background:var(--amber-pale);padding:1.25rem 1.5rem;margin:1.5rem 0;}
+.sg-callout p{font-size:0.92rem;color:var(--earth);line-height:1.7;margin:0;}
+.sg-callout strong{color:var(--amber);}
+
+.sg-callout.urgent{border-left-color:var(--urgent);background:var(--urgent-pale);}
+.sg-callout.urgent p{color:var(--earth);}
+
+/* RESPONSIVE */
+@media(max-width:700px){
+  .do-dont{grid-template-columns:1fr;}
+  .author-bio{grid-template-columns:1fr;}
+  .tone-scale{grid-template-columns:1fr 1fr;}
+  .anatomy-row{grid-template-columns:1fr;}
+  .anatomy-label{border-bottom:1px solid rgba(250,245,236,0.08);}
+  .copyright-box{grid-template-columns:1fr;}
+  .ref-item{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="sg-nav">
+  <a href="index.html" class="sg-nav-brand">⁂ The Firewalkers</a>
+  <span class="sg-nav-tag">Press Release Style Guide · v1.0</span>
+</nav>
+
+<!-- HERO -->
+<div class="sg-hero">
+  <div class="sg-hero-inner">
+    <span class="sg-hero-eyebrow">Internal document · Not for publication</span>
+    <h1>How we write a press release that <em>gets used.</em></h1>
+    <p class="sg-hero-desc">Every press release we publish carries the credibility of the movement. This guide defines the standard — for writing, structure, shareability, and authority. Follow it every time.</p>
+    <span class="sg-hero-version">Version 1.0 · June 2026 · Owner: Scott Seivwright</span>
+  </div>
+</div>
+
+<!-- SECTION 1: PHILOSOPHY -->
+<div class="sg-section">
+  <span class="sg-section-number">01</span>
+  <h2>Philosophy — what a Firewalkers press release is</h2>
+  <p class="sg-section-intro">We are not writing corporate announcements. We are writing documents that give journalists, campaigners, residents, and decision-makers exactly what they need to act. Every release must be readable by an 80-year-old, shareable by a 25-year-old, and citable by a journalist on deadline.</p>
+
+  <div class="sg-rule">
+    <span class="sg-rule-label">The single most important rule</span>
+    <p>A press release is not a campaign document. It is a news document. It must contain a fact the world did not know before you published it. If there is no new fact, there is no press release.</p>
+  </div>
+
+  <div class="sg-rule">
+    <span class="sg-rule-label">Reading age target</span>
+    <p>Write for a reading age of 12–14 years. Short sentences. Active verbs. No jargon. No acronyms without definition. This is not dumbing down — it is respecting the reader's time. The Guardian writes to this standard. So do we.</p>
+  </div>
+
+  <div class="sg-rule">
+    <span class="sg-rule-label">Tone</span>
+    <p>Bold, urgent, honest, grounded. Never hysterical. We make strong claims because we have strong evidence. If we do not have the evidence, we do not make the claim.</p>
+  </div>
+
+  <div class="tone-scale">
+    <div class="tone-cell">
+      <span class="t-label">Never</span>
+      <span class="t-val">Hysterical</span>
+    </div>
+    <div class="tone-cell">
+      <span class="t-label">Avoid</span>
+      <span class="t-val">Vague alarm</span>
+    </div>
+    <div class="tone-cell active">
+      <span class="t-label">Target</span>
+      <span class="t-val">Urgent clarity</span>
+    </div>
+    <div class="tone-cell">
+      <span class="t-label">Avoid</span>
+      <span class="t-val">Corporate caution</span>
+    </div>
+    <div class="tone-cell">
+      <span class="t-label">Never</span>
+      <span class="t-val">Timid</span>
+    </div>
+  </div>
+
+  <div class="do-dont">
+    <div class="do-col">
+      <span class="do-col-label">Write like this</span>
+      <ul>
+        <li>Britain has applied for three times more data centre electricity than it will need by 2050.</li>
+        <li>A data centre the size of 40 football pitches has been proposed for the Lammermuir Hills.</li>
+        <li>Communities have 12 weeks to respond to planning applications most of them never see.</li>
+        <li>The government admitted it made a legal error. Courts are now deciding the consequences.</li>
+        <li>Scott Seivwright spent 30 years building these systems. He is now fighting to stop them.</li>
+      </ul>
+    </div>
+    <div class="dont-col">
+      <span class="dont-col-label">Not like this</span>
+      <ul>
+        <li>The existential threat of AI infrastructure poses unprecedented challenges to our planet.</li>
+        <li>Stakeholders are increasingly concerned about the hyperscale deployment paradigm.</li>
+        <li>The Firewalkers is committed to raising awareness around this important issue.</li>
+        <li>We believe the time has come for a conversation about responsible technology.</li>
+        <li>Our movement leverages AI capabilities to synergise environmental outcomes.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 2: ANATOMY -->
+<div class="sg-section">
+  <span class="sg-section-number">02</span>
+  <h2>Anatomy — every section, every time</h2>
+  <p class="sg-section-intro">Every press release has the same bones. In this order. Every time. Journalists scan for what they need. Give it to them in the right place.</p>
+
+  <div class="anatomy">
+    <div class="anatomy-row">
+      <div class="anatomy-label">Top bar</div>
+      <div class="anatomy-content">
+        <p>Dark background bar across the top. States: <strong>Press Release · [For immediate release OR Embargo until DATE] · [DATE] · [PR-NUMBER]</strong></p>
+        <span class="rule">Always amber text on dark background. Never buried. First thing a journalist sees.</span>
+      </div>
+    </div>
+    <div class="anatomy-row">
+      <div class="anatomy-label">Headline</div>
+      <div class="anatomy-content">
+        <p>The single most important sentence in the document. Contains the fact. Written as a news headline — not a slogan, not a question, not a teaser.</p>
+        <span class="rule">Max 12 words. Active voice. Contains a number or a specific claim wherever possible. No full stop.</span>
+      </div>
+    </div>
+    <div class="anatomy-row">
+      <div class="anatomy-label">Standfirst</div>
+      <div class="anatomy-content">
+        <p>2–3 sentences that expand the headline into the full story. A journalist who reads only this should understand the news, the source, and the significance.</p>
+        <span class="rule">Left-border in urgent red. 60–80 words. Contains: the finding, the source, and the ask or position.</span>
+      </div>
+    </div>
+    <div class="anatomy-row">
+      <div class="anatomy-label">Meta row</div>
+      <div class="anatomy-content">
+        <p>Organisation name, contact name, location, embargo status. Small caps. All on one line.</p>
+        <span class="rule">Always present. Journalists need to know instantly who this is from and how to reach them.</span>
+      </div>
+    </div>
+    <div class="anatomy-row">
+      <div class="anatomy-label">Share bar</div>
+      <div class="anatomy-content">
+        <p>LinkedIn, X, WhatsApp, Copy link — immediately below the header, before the body text. Pre-written messages for each platform.</p>
+        <span class="rule">Required on every release. Placed before the lead paragraph so it is seen before reading begins.</span>
+      </div>
+    </div>
+    <div class="anatomy-row">
+      <div class="anatomy-label">Lead paragraph</div>
+      <div class="anatomy-content">
+        <p>The full story in one paragraph. Who, what, when, where, why. If someone reads only this, they have the news. Larger font, different weight to body.</p>
+        <span class="rule">Max 60 words. No jargon. Contains the key number or claim. Written for an 80-year-old to understand.</span>
+      </div>
+    </div>
+    <div class="anatomy-row">
+      <div class="anatomy-label">Key facts box</div>
+      <div class="anatomy-content">
+        <p>Dark background box with 4 key statistics or facts. Numbers large, labels small. The most citable content in the release.</p>
+        <span class="rule">Required on data-led releases. 4 facts maximum. Each fact sourced — include source in small text below number. No unsourced stats.</span>
+      </div>
+    </div>
+    <div class="anatomy-row">
+      <div class="anatomy-label">Body sections</div>
+      <div class="anatomy-content">
+        <p>2–4 sections with small-caps headings. Each section makes one argument. Short paragraphs — 3–4 sentences maximum per paragraph.</p>
+        <span class="rule">Total body length: 400–700 words. If it is longer, cut. Journalists do not read long press releases.</span>
+      </div>
+    </div>
+    <div class="anatomy-row">
+      <div class="anatomy-label">Scott's quote</div>
+      <div class="anatomy-content">
+        <p>One pull quote from Scott Seivwright. Should contain an opinion or a position, not a fact. This is the only place opinion belongs. Sounds like a human, not a press officer.</p>
+        <span class="rule">Max 40 words. Must be something a journalist would want to print. If it is forgettable, rewrite it. One quote only — never two.</span>
+      </div>
+    </div>
+    <div class="anatomy-row">
+      <div class="anatomy-label">Author bio</div>
+      <div class="anatomy-content">
+        <p>Scott's photo, name, title, 2-sentence description, and credential tags. Standardised across all releases. Links to media page.</p>
+        <span class="rule">Required on every release. Same photo. Same credentials. Same format. Never changes.</span>
+      </div>
+    </div>
+    <div class="anatomy-row">
+      <div class="anatomy-label">Warning / position box</div>
+      <div class="anatomy-content">
+        <p>Amber background box. States what The Firewalkers opposes, and crucially what it does NOT oppose. Prevents misrepresentation.</p>
+        <span class="rule">Required. Journalists will quote from this to establish balance. Write it carefully. It is not a disclaimer — it is a position statement.</span>
+      </div>
+    </div>
+    <div class="anatomy-row">
+      <div class="anatomy-label">Notes to editors</div>
+      <div class="anatomy-content">
+        <p>Links to full research. Scott's credentials and availability. High-res image availability. Independence statement.</p>
+        <span class="rule">Required. Keep to a bordered box, clearly separated from body. Journalists know to look here for follow-up.</span>
+      </div>
+    </div>
+    <div class="anatomy-row">
+      <div class="anatomy-label">Contact block</div>
+      <div class="anatomy-content">
+        <p>Two cards: media enquiries (Scott, email, interview link) and About The Firewalkers (URL, YouTube, LinkedIn).</p>
+        <span class="rule">Required. Media email must be live and monitored. Response time for media: under 4 hours on working days.</span>
+      </div>
+    </div>
+    <div class="anatomy-row">
+      <div class="anatomy-label">Source list</div>
+      <div class="anatomy-content">
+        <p>Numbered list of every primary source cited in the release. With title, author, and date where known.</p>
+        <span class="rule">Required on all data-led releases. Never cite secondary sources when a primary is available. No Wikipedia. No press releases from other organisations.</span>
+      </div>
+    </div>
+    <div class="anatomy-row">
+      <div class="anatomy-label">Copyright line</div>
+      <div class="anatomy-content">
+        <p>© The Firewalkers [YEAR] · Freely reproducible with attribution · firewalkers.earth</p>
+        <span class="rule">Required. Explicitly invites sharing. Attribution required. See Section 8 for full copyright policy.</span>
+      </div>
+    </div>
+    <div class="anatomy-row">
+      <div class="anatomy-label">— ends —</div>
+      <div class="anatomy-content">
+        <p>Centred, small-caps. Traditional press release closing marker. Journalists expect it. Never omit it.</p>
+        <span class="rule">Always present. Always centred. Always the very last line before the footer.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 3: HEADLINE RULES -->
+<div class="sg-section">
+  <span class="sg-section-number">03</span>
+  <h2>The headline — the only sentence that truly matters</h2>
+  <p class="sg-section-intro">80% of people who see a press release read only the headline. Write it for that reader. The headline must contain the news. Not tease it — contain it.</p>
+
+  <div class="sg-rule">
+    <span class="sg-rule-label">Formula</span>
+    <p><strong>[Specific number or claim] + [subject] + [consequence or significance]</strong><br>
+    This forces a real fact into the headline and prevents vagueness.</p>
+  </div>
+
+  <div class="do-dont">
+    <div class="do-col">
+      <span class="do-col-label">Strong headlines</span>
+      <ul>
+        <li>Britain's data centre queue is more than three times the entire national grid</li>
+        <li>Scotland's data centre water use quadrupled in four years, FOI data shows</li>
+        <li>Hamilton rejects £2bn data centre after 400 residents protest planning meeting</li>
+        <li>UK government admitted planning error — court challenge now under way</li>
+        <li>£64 billion of data centre projects blocked by community opposition in 12 months</li>
+      </ul>
+    </div>
+    <div class="dont-col">
+      <span class="dont-col-label">Weak headlines</span>
+      <ul>
+        <li>New research raises concerns about data centre development</li>
+        <li>The Firewalkers calls for better AI infrastructure planning</li>
+        <li>Community voices matter in the data centre debate</li>
+        <li>Important new findings on AI and the environment</li>
+        <li>The Firewalkers publishes latest research report</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sg-callout">
+    <p><strong>The test:</strong> Read the headline out loud. Does it sound like something a BBC journalist would say at the start of a story? If yes, it is a headline. If it sounds like a campaign slogan, rewrite it.</p>
+  </div>
+</div>
+
+<!-- SECTION 4: WRITING RULES -->
+<div class="sg-section">
+  <span class="sg-section-number">04</span>
+  <h2>Writing rules — how to put words together</h2>
+  <p class="sg-section-intro">These rules apply to every word in every release. They are not stylistic preferences. They are the difference between a release that gets used and one that gets deleted.</p>
+
+  <table class="sg-table">
+    <thead>
+      <tr><th>Rule</th><th>Why</th><th>Example</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Short sentences</strong> — 20 words maximum</td>
+        <td>Long sentences lose readers. Journalists cut long sentences before they print them.</td>
+        <td>"A data centre can use 1.1 million gallons of water a day. That is equivalent to a town of 10,000 people."</td>
+      </tr>
+      <tr>
+        <td><strong>Active voice</strong> always</td>
+        <td>Passive voice hides responsibility and weakens claims.</td>
+        <td>"The government approved the application." Not "The application was approved."</td>
+      </tr>
+      <tr>
+        <td><strong>Numbers in numerals</strong> not words</td>
+        <td>Numbers in numerals are scannable. Numbers in words are not.</td>
+        <td>"50 gigawatts" not "fifty gigawatts"</td>
+      </tr>
+      <tr>
+        <td><strong>Define every acronym</strong> on first use</td>
+        <td>An 80-year-old resident does not know what NESO, PUE, or GW means.</td>
+        <td>"National Energy System Operator (NESO)"</td>
+      </tr>
+      <tr>
+        <td><strong>One idea per paragraph</strong></td>
+        <td>Journalists lift paragraphs whole. Each paragraph must stand alone.</td>
+        <td>3–4 sentences maximum. White space is not wasted — it is readable.</td>
+      </tr>
+      <tr>
+        <td><strong>Source every number</strong></td>
+        <td>Unsourced numbers destroy credibility. One challenge and the whole release falls.</td>
+        <td>Every statistic in body text gets "(Source, Year)" in the source list.</td>
+      </tr>
+      <tr>
+        <td><strong>Concrete nouns</strong>, not abstractions</td>
+        <td>"The land" is abstract. "The Lammermuir Hills" is real. Real things move people.</td>
+        <td>"ancient moorland" not "green space"; "drinking water" not "water resources"</td>
+      </tr>
+      <tr>
+        <td><strong>The position, then the caveat</strong></td>
+        <td>State the strong claim first. Qualify it after. Not the other way around.</td>
+        <td>"The queue is three times the need — on the most conservative measure." Not "On the most conservative measure, the queue may be approximately three times the need."</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SECTION 5: PERSONAS -->
+<div class="sg-section">
+  <span class="sg-section-number">05</span>
+  <h2>Writing for our personas — who reads this and why</h2>
+  <p class="sg-section-intro">Every release reaches multiple audiences. Write the release for journalists — but design every shareable element for the persona most likely to forward it.</p>
+
+  <div class="sg-rule">
+    <span class="sg-rule-label">The resident</span>
+    <p>Wants to know: is this happening near me? What can I do? How much time do I have? Give them a specific location, a deadline, and a direct link to act. <strong>Hook them with geography and urgency.</strong></p>
+    <div class="persona-tags"><span class="ptag ptag-resident">I'm a Resident</span></div>
+    <p style="margin-top:0.75rem;font-size:0.88rem;color:var(--mist);">Share message template: "A data centre is proposed for [PLACE]. Communities have [X] weeks to object. Here's the research behind the campaign: [URL]"</p>
+  </div>
+
+  <div class="sg-rule" style="margin-top:1.5rem;">
+    <span class="sg-rule-label">The technologist</span>
+    <p>Wants to know: what does the data actually say? Who are the primary sources? Is this rigorous? Give them the numbers, the methodology, and the source list. <strong>Hook them with evidence quality and scale.</strong></p>
+    <div class="persona-tags"><span class="ptag ptag-tech">I'm a Technologist</span></div>
+    <p style="margin-top:0.75rem;font-size:0.88rem;color:var(--mist);">Share message template: "New data: 50GW queued vs 9.9-14.6GW needed by 2050. The gap is not a rounding error. Full sourced analysis: [URL]"</p>
+  </div>
+
+  <div class="sg-rule" style="margin-top:1.5rem;">
+    <span class="sg-rule-label">The activist / ecologist</span>
+    <p>Wants to know: is this winnable? Has anyone stopped one? What are the grounds? Give them the wins, the legal angles, and the tools. <strong>Hook them with evidence that resistance works.</strong></p>
+    <div class="persona-tags"><span class="ptag ptag-activist">I'm an Activist</span></div>
+    <p style="margin-top:0.75rem;font-size:0.88rem;color:var(--mist);">Share message template: "£64bn of data centre projects blocked by community action. Here's the evidence, the playbook, and the movement behind it: [URL]"</p>
+  </div>
+
+  <div class="sg-rule" style="margin-top:1.5rem;">
+    <span class="sg-rule-label">The journalist / media</span>
+    <p>Wants to know: is this a story? Is there a quote? Are there pictures? Who can I call? Give them a strong headline fact, a usable quote, and a contact who picks up the phone.</p>
+    <div class="persona-tags"><span class="ptag ptag-media">Media</span></div>
+    <p style="margin-top:0.75rem;font-size:0.88rem;color:var(--mist);">What they need: one sharp quote, one big number, one local angle, one human story, and a phone number that is answered within 4 hours.</p>
+  </div>
+</div>
+
+<!-- SECTION 6: AUTHOR BIO STANDARD -->
+<div class="sg-section">
+  <span class="sg-section-number">06</span>
+  <h2>Author bio — standardised, every time</h2>
+  <p class="sg-section-intro">Scott's bio appears in every press release in exactly this format. No variations. Consistency builds recognition. The photo, the credentials, and the contact are fixed.</p>
+
+  <p style="font-size:0.9rem;color:var(--mist);margin-bottom:1.5rem;">This is how it renders on every release:</p>
+
+  <div class="author-bio">
+    <div class="author-photo">
+      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
+           alt="Scott Seivwright, Founder of The Firewalkers">
+    </div>
+    <div class="author-info">
+      <span class="author-name">Scott Seivwright</span>
+      <span class="author-title">Founder, The Firewalkers · Edinburgh, Scotland</span>
+      <p class="author-desc">Scott Seivwright has spent 30 years in AI and digital transformation, working globally with some of the world's largest organisations. He founded The Firewalkers after concluding that the systems he helped build were consuming the natural world at a pace no planning framework was equipped to handle.</p>
+      <div class="author-creds">
+        <span class="author-cred">30 yrs AI &amp; Digital</span>
+        <span class="author-cred">Oxford AI Programme</span>
+        <span class="author-cred">Green Software Foundation</span>
+        <span class="author-cred">Co-founder GreenPO.org</span>
+        <span class="author-cred">Available for interview</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sg-callout">
+    <p><strong>Important:</strong> Replace the placeholder photo above with Scott's actual profile image at <code>images/Scottprofile.png</code>. The bio text above is the fixed standard — do not vary it between releases.</p>
+  </div>
+
+  <div class="sg-code">
+<span class="comment">&lt;!-- AUTHOR BIO — paste this into every press release --&gt;</span>
+&lt;div class="author-bio"&gt;
+  &lt;div class="author-photo"&gt;
+    &lt;img src="<span class="val">../images/Scottprofile.png</span>"
+         alt="<span class="val">Scott Seivwright, Founder of The Firewalkers</span>"
+         width="<span class="val">100</span>" height="<span class="val">100</span>" loading="<span class="val">lazy</span>"&gt;
+  &lt;/div&gt;
+  &lt;div class="author-info"&gt;
+    &lt;span class="author-name"&gt;<span class="val">Scott Seivwright</span>&lt;/span&gt;
+    &lt;span class="author-title"&gt;<span class="val">Founder, The Firewalkers · Edinburgh, Scotland</span>&lt;/span&gt;
+    &lt;p class="author-desc"&gt;<span class="val">Scott Seivwright has spent 30 years in AI and digital
+    transformation, working globally with some of the world's largest organisations.
+    He founded The Firewalkers after concluding that the systems he helped build were
+    consuming the natural world at a pace no planning framework was equipped to handle.</span>&lt;/p&gt;
+    &lt;div class="author-creds"&gt;
+      &lt;span class="author-cred"&gt;<span class="val">30 yrs AI &amp; Digital</span>&lt;/span&gt;
+      &lt;span class="author-cred"&gt;<span class="val">Oxford AI Programme</span>&lt;/span&gt;
+      &lt;span class="author-cred"&gt;<span class="val">Green Software Foundation</span>&lt;/span&gt;
+      &lt;span class="author-cred"&gt;<span class="val">Co-founder GreenPO.org</span>&lt;/span&gt;
+      &lt;span class="author-cred"&gt;<span class="val">Available for interview</span>&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+  </div>
+</div>
+
+<!-- SECTION 7: SHAREABILITY -->
+<div class="sg-section">
+  <span class="sg-section-number">07</span>
+  <h2>Shareability — built to travel</h2>
+  <p class="sg-section-intro">A press release that cannot be shared is a press release that will not be read. Every release must have platform-specific share buttons with pre-written messages. No exceptions.</p>
+
+  <div class="sg-rule">
+    <span class="sg-rule-label">Share bar position</span>
+    <p>The share bar sits between the meta row and the lead paragraph — before the reader has read a word of body copy. The reader sees it immediately. The impulse to share is highest at the moment of recognition, not after reading 700 words.</p>
+  </div>
+
+  <p style="font-size:0.9rem;color:var(--mist);margin-bottom:1rem;">This is how the share bar renders:</p>
+
+  <div class="share-bar-demo">
+    <span class="share-label">Share this release</span>
+    <a href="#" class="share-btn">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25z"/></svg>
+      X / Twitter
+    </a>
+    <a href="#" class="share-btn">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+      LinkedIn
+    </a>
+    <a href="#" class="share-btn">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+    <button class="share-btn" onclick="this.textContent='✓ Copied'">Copy link</button>
+  </div>
+
+  <div class="sg-rule" style="margin-top:1.5rem;">
+    <span class="sg-rule-label">Pre-written share messages — write one per platform for every release</span>
+  </div>
+
+  <table class="sg-table">
+    <thead>
+      <tr><th>Platform</th><th>Character limit</th><th>Message style</th><th>Example</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>X / Twitter</strong></td>
+        <td>~200 chars (link takes 23)</td>
+        <td>One sharp claim. Key number. @firewalkersearth tag. 2–3 hashtags.</td>
+        <td>"Britain's data centre queue: 50GW applied for. 14.6GW needed by 2050. New research from @firewalkersearth. #DataCentres #AIImpact"</td>
+      </tr>
+      <tr>
+        <td><strong>LinkedIn</strong></td>
+        <td>No limit — 150–200 words optimal</td>
+        <td>Hook → context → significance → link. Professional but urgent tone.</td>
+        <td>"The numbers have just been published and they are stark..." [2–3 paragraphs] + link + 3–5 hashtags</td>
+      </tr>
+      <tr>
+        <td><strong>WhatsApp</strong></td>
+        <td>No limit — 2–3 sentences best</td>
+        <td>Conversational. Recommend to a friend. No hashtags.</td>
+        <td>"Worth reading — new research shows Britain has applied for three times more data centre electricity than it will ever need. Full story:"</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="sg-rule" style="margin-top:1.5rem;">
+    <span class="sg-rule-label">OG image requirements</span>
+    <p>Every press release must have an OG image that renders correctly on all platforms. Image must be <strong>1200×630px exactly</strong>. No text overlaid. Strong, relevant to the subject. Always use the Unsplash parameter <code>?auto=format&fit=crop&w=1200&h=630&q=80</code>. Test at <a href="https://www.opengraph.xyz" style="color:var(--sage);">opengraph.xyz</a> before publishing.</p>
+  </div>
+</div>
+
+<!-- SECTION 8: COPYRIGHT -->
+<div class="sg-section">
+  <span class="sg-section-number">08</span>
+  <h2>Copyright — open but attributed</h2>
+  <p class="sg-section-intro">Our press releases are designed to be shared, quoted, and reproduced. We want maximum reach. We require attribution. Every release carries this explicit permission.</p>
+
+  <div class="copyright-box">
+    <div>
+      <p><strong>© The Firewalkers [YEAR].</strong> This press release may be freely reproduced, quoted, and distributed in whole or in part, in any medium, provided that attribution is given to The Firewalkers and a link to firewalkers.earth is included. No permission required. No notification required.</p>
+      <p style="margin-top:0.75rem;">The Firewalkers accepts no advertising and has no commercial relationship with any data centre operator, energy company, or planning authority. Our research is independent.</p>
+    </div>
+    <div class="copyright-badge">
+      © The Firewalkers<br>
+      Freely reproducible<br>
+      with attribution<br>
+      firewalkers.earth
+    </div>
+  </div>
+
+  <div class="sg-callout urgent">
+    <p><strong>Why this matters:</strong> A standard "all rights reserved" copyright on a press release actively prevents journalists and campaigners from sharing it. Our explicit open licence is a competitive advantage. It removes every barrier to reproduction.</p>
+  </div>
+
+  <div class="sg-code">
+<span class="comment">&lt;!-- COPYRIGHT FOOTER — paste on every press release --&gt;</span>
+&lt;div class="<span class="val">pr-copyright</span>"&gt;
+  &lt;p&gt;&lt;strong&gt;<span class="val">© The Firewalkers [YEAR]</span>&lt;/strong&gt; This press release may be freely
+  reproduced, quoted, and distributed in whole or in part, in any medium,
+  provided that attribution is given to The Firewalkers and a link to
+  &lt;a href="<span class="val">https://firewalkers.earth</span>"&gt;<span class="val">firewalkers.earth</span>&lt;/a&gt; is included.
+  No permission required. No notification required.&lt;/p&gt;
+  &lt;p&gt;The Firewalkers accepts no advertising and has no commercial relationship
+  with any data centre operator, energy company, or planning authority.
+  Our research is independent.&lt;/p&gt;
+&lt;/div&gt;
+  </div>
+</div>
+
+<!-- SECTION 9: HTML BOILERPLATE -->
+<div class="sg-section">
+  <span class="sg-section-number">09</span>
+  <h2>HTML boilerplate — copy this for every new release</h2>
+  <p class="sg-section-intro">Every press release is a standalone HTML page in the <code>press/</code> folder. File naming: <code>pr-[NUMBER]-[slug].html</code>. Example: <code>pr-002-lammermuirs-water.html</code>. Numbers run sequentially from PR-001.</p>
+
+  <div class="sg-code">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+
+<span class="comment">&lt;!-- CORE --&gt;</span>
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;meta name="google-site-verification" content="<span class="val">Svtevcw_M4UFmsXsNvp_hNvWEAz28GBj8ILx_Xi9jCk</span>"&gt;
+&lt;link rel="icon" href="data:image/svg+xml,..."&gt;
+
+<span class="comment">&lt;!-- SEO: title = headline. 60 chars max. Keyword-first. --&gt;</span>
+&lt;title&gt;<span class="val">[HEADLINE — max 60 chars] — The Firewalkers</span>&lt;/title&gt;
+&lt;meta name="description" content="<span class="val">[Standfirst in 155 chars]</span>"&gt;
+&lt;meta name="author" content="<span class="val">Scott Seivwright</span>"&gt;
+&lt;meta name="robots" content="index, follow"&gt;
+&lt;link rel="canonical" href="<span class="val">https://firewalkers.earth/press/pr-[N]-[slug].html</span>"&gt;
+
+<span class="comment">&lt;!-- OPEN GRAPH: controls LinkedIn, WhatsApp, Facebook preview --&gt;</span>
+&lt;meta property="og:type" content="<span class="val">article</span>"&gt;
+&lt;meta property="og:url" content="<span class="val">https://firewalkers.earth/press/pr-[N]-[slug].html</span>"&gt;
+&lt;meta property="og:title" content="<span class="val">[Punchy headline — max 60 chars]</span>"&gt;
+&lt;meta property="og:description" content="<span class="val">[Standfirst — max 155 chars]</span>"&gt;
+&lt;meta property="og:image" content="<span class="val">https://images.unsplash.com/photo-[ID]?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=80</span>"&gt;
+&lt;meta property="og:image:width" content="<span class="val">1200</span>"&gt;
+&lt;meta property="og:image:height" content="<span class="val">630</span>"&gt;
+&lt;meta property="og:image:alt" content="<span class="val">[Describe the image]</span>"&gt;
+&lt;meta property="og:site_name" content="<span class="val">The Firewalkers</span>"&gt;
+&lt;meta property="og:locale" content="<span class="val">en_GB</span>"&gt;
+&lt;meta property="article:published_time" content="<span class="val">[YYYY-MM-DD]</span>"&gt;
+&lt;meta property="article:author" content="<span class="val">Scott Seivwright</span>"&gt;
+&lt;meta property="article:section" content="<span class="val">Press Release</span>"&gt;
+
+<span class="comment">&lt;!-- TWITTER / X CARD --&gt;</span>
+&lt;meta name="twitter:card" content="<span class="val">summary_large_image</span>"&gt;
+&lt;meta name="twitter:site" content="<span class="val">@firewalkersearth</span>"&gt;
+&lt;meta name="twitter:creator" content="<span class="val">@firewalkersearth</span>"&gt;
+&lt;meta name="twitter:title" content="<span class="val">[Same as og:title]</span>"&gt;
+&lt;meta name="twitter:description" content="<span class="val">[Same as og:description]</span>"&gt;
+&lt;meta name="twitter:image" content="<span class="val">[Same as og:image]</span>"&gt;
+&lt;meta name="twitter:image:alt" content="<span class="val">[Same as og:image:alt]</span>"&gt;
+
+<span class="comment">&lt;!-- SCHEMA: NewsArticle type for press releases --&gt;</span>
+&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "<span class="val">NewsArticle</span>",
+  "headline": "<span class="val">[Same as title tag]</span>",
+  "description": "<span class="val">[Same as meta description]</span>",
+  "image": {
+    "@type": "ImageObject",
+    "url": "<span class="val">[og:image URL]</span>",
+    "width": 1200,
+    "height": 630
+  },
+  "datePublished": "<span class="val">[YYYY-MM-DD]</span>",
+  "dateModified": "<span class="val">[YYYY-MM-DD]</span>",
+  "author": {
+    "@type": "Person",
+    "name": "<span class="val">Scott Seivwright</span>",
+    "url": "<span class="val">https://firewalkers.earth</span>"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "<span class="val">The Firewalkers</span>",
+    "url": "<span class="val">https://firewalkers.earth</span>",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "<span class="val">https://firewalkers.earth/images/logos/firewalker-logo.png</span>"
+    }
+  },
+  "url": "<span class="val">https://firewalkers.earth/press/pr-[N]-[slug].html</span>",
+  "keywords": ["<span class="val">data centre</span>", "<span class="val">AI infrastructure</span>", "<span class="val">[specific keyword]</span>"],
+  "inLanguage": "<span class="val">en-GB</span>"
+}
+&lt;/script&gt;
+
+<span class="comment">&lt;!-- FONTS &amp; ANALYTICS --&gt;</span>
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&amp;family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" rel="stylesheet"&gt;
+&lt;script async src="https://plausible.io/js/<span class="val">pa-OWigJj1V5aW2Wwon7a10u.js</span>"&gt;&lt;/script&gt;
+  </div>
+</div>
+
+<!-- SECTION 10: CHECKLIST -->
+<div class="sg-section">
+  <span class="sg-section-number">10</span>
+  <h2>Pre-publication checklist</h2>
+  <p class="sg-section-intro">Run through every item before a release goes live. No exceptions. One item missed can undermine the credibility of the whole document.</p>
+
+  <span class="checklist-section">Content</span>
+  <ul class="checklist">
+    <li>Headline contains a specific fact or number — not a slogan</li>
+    <li>Lead paragraph answers: who, what, when, where, why in under 60 words</li>
+    <li>Every statistic in the body is sourced in the source list</li>
+    <li>Scott's quote sounds human — not like a press officer wrote it</li>
+    <li>Author bio is present with photo, credentials, and contact</li>
+    <li>Position box states what we oppose AND what we do not oppose</li>
+    <li>Notes to editors includes availability for interview</li>
+    <li>Ends with "— ends —"</li>
+    <li>Reading age test passed — read aloud, any sentence over 25 words is rewritten</li>
+    <li>Copyright line present — "freely reproducible with attribution"</li>
+  </ul>
+
+  <span class="checklist-section">SEO & Meta</span>
+  <ul class="checklist">
+    <li>Title tag: max 60 chars, keyword-first, matches headline</li>
+    <li>Meta description: 140–160 chars, contains primary keyword, compelling hook</li>
+    <li>Canonical URL set correctly to this page's URL</li>
+    <li>og:title, og:description, og:image all present and correct</li>
+    <li>og:image is exactly 1200×630px with correct Unsplash parameters</li>
+    <li>og:image:width="1200" and og:image:height="630" set explicitly</li>
+    <li>og:locale="en_GB" present</li>
+    <li>article:published_time set to today's date</li>
+    <li>article:author="Scott Seivwright"</li>
+    <li>twitter:site="@firewalkersearth" present</li>
+    <li>twitter:image:alt describes the image</li>
+    <li>Schema.org NewsArticle structured data complete</li>
+    <li>OG preview tested at opengraph.xyz — image loads, text is correct</li>
+    <li>Page added to sitemap.xml</li>
+  </ul>
+
+  <span class="checklist-section">Shareability</span>
+  <ul class="checklist">
+    <li>Share bar present — LinkedIn, X, WhatsApp, Copy link</li>
+    <li>X share link includes pre-written tweet text with @firewalkersearth and hashtags</li>
+    <li>WhatsApp share link includes pre-written conversational message</li>
+    <li>LinkedIn share link present (URL only — LinkedIn generates its own preview)</li>
+    <li>Copy link button tested — copies correct URL, changes to "✓ Copied"</li>
+    <li>OG preview checked on opengraph.xyz</li>
+  </ul>
+
+  <span class="checklist-section">Distribution</span>
+  <ul class="checklist">
+    <li>Media email sent to press list</li>
+    <li>LinkedIn post scheduled — hook + context + link + hashtags</li>
+    <li>X post scheduled — sharp claim + URL + hashtags</li>
+    <li>WhatsApp community post sent</li>
+    <li>Instagram story posted with link in bio</li>
+    <li>Plausible goals checked — verify tracking is working</li>
+  </ul>
+</div>
+
+<!-- SECTION 11: REFERENCE PRESS RELEASES -->
+<div class="sg-section">
+  <span class="sg-section-number">11</span>
+  <h2>Reference press releases — learn from the best</h2>
+  <p class="sg-section-intro">These are exemplary press releases from organisations doing similar work — strong evidence, urgent tone, clear structure, wide reach. Study them before writing a new release.</p>
+
+  <div class="ref-list">
+    <div class="ref-item">
+      <span class="ref-source">The Firewalkers · PR-001</span>
+      <a href="https://firewalkers.earth/press/pr-001-data-centre-gamble.html" target="_blank" rel="noopener">Britain's data centre queue is more than three times the size of the entire national grid — our own benchmark release. Study the structure, key facts box, and quote.</a>
+    </div>
+    <div class="ref-item">
+      <span class="ref-source">Global Action Plan</span>
+      <a href="https://theecologist.org/2026/feb/27/hyperscale-data-centre-protests" target="_blank" rel="noopener">Hyperscale data centre protests — The Ecologist coverage. Note how the campaign message translates into a news story. This is what good placement looks like.</a>
+    </div>
+    <div class="ref-item">
+      <span class="ref-source">Foxglove / Computer Weekly</span>
+      <a href="https://www.computerweekly.com/news/366638940/UK-government-datacentre-planning-decisions-queried-over-environmental-oversight-admission" target="_blank" rel="noopener">UK government data centre planning decisions queried — note the precision of the claim ("serious logical error") and how it drove coverage. One precise legal fact = a story.</a>
+    </div>
+    <div class="ref-item">
+      <span class="ref-source">ERCS Scotland</span>
+      <a href="https://www.ercs.scot/news/data-centres-in-the-scottish-planning-system-would-double-scotlands-energy-demands-press-release/" target="_blank" rel="noopener">Data centres would double Scotland's energy demands — strong local number, clear sourcing, immediate policy relevance. The headline does all the work.</a>
+    </div>
+    <div class="ref-item">
+      <span class="ref-source">Data Center Watch</span>
+      <a href="https://www.datacenterwatch.org/report" target="_blank" rel="noopener">$64 billion of data centre projects blocked — the definitive tracker. Note how the research report structure feeds directly into quotable press release content.</a>
+    </div>
+    <div class="ref-item">
+      <span class="ref-source">United Nations University</span>
+      <a href="https://unu.edu/inweh/news/environmental-cost-of-AIs-Enrgy-use-carbon-water-and-land-footprints" target="_blank" rel="noopener">Environmental cost of AI's energy use — UN-standard release. Strong headline numbers, clean structure, clear position. Note the land footprint figure (14,500 sq km) — a striking anchor stat.</a>
+    </div>
+    <div class="ref-item">
+      <span class="ref-source">Washington Times</span>
+      <a href="https://www.washingtontimes.com/news/2026/jun/10/erin-brockovichs-data-center-map-tops-5000-community-reports-amid/" target="_blank" rel="noopener">Erin Brockovich's data centre map tops 5,000 reports — note how a famous name + a precise number = a news story that spreads. The credibility transfer from a known figure is significant.</a>
+    </div>
+    <div class="ref-item">
+      <span class="ref-source">Surfers Against Sewage</span>
+      <a href="https://www.sas.org.uk/news/" target="_blank" rel="noopener">SAS press releases — not data-centre related but a masterclass in environmental movement communications. Short, urgent, human, quotable. Their release structure is worth studying in full.</a>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 12: PR NUMBER REGISTER -->
+<div class="sg-section">
+  <span class="sg-section-number">12</span>
+  <h2>PR number register</h2>
+  <p class="sg-section-intro">All press releases are numbered sequentially. Update this table each time a new release is published.</p>
+
+  <table class="sg-table">
+    <thead>
+      <tr><th>Number</th><th>Date</th><th>Headline</th><th>URL</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>PR-001</td>
+        <td>10 Jun 2026</td>
+        <td>Britain's data centre queue is more than three times the size of the entire national grid</td>
+        <td><a href="https://firewalkers.earth/press/pr-001-data-centre-gamble.html" style="color:var(--sage);font-size:0.82rem;" target="_blank" rel="noopener">pr-001-data-centre-gamble.html</a></td>
+      </tr>
+      <tr>
+        <td>PR-002</td>
+        <td>11 Jun 2026</td>
+        <td>One data centre in Ireland used enough water for 18,000 people in a single year</td>
+        <td><a href="https://firewalkers.earth/press/pr-002-water-consumption-ai-cooling.html" style="color:var(--sage);font-size:0.82rem;" target="_blank" rel="noopener">pr-002-water-consumption-ai-cooling.html</a></td>
+      </tr>
+      <tr>
+        <td>PR-003</td>
+        <td>15 Jun 2026</td>
+        <td>The poorest households will pay most for the data centre boom</td>
+        <td><a href="https://firewalkers.earth/press/pr-003-affordability-who-pays.html" style="color:var(--sage);font-size:0.82rem;" target="_blank" rel="noopener">pr-003-affordability-who-pays.html</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- FOOTER -->
+<footer style="background:var(--earth);padding:2.5rem 2rem;border-top:2px solid var(--amber);margin-top:0;">
+  <div style="max-width:860px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+    <span style="font-family:var(--font-display);font-size:0.6rem;letter-spacing:0.18em;color:var(--amber-bright);">⁂ The Firewalkers</span>
+    <span style="font-family:var(--font-mono);font-size:0.56rem;color:rgba(250,245,236,0.2);">Press Release Style Guide · v1.0 · June 2026 · Internal document</span>
+    <a href="index.html" style="font-family:var(--font-display);font-size:0.5rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(250,245,236,0.35);text-decoration:none;">← Back to site</a>
+  </div>
+</footer>
+
+</body>
+</html>
