@@ -1,0 +1,182 @@
+<!-- ════════════════════════════════════════════════════════════
+     LIVE DATA CENTRE WATCH  —  auto-updated daily via GitHub Actions
+     Paste this block into datacentre-watch.html where you want the
+     live feed to appear (e.g. just after the page intro / hero).
+     It is self-contained: styles are scoped with the .dcw- prefix
+     and reuse the existing :root brand tokens already on the page.
+     ════════════════════════════════════════════════════════════ -->
+<section class="dcw-live" id="live-applications">
+  <style>
+    .dcw-live{max-width:1100px;margin:4rem auto;padding:0 1.5rem;}
+    .dcw-live h2{
+      font-family:var(--fw-font-display);font-size:1.6rem;letter-spacing:0.04em;
+      color:var(--fw-earth);margin-bottom:0.4rem;
+    }
+    .dcw-live .dcw-sub{
+      font-family:var(--fw-font-body);font-size:1.05rem;color:var(--fw-mist);
+      font-style:italic;margin-bottom:1.5rem;
+    }
+    .dcw-controls{
+      display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;
+      margin-bottom:1.5rem;
+    }
+    .dcw-controls input,.dcw-controls select{
+      font-family:var(--fw-font-mono);font-size:0.8rem;
+      padding:0.55rem 0.8rem;border:1px solid var(--fw-stone);
+      background:var(--fw-parchment);color:var(--fw-earth);border-radius:3px;
+    }
+    .dcw-controls input{flex:1;min-width:200px;}
+    .dcw-meta{
+      font-family:var(--fw-font-mono);font-size:0.72rem;
+      color:var(--fw-mist);letter-spacing:0.05em;margin-bottom:1rem;
+    }
+    .dcw-card{
+      border:1px solid var(--fw-stone);border-left:4px solid var(--fw-amber);
+      background:var(--fw-parchment-warm);
+      padding:1.1rem 1.3rem;margin-bottom:0.9rem;border-radius:3px;
+      transition:border-color 0.2s;
+    }
+    .dcw-card:hover{border-left-color:var(--fw-amber-bright);}
+    .dcw-card .dcw-auth{
+      font-family:var(--fw-font-display);font-size:0.62rem;letter-spacing:0.18em;
+      text-transform:uppercase;color:var(--fw-amber);margin-bottom:0.35rem;
+    }
+    .dcw-card .dcw-addr{
+      font-family:var(--fw-font-body);font-weight:600;font-size:1.12rem;
+      color:var(--fw-earth);margin-bottom:0.35rem;line-height:1.3;
+    }
+    .dcw-card .dcw-desc{
+      font-family:var(--fw-font-body);font-size:1rem;color:var(--fw-earth-mid);
+      line-height:1.55;margin-bottom:0.6rem;
+    }
+    .dcw-card .dcw-foot{
+      display:flex;flex-wrap:wrap;gap:0.6rem 1.2rem;align-items:center;
+      font-family:var(--fw-font-mono);font-size:0.72rem;color:var(--fw-mist);
+    }
+    .dcw-card .dcw-foot a{color:var(--fw-amber);text-decoration:none;border-bottom:1px solid currentColor;}
+    .dcw-state{
+      display:inline-block;padding:0.12rem 0.5rem;border-radius:2px;
+      font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;
+    }
+    .dcw-state.undecided{background:var(--fw-amber-pale);color:var(--fw-amber);}
+    .dcw-state.permitted{background:var(--fw-sage-pale);color:var(--fw-forest);}
+    .dcw-state.rejected{background:var(--fw-urgent-pale);color:var(--fw-urgent);}
+    .dcw-state.other{background:var(--fw-stone);color:var(--fw-earth-mid);}
+    .dcw-empty,.dcw-loading{
+      font-family:var(--fw-font-body);font-style:italic;color:var(--fw-mist);
+      text-align:center;padding:2.5rem 1rem;font-size:1.1rem;
+    }
+    .dcw-note{
+      font-family:var(--fw-font-mono);font-size:0.68rem;color:var(--fw-mist);
+      margin-top:1.5rem;line-height:1.6;border-top:1px solid var(--fw-stone);padding-top:1rem;
+    }
+    .dcw-more{
+      display:block;margin:1.5rem auto 0;padding:0.7rem 1.5rem;
+      font-family:var(--fw-font-display);font-size:0.6rem;letter-spacing:0.18em;
+      text-transform:uppercase;background:var(--fw-earth);color:var(--fw-parchment);
+      border:none;border-radius:3px;cursor:pointer;
+    }
+  </style>
+
+  <h2>Live Watch: data centre applications</h2>
+  <p class="dcw-sub">Every UK planning application mentioning a data centre, hyperscale facility or server farm — updated daily.</p>
+
+  <div class="dcw-controls">
+    <input type="text" id="dcw-search" placeholder="Filter by place, council or keyword…" aria-label="Filter applications">
+    <select id="dcw-state-filter" aria-label="Filter by status">
+      <option value="">All statuses</option>
+      <option value="undecided">Undecided</option>
+      <option value="permitted">Permitted</option>
+      <option value="rejected">Rejected</option>
+    </select>
+  </div>
+
+  <div class="dcw-meta" id="dcw-meta"></div>
+  <div id="dcw-list"><div class="dcw-loading">Loading the latest applications…</div></div>
+  <button class="dcw-more" id="dcw-more" style="display:none;">Show more</button>
+
+  <p class="dcw-note">
+    Source: PlanIt (planit.org.uk), covering UK local planning authorities. Keyword-matched and filtered automatically,
+    so this is a guide, not a complete legal record — always confirm against the relevant council's planning portal.
+    A keyword match is not proof of a data centre. The Republic of Ireland is not yet covered.
+  </p>
+</section>
+
+<script>
+(function(){
+  const LIST = document.getElementById('dcw-list');
+  const META = document.getElementById('dcw-meta');
+  const MORE = document.getElementById('dcw-more');
+  const SEARCH = document.getElementById('dcw-search');
+  const STATEF = document.getElementById('dcw-state-filter');
+  const PAGE = 25;
+  let data = [], shown = PAGE;
+
+  function stateClass(s){
+    s = (s||'').toLowerCase();
+    if(/undecided|pending|registered|consult/.test(s)) return 'undecided';
+    if(/permit|grant|approv/.test(s)) return 'permitted';
+    if(/refus|reject|withdraw|dismiss/.test(s)) return 'rejected';
+    return 'other';
+  }
+  function fmtDate(d){
+    if(!d) return '';
+    const dt = new Date(d);
+    if(isNaN(dt)) return d;
+    return dt.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
+  }
+  function esc(s){return (s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+
+  function filtered(){
+    const q = SEARCH.value.trim().toLowerCase();
+    const sf = STATEF.value;
+    return data.filter(a=>{
+      if(sf && stateClass(a.app_state)!==sf) return false;
+      if(!q) return true;
+      return (`${a.address} ${a.authority_name} ${a.area_name} ${a.description}`).toLowerCase().includes(q);
+    });
+  }
+
+  function render(){
+    const rows = filtered();
+    META.textContent = `${rows.length} application${rows.length===1?'':'s'} found`;
+    if(!rows.length){
+      LIST.innerHTML = '<div class="dcw-empty">No matching applications. Try a broader search — or this may be good news for now.</div>';
+      MORE.style.display='none';
+      return;
+    }
+    LIST.innerHTML = rows.slice(0,shown).map(a=>{
+      const link = a.link ? `<a href="${esc(a.link)}" target="_blank" rel="noopener">View on council portal →</a>` : '';
+      const cls = stateClass(a.app_state);
+      return `<div class="dcw-card">
+        <div class="dcw-auth">${esc(a.authority_name||a.area_name||'Unknown authority')}</div>
+        <div class="dcw-addr">${esc(a.address||'(address not provided)')}</div>
+        <div class="dcw-desc">${esc((a.description||'').slice(0,320))}${(a.description||'').length>320?'…':''}</div>
+        <div class="dcw-foot">
+          <span class="dcw-state ${cls}">${esc(a.app_state||'status unknown')}</span>
+          <span>${fmtDate(a.start_date)}</span>
+          ${link}
+        </div>
+      </div>`;
+    }).join('');
+    MORE.style.display = rows.length>shown ? 'block' : 'none';
+  }
+
+  SEARCH.addEventListener('input',()=>{shown=PAGE;render();});
+  STATEF.addEventListener('change',()=>{shown=PAGE;render();});
+  MORE.addEventListener('click',()=>{shown+=PAGE;render();});
+
+  fetch('data/datacentre-applications.json',{cache:'no-cache'})
+    .then(r=>{if(!r.ok)throw new Error(r.status);return r.json();})
+    .then(j=>{
+      data = j.applications||[];
+      const when = j.generated ? new Date(j.generated).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'}) : '';
+      META.textContent = `${data.length} applications · last updated ${when}`;
+      render();
+    })
+    .catch(()=>{
+      LIST.innerHTML = '<div class="dcw-empty">The live feed could not load right now. Please check back shortly, or browse the council portals directly.</div>';
+    });
+})();
+</script>
+<!-- ════════════════ END LIVE DATA CENTRE WATCH ════════════════ -->

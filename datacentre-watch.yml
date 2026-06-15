@@ -1,0 +1,39 @@
+name: Data Centre Watch — daily update
+
+# Runs once a day and commits fresh planning data into the repo.
+# PlanIt API needs no key, so there are no secrets to configure.
+
+on:
+  schedule:
+    - cron: '17 6 * * *'   # 06:17 UTC daily (offset so we're not on the hour)
+  workflow_dispatch: {}      # lets you trigger it manually from the Actions tab
+
+permissions:
+  contents: write            # allow the workflow to commit the JSON back
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch latest data centre applications
+        run: node scripts/fetch-datacentre.js
+
+      - name: Commit updated data (if changed)
+        run: |
+          git config user.name  "Firewalkers Watch Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/datacentre-applications.json
+          if git diff --staged --quiet; then
+            echo "No changes — nothing to commit."
+          else
+            git commit -m "Data Centre Watch: update $(date -u +%Y-%m-%d)"
+            git push
+          fi
