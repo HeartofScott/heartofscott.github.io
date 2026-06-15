@@ -14,12 +14,7 @@
 <meta property="og:title" content="Data Centre Watch — The Firewalkers">
 <meta property="og:description" content="Live intelligence on data centre planning applications, AI Growth Zone proposals, water and energy impacts, and community resistance.">
 <meta property="og:image" content="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="The Firewalkers">
-<meta name="twitter:site" content="@firewalkersearth">
-<meta name="twitter:creator" content="@firewalkersearth">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Data Centre Watch — The Firewalkers">
 <meta name="twitter:image" content="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80">
@@ -494,7 +489,6 @@ body{
     <div class="fw-secondary-links">
       <a href="good-ai.html">Good AI</a>
       <a href="tools.html">Tools</a>
-      <a href="memes.html">Memes</a>
       <a href="research.html">Research</a>
       <a href="learning.html">Learning</a>
       <a href="media.html">Media</a>
@@ -515,7 +509,6 @@ body{
   <span class="fw-mobile-section-label">Platform</span>
   <a href="good-ai.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Good AI</a>
   <a href="tools.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Tools</a>
-  <a href="memes.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Memes</a>
   <a href="research.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Research</a>
   <a href="learning.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Learning</a>
   <a href="media.html" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">Media</a>
@@ -525,13 +518,13 @@ body{
 <!-- ════ PAGE HERO ════ -->
 <div class="page-hero">
   <div class="page-hero-inner">
-    <span class="page-hero-eyebrow">The Firewalkers · Intelligence Hub · Updated June 2026</span>
+    <span class="page-hero-eyebrow">The Firewalkers · Intelligence Hub · Updated daily</span>
     <h1>Data Centre Watch</h1>
-    <p class="page-hero-desc">Planning applications, policy risks, environmental impacts, and community resistance — curated and updated as developments emerge. Every brief cites sources. Every deadline is real.</p>
+    <p class="page-hero-desc">A live feed of every UK data centre planning application, gathered automatically each day — alongside curated briefs on policy risks, environmental impacts, and community resistance. Every deadline is real.</p>
     <div class="intel-strip">
       <div class="intel-item">
-        <span class="i-num">8</span>
-        <span class="i-lbl">Active briefs</span>
+        <span class="i-num">LIVE</span>
+        <span class="i-lbl">Auto-updated feed</span>
       </div>
       <div class="intel-item">
         <span class="i-num">1</span>
@@ -542,12 +535,113 @@ body{
         <span class="i-lbl">Primary focus</span>
       </div>
       <div class="intel-item">
-        <span class="i-num">Jun 26</span>
-        <span class="i-lbl">Last updated</span>
+        <span class="i-num">Daily</span>
+        <span class="i-lbl">Refresh cadence</span>
       </div>
     </div>
   </div>
 </div>
+
+<!-- ════════════════════════════════════════════════════════════
+     LIVE DATA CENTRE WATCH  —  auto-updated daily via GitHub Actions
+     ════════════════════════════════════════════════════════════ -->
+<section class="dcwlive" id="live-applications">
+  <style>
+    .dcwlive{max-width:1100px;margin:0 auto;padding:3.5rem 2rem 1rem;}
+    .dcwlive-head{margin-bottom:1.75rem;}
+    .dcwlive-label{font-family:var(--fw-font-display);font-size:0.46rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--fw-amber);display:block;margin-bottom:0.6rem;}
+    .dcwlive h2{font-family:var(--fw-font-body);font-style:italic;font-weight:600;font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--fw-earth);line-height:1.1;margin-bottom:0.5rem;}
+    .dcwlive-intro{font-family:var(--fw-font-body);font-size:1.05rem;color:var(--fw-mist);max-width:640px;line-height:1.7;}
+    .dcwlive-controls{display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;margin:1.75rem 0 1rem;}
+    .dcwlive-controls input,.dcwlive-controls select{font-family:var(--fw-font-mono);font-size:0.78rem;padding:0.6rem 0.85rem;border:1px solid var(--fw-stone);background:var(--fw-parchment);color:var(--fw-earth);border-radius:3px;}
+    .dcwlive-controls input{flex:1;min-width:220px;}
+    .dcwlive-controls input:focus,.dcwlive-controls select:focus{outline:none;border-color:var(--fw-amber);}
+    .dcwlive-meta{font-family:var(--fw-font-mono);font-size:0.7rem;color:var(--fw-mist);letter-spacing:0.06em;margin-bottom:1.25rem;}
+    .dcwlive-card{border:1px solid var(--fw-stone);border-left:4px solid var(--fw-amber);background:var(--fw-parchment-warm);padding:1.2rem 1.4rem;margin-bottom:0.9rem;border-radius:3px;transition:border-left-color 0.2s,transform 0.15s;}
+    .dcwlive-card:hover{border-left-color:var(--fw-amber-bright);transform:translateX(2px);}
+    .dcwlive-auth{font-family:var(--fw-font-display);font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--fw-amber);margin-bottom:0.4rem;}
+    .dcwlive-addr{font-family:var(--fw-font-body);font-weight:600;font-size:1.18rem;color:var(--fw-earth);margin-bottom:0.4rem;line-height:1.3;}
+    .dcwlive-desc{font-family:var(--fw-font-body);font-size:1.02rem;color:var(--fw-earth-mid);line-height:1.55;margin-bottom:0.75rem;}
+    .dcwlive-foot{display:flex;flex-wrap:wrap;gap:0.6rem 1.3rem;align-items:center;font-family:var(--fw-font-mono);font-size:0.7rem;color:var(--fw-mist);}
+    .dcwlive-foot a{color:var(--fw-amber);text-decoration:none;border-bottom:1px solid currentColor;}
+    .dcwlive-foot a:hover{color:var(--fw-amber-mid);}
+    .dcwlive-state{display:inline-block;padding:0.14rem 0.55rem;border-radius:2px;font-size:0.64rem;letter-spacing:0.08em;text-transform:uppercase;}
+    .dcwlive-state.undecided{background:var(--fw-amber-pale);color:var(--fw-amber);}
+    .dcwlive-state.permitted{background:var(--fw-sage-pale);color:var(--fw-forest);}
+    .dcwlive-state.rejected{background:var(--fw-urgent-pale);color:var(--fw-urgent);}
+    .dcwlive-state.other{background:var(--fw-stone);color:var(--fw-earth-mid);}
+    .dcwlive-empty,.dcwlive-loading{font-family:var(--fw-font-body);font-style:italic;color:var(--fw-mist);text-align:center;padding:2.5rem 1rem;font-size:1.1rem;}
+    .dcwlive-more{display:block;margin:1.5rem auto 0;padding:0.8rem 1.75rem;font-family:var(--fw-font-display);font-size:0.56rem;letter-spacing:0.22em;text-transform:uppercase;background:var(--fw-earth);color:var(--fw-parchment);border:none;border-radius:3px;cursor:pointer;transition:background 0.2s;}
+    .dcwlive-more:hover{background:var(--fw-earth-mid);}
+    .dcwlive-note{font-family:var(--fw-font-mono);font-size:0.66rem;color:var(--fw-mist);margin-top:1.75rem;line-height:1.7;border-top:1px solid var(--fw-stone);padding-top:1.1rem;}
+  </style>
+
+  <div class="dcwlive-head">
+    <span class="dcwlive-label">Live feed · updated daily</span>
+    <h2>Every data centre application in the UK</h2>
+    <p class="dcwlive-intro">Automatically gathered each morning from UK planning authorities — every application mentioning a data centre, hyperscale facility or server farm. Watch your patch. Read the notice. Lend your voice.</p>
+  </div>
+
+  <div class="dcwlive-controls">
+    <input type="text" id="dcwlive-search" placeholder="Filter by place, council or keyword…" aria-label="Filter applications">
+    <select id="dcwlive-state" aria-label="Filter by status">
+      <option value="">All statuses</option>
+      <option value="undecided">Undecided</option>
+      <option value="permitted">Permitted</option>
+      <option value="rejected">Rejected</option>
+    </select>
+  </div>
+
+  <div class="dcwlive-meta" id="dcwlive-meta"></div>
+  <div id="dcwlive-list"><div class="dcwlive-loading">Loading the latest applications…</div></div>
+  <button class="dcwlive-more" id="dcwlive-more" style="display:none;">Show more</button>
+
+  <p class="dcwlive-note">
+    Source: PlanIt (planit.org.uk), covering UK local planning authorities. Keyword-matched and filtered automatically — a guide, not a complete legal record. A keyword match is not proof of a data centre; always confirm against the relevant council's planning portal. The Republic of Ireland is not yet covered.
+  </p>
+</section>
+
+<script>
+(function(){
+  var LIST=document.getElementById('dcwlive-list'),META=document.getElementById('dcwlive-meta'),
+      MORE=document.getElementById('dcwlive-more'),SR=document.getElementById('dcwlive-search'),
+      SF=document.getElementById('dcwlive-state'),PAGE=25,data=[],shown=PAGE;
+  function sc(s){s=(s||'').toLowerCase();
+    if(/undecided|pending|registered|consult/.test(s))return'undecided';
+    if(/permit|grant|approv/.test(s))return'permitted';
+    if(/refus|reject|withdraw|dismiss/.test(s))return'rejected';return'other';}
+  function fd(d){if(!d)return'';var t=new Date(d);return isNaN(t)?d:t.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});}
+  function esc(s){return(s||'').replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function flt(){var q=SR.value.trim().toLowerCase(),sf=SF.value;
+    return data.filter(function(a){
+      if(sf&&sc(a.app_state)!==sf)return false;
+      if(!q)return true;
+      return((a.address||'')+' '+(a.authority_name||'')+' '+(a.area_name||'')+' '+(a.description||'')).toLowerCase().indexOf(q)>-1;});}
+  function render(){var rows=flt();
+    META.textContent=rows.length+' application'+(rows.length===1?'':'s')+' found';
+    if(!rows.length){LIST.innerHTML='<div class="dcwlive-empty">No matching applications. Try a broader search — or this may be good news for now.</div>';MORE.style.display='none';return;}
+    LIST.innerHTML=rows.slice(0,shown).map(function(a){
+      var link=a.link?'<a href="'+esc(a.link)+'" target="_blank" rel="noopener">View on council portal →</a>':'';
+      var c=sc(a.app_state),d=(a.description||'');
+      return '<div class="dcwlive-card"><div class="dcwlive-auth">'+esc(a.authority_name||a.area_name||'Unknown authority')+'</div>'+
+        '<div class="dcwlive-addr">'+esc(a.address||'(address not provided)')+'</div>'+
+        '<div class="dcwlive-desc">'+esc(d.slice(0,320))+(d.length>320?'…':'')+'</div>'+
+        '<div class="dcwlive-foot"><span class="dcwlive-state '+c+'">'+esc(a.app_state||'status unknown')+'</span>'+
+        '<span>'+fd(a.start_date)+'</span>'+link+'</div></div>';}).join('');
+    MORE.style.display=rows.length>shown?'block':'none';}
+  SR.addEventListener('input',function(){shown=PAGE;render();});
+  SF.addEventListener('change',function(){shown=PAGE;render();});
+  MORE.addEventListener('click',function(){shown+=PAGE;render();});
+  fetch('data/datacentre-applications.json',{cache:'no-cache'})
+    .then(function(r){if(!r.ok)throw 0;return r.json();})
+    .then(function(j){data=j.applications||[];
+      var w=j.generated?new Date(j.generated).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'}):'';
+      META.textContent=data.length+' applications · last updated '+w;render();})
+    .catch(function(){LIST.innerHTML='<div class="dcwlive-empty">The live feed could not load right now. Please check back shortly, or browse the council portals directly.</div>';});
+})();
+</script>
+<!-- ════════════════ END LIVE DATA CENTRE WATCH ════════════════ -->
+
 
 <!-- ════ FILTER TOOLBAR ════ -->
 <div class="watch-toolbar">
@@ -940,7 +1034,6 @@ body{
       <div class="fw-footer-col">
         <h4>Knowledge</h4>
         <a href="research.html">Research</a>
-        <a href="memes.html">Memes</a>
         <a href="learning.html">Learning</a>
         <a href="hearth.html">From the Hearth</a>
         <a href="media.html">Media &amp; Press</a>
@@ -949,15 +1042,14 @@ body{
         <h4>Connect</h4>
         <a href="index.html#signup">Join the Mailing List</a>
         <a href="https://www.youtube.com/@firewalkersearth" target="_blank" rel="noopener">YouTube</a>
-        <a href="https://www.instagram.com/the.firewalkers.earth" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://chat.whatsapp.com/DHQ7dczKNOt7gn85wwijp4" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="community.html#whatsapp">WhatsApp</a>
+        <a href="community.html#discord">Discord</a>
         <a href="mailto:hello@firewalkers.earth">hello@firewalkers.earth</a>
       </div>
     </div>
     <div class="fw-footer-base">
       <span>© 2026 The Firewalkers · firewalkers.earth · Edinburgh, Scotland</span>
       <a href="privacy.html">Privacy</a>
-      <a href="sitemap-visitor.html">Site directory</a>
     </div>
   </div>
 </footer>
@@ -1021,18 +1113,6 @@ document.querySelectorAll('.filter-tab').forEach(btn => {
       alert('Something went wrong — please email hello@firewalkers.earth directly.');
     });
   });
-})();
-</script>
-
-<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top" style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:150;background:var(--amber,#9c5500);color:#fff;border:none;width:44px;height:44px;border-radius:50%;font-size:20px;cursor:pointer;opacity:0;transition:opacity 0.3s;box-shadow:0 2px 12px rgba(0,0,0,0.2);display:flex;align-items:center;justify-content:center;">↑</button>
-<script>
-(function(){
-  var btn=document.getElementById('scroll-top');
-  if(!btn)return;
-  window.addEventListener('scroll',function(){
-    btn.style.opacity=window.scrollY>400?'1':'0';
-    btn.style.pointerEvents=window.scrollY>400?'auto':'none';
-  },{passive:true});
 })();
 </script>
 </body>
