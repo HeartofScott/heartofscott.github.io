@@ -544,7 +544,9 @@ body{
 
 <!-- ════════════════════════════════════════════════════════════
      LIVE DATA CENTRE WATCH  —  auto-updated daily via GitHub Actions
+     Map (Leaflet/OpenStreetMap) + region search + objection highlight
      ════════════════════════════════════════════════════════════ -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <section class="dcwlive" id="live-applications">
   <style>
     .dcwlive{max-width:1100px;margin:0 auto;padding:3.5rem 2rem 1rem;}
@@ -552,14 +554,23 @@ body{
     .dcwlive-label{font-family:var(--fw-font-display);font-size:0.46rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--fw-amber);display:block;margin-bottom:0.6rem;}
     .dcwlive h2{font-family:var(--fw-font-body);font-style:italic;font-weight:600;font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--fw-earth);line-height:1.1;margin-bottom:0.5rem;}
     .dcwlive-intro{font-family:var(--fw-font-body);font-size:1.05rem;color:var(--fw-mist);max-width:640px;line-height:1.7;}
-    .dcwlive-controls{display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;margin:1.75rem 0 1rem;}
+    .dcwlive-stats{display:flex;gap:1px;background:var(--fw-stone);flex-wrap:wrap;margin:1.5rem 0;}
+    .dcwlive-stat{background:var(--fw-parchment-warm);padding:0.85rem 1.25rem;flex:1;min-width:120px;}
+    .dcwlive-stat .s-num{font-family:var(--fw-font-mono);font-size:1.35rem;font-weight:500;color:var(--fw-earth);display:block;line-height:1;}
+    .dcwlive-stat .s-lbl{font-family:var(--fw-font-display);font-size:0.4rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--fw-mist);display:block;margin-top:0.35rem;}
+    .dcwlive-stat.urgent .s-num{color:var(--fw-amber);}
+    #dcwlive-map{height:420px;border:1px solid var(--fw-stone);border-radius:3px;margin-bottom:1.5rem;background:var(--fw-parchment-warm);}
+    .dcwlive-controls{display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;margin:0 0 1rem;}
     .dcwlive-controls input,.dcwlive-controls select{font-family:var(--fw-font-mono);font-size:0.78rem;padding:0.6rem 0.85rem;border:1px solid var(--fw-stone);background:var(--fw-parchment);color:var(--fw-earth);border-radius:3px;}
-    .dcwlive-controls input{flex:1;min-width:220px;}
+    .dcwlive-controls input{flex:1;min-width:200px;}
     .dcwlive-controls input:focus,.dcwlive-controls select:focus{outline:none;border-color:var(--fw-amber);}
+    .dcwlive-controls label.chk{display:flex;align-items:center;gap:0.4rem;font-family:var(--fw-font-mono);font-size:0.72rem;color:var(--fw-earth-mid);cursor:pointer;}
     .dcwlive-meta{font-family:var(--fw-font-mono);font-size:0.7rem;color:var(--fw-mist);letter-spacing:0.06em;margin-bottom:1.25rem;}
     .dcwlive-card{border:1px solid var(--fw-stone);border-left:4px solid var(--fw-amber);background:var(--fw-parchment-warm);padding:1.2rem 1.4rem;margin-bottom:0.9rem;border-radius:3px;transition:border-left-color 0.2s,transform 0.15s;}
     .dcwlive-card:hover{border-left-color:var(--fw-amber-bright);transform:translateX(2px);}
-    .dcwlive-auth{font-family:var(--fw-font-display);font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--fw-amber);margin-bottom:0.4rem;}
+    .dcwlive-card.objectable{border-left-color:var(--fw-urgent);}
+    .dcwlive-auth{font-family:var(--fw-font-display);font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--fw-amber);margin-bottom:0.4rem;display:flex;gap:0.6rem;align-items:center;flex-wrap:wrap;}
+    .dcwlive-nation{font-size:0.55rem;color:var(--fw-mist);border:1px solid var(--fw-stone);padding:0.05rem 0.4rem;border-radius:2px;letter-spacing:0.12em;}
     .dcwlive-addr{font-family:var(--fw-font-body);font-weight:600;font-size:1.18rem;color:var(--fw-earth);margin-bottom:0.4rem;line-height:1.3;}
     .dcwlive-desc{font-family:var(--fw-font-body);font-size:1.02rem;color:var(--fw-earth-mid);line-height:1.55;margin-bottom:0.75rem;}
     .dcwlive-foot{display:flex;flex-wrap:wrap;gap:0.6rem 1.3rem;align-items:center;font-family:var(--fw-font-mono);font-size:0.7rem;color:var(--fw-mist);}
@@ -570,10 +581,14 @@ body{
     .dcwlive-state.permitted{background:var(--fw-sage-pale);color:var(--fw-forest);}
     .dcwlive-state.rejected{background:var(--fw-urgent-pale);color:var(--fw-urgent);}
     .dcwlive-state.other{background:var(--fw-stone);color:var(--fw-earth-mid);}
+    .dcwlive-objtag{font-family:var(--fw-font-display);font-size:0.5rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--fw-urgent);}
     .dcwlive-empty,.dcwlive-loading{font-family:var(--fw-font-body);font-style:italic;color:var(--fw-mist);text-align:center;padding:2.5rem 1rem;font-size:1.1rem;}
     .dcwlive-more{display:block;margin:1.5rem auto 0;padding:0.8rem 1.75rem;font-family:var(--fw-font-display);font-size:0.56rem;letter-spacing:0.22em;text-transform:uppercase;background:var(--fw-earth);color:var(--fw-parchment);border:none;border-radius:3px;cursor:pointer;transition:background 0.2s;}
     .dcwlive-more:hover{background:var(--fw-earth-mid);}
     .dcwlive-note{font-family:var(--fw-font-mono);font-size:0.66rem;color:var(--fw-mist);margin-top:1.75rem;line-height:1.7;border-top:1px solid var(--fw-stone);padding-top:1.1rem;}
+    .leaflet-popup-content{font-family:var(--fw-font-body);font-size:0.95rem;line-height:1.4;}
+    .leaflet-popup-content strong{font-family:var(--fw-font-display);font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--fw-amber);}
+    .leaflet-popup-content a{color:var(--fw-amber);}
   </style>
 
   <div class="dcwlive-head">
@@ -582,14 +597,19 @@ body{
     <p class="dcwlive-intro">Automatically gathered each morning from UK planning authorities — every application mentioning a data centre, hyperscale facility or server farm. Watch your patch. Read the notice. Lend your voice.</p>
   </div>
 
+  <div class="dcwlive-stats" id="dcwlive-stats"></div>
+
+  <div id="dcwlive-map"></div>
+
   <div class="dcwlive-controls">
-    <input type="text" id="dcwlive-search" placeholder="Filter by place, council or keyword…" aria-label="Filter applications">
+    <input type="text" id="dcwlive-search" placeholder="Filter by place, council, nation or keyword… (try “Scotland”)" aria-label="Filter applications">
     <select id="dcwlive-state" aria-label="Filter by status">
       <option value="">All statuses</option>
       <option value="undecided">Undecided</option>
       <option value="permitted">Permitted</option>
       <option value="rejected">Rejected</option>
     </select>
+    <label class="chk"><input type="checkbox" id="dcwlive-obj"> Open for objection only</label>
   </div>
 
   <div class="dcwlive-meta" id="dcwlive-meta"></div>
@@ -597,46 +617,97 @@ body{
   <button class="dcwlive-more" id="dcwlive-more" style="display:none;">Show more</button>
 
   <p class="dcwlive-note">
-    Source: PlanIt (planit.org.uk), covering UK local planning authorities. Keyword-matched and filtered automatically — a guide, not a complete legal record. A keyword match is not proof of a data centre; always confirm against the relevant council's planning portal. The Republic of Ireland is not yet covered.
+    Source: PlanIt (planit.org.uk), covering UK local planning authorities. Keyword-matched and filtered automatically — a guide, not a complete legal record. A keyword match is not proof of a data centre; always confirm against the relevant council's planning portal. "Open for objection" means the application is still undecided — check the portal for the consultation deadline. The Republic of Ireland is not yet covered. Map © OpenStreetMap contributors.
   </p>
 </section>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 (function(){
   var LIST=document.getElementById('dcwlive-list'),META=document.getElementById('dcwlive-meta'),
       MORE=document.getElementById('dcwlive-more'),SR=document.getElementById('dcwlive-search'),
-      SF=document.getElementById('dcwlive-state'),PAGE=25,data=[],shown=PAGE;
+      SF=document.getElementById('dcwlive-state'),OBJ=document.getElementById('dcwlive-obj'),
+      STATS=document.getElementById('dcwlive-stats'),PAGE=25,data=[],shown=PAGE,map=null,layer=null;
+
   function sc(s){s=(s||'').toLowerCase();
-    if(/undecided|pending|registered|consult/.test(s))return'undecided';
-    if(/permit|grant|approv/.test(s))return'permitted';
+    if(/undecided|pending|registered|consult|unresolved/.test(s))return'undecided';
+    if(/permit|grant|approv|condition/.test(s))return'permitted';
     if(/refus|reject|withdraw|dismiss/.test(s))return'rejected';return'other';}
+  function isObjectable(a){return sc(a.app_state)==='undecided';}
   function fd(d){if(!d)return'';var t=new Date(d);return isNaN(t)?d:t.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});}
   function esc(s){return(s||'').replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
-  function flt(){var q=SR.value.trim().toLowerCase(),sf=SF.value;
+
+  function flt(){var q=SR.value.trim().toLowerCase(),sf=SF.value,oo=OBJ.checked;
     return data.filter(function(a){
       if(sf&&sc(a.app_state)!==sf)return false;
+      if(oo&&!isObjectable(a))return false;
       if(!q)return true;
-      return((a.address||'')+' '+(a.authority_name||'')+' '+(a.area_name||'')+' '+(a.description||'')).toLowerCase().indexOf(q)>-1;});}
+      return((a.address||'')+' '+(a.authority_name||'')+' '+(a.area_name||'')+' '+(a.nation||'')+' '+(a.description||'')).toLowerCase().indexOf(q)>-1;});}
+
+  function renderStats(){
+    var open=data.filter(isObjectable).length;
+    var nations={};data.forEach(function(a){nations[a.nation]=(nations[a.nation]||0)+1;});
+    STATS.innerHTML=
+      '<div class="dcwlive-stat"><span class="s-num">'+data.length+'</span><span class="s-lbl">Total applications</span></div>'+
+      '<div class="dcwlive-stat urgent"><span class="s-num">'+open+'</span><span class="s-lbl">Open for objection</span></div>'+
+      '<div class="dcwlive-stat"><span class="s-num">'+(nations.Scotland||0)+'</span><span class="s-lbl">Scotland</span></div>'+
+      '<div class="dcwlive-stat"><span class="s-num">'+(nations.England||0)+'</span><span class="s-lbl">England</span></div>'+
+      '<div class="dcwlive-stat"><span class="s-num">'+((nations.Wales||0)+(nations['Northern Ireland']||0))+'</span><span class="s-lbl">Wales & NI</span></div>';
+  }
+
+  function renderMap(rows){
+    if(!window.L)return;
+    if(!map){
+      map=L.map('dcwlive-map',{scrollWheelZoom:false}).setView([54.5,-3.5],5);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'© OpenStreetMap'}).addTo(map);
+    }
+    if(layer)map.removeLayer(layer);
+    layer=L.layerGroup().addTo(map);
+    var pts=[];
+    rows.forEach(function(a){
+      if(a.lat==null||a.lng==null)return;
+      var open=isObjectable(a);
+      var m=L.circleMarker([a.lat,a.lng],{
+        radius:6,weight:1.5,
+        color:open?'#7a2010':'#9c5500',
+        fillColor:open?'#7a2010':'#d4881c',
+        fillOpacity:0.7
+      });
+      var link=a.link?'<br><a href="'+esc(a.link)+'" target="_blank" rel="noopener">View on council portal →</a>':'';
+      m.bindPopup('<strong>'+esc(a.authority_name||'')+'</strong><br>'+esc((a.address||'').slice(0,80))+'<br><em>'+esc(a.app_state||'')+'</em>'+link);
+      m.addTo(layer);pts.push([a.lat,a.lng]);
+    });
+    if(pts.length){try{map.fitBounds(pts,{padding:[30,30],maxZoom:9});}catch(e){}}
+  }
+
   function render(){var rows=flt();
     META.textContent=rows.length+' application'+(rows.length===1?'':'s')+' found';
+    renderMap(rows);
     if(!rows.length){LIST.innerHTML='<div class="dcwlive-empty">No matching applications. Try a broader search — or this may be good news for now.</div>';MORE.style.display='none';return;}
     LIST.innerHTML=rows.slice(0,shown).map(function(a){
       var link=a.link?'<a href="'+esc(a.link)+'" target="_blank" rel="noopener">View on council portal →</a>':'';
-      var c=sc(a.app_state),d=(a.description||'');
-      return '<div class="dcwlive-card"><div class="dcwlive-auth">'+esc(a.authority_name||a.area_name||'Unknown authority')+'</div>'+
+      var c=sc(a.app_state),d=(a.description||''),open=isObjectable(a);
+      return '<div class="dcwlive-card'+(open?' objectable':'')+'">'+
+        '<div class="dcwlive-auth">'+esc(a.authority_name||a.area_name||'Unknown authority')+
+          '<span class="dcwlive-nation">'+esc(a.nation||'')+'</span>'+
+          (open?'<span class="dcwlive-objtag">● Open for objection</span>':'')+'</div>'+
         '<div class="dcwlive-addr">'+esc(a.address||'(address not provided)')+'</div>'+
         '<div class="dcwlive-desc">'+esc(d.slice(0,320))+(d.length>320?'…':'')+'</div>'+
         '<div class="dcwlive-foot"><span class="dcwlive-state '+c+'">'+esc(a.app_state||'status unknown')+'</span>'+
         '<span>'+fd(a.start_date)+'</span>'+link+'</div></div>';}).join('');
     MORE.style.display=rows.length>shown?'block':'none';}
+
   SR.addEventListener('input',function(){shown=PAGE;render();});
   SF.addEventListener('change',function(){shown=PAGE;render();});
+  OBJ.addEventListener('change',function(){shown=PAGE;render();});
   MORE.addEventListener('click',function(){shown+=PAGE;render();});
+
   fetch('data/datacentre-applications.json',{cache:'no-cache'})
     .then(function(r){if(!r.ok)throw 0;return r.json();})
     .then(function(j){data=j.applications||[];
       var w=j.generated?new Date(j.generated).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'}):'';
-      META.textContent=data.length+' applications · last updated '+w;render();})
+      META.textContent=data.length+' applications · last updated '+w;
+      renderStats();render();})
     .catch(function(){LIST.innerHTML='<div class="dcwlive-empty">The live feed could not load right now. Please check back shortly, or browse the council portals directly.</div>';});
 })();
 </script>
