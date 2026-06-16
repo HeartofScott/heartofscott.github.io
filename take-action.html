@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script defer data-domain="firewalkers.earth" src="https://plausible.io/js/script.js"></script>
+<script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="Svtevcw_M4UFmsXsNvp_hNvWEAz28GBj8ILx_Xi9jCk">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Take Action — Find Your Representatives and Send Your Objection — The Firewalkers</title>
+<meta name="description" content="Enter your postcode to find the council, councillors and MP who decide on data centre applications in your area — then send a personalised, research-backed objection in two taps.">
+<meta name="author" content="Scott Seivwright">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://firewalkers.earth/take-action.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://firewalkers.earth/take-action.html">
+<meta property="og:title" content="Take Action — Find Your Representatives and Send Your Objection">
+<meta property="og:description" content="Find the people who decide on data centre applications in your area, and send a personalised objection built on our research.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --fw-parchment:      #f7f2e8;
+  --fw-parchment-warm: #ede4d0;
+  --fw-stone:          #d6cbb4;
+  --fw-earth:          #1e1610;
+  --fw-earth-mid:      #3a2c1c;
+  --fw-mist:           #7a7262;
+  --fw-amber:          #9c5500;
+  --fw-amber-mid:      #b86810;
+  --fw-amber-bright:   #d4881c;
+  --fw-amber-pale:     #f5e6c8;
+  --fw-forest:         #2d5a38;
+  --fw-sage:           #4a7c58;
+  --fw-sage-pale:      #c8dece;
+  --fw-slate:          #3a4f5c;
+  --fw-slate-mid:      #5a7282;
+  --fw-slate-pale:     #d0dce4;
+  --fw-urgent:         #7a2010;
+  --fw-urgent-pale:    #f2d4cc;
+  --fw-font-display:   'Cinzel', serif;
+  --fw-font-body:      'Cormorant Garamond', Georgia, serif;
+  --fw-font-mono:      'IBM Plex Mono', 'Courier New', monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--fw-parchment);
+  color:var(--fw-earth);
+  font-family:var(--fw-font-body);
+  font-size:18px;line-height:1.85;
+  overflow-x:hidden;
+  padding-top:90px;
+}
+
+/* ── NAV ── */
+.fw-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(247,242,232,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--fw-stone);}
+.fw-nav-primary{padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px;border-bottom:1px solid var(--fw-stone);}
+.fw-nav-secondary{padding:0 2rem;display:flex;align-items:center;justify-content:flex-end;height:34px;background:var(--fw-parchment-warm);}
+.fw-nav-logo{display:flex;align-items:center;gap:0.6rem;text-decoration:none;flex-shrink:0;}
+.fw-nav-logo img{height:26px;width:auto;display:block;}
+.fw-nav-logo-text{font-family:var(--fw-font-display);font-size:0.68rem;letter-spacing:0.2em;color:var(--fw-earth);}
+.fw-primary-links{display:flex;align-items:center;gap:1.75rem;}
+.fw-primary-links a{font-family:var(--fw-font-display);font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--fw-earth-mid);text-decoration:none;transition:color 0.2s;padding-bottom:3px;border-bottom:2px solid transparent;}
+.fw-primary-links a:hover{color:var(--fw-amber);}
+.fw-primary-links a.active{color:var(--fw-amber);border-bottom-color:var(--fw-amber);}
+.fw-nav-cta{font-family:var(--fw-font-display);font-size:0.5rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--fw-parchment)!important;background:var(--fw-amber);padding:0.5rem 1.1rem;text-decoration:none;border-bottom:none!important;transition:background 0.2s!important;white-space:nowrap;}
+.fw-nav-cta:hover{background:var(--fw-amber-mid)!important;}
+.fw-secondary-links{display:flex;align-items:center;gap:1.75rem;}
+.fw-secondary-links a{font-family:var(--fw-font-display);font-size:0.42rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--fw-mist);text-decoration:none;transition:color 0.2s;}
+.fw-secondary-links a:hover{color:var(--fw-amber);}
+.fw-nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+.fw-nav-hamburger span{display:block;width:22px;height:2px;background:var(--fw-earth-mid);}
+.fw-mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--fw-earth);z-index:300;flex-direction:column;justify-content:center;align-items:center;gap:0;padding:2rem;}
+.fw-mobile-menu.open{display:flex;}
+.fw-mobile-close{position:absolute;top:1.25rem;right:1.5rem;font-family:var(--fw-font-display);font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(247,242,232,0.45);background:none;border:none;cursor:pointer;}
+.fw-mobile-menu a{font-family:var(--fw-font-display);font-size:0.9rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(247,242,232,0.65);text-decoration:none;transition:color 0.2s;padding:0.5rem 0;display:block;text-align:center;}
+.fw-mobile-menu a:hover{color:var(--fw-amber-bright);}
+.fw-mobile-cta{color:var(--fw-parchment)!important;background:var(--fw-amber);padding:0.9rem 2.5rem!important;margin-top:1.5rem;display:inline-block!important;}
+
+/* ── HERO ── */
+.page-hero{background:var(--fw-slate);position:relative;overflow:hidden;border-bottom:3px solid var(--fw-slate-mid);}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80');background-size:cover;background-position:center;opacity:0.08;}
+.page-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg, rgba(58,79,92,0.95) 0%, rgba(58,79,92,0.72) 100%);}
+.page-hero-inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:4rem 2rem 3.5rem;}
+.page-hero-eyebrow{font-family:var(--fw-font-mono);font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(208,220,228,0.7);display:block;margin-bottom:1rem;}
+.page-hero h1{font-family:var(--fw-font-body);font-style:italic;font-weight:600;font-size:clamp(2.2rem,5vw,3.8rem);color:#fff;line-height:1.05;margin-bottom:1rem;}
+.page-hero-sub{font-size:1.15rem;color:rgba(247,242,232,0.85);max-width:640px;line-height:1.6;}
+
+/* ── LAYOUT ── */
+.wrap{max-width:760px;margin:0 auto;padding:3.5rem 2rem 2rem;}
+.step-label{font-family:var(--fw-font-mono);font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--fw-amber);display:flex;align-items:center;gap:0.6rem;margin-bottom:1rem;}
+.step-label::before{content:'';width:26px;height:1px;background:var(--fw-amber);display:inline-block;}
+h2.step-head{font-family:var(--fw-font-body);font-style:italic;font-weight:600;font-size:clamp(1.6rem,3.5vw,2.3rem);line-height:1.15;margin-bottom:0.5rem;color:var(--fw-earth);}
+.step-intro{color:var(--fw-earth-mid);margin-bottom:1.5rem;}
+
+/* ── POSTCODE INPUT ── */
+.pc-row{display:flex;gap:0.6rem;flex-wrap:wrap;}
+.pc-input{flex:1;min-width:200px;font-family:var(--fw-font-mono);font-size:1.1rem;letter-spacing:0.08em;text-transform:uppercase;padding:1rem 1.1rem;border:2px solid var(--fw-stone);background:#fff;color:var(--fw-earth);}
+.pc-input:focus{outline:none;border-color:var(--fw-amber);}
+.btn-find{font-family:var(--fw-font-display);font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:#fff;background:var(--fw-amber);border:none;padding:1rem 2rem;cursor:pointer;transition:background 0.2s;white-space:nowrap;}
+.btn-find:hover{background:var(--fw-amber-mid);}
+.btn-find:disabled{opacity:0.55;cursor:wait;}
+.pc-note{font-size:0.95rem;color:var(--fw-mist);margin-top:0.75rem;font-style:italic;}
+.pc-error{background:var(--fw-urgent-pale);border-left:3px solid var(--fw-urgent);color:var(--fw-urgent);padding:0.9rem 1.1rem;margin-top:1rem;font-size:1rem;display:none;}
+.pc-error.show{display:block;}
+
+/* ── RESULTS ── */
+.results{display:none;margin-top:1rem;}
+.results.show{display:block;animation:fade 0.5s ease;}
+@keyframes fade{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+.rep-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:0.5rem;}
+.rep-card{background:#fff;border:1px solid var(--fw-stone);border-top:3px solid var(--fw-slate);padding:1.4rem 1.5rem;}
+.rep-card.council{border-top-color:var(--fw-amber);}
+.rep-card.mp{border-top-color:var(--fw-forest);}
+.rep-role{font-family:var(--fw-font-mono);font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--fw-mist);display:block;margin-bottom:0.5rem;}
+.rep-name{font-family:var(--fw-font-body);font-weight:700;font-size:1.35rem;line-height:1.2;color:var(--fw-earth);margin-bottom:0.2rem;}
+.rep-meta{font-size:0.98rem;color:var(--fw-earth-mid);margin-bottom:0.8rem;}
+.rep-link{font-family:var(--fw-font-display);font-size:0.52rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--fw-amber);text-decoration:none;border-bottom:1px solid transparent;transition:border 0.2s;}
+.rep-link:hover{border-bottom-color:var(--fw-amber);}
+.who-decides{background:var(--fw-amber-pale);border:1px solid var(--fw-amber-bright);padding:1.1rem 1.3rem;margin-top:1.4rem;font-size:1rem;color:var(--fw-earth-mid);line-height:1.6;}
+.who-decides strong{color:var(--fw-amber);}
+
+/* ── CONCERNS ── */
+.concern-list{display:grid;gap:0.7rem;margin-top:0.5rem;}
+.concern{display:flex;gap:0.9rem;align-items:flex-start;background:#fff;border:1px solid var(--fw-stone);padding:1rem 1.2rem;cursor:pointer;transition:border 0.2s,background 0.2s;}
+.concern:hover{border-color:var(--fw-slate-mid);}
+.concern input{margin-top:0.45rem;width:18px;height:18px;flex-shrink:0;accent-color:var(--fw-amber);cursor:pointer;}
+.concern-text strong{display:block;font-weight:700;font-size:1.1rem;color:var(--fw-earth);margin-bottom:0.15rem;}
+.concern-text span{font-size:0.98rem;color:var(--fw-mist);line-height:1.5;}
+.concern.checked{border-color:var(--fw-amber);background:#fffbf2;}
+
+/* ── PERSONAL FIELDS ── */
+.field-group{margin-top:1.2rem;}
+.field-group label{font-family:var(--fw-font-mono);font-size:0.58rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--fw-mist);display:block;margin-bottom:0.4rem;}
+.field-group input:not([type="checkbox"]),.field-group textarea{width:100%;font-family:var(--fw-font-body);font-size:1.05rem;padding:0.8rem 1rem;border:2px solid var(--fw-stone);background:#fff;color:var(--fw-earth);}
+.field-group input:focus,.field-group textarea:focus{outline:none;border-color:var(--fw-amber);}
+.field-group textarea{min-height:90px;resize:vertical;line-height:1.6;}
+
+/* ── EMAIL OUTPUT ── */
+.email-out{display:none;margin-top:1rem;}
+.email-out.show{display:block;animation:fade 0.5s ease;}
+.email-box{background:#fff;border:1px solid var(--fw-stone);border-left:3px solid var(--fw-forest);}
+.email-head{background:var(--fw-parchment-warm);padding:0.8rem 1.2rem;border-bottom:1px solid var(--fw-stone);font-family:var(--fw-font-mono);font-size:0.82rem;color:var(--fw-earth-mid);}
+.email-head .to{display:block;margin-bottom:0.2rem;}
+.email-subject{padding:0.9rem 1.2rem;border-bottom:1px dashed var(--fw-stone);font-weight:700;font-size:1.05rem;}
+.email-body{padding:1.3rem 1.4rem;white-space:pre-wrap;font-size:1.05rem;line-height:1.7;color:var(--fw-earth);max-height:420px;overflow-y:auto;}
+.email-actions{display:flex;gap:0.7rem;flex-wrap:wrap;margin-top:1rem;}
+.btn-copy,.btn-mail{font-family:var(--fw-font-display);font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;padding:1rem 2rem;text-decoration:none;border:none;cursor:pointer;transition:background 0.2s;display:inline-block;}
+.btn-mail{background:var(--fw-forest);color:#fff;}
+.btn-mail:hover{background:var(--fw-sage);}
+.btn-copy{background:var(--fw-slate);color:#fff;}
+.btn-copy:hover{background:var(--fw-slate-mid);}
+.copied-flash{font-family:var(--fw-font-mono);font-size:0.85rem;color:var(--fw-forest);margin-left:0.5rem;opacity:0;transition:opacity 0.2s;align-self:center;}
+.copied-flash.show{opacity:1;}
+
+.divider{height:1px;background:var(--fw-stone);margin:3rem 0;}
+.fine-print{font-size:0.92rem;color:var(--fw-mist);line-height:1.6;font-style:italic;}
+.fine-print a{color:var(--fw-amber);text-decoration:none;border-bottom:1px solid transparent;}
+.fine-print a:hover{border-bottom-color:var(--fw-amber);}
+
+/* ── FOOTER ── */
+.fw-footer{background:var(--fw-earth);color:rgba(247,242,232,0.7);padding:3.5rem 2rem 2rem;margin-top:3rem;}
+.fw-footer-inner{max-width:1100px;margin:0 auto;}
+.fw-footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem;}
+.fw-footer-brand-logo{font-family:var(--fw-font-display);font-size:0.9rem;letter-spacing:0.18em;color:var(--fw-amber-bright);display:block;margin-bottom:1rem;}
+.fw-footer-brand p{font-size:0.98rem;line-height:1.6;margin-bottom:1rem;color:rgba(247,242,232,0.55);}
+.fw-footer-tagline{font-style:italic;font-size:1rem;color:rgba(247,242,232,0.4);}
+.fw-footer-col h4{font-family:var(--fw-font-display);font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(247,242,232,0.4);margin-bottom:1rem;}
+.fw-footer-col a{display:block;font-size:0.98rem;color:rgba(247,242,232,0.7);text-decoration:none;margin-bottom:0.6rem;transition:color 0.2s;}
+.fw-footer-col a:hover{color:var(--fw-amber-bright);}
+.fw-footer-base{border-top:1px solid rgba(247,242,232,0.1);padding-top:1.5rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:0.85rem;color:rgba(247,242,232,0.4);}
+.fw-footer-base a{color:rgba(247,242,232,0.4);text-decoration:none;}
+
+@media(max-width:820px){
+  .fw-primary-links,.fw-nav-secondary{display:none;}
+  .fw-nav-hamburger{display:flex;}
+  .fw-footer-grid{grid-template-columns:1fr 1fr;gap:2rem;}
+}
+@media(max-width:540px){
+  body{padding-top:70px;}
+  .fw-nav-primary{height:54px;}
+  .fw-footer-grid{grid-template-columns:1fr;}
+  .email-actions{flex-direction:column;}
+  .btn-copy,.btn-mail{text-align:center;}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="fw-nav" role="navigation" aria-label="Main navigation">
+  <div class="fw-nav-primary">
+    <a href="index.html" class="fw-nav-logo">
+      <img src="images/logos/firewalker-logo.png" alt="The Firewalkers" onerror="this.style.display='none'">
+      <span class="fw-nav-logo-text">The Firewalkers</span>
+    </a>
+    <div class="fw-primary-links">
+      <a href="campaigns.html">Campaigns</a>
+      <a href="hearth.html">From the Hearth</a>
+      <a href="datacentre-watch.html">Data Centre Watch</a>
+      <a href="community.html">Community</a>
+      <a href="index.html#signup" class="fw-nav-cta">Join the Movement</a>
+    </div>
+    <button class="fw-nav-hamburger" onclick="document.getElementById('fw-mobile-menu').classList.add('open')" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="fw-nav-secondary">
+    <div class="fw-secondary-links">
+      <a href="good-ai.html">Good AI</a>
+      <a href="tools.html">Tools</a>
+      <a href="research.html">Research</a>
+      <a href="learning.html">Learning</a>
+      <a href="media.html">Media</a>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="fw-mobile-menu" id="fw-mobile-menu">
+  <button class="fw-mobile-close" onclick="document.getElementById('fw-mobile-menu').classList.remove('open')">✕ Close</button>
+  <a href="campaigns.html">Campaigns</a>
+  <a href="hearth.html">From the Hearth</a>
+  <a href="datacentre-watch.html">Data Centre Watch</a>
+  <a href="community.html">Community</a>
+  <a href="good-ai.html">Good AI</a>
+  <a href="tools.html">Tools</a>
+  <a href="research.html">Research</a>
+  <a href="learning.html">Learning</a>
+  <a href="media.html">Media</a>
+  <a href="index.html#signup" class="fw-mobile-cta">Join the Movement</a>
+</div>
+
+<!-- HERO -->
+<header class="page-hero">
+  <div class="page-hero-inner">
+    <span class="page-hero-eyebrow">Take Action · Your voice, your area</span>
+    <h1>Find the people who decide — and tell them what you think.</h1>
+    <p class="page-hero-sub">Data centre applications are won and lost locally. Enter your postcode to find your council, your ward, and your MP — then send a personalised objection, built on our research, in two taps.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- STEP 1 -->
+  <section>
+    <span class="step-label">Step one</span>
+    <h2 class="step-head">Who represents your corner of the map?</h2>
+    <p class="step-intro">We use the free, official Postcodes.io and UK Parliament data. Nothing you type is stored, sent to us, or tracked — the lookup happens entirely in your browser.</p>
+    <div class="pc-row">
+      <input type="text" class="pc-input" id="postcode" placeholder="e.g. EH1 1BB" autocomplete="postal-code" aria-label="Your postcode" maxlength="9">
+      <button class="btn-find" id="findBtn" onclick="findReps()">Find my representatives</button>
+    </div>
+    <p class="pc-note">A UK postcode finds your local council (the planning authority), your ward, and your MP.</p>
+    <div class="pc-error" id="pcError"></div>
+
+    <div class="results" id="results">
+      <div class="rep-grid" id="repGrid"></div>
+      <div class="who-decides">
+        <strong>Who actually decides?</strong> For a data centre application, the decision is made by your <strong>council's planning committee</strong> — not your MP. Your MP matters for the bigger picture: grid policy, fast-tracking, and whether national rules protect your area. Write to both. Use the council link above to find the live application and the planning officer's contact.
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- STEP 2 -->
+  <section>
+    <span class="step-label">Step two</span>
+    <h2 class="step-head">What worries you most?</h2>
+    <p class="step-intro">Tick the concerns that matter to you. Each one adds a clear, sourced paragraph drawn from our research to your letter. Pick as many as you like.</p>
+    <div class="concern-list" id="concernList"></div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- STEP 3 -->
+  <section>
+    <span class="step-label">Step three</span>
+    <h2 class="step-head">Make it yours.</h2>
+    <p class="step-intro">A letter in your own name carries far more weight than a form. Add your details and, if you can, a line about why this matters to you personally.</p>
+    <div class="field-group">
+      <label for="yourName">Your name</label>
+      <input type="text" id="yourName" placeholder="Jane MacLeod" oninput="buildEmail()">
+    </div>
+    <div class="field-group">
+      <label for="yourArea">Your street or area (optional)</label>
+      <input type="text" id="yourArea" placeholder="Liberton" oninput="buildEmail()">
+    </div>
+    <div class="field-group">
+      <label for="appRef">Planning application reference, if you have one (optional)</label>
+      <input type="text" id="appRef" placeholder="e.g. 24/01234/FUL" oninput="buildEmail()">
+    </div>
+    <div class="field-group">
+      <label for="personalLine">One personal line — why this place matters to you (optional)</label>
+      <textarea id="personalLine" placeholder="I have walked these hills my whole life, and the burn at the bottom of the field has never run dry…" oninput="buildEmail()"></textarea>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- STEP 4 -->
+  <section>
+    <span class="step-label">Step four</span>
+    <h2 class="step-head">Send it.</h2>
+    <p class="step-intro">Read it over, make it sound like you, then send. Open it straight in your email app, or copy it to paste wherever you need.</p>
+    <div class="email-out show" id="emailOut">
+      <div class="email-box">
+        <div class="email-head"><span class="to" id="emailTo">To: your council's planning team (see Step one)</span><span id="emailFrom"></span></div>
+        <div class="email-subject" id="emailSubject"></div>
+        <div class="email-body" id="emailBody"></div>
+      </div>
+      <div class="email-actions">
+        <a class="btn-mail" id="mailBtn" href="#">Open in email app</a>
+        <button class="btn-copy" onclick="copyEmail()">Copy the letter</button>
+        <span class="copied-flash" id="copiedFlash">Copied ✓</span>
+      </div>
+    </div>
+    <p class="fine-print" style="margin-top:1.5rem;">We never send anything for you — you stay in full control. Be firm, be specific, stay courteous: planning objections carry more weight when they raise material planning considerations (water, traffic, noise, landscape, infrastructure capacity) rather than general opposition. For the full method, read our <a href="objection-guide.html">objection guide</a>.</p>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="fw-footer">
+  <div class="fw-footer-inner">
+    <div class="fw-footer-grid">
+      <div class="fw-footer-brand">
+        <span class="fw-footer-brand-logo">The Firewalkers</span>
+        <p>A global movement using AI to protect the natural world from the environmental impact of data centre infrastructure. Founded in Scotland. Built for everywhere that matters.</p>
+        <span class="fw-footer-tagline">The future belongs to the stewards, not the extractors.</span>
+      </div>
+      <div class="fw-footer-col">
+        <h4>The Movement</h4>
+        <a href="campaigns.html">Campaigns</a>
+        <a href="datacentre-watch.html">Data Centre Watch</a>
+        <a href="community.html">Community</a>
+        <a href="good-ai.html">Good AI</a>
+      </div>
+      <div class="fw-footer-col">
+        <h4>Knowledge</h4>
+        <a href="research.html">Research</a>
+        <a href="learning.html">Learning</a>
+        <a href="hearth.html">From the Hearth</a>
+        <a href="media.html">Media &amp; Press</a>
+      </div>
+      <div class="fw-footer-col">
+        <h4>Connect</h4>
+        <a href="index.html#signup">Join the Mailing List</a>
+        <a href="https://www.youtube.com/@firewalkersearth" target="_blank" rel="noopener">YouTube</a>
+        <a href="community.html#whatsapp">WhatsApp</a>
+        <a href="community.html#discord">Discord</a>
+        <a href="mailto:hello@firewalkers.earth">hello@firewalkers.earth</a>
+      </div>
+    </div>
+    <div class="fw-footer-base">
+      <span>© 2026 The Firewalkers · firewalkers.earth · Edinburgh, Scotland</span>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('fw-mobile-menu').addEventListener('click',function(e){if(e.target===this)this.classList.remove('open');});
+
+// ── State ──
+let reps = { council:null, ward:null, constituency:null, mp:null, mpUrl:null, councilUrl:null, country:null };
+
+// ── Concern library: each draws on Firewalkers PR-001 to PR-004 ──
+const CONCERNS = [
+  { id:'overcapacity', label:'Speculative overcapacity',
+    blurb:'The pipeline may be far bigger than the grid will ever need.',
+    para:'The scale of data centre applications now in the grid connection queue runs well ahead of independent forecasts of actual need — by some analyses, several times the operator\u2019s own 2050 scenarios. A permanent commitment of land, water and landscape should not be made for infrastructure that a significant body of credible analysis suggests may never be built at the scale proposed.' },
+  { id:'water', label:'Water consumption',
+    blurb:'Cooling can draw vast quantities of water, often unassessed.',
+    para:'Large data centres can consume enormous volumes of water for cooling, yet planning systems rarely require operators to disclose how much they will use, when, or what the cumulative effect on the local catchment will be in a dry year. I ask that any approval be conditional on a full, published water-impact assessment and a binding, enforceable supply guarantee.' },
+  { id:'bills', label:'Cost to household bills',
+    blurb:'The grid and water build can land on ordinary bill-payers.',
+    para:'The cost of the grid and water infrastructure this development requires risks being passed on to household bills — and falls hardest on the poorest and most rural households, who are least likely to see any benefit. I ask that the decision account honestly for who pays, and that no public subsidy or socialised cost be committed without that being made transparent.' },
+  { id:'consent', label:'Fast-tracking and local consent',
+    blurb:'"National infrastructure" status can narrow your right to be heard.',
+    para:'Where developments are routed through accelerated or "nationally significant" planning regimes, the same mechanisms that speed approval also narrow the community\u2019s ability to object and to seek review. Speed should not become permanent silence. I ask that local consent, independent oversight and community-benefit conditions be treated as binding requirements, not optional descriptions.' },
+  { id:'landscape', label:'Landscape and local character',
+    blurb:'Industrial-scale sites can permanently alter a place.',
+    para:'A development of this scale would permanently alter the character of the landscape and the amenity of those who live alongside it. The visual impact, the loss of open or productive land, and the industrialisation of a rural or semi-rural setting are material planning considerations that I ask be given full weight.' },
+  { id:'noise', label:'Noise, traffic and construction',
+    blurb:'Ongoing operational and construction disruption.',
+    para:'Beyond construction traffic and disruption, large data centres run continuously, with cooling plant and backup generators that can create persistent low-frequency noise. I ask that operational noise, air quality from backup generation, and the cumulative traffic impact be fully assessed and conditioned.' }
+];
+
+// Render concern checkboxes
+const cl = document.getElementById('concernList');
+CONCERNS.forEach(c=>{
+  const lbl = document.createElement('label');
+  lbl.className='concern';
+  lbl.innerHTML = `<input type="checkbox" value="${c.id}" onchange="toggleConcern(this)">
+    <span class="concern-text"><strong>${c.label}</strong><span>${c.blurb}</span></span>`;
+  cl.appendChild(lbl);
+});
+function toggleConcern(box){
+  box.closest('.concern').classList.toggle('checked', box.checked);
+  buildEmail();
+}
+
+// ── Postcode lookup ──
+async function findReps(){
+  const raw = document.getElementById('postcode').value.trim();
+  const err = document.getElementById('pcError');
+  const btn = document.getElementById('findBtn');
+  err.classList.remove('show');
+  if(!raw){ showError('Please enter your postcode.'); return; }
+  btn.disabled = true; btn.textContent = 'Looking…';
+  try{
+    const pcRes = await fetch('https://api.postcodes.io/postcodes/'+encodeURIComponent(raw));
+    if(!pcRes.ok){ throw new Error('notfound'); }
+    const pc = (await pcRes.json()).result;
+    reps.council = pc.admin_district || pc.admin_county || 'your local council';
+    reps.ward = pc.admin_ward || null;
+    reps.constituency = pc.parliamentary_constituency_2024 || pc.parliamentary_constituency || null;
+    reps.country = pc.country || null;
+    reps.councilUrl = 'https://www.google.com/search?q='+encodeURIComponent(reps.council+' council data centre planning application objection');
+
+    // MP lookup via UK Parliament Members API (keyless, CORS-enabled)
+    reps.mp = null; reps.mpUrl = null;
+    if(reps.constituency){
+      try{
+        const mpRes = await fetch('https://members-api.parliament.uk/api/Location/Constituency/Search?searchText='+encodeURIComponent(reps.constituency)+'&skip=0&take=1');
+        if(mpRes.ok){
+          const items = (await mpRes.json()).items || [];
+          const sitting = items[0]?.value?.currentRepresentation?.member?.value;
+          if(sitting){
+            reps.mp = sitting.nameDisplayAs;
+            reps.mpParty = sitting.latestParty?.name || '';
+            reps.mpUrl = 'https://members.parliament.uk/member/'+sitting.id+'/contact';
+          }
+        }
+      }catch(e){ /* MP optional — continue */ }
+    }
+    renderReps();
+    buildEmail();
+  }catch(e){
+    showError('We couldn\u2019t find that postcode. Check it and try again — or you can still build a letter below and send it to your council directly.');
+  }finally{
+    btn.disabled = false; btn.textContent = 'Find my representatives';
+  }
+}
+function showError(msg){ const err=document.getElementById('pcError'); err.textContent=msg; err.classList.add('show'); }
+
+function renderReps(){
+  const grid = document.getElementById('repGrid');
+  let html = '';
+  html += `<div class="rep-card council">
+    <span class="rep-role">Your council · the planning authority</span>
+    <div class="rep-name">${reps.council}</div>
+    <div class="rep-meta">${reps.ward ? 'Ward: '+reps.ward : 'Decides local planning applications'}</div>
+    <a class="rep-link" href="${reps.councilUrl}" target="_blank" rel="noopener">Find the application & objection page →</a>
+  </div>`;
+  if(reps.mp){
+    html += `<div class="rep-card mp">
+      <span class="rep-role">Your MP${reps.mpParty ? ' · '+reps.mpParty : ''}</span>
+      <div class="rep-name">${reps.mp}</div>
+      <div class="rep-meta">${reps.constituency || ''}</div>
+      <a class="rep-link" href="${reps.mpUrl}" target="_blank" rel="noopener">MP contact details →</a>
+    </div>`;
+  } else if(reps.constituency){
+    html += `<div class="rep-card mp">
+      <span class="rep-role">Your constituency</span>
+      <div class="rep-name">${reps.constituency}</div>
+      <div class="rep-meta">Look up your sitting MP</div>
+      <a class="rep-link" href="https://members.parliament.uk/FindYourMP" target="_blank" rel="noopener">Find your MP →</a>
+    </div>`;
+  }
+  grid.innerHTML = html;
+  document.getElementById('results').classList.add('show');
+  document.getElementById('emailTo').textContent = 'To: ' + reps.council + ' planning team (find the address via the council link above)';
+}
+
+// ── Build the letter ──
+function buildEmail(){
+  const name = (document.getElementById('yourName').value.trim()) || '[your name]';
+  const area = document.getElementById('yourArea').value.trim();
+  const ref  = document.getElementById('appRef').value.trim();
+  const personal = document.getElementById('personalLine').value.trim();
+  const chosen = CONCERNS.filter(c=>document.querySelector('.concern input[value="'+c.id+'"]')?.checked);
+
+  const council = reps.council || 'your council';
+  const subject = ref
+    ? `Objection to planning application ${ref}`
+    : `Objection to data centre development in ${reps.council || 'our area'}`;
+
+  let body = `Dear Planning Team${reps.council ? ' at '+reps.council : ''},\n\n`;
+  body += ref
+    ? `I am writing to formally object to planning application ${ref}.\n\n`
+    : `I am writing to formally object to the proposed data centre development in our area.\n\n`;
+  body += `I am a resident${area ? ' of '+area : ''}${reps.council ? ' in '+reps.council : ''}, and I am asking that my objection be recorded and considered before any decision is made.\n\n`;
+
+  if(personal){ body += personal + '\n\n'; }
+
+  if(chosen.length){
+    body += `My objection rests on the following material planning considerations:\n\n`;
+    chosen.forEach((c,i)=>{ body += `${i+1}. ${c.label}. ${c.para}\n\n`; });
+  } else {
+    body += `My concern is that the cumulative environmental and infrastructure impact of this development has not been adequately assessed, and that the burden of its resource demands risks falling on the local community.\n\n`;
+  }
+
+  body += `I would be grateful for confirmation that this objection has been registered, and for notice of the date on which the application will be considered.\n\n`;
+  body += `Yours faithfully,\n${name}`;
+
+  document.getElementById('emailSubject').textContent = 'Subject: ' + subject;
+  document.getElementById('emailBody').textContent = body;
+  document.getElementById('emailFrom').textContent = 'From: ' + name;
+
+  const mailto = 'mailto:?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+  document.getElementById('mailBtn').setAttribute('href', mailto);
+}
+
+// ── Copy ──
+function copyEmail(){
+  const subject = document.getElementById('emailSubject').textContent.replace(/^Subject:\s*/,'');
+  const body = document.getElementById('emailBody').textContent;
+  const full = subject + '\n\n' + body;
+  navigator.clipboard.writeText(full).then(()=>{
+    const f = document.getElementById('copiedFlash');
+    f.classList.add('show');
+    setTimeout(()=>f.classList.remove('show'), 2000);
+  }).catch(()=>{ showError('Copy didn\u2019t work in this browser — select the text manually.'); });
+}
+
+// Enter key submits postcode
+document.getElementById('postcode').addEventListener('keydown',function(e){ if(e.key==='Enter') findReps(); });
+
+// Build an initial empty draft so Step four is never blank
+buildEmail();
+</script>
+
+</body>
+</html>
