@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="Svtevcw_M4UFmsXsNvp_hNvWEAz28GBj8ILx_Xi9jCk">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x25A0;</text></svg>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Object to a Data Centre — The Firewalkers</title>
+<meta name="description" content="Live intelligence on data centre planning applications, AI Growth Zone proposals, water and energy impacts, and community resistance. Updated June 2026.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://firewalkers.earth/datacentre-watch.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://firewalkers.earth/datacentre-watch.html">
+<meta property="og:title" content="Data Centre Watch — The Firewalkers">
+<meta property="og:description" content="Live intelligence on data centre planning applications, AI Growth Zone proposals, water and energy impacts, and community resistance.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80">
+<meta property="og:site_name" content="The Firewalkers">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Data Centre Watch — The Firewalkers">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Data Centre Watch","url":"https://firewalkers.earth/datacentre-watch.html","publisher":{"@type":"Organization","name":"The Firewalkers","url":"https://firewalkers.earth"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script async src="https://plausible.io/js/pa-OWigJj1V5aW2Wwon7a10u.js"></script>
+<script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
+<style>
+/* ══════════════════════════════════════════
+   FIREWALKERS BRAND TOKENS v2.0
+   ══════════════════════════════════════════ */
+:root {
+  --fw-parchment:      #f7f2e8;
+  --fw-parchment-warm: #ede4d0;
+  --fw-stone:          #d6cbb4;
+  --fw-earth:          #1e1610;
+  --fw-earth-mid:      #3a2c1c;
+  --fw-mist:           #7a7262;
+  --fw-amber:          #9c5500;
+  --fw-amber-mid:      #b86810;
+  --fw-amber-bright:   #d4881c;
+  --fw-amber-pale:     #f5e6c8;
+  --fw-forest:         #2d5a38;
+  --fw-sage:           #4a7c58;
+  --fw-sage-pale:      #c8dece;
+  --fw-slate:          #3a4f5c;
+  --fw-slate-mid:      #5a7282;
+  --fw-slate-pale:     #d0dce4;
+  --fw-urgent:         #7a2010;
+  --fw-urgent-pale:    #f2d4cc;
+  --fw-font-display:   'Cinzel', serif;
+  --fw-font-body:      'Cormorant Garamond', Georgia, serif;
+  --fw-font-mono:      'IBM Plex Mono', 'Courier New', monospace;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--fw-parchment);
+  color:var(--fw-earth);
+  font-family:var(--fw-font-body);
+  font-size:18px;line-height:1.85;
+  overflow-x:hidden;
+  padding-top:90px;
+}
+
+/* ══════════════════════════════════════════
+   TWO-TIER NAV
+   ══════════════════════════════════════════ */
+.fw-nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  background:rgba(247,242,232,0.97);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--fw-stone);
+}
+.fw-nav-primary{
+  padding:0 2rem;
+  display:flex;align-items:center;justify-content:space-between;
+  height:56px;border-bottom:1px solid var(--fw-stone);
+}
+.fw-nav-secondary{
+  padding:0 2rem;
+  display:flex;align-items:center;justify-content:flex-end;
+  height:34px;background:var(--fw-parchment-warm);
+}
+.fw-nav-logo{display:flex;align-items:center;gap:0.6rem;text-decoration:none;flex-shrink:0;}
+.fw-nav-logo img{height:26px;width:auto;display:block;}
+.fw-nav-logo-text{font-family:var(--fw-font-display);font-size:0.68rem;letter-spacing:0.2em;color:var(--fw-earth);}
+.fw-primary-links{display:flex;align-items:center;gap:1.75rem;}
+.fw-primary-links a{
+  font-family:var(--fw-font-display);font-size:0.52rem;
+  letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--fw-earth-mid);text-decoration:none;
+  transition:color 0.2s;padding-bottom:3px;
+  border-bottom:2px solid transparent;
+}
+.fw-primary-links a:hover{color:var(--fw-amber);}
+.fw-primary-links a.active{color:var(--fw-amber);border-bottom-color:var(--fw-amber);}
+.fw-nav-cta{
+  font-family:var(--fw-font-display);font-size:0.5rem;
+  letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--fw-parchment)!important;background:var(--fw-amber);
+  padding:0.5rem 1.1rem;text-decoration:none;
+  border-bottom:none!important;transition:background 0.2s!important;white-space:nowrap;
+}
+.fw-nav-cta:hover{background:var(--fw-amber-mid)!important;}
+.fw-secondary-links{display:flex;align-items:center;gap:1.75rem;}
+.fw-secondary-links a{
+  font-family:var(--fw-font-display);font-size:0.42rem;
+  letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--fw-mist);text-decoration:none;transition:color 0.2s;
+}
+.fw-secondary-links a:hover{color:var(--fw-amber);}
+.fw-nav-hamburger{
+  display:none;flex-direction:column;gap:5px;
+  background:none;border:none;cursor:pointer;padding:4px;
+}
+.fw-nav-hamburger span{display:block;width:22px;height:2px;background:var(--fw-earth-mid);}
+.fw-mobile-menu{
+  display:none;position:fixed;top:0;left:0;right:0;bottom:0;
+  background:var(--fw-earth);z-index:300;
+  flex-direction:column;justify-content:center;align-items:center;gap:0;padding:2rem;
+}
+.fw-mobile-menu.open{display:flex;}
+.fw-mobile-close{
+  position:absolute;top:1.25rem;right:1.5rem;
+  font-family:var(--fw-font-display);font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;
+  color:rgba(247,242,232,0.45);background:none;border:none;cursor:pointer;
+}
+.fw-mobile-section-label{
+  font-family:var(--fw-font-display);font-size:0.4rem;letter-spacing:0.32em;text-transform:uppercase;
+  color:rgba(247,242,232,0.25);display:block;
+  margin:1.5rem 0 0.75rem;width:100%;text-align:center;
+  border-top:1px solid rgba(247,242,232,0.08);padding-top:1.5rem;
+}
+.fw-mobile-section-label:first-of-type{border-top:none;margin-top:0;padding-top:0;}
+.fw-mobile-menu a{
+  font-family:var(--fw-font-display);font-size:0.9rem;letter-spacing:0.16em;text-transform:uppercase;
+  color:rgba(247,242,232,0.65);text-decoration:none;transition:color 0.2s;
+  padding:0.5rem 0;display:block;text-align:center;
+}
+.fw-mobile-menu a:hover{color:var(--fw-amber-bright);}
+.fw-mobile-cta{color:var(--fw-parchment)!important;background:var(--fw-amber);padding:0.9rem 2.5rem!important;margin-top:1.5rem;display:inline-block!important;}
+
+/* ══════════════════════════════════════════
+   BUTTONS
+   ══════════════════════════════════════════ */
+.btn-slate{font-family:var(--fw-font-display);font-size:0.56rem;letter-spacing:0.22em;text-transform:uppercase;color:#fff;background:var(--fw-slate);border:none;padding:0.9rem 1.75rem;text-decoration:none;transition:background 0.25s;display:inline-block;}
+.btn-slate:hover{background:var(--fw-slate-mid);}
+.btn-fire{font-family:var(--fw-font-display);font-size:0.56rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--fw-parchment);background:var(--fw-amber);border:none;padding:0.9rem 1.75rem;text-decoration:none;transition:background 0.25s;display:inline-block;}
+.btn-fire:hover{background:var(--fw-amber-mid);}
+.btn-urgent{font-family:var(--fw-font-display);font-size:0.56rem;letter-spacing:0.22em;text-transform:uppercase;color:#fff;background:var(--fw-urgent);border:none;padding:0.9rem 1.75rem;text-decoration:none;transition:background 0.25s;display:inline-block;}
+.btn-urgent:hover{background:#9a2a14;}
+.btn-ghost-dark{font-family:var(--fw-font-display);font-size:0.56rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--fw-amber);background:transparent;border:1px solid var(--fw-amber);padding:0.9rem 1.75rem;text-decoration:none;transition:all 0.25s;display:inline-block;}
+.btn-ghost-dark:hover{background:var(--fw-amber);color:var(--fw-parchment);}
+
+/* ══════════════════════════════════════════
+   PAGE HERO — slate/intelligence register
+   ══════════════════════════════════════════ */
+.page-hero{
+  background:var(--fw-slate);
+  position:relative;overflow:hidden;
+  border-bottom:3px solid var(--fw-slate-mid);
+}
+.page-hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1920&q=80');
+  background-size:cover;background-position:center;
+  opacity:0.07;
+}
+.page-hero::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg, rgba(58,79,92,0.95) 0%, rgba(58,79,92,0.7) 100%);
+}
+.page-hero-inner{
+  position:relative;z-index:1;
+  max-width:1100px;margin:0 auto;
+  padding:4rem 2rem 3.5rem;
+}
+.page-hero-eyebrow{
+  font-family:var(--fw-font-mono);font-size:0.62rem;
+  letter-spacing:0.2em;text-transform:uppercase;
+  color:rgba(208,220,228,0.6);display:block;margin-bottom:1rem;
+}
+.page-hero h1{
+  font-family:var(--fw-font-body);font-style:italic;font-weight:600;
+  font-size:clamp(2.2rem,5vw,3.8rem);
+  color:#fff;line-height:1.05;margin-bottom:1rem;
+}
+.page-hero-desc{
+  font-size:1.05rem;color:rgba(208,220,228,0.65);
+  max-width:620px;line-height:1.75;margin-bottom:2.5rem;
+}
+
+/* Intelligence strip */
+.intel-strip{
+  display:flex;gap:1px;background:rgba(255,255,255,0.08);
+  flex-wrap:wrap;
+}
+.intel-item{
+  background:rgba(255,255,255,0.05);
+  padding:1rem 1.5rem;flex:1;min-width:140px;
+}
+.intel-item .i-num{
+  font-family:var(--fw-font-mono);font-size:1.4rem;font-weight:500;
+  color:#fff;display:block;line-height:1;letter-spacing:-0.02em;
+}
+.intel-item .i-lbl{
+  font-family:var(--fw-font-display);font-size:0.42rem;
+  letter-spacing:0.18em;text-transform:uppercase;
+  color:rgba(208,220,228,0.5);display:block;margin-top:0.3rem;
+}
+
+/* ══════════════════════════════════════════
+   TOOLBAR — filter + last-updated
+   ══════════════════════════════════════════ */
+.watch-toolbar{
+  background:var(--fw-parchment-warm);
+  border-bottom:1px solid var(--fw-stone);
+  padding:0 2rem;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:1rem;flex-wrap:wrap;
+}
+.filter-tabs{
+  display:flex;gap:0;
+  overflow-x:auto;-webkit-overflow-scrolling:touch;
+}
+.filter-tab{
+  font-family:var(--fw-font-display);font-size:0.46rem;
+  letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--fw-mist);background:none;border:none;
+  padding:0.9rem 1.1rem;cursor:pointer;
+  border-bottom:2px solid transparent;
+  transition:color 0.2s,border-color 0.2s;
+  white-space:nowrap;
+}
+.filter-tab:hover{color:var(--fw-slate);}
+.filter-tab.active{color:var(--fw-slate);border-bottom-color:var(--fw-slate);}
+.last-updated{
+  font-family:var(--fw-font-mono);font-size:0.58rem;
+  color:var(--fw-mist);white-space:nowrap;flex-shrink:0;
+  padding:0.9rem 0;
+}
+
+/* ══════════════════════════════════════════
+   INTELLIGENCE HUB — card grid
+   ══════════════════════════════════════════ */
+.hub-section{
+  padding:3rem 2rem 5rem;
+  max-width:1100px;margin:0 auto;
+}
+
+/* Section dividers within hub */
+.hub-section-label{
+  font-family:var(--fw-font-display);font-size:0.46rem;
+  letter-spacing:0.32em;text-transform:uppercase;
+  color:var(--fw-mist);display:block;
+  margin:2.5rem 0 1.25rem;
+  padding-bottom:0.6rem;
+  border-bottom:1px solid var(--fw-stone);
+}
+.hub-section-label:first-child{margin-top:0;}
+
+.intel-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1.5rem;
+  margin-bottom:1rem;
+}
+
+/* Intel card */
+.intel-card{
+  background:white;
+  border-left:4px solid var(--fw-slate);
+  box-shadow:0 2px 10px rgba(30,22,16,0.06);
+  transition:transform 0.3s,box-shadow 0.3s;
+  display:flex;flex-direction:column;
+}
+.intel-card:hover{transform:translateY(-3px);box-shadow:0 6px 22px rgba(30,22,16,0.1);}
+.intel-card.urgent{border-left-color:var(--fw-urgent);}
+.intel-card.amber{border-left-color:var(--fw-amber);}
+.intel-card.forest{border-left-color:var(--fw-forest);}
+.intel-card.slate{border-left-color:var(--fw-slate);}
+
+.intel-card-img{
+  height:160px;overflow:hidden;flex-shrink:0;
+}
+.intel-card-img img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  filter:saturate(0.55);transition:filter 0.3s;
+}
+.intel-card:hover .intel-card-img img{filter:saturate(0.8);}
+
+.intel-card-body{padding:1.5rem;flex:1;display:flex;flex-direction:column;}
+
+.intel-card-meta{
+  display:flex;align-items:center;gap:0.75rem;
+  margin-bottom:0.6rem;flex-wrap:wrap;
+}
+.intel-tag{
+  font-family:var(--fw-font-display);font-size:0.42rem;
+  letter-spacing:0.16em;text-transform:uppercase;
+  padding:0.2rem 0.55rem;display:inline-block;
+}
+.tag-urgent{color:var(--fw-urgent);background:var(--fw-urgent-pale);}
+.tag-slate{color:var(--fw-slate);background:var(--fw-slate-pale);}
+.tag-amber{color:var(--fw-amber);background:var(--fw-amber-pale);}
+.tag-forest{color:var(--fw-forest);background:var(--fw-sage-pale);}
+.intel-date{
+  font-family:var(--fw-font-mono);font-size:0.58rem;
+  color:var(--fw-mist);
+}
+
+.intel-card-body h3{
+  font-family:var(--fw-font-body);font-weight:600;
+  font-size:1.15rem;color:var(--fw-earth);
+  line-height:1.25;margin-bottom:0.65rem;
+}
+.intel-card-body p{
+  font-size:0.88rem;color:var(--fw-earth-mid);
+  line-height:1.65;margin-bottom:1rem;flex:1;
+}
+
+/* Data rows inside cards */
+.intel-data{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:1px;background:var(--fw-stone);
+  margin:0.75rem 0;
+}
+.intel-datum{background:var(--fw-parchment);padding:0.6rem 0.85rem;}
+.intel-datum .d-key{
+  font-family:var(--fw-font-display);font-size:0.4rem;
+  letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--fw-mist);display:block;margin-bottom:0.15rem;
+}
+.intel-datum .d-val{
+  font-family:var(--fw-font-mono);font-size:0.72rem;
+  color:var(--fw-earth);display:block;
+}
+.intel-datum.alert .d-val{color:var(--fw-urgent);}
+
+.card-link{
+  font-family:var(--fw-font-display);font-size:0.46rem;
+  letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--fw-slate);text-decoration:none;
+  display:inline-flex;align-items:center;gap:0.35rem;
+  transition:gap 0.25s,color 0.25s;margin-top:auto;
+}
+.card-link:hover{gap:0.65rem;color:var(--fw-amber);}
+.card-link.urgent{color:var(--fw-urgent);}
+.card-link.urgent:hover{color:#9a2a14;}
+
+/* ══════════════════════════════════════════
+   SUBMIT INTELLIGENCE — form
+   ══════════════════════════════════════════ */
+.submit-section{
+  background:var(--fw-slate);
+  padding:4rem 2rem;
+  position:relative;overflow:hidden;
+}
+.submit-section::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 0% 100%,rgba(212,136,28,0.1) 0%,transparent 60%);
+}
+.submit-inner{
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:4rem;align-items:start;
+  position:relative;z-index:1;
+}
+.submit-text .eyebrow{
+  font-family:var(--fw-font-mono);font-size:0.56rem;
+  letter-spacing:0.2em;color:rgba(208,220,228,0.5);
+  display:block;margin-bottom:1rem;
+}
+.submit-text h2{
+  font-family:var(--fw-font-body);font-style:italic;font-weight:600;
+  font-size:clamp(1.8rem,3.5vw,2.5rem);
+  color:#fff;line-height:1.1;margin-bottom:1.25rem;
+}
+.submit-text p{
+  font-size:1rem;color:rgba(208,220,228,0.6);
+  line-height:1.85;margin-bottom:1rem;
+}
+.submit-form .field{margin-bottom:1rem;}
+.submit-form label{
+  font-family:var(--fw-font-display);font-size:0.44rem;
+  letter-spacing:0.2em;text-transform:uppercase;
+  color:rgba(208,220,228,0.5);display:block;margin-bottom:0.4rem;
+}
+.submit-form input,
+.submit-form select,
+.submit-form textarea{
+  width:100%;font-family:var(--fw-font-body);font-size:1rem;
+  padding:0.85rem 1.1rem;
+  border:1px solid rgba(208,220,228,0.2);
+  background:rgba(255,255,255,0.06);
+  color:#fff;outline:none;
+  transition:border-color 0.2s,background 0.2s;
+  appearance:none;
+}
+.submit-form select option{background:var(--fw-slate);color:#fff;}
+.submit-form input::placeholder,
+.submit-form textarea::placeholder{color:rgba(208,220,228,0.3);}
+.submit-form input:focus,
+.submit-form select:focus,
+.submit-form textarea:focus{border-color:var(--fw-amber-bright);background:rgba(255,255,255,0.09);}
+.submit-form textarea{resize:vertical;min-height:90px;}
+.submit-form .gdpr-row{display:flex;align-items:flex-start;gap:0.6rem;margin:1rem 0;}
+.submit-form .gdpr-row input[type="checkbox"]{width:auto;flex-shrink:0;margin-top:4px;accent-color:var(--fw-amber);}
+.submit-form .gdpr-row label{font-size:0.85rem;color:rgba(208,220,228,0.45);letter-spacing:0;text-transform:none;font-family:var(--fw-font-body);}
+.submit-form button[type="submit"]{
+  width:100%;font-family:var(--fw-font-display);font-size:0.56rem;
+  letter-spacing:0.24em;text-transform:uppercase;
+  color:var(--fw-parchment);background:var(--fw-amber);
+  border:none;padding:1rem;cursor:pointer;
+  transition:background 0.25s;margin-top:0.5rem;
+}
+.submit-form button[type="submit"]:hover{background:var(--fw-amber-mid);}
+
+/* ══════════════════════════════════════════
+   FOOTER
+   ══════════════════════════════════════════ */
+.fw-footer{background:var(--fw-earth);border-top:2px solid var(--fw-amber);padding:3.5rem 2rem 2rem;}
+.fw-footer-inner{max-width:1100px;margin:0 auto;}
+.fw-footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;}
+.fw-footer-brand-logo{font-family:var(--fw-font-display);font-size:0.82rem;letter-spacing:0.2em;color:var(--fw-amber-bright);display:block;margin-bottom:0.75rem;}
+.fw-footer-brand p{font-size:0.85rem;color:rgba(247,242,232,0.35);line-height:1.65;max-width:240px;}
+.fw-footer-tagline{font-family:var(--fw-font-body);font-style:italic;font-size:0.88rem;color:rgba(247,242,232,0.22);margin-top:1rem;display:block;}
+.fw-footer-col h4{font-family:var(--fw-font-display);font-size:0.46rem;letter-spacing:0.24em;text-transform:uppercase;color:rgba(247,242,232,0.25);margin-bottom:1rem;}
+.fw-footer-col a{display:block;font-family:var(--fw-font-display);font-size:0.5rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(247,242,232,0.45);text-decoration:none;margin-bottom:0.6rem;transition:color 0.2s;}
+.fw-footer-col a:hover{color:var(--fw-amber-bright);}
+.fw-footer-base{border-top:1px solid rgba(247,242,232,0.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;font-family:var(--fw-font-mono);font-size:0.58rem;color:rgba(247,242,232,0.18);}
+.fw-footer-base a{color:rgba(247,242,232,0.3);text-decoration:none;}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════════ */
+@media(max-width:900px){
+  .intel-grid{grid-template-columns:1fr;}
+  .fw-primary-links{gap:1.25rem;}
+}
+@media(max-width:760px){
+  body{padding-top:56px;}
+  .fw-primary-links{display:none;}
+  .fw-nav-secondary{display:none;}
+  .fw-nav-hamburger{display:flex;}
+  .page-hero-inner{padding:3rem 1.25rem 2.5rem;}
+  .intel-strip{flex-direction:row;}
+  .intel-item{min-width:100px;}
+  .watch-toolbar{padding:0 1.25rem;}
+  .hub-section{padding:2rem 1.25rem 3.5rem;}
+  .submit-section{padding:3rem 1.25rem;}
+  .submit-inner{grid-template-columns:1fr;}
+  .intel-data{grid-template-columns:1fr 1fr;}
+  .fw-footer-grid{grid-template-columns:1fr 1fr;gap:2rem;}
+  .fw-footer-base{flex-direction:column;gap:0.75rem;text-align:center;}
+}
+@media(max-width:480px){
+  .intel-data{grid-template-columns:1fr;}
+  .fw-footer-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- ════ TWO-TIER NAV ════ -->
+<nav class="fw-nav" role="navigation" aria-label="Main navigation">
+  <div class="fw-nav-primary">
+    <a href="index.html" class="fw-nav-logo">
+      <img src="images/logos/firewalker-logo.png" alt="The Firewalkers" onerror="this.style.display='none'">
+      <span class="fw-nav-logo-text">The Firewalkers</span>
+    </a>
+    <div class="fw-primary-links">
+      <a href="campaigns.html">Campaigns</a>
+      <a href="hearth.html">From the Hearth</a>
+      <a href="datacentre-watch.html" class="active">Data Centre Watch</a>
+      <a href="community.html">Community</a>
+      <a href="index.html#signup" class="fw-nav-cta">Join the Movement</a>
+    </div>
+    <button class="fw-nav-hamburger"
+            onclick="document.getElementById('fw-mobile-menu').classList.add('open')"
+            aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="fw-nav-secondary">
+    <div class="fw-secondary-links">
+      <a href="good-ai.html">Good AI</a>
+      <a href="tools.html">Tools</a>
+      <a href="research.html">Research</a>
+      <a href="learning.html">Learning</a>
+      <a href="media.html">Media</a>
+    </div>
+  </div>
+</nav>
+<!-- ════════ PAGE HERO ════════ -->
+<header class="page-hero">
+  <div class="page-hero-inner">
+    <span class="page-hero-eyebrow">The Firewalkers · Objection Guide · Updated June 2026</span>
+    <h1 style="font-family:var(--fw-font-body);font-style:italic;font-weight:600;font-size:clamp(2.2rem,5vw,3.6rem);color:var(--fw-parchment);line-height:1.05;margin:0.5rem 0;">How to object to a data centre</h1>
+    <p class="page-hero-desc">A plain, practical guide to standing up for your place — wherever you are in the UK. What counts, how the process works, how to write an objection that lands, and how to turn one voice into many. You do not need to be an expert. You only need to begin.</p>
+    <div class="intel-strip">
+      <div class="intel-item"><span class="i-num">4</span><span class="i-lbl">Steps to object</span></div>
+      <div class="intel-item"><span class="i-num">UK</span><span class="i-lbl">All jurisdictions</span></div>
+      <div class="intel-item"><span class="i-num">Free</span><span class="i-lbl">Anyone can do it</span></div>
+      <div class="intel-item"><span class="i-num">Real</span><span class="i-lbl">Objections that have won</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="guide">
+<style>
+  .guide{max-width:860px;margin:0 auto;padding:3rem 2rem 4rem;}
+  .guide h2{font-family:var(--fw-font-body);font-style:italic;font-weight:600;font-size:clamp(1.6rem,3.2vw,2.3rem);color:var(--fw-earth);line-height:1.15;margin:3rem 0 1rem;}
+  .guide h3{font-family:var(--fw-font-display);font-size:0.75rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--fw-amber);margin:2rem 0 0.85rem;}
+  .guide p{font-family:var(--fw-font-body);font-size:1.08rem;line-height:1.7;color:var(--fw-earth-mid);margin:0 0 1.1rem;}
+  .guide a{color:var(--fw-amber);text-decoration:none;border-bottom:1px solid currentColor;}
+  .guide a:hover{color:var(--fw-amber-mid);}
+  .guide strong{color:var(--fw-earth);font-weight:600;}
+  .guide ul,.guide ol{font-family:var(--fw-font-body);font-size:1.08rem;line-height:1.7;color:var(--fw-earth-mid);margin:0 0 1.2rem;padding-left:1.3rem;}
+  .guide li{margin-bottom:0.5rem;}
+  .guide .lead{font-family:var(--fw-font-body);font-style:italic;font-size:1.2rem;color:var(--fw-earth);line-height:1.6;margin-bottom:1.5rem;}
+
+  /* quick-path steps */
+  .gquick{background:var(--fw-parchment-warm);border:1px solid var(--fw-stone);border-radius:4px;padding:1.75rem 2rem;margin:1.5rem 0 2.5rem;}
+  .gquick h3{margin-top:0;color:var(--fw-earth);}
+  .gsteps{counter-reset:gstep;list-style:none;padding:0;margin:0;}
+  .gsteps li{position:relative;padding-left:3rem;margin-bottom:1.1rem;font-size:1.05rem;}
+  .gsteps li:before{counter-increment:gstep;content:counter(gstep);position:absolute;left:0;top:-0.1rem;width:2rem;height:2rem;background:var(--fw-amber);color:var(--fw-parchment);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--fw-font-display);font-size:0.85rem;}
+
+  /* callout */
+  .gnote{border-left:4px solid var(--fw-amber);background:var(--fw-parchment-warm);padding:1.1rem 1.4rem;margin:1.5rem 0;border-radius:0 4px 4px 0;}
+  .gnote.warn{border-left-color:var(--fw-urgent);}
+  .gnote p{margin:0;font-size:1rem;}
+  .gnote .gnote-lbl{font-family:var(--fw-font-display);font-size:0.6rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--fw-amber);display:block;margin-bottom:0.4rem;}
+  .gnote.warn .gnote-lbl{color:var(--fw-urgent);}
+
+  /* counts table */
+  .gtable{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--fw-stone);border:1px solid var(--fw-stone);border-radius:4px;overflow:hidden;margin:1.5rem 0 2rem;}
+  .gtable .gcol{background:var(--fw-parchment);padding:1.3rem 1.4rem;}
+  .gtable .gcol h4{font-family:var(--fw-font-display);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 0.8rem;}
+  .gtable .gcol.yes h4{color:var(--fw-forest);}
+  .gtable .gcol.no h4{color:var(--fw-urgent);}
+  .gtable ul{margin:0;padding-left:1.1rem;font-size:0.98rem;}
+  .gtable li{margin-bottom:0.45rem;}
+
+  /* jurisdiction selector */
+  .gjur-tabs{display:flex;flex-wrap:wrap;gap:0.5rem;margin:1.5rem 0 0;}
+  .gjur-tab{font-family:var(--fw-font-display);font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.7rem 1.2rem;border:1px solid var(--fw-stone);background:var(--fw-parchment);color:var(--fw-earth-mid);border-radius:3px 3px 0 0;cursor:pointer;border-bottom:none;}
+  .gjur-tab.active{background:var(--fw-earth);color:var(--fw-parchment);}
+  .gjur-panel{display:none;border:1px solid var(--fw-stone);border-radius:0 4px 4px 4px;padding:1.75rem 2rem;background:var(--fw-parchment-warm);}
+  .gjur-panel.active{display:block;}
+  .gjur-panel h3{margin-top:0;}
+  .gjur-meta{font-family:var(--fw-font-mono);font-size:0.78rem;color:var(--fw-earth);background:var(--fw-parchment);border:1px solid var(--fw-stone);border-radius:3px;padding:0.6rem 0.9rem;margin-bottom:1rem;display:inline-block;}
+
+  /* worked examples */
+  .gex{border:1px solid var(--fw-stone);border-left:4px solid var(--fw-sage);border-radius:0 4px 4px 0;padding:1.2rem 1.5rem;margin-bottom:1rem;background:var(--fw-parchment-warm);}
+  .gex h4{font-family:var(--fw-font-body);font-weight:600;font-size:1.15rem;color:var(--fw-earth);margin:0 0 0.5rem;}
+  .gex .gex-quote{font-family:var(--fw-font-body);font-style:italic;font-size:1rem;color:var(--fw-earth-mid);line-height:1.6;border-left:2px solid var(--fw-stone);padding-left:1rem;}
+
+  /* appendix link grid */
+  .glinks{margin:1rem 0 2rem;}
+  .glinks h4{font-family:var(--fw-font-display);font-size:0.66rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--fw-earth);margin:1.2rem 0 0.5rem;}
+  .glinks ul{list-style:none;padding:0;}
+  .glinks li{margin-bottom:0.4rem;font-size:1rem;}
+
+  .gtoc{font-family:var(--fw-font-mono);font-size:0.82rem;background:var(--fw-parchment-warm);border:1px solid var(--fw-stone);border-radius:4px;padding:1.3rem 1.6rem;margin-bottom:2rem;}
+  .gtoc strong{display:block;font-family:var(--fw-font-display);font-size:0.6rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--fw-amber);margin-bottom:0.7rem;}
+  .gtoc a{display:inline-block;margin:0.2rem 1rem 0.2rem 0;}
+  @media(max-width:600px){.gtable{grid-template-columns:1fr;}}
+</style>
+
+<p class="lead">When the diggers come for a glen, a field, a hillside, the law gives ordinary people one real lever: the planning objection. It is far stronger than a signature, and almost anyone can pull it. This guide shows you how — plainly, wherever you live in the UK.</p>
+
+<div class="gtoc">
+  <strong>On this page</strong>
+  <a href="#quick">Object in four steps</a>
+  <a href="#works">Does it work?</a>
+  <a href="#facing">What you're facing</a>
+  <a href="#signs">Warning signs</a>
+  <a href="#counts">What counts</a>
+  <a href="#jurisdiction">Your jurisdiction</a>
+  <a href="#write">Write a strong objection</a>
+  <a href="#beyond">Beyond the objection</a>
+  <a href="#appendix">Appendices &amp; links</a>
+</div>
+
+<!-- QUICK PATH -->
+<div class="gquick" id="quick">
+  <h3>Object in four steps</h3>
+  <ol class="gsteps">
+    <li><strong>Find the application.</strong> Search your council's planning portal (or <a href="https://www.planit.org.uk" target="_blank" rel="noopener">PlanIt</a>, or our own <a href="datacentre-watch.html">Data Centre Watch</a>) by postcode or reference number. Note the reference and — crucially — the <strong>consultation deadline</strong>. It is the only date that matters.</li>
+    <li><strong>Read it, and find the grounds.</strong> What is the harm? Landscape, water, energy, traffic, noise, heritage, wildlife, loss of countryside? These are your <a href="#counts">material considerations</a>.</li>
+    <li><strong>Write your objection</strong> — in your own words, citing those grounds. Use our <a href="datacentre-watch.html#live-applications">draft-an-objection tool</a> to start, then make it personal. A letter in your voice counts far more than a copied one.</li>
+    <li><strong>Submit it before the deadline</strong>, to the right body for your jurisdiction (see below — for the largest schemes it may not be your council).</li>
+  </ol>
+</div>
+
+<!-- DOES IT WORK -->
+<h2 id="works">Does it actually work?</h2>
+<p>Yes — though let's be honest about the odds. Most applications get approved. But data centres have been stopped: a 213MW proposal in Edinburgh's South Gyle was refused, and a London borough's approval of "Europe's largest data centre" was challenged and unwound. What changes outcomes is not volume alone but <strong>well-evidenced objections grounded in planning policy</strong> — and lots of them. A hundred thoughtful, individual letters are a force a council cannot wave away. And even where permission is granted, organised pressure wins conditions, protections and concessions that silence never would. The fight is worth having.</p>
+
+<!-- WHAT YOU'RE FACING -->
+<h2 id="facing">What you're facing</h2>
+<p>A modern AI data centre is not an office or a warehouse. The largest are <strong>hyperscale</strong> — vast halls of computers consuming the power of a small town, cooled by enormous quantities of water, generating few permanent jobs, and often built speculatively before any customer is named. Not every data centre is harmful: a modest one on a brownfield site, reusing an existing building and its waste heat, sited where the grid can bear it, can be reasonable. The question is never simply "data centre: yes or no?" It is <strong>the right development, in the right place, at the right scale, for a real need</strong> — and whether the community that carries the cost sees any benefit.</p>
+<p>That distinction is the heart of it. Your objection is strongest when it is not anti-technology but pro-place: when it shows, specifically, why <em>this</em> proposal, <em>here</em>, at <em>this</em> scale, is the wrong one.</p>
+
+
+<!-- WARNING SIGNS -->
+<h2 id="signs">Reading the application: warning signs</h2>
+<p>You don't need to be a planner to spot a concerning proposal. When you open the documents, look for these — each is a legitimate, material thing to raise:</p>
+<ul>
+  <li><strong>No named end-user.</strong> "Speculative" or "outline" applications ask you to accept a vast industrial site on trust, with no operator committed. If the need isn't proven, that is a planning objection in itself.</li>
+  <li><strong>Vague or missing water figures.</strong> If the application won't say how much water it will draw — especially in a stressed catchment — that silence is the story.</li>
+  <li><strong>Hand-waved energy.</strong> Claims of "renewable supply" with no binding mechanism, or no honest account of grid reinforcement and who pays for it.</li>
+  <li><strong>Greenfield, when brownfield exists.</strong> Building on farmland, moorland or green belt while disused industrial land sits empty nearby.</li>
+  <li><strong>Scale that dwarfs the place.</strong> Buildings measured in tens of metres and hundreds of MW dropped beside a village.</li>
+  <li><strong>Heritage or habitat in the footprint.</strong> A scheduled monument, listed setting, ancient woodland or protected species on or near the site.</li>
+  <li><strong>"Phase one."</strong> A modest first phase that quietly establishes the principle for a far larger build later.</li>
+</ul>
+<div class="gnote"><span class="gnote-lbl">Our Watch does this for you</span><p><a href="datacentre-watch.html">Data Centre Watch</a> ranks every live UK application green, amber or red on exactly these signals — and tells you which are still open for objection.</p></div>
+
+<!-- WHAT COUNTS -->
+<h2 id="counts">What counts — and what doesn't</h2>
+<p>Councils can only weigh <strong>material planning considerations</strong>. This is where most objections fail: people write passionately about things the planning system is not allowed to consider, and those points are simply set aside. Aim your fire where it lands.</p>
+<div class="gtable">
+  <div class="gcol yes">
+    <h4>✓ Counts (material)</h4>
+    <ul>
+      <li>Landscape &amp; visual impact</li>
+      <li>Water demand &amp; abstraction in a stressed area</li>
+      <li>Energy demand &amp; strain on the local grid</li>
+      <li>Loss of greenfield, agricultural or green-belt land</li>
+      <li>Traffic, construction HGVs, access</li>
+      <li>Noise, light pollution, the industrial "hum"</li>
+      <li>Heritage assets &amp; their setting</li>
+      <li>Biodiversity, protected species &amp; habitats</li>
+      <li>Flood risk &amp; drainage</li>
+      <li>Conflict with the local development plan or national policy</li>
+      <li>Whether a genuine local need is demonstrated</li>
+    </ul>
+  </div>
+  <div class="gcol no">
+    <h4>✗ Doesn't count</h4>
+    <ul>
+      <li>"I just don't want it near me"</li>
+      <li>Effect on your house price or property value</li>
+      <li>Loss of a private view</li>
+      <li>Competition or commercial rivalry</li>
+      <li>Who the developer or landowner is</li>
+      <li>Moral objections to AI in the abstract</li>
+      <li>Disruption only during construction</li>
+      <li>Matters covered by other laws (e.g. employment)</li>
+    </ul>
+  </div>
+</div>
+<div class="gnote"><span class="gnote-lbl">The three questions</span><p>For any data centre, press these three — they are material, and they are rarely answered well: <strong>Where does the water come from?</strong> <strong>Where does the power come from?</strong> <strong>Who pays — and what is left behind — if the demand never arrives?</strong></p></div>
+
+<!-- JURISDICTION -->
+<h2 id="jurisdiction">Your jurisdiction</h2>
+<p>The grounds for objecting are the same across the UK — but <em>where you send your objection, how long you have, and who decides</em> differ. Before anything else, settle one question:</p>
+<div class="gnote warn"><span class="gnote-lbl">⚠ First, find out who decides</span><p><strong>An objection sent to the wrong body counts for nothing.</strong> Most data centres are decided by your local council — but since October 2025, large ones in England can opt into the national <strong>NSIP / Development Consent Order</strong> route, decided by the Secretary of State through the Planning Inspectorate, <em>not</em> your council. If you see "DCO" or "Development Consent Order", it is on the national route — find the Inspectorate's project page and register there. Wales (DNS) and Northern Ireland (regionally significant) have their own national forks too. Confirm the route, then choose your jurisdiction below.</p></div>
+
+<div class="gjur-tabs" role="tablist">
+  <button class="gjur-tab active" data-jur="eng">England</button>
+  <button class="gjur-tab" data-jur="sco">Scotland</button>
+  <button class="gjur-tab" data-jur="wal">Wales</button>
+  <button class="gjur-tab" data-jur="ni">N. Ireland</button>
+</div>
+
+<div class="gjur-panel active" data-jur="eng">
+  <h3>England</h3>
+  <div class="gjur-meta">Window: usually 21 days (minor) · up to 6 weeks (major). The portal shows the real deadline.</div>
+  <p><strong>Most applications:</strong> decided by your Local Planning Authority (your council). Find the application on the council's planning portal or the national <a href="https://www.planningportal.co.uk" target="_blank" rel="noopener">Planning Portal</a>, and submit your representation online, by email, or by letter to the named case officer before the deadline.</p>
+  <p><strong>The big fork:</strong> large data centres can now opt into the <strong>NSIP</strong> regime under the Planning Act 2008. These are decided by the Secretary of State, with applications made to the <a href="https://national-infrastructure-consenting.planninginspectorate.gov.uk" target="_blank" rel="noopener">Planning Inspectorate</a>. The process is different: you register as an "interested party" and make representations at the examination stage. If an application mentions a "Development Consent Order" or "DCO", it is on this route — check the Inspectorate's project page, not your council.</p>
+  <p><strong>Who decides:</strong> council planning committee or delegated officer (local route); Secretary of State (DCO route). Refusals can be appealed by the developer to the Planning Inspectorate.</p>
+</div>
+
+<div class="gjur-panel" data-jur="sco">
+  <h3>Scotland</h3>
+  <div class="gjur-meta">Determination: 2 months (local) · 4 months (major/national). Comment early — don't wait.</div>
+  <p><strong>How:</strong> find and comment on applications through <a href="https://www.eplanning.scotland.gov.uk" target="_blank" rel="noopener">ePlanning Scotland</a> or your council's portal. Comments are called <strong>representations</strong> — set out your reasons; simply stating opposition is not enough.</p>
+  <p><strong>Your strongest ally:</strong> <strong>community councils are statutory consultees</strong> with the right to comment on every application in their area. Contact yours early — a coordinated community-council response carries real weight.</p>
+  <p><strong>Major &amp; national developments</strong> (most large data centres) require the developer to serve a <strong>Proposal of Application Notice (PAN)</strong> and carry out 12 weeks of pre-application community consultation <em>before</em> submitting. That consultation is your first and best chance to be heard — turn up, ask the three questions, get them on the record.</p>
+  <p><strong>Free help:</strong> <a href="https://www.pas.org.uk" target="_blank" rel="noopener">Planning Aid Scotland</a> offers free, impartial advice. Note: Scottish policy is broadly supportive of data centres using renewable energy generated in Scotland — so scrutinise the energy claims closely.</p>
+</div>
+
+<div class="gjur-panel" data-jur="wal">
+  <h3>Wales</h3>
+  <div class="gjur-meta">DNS representation window: at least 5 weeks once an application is publicised.</div>
+  <p><strong>Most applications:</strong> decided by your Local Planning Authority. Find them on the council's portal and submit representations before the deadline.</p>
+  <p><strong>The fork:</strong> large infrastructure goes through the <strong>Developments of National Significance (DNS)</strong> route, decided by Welsh Ministers and handled by <a href="https://gov.wales/planning-and-environment-decisions-wales" target="_blank" rel="noopener">Planning and Environment Decisions Wales (PEDW)</a>. View documents on the <a href="https://planningcasework.service.gov.wales" target="_blank" rel="noopener">planning casework portal</a>; once an application is accepted and publicised you have at least five weeks to write to PEDW with your comments on the merits of the scheme. An Inspector examines it and recommends; the Minister decides.</p>
+  <p>Data centres are not yet named in Welsh planning policy, so the development plan and material considerations carry the argument. Representations may be made in Welsh or English.</p>
+</div>
+
+<div class="gjur-panel" data-jur="ni">
+  <h3>Northern Ireland</h3>
+  <div class="gjur-meta">Check the council portal for the consultation period on each application.</div>
+  <p><strong>Most applications:</strong> since 2015, the <strong>11 district councils</strong> handle most planning. Find and comment on applications through the <a href="https://www.planningni.gov.uk" target="_blank" rel="noopener">NI Planning Portal</a> or your council, before the consultation deadline.</p>
+  <p><strong>The fork:</strong> <strong>regionally significant</strong> applications are decided by the <strong>Department for Infrastructure</strong> rather than the council. Appeals are heard by the <a href="https://www.pacni.gov.uk" target="_blank" rel="noopener">Planning Appeals Commission</a>.</p>
+  <p>As in Wales, data centres are not named in NI planning policy, so anchor your objection in the local development plan and the material considerations above.</p>
+</div>
+
+<!-- WRITE A STRONG OBJECTION -->
+<h2 id="write">Write a strong objection</h2>
+<p>The anatomy is simple. Keep it clear, specific, and in your own words:</p>
+<ol>
+  <li><strong>Heading</strong> — your name and address, the application reference, the site address, and the word <strong>OBJECTION</strong>.</li>
+  <li><strong>One opening line</strong> stating that you object and why, in a sentence.</li>
+  <li><strong>Your grounds</strong> — one short paragraph each, every one a material consideration, the strongest first. Tie each to harm you can describe.</li>
+  <li><strong>Local knowledge</strong> — the thing only you can say. The lane that already floods. The bats over the field. The view from the school. This is what makes a real objection, not a template.</li>
+  <li><strong>A clear ask</strong> — that the application be refused, or that specific protections be required.</li>
+</ol>
+<div class="gnote"><span class="gnote-lbl">Why your own words matter</span><p>Identical, copied objections are often counted as a single representation. A hundred letters in a hundred voices count as a hundred. Start from a draft if you like — then make it unmistakably yours.</p></div>
+
+<h3>Four grounds, worked</h3>
+<div class="gex"><h4>Landscape &amp; visual impact</h4><p class="gex-quote">"The proposed buildings, at up to 35m, would be visible across the valley and would industrialise an open rural skyline that the local plan designates for protection. The cumulative effect, alongside existing infrastructure, fundamentally changes the character of the area, contrary to Policy [x]."</p></div>
+<div class="gex"><h4>Water &amp; environment</h4><p class="gex-quote">"The application gives no firm figure for water consumption in a catchment already classed as water-stressed. Evaporative cooling on this scale risks abstraction the local supply cannot sustain, with no assessment of the impact on the [river/aquifer] or on existing users."</p></div>
+<div class="gex"><h4>Energy, grid &amp; community cost</h4><p class="gex-quote">"At [x] MW, this single development would draw power on the scale of a small town. The grid reinforcement it requires is paid for through charges that fall on ordinary bill-payers, while the application offers no binding commitment to the renewable supply it claims and no measurable benefit to the community left carrying the cost. Private reward, public risk, is not a sound planning basis."</p></div>
+<div class="gex"><h4>Speculative — no proven need</h4><p class="gex-quote">"No end-user is identified. This is speculative development: should no operator be secured, the community is left with an industrial site, sunk infrastructure cost, and no benefit. Permission should not be granted for a need that has not been demonstrated."</p></div>
+
+<!-- BEYOND -->
+<h2 id="beyond">Beyond the objection</h2>
+<ul>
+  <li><strong>Get your neighbours to object.</strong> Numbers count. Share the deadline, the reference, and these grounds — but urge everyone to write in their own words.</li>
+  <li><strong>Work with your council</strong> — parish, community or town. In Scotland they are statutory consultees; everywhere they carry local weight.</li>
+  <li><strong>Write to your councillor and your MP / MSP / MS / MLA.</strong> Ask them to call the application to committee, or to speak.</li>
+  <li><strong>Ask to speak at the planning committee.</strong> Most allow objectors a few minutes. Prepare, be specific, be calm.</li>
+  <li><strong>Reach the media</strong> when the moment is right — local press first. A clear story with real people moves things.</li>
+  <li><strong>Judicial review</strong> is the last resort — a challenge to the <em>lawfulness</em> of a decision, not its merits, on a tight time limit. Take legal advice early; communities have used it (Havering, the Lammermuirs) to real effect.</li>
+</ul>
+
+
+<h3>Your objection checklist</h3>
+<div class="gtable" style="grid-template-columns:1fr;">
+  <div class="gcol">
+    <ul style="list-style:none;padding:0;">
+      <li>☐ Found the application &amp; noted its <strong>reference number</strong></li>
+      <li>☐ Confirmed which body decides it (council, or national route)</li>
+      <li>☐ Found the <strong>consultation deadline</strong> on the official portal</li>
+      <li>☐ Read the documents &amp; noted the warning signs</li>
+      <li>☐ Chosen my strongest <strong>material</strong> grounds</li>
+      <li>☐ Written it in my own words, with local detail only I can give</li>
+      <li>☐ Made a clear ask (refuse, or require specific protections)</li>
+      <li>☐ Submitted before the deadline &amp; kept a copy</li>
+      <li>☐ Asked neighbours to object too — in their own words</li>
+      <li>☐ Contacted my community/parish council &amp; my elected representatives</li>
+    </ul>
+  </div>
+</div>
+
+<!-- APPENDICES -->
+<h2 id="appendix">Appendices &amp; useful links</h2>
+<div class="glinks">
+  <h4>Find applications</h4>
+  <ul>
+    <li><a href="datacentre-watch.html">Firewalkers Data Centre Watch</a> — live UK feed, ranked, with objection tools</li>
+    <li><a href="https://www.planit.org.uk" target="_blank" rel="noopener">PlanIt</a> — search planning applications UK-wide</li>
+  </ul>
+  <h4>Object — by jurisdiction</h4>
+  <ul>
+    <li>England: <a href="https://www.planningportal.co.uk" target="_blank" rel="noopener">Planning Portal</a> · <a href="https://national-infrastructure-consenting.planninginspectorate.gov.uk" target="_blank" rel="noopener">Planning Inspectorate (DCO/NSIP)</a></li>
+    <li>Scotland: <a href="https://www.eplanning.scotland.gov.uk" target="_blank" rel="noopener">ePlanning Scotland</a> · <a href="https://www.pas.org.uk" target="_blank" rel="noopener">Planning Aid Scotland</a></li>
+    <li>Wales: <a href="https://gov.wales/planning-and-environment-decisions-wales" target="_blank" rel="noopener">PEDW</a> · <a href="https://planningcasework.service.gov.wales" target="_blank" rel="noopener">Planning casework portal</a></li>
+    <li>N. Ireland: <a href="https://www.planningni.gov.uk" target="_blank" rel="noopener">NI Planning Portal</a> · <a href="https://www.pacni.gov.uk" target="_blank" rel="noopener">Planning Appeals Commission</a></li>
+  </ul>
+  <h4>Allies &amp; evidence</h4>
+  <ul>
+    <li><a href="https://www.aprs.scot" target="_blank" rel="noopener">APRS</a> — Action to Protect Rural Scotland</li>
+    <li><a href="https://www.cpre.org.uk" target="_blank" rel="noopener">CPRE</a> — the countryside charity (England)</li>
+    <li><a href="https://www.globalactionplan.org.uk" target="_blank" rel="noopener">Global Action Plan</a> — Stop Dirty Data Centres</li>
+  </ul>
+  <h4>Glossary</h4>
+  <ul>
+    <li><strong>Material consideration</strong> — a factor the planning authority is legally allowed to weigh.</li>
+    <li><strong>NSIP / DCO</strong> — Nationally Significant Infrastructure Project / Development Consent Order (England's national route).</li>
+    <li><strong>DNS</strong> — Development of National Significance (Wales's national route).</li>
+    <li><strong>PAN / PAC</strong> — Proposal of Application Notice / pre-application consultation (Scotland, major developments).</li>
+    <li><strong>LPA</strong> — Local Planning Authority (your council).</li>
+    <li><strong>Hyperscale</strong> — the largest class of data centre, often hundreds of MW.</li>
+  </ul>
+</div>
+
+<div class="gnote"><span class="gnote-lbl">A note on this guide</span><p>This is general guidance, current as of June 2026, not legal advice — planning law and deadlines change, and the only date that binds is the one on the official portal. For a specific fight, take local advice and check the authority's own pages. But don't let the process intimidate you into silence: it was built to be used by ordinary people, and it works best when they do. <strong>The land is worth the letter. Begin.</strong></p></div>
+
+</main>
+
+<script>
+(function(){
+  var tabs=document.querySelectorAll('.gjur-tab'),panels=document.querySelectorAll('.gjur-panel');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    var j=t.getAttribute('data-jur');
+    tabs.forEach(function(x){x.classList.toggle('active',x===t);});
+    panels.forEach(function(p){p.classList.toggle('active',p.getAttribute('data-jur')===j);});
+  });});
+})();
+</script>
+<footer class="fw-footer">
+  <div class="fw-footer-inner">
+    <div class="fw-footer-grid">
+      <div class="fw-footer-brand">
+        <span class="fw-footer-brand-logo">The Firewalkers</span>
+        <p>A global movement using AI to protect the natural world from the environmental impact of data centre infrastructure. Founded in Scotland. Built for everywhere that matters.</p>
+        <span class="fw-footer-tagline">The future belongs to the stewards, not the extractors.</span>
+      </div>
+      <div class="fw-footer-col">
+        <h4>The Movement</h4>
+        <a href="campaigns.html">Campaigns</a>
+        <a href="datacentre-watch.html">Data Centre Watch</a>
+        <a href="community.html">Community</a>
+        <a href="good-ai.html">Good AI</a>
+      </div>
+      <div class="fw-footer-col">
+        <h4>Knowledge</h4>
+        <a href="research.html">Research</a>
+        <a href="learning.html">Learning</a>
+        <a href="hearth.html">From the Hearth</a>
+        <a href="media.html">Media &amp; Press</a>
+      </div>
+      <div class="fw-footer-col">
+        <h4>Connect</h4>
+        <a href="index.html#signup">Join the Mailing List</a>
+        <a href="https://www.youtube.com/@firewalkersearth" target="_blank" rel="noopener">YouTube</a>
+        <a href="community.html#whatsapp">WhatsApp</a>
+        <a href="community.html#discord">Discord</a>
+        <a href="mailto:hello@firewalkers.earth">hello@firewalkers.earth</a>
+      </div>
+    </div>
+    <div class="fw-footer-base">
+      <span>© 2026 The Firewalkers · firewalkers.earth · Edinburgh, Scotland</span>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 70);
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.05 });
+reveals.forEach(el => obs.observe(el));
+
+document.getElementById('fw-mobile-menu').addEventListener('click', function(e){
+  if (e.target === this) this.classList.remove('open');
+});
+
+document.querySelectorAll('.filter-tab').forEach(btn => {
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+</script>
+
+
+
+<script>
+(function(){
+  var form = document.getElementById('fw-form-intel');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var btn = form.querySelector('button[type="submit"]');
+    var orig = btn ? btn.textContent : '';
+    if(btn){ btn.textContent = 'Sending…'; btn.disabled = true; }
+    var data = new FormData(form);
+    data.delete('a_password');
+    data.append('access_key', '17e64310-dd7a-443a-95db-c11ef8ba9379');
+    data.append('subject', 'Data Centre Watch Report — The Firewalkers');
+    data.append('from_name', 'Firewalkers Website');
+    data.append('botcheck', '');
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: data
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(res){
+      if(res.success){
+        form.innerHTML = '<p style="font-family:var(--fw-font-display,Cinzel,serif);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;padding:1.5rem 0;color:inherit;">Thank you — message received.</p>';
+      } else {
+        if(btn){ btn.textContent = orig; btn.disabled = false; }
+        alert('Error: ' + (res.message || 'Unknown error') + ' — please email hello@firewalkers.earth directly.');
+      }
+    })
+    .catch(function(err){
+      if(btn){ btn.textContent = orig; btn.disabled = false; }
+      alert('Something went wrong — please email hello@firewalkers.earth directly.');
+    });
+  });
+})();
+</script>
+</body>
+</html>
