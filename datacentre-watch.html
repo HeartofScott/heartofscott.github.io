@@ -544,72 +544,104 @@ body{
 
 <!-- ════════════════════════════════════════════════════════════
      LIVE DATA CENTRE WATCH  —  auto-updated daily via GitHub Actions
-     Map (Leaflet/OpenStreetMap) + region search + objection highlight
+     Traffic-light scoring · featured campaigns · map · objection toolkit
      ════════════════════════════════════════════════════════════ -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <section class="dcwlive" id="live-applications">
   <style>
     .dcwlive{max-width:1100px;margin:0 auto;padding:3.5rem 2rem 1rem;}
-    .dcwlive-head{margin-bottom:1.75rem;}
+    .dcwlive-head{margin-bottom:1.5rem;}
     .dcwlive-label{font-family:var(--fw-font-display);font-size:0.46rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--fw-amber);display:block;margin-bottom:0.6rem;}
     .dcwlive h2{font-family:var(--fw-font-body);font-style:italic;font-weight:600;font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--fw-earth);line-height:1.1;margin-bottom:0.5rem;}
+    .dcwlive h3{font-family:var(--fw-font-display);font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--fw-earth);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--fw-stone);}
     .dcwlive-intro{font-family:var(--fw-font-body);font-size:1.05rem;color:var(--fw-mist);max-width:640px;line-height:1.7;}
-    .dcwlive-stats{display:flex;gap:1px;background:var(--fw-stone);flex-wrap:wrap;margin:1.5rem 0;}
-    .dcwlive-stat{background:var(--fw-parchment-warm);padding:0.85rem 1.25rem;flex:1;min-width:120px;}
+    /* traffic-light legend */
+    .dcwlive-legend{display:flex;gap:1.5rem;flex-wrap:wrap;margin:1.25rem 0;font-family:var(--fw-font-mono);font-size:0.72rem;color:var(--fw-earth-mid);}
+    .dcwlive-legend span{display:flex;align-items:center;gap:0.45rem;}
+    .tl-dot{width:11px;height:11px;border-radius:50%;display:inline-block;}
+    .tl-dot.green{background:#3d6e48;} .tl-dot.amber{background:#d4881c;} .tl-dot.red{background:#8b2a0f;}
+    .dcwlive-stats{display:flex;gap:1px;background:var(--fw-stone);flex-wrap:wrap;margin:1.25rem 0;}
+    .dcwlive-stat{background:var(--fw-parchment-warm);padding:0.85rem 1.25rem;flex:1;min-width:110px;}
     .dcwlive-stat .s-num{font-family:var(--fw-font-mono);font-size:1.35rem;font-weight:500;color:var(--fw-earth);display:block;line-height:1;}
-    .dcwlive-stat .s-lbl{font-family:var(--fw-font-display);font-size:0.4rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--fw-mist);display:block;margin-top:0.35rem;}
-    .dcwlive-stat.urgent .s-num{color:var(--fw-amber);}
+    .dcwlive-stat .s-lbl{font-family:var(--fw-font-display);font-size:0.4rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--fw-mist);display:block;margin-top:0.35rem;}
+    .dcwlive-stat.red .s-num{color:#8b2a0f;}
     #dcwlive-map{height:420px;border:1px solid var(--fw-stone);border-radius:3px;margin-bottom:1.5rem;background:var(--fw-parchment-warm);}
+    /* featured campaign cards */
+    .dcwlive-featured{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1rem;margin-bottom:1rem;}
+    .feat-card{border:1px solid var(--fw-stone);border-top:5px solid #8b2a0f;background:var(--fw-parchment-warm);padding:1.4rem 1.5rem;border-radius:3px;display:flex;flex-direction:column;}
+    .feat-card .feat-tag{font-family:var(--fw-font-display);font-size:0.5rem;letter-spacing:0.16em;text-transform:uppercase;color:#8b2a0f;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.4rem;}
+    .feat-card .feat-title{font-family:var(--fw-font-body);font-weight:600;font-size:1.3rem;color:var(--fw-earth);line-height:1.25;margin-bottom:0.5rem;}
+    .feat-card .feat-note{font-family:var(--fw-font-body);font-size:0.98rem;color:var(--fw-earth-mid);line-height:1.55;margin-bottom:0.75rem;}
+    .feat-card ul{list-style:none;padding:0;margin:0 0 1rem;}
+    .feat-card li{font-family:var(--fw-font-body);font-size:0.92rem;color:var(--fw-earth-mid);padding-left:1.1rem;position:relative;line-height:1.5;margin-bottom:0.25rem;}
+    .feat-card li:before{content:"▸";position:absolute;left:0;color:#8b2a0f;}
+    .feat-actions{margin-top:auto;display:flex;flex-wrap:wrap;gap:0.6rem;}
+    .feat-btn{font-family:var(--fw-font-display);font-size:0.55rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.6rem 1.1rem;border-radius:3px;text-decoration:none;border:1px solid;}
+    .feat-btn.primary{background:#8b2a0f;color:#faf5ec;border-color:#8b2a0f;}
+    .feat-btn.ghost{background:transparent;color:var(--fw-earth);border-color:var(--fw-stone);}
+    .feat-btn.object{background:var(--fw-earth);color:var(--fw-parchment);border-color:var(--fw-earth);cursor:pointer;}
+    /* controls */
     .dcwlive-controls{display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;margin:0 0 1rem;}
     .dcwlive-controls input,.dcwlive-controls select{font-family:var(--fw-font-mono);font-size:0.78rem;padding:0.6rem 0.85rem;border:1px solid var(--fw-stone);background:var(--fw-parchment);color:var(--fw-earth);border-radius:3px;}
     .dcwlive-controls input{flex:1;min-width:200px;}
     .dcwlive-controls input:focus,.dcwlive-controls select:focus{outline:none;border-color:var(--fw-amber);}
-    .dcwlive-controls label.chk{display:flex;align-items:center;gap:0.4rem;font-family:var(--fw-font-mono);font-size:0.72rem;color:var(--fw-earth-mid);cursor:pointer;}
-    .dcwlive-meta{font-family:var(--fw-font-mono);font-size:0.7rem;color:var(--fw-mist);letter-spacing:0.06em;margin-bottom:1.25rem;}
-    .dcwlive-card{border:1px solid var(--fw-stone);border-left:4px solid var(--fw-amber);background:var(--fw-parchment-warm);padding:1.2rem 1.4rem;margin-bottom:0.9rem;border-radius:3px;transition:border-left-color 0.2s,transform 0.15s;}
-    .dcwlive-card:hover{border-left-color:var(--fw-amber-bright);transform:translateX(2px);}
-    .dcwlive-card.objectable{border-left-color:var(--fw-urgent);}
-    .dcwlive-auth{font-family:var(--fw-font-display);font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--fw-amber);margin-bottom:0.4rem;display:flex;gap:0.6rem;align-items:center;flex-wrap:wrap;}
-    .dcwlive-nation{font-size:0.55rem;color:var(--fw-mist);border:1px solid var(--fw-stone);padding:0.05rem 0.4rem;border-radius:2px;letter-spacing:0.12em;}
-    .dcwlive-addr{font-family:var(--fw-font-body);font-weight:600;font-size:1.18rem;color:var(--fw-earth);margin-bottom:0.4rem;line-height:1.3;}
-    .dcwlive-desc{font-family:var(--fw-font-body);font-size:1.02rem;color:var(--fw-earth-mid);line-height:1.55;margin-bottom:0.75rem;}
-    .dcwlive-foot{display:flex;flex-wrap:wrap;gap:0.6rem 1.3rem;align-items:center;font-family:var(--fw-font-mono);font-size:0.7rem;color:var(--fw-mist);}
-    .dcwlive-foot a{color:var(--fw-amber);text-decoration:none;border-bottom:1px solid currentColor;}
-    .dcwlive-foot a:hover{color:var(--fw-amber-mid);}
-    .dcwlive-state{display:inline-block;padding:0.14rem 0.55rem;border-radius:2px;font-size:0.64rem;letter-spacing:0.08em;text-transform:uppercase;}
-    .dcwlive-state.undecided{background:var(--fw-amber-pale);color:var(--fw-amber);}
-    .dcwlive-state.permitted{background:var(--fw-sage-pale);color:var(--fw-forest);}
-    .dcwlive-state.rejected{background:var(--fw-urgent-pale);color:var(--fw-urgent);}
-    .dcwlive-state.other{background:var(--fw-stone);color:var(--fw-earth-mid);}
-    .dcwlive-objtag{font-family:var(--fw-font-display);font-size:0.5rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--fw-urgent);}
+    .dcwlive-meta{font-family:var(--fw-font-mono);font-size:0.7rem;color:var(--fw-mist);letter-spacing:0.06em;margin-bottom:1rem;}
+    /* list cards */
+    .dcwlive-card{border:1px solid var(--fw-stone);border-left:5px solid var(--fw-stone);background:var(--fw-parchment-warm);padding:1.1rem 1.3rem;margin-bottom:0.8rem;border-radius:3px;transition:transform 0.15s;}
+    .dcwlive-card:hover{transform:translateX(2px);}
+    .dcwlive-card.green{border-left-color:#3d6e48;} .dcwlive-card.amber{border-left-color:#d4881c;} .dcwlive-card.red{border-left-color:#8b2a0f;}
+    .dcwlive-toprow{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap;}
+    .dcwlive-auth{font-family:var(--fw-font-display);font-size:0.6rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--fw-amber);margin-bottom:0.35rem;}
+    .dcwlive-light{font-family:var(--fw-font-display);font-size:0.52rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.18rem 0.55rem;border-radius:2px;white-space:nowrap;}
+    .dcwlive-light.green{background:var(--fw-sage-pale,#e3ece1);color:#3d6e48;} .dcwlive-light.amber{background:var(--fw-amber-pale,#f3e4cf);color:#9c5500;} .dcwlive-light.red{background:#f1ddd6;color:#8b2a0f;}
+    .dcwlive-addr{font-family:var(--fw-font-body);font-weight:600;font-size:1.12rem;color:var(--fw-earth);margin-bottom:0.3rem;line-height:1.3;}
+    .dcwlive-reasons{font-family:var(--fw-font-mono);font-size:0.68rem;color:var(--fw-mist);margin-bottom:0.5rem;line-height:1.5;}
+    .dcwlive-desc{font-family:var(--fw-font-body);font-size:0.98rem;color:var(--fw-earth-mid);line-height:1.5;margin-bottom:0.6rem;}
+    .dcwlive-foot{display:flex;flex-wrap:wrap;gap:0.6rem 1.2rem;align-items:center;font-family:var(--fw-font-mono);font-size:0.7rem;color:var(--fw-mist);}
+    .dcwlive-foot a,.dcwlive-foot button.objlink{color:var(--fw-amber);text-decoration:none;border:none;background:none;border-bottom:1px solid currentColor;font-family:var(--fw-font-mono);font-size:0.7rem;cursor:pointer;padding:0;}
+    .dcwlive-more{display:block;margin:1.5rem auto 0;padding:0.8rem 1.75rem;font-family:var(--fw-font-display);font-size:0.56rem;letter-spacing:0.22em;text-transform:uppercase;background:var(--fw-earth);color:var(--fw-parchment);border:none;border-radius:3px;cursor:pointer;}
     .dcwlive-empty,.dcwlive-loading{font-family:var(--fw-font-body);font-style:italic;color:var(--fw-mist);text-align:center;padding:2.5rem 1rem;font-size:1.1rem;}
-    .dcwlive-more{display:block;margin:1.5rem auto 0;padding:0.8rem 1.75rem;font-family:var(--fw-font-display);font-size:0.56rem;letter-spacing:0.22em;text-transform:uppercase;background:var(--fw-earth);color:var(--fw-parchment);border:none;border-radius:3px;cursor:pointer;transition:background 0.2s;}
-    .dcwlive-more:hover{background:var(--fw-earth-mid);}
     .dcwlive-note{font-family:var(--fw-font-mono);font-size:0.66rem;color:var(--fw-mist);margin-top:1.75rem;line-height:1.7;border-top:1px solid var(--fw-stone);padding-top:1.1rem;}
-    .leaflet-popup-content{font-family:var(--fw-font-body);font-size:0.95rem;line-height:1.4;}
-    .leaflet-popup-content strong{font-family:var(--fw-font-display);font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--fw-amber);}
-    .leaflet-popup-content a{color:var(--fw-amber);}
+    /* objection modal */
+    .obj-overlay{display:none;position:fixed;inset:0;background:rgba(34,24,17,0.6);z-index:9999;align-items:center;justify-content:center;padding:1.5rem;}
+    .obj-overlay.open{display:flex;}
+    .obj-modal{background:var(--fw-parchment);max-width:640px;width:100%;max-height:88vh;overflow:auto;border-radius:5px;padding:2rem;border-top:6px solid #8b2a0f;}
+    .obj-modal h3{margin-top:0;border:none;}
+    .obj-modal p{font-family:var(--fw-font-body);font-size:0.98rem;color:var(--fw-earth-mid);line-height:1.6;}
+    .obj-modal textarea{width:100%;min-height:230px;font-family:var(--fw-font-mono);font-size:0.8rem;padding:1rem;border:1px solid var(--fw-stone);border-radius:3px;background:var(--fw-parchment-warm);color:var(--fw-earth);line-height:1.6;resize:vertical;}
+    .obj-actions{display:flex;gap:0.6rem;flex-wrap:wrap;margin-top:1rem;}
+    .obj-close{float:right;background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--fw-mist);line-height:1;}
+    .leaflet-popup-content{font-family:var(--fw-font-body);font-size:0.92rem;line-height:1.4;}
+    .leaflet-popup-content strong{font-family:var(--fw-font-display);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--fw-amber);}
   </style>
 
   <div class="dcwlive-head">
     <span class="dcwlive-label">Live feed · updated daily</span>
     <h2>Every data centre application in the UK</h2>
-    <p class="dcwlive-intro">Automatically gathered each morning from UK planning authorities — every application mentioning a data centre, hyperscale facility or server farm. Watch your patch. Read the notice. Lend your voice.</p>
+    <p class="dcwlive-intro">Gathered automatically each morning from UK planning authorities, then weighed against a simple test: is this the right development, in the right place, at the right scale? We rank each one with a traffic light — and help you object to the worst.</p>
+    <div class="dcwlive-legend">
+      <span><i class="tl-dot green"></i> Green — defensible or already stopped</span>
+      <span><i class="tl-dot amber"></i> Amber — questions to ask</span>
+      <span><i class="tl-dot red"></i> Red — worth opposing</span>
+    </div>
   </div>
 
   <div class="dcwlive-stats" id="dcwlive-stats"></div>
 
+  <h3 id="featured-h">Campaigns worth your voice</h3>
+  <div class="dcwlive-featured" id="dcwlive-featured"></div>
+
+  <h3>The full national feed</h3>
   <div id="dcwlive-map"></div>
 
   <div class="dcwlive-controls">
     <input type="text" id="dcwlive-search" placeholder="Filter by place, council, nation or keyword… (try “Scotland”)" aria-label="Filter applications">
-    <select id="dcwlive-state" aria-label="Filter by status">
-      <option value="">All statuses</option>
-      <option value="undecided">Undecided</option>
-      <option value="permitted">Permitted</option>
-      <option value="rejected">Rejected</option>
+    <select id="dcwlive-light" aria-label="Filter by traffic light">
+      <option value="">All lights</option>
+      <option value="red">🔴 Red — worth opposing</option>
+      <option value="amber">🟡 Amber — questions to ask</option>
+      <option value="green">🟢 Green — defensible</option>
     </select>
-    <label class="chk"><input type="checkbox" id="dcwlive-obj"> Open for objection only</label>
   </div>
 
   <div class="dcwlive-meta" id="dcwlive-meta"></div>
@@ -617,89 +649,144 @@ body{
   <button class="dcwlive-more" id="dcwlive-more" style="display:none;">Show more</button>
 
   <p class="dcwlive-note">
-    Source: PlanIt (planit.org.uk), covering UK local planning authorities. Keyword-matched and filtered automatically — a guide, not a complete legal record. A keyword match is not proof of a data centre; always confirm against the relevant council's planning portal. "Open for objection" means the application is still undecided — check the portal for the consultation deadline. The Republic of Ireland is not yet covered. Map © OpenStreetMap contributors.
+    Source: PlanIt (planit.org.uk), covering UK local planning authorities. The traffic light is The Firewalkers' own assessment, computed from each application's published details and shown with its reasons — it is a guide to help you decide where your voice matters, not a legal judgment. A keyword match is not proof of a data centre; always confirm against the relevant council's planning portal, where the consultation deadline is given. Some figures are campaigners' estimates and are attributed as such. The Republic of Ireland is not yet covered. Map © OpenStreetMap contributors.
   </p>
 </section>
+
+<!-- Objection toolkit modal -->
+<div class="obj-overlay" id="obj-overlay">
+  <div class="obj-modal">
+    <button class="obj-close" id="obj-close" aria-label="Close">×</button>
+    <h3>Object to this application</h3>
+    <p>A planning objection counts for far more than a signature. Here is a draft, already filled in with what we know. Edit it to add your own voice and your address, then send it to the council's planning portal before the consultation deadline.</p>
+    <textarea id="obj-text" aria-label="Draft objection"></textarea>
+    <div class="obj-actions">
+      <button class="feat-btn object" id="obj-copy">Copy to clipboard</button>
+      <a class="feat-btn ghost" id="obj-portal" href="#" target="_blank" rel="noopener">Open council portal →</a>
+    </div>
+    <p style="font-size:0.8rem;margin-top:1rem;">Objections must usually be based on <em>material planning considerations</em> — landscape and visual impact, water and energy demand on the community, traffic, noise, heritage, wildlife, and whether the need is proven. Personal or purely commercial objections carry less weight. Be specific, be local, be your own voice.</p>
+  </div>
+</div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 (function(){
   var LIST=document.getElementById('dcwlive-list'),META=document.getElementById('dcwlive-meta'),
       MORE=document.getElementById('dcwlive-more'),SR=document.getElementById('dcwlive-search'),
-      SF=document.getElementById('dcwlive-state'),OBJ=document.getElementById('dcwlive-obj'),
-      STATS=document.getElementById('dcwlive-stats'),PAGE=25,data=[],shown=PAGE,map=null,layer=null;
+      LF=document.getElementById('dcwlive-light'),STATS=document.getElementById('dcwlive-stats'),
+      FEAT=document.getElementById('dcwlive-featured'),FEATH=document.getElementById('featured-h'),
+      OV=document.getElementById('obj-overlay'),OT=document.getElementById('obj-text'),
+      OPORTAL=document.getElementById('obj-portal'),PAGE=25,data=[],shown=PAGE,map=null,layer=null;
+  var LIGHTHEX={green:'#3d6e48',amber:'#d4881c',red:'#8b2a0f'};
 
-  function sc(s){s=(s||'').toLowerCase();
-    if(/undecided|pending|registered|consult|unresolved/.test(s))return'undecided';
-    if(/permit|grant|approv|condition/.test(s))return'permitted';
-    if(/refus|reject|withdraw|dismiss/.test(s))return'rejected';return'other';}
-  function isObjectable(a){return sc(a.app_state)==='undecided';}
-  function fd(d){if(!d)return'';var t=new Date(d);return isNaN(t)?d:t.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});}
   function esc(s){return(s||'').replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function fd(d){if(!d)return'';var t=new Date(d);return isNaN(t)?d:t.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});}
+  function lightLabel(l){return l==='red'?'Worth opposing':l==='amber'?'Questions to ask':'Defensible';}
 
-  function flt(){var q=SR.value.trim().toLowerCase(),sf=SF.value,oo=OBJ.checked;
-    return data.filter(function(a){
-      if(sf&&sc(a.app_state)!==sf)return false;
-      if(oo&&!isObjectable(a))return false;
-      if(!q)return true;
-      return((a.address||'')+' '+(a.authority_name||'')+' '+(a.area_name||'')+' '+(a.nation||'')+' '+(a.description||'')).toLowerCase().indexOf(q)>-1;});}
+  function objectionDraft(a){
+    var council=a.authority_name||a.curatedTitle||'the Council';
+    var ref=a.name&&!a.standalone?('\nApplication reference: '+a.name):'';
+    var addr=a.address?('\nSite: '+a.address):'';
+    var reasons=(a.reasons||[]).map(function(r){return '  • '+r;}).join('\n');
+    return 'To the Planning Department, '+council+','+ref+addr+'\n\n'+
+      'I wish to OBJECT to this data centre application.\n\n'+
+      'My objection rests on the following material planning considerations:\n'+
+      (reasons||'  • Scale and visual impact on the local landscape\n  • Energy and water demand placed on the community\n  • Whether the need for this development is genuinely proven')+'\n\n'+
+      'I am concerned that a development of this kind, in this location, represents the wrong development in the wrong place. I ask that the application be refused, or that the developer be required to demonstrate genuine local need, proven mitigation of its energy and water demands, and meaningful benefit to the community that bears its costs.\n\n'+
+      '[Add your own words here — why this place matters to you. Personal, local detail carries real weight.]\n\n'+
+      'Yours faithfully,\n[Your name]\n[Your address]';
+  }
+  function openObjection(a){
+    OT.value=objectionDraft(a);
+    if(a.link){OPORTAL.href=a.link;OPORTAL.style.display='';}else{OPORTAL.style.display='none';}
+    OV.classList.add('open');
+  }
+  document.getElementById('obj-close').addEventListener('click',function(){OV.classList.remove('open');});
+  OV.addEventListener('click',function(e){if(e.target===OV)OV.classList.remove('open');});
+  document.getElementById('obj-copy').addEventListener('click',function(){
+    OT.select();try{document.execCommand('copy');this.textContent='Copied ✓';var b=this;setTimeout(function(){b.textContent='Copy to clipboard';},1800);}catch(e){}
+  });
 
   function renderStats(){
-    var open=data.filter(isObjectable).length;
-    var nations={};data.forEach(function(a){nations[a.nation]=(nations[a.nation]||0)+1;});
+    var c={red:0,amber:0,green:0},nat={};
+    data.forEach(function(a){c[a.light]=(c[a.light]||0)+1;nat[a.nation]=(nat[a.nation]||0)+1;});
     STATS.innerHTML=
-      '<div class="dcwlive-stat"><span class="s-num">'+data.length+'</span><span class="s-lbl">Total applications</span></div>'+
-      '<div class="dcwlive-stat urgent"><span class="s-num">'+open+'</span><span class="s-lbl">Open for objection</span></div>'+
-      '<div class="dcwlive-stat"><span class="s-num">'+(nations.Scotland||0)+'</span><span class="s-lbl">Scotland</span></div>'+
-      '<div class="dcwlive-stat"><span class="s-num">'+(nations.England||0)+'</span><span class="s-lbl">England</span></div>'+
-      '<div class="dcwlive-stat"><span class="s-num">'+((nations.Wales||0)+(nations['Northern Ireland']||0))+'</span><span class="s-lbl">Wales & NI</span></div>';
+      '<div class="dcwlive-stat"><span class="s-num">'+data.length+'</span><span class="s-lbl">Total tracked</span></div>'+
+      '<div class="dcwlive-stat red"><span class="s-num">'+(c.red||0)+'</span><span class="s-lbl">Worth opposing</span></div>'+
+      '<div class="dcwlive-stat"><span class="s-num">'+(c.amber||0)+'</span><span class="s-lbl">Questions to ask</span></div>'+
+      '<div class="dcwlive-stat"><span class="s-num">'+(nat.Scotland||0)+'</span><span class="s-lbl">Scotland</span></div>'+
+      '<div class="dcwlive-stat"><span class="s-num">'+(nat.England||0)+'</span><span class="s-lbl">England</span></div>';
   }
+
+  function renderFeatured(){
+    var feats=data.filter(function(a){return a.curated&&a.campaign;});
+    if(!feats.length){FEAT.style.display='none';FEATH.style.display='none';return;}
+    FEAT.innerHTML=feats.map(function(a){
+      var lis=(a.reasons||[]).map(function(r){return '<li>'+esc(r)+'</li>';}).join('');
+      var pet=a.petition?'<a class="feat-btn primary" href="'+esc(a.petition.url)+'" target="_blank" rel="noopener">'+esc(a.petition.label||'Sign the petition')+'</a>':'';
+      var camp=a.campaign?'<a class="feat-btn ghost" href="'+esc(a.campaign.url)+'" target="_blank" rel="noopener">The campaign →</a>':'';
+      return '<div class="feat-card"><div class="feat-tag"><span class="tl-dot red"></span>'+esc((a.app_state||'').toUpperCase())+'</div>'+
+        '<div class="feat-title">'+esc(a.curatedTitle||a.address)+'</div>'+
+        (a.curatedNote?'<div class="feat-note">'+esc(a.curatedNote)+'</div>':'')+
+        '<ul>'+lis+'</ul>'+
+        '<div class="feat-actions">'+pet+camp+'<button class="feat-btn object" data-obj="'+esc(a.name||a.uid)+'">Draft an objection</button></div></div>';
+    }).join('');
+    FEAT.querySelectorAll('[data-obj]').forEach(function(btn){
+      btn.addEventListener('click',function(){var a=data.find(function(x){return (x.name||x.uid)===btn.getAttribute('data-obj');});if(a)openObjection(a);});
+    });
+    FEAT.style.display='';FEATH.style.display='';
+  }
+
+  function flt(){var q=SR.value.trim().toLowerCase(),lf=LF.value;
+    return data.filter(function(a){
+      if(a.standalone)return false; // featured cards live above; keep feed to real apps
+      if(lf&&a.light!==lf)return false;
+      if(!q)return true;
+      return((a.address||'')+' '+(a.authority_name||'')+' '+(a.nation||'')+' '+(a.description||'')).toLowerCase().indexOf(q)>-1;});}
 
   function renderMap(rows){
     if(!window.L)return;
-    if(!map){
-      map=L.map('dcwlive-map',{scrollWheelZoom:false}).setView([54.5,-3.5],5);
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'© OpenStreetMap'}).addTo(map);
-    }
-    if(layer)map.removeLayer(layer);
-    layer=L.layerGroup().addTo(map);
-    var pts=[];
-    rows.forEach(function(a){
+    if(!map){map=L.map('dcwlive-map',{scrollWheelZoom:false}).setView([54.6,-3.5],5);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'© OpenStreetMap'}).addTo(map);}
+    if(layer)map.removeLayer(layer);layer=L.layerGroup().addTo(map);var pts=[];
+    // include featured standalone campaigns on the map too
+    var mapRows=rows.concat(data.filter(function(a){return a.standalone&&a.lat!=null;}));
+    mapRows.forEach(function(a){
       if(a.lat==null||a.lng==null)return;
-      var open=isObjectable(a);
-      var m=L.circleMarker([a.lat,a.lng],{
-        radius:6,weight:1.5,
-        color:open?'#7a2010':'#9c5500',
-        fillColor:open?'#7a2010':'#d4881c',
-        fillOpacity:0.7
-      });
-      var link=a.link?'<br><a href="'+esc(a.link)+'" target="_blank" rel="noopener">View on council portal →</a>':'';
-      m.bindPopup('<strong>'+esc(a.authority_name||'')+'</strong><br>'+esc((a.address||'').slice(0,80))+'<br><em>'+esc(a.app_state||'')+'</em>'+link);
+      var hex=LIGHTHEX[a.light]||'#777';
+      var m=L.circleMarker([a.lat,a.lng],{radius:a.curated?8:6,weight:a.curated?2.5:1.5,color:hex,fillColor:hex,fillOpacity:0.65});
+      var link=a.link?'<br><a href="'+esc(a.link)+'" target="_blank" rel="noopener">Council portal →</a>':'';
+      var pet=a.petition?'<br><a href="'+esc(a.petition.url)+'" target="_blank" rel="noopener">Sign the petition →</a>':'';
+      m.bindPopup('<strong>'+esc(a.authority_name||a.curatedTitle||'')+'</strong><br>'+esc((a.address||'').slice(0,80))+'<br><em>'+lightLabel(a.light)+'</em>'+link+pet);
       m.addTo(layer);pts.push([a.lat,a.lng]);
     });
-    if(pts.length){try{map.fitBounds(pts,{padding:[30,30],maxZoom:9});}catch(e){}}
+    if(pts.length){try{map.fitBounds(pts,{padding:[30,30],maxZoom:8});}catch(e){}}
   }
 
   function render(){var rows=flt();
-    META.textContent=rows.length+' application'+(rows.length===1?'':'s')+' found';
+    META.textContent=rows.length+' application'+(rows.length===1?'':'s')+' in the feed';
     renderMap(rows);
     if(!rows.length){LIST.innerHTML='<div class="dcwlive-empty">No matching applications. Try a broader search — or this may be good news for now.</div>';MORE.style.display='none';return;}
     LIST.innerHTML=rows.slice(0,shown).map(function(a){
-      var link=a.link?'<a href="'+esc(a.link)+'" target="_blank" rel="noopener">View on council portal →</a>':'';
-      var c=sc(a.app_state),d=(a.description||''),open=isObjectable(a);
-      return '<div class="dcwlive-card'+(open?' objectable':'')+'">'+
-        '<div class="dcwlive-auth">'+esc(a.authority_name||a.area_name||'Unknown authority')+
-          '<span class="dcwlive-nation">'+esc(a.nation||'')+'</span>'+
-          (open?'<span class="dcwlive-objtag">● Open for objection</span>':'')+'</div>'+
-        '<div class="dcwlive-addr">'+esc(a.address||'(address not provided)')+'</div>'+
-        '<div class="dcwlive-desc">'+esc(d.slice(0,320))+(d.length>320?'…':'')+'</div>'+
-        '<div class="dcwlive-foot"><span class="dcwlive-state '+c+'">'+esc(a.app_state||'status unknown')+'</span>'+
-        '<span>'+fd(a.start_date)+'</span>'+link+'</div></div>';}).join('');
+      var link=a.link?'<a href="'+esc(a.link)+'" target="_blank" rel="noopener">Council portal →</a>':'';
+      var obj=a.light==='red'?'<button class="objlink" data-obj="'+esc(a.name||a.uid)+'">Draft an objection →</button>':'';
+      var reasons=(a.reasons&&a.reasons.length)?'<div class="dcwlive-reasons">'+esc(a.reasons.join(' · '))+'</div>':'';
+      var d=(a.description||'');
+      return '<div class="dcwlive-card '+a.light+'">'+
+        '<div class="dcwlive-toprow"><div><div class="dcwlive-auth">'+esc(a.authority_name||'Unknown authority')+' · '+esc(a.nation||'')+'</div>'+
+        '<div class="dcwlive-addr">'+esc(a.address||'(address not provided)')+'</div></div>'+
+        '<span class="dcwlive-light '+a.light+'">'+lightLabel(a.light)+'</span></div>'+
+        reasons+
+        '<div class="dcwlive-desc">'+esc(d.slice(0,260))+(d.length>260?'…':'')+'</div>'+
+        '<div class="dcwlive-foot"><span>'+esc(a.app_state||'')+'</span><span>'+fd(a.start_date)+'</span>'+link+obj+'</div></div>';
+    }).join('');
+    LIST.querySelectorAll('[data-obj]').forEach(function(btn){
+      btn.addEventListener('click',function(){var a=data.find(function(x){return (x.name||x.uid)===btn.getAttribute('data-obj');});if(a)openObjection(a);});
+    });
     MORE.style.display=rows.length>shown?'block':'none';}
 
   SR.addEventListener('input',function(){shown=PAGE;render();});
-  SF.addEventListener('change',function(){shown=PAGE;render();});
-  OBJ.addEventListener('change',function(){shown=PAGE;render();});
+  LF.addEventListener('change',function(){shown=PAGE;render();});
   MORE.addEventListener('click',function(){shown+=PAGE;render();});
 
   fetch('data/datacentre-applications.json',{cache:'no-cache'})
@@ -707,7 +794,7 @@ body{
     .then(function(j){data=j.applications||[];
       var w=j.generated?new Date(j.generated).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'}):'';
       META.textContent=data.length+' applications · last updated '+w;
-      renderStats();render();})
+      renderStats();renderFeatured();render();})
     .catch(function(){LIST.innerHTML='<div class="dcwlive-empty">The live feed could not load right now. Please check back shortly, or browse the council portals directly.</div>';});
 })();
 </script>

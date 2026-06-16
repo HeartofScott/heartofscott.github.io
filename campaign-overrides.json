@@ -1,0 +1,45 @@
+{
+  "_comment": "Human-curated overrides for Data Centre Watch. Each key is a PlanIt application 'name' (e.g. '26/01234/FUL') OR any unique id you choose for a standalone campaign not yet in the feed. Fields: light (green|amber|red), reasons[], campaign{name,url}, petition{label,url}, note, title. Set standalone:true for campaigns to show even if not matched in the live feed. The auto-score is overridden by whatever you set here.",
+  "overrides": {
+    "auchtertool-cato": {
+      "standalone": true,
+      "title": "Cato — Auchtertool, Fife",
+      "authority": "Fife",
+      "nation": "Scotland",
+      "address": "Land north-west of Auchtertool, near Burntisland, Fife",
+      "app_state": "Open for objection",
+      "light": "red",
+      "lat": 56.108,
+      "lng": -3.270,
+      "reasons": [
+        "600MW hyperscale — campaigners estimate ~20% of Scotland's energy",
+        "greenfield site, six 35m buildings dwarfing the village",
+        "planned over a 16th-century castle ruin and a wildlife site",
+        "no end-user identified — speculative"
+      ],
+      "note": "ILI Group's £5bn proposal, first of their planned 'Stoics' network. Live application at Fife Council — the public has a short window to comment. The first Scottish AI data centre to reach this stage (Edinburgh South Gyle) was rejected.",
+      "campaign": { "name": "Auchtertool Community Council", "url": "https://www.thecourier.co.uk/fp/news/fife/5505605/fife-ai-data-centre-opposition-public-meeting/" },
+      "petition": { "label": "Sign: Stop the Auchtertool data centre", "url": "https://www.change.org/p/stop-the-proposed-ai-data-centre-near-auchtertool-fife" }
+    },
+    "lammermuirs-southside": {
+      "standalone": true,
+      "title": "Southside — Lammermuir Hills, Scottish Borders",
+      "authority": "Scottish Borders",
+      "nation": "Scotland",
+      "address": "Clawbare, near Longformacus, between Longformacus and Westruther",
+      "app_state": "Pre-application",
+      "light": "red",
+      "lat": 55.819,
+      "lng": -2.680,
+      "reasons": [
+        "~225MW campus in a Special Landscape Area",
+        "greenfield moorland — wildlife, dark skies, hill farming",
+        "industrialisation of a treasured rural landscape",
+        "over 6,000 have signed against it"
+      ],
+      "note": "Roxburghe Estates / Sunlaws Development Company's £2bn proposal. Pre-application stage; a formal application to Scottish Borders Council is expected later in 2026. Now is the time to be heard.",
+      "campaign": { "name": "Save the Lammermuirs", "url": "https://www.savethelammermuirs.org/" },
+      "petition": { "label": "Sign: Save the Lammermuirs", "url": "https://www.change.org/p/save-the-lammermuirs-stop-the-data-centre" }
+    }
+  }
+}
