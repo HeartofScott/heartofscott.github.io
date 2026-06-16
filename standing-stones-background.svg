@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Standing stones at dusk — The Firewalkers">
+  <defs>
+    <!-- dusk sky: deep slate at top falling to a warm amber horizon -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#1e1610"/>
+      <stop offset="38%" stop-color="#3a4f5c"/>
+      <stop offset="66%" stop-color="#b86810"/>
+      <stop offset="82%" stop-color="#d4881c"/>
+      <stop offset="100%" stop-color="#9c5500"/>
+    </linearGradient>
+    <!-- soft sun glow on the horizon -->
+    <radialGradient id="sun" cx="50%" cy="100%" r="55%">
+      <stop offset="0%"  stop-color="#f5e6c8" stop-opacity="0.95"/>
+      <stop offset="28%" stop-color="#d4881c" stop-opacity="0.75"/>
+      <stop offset="60%" stop-color="#9c5500" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#9c5500" stop-opacity="0"/>
+    </radialGradient>
+    <!-- ground -->
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#3a2c1c"/>
+      <stop offset="100%" stop-color="#1e1610"/>
+    </linearGradient>
+    <!-- stone shading: lit edge towards the horizon glow -->
+    <linearGradient id="stone" x1="0" y1="0" x2="1" y2="0.15">
+      <stop offset="0%"  stop-color="#1e1610"/>
+      <stop offset="55%" stop-color="#2a2018"/>
+      <stop offset="100%" stop-color="#5a4a34"/>
+    </linearGradient>
+    <linearGradient id="stoneL" x1="0" y1="0" x2="1" y2="0.15">
+      <stop offset="0%"  stop-color="#241a12"/>
+      <stop offset="60%" stop-color="#3a2c1c"/>
+      <stop offset="100%" stop-color="#7a5a32"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="50%" cy="46%" r="75%">
+      <stop offset="0%"  stop-color="#000000" stop-opacity="0"/>
+      <stop offset="78%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.42"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="2.2"/></filter>
+  </defs>
+
+  <!-- sky -->
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <!-- horizon sun glow -->
+  <rect x="0" y="430" width="1920" height="430" fill="url(#sun)"/>
+
+  <!-- distant hills -->
+  <path d="M0 690 Q 360 628 720 668 T 1440 656 T 1920 686 V860 H0 Z" fill="#3a4f5c" opacity="0.45"/>
+  <path d="M0 726 Q 480 678 980 712 T 1920 722 V860 H0 Z" fill="#3a2c1c" opacity="0.7"/>
+
+  <!-- scattered stars in the upper sky -->
+  <g fill="#f7f2e8" opacity="0.55">
+    <circle cx="180" cy="90" r="1.6"/><circle cx="420" cy="150" r="1.2"/>
+    <circle cx="760" cy="70" r="1.5"/><circle cx="1080" cy="130" r="1.1"/>
+    <circle cx="1320" cy="84" r="1.7"/><circle cx="1600" cy="150" r="1.3"/>
+    <circle cx="1760" cy="60" r="1.2"/><circle cx="980" cy="200" r="1.0"/>
+    <circle cx="300" cy="240" r="1.0"/><circle cx="1480" cy="240" r="1.0"/>
+  </g>
+
+  <!-- ground -->
+  <path d="M0 760 Q 960 716 1920 760 V1080 H0 Z" fill="url(#ground)"/>
+
+  <!-- ── the stone circle ── arranged in a shallow arc, larger in front ──
+       each stone is a softened monolith; lit edge faces right, towards the glow -->
+  <!-- distant back-left -->
+  <g>
+    <path d="M250 770 L246 612 Q256 590 272 596 L286 770 Z" fill="url(#stone)"/>
+  </g>
+  <g>
+    <path d="M430 776 L420 588 Q436 560 458 572 L478 776 Z" fill="url(#stone)"/>
+  </g>
+  <!-- a fallen lintel suggestion, low -->
+  <g opacity="0.9">
+    <path d="M610 742 L606 690 Q700 672 800 686 L804 742 Q700 760 610 742 Z" fill="url(#stone)"/>
+  </g>
+  <!-- central tall stones -->
+  <g>
+    <path d="M905 800 L890 470 Q915 432 952 448 L978 800 Z" fill="url(#stoneL)"/>
+  </g>
+  <g>
+    <path d="M1040 806 L1028 500 Q1052 466 1086 480 L1108 806 Z" fill="url(#stoneL)"/>
+  </g>
+  <!-- right group -->
+  <g>
+    <path d="M1320 792 L1310 556 Q1332 524 1364 538 L1384 792 Z" fill="url(#stoneL)"/>
+  </g>
+  <g>
+    <path d="M1520 780 L1514 602 Q1532 576 1558 588 L1572 780 Z" fill="url(#stone)"/>
+  </g>
+  <g>
+    <path d="M1690 772 L1686 632 Q1700 610 1720 620 L1730 772 Z" fill="url(#stone)"/>
+  </g>
+
+  <!-- subtle lit rim-light on the central stones from the glow -->
+  <g opacity="0.5" filter="url(#soft)">
+    <path d="M952 448 L978 800" stroke="#d4881c" stroke-width="3" fill="none"/>
+    <path d="M1086 480 L1108 806" stroke="#d4881c" stroke-width="3" fill="none"/>
+    <path d="M1364 538 L1384 792" stroke="#d4881c" stroke-width="2.5" fill="none"/>
+  </g>
+
+  <!-- long dusk shadows from the stones across the ground -->
+  <g opacity="0.28" fill="#1e1610">
+    <path d="M905 800 L820 1080 L1010 1080 L978 800 Z"/>
+    <path d="M1040 806 L990 1080 L1150 1080 L1108 806 Z"/>
+    <path d="M1320 792 L1300 1080 L1430 1080 L1384 792 Z"/>
+    <path d="M430 776 L360 1000 L520 1000 L478 776 Z"/>
+  </g>
+
+  <!-- vignette to keep faces/text readable on a call -->
+  <rect width="1920" height="1080" fill="url(#vignette)"/>
+</svg>
