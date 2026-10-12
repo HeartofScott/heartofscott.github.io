@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-11T12:46:52.762Z",
+ "generated": "2026-10-12T15:20:33.500Z",
  "source": "PlanIt (planit.org.uk) — UK planning data",
  "search_terms": "data centre",
  "lookback_days": 365,
@@ -259,26 +259,6 @@
    ]
   },
   {
-   "name": "Manchester/OTH-2026-001360",
-   "uid": "OTH-2026-001360",
-   "address": "Land to the south of Bower Street M40 2AF",
-   "description": "Erection of a new data centre comprising two commercial units (Sui Generis) with associated external plant, substations, boundary fencing, landscaping, highway access works and all ancillary infrastructure.",
-   "start_date": "2026-08-17",
-   "authority_name": "Manchester",
-   "area_name": "Manchester",
-   "nation": "England",
-   "app_state": "Undecided",
-   "app_type": "Outline",
-   "link": "https://www.planit.org.uk/planapplic/Manchester/OTH-2026-001360/",
-   "lat": 53.497326,
-   "lng": -2.199255,
-   "light": "amber",
-   "score": 2,
-   "reasons": [
-    "speculative / no end-user"
-   ]
-  },
-  {
    "name": "Hertsmere/26/1187/REM",
    "uid": "26/1187/REM",
    "address": "Land East Of South Mimms Services St Albans Road South Mimms Hertfordshire",
@@ -292,6 +272,26 @@
    "link": "https://www.planit.org.uk/planapplic/Hertsmere/26/1187/REM/",
    "lat": 51.688189,
    "lng": -0.21547,
+   "light": "amber",
+   "score": 2,
+   "reasons": [
+    "speculative / no end-user"
+   ]
+  },
+  {
+   "name": "Manchester/OTH-2026-001360",
+   "uid": "OTH-2026-001360",
+   "address": "Land to the south of Bower Street M40 2AF",
+   "description": "Erection of a new data centre comprising two commercial units (Sui Generis) with associated external plant, substations, boundary fencing, landscaping, highway access works and all ancillary infrastructure.",
+   "start_date": "2026-08-17",
+   "authority_name": "Manchester",
+   "area_name": "Manchester",
+   "nation": "England",
+   "app_state": "Undecided",
+   "app_type": "Outline",
+   "link": "https://www.planit.org.uk/planapplic/Manchester/OTH-2026-001360/",
+   "lat": 53.497326,
+   "lng": -2.199255,
    "light": "amber",
    "score": 2,
    "reasons": [
@@ -507,26 +507,6 @@
    ]
   },
   {
-   "name": "Falkirk/P/26/0237/FUL",
-   "uid": "P/26/0237/FUL",
-   "address": "Land To The North East Of Glenbervie Nursery Stirling Road Larbert",
-   "description": "Construction of an AI Data Centre with 300MW Demand Utility Capacity and Car Parking, Landscaping, Roads, Access and Associated Works",
-   "start_date": "2026-05-29",
-   "authority_name": "Falkirk",
-   "area_name": "Falkirk",
-   "nation": "Scotland",
-   "app_state": "Undecided",
-   "app_type": "Full",
-   "link": "https://www.planit.org.uk/planapplic/Falkirk/P/26/0237/FUL/",
-   "lat": 56.03204,
-   "lng": -3.843846,
-   "light": "amber",
-   "score": 3,
-   "reasons": [
-    "hyperscale / very large"
-   ]
-  },
-  {
    "name": "Northumberland/26/01894/REM",
    "uid": "26/01894/REM",
    "address": "Land At Former Power Station Site On Northern Side Of Cambois Cambois Northumberland",
@@ -546,6 +526,26 @@
     "large campus",
     "speculative / no end-user",
     "brownfield / reuse"
+   ]
+  },
+  {
+   "name": "Falkirk/P/26/0237/FUL",
+   "uid": "P/26/0237/FUL",
+   "address": "Land To The North East Of Glenbervie Nursery Stirling Road Larbert",
+   "description": "Construction of an AI Data Centre with 300MW Demand Utility Capacity and Car Parking, Landscaping, Roads, Access and Associated Works",
+   "start_date": "2026-05-29",
+   "authority_name": "Falkirk",
+   "area_name": "Falkirk",
+   "nation": "Scotland",
+   "app_state": "Undecided",
+   "app_type": "Full",
+   "link": "https://www.planit.org.uk/planapplic/Falkirk/P/26/0237/FUL/",
+   "lat": 56.03204,
+   "lng": -3.843846,
+   "light": "amber",
+   "score": 3,
+   "reasons": [
+    "hyperscale / very large"
    ]
   },
   {
@@ -696,6 +696,26 @@
    ]
   },
   {
+   "name": "Runnymede/RU.25/1538",
+   "uid": "RU.25/1538",
+   "address": "Longcross North Data Centre Campus Longcross Chertsey KT16 0EE",
+   "description": "Development of site to deliver data centre campus (sui generis use) consisting of (a) data centre buildings (b) energy, power, and water infrastructure (c) site access and internal roads (d) site security arrangements (e) hard and soft, green and blue, landscaping and (f) other ancillary and auxiliary forms of development (application includes elements approved under ref. RU.21/0780 and already constructed)",
+   "start_date": "2025-11-11",
+   "authority_name": "Runnymede",
+   "area_name": "Runnymede",
+   "nation": "England",
+   "app_state": "Undecided",
+   "app_type": "",
+   "link": "https://www.planit.org.uk/planapplic/Runnymede/RU.25/1538/",
+   "lat": 51.381699,
+   "lng": -0.59232,
+   "light": "amber",
+   "score": 2,
+   "reasons": [
+    "large campus"
+   ]
+  },
+  {
    "name": "SurreyHeath/25/1195/PCA",
    "uid": "25/1195/PCA",
    "address": "Longcross North Data Centre Campus, Longcross, Chertsey, KT16 0EE",
@@ -715,26 +735,6 @@
     "already permitted",
     "large campus",
     "speculative / no end-user"
-   ]
-  },
-  {
-   "name": "Runnymede/RU.25/1538",
-   "uid": "RU.25/1538",
-   "address": "Longcross North Data Centre Campus Longcross Chertsey KT16 0EE",
-   "description": "Development of site to deliver data centre campus (sui generis use) consisting of (a) data centre buildings (b) energy, power, and water infrastructure (c) site access and internal roads (d) site security arrangements (e) hard and soft, green and blue, landscaping and (f) other ancillary and auxiliary forms of development (application includes elements approved under ref. RU.21/0780 and already constructed)",
-   "start_date": "2025-11-11",
-   "authority_name": "Runnymede",
-   "area_name": "Runnymede",
-   "nation": "England",
-   "app_state": "Undecided",
-   "app_type": "",
-   "link": "https://www.planit.org.uk/planapplic/Runnymede/RU.25/1538/",
-   "lat": 51.381699,
-   "lng": -0.59232,
-   "light": "amber",
-   "score": 2,
-   "reasons": [
-    "large campus"
    ]
   },
   {
@@ -841,6 +841,27 @@
    "reasons": []
   },
   {
+   "name": "Reading/PL/26/1317",
+   "uid": "PL/26/1317",
+   "address": "Microsoft Ltd, Thames Valley Park Drive, Earley, Wokingham, RG6 1WG",
+   "description": "Proposal: Outline planning application (all matters reserved except for Access) for demolition of existing buildings and the construction of a data centre (Use Class B8), fuel cells for energy generation, ancillary office space and associated plant, drainage, backup power generation, sub-station, car parking, landscaping, engineering works and formation of and alterations to access roads.",
+   "start_date": "2026-10-02",
+   "authority_name": "Reading",
+   "area_name": "Reading",
+   "nation": "England",
+   "app_state": "Undecided",
+   "app_type": "Outline",
+   "link": "https://www.planit.org.uk/planapplic/Reading/PL/26/1317/",
+   "lat": 51.461224,
+   "lng": -0.925986,
+   "light": "green",
+   "score": -1,
+   "reasons": [
+    "speculative / no end-user",
+    "brownfield / reuse"
+   ]
+  },
+  {
    "name": "Brent/26/2475",
    "uid": "26/2475",
    "address": "2026, Observation Applications, Not in Brent",
@@ -900,26 +921,6 @@
    "reasons": []
   },
   {
-   "name": "Spelthorne/26/00985/MIS",
-   "uid": "26/00985/MIS",
-   "address": "Land To The West Of Manor Farm Poyle Road Colnbrook Slough SL3 0BL",
-   "description": "Slough Borough Council consultation (reference P/21160/000) for construction of a proposed demolition of existing buildings and structures, and erection of three Data Centres (Use Class B8) with ancillary substation, offices, associated plant, emergency backup generators and associated fuel storage, landscaping, sustainable drainage systems, car and cycle parking, and new and amended vehicular and emergency access from Poyle Road, site re-levelling, community building, river diversion and other associated works.",
-   "start_date": "2026-09-21",
-   "authority_name": "Spelthorne",
-   "area_name": "Spelthorne",
-   "nation": "England",
-   "app_state": "Undecided",
-   "app_type": "",
-   "link": "https://www.planit.org.uk/planapplic/Spelthorne/26/00985/MIS/",
-   "lat": 51.475018,
-   "lng": -0.517755,
-   "light": "green",
-   "score": -3,
-   "reasons": [
-    "brownfield / reuse"
-   ]
-  },
-  {
    "name": "Dumfries/26/1649/PIP",
    "uid": "26/1649/PIP",
    "address": "Land North Of The Former Chapelcross Nuclear Power Station Near Annan DG12 6RF",
@@ -937,6 +938,26 @@
    "score": -1,
    "reasons": [
     "speculative / no end-user",
+    "brownfield / reuse"
+   ]
+  },
+  {
+   "name": "OldOakParkRoyal/26/0155/NMAOPDC",
+   "uid": "26/0155/NMAOPDC",
+   "address": "Unit F, 6, Premier Park Road, LONDON, NW10 7NZ",
+   "description": "Application under Section 96A of the Town and Country Planning Act 1990 (as amended) for non-material amendments to vary Condition 2 (Approved plans), Condition 3 (Floorspace), Condition 16 (Cycle parking) and Condition 26 (Sustainable drainage) of planning permission reference 25/0196/FUMOPDC dated 03/07/2026 for 'Demolition of existing warehouse (Class B8) and phased redevelopment of site to provide a data centre (Class B8) comprising main data centre building and attached ancillary office, modular power room gantry, containerised generator gantry with flues, entrance pavilion, substation, boundary enclosures, internal access road, car and cycle parking, landscaping, and alterations to vehicular and pedestrian access from Premier Park Road.'",
+   "start_date": "2026-09-21",
+   "authority_name": "Old Oak Park Royal",
+   "area_name": "Old Oak Park Royal",
+   "nation": "England",
+   "app_state": "Undecided",
+   "app_type": "Amendment",
+   "link": "https://www.planit.org.uk/planapplic/OldOakParkRoyal/26/0155/NMAOPDC/",
+   "lat": 51.536964,
+   "lng": -0.271663,
+   "light": "green",
+   "score": -3,
+   "reasons": [
     "brownfield / reuse"
    ]
   },
@@ -961,19 +982,19 @@
    ]
   },
   {
-   "name": "OldOakParkRoyal/26/0155/NMAOPDC",
-   "uid": "26/0155/NMAOPDC",
-   "address": "Unit F, 6, Premier Park Road, LONDON, NW10 7NZ",
-   "description": "Application under Section 96A of the Town and Country Planning Act 1990 (as amended) for non-material amendments to vary Condition 2 (Approved plans), Condition 3 (Floorspace), Condition 16 (Cycle parking) and Condition 26 (Sustainable drainage) of planning permission reference 25/0196/FUMOPDC dated 03/07/2026 for 'Demolition of existing warehouse (Class B8) and phased redevelopment of site to provide a data centre (Class B8) comprising main data centre building and attached ancillary office, modular power room gantry, containerised generator gantry with flues, entrance pavilion, substation, boundary enclosures, internal access road, car and cycle parking, landscaping, and alterations to vehicular and pedestrian access from Premier Park Road.'",
+   "name": "Spelthorne/26/00985/MIS",
+   "uid": "26/00985/MIS",
+   "address": "Land To The West Of Manor Farm Poyle Road Colnbrook Slough SL3 0BL",
+   "description": "Slough Borough Council consultation (reference P/21160/000) for construction of a proposed demolition of existing buildings and structures, and erection of three Data Centres (Use Class B8) with ancillary substation, offices, associated plant, emergency backup generators and associated fuel storage, landscaping, sustainable drainage systems, car and cycle parking, and new and amended vehicular and emergency access from Poyle Road, site re-levelling, community building, river diversion and other associated works.",
    "start_date": "2026-09-21",
-   "authority_name": "Old Oak Park Royal",
-   "area_name": "Old Oak Park Royal",
+   "authority_name": "Spelthorne",
+   "area_name": "Spelthorne",
    "nation": "England",
    "app_state": "Undecided",
-   "app_type": "Amendment",
-   "link": "https://www.planit.org.uk/planapplic/OldOakParkRoyal/26/0155/NMAOPDC/",
-   "lat": 51.536964,
-   "lng": -0.271663,
+   "app_type": "",
+   "link": "https://www.planit.org.uk/planapplic/Spelthorne/26/00985/MIS/",
+   "lat": 51.475018,
+   "lng": -0.517755,
    "light": "green",
    "score": -3,
    "reasons": [
@@ -999,24 +1020,6 @@
    "reasons": []
   },
   {
-   "name": "EppingForest/EPF/1774/26",
-   "uid": "EPF/1774/26",
-   "address": "Alandale Scaffolding, Langston Road, Loughton IG10 3SL",
-   "description": "Approval of Details Reserved by Condition 8 (Flood Risk Assessment) of EPF/1165/22 & EPF/0388/26 (New Data Centre).",
-   "start_date": "2026-09-17",
-   "authority_name": "Epping Forest",
-   "area_name": "Epping Forest",
-   "nation": "England",
-   "app_state": "Undecided",
-   "app_type": "Conditions",
-   "link": "https://www.planit.org.uk/planapplic/EppingForest/EPF/1774/26/",
-   "lat": 51.646938,
-   "lng": 0.089896,
-   "light": "green",
-   "score": 0,
-   "reasons": []
-  },
-  {
    "name": "Windsor/26/02320/FULL",
    "uid": "26/02320/FULL",
    "address": "Land At Manor Farm Poyle Road Poyle Slough",
@@ -1035,6 +1038,24 @@
    "reasons": [
     "brownfield / reuse"
    ]
+  },
+  {
+   "name": "EppingForest/EPF/1774/26",
+   "uid": "EPF/1774/26",
+   "address": "Alandale Scaffolding, Langston Road, Loughton IG10 3SL",
+   "description": "Approval of Details Reserved by Condition 8 (Flood Risk Assessment) of EPF/1165/22 & EPF/0388/26 (New Data Centre).",
+   "start_date": "2026-09-17",
+   "authority_name": "Epping Forest",
+   "area_name": "Epping Forest",
+   "nation": "England",
+   "app_state": "Undecided",
+   "app_type": "Conditions",
+   "link": "https://www.planit.org.uk/planapplic/EppingForest/EPF/1774/26/",
+   "lat": 51.646938,
+   "lng": 0.089896,
+   "light": "green",
+   "score": 0,
+   "reasons": []
   },
   {
    "name": "Slough/P/21160/000",
@@ -1475,6 +1496,24 @@
    ]
   },
   {
+   "name": "Slough/SMI/2026/20",
+   "uid": "SMI/2026/20",
+   "address": "Land West Of Ridgeway Distribution Centre, The Ridgeway, Iver, Buckinghamshire",
+   "description": "Request for an EIA Scoping Opinion under Regulation 6 of the Town and Country Planning (Environmental Impact Assessment) Regulations 2017 (as amended) for a new Data Centre",
+   "start_date": "2026-07-31",
+   "authority_name": "Slough",
+   "area_name": "Slough",
+   "nation": "England",
+   "app_state": "Undecided",
+   "app_type": "",
+   "link": "https://www.planit.org.uk/planapplic/Slough/SMI/2026/20/",
+   "lat": null,
+   "lng": null,
+   "light": "green",
+   "score": 0,
+   "reasons": []
+  },
+  {
    "name": "Thurrock/26/00894/SCO",
    "uid": "26/00894/SCO",
    "address": "Land Accross Marshes Adjacent Marshfoot Road St Chads Road And Dock Approach Road Tilbury Essex",
@@ -1496,24 +1535,6 @@
    ]
   },
   {
-   "name": "Slough/SMI/2026/20",
-   "uid": "SMI/2026/20",
-   "address": "Land West Of Ridgeway Distribution Centre, The Ridgeway, Iver, Buckinghamshire",
-   "description": "Request for an EIA Scoping Opinion under Regulation 6 of the Town and Country Planning (Environmental Impact Assessment) Regulations 2017 (as amended) for a new Data Centre",
-   "start_date": "2026-07-31",
-   "authority_name": "Slough",
-   "area_name": "Slough",
-   "nation": "England",
-   "app_state": "Undecided",
-   "app_type": "",
-   "link": "https://www.planit.org.uk/planapplic/Slough/SMI/2026/20/",
-   "lat": null,
-   "lng": null,
-   "light": "green",
-   "score": 0,
-   "reasons": []
-  },
-  {
    "name": "SouthNorfolkBroadland/2026/2216",
    "uid": "2026/2216",
    "address": "Norfolk And Norwich University Hospital Colney Lane Colney Norfolk NR4 7UY",
@@ -1530,6 +1551,26 @@
    "light": "green",
    "score": 0,
    "reasons": []
+  },
+  {
+   "name": "Newport/26/0586",
+   "uid": "26/0586",
+   "address": "Celtic Technology Centre Celtic Way Celtic Lakes Newport South Wales NP10 8BE",
+   "description": "PARTIAL DISCHARGE OF CONDITIONS 10 (SERVICE TESTING AND MAINTENANCE PLAN), 16 (EXTERNAL LIGHTING), 20 (CYCLE PARKING DETAILS), 21 (EV CHARGING), 22 (TRAVEL PLAN) AND 23 (PEDESTRIAN CROSSING AND FOOTWAY) OF 25/0711 S73 APPLICATION TO VARY CONDITIONS 1 (APPROVED PLANS), 7 (LANDSCAPING AND PLANTING SCHEME), 10 (NOISE ASSESSMENT) AND 11 (NOISE SURVEY) OF 20/0039 ERECTION OF 4NO. THREE-STOREY DATA CENTRE BUILDINGS COMPRISING B8 USE AND ANCILLARY B1 USE, PROVISION OF EMERGENCY GENERATORS, SECURITY LODGE, HARD AND SOFT LANDSCAPING, INTERNAL ACCESS ROADS, CAR PARKING AND SUSTAINABLE DRAINAGE. AMENDMENTS INCLUDE CHANGES TO BUILDING FOOTPRINTS AND DESIGN, LOCATION OF GENERATORS, CHANGES TO DRAINAGE STRATEGY AND LANDSCAPING AND OTHER LAYOUT CHANGES",
+   "start_date": "2026-07-30",
+   "authority_name": "Newport",
+   "area_name": "Newport",
+   "nation": "Wales",
+   "app_state": "Permitted",
+   "app_type": "Conditions",
+   "link": "https://www.planit.org.uk/planapplic/Newport/26/0586/",
+   "lat": 51.556428,
+   "lng": -3.033557,
+   "light": "green",
+   "score": 0,
+   "reasons": [
+    "already permitted"
+   ]
   },
   {
    "name": "Hillingdon/78343/APP/2026/1899",
@@ -1552,26 +1593,6 @@
     "speculative / no end-user",
     "brownfield / reuse",
     "waste-heat reuse"
-   ]
-  },
-  {
-   "name": "Newport/26/0586",
-   "uid": "26/0586",
-   "address": "Celtic Technology Centre Celtic Way Celtic Lakes Newport South Wales NP10 8BE",
-   "description": "PARTIAL DISCHARGE OF CONDITIONS 10 (SERVICE TESTING AND MAINTENANCE PLAN), 16 (EXTERNAL LIGHTING), 20 (CYCLE PARKING DETAILS), 21 (EV CHARGING), 22 (TRAVEL PLAN) AND 23 (PEDESTRIAN CROSSING AND FOOTWAY) OF 25/0711 S73 APPLICATION TO VARY CONDITIONS 1 (APPROVED PLANS), 7 (LANDSCAPING AND PLANTING SCHEME), 10 (NOISE ASSESSMENT) AND 11 (NOISE SURVEY) OF 20/0039 ERECTION OF 4NO. THREE-STOREY DATA CENTRE BUILDINGS COMPRISING B8 USE AND ANCILLARY B1 USE, PROVISION OF EMERGENCY GENERATORS, SECURITY LODGE, HARD AND SOFT LANDSCAPING, INTERNAL ACCESS ROADS, CAR PARKING AND SUSTAINABLE DRAINAGE. AMENDMENTS INCLUDE CHANGES TO BUILDING FOOTPRINTS AND DESIGN, LOCATION OF GENERATORS, CHANGES TO DRAINAGE STRATEGY AND LANDSCAPING AND OTHER LAYOUT CHANGES",
-   "start_date": "2026-07-30",
-   "authority_name": "Newport",
-   "area_name": "Newport",
-   "nation": "Wales",
-   "app_state": "Permitted",
-   "app_type": "Conditions",
-   "link": "https://www.planit.org.uk/planapplic/Newport/26/0586/",
-   "lat": 51.556428,
-   "lng": -3.033557,
-   "light": "green",
-   "score": 0,
-   "reasons": [
-    "already permitted"
    ]
   },
   {
@@ -2016,6 +2037,27 @@
    ]
   },
   {
+   "name": "NorthLanarkshire/26/00707/EIASCR",
+   "uid": "26/00707/EIASCR",
+   "address": "Land At Lancaster Avenue Chapelhall North Lanarkshire",
+   "description": "Proposed Data Centre Development and Associated Landscaping, Access Works and Other Infrastructure",
+   "start_date": "2026-06-04",
+   "authority_name": "North Lanarkshire",
+   "area_name": "North Lanarkshire",
+   "nation": "Scotland",
+   "app_state": "Permitted",
+   "app_type": "Outline",
+   "link": "https://www.planit.org.uk/planapplic/NorthLanarkshire/26/00707/EIASCR/",
+   "lat": 55.836389,
+   "lng": -3.935451,
+   "light": "green",
+   "score": 2,
+   "reasons": [
+    "already permitted",
+    "speculative / no end-user"
+   ]
+  },
+  {
    "name": "EastCambridgeshire/22/00580/NMAA",
    "uid": "22/00580/NMAA",
    "address": "Land South Of Straw Burning Plant Elean Business Park Sutton Cambridgeshire CB6 2QE",
@@ -2038,24 +2080,23 @@
    ]
   },
   {
-   "name": "NorthLanarkshire/26/00707/EIASCR",
-   "uid": "26/00707/EIASCR",
-   "address": "Land At Lancaster Avenue Chapelhall North Lanarkshire",
-   "description": "Proposed Data Centre Development and Associated Landscaping, Access Works and Other Infrastructure",
-   "start_date": "2026-06-04",
-   "authority_name": "North Lanarkshire",
-   "area_name": "North Lanarkshire",
-   "nation": "Scotland",
-   "app_state": "Permitted",
-   "app_type": "Outline",
-   "link": "https://www.planit.org.uk/planapplic/NorthLanarkshire/26/00707/EIASCR/",
-   "lat": 55.836389,
-   "lng": -3.935451,
+   "name": "WhiteHorse/P26/V1969/LDD",
+   "uid": "P26/V1969/LDD",
+   "address": "Land to the North of A4130 Hill Farm Abingdon OX14 4PJ",
+   "description": "Discharge of condition B6 - CEMP LHR05 on application ref. P17/V2490/LDO Local Development Order for Didcot Technology Park for up to 115,000 sqm total floorspace, comprising up to 110,000 sqm data centre, 20,000 sqm battery storage, 5,000 sqm B2 industrial incl. waste facility.",
+   "start_date": "2026-06-01",
+   "authority_name": "Vale of White Horse",
+   "area_name": "Vale of White Horse",
+   "nation": "England",
+   "app_state": "Withdrawn",
+   "app_type": "Conditions",
+   "link": "https://www.planit.org.uk/planapplic/WhiteHorse/P26/V1969/LDD/",
+   "lat": 51.628075,
+   "lng": -1.245263,
    "light": "green",
-   "score": 2,
+   "score": 0,
    "reasons": [
-    "already permitted",
-    "speculative / no end-user"
+    "refused — stopped"
    ]
   },
   {
@@ -2070,26 +2111,6 @@
    "app_state": "Withdrawn",
    "app_type": "Conditions",
    "link": "https://www.planit.org.uk/planapplic/WhiteHorse/P26/V1967/LDD/",
-   "lat": 51.628075,
-   "lng": -1.245263,
-   "light": "green",
-   "score": 0,
-   "reasons": [
-    "refused — stopped"
-   ]
-  },
-  {
-   "name": "WhiteHorse/P26/V1969/LDD",
-   "uid": "P26/V1969/LDD",
-   "address": "Land to the North of A4130 Hill Farm Abingdon OX14 4PJ",
-   "description": "Discharge of condition B6 - CEMP LHR05 on application ref. P17/V2490/LDO Local Development Order for Didcot Technology Park for up to 115,000 sqm total floorspace, comprising up to 110,000 sqm data centre, 20,000 sqm battery storage, 5,000 sqm B2 industrial incl. waste facility.",
-   "start_date": "2026-06-01",
-   "authority_name": "Vale of White Horse",
-   "area_name": "Vale of White Horse",
-   "nation": "England",
-   "app_state": "Withdrawn",
-   "app_type": "Conditions",
-   "link": "https://www.planit.org.uk/planapplic/WhiteHorse/P26/V1969/LDD/",
    "lat": 51.628075,
    "lng": -1.245263,
    "light": "green",
@@ -2204,6 +2225,27 @@
    ]
   },
   {
+   "name": "Bristol/26/12104/SCR",
+   "uid": "26/12104/SCR",
+   "address": "Polymers Recycling Facility Viridor Severn Road Avonmouth Bristol BS11 0YL",
+   "description": "Request for a Screening/Scoping Opinion as to whether an Environmental Impact Assessment is required for Change of use of existing polymers recycling facility for use as a data centre, installation of external plant and generating equipment, elevational alterations, creation of new site access points, landscaping and other associated ancillary works. description (Please note that this is not a planning application and therefore we are not carrying out public consultation on the proposal at this stage).",
+   "start_date": "2026-05-15",
+   "authority_name": "Bristol",
+   "area_name": "Bristol",
+   "nation": "England",
+   "app_state": "Undecided",
+   "app_type": "Outline",
+   "link": "https://www.planit.org.uk/planapplic/Bristol/26/12104/SCR/",
+   "lat": 51.533289,
+   "lng": -2.668383,
+   "light": "green",
+   "score": 0,
+   "reasons": [
+    "speculative / no end-user",
+    "smaller scale"
+   ]
+  },
+  {
    "name": "Bristol/26/12083/F",
    "uid": "26/12083/F",
    "address": "Polymers Recycling Facility Viridor Severn Road Avonmouth Bristol BS11 0YL",
@@ -2224,24 +2266,24 @@
    ]
   },
   {
-   "name": "Bristol/26/12104/SCR",
-   "uid": "26/12104/SCR",
-   "address": "Polymers Recycling Facility Viridor Severn Road Avonmouth Bristol BS11 0YL",
-   "description": "Request for a Screening/Scoping Opinion as to whether an Environmental Impact Assessment is required for Change of use of existing polymers recycling facility for use as a data centre, installation of external plant and generating equipment, elevational alterations, creation of new site access points, landscaping and other associated ancillary works. description (Please note that this is not a planning application and therefore we are not carrying out public consultation on the proposal at this stage).",
-   "start_date": "2026-05-15",
-   "authority_name": "Bristol",
-   "area_name": "Bristol",
+   "name": "NorthTyneside/26/00705/ADJLPA",
+   "uid": "26/00705/ADJLPA",
+   "address": "Land At Former Power Station Site On Northern Side Of Cambois Northumberland",
+   "description": "Variations of conditions 4 (Approved Plans), 17 (Access), and 51 (Deliveries) of approved application 24/04112/OUTES in order to increase the speed of delivery of the development to meet the requirements of potential tenants of the data centres on site",
+   "start_date": "2026-05-14",
+   "authority_name": "North Tyneside",
+   "area_name": "North Tyneside",
    "nation": "England",
-   "app_state": "Undecided",
+   "app_state": "Unresolved",
    "app_type": "Outline",
-   "link": "https://www.planit.org.uk/planapplic/Bristol/26/12104/SCR/",
-   "lat": 51.533289,
-   "lng": -2.668383,
+   "link": "https://www.planit.org.uk/planapplic/NorthTyneside/26/00705/ADJLPA/",
+   "lat": null,
+   "lng": null,
    "light": "green",
-   "score": 0,
+   "score": -1,
    "reasons": [
     "speculative / no end-user",
-    "smaller scale"
+    "brownfield / reuse"
    ]
   },
   {
@@ -2283,24 +2325,23 @@
    ]
   },
   {
-   "name": "NorthTyneside/26/00705/ADJLPA",
-   "uid": "26/00705/ADJLPA",
-   "address": "Land At Former Power Station Site On Northern Side Of Cambois Northumberland",
-   "description": "Variations of conditions 4 (Approved Plans), 17 (Access), and 51 (Deliveries) of approved application 24/04112/OUTES in order to increase the speed of delivery of the development to meet the requirements of potential tenants of the data centres on site",
-   "start_date": "2026-05-14",
-   "authority_name": "North Tyneside",
-   "area_name": "North Tyneside",
+   "name": "Warrington/2026/00659/SCR",
+   "uid": "2026/00659/SCR",
+   "address": "LAND AT BANK QUAY, LIVERPOOL ROAD, WARRINGTON, WA5 1AB",
+   "description": "REQUEST FOR FORMAL EIA SCREENING OPINION - PHASED MODULAR DATA CENTRE AND ASSOCIATED INFRASTRUCTURE",
+   "start_date": "2026-05-12",
+   "authority_name": "Warrington",
+   "area_name": "Warrington",
    "nation": "England",
-   "app_state": "Unresolved",
+   "app_state": "",
    "app_type": "Outline",
-   "link": "https://www.planit.org.uk/planapplic/NorthTyneside/26/00705/ADJLPA/",
-   "lat": null,
-   "lng": null,
+   "link": "https://www.planit.org.uk/planapplic/Warrington/2026/00659/SCR/",
+   "lat": 53.389648,
+   "lng": -2.607241,
    "light": "green",
-   "score": -1,
+   "score": 2,
    "reasons": [
-    "speculative / no end-user",
-    "brownfield / reuse"
+    "speculative / no end-user"
    ]
   },
   {
@@ -2326,43 +2367,24 @@
    ]
   },
   {
-   "name": "Glasgow/26/01012/FUL",
-   "uid": "26/01012/FUL",
-   "address": "Site At University Avenue Glasgow",
-   "description": "Mixed-use University campus development including: (1) teaching and learning buildings (Class 10) (up to 65,000 sq m); (2) University research buildings (Class 4) (up to 17,000 sq m); (3) commercial research & development/offices (Class 4) (up to 18,000 sq m); (4) retail shops (Class 1) (up to 4,000 sq m); (5) financial, professional and other services (Class 2) (up to 500 sq m; (6) food and drink (Class 3) (up to 2,500 sq m); (7) hotels (Class 7) (up to 12,500 sq m); (8) sports and recreation facilities (Class 11) (up to 500 sq m); (9) day nursery (Class 10) (up to 500 sq m); (10) crèche (Class 10) (up to 100 sq m) (11) residential flats (mainstream or student) (sui generis) (up to 14,500.sq m); (12) Data Centre (Class 4) (up to 3,000 sq m); (13) energy centre (sui generis); (14) means of access, servicing and parking arrangements: (15) related infrastructure; (16) related landscaping and (17) related public realm and demolition of existing buildings - approval of matters specified in conditions 02(1-10 and 12-15), 04, 05, 06, 08-17, 22, 25-29, 32, 37, 38 and 41 of ref. 19/00363/PPP, relating to the erection of Purpose Built Student Accommodation with ancillary facilities (Sui generis), retail shops (Class 1A), food and drink (Class 3), open space, related infrastructure, landscaping and public realm, including partial demolition, extension and alterations to Anderson College (in so far as these relate to the development of Plot E (in part) - Section 42 application to vary conditions 9, 11, 19 and 20 of Matters Specified in Conditions Approval 24/02285/MSC.",
-   "start_date": "2026-05-12",
-   "authority_name": "Glasgow",
-   "area_name": "Glasgow",
+   "name": "Dumfries/26/0855/PAN",
+   "uid": "26/0855/PAN",
+   "address": "Land North Of The Former Chapelcross Nuclear Power Station Near Annan DG12 6RF",
+   "description": "PROPOSAL OF APPLICATION NOTICE FOR DATA CENTRE LED DEVELOPMENT INCLUDING UP TO 162,000 SQUARE METRES OF DATA CENTRE BUILDINGS, UP TO 1,100 SQUARE METRES OF TRAINING CENTRE/RECEPTION/SECURITY, UP TO 6,500 SQUARE METRES OF INDUSTRIAL UNITS, SUBSTATION AND OTHER ASSOCIATED INFRASTRUCTURE",
+   "start_date": "2026-05-11",
+   "authority_name": "Dumfries",
+   "area_name": "Dumfries",
    "nation": "Scotland",
-   "app_state": "Undecided",
-   "app_type": "Full",
-   "link": "https://www.planit.org.uk/planapplic/Glasgow/26/01012/FUL/",
-   "lat": 55.870316,
-   "lng": -4.296923,
+   "app_state": "Permitted",
+   "app_type": "",
+   "link": "https://www.planit.org.uk/planapplic/Dumfries/26/0855/PAN/",
+   "lat": 55.014244,
+   "lng": -3.226847,
    "light": "green",
    "score": -3,
    "reasons": [
+    "already permitted",
     "brownfield / reuse"
-   ]
-  },
-  {
-   "name": "Warrington/2026/00659/SCR",
-   "uid": "2026/00659/SCR",
-   "address": "LAND AT BANK QUAY, LIVERPOOL ROAD, WARRINGTON, WA5 1AB",
-   "description": "REQUEST FOR FORMAL EIA SCREENING OPINION - PHASED MODULAR DATA CENTRE AND ASSOCIATED INFRASTRUCTURE",
-   "start_date": "2026-05-12",
-   "authority_name": "Warrington",
-   "area_name": "Warrington",
-   "nation": "England",
-   "app_state": "",
-   "app_type": "Outline",
-   "link": "https://www.planit.org.uk/planapplic/Warrington/2026/00659/SCR/",
-   "lat": 53.389648,
-   "lng": -2.607241,
-   "light": "green",
-   "score": 2,
-   "reasons": [
-    "speculative / no end-user"
    ]
   },
   {
@@ -2407,27 +2429,6 @@
     "refused — stopped",
     "large campus",
     "speculative / no end-user"
-   ]
-  },
-  {
-   "name": "Dumfries/26/0855/PAN",
-   "uid": "26/0855/PAN",
-   "address": "Land North Of The Former Chapelcross Nuclear Power Station Near Annan DG12 6RF",
-   "description": "PROPOSAL OF APPLICATION NOTICE FOR DATA CENTRE LED DEVELOPMENT INCLUDING UP TO 162,000 SQUARE METRES OF DATA CENTRE BUILDINGS, UP TO 1,100 SQUARE METRES OF TRAINING CENTRE/RECEPTION/SECURITY, UP TO 6,500 SQUARE METRES OF INDUSTRIAL UNITS, SUBSTATION AND OTHER ASSOCIATED INFRASTRUCTURE",
-   "start_date": "2026-05-11",
-   "authority_name": "Dumfries",
-   "area_name": "Dumfries",
-   "nation": "Scotland",
-   "app_state": "Permitted",
-   "app_type": "",
-   "link": "https://www.planit.org.uk/planapplic/Dumfries/26/0855/PAN/",
-   "lat": 55.014244,
-   "lng": -3.226847,
-   "light": "green",
-   "score": -3,
-   "reasons": [
-    "already permitted",
-    "brownfield / reuse"
    ]
   },
   {
@@ -2531,27 +2532,6 @@
    ]
   },
   {
-   "name": "CentralBedfordshire/CB/26/01402/DOC",
-   "uid": "CB/26/01402/DOC",
-   "address": "Phase 4, Parcel 6, Houghton Regis North 1, Sundon Road, Houghton Regis",
-   "description": "Discharge of Condition 19 (parcel 6 phase 4) against planning permission ref. CB/12/03613/OUT (Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination. Development to comprise: up to 5,150 dwellings (Use Class C3); up to 202,500 sqm gross of additional development in Use Classes: A1, A2, A3 (retail), A4 (public house), A5 (take away); B1, B2, B8 (offices, industrial and storage and distribution); C1 (hotel), C2 (care home), D1 and D2 (community and leisure); car showroom; data centre; petrol filling station; car parking; primary substation; energy centre; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; engineering operations. All development, works and operations to be in accordance with the Development Parameters Schedule and Plans.)",
-   "start_date": "2026-05-05",
-   "authority_name": "Central Bedfordshire",
-   "area_name": "Central Bedfordshire",
-   "nation": "England",
-   "app_state": "Conditions",
-   "app_type": "Conditions",
-   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/26/01402/DOC/",
-   "lat": null,
-   "lng": null,
-   "light": "green",
-   "score": 2,
-   "reasons": [
-    "already permitted",
-    "speculative / no end-user"
-   ]
-  },
-  {
    "name": "CentralBedfordshire/CB/26/01401/DOC",
    "uid": "CB/26/01401/DOC",
    "address": "Phase 4, Parcel 6, Houghton Regis North 1, Sundon Road, Houghton Regis",
@@ -2573,26 +2553,24 @@
    ]
   },
   {
-   "name": "WhiteHorse/P26/V1411/DIS",
-   "uid": "P26/V1411/DIS",
-   "address": "Land at Former Didcot A Power Station, north of Milton Road, Didcot Didcot",
-   "description": "Discharge of condtion 6 (Carbon Reduction) and 11 (Land Contamination) on Planning Permission P21/V0167/FUL Hybrid planning application consisting of a) Full Planning Application for the erection of a single storey 8,692 m2 Data Centre building (containing data halls, associated electrical and AHU Plant Rooms, loading bay, maintenance and storage space, office administration areas and screened plant at roof level), emergency generators and emission stacks, diesel tanks and filling area, electrical switchroom, a water sprinkler pump room and storage tanks, a gate house / security building, MV substation, site access, internal access roads, drainage infrastructure, hard and soft landscaping and b) Outline Planning Application for the erection of a two storey 20,800 m2 Data Centre building (containing data halls, associated electrical and AHU Plant Rooms, loading bay, maintenance and storage space, office administration areas and screened plant at roof level), emergency generators and emission stacks, diesel tanks and filling area, electrical switchroom, a water sprinkler pump room and storage tanks; details of appearance will be reserved, along with hard landscaping immediately around the building",
-   "start_date": "2026-04-30",
-   "authority_name": "Vale of White Horse",
-   "area_name": "Vale of White Horse",
+   "name": "CentralBedfordshire/CB/26/01402/DOC",
+   "uid": "CB/26/01402/DOC",
+   "address": "Phase 4, Parcel 6, Houghton Regis North 1, Sundon Road, Houghton Regis",
+   "description": "Discharge of Condition 19 (parcel 6 phase 4) against planning permission ref. CB/12/03613/OUT (Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination. Development to comprise: up to 5,150 dwellings (Use Class C3); up to 202,500 sqm gross of additional development in Use Classes: A1, A2, A3 (retail), A4 (public house), A5 (take away); B1, B2, B8 (offices, industrial and storage and distribution); C1 (hotel), C2 (care home), D1 and D2 (community and leisure); car showroom; data centre; petrol filling station; car parking; primary substation; energy centre; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; engineering operations. All development, works and operations to be in accordance with the Development Parameters Schedule and Plans.)",
+   "start_date": "2026-05-05",
+   "authority_name": "Central Bedfordshire",
+   "area_name": "Central Bedfordshire",
    "nation": "England",
    "app_state": "Conditions",
    "app_type": "Conditions",
-   "link": "https://www.planit.org.uk/planapplic/WhiteHorse/P26/V1411/DIS/",
+   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/26/01402/DOC/",
    "lat": null,
    "lng": null,
    "light": "green",
-   "score": 1,
+   "score": 2,
    "reasons": [
     "already permitted",
-    "large campus",
-    "speculative / no end-user",
-    "brownfield / reuse"
+    "speculative / no end-user"
    ]
   },
   {
@@ -2613,6 +2591,29 @@
    "score": -1,
    "reasons": [
     "already permitted",
+    "speculative / no end-user",
+    "brownfield / reuse"
+   ]
+  },
+  {
+   "name": "WhiteHorse/P26/V1411/DIS",
+   "uid": "P26/V1411/DIS",
+   "address": "Land at Former Didcot A Power Station, north of Milton Road, Didcot Didcot",
+   "description": "Discharge of condtion 6 (Carbon Reduction) and 11 (Land Contamination) on Planning Permission P21/V0167/FUL Hybrid planning application consisting of a) Full Planning Application for the erection of a single storey 8,692 m2 Data Centre building (containing data halls, associated electrical and AHU Plant Rooms, loading bay, maintenance and storage space, office administration areas and screened plant at roof level), emergency generators and emission stacks, diesel tanks and filling area, electrical switchroom, a water sprinkler pump room and storage tanks, a gate house / security building, MV substation, site access, internal access roads, drainage infrastructure, hard and soft landscaping and b) Outline Planning Application for the erection of a two storey 20,800 m2 Data Centre building (containing data halls, associated electrical and AHU Plant Rooms, loading bay, maintenance and storage space, office administration areas and screened plant at roof level), emergency generators and emission stacks, diesel tanks and filling area, electrical switchroom, a water sprinkler pump room and storage tanks; details of appearance will be reserved, along with hard landscaping immediately around the building",
+   "start_date": "2026-04-30",
+   "authority_name": "Vale of White Horse",
+   "area_name": "Vale of White Horse",
+   "nation": "England",
+   "app_state": "Conditions",
+   "app_type": "Conditions",
+   "link": "https://www.planit.org.uk/planapplic/WhiteHorse/P26/V1411/DIS/",
+   "lat": null,
+   "lng": null,
+   "light": "green",
+   "score": 1,
+   "reasons": [
+    "already permitted",
+    "large campus",
     "speculative / no end-user",
     "brownfield / reuse"
    ]
@@ -2640,6 +2641,27 @@
    ]
   },
   {
+   "name": "CentralBedfordshire/CB/26/01348/OUT",
+   "uid": "CB/26/01348/OUT",
+   "address": "Land North of Beamish Close, Sandy, Bedfordshire, SG19 1SD",
+   "description": "Hybrid planning application comprising: Outline application for commercial development for up to 71,000 sqm of flexible employment floorspace including industrial and/or a data centre and/or research and development (Class B2, B8, E(g)(ii), E(g)(iii)), together with associated buildings, structures, car parking, access roads and landscaping works (all matters reserved). Full application for a landscape buffer",
+   "start_date": "2026-04-28",
+   "authority_name": "Central Bedfordshire",
+   "area_name": "Central Bedfordshire",
+   "nation": "England",
+   "app_state": "Withdrawn",
+   "app_type": "Outline",
+   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/26/01348/OUT/",
+   "lat": 52.14455,
+   "lng": -0.286229,
+   "light": "green",
+   "score": 2,
+   "reasons": [
+    "refused — stopped",
+    "speculative / no end-user"
+   ]
+  },
+  {
    "name": "Bassetlaw/26/00498/FUL",
    "uid": "26/00498/FUL",
    "address": "Land Off South Road West Burton Nottinghamshire",
@@ -2657,6 +2679,28 @@
    "score": 0,
    "reasons": [
     "already permitted"
+   ]
+  },
+  {
+   "name": "OldOakParkRoyal/26/0083/AODOPDC",
+   "uid": "26/0083/AODOPDC",
+   "address": "Chandos Road Trading Estate, Chandos Road, Park Royal, NW10 6NF",
+   "description": "Details of condition 44 (External Lighting Scheme) for Phase 1b pursuant to planning permission 21/0013/OUTOPDC dated 07/09/2021 for 'Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination for demolition and redevelopment to comprise a data centre (Use Class B8) of up to 52,000 sqm gross external, including ancillary offices, internal plant and equipment (including flues), and substation. In addition to the above the Development may include up to 2,500 sqm of work units (Use Class E(g)(ii) & E(g)(iii), B2); car parking; provision of external plant and equipment (including flues); creation of servicing areas and provision of associated services, including waste, refuse, cycle storage, and lighting; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; provision of attenuation infrastructure, engineering operations. Development shall be in accordance with the approved Development Parameters Schedule and Plans'.",
+   "start_date": "2026-04-28",
+   "authority_name": "Old Oak Park Royal",
+   "area_name": "Old Oak Park Royal",
+   "nation": "England",
+   "app_state": "Permitted",
+   "app_type": "Conditions",
+   "link": "https://www.planit.org.uk/planapplic/OldOakParkRoyal/26/0083/AODOPDC/",
+   "lat": 51.527719,
+   "lng": -0.255342,
+   "light": "green",
+   "score": -1,
+   "reasons": [
+    "already permitted",
+    "speculative / no end-user",
+    "brownfield / reuse"
    ]
   },
   {
@@ -2692,49 +2736,6 @@
    "app_state": "Permitted",
    "app_type": "Conditions",
    "link": "https://www.planit.org.uk/planapplic/OldOakParkRoyal/26/0082/AODOPDC/",
-   "lat": 51.527719,
-   "lng": -0.255342,
-   "light": "green",
-   "score": -1,
-   "reasons": [
-    "already permitted",
-    "speculative / no end-user",
-    "brownfield / reuse"
-   ]
-  },
-  {
-   "name": "CentralBedfordshire/CB/26/01348/OUT",
-   "uid": "CB/26/01348/OUT",
-   "address": "Land North of Beamish Close, Sandy, Bedfordshire, SG19 1SD",
-   "description": "Hybrid planning application comprising: Outline application for commercial development for up to 71,000 sqm of flexible employment floorspace including industrial and/or a data centre and/or research and development (Class B2, B8, E(g)(ii), E(g)(iii)), together with associated buildings, structures, car parking, access roads and landscaping works (all matters reserved). Full application for a landscape buffer",
-   "start_date": "2026-04-28",
-   "authority_name": "Central Bedfordshire",
-   "area_name": "Central Bedfordshire",
-   "nation": "England",
-   "app_state": "Withdrawn",
-   "app_type": "Outline",
-   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/26/01348/OUT/",
-   "lat": 52.14455,
-   "lng": -0.286229,
-   "light": "green",
-   "score": 2,
-   "reasons": [
-    "refused — stopped",
-    "speculative / no end-user"
-   ]
-  },
-  {
-   "name": "OldOakParkRoyal/26/0083/AODOPDC",
-   "uid": "26/0083/AODOPDC",
-   "address": "Chandos Road Trading Estate, Chandos Road, Park Royal, NW10 6NF",
-   "description": "Details of condition 44 (External Lighting Scheme) for Phase 1b pursuant to planning permission 21/0013/OUTOPDC dated 07/09/2021 for 'Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination for demolition and redevelopment to comprise a data centre (Use Class B8) of up to 52,000 sqm gross external, including ancillary offices, internal plant and equipment (including flues), and substation. In addition to the above the Development may include up to 2,500 sqm of work units (Use Class E(g)(ii) & E(g)(iii), B2); car parking; provision of external plant and equipment (including flues); creation of servicing areas and provision of associated services, including waste, refuse, cycle storage, and lighting; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; provision of attenuation infrastructure, engineering operations. Development shall be in accordance with the approved Development Parameters Schedule and Plans'.",
-   "start_date": "2026-04-28",
-   "authority_name": "Old Oak Park Royal",
-   "area_name": "Old Oak Park Royal",
-   "nation": "England",
-   "app_state": "Permitted",
-   "app_type": "Conditions",
-   "link": "https://www.planit.org.uk/planapplic/OldOakParkRoyal/26/0083/AODOPDC/",
    "lat": 51.527719,
    "lng": -0.255342,
    "light": "green",
@@ -2875,6 +2876,27 @@
    ]
   },
   {
+   "name": "CentralBedfordshire/CB/26/01149/DOC",
+   "uid": "CB/26/01149/DOC",
+   "address": "Phase 3B, Parcels 1 and 2, Houghton Regis North site1, Houghton Regis",
+   "description": "Discharge of Conditions 7 & 29 against planning application ref. CB/12/03613/OUT (Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination. Development to comprise: up to 5,150 dwellings (Use Class C3); up to 202,500 sqm gross of additional development in Use Classes: A1, A2, A3 (retail), A4 (public house), A5 (take away); B1, B2, B8 (offices, industrial and storage and distribution); C1 (hotel), C2 (care home), D1 and D2 (community and leisure); car showroom; data centre; petrol filling station; car parking; primary substation; energy centre; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; engineering operations. All development, works and operations to be in accordance with the Development Parameters Schedule and Plans.",
+   "start_date": "2026-04-10",
+   "authority_name": "Central Bedfordshire",
+   "area_name": "Central Bedfordshire",
+   "nation": "England",
+   "app_state": "Conditions",
+   "app_type": "Conditions",
+   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/26/01149/DOC/",
+   "lat": null,
+   "lng": null,
+   "light": "green",
+   "score": 2,
+   "reasons": [
+    "already permitted",
+    "speculative / no end-user"
+   ]
+  },
+  {
    "name": "CentralBedfordshire/CB/26/01153/DOC",
    "uid": "CB/26/01153/DOC",
    "address": "Houghton Regis North Site 1, land on the northern edge of Houghton Regis",
@@ -2917,27 +2939,6 @@
    ]
   },
   {
-   "name": "CentralBedfordshire/CB/26/01149/DOC",
-   "uid": "CB/26/01149/DOC",
-   "address": "Phase 3B, Parcels 1 and 2, Houghton Regis North site1, Houghton Regis",
-   "description": "Discharge of Conditions 7 & 29 against planning application ref. CB/12/03613/OUT (Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination. Development to comprise: up to 5,150 dwellings (Use Class C3); up to 202,500 sqm gross of additional development in Use Classes: A1, A2, A3 (retail), A4 (public house), A5 (take away); B1, B2, B8 (offices, industrial and storage and distribution); C1 (hotel), C2 (care home), D1 and D2 (community and leisure); car showroom; data centre; petrol filling station; car parking; primary substation; energy centre; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; engineering operations. All development, works and operations to be in accordance with the Development Parameters Schedule and Plans.",
-   "start_date": "2026-04-10",
-   "authority_name": "Central Bedfordshire",
-   "area_name": "Central Bedfordshire",
-   "nation": "England",
-   "app_state": "Conditions",
-   "app_type": "Conditions",
-   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/26/01149/DOC/",
-   "lat": null,
-   "lng": null,
-   "light": "green",
-   "score": 2,
-   "reasons": [
-    "already permitted",
-    "speculative / no end-user"
-   ]
-  },
-  {
    "name": "CentralBedfordshire/CB/26/01140/DOC",
    "uid": "CB/26/01140/DOC",
    "address": "Phase 4, Parcel 1, Houghton Regis North 1, Sundon Road, Houghton Regis",
@@ -2959,27 +2960,6 @@
    ]
   },
   {
-   "name": "Bucks/PL/26/02874/DE",
-   "uid": "PL/26/02874/DE",
-   "address": "Court Lane Industrial Estate Court Lane Iver Buckinghamshire",
-   "description": "Reserved Matters Approval is sought for access, appearance, landscaping, layout and scale following outline planning permission PL/22/4145/OA (Outline planning application with all matters reserved for the demolition of the Court Lane Industrial Estate and the redevelopment of the site to comprise a data centre (Use Class B8 (Data Centre)) of up to 65,000sqm (GEA) (excluding generator yard) (each phase being an independent act of development). The data centre buildings will include ancillary offices, internal technical spaces and technical equipment. The development may also include car and cycle parking; external plant and equipment; hard and soft landscaping; security perimeter fencing; lighting; earthworks; waste and recycling; and for the laying out of the building, routes and open spaces)",
-   "start_date": "2026-04-07",
-   "authority_name": "Buckinghamshire",
-   "area_name": "Buckinghamshire",
-   "nation": "England",
-   "app_state": "Undecided",
-   "app_type": "Outline",
-   "link": "https://www.planit.org.uk/planapplic/Bucks/PL/26/02874/DE/",
-   "lat": 51.513585,
-   "lng": -0.49921,
-   "light": "green",
-   "score": -1,
-   "reasons": [
-    "speculative / no end-user",
-    "brownfield / reuse"
-   ]
-  },
-  {
    "name": "Stockton/26/0704/DCH",
    "uid": "26/0704/DCH",
    "address": "Land North Of George Stephenson Court Westland Way Preston Farm Industrial Estate Stockton-on-Tees TS18 3FB",
@@ -2997,6 +2977,27 @@
    "score": -3,
    "reasons": [
     "already permitted",
+    "brownfield / reuse"
+   ]
+  },
+  {
+   "name": "Bucks/PL/26/02874/DE",
+   "uid": "PL/26/02874/DE",
+   "address": "Court Lane Industrial Estate Court Lane Iver Buckinghamshire",
+   "description": "Reserved Matters Approval is sought for access, appearance, landscaping, layout and scale following outline planning permission PL/22/4145/OA (Outline planning application with all matters reserved for the demolition of the Court Lane Industrial Estate and the redevelopment of the site to comprise a data centre (Use Class B8 (Data Centre)) of up to 65,000sqm (GEA) (excluding generator yard) (each phase being an independent act of development). The data centre buildings will include ancillary offices, internal technical spaces and technical equipment. The development may also include car and cycle parking; external plant and equipment; hard and soft landscaping; security perimeter fencing; lighting; earthworks; waste and recycling; and for the laying out of the building, routes and open spaces)",
+   "start_date": "2026-04-07",
+   "authority_name": "Buckinghamshire",
+   "area_name": "Buckinghamshire",
+   "nation": "England",
+   "app_state": "Undecided",
+   "app_type": "Outline",
+   "link": "https://www.planit.org.uk/planapplic/Bucks/PL/26/02874/DE/",
+   "lat": 51.513585,
+   "lng": -0.49921,
+   "light": "green",
+   "score": -1,
+   "reasons": [
+    "speculative / no end-user",
     "brownfield / reuse"
    ]
   },
@@ -3167,26 +3168,6 @@
    ]
   },
   {
-   "name": "EppingForest/EPF/0591/26",
-   "uid": "EPF/0591/26",
-   "address": "Alandale Scaffolding, Langston Road, Loughton IG10 3SL",
-   "description": "Approval of Details reserved by Condition 5 (Construction Management Plan) of EPF/1165/22 & EPF/0388/26 (New Data Centre).",
-   "start_date": "2026-03-23",
-   "authority_name": "Epping Forest",
-   "area_name": "Epping Forest",
-   "nation": "England",
-   "app_state": "Permitted",
-   "app_type": "Conditions",
-   "link": "https://www.planit.org.uk/planapplic/EppingForest/EPF/0591/26/",
-   "lat": 51.646938,
-   "lng": 0.089896,
-   "light": "green",
-   "score": 0,
-   "reasons": [
-    "already permitted"
-   ]
-  },
-  {
    "name": "OldOakParkRoyal/26/0060/AODOPDC",
    "uid": "26/0060/AODOPDC",
    "address": "Chandos Road Trading Estate, Chandos Road, Park Royal, NW10 6NF",
@@ -3209,6 +3190,26 @@
    ]
   },
   {
+   "name": "EppingForest/EPF/0591/26",
+   "uid": "EPF/0591/26",
+   "address": "Alandale Scaffolding, Langston Road, Loughton IG10 3SL",
+   "description": "Approval of Details reserved by Condition 5 (Construction Management Plan) of EPF/1165/22 & EPF/0388/26 (New Data Centre).",
+   "start_date": "2026-03-23",
+   "authority_name": "Epping Forest",
+   "area_name": "Epping Forest",
+   "nation": "England",
+   "app_state": "Permitted",
+   "app_type": "Conditions",
+   "link": "https://www.planit.org.uk/planapplic/EppingForest/EPF/0591/26/",
+   "lat": 51.646938,
+   "lng": 0.089896,
+   "light": "green",
+   "score": 0,
+   "reasons": [
+    "already permitted"
+   ]
+  },
+  {
    "name": "WhiteHorse/P26/V0725/DIS",
    "uid": "P26/V0725/DIS",
    "address": "Harwell Science And Innovation Campus, Diamond House Road Thirteen, Didcot, OX11 0DE",
@@ -3226,27 +3227,6 @@
    "score": 0,
    "reasons": [
     "already permitted"
-   ]
-  },
-  {
-   "name": "CentralBedfordshire/CB/26/00907/DOC",
-   "uid": "CB/26/00907/DOC",
-   "address": "Local Centre Parcel, Linmere (HRN1), Phase 1, Waterslade Way & Lime Tree Drive, Houghton Regis, LU5 7AS",
-   "description": "Discharge of Condition 11 against planning permission ref. CB/23/03987/RM (Reserved Matters: following Outline Application CB/12/03613/OUT (Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination. Development to comprise: up to 5,150 dwellings (Use Class C3); up to 202,500 sqm gross of additional development in Use Classes: A1, A2, A3 (retail), A4 (public house), A5 (take away); B1, B2, B8 (offices, industrial and storage and distribution); C1 (hotel), C2 (care home), D1 and D2 (community and leisure); car showroom; data centre; petrol filling station; car parking; primary substation; energy centre; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; engineering operations. All development, works and operations to be in accordance with the Development Parameters Schedule and Plans.) Reserved matters approval sought for layout, scale, appearance, landscaping and access relating to Local Centre Parcel, Phase 1.)",
-   "start_date": "2026-03-20",
-   "authority_name": "Central Bedfordshire",
-   "area_name": "Central Bedfordshire",
-   "nation": "England",
-   "app_state": "Conditions",
-   "app_type": "Conditions",
-   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/26/00907/DOC/",
-   "lat": 51.919827,
-   "lng": -0.505685,
-   "light": "green",
-   "score": 2,
-   "reasons": [
-    "already permitted",
-    "speculative / no end-user"
    ]
   },
   {
@@ -3272,17 +3252,17 @@
    ]
   },
   {
-   "name": "CentralBedfordshire/CB/26/00852/DOC",
-   "uid": "CB/26/00852/DOC",
+   "name": "CentralBedfordshire/CB/26/00907/DOC",
+   "uid": "CB/26/00907/DOC",
    "address": "Local Centre Parcel, Linmere (HRN1), Phase 1, Waterslade Way & Lime Tree Drive, Houghton Regis, LU5 7AS",
-   "description": "Discharge of Condition 14, against planning permission ref. CB/23/03987/RM (Reserved Matters: following Outline Application CB/12/03613/OUT (Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination. Development to comprise: up to 5,150 dwellings (Use Class C3); up to 202,500 sqm gross of additional development in Use Classes: A1, A2, A3 (retail), A4 (public house), A5 (take away); B1, B2, B8 (offices, industrial and storage and distribution); C1 (hotel), C2 (care home), D1 and D2 (community and leisure); car showroom; data centre; petrol filling station; car parking; primary substation; energy centre; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; engineering operations. All development, works and operations to be in accordance with the Development Parameters Schedule and Plans.) Reserved matters approval sought for layout, scale, appearance, landscaping and access relating to Local Centre Parcel, Phase 1.)",
-   "start_date": "2026-03-16",
+   "description": "Discharge of Condition 11 against planning permission ref. CB/23/03987/RM (Reserved Matters: following Outline Application CB/12/03613/OUT (Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination. Development to comprise: up to 5,150 dwellings (Use Class C3); up to 202,500 sqm gross of additional development in Use Classes: A1, A2, A3 (retail), A4 (public house), A5 (take away); B1, B2, B8 (offices, industrial and storage and distribution); C1 (hotel), C2 (care home), D1 and D2 (community and leisure); car showroom; data centre; petrol filling station; car parking; primary substation; energy centre; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; engineering operations. All development, works and operations to be in accordance with the Development Parameters Schedule and Plans.) Reserved matters approval sought for layout, scale, appearance, landscaping and access relating to Local Centre Parcel, Phase 1.)",
+   "start_date": "2026-03-20",
    "authority_name": "Central Bedfordshire",
    "area_name": "Central Bedfordshire",
    "nation": "England",
    "app_state": "Conditions",
    "app_type": "Conditions",
-   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/26/00852/DOC/",
+   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/26/00907/DOC/",
    "lat": 51.919827,
    "lng": -0.505685,
    "light": "green",
@@ -3310,6 +3290,27 @@
    "score": 0,
    "reasons": [
     "already permitted"
+   ]
+  },
+  {
+   "name": "CentralBedfordshire/CB/26/00852/DOC",
+   "uid": "CB/26/00852/DOC",
+   "address": "Local Centre Parcel, Linmere (HRN1), Phase 1, Waterslade Way & Lime Tree Drive, Houghton Regis, LU5 7AS",
+   "description": "Discharge of Condition 14, against planning permission ref. CB/23/03987/RM (Reserved Matters: following Outline Application CB/12/03613/OUT (Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination. Development to comprise: up to 5,150 dwellings (Use Class C3); up to 202,500 sqm gross of additional development in Use Classes: A1, A2, A3 (retail), A4 (public house), A5 (take away); B1, B2, B8 (offices, industrial and storage and distribution); C1 (hotel), C2 (care home), D1 and D2 (community and leisure); car showroom; data centre; petrol filling station; car parking; primary substation; energy centre; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; engineering operations. All development, works and operations to be in accordance with the Development Parameters Schedule and Plans.) Reserved matters approval sought for layout, scale, appearance, landscaping and access relating to Local Centre Parcel, Phase 1.)",
+   "start_date": "2026-03-16",
+   "authority_name": "Central Bedfordshire",
+   "area_name": "Central Bedfordshire",
+   "nation": "England",
+   "app_state": "Conditions",
+   "app_type": "Conditions",
+   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/26/00852/DOC/",
+   "lat": 51.919827,
+   "lng": -0.505685,
+   "light": "green",
+   "score": 2,
+   "reasons": [
+    "already permitted",
+    "speculative / no end-user"
    ]
   },
   {
@@ -3355,24 +3356,6 @@
    ]
   },
   {
-   "name": "Gwynedd/C26/0160/25/LL",
-   "uid": "C26/0160/25/LL",
-   "address": "Bwrdd Iechyd Prifysgol Betsi Cadwaladr, YSBYTY GWYNEDD Road Through Ysbyty Gwynedd, Ysbyty Gwynedd, Penrhosgarnedd, Bangor, Gwynedd, LL57 2PW",
-   "description": "Gosod adeilad modiwlaidd i weithredu fel canolfan ddata i gefnogi prif safle’r ysbyty. Bydd hwn yn cael ei leoli dros arwyneb caled presennol ac fe fydd angen tynnu’r cynwysyddion presennol. Bydd cyddwysyddion allanol yn cael eu cynnwys o fewn maes diogel newydd a darperir mynediad gyda ramp i mewn i’r adeilad modiwlaidd. Installation of a modular building to act as a data centre supporting the main hospital site. This will be located over existing hardstanding and shall require the removal of existing shipping containers. External condensers will be contained within a new secure compound and ramped access will be provided into the modular building.",
-   "start_date": "2026-03-10",
-   "authority_name": "Gwynedd",
-   "area_name": "Gwynedd",
-   "nation": "Wales",
-   "app_state": "",
-   "app_type": "Full",
-   "link": "https://www.planit.org.uk/planapplic/Gwynedd/C26/0160/25/LL/",
-   "lat": 53.209038,
-   "lng": -4.159831,
-   "light": "green",
-   "score": 0,
-   "reasons": []
-  },
-  {
    "name": "CentralBedfordshire/CB/26/00787/DOC",
    "uid": "CB/26/00787/DOC",
    "address": "Phase 4, Parcels 4 & 5 - Houghton Regis North site 1, land on the northern edge of Houghton Regis",
@@ -3394,6 +3377,24 @@
    ]
   },
   {
+   "name": "Gwynedd/C26/0160/25/LL",
+   "uid": "C26/0160/25/LL",
+   "address": "Bwrdd Iechyd Prifysgol Betsi Cadwaladr, YSBYTY GWYNEDD Road Through Ysbyty Gwynedd, Ysbyty Gwynedd, Penrhosgarnedd, Bangor, Gwynedd, LL57 2PW",
+   "description": "Gosod adeilad modiwlaidd i weithredu fel canolfan ddata i gefnogi prif safle’r ysbyty. Bydd hwn yn cael ei leoli dros arwyneb caled presennol ac fe fydd angen tynnu’r cynwysyddion presennol. Bydd cyddwysyddion allanol yn cael eu cynnwys o fewn maes diogel newydd a darperir mynediad gyda ramp i mewn i’r adeilad modiwlaidd. Installation of a modular building to act as a data centre supporting the main hospital site. This will be located over existing hardstanding and shall require the removal of existing shipping containers. External condensers will be contained within a new secure compound and ramped access will be provided into the modular building.",
+   "start_date": "2026-03-10",
+   "authority_name": "Gwynedd",
+   "area_name": "Gwynedd",
+   "nation": "Wales",
+   "app_state": "",
+   "app_type": "Full",
+   "link": "https://www.planit.org.uk/planapplic/Gwynedd/C26/0160/25/LL/",
+   "lat": 53.209038,
+   "lng": -4.159831,
+   "light": "green",
+   "score": 0,
+   "reasons": []
+  },
+  {
    "name": "CentralBedfordshire/CB/26/00770/DOC",
    "uid": "CB/26/00770/DOC",
    "address": "Land To The North And East Of Houghton Regis, Sundon Road, Houghton Regis",
@@ -3411,28 +3412,6 @@
    "score": 0,
    "reasons": [
     "already permitted"
-   ]
-  },
-  {
-   "name": "MiltonKeynes/PLN/2026/0458",
-   "uid": "PLN/2026/0458",
-   "address": "Former BT Data Centre, Tavistock Street, Bletchley , Milton Keynes, MK2 2PG",
-   "description": "Prior notification for the demolition of three existing buildings at the Former BT Data Centre, previously been used for industrial use",
-   "start_date": "2026-03-05",
-   "authority_name": "Milton Keynes",
-   "area_name": "Milton Keynes",
-   "nation": "England",
-   "app_state": "Permitted",
-   "app_type": "Outline",
-   "link": "https://www.planit.org.uk/planapplic/MiltonKeynes/PLN/2026/0458/",
-   "lat": 51.999226,
-   "lng": -0.72458,
-   "light": "green",
-   "score": -1,
-   "reasons": [
-    "already permitted",
-    "speculative / no end-user",
-    "brownfield / reuse"
    ]
   },
   {
@@ -3457,23 +3436,23 @@
    ]
   },
   {
-   "name": "Ealing/261034OPDCOB",
-   "uid": "261034OPDCOB",
-   "address": "Chandos Road Trading Estate Chandos Road Park Royal NW10 6NF",
-   "description": "Details of condition 43 (Delivery and Servicing Plan) pursuant to planning permission reference 21/0013/OUTOPDC dated 07/09/2021 for 'Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination for demolition and redevelopment to comprise a data centre (Use Class B8) of up to 52, 000 sqm gross external, including ancillary offices, internal plant and equipment (including flues), and substation. In addition to the above the Development may include up to 2, 500 sqm of work units (Use Class E(g)(ii) & E(g)(iii), B2); car parking; provision of external plant and equipment (including flues); creation of servicing areas and provision of associated services, including waste, refuse, cycle storage, and lighting; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; provision of attenuation infrastructure, engineering operations. Development shall be in accordance with the approved Development Parameters Schedule and Plans.' ( out of borough)",
-   "start_date": "2026-03-04",
-   "authority_name": "Ealing",
-   "area_name": "Ealing",
+   "name": "MiltonKeynes/PLN/2026/0458",
+   "uid": "PLN/2026/0458",
+   "address": "Former BT Data Centre, Tavistock Street, Bletchley , Milton Keynes, MK2 2PG",
+   "description": "Prior notification for the demolition of three existing buildings at the Former BT Data Centre, previously been used for industrial use",
+   "start_date": "2026-03-05",
+   "authority_name": "Milton Keynes",
+   "area_name": "Milton Keynes",
    "nation": "England",
-   "app_state": "Withdrawn",
+   "app_state": "Permitted",
    "app_type": "Outline",
-   "link": "https://www.planit.org.uk/planapplic/Ealing/261034OPDCOB/",
-   "lat": 51.527649,
-   "lng": -0.255321,
+   "link": "https://www.planit.org.uk/planapplic/MiltonKeynes/PLN/2026/0458/",
+   "lat": 51.999226,
+   "lng": -0.72458,
    "light": "green",
    "score": -1,
    "reasons": [
-    "refused — stopped",
+    "already permitted",
     "speculative / no end-user",
     "brownfield / reuse"
    ]
@@ -3518,6 +3497,28 @@
    "reasons": [
     "already permitted",
     "speculative / no end-user"
+   ]
+  },
+  {
+   "name": "Ealing/261034OPDCOB",
+   "uid": "261034OPDCOB",
+   "address": "Chandos Road Trading Estate Chandos Road Park Royal NW10 6NF",
+   "description": "Details of condition 43 (Delivery and Servicing Plan) pursuant to planning permission reference 21/0013/OUTOPDC dated 07/09/2021 for 'Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination for demolition and redevelopment to comprise a data centre (Use Class B8) of up to 52, 000 sqm gross external, including ancillary offices, internal plant and equipment (including flues), and substation. In addition to the above the Development may include up to 2, 500 sqm of work units (Use Class E(g)(ii) & E(g)(iii), B2); car parking; provision of external plant and equipment (including flues); creation of servicing areas and provision of associated services, including waste, refuse, cycle storage, and lighting; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; provision of attenuation infrastructure, engineering operations. Development shall be in accordance with the approved Development Parameters Schedule and Plans.' ( out of borough)",
+   "start_date": "2026-03-04",
+   "authority_name": "Ealing",
+   "area_name": "Ealing",
+   "nation": "England",
+   "app_state": "Withdrawn",
+   "app_type": "Outline",
+   "link": "https://www.planit.org.uk/planapplic/Ealing/261034OPDCOB/",
+   "lat": 51.527649,
+   "lng": -0.255321,
+   "light": "green",
+   "score": -1,
+   "reasons": [
+    "refused — stopped",
+    "speculative / no end-user",
+    "brownfield / reuse"
    ]
   },
   {
@@ -3584,45 +3585,24 @@
    ]
   },
   {
-   "name": "Ealing/260830CND",
-   "uid": "260830CND",
+   "name": "Ealing/260925CND",
+   "uid": "260925CND",
    "address": "International Trading Estate Trident Way Southall UB2 5LF",
-   "description": "Details of a Arboricultural Method Statement pursuant to condition 16 of planning permission ref: 250949FUL dated 19/12/2025 for: Site clearance and preparation, including demolition of all existing buildings on site and redevelopment of the site to provide: Construction of four data centre units within three buildings of approximately 67.9m AOD in height (Use Class B8, approximately 158,702sqm GEA), four industrial buildings ranging from approximately 41.3m to 46.2m AOD in height (Use Classes B8, B2 and E(g)(iii), approximately 23,389 GEA), central pavilion building of approximately 35m AOD in height (Use Class E(b), approximately 223 GEA), two substations (38.05m AOD in height), associated plant, enclosures and necessary physical security systems, internal roads, servicing, circulation, car and cycle parking and hard and soft landscaping works.",
+   "description": "Details of a Tree Monitoring Plan pursuant to condition 17 (part discharge - part a) of planning permission ref: 250949FUL dated 19/12/2025 for: Site clearance and preparation, including demolition of all existing buildings on site and redevelopment of the site to provide: Construction of four data centre units within three buildings of approximately 67.9m AOD in height (Use Class B8, approximately 158,702sqm GEA), four industrial buildings ranging from approximately 41.3m to 46.2m AOD in height (Use Classes B8, B2 and E(g)(iii), approximately 23,389 GEA), central pavilion building of approximately 35m AOD in height (Use Class E(b), approximately 223 GEA), two substations (38.05m AOD in height), associated plant, enclosures and necessary physical security systems, internal roads, servicing, circulation, car and cycle parking and hard and soft landscaping works.",
    "start_date": "2026-02-25",
    "authority_name": "Ealing",
    "area_name": "Ealing",
    "nation": "England",
    "app_state": "Permitted",
    "app_type": "Conditions",
-   "link": "https://www.planit.org.uk/planapplic/Ealing/260830CND/",
-   "lat": 51.500386,
-   "lng": -0.401975,
+   "link": "https://www.planit.org.uk/planapplic/Ealing/260925CND/",
+   "lat": 51.500508,
+   "lng": -0.402403,
    "light": "green",
    "score": -3,
    "reasons": [
     "already permitted",
     "brownfield / reuse"
-   ]
-  },
-  {
-   "name": "EppingForest/EPF/0404/26",
-   "uid": "EPF/0404/26",
-   "address": "Alandale Scaffolding, Langston Road, Loughton IG10 3SL",
-   "description": "Reserved Matters application submitted pursuant to Outline Planning Permission EPF/1165/22 and the subsequent approved Section 73 application EPF/0388/26 (outline permission for a new data centre with some matters reserved). Approval is sought for the reserved matters of appearance and landscaping.",
-   "start_date": "2026-02-25",
-   "authority_name": "Epping Forest",
-   "area_name": "Epping Forest",
-   "nation": "England",
-   "app_state": "Conditions",
-   "app_type": "Outline",
-   "link": "https://www.planit.org.uk/planapplic/EppingForest/EPF/0404/26/",
-   "lat": 51.646938,
-   "lng": 0.089896,
-   "light": "green",
-   "score": 2,
-   "reasons": [
-    "already permitted",
-    "speculative / no end-user"
    ]
   },
   {
@@ -3639,48 +3619,6 @@
    "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/26/00636/DOC/",
    "lat": 51.919827,
    "lng": -0.505685,
-   "light": "green",
-   "score": 2,
-   "reasons": [
-    "already permitted",
-    "speculative / no end-user"
-   ]
-  },
-  {
-   "name": "Ealing/260831CND",
-   "uid": "260831CND",
-   "address": "International Trading Estate Trident Way Southall UB2 5LF",
-   "description": "Details of a Bird Hazard Management Plan pursuant to condition 27 of planning permission ref: 250949FUL dated 19/12/2025 for: Site clearance and preparation, including demolition of all existing buildings on site and redevelopment of the site to provide: Construction of four data centre units within three buildings of approximately 67.9m AOD in height (Use Class B8, approximately 158,702sqm GEA), four industrial buildings ranging from approximately 41.3m to 46.2m AOD in height (Use Classes B8, B2 and E(g)(iii), approximately 23,389 GEA), central pavilion building of approximately 35m AOD in height (Use Class E(b), approximately 223 GEA), two substations (38.05m AOD in height), associated plant, enclosures and necessary physical security systems, internal roads, servicing, circulation, car and cycle parking and hard and soft landscaping works.",
-   "start_date": "2026-02-25",
-   "authority_name": "Ealing",
-   "area_name": "Ealing",
-   "nation": "England",
-   "app_state": "Permitted",
-   "app_type": "Conditions",
-   "link": "https://www.planit.org.uk/planapplic/Ealing/260831CND/",
-   "lat": 51.500217,
-   "lng": -0.402125,
-   "light": "green",
-   "score": -3,
-   "reasons": [
-    "already permitted",
-    "brownfield / reuse"
-   ]
-  },
-  {
-   "name": "NorthAyrshire/26/00138/EIA",
-   "uid": "26/00138/EIA",
-   "address": "Hunterston Estate West Kilbride North Ayrshire",
-   "description": "Request for EIA Scoping Opinion for new data centre",
-   "start_date": "2026-02-25",
-   "authority_name": "North Ayrshire",
-   "area_name": "North Ayrshire",
-   "nation": "Scotland",
-   "app_state": "Permitted",
-   "app_type": "Outline",
-   "link": "https://www.planit.org.uk/planapplic/NorthAyrshire/26/00138/EIA/",
-   "lat": null,
-   "lng": null,
    "light": "green",
    "score": 2,
    "reasons": [
@@ -3710,24 +3648,87 @@
    ]
   },
   {
-   "name": "Ealing/260925CND",
-   "uid": "260925CND",
+   "name": "Ealing/260831CND",
+   "uid": "260831CND",
    "address": "International Trading Estate Trident Way Southall UB2 5LF",
-   "description": "Details of a Tree Monitoring Plan pursuant to condition 17 (part discharge - part a) of planning permission ref: 250949FUL dated 19/12/2025 for: Site clearance and preparation, including demolition of all existing buildings on site and redevelopment of the site to provide: Construction of four data centre units within three buildings of approximately 67.9m AOD in height (Use Class B8, approximately 158,702sqm GEA), four industrial buildings ranging from approximately 41.3m to 46.2m AOD in height (Use Classes B8, B2 and E(g)(iii), approximately 23,389 GEA), central pavilion building of approximately 35m AOD in height (Use Class E(b), approximately 223 GEA), two substations (38.05m AOD in height), associated plant, enclosures and necessary physical security systems, internal roads, servicing, circulation, car and cycle parking and hard and soft landscaping works.",
+   "description": "Details of a Bird Hazard Management Plan pursuant to condition 27 of planning permission ref: 250949FUL dated 19/12/2025 for: Site clearance and preparation, including demolition of all existing buildings on site and redevelopment of the site to provide: Construction of four data centre units within three buildings of approximately 67.9m AOD in height (Use Class B8, approximately 158,702sqm GEA), four industrial buildings ranging from approximately 41.3m to 46.2m AOD in height (Use Classes B8, B2 and E(g)(iii), approximately 23,389 GEA), central pavilion building of approximately 35m AOD in height (Use Class E(b), approximately 223 GEA), two substations (38.05m AOD in height), associated plant, enclosures and necessary physical security systems, internal roads, servicing, circulation, car and cycle parking and hard and soft landscaping works.",
    "start_date": "2026-02-25",
    "authority_name": "Ealing",
    "area_name": "Ealing",
    "nation": "England",
    "app_state": "Permitted",
    "app_type": "Conditions",
-   "link": "https://www.planit.org.uk/planapplic/Ealing/260925CND/",
-   "lat": 51.500508,
-   "lng": -0.402403,
+   "link": "https://www.planit.org.uk/planapplic/Ealing/260831CND/",
+   "lat": 51.500217,
+   "lng": -0.402125,
    "light": "green",
    "score": -3,
    "reasons": [
     "already permitted",
     "brownfield / reuse"
+   ]
+  },
+  {
+   "name": "Ealing/260830CND",
+   "uid": "260830CND",
+   "address": "International Trading Estate Trident Way Southall UB2 5LF",
+   "description": "Details of a Arboricultural Method Statement pursuant to condition 16 of planning permission ref: 250949FUL dated 19/12/2025 for: Site clearance and preparation, including demolition of all existing buildings on site and redevelopment of the site to provide: Construction of four data centre units within three buildings of approximately 67.9m AOD in height (Use Class B8, approximately 158,702sqm GEA), four industrial buildings ranging from approximately 41.3m to 46.2m AOD in height (Use Classes B8, B2 and E(g)(iii), approximately 23,389 GEA), central pavilion building of approximately 35m AOD in height (Use Class E(b), approximately 223 GEA), two substations (38.05m AOD in height), associated plant, enclosures and necessary physical security systems, internal roads, servicing, circulation, car and cycle parking and hard and soft landscaping works.",
+   "start_date": "2026-02-25",
+   "authority_name": "Ealing",
+   "area_name": "Ealing",
+   "nation": "England",
+   "app_state": "Permitted",
+   "app_type": "Conditions",
+   "link": "https://www.planit.org.uk/planapplic/Ealing/260830CND/",
+   "lat": 51.500386,
+   "lng": -0.401975,
+   "light": "green",
+   "score": -3,
+   "reasons": [
+    "already permitted",
+    "brownfield / reuse"
+   ]
+  },
+  {
+   "name": "NorthAyrshire/26/00138/EIA",
+   "uid": "26/00138/EIA",
+   "address": "Hunterston Estate West Kilbride North Ayrshire",
+   "description": "Request for EIA Scoping Opinion for new data centre",
+   "start_date": "2026-02-25",
+   "authority_name": "North Ayrshire",
+   "area_name": "North Ayrshire",
+   "nation": "Scotland",
+   "app_state": "Permitted",
+   "app_type": "Outline",
+   "link": "https://www.planit.org.uk/planapplic/NorthAyrshire/26/00138/EIA/",
+   "lat": null,
+   "lng": null,
+   "light": "green",
+   "score": 2,
+   "reasons": [
+    "already permitted",
+    "speculative / no end-user"
+   ]
+  },
+  {
+   "name": "EppingForest/EPF/0404/26",
+   "uid": "EPF/0404/26",
+   "address": "Alandale Scaffolding, Langston Road, Loughton IG10 3SL",
+   "description": "Reserved Matters application submitted pursuant to Outline Planning Permission EPF/1165/22 and the subsequent approved Section 73 application EPF/0388/26 (outline permission for a new data centre with some matters reserved). Approval is sought for the reserved matters of appearance and landscaping.",
+   "start_date": "2026-02-25",
+   "authority_name": "Epping Forest",
+   "area_name": "Epping Forest",
+   "nation": "England",
+   "app_state": "Conditions",
+   "app_type": "Outline",
+   "link": "https://www.planit.org.uk/planapplic/EppingForest/EPF/0404/26/",
+   "lat": 51.646938,
+   "lng": 0.089896,
+   "light": "green",
+   "score": 2,
+   "reasons": [
+    "already permitted",
+    "speculative / no end-user"
    ]
   },
   {
@@ -3794,6 +3795,49 @@
    ]
   },
   {
+   "name": "OldOakParkRoyal/26/0041/AODOPDC",
+   "uid": "26/0041/AODOPDC",
+   "address": "Chandos Road Trading Estate, Chandos Road, Park Royal, NW10 6NF",
+   "description": "Details of Condition 3 (Fencing) planning permission reference 21/0150/REMOPDC dated 18/11/2021 for 'Phase 1a Reserved Matters Application with full details of access, layout, scale, appearance and landscaping pursuant to outline planning permission reference 21/0013/OUTOPDC dated 07/09/2021 for a data centre (Use Class B8), generator building, plant, sub-station, hard and soft landscaping and associated works.'",
+   "start_date": "2026-02-20",
+   "authority_name": "Old Oak Park Royal",
+   "area_name": "Old Oak Park Royal",
+   "nation": "England",
+   "app_state": "Permitted",
+   "app_type": "Conditions",
+   "link": "https://www.planit.org.uk/planapplic/OldOakParkRoyal/26/0041/AODOPDC/",
+   "lat": 51.527719,
+   "lng": -0.255342,
+   "light": "green",
+   "score": 2,
+   "reasons": [
+    "already permitted",
+    "speculative / no end-user"
+   ]
+  },
+  {
+   "name": "OldOakParkRoyal/26/0039/AODOPDC",
+   "uid": "26/0039/AODOPDC",
+   "address": "Chandos Road Trading Estate, Chandos Road, Park Royal, NW10 6NF",
+   "description": "Details of Condition 42 (Cycle Storage and Facilities) for Phase 1b pursuant to planning permission reference 21/0013/OUTOPDC dated 07/09/2021 for 'Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination for demolition and redevelopment to comprise a data centre (Use Class B8) of up to 52,000 sqm gross external, including ancillary offices, internal plant and equipment (including flues), and substation. In addition to the above the Development may include up to 2,500 sqm of work units (Use Class E(g)(ii) & E(g)(iii), B2); car parking; provision of external plant and equipment (including flues); creation of servicing areas and provision of associated services, including waste, refuse, cycle storage, and lighting; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; provision of attenuation infrastructure, engineering operations. Development shall be in accordance with the approved Development Parameters Schedule and Plans.'",
+   "start_date": "2026-02-20",
+   "authority_name": "Old Oak Park Royal",
+   "area_name": "Old Oak Park Royal",
+   "nation": "England",
+   "app_state": "Permitted",
+   "app_type": "Conditions",
+   "link": "https://www.planit.org.uk/planapplic/OldOakParkRoyal/26/0039/AODOPDC/",
+   "lat": 51.527719,
+   "lng": -0.255342,
+   "light": "green",
+   "score": -1,
+   "reasons": [
+    "already permitted",
+    "speculative / no end-user",
+    "brownfield / reuse"
+   ]
+  },
+  {
    "name": "EppingForest/EPF/0365/26",
    "uid": "EPF/0365/26",
    "address": "Alandale Scaffolding, Langston Road, Loughton IG10 3SL",
@@ -3833,70 +3877,6 @@
    "reasons": [
     "already permitted",
     "speculative / no end-user",
-    "brownfield / reuse"
-   ]
-  },
-  {
-   "name": "OldOakParkRoyal/26/0039/AODOPDC",
-   "uid": "26/0039/AODOPDC",
-   "address": "Chandos Road Trading Estate, Chandos Road, Park Royal, NW10 6NF",
-   "description": "Details of Condition 42 (Cycle Storage and Facilities) for Phase 1b pursuant to planning permission reference 21/0013/OUTOPDC dated 07/09/2021 for 'Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination for demolition and redevelopment to comprise a data centre (Use Class B8) of up to 52,000 sqm gross external, including ancillary offices, internal plant and equipment (including flues), and substation. In addition to the above the Development may include up to 2,500 sqm of work units (Use Class E(g)(ii) & E(g)(iii), B2); car parking; provision of external plant and equipment (including flues); creation of servicing areas and provision of associated services, including waste, refuse, cycle storage, and lighting; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; provision of attenuation infrastructure, engineering operations. Development shall be in accordance with the approved Development Parameters Schedule and Plans.'",
-   "start_date": "2026-02-20",
-   "authority_name": "Old Oak Park Royal",
-   "area_name": "Old Oak Park Royal",
-   "nation": "England",
-   "app_state": "Permitted",
-   "app_type": "Conditions",
-   "link": "https://www.planit.org.uk/planapplic/OldOakParkRoyal/26/0039/AODOPDC/",
-   "lat": 51.527719,
-   "lng": -0.255342,
-   "light": "green",
-   "score": -1,
-   "reasons": [
-    "already permitted",
-    "speculative / no end-user",
-    "brownfield / reuse"
-   ]
-  },
-  {
-   "name": "OldOakParkRoyal/26/0041/AODOPDC",
-   "uid": "26/0041/AODOPDC",
-   "address": "Chandos Road Trading Estate, Chandos Road, Park Royal, NW10 6NF",
-   "description": "Details of Condition 3 (Fencing) planning permission reference 21/0150/REMOPDC dated 18/11/2021 for 'Phase 1a Reserved Matters Application with full details of access, layout, scale, appearance and landscaping pursuant to outline planning permission reference 21/0013/OUTOPDC dated 07/09/2021 for a data centre (Use Class B8), generator building, plant, sub-station, hard and soft landscaping and associated works.'",
-   "start_date": "2026-02-20",
-   "authority_name": "Old Oak Park Royal",
-   "area_name": "Old Oak Park Royal",
-   "nation": "England",
-   "app_state": "Permitted",
-   "app_type": "Conditions",
-   "link": "https://www.planit.org.uk/planapplic/OldOakParkRoyal/26/0041/AODOPDC/",
-   "lat": 51.527719,
-   "lng": -0.255342,
-   "light": "green",
-   "score": 2,
-   "reasons": [
-    "already permitted",
-    "speculative / no end-user"
-   ]
-  },
-  {
-   "name": "Ealing/260718CND",
-   "uid": "260718CND",
-   "address": "International Trading Estate Trident Way Southall UB2 5LF",
-   "description": "Details of Demolition Method Statement and Construction Management Plan part pursuant to condition 14 (part discharge - Phase 1) of planning permission ref: 250949FUL dated 19/12/2025 for: Site clearance and preparation, including demolition of all existing buildings on site and redevelopment of the site to provide: Construction of four data centre units within three buildings of approximately 67.9m AOD in height (Use Class B8, approximately 158,702sqm GEA), four industrial buildings ranging from approximately 41.3m to 46.2m AOD in height (Use Classes B8, B2 and E(g)(iii), approximately 23,389 GEA), central pavilion building of approximately 35m AOD in height (Use Class E(b), approximately 223 GEA), two substations (38.05m AOD in height), associated plant, enclosures and necessary physical security systems, internal roads, servicing, circulation, car and cycle parking and hard and soft landscaping works.",
-   "start_date": "2026-02-19",
-   "authority_name": "Ealing",
-   "area_name": "Ealing",
-   "nation": "England",
-   "app_state": "Permitted",
-   "app_type": "Conditions",
-   "link": "https://www.planit.org.uk/planapplic/Ealing/260718CND/",
-   "lat": 51.500253,
-   "lng": -0.40211,
-   "light": "green",
-   "score": -3,
-   "reasons": [
-    "already permitted",
     "brownfield / reuse"
    ]
   },
@@ -3954,6 +3934,27 @@
    "app_state": "Permitted",
    "app_type": "Conditions",
    "link": "https://www.planit.org.uk/planapplic/Ealing/260790CND/",
+   "lat": 51.500253,
+   "lng": -0.40211,
+   "light": "green",
+   "score": -3,
+   "reasons": [
+    "already permitted",
+    "brownfield / reuse"
+   ]
+  },
+  {
+   "name": "Ealing/260718CND",
+   "uid": "260718CND",
+   "address": "International Trading Estate Trident Way Southall UB2 5LF",
+   "description": "Details of Demolition Method Statement and Construction Management Plan part pursuant to condition 14 (part discharge - Phase 1) of planning permission ref: 250949FUL dated 19/12/2025 for: Site clearance and preparation, including demolition of all existing buildings on site and redevelopment of the site to provide: Construction of four data centre units within three buildings of approximately 67.9m AOD in height (Use Class B8, approximately 158,702sqm GEA), four industrial buildings ranging from approximately 41.3m to 46.2m AOD in height (Use Classes B8, B2 and E(g)(iii), approximately 23,389 GEA), central pavilion building of approximately 35m AOD in height (Use Class E(b), approximately 223 GEA), two substations (38.05m AOD in height), associated plant, enclosures and necessary physical security systems, internal roads, servicing, circulation, car and cycle parking and hard and soft landscaping works.",
+   "start_date": "2026-02-19",
+   "authority_name": "Ealing",
+   "area_name": "Ealing",
+   "nation": "England",
+   "app_state": "Permitted",
+   "app_type": "Conditions",
+   "link": "https://www.planit.org.uk/planapplic/Ealing/260718CND/",
    "lat": 51.500253,
    "lng": -0.40211,
    "light": "green",
@@ -4362,24 +4363,6 @@
    ]
   },
   {
-   "name": "Slough/SMI/2026/005",
-   "uid": "SMI/2026/005",
-   "address": "Highway Land Along Poyle Road",
-   "description": "Installation of underground and ground mounted structures to support electrical connection and communication cables with temporary construction compounds, and associated infrastructure and works in association with proposed Data Centre and Battery Energy Storage System at Manor Farm, Poyle Rd, Colnbrook, Slough SL3 0BL",
-   "start_date": "2026-01-22",
-   "authority_name": "Slough",
-   "area_name": "Slough",
-   "nation": "England",
-   "app_state": "Undecided",
-   "app_type": "",
-   "link": "https://www.planit.org.uk/planapplic/Slough/SMI/2026/005/",
-   "lat": null,
-   "lng": null,
-   "light": "green",
-   "score": 0,
-   "reasons": []
-  },
-  {
    "name": "Hillingdon/39706/APP/2026/174",
    "uid": "39706/APP/2026/174",
    "address": "SPELTHORNE DISTRICT COUNCIL OUTBOROUGH MIDDLESEX",
@@ -4391,6 +4374,24 @@
    "app_state": "Undecided",
    "app_type": "Full",
    "link": "https://www.planit.org.uk/planapplic/Hillingdon/39706/APP/2026/174/",
+   "lat": null,
+   "lng": null,
+   "light": "green",
+   "score": 0,
+   "reasons": []
+  },
+  {
+   "name": "Slough/SMI/2026/005",
+   "uid": "SMI/2026/005",
+   "address": "Highway Land Along Poyle Road",
+   "description": "Installation of underground and ground mounted structures to support electrical connection and communication cables with temporary construction compounds, and associated infrastructure and works in association with proposed Data Centre and Battery Energy Storage System at Manor Farm, Poyle Rd, Colnbrook, Slough SL3 0BL",
+   "start_date": "2026-01-22",
+   "authority_name": "Slough",
+   "area_name": "Slough",
+   "nation": "England",
+   "app_state": "Undecided",
+   "app_type": "",
+   "link": "https://www.planit.org.uk/planapplic/Slough/SMI/2026/005/",
    "lat": null,
    "lng": null,
    "light": "green",
@@ -4439,27 +4440,6 @@
    ]
   },
   {
-   "name": "CentralBedfordshire/CB/26/00142/DOC",
-   "uid": "CB/26/00142/DOC",
-   "address": "Parcel 5, Houghton Regis North 1, Sundon Road, Houghton Regis, LU5 5GX",
-   "description": "Discharge of Condition 16 against planning permission ref. CB/24/01505/RM (Reserved Matters: following Outline Application CB/12/03613/OUT(Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination. Development to comprise: up to 5,150 dwellings (Use Class C3); up to 202,500 sqm gross of additional development in Use Classes: A1, A2, A3 (retail), A4 (public house), A5 (take away); B1, B2, B8 (offices, industrial and storage and distribution); C1 (hotel), C2 (care home), D1 and D2 (community and leisure); car showroom; data centre; petrol filling station; car parking; primary substation; energy centre; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; engineering operations. All development, works and operations to be in accordance with the Development Parameters Schedule and Plans.). Reserved matters for access, appearance, landscaping, layout and scale for 189 dwellings at Parcel 5 pursuant to outline permission CB/12/03613/OUT and details to satisfy conditions; 8 (Surface Water Drainage), 25 (Construction Management Plan), 26 (Landscape Management Plan), 29 (Foul Drainage), 32 (Noise) and 33 (Noise).)",
-   "start_date": "2026-01-16",
-   "authority_name": "Central Bedfordshire",
-   "area_name": "Central Bedfordshire",
-   "nation": "England",
-   "app_state": "Conditions",
-   "app_type": "Conditions",
-   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/26/00142/DOC/",
-   "lat": 51.917938,
-   "lng": -0.499234,
-   "light": "green",
-   "score": 2,
-   "reasons": [
-    "already permitted",
-    "speculative / no end-user"
-   ]
-  },
-  {
    "name": "Cardiff/26/00109/HYB",
    "uid": "26/00109/HYB",
    "address": "Cardiff East Park And Ride Eastern Avenue Old St Mellons Cardiff CF23 8HH",
@@ -4501,24 +4481,24 @@
    ]
   },
   {
-   "name": "OldOakParkRoyal/26/0005/AODOPDC",
-   "uid": "26/0005/AODOPDC",
-   "address": "Renault London West, Site Of Renault Retail Group Ltd, -, Western Avenue, LONDON, W3 0RZ",
-   "description": "Partial discharge of condition 5 (Materials - Substation Only) pursuant to planning permission 24/0141/VAROPDC dated 20/12/2024 for Section 73 application to vary Conditions 2 (approved plans and documents), 3 (development parameters), 5 (contaminated land site investigation), 6 (Construction and Environmental Management Plan), 7 (Construction Logistics Plan), 8 (circular economy details), 10 (Secured by Design), 11 (hard and soft landscaping), 12 (cycle parking), 13 (Fire Strategy), 19 (external lighting), 20 (green roofs), 21 (vehicular access), 22 (car parking implementation), 27 (vehicular access restriction), and 30 (energy statement) of planning permission 22/0059/FUMOPDC for 'Redevelopment of the site to provide a data centre (Use Class B8) with associated energy and electrical infrastructure, visitor reception building, security gatehouse, plant, boundary enclosures, car and cycle parking, hard and soft landscaping; and associated alterations to vehicular access arrangements including creation of new access from Concord Road and new access from Western Avenue service road; and associated external works.' Amendments are proposed primarily to replace the approved sub-station/ancillary office building with a standalone sub-station building, and to increase the size of the pocket park.",
-   "start_date": "2026-01-13",
-   "authority_name": "Old Oak Park Royal",
-   "area_name": "Old Oak Park Royal",
+   "name": "CentralBedfordshire/CB/26/00142/DOC",
+   "uid": "CB/26/00142/DOC",
+   "address": "Parcel 5, Houghton Regis North 1, Sundon Road, Houghton Regis, LU5 5GX",
+   "description": "Discharge of Condition 16 against planning permission ref. CB/24/01505/RM (Reserved Matters: following Outline Application CB/12/03613/OUT(Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination. Development to comprise: up to 5,150 dwellings (Use Class C3); up to 202,500 sqm gross of additional development in Use Classes: A1, A2, A3 (retail), A4 (public house), A5 (take away); B1, B2, B8 (offices, industrial and storage and distribution); C1 (hotel), C2 (care home), D1 and D2 (community and leisure); car showroom; data centre; petrol filling station; car parking; primary substation; energy centre; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; engineering operations. All development, works and operations to be in accordance with the Development Parameters Schedule and Plans.). Reserved matters for access, appearance, landscaping, layout and scale for 189 dwellings at Parcel 5 pursuant to outline permission CB/12/03613/OUT and details to satisfy conditions; 8 (Surface Water Drainage), 25 (Construction Management Plan), 26 (Landscape Management Plan), 29 (Foul Drainage), 32 (Noise) and 33 (Noise).)",
+   "start_date": "2026-01-16",
+   "authority_name": "Central Bedfordshire",
+   "area_name": "Central Bedfordshire",
    "nation": "England",
-   "app_state": "Permitted",
+   "app_state": "Conditions",
    "app_type": "Conditions",
-   "link": "https://www.planit.org.uk/planapplic/OldOakParkRoyal/26/0005/AODOPDC/",
-   "lat": 51.525569,
-   "lng": -0.276586,
+   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/26/00142/DOC/",
+   "lat": 51.917938,
+   "lng": -0.499234,
    "light": "green",
-   "score": -3,
+   "score": 2,
    "reasons": [
     "already permitted",
-    "brownfield / reuse"
+    "speculative / no end-user"
    ]
   },
   {
@@ -4539,6 +4519,27 @@
    "score": 0,
    "reasons": [
     "refused — stopped"
+   ]
+  },
+  {
+   "name": "OldOakParkRoyal/26/0005/AODOPDC",
+   "uid": "26/0005/AODOPDC",
+   "address": "Renault London West, Site Of Renault Retail Group Ltd, -, Western Avenue, LONDON, W3 0RZ",
+   "description": "Partial discharge of condition 5 (Materials - Substation Only) pursuant to planning permission 24/0141/VAROPDC dated 20/12/2024 for Section 73 application to vary Conditions 2 (approved plans and documents), 3 (development parameters), 5 (contaminated land site investigation), 6 (Construction and Environmental Management Plan), 7 (Construction Logistics Plan), 8 (circular economy details), 10 (Secured by Design), 11 (hard and soft landscaping), 12 (cycle parking), 13 (Fire Strategy), 19 (external lighting), 20 (green roofs), 21 (vehicular access), 22 (car parking implementation), 27 (vehicular access restriction), and 30 (energy statement) of planning permission 22/0059/FUMOPDC for 'Redevelopment of the site to provide a data centre (Use Class B8) with associated energy and electrical infrastructure, visitor reception building, security gatehouse, plant, boundary enclosures, car and cycle parking, hard and soft landscaping; and associated alterations to vehicular access arrangements including creation of new access from Concord Road and new access from Western Avenue service road; and associated external works.' Amendments are proposed primarily to replace the approved sub-station/ancillary office building with a standalone sub-station building, and to increase the size of the pocket park.",
+   "start_date": "2026-01-13",
+   "authority_name": "Old Oak Park Royal",
+   "area_name": "Old Oak Park Royal",
+   "nation": "England",
+   "app_state": "Permitted",
+   "app_type": "Conditions",
+   "link": "https://www.planit.org.uk/planapplic/OldOakParkRoyal/26/0005/AODOPDC/",
+   "lat": 51.525569,
+   "lng": -0.276586,
+   "light": "green",
+   "score": -3,
+   "reasons": [
+    "already permitted",
+    "brownfield / reuse"
    ]
   },
   {
@@ -4604,6 +4605,26 @@
    ]
   },
   {
+   "name": "Bucks/PL/25/6761/VRC",
+   "uid": "PL/25/6761/VRC",
+   "address": "Former Molins Site Haw Lane Saunderton Buckinghamshire",
+   "description": "Variation of conditions 2 (approved plans), 3 (detailed phasing plan), 4 (drainage), 10 (Noise), 13 (materials), 19 (site levels), 22 (hard and soft landscaping scheme), 23 (Landscape management plan), 24 (Landscaping implementation programme) and 25 (Ecological management plan) of planning permission 22/06872/VCDN relating to variations to the original permission 08/05740/FULEA (Erection of 4 no. Data centre buildings (sui generis use) together with associated groundworks, plant, electricity sub-station, security fence, gates and piers, landscaping, amendment to existing vehicular access(es), internal roads, service areas and provision of 150 car parking spaces with retention of the existing office building and \"Ballroom\" building fronting Haw Lane for ancillary operational uses and demolition of all other buildings and structures) to allow for relocation of substation enclosure",
+   "start_date": "2025-12-23",
+   "authority_name": "Buckinghamshire",
+   "area_name": "Buckinghamshire",
+   "nation": "England",
+   "app_state": "Undecided",
+   "app_type": "Conditions",
+   "link": "https://www.planit.org.uk/planapplic/Bucks/PL/25/6761/VRC/",
+   "lat": 51.679847,
+   "lng": -0.832497,
+   "light": "green",
+   "score": -3,
+   "reasons": [
+    "brownfield / reuse"
+   ]
+  },
+  {
    "name": "Bucks/PL/25/6737/VRC",
    "uid": "PL/25/6737/VRC",
    "address": "Dromenagh Farm Sevenhills Road Iver Heath Buckinghamshire SL0 0PA",
@@ -4626,26 +4647,6 @@
    ]
   },
   {
-   "name": "Bucks/PL/25/6761/VRC",
-   "uid": "PL/25/6761/VRC",
-   "address": "Former Molins Site Haw Lane Saunderton Buckinghamshire",
-   "description": "Variation of conditions 2 (approved plans), 3 (detailed phasing plan), 4 (drainage), 10 (Noise), 13 (materials), 19 (site levels), 22 (hard and soft landscaping scheme), 23 (Landscape management plan), 24 (Landscaping implementation programme) and 25 (Ecological management plan) of planning permission 22/06872/VCDN relating to variations to the original permission 08/05740/FULEA (Erection of 4 no. Data centre buildings (sui generis use) together with associated groundworks, plant, electricity sub-station, security fence, gates and piers, landscaping, amendment to existing vehicular access(es), internal roads, service areas and provision of 150 car parking spaces with retention of the existing office building and \"Ballroom\" building fronting Haw Lane for ancillary operational uses and demolition of all other buildings and structures) to allow for relocation of substation enclosure",
-   "start_date": "2025-12-23",
-   "authority_name": "Buckinghamshire",
-   "area_name": "Buckinghamshire",
-   "nation": "England",
-   "app_state": "Undecided",
-   "app_type": "Conditions",
-   "link": "https://www.planit.org.uk/planapplic/Bucks/PL/25/6761/VRC/",
-   "lat": 51.679847,
-   "lng": -0.832497,
-   "light": "green",
-   "score": -3,
-   "reasons": [
-    "brownfield / reuse"
-   ]
-  },
-  {
    "name": "CentralBedfordshire/CB/25/04023/RM",
    "uid": "CB/25/04023/RM",
    "address": "Phase 1, Houghton Regis North Site, Land on the northern edge of Houghton Regis, Houghton Regis",
@@ -4659,27 +4660,6 @@
    "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/25/04023/RM/",
    "lat": null,
    "lng": null,
-   "light": "green",
-   "score": 2,
-   "reasons": [
-    "already permitted",
-    "speculative / no end-user"
-   ]
-  },
-  {
-   "name": "CentralBedfordshire/CB/25/04031/NMA",
-   "uid": "CB/25/04031/NMA",
-   "address": "Parcel 5, Houghton Regis North 1, Sundon Road, LU5 5GX",
-   "description": "Non-material amendment to planning permission CB/24/01505/RM (Reserved Matters: following Outline Application CB/12/03613/OUT(Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination. Development to comprise: up to 5,150 dwellings (Use Class C3); up to 202,500 sqm gross of additional development in Use Classes: A1, A2, A3 (retail), A4 (public house), A5 (take away); B1, B2, B8 (offices, industrial and storage and distribution); C1 (hotel), C2 (care home), D1 and D2 (community and leisure); car showroom; data centre; petrol filling station; car parking; primary substation; energy centre; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; engineering operations. All development, works and operations to be in accordance with the Development Parameters Schedule and Plans.). Reserved matters for access, appearance, landscaping, layout and scale for 189 dwellings at Parcel 5 pursuant to outline permission CB/12/03613/OUT and details to satisfy conditions; 8 (Surface Water Drainage), 25 (Construction Management Plan), 26 (Landscape Management Plan), 29 (Foul Drainage), 32 (Noise) and 33 (Noise)'.) Amendment sought to reduce the number of street trees in pits",
-   "start_date": "2025-12-22",
-   "authority_name": "Central Bedfordshire",
-   "area_name": "Central Bedfordshire",
-   "nation": "England",
-   "app_state": "Permitted",
-   "app_type": "Amendment",
-   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/25/04031/NMA/",
-   "lat": 51.917938,
-   "lng": -0.499234,
    "light": "green",
    "score": 2,
    "reasons": [
@@ -4706,6 +4686,48 @@
    "reasons": [
     "speculative / no end-user",
     "brownfield / reuse"
+   ]
+  },
+  {
+   "name": "CentralBedfordshire/CB/25/04031/NMA",
+   "uid": "CB/25/04031/NMA",
+   "address": "Parcel 5, Houghton Regis North 1, Sundon Road, LU5 5GX",
+   "description": "Non-material amendment to planning permission CB/24/01505/RM (Reserved Matters: following Outline Application CB/12/03613/OUT(Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination. Development to comprise: up to 5,150 dwellings (Use Class C3); up to 202,500 sqm gross of additional development in Use Classes: A1, A2, A3 (retail), A4 (public house), A5 (take away); B1, B2, B8 (offices, industrial and storage and distribution); C1 (hotel), C2 (care home), D1 and D2 (community and leisure); car showroom; data centre; petrol filling station; car parking; primary substation; energy centre; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; engineering operations. All development, works and operations to be in accordance with the Development Parameters Schedule and Plans.). Reserved matters for access, appearance, landscaping, layout and scale for 189 dwellings at Parcel 5 pursuant to outline permission CB/12/03613/OUT and details to satisfy conditions; 8 (Surface Water Drainage), 25 (Construction Management Plan), 26 (Landscape Management Plan), 29 (Foul Drainage), 32 (Noise) and 33 (Noise)'.) Amendment sought to reduce the number of street trees in pits",
+   "start_date": "2025-12-22",
+   "authority_name": "Central Bedfordshire",
+   "area_name": "Central Bedfordshire",
+   "nation": "England",
+   "app_state": "Permitted",
+   "app_type": "Amendment",
+   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/25/04031/NMA/",
+   "lat": 51.917938,
+   "lng": -0.499234,
+   "light": "green",
+   "score": 2,
+   "reasons": [
+    "already permitted",
+    "speculative / no end-user"
+   ]
+  },
+  {
+   "name": "Ealing/254797OPDCOB",
+   "uid": "254797OPDCOB",
+   "address": "Chandos Road Trading Estate Chandos Road Park Royal NW10 6NF",
+   "description": "Installation of 2no internally illuminated fascia signs to the northwestern and southwestern elevation of data centre building (Phase 1a), 1no internally illuminated free standing totem sign to the northwestern elevation of work unit building (Phase 1b) and 1no internally illuminated free standing totem sign to southwestern elevation of data centre building (Phase 2) (out of borough)",
+   "start_date": "2025-12-19",
+   "authority_name": "Ealing",
+   "area_name": "Ealing",
+   "nation": "England",
+   "app_state": "Permitted",
+   "app_type": "Outline",
+   "link": "https://www.planit.org.uk/planapplic/Ealing/254797OPDCOB/",
+   "lat": 51.527649,
+   "lng": -0.255321,
+   "light": "green",
+   "score": 2,
+   "reasons": [
+    "already permitted",
+    "speculative / no end-user"
    ]
   },
   {
@@ -4753,27 +4775,6 @@
    ]
   },
   {
-   "name": "Ealing/254797OPDCOB",
-   "uid": "254797OPDCOB",
-   "address": "Chandos Road Trading Estate Chandos Road Park Royal NW10 6NF",
-   "description": "Installation of 2no internally illuminated fascia signs to the northwestern and southwestern elevation of data centre building (Phase 1a), 1no internally illuminated free standing totem sign to the northwestern elevation of work unit building (Phase 1b) and 1no internally illuminated free standing totem sign to southwestern elevation of data centre building (Phase 2) (out of borough)",
-   "start_date": "2025-12-19",
-   "authority_name": "Ealing",
-   "area_name": "Ealing",
-   "nation": "England",
-   "app_state": "Permitted",
-   "app_type": "Outline",
-   "link": "https://www.planit.org.uk/planapplic/Ealing/254797OPDCOB/",
-   "lat": 51.527649,
-   "lng": -0.255321,
-   "light": "green",
-   "score": 2,
-   "reasons": [
-    "already permitted",
-    "speculative / no end-user"
-   ]
-  },
-  {
    "name": "Watford/25/01095/LDC",
    "uid": "25/01095/LDC",
    "address": "Park House 15 - 19 Greenhill Crescent Watford WD18 8PH",
@@ -4791,27 +4792,6 @@
    "score": 0,
    "reasons": [
     "already permitted"
-   ]
-  },
-  {
-   "name": "Ealing/254769OPDCOB",
-   "uid": "254769OPDCOB",
-   "address": "Chandos Road Trading Estate Park Royal NW10 6NF",
-   "description": "Installation of 2no internally illuminated fascia signs to the northwestern and southwestern elevation of data centre building (Phase 1a), 1no internally illuminated free standing totem sign to the northwestern elevation of work unit building (Phase 1b) and 1no internally illuminated free standing totem sign to southwestern elevation of data centre building (Phase 2) (Out of borough)",
-   "start_date": "2025-12-18",
-   "authority_name": "Ealing",
-   "area_name": "Ealing",
-   "nation": "England",
-   "app_state": "Permitted",
-   "app_type": "Outline",
-   "link": "https://www.planit.org.uk/planapplic/Ealing/254769OPDCOB/",
-   "lat": 51.527649,
-   "lng": -0.255321,
-   "light": "green",
-   "score": 2,
-   "reasons": [
-    "already permitted",
-    "speculative / no end-user"
    ]
   },
   {
@@ -4837,23 +4817,24 @@
    ]
   },
   {
-   "name": "NorthLanarkshire/25/01328/PAN",
-   "uid": "25/01328/PAN",
-   "address": "South Lanridge Farm Linrigg Road Newhouse North Lanarkshire ML1 5ND",
-   "description": "Construction of data centre building(s), together with associated development, infrastructure and utilities including flexible commercial/ industrial buildings, substation, and battery energy storage (BES) and generation (If BES greater than 50MW it will form a separate application to the ECU for Section 36 consent)",
-   "start_date": "2025-12-17",
-   "authority_name": "North Lanarkshire",
-   "area_name": "North Lanarkshire",
-   "nation": "Scotland",
+   "name": "Ealing/254769OPDCOB",
+   "uid": "254769OPDCOB",
+   "address": "Chandos Road Trading Estate Park Royal NW10 6NF",
+   "description": "Installation of 2no internally illuminated fascia signs to the northwestern and southwestern elevation of data centre building (Phase 1a), 1no internally illuminated free standing totem sign to the northwestern elevation of work unit building (Phase 1b) and 1no internally illuminated free standing totem sign to southwestern elevation of data centre building (Phase 2) (Out of borough)",
+   "start_date": "2025-12-18",
+   "authority_name": "Ealing",
+   "area_name": "Ealing",
+   "nation": "England",
    "app_state": "Permitted",
-   "app_type": "",
-   "link": "https://www.planit.org.uk/planapplic/NorthLanarkshire/25/01328/PAN/",
-   "lat": 55.827949,
-   "lng": -3.910827,
+   "app_type": "Outline",
+   "link": "https://www.planit.org.uk/planapplic/Ealing/254769OPDCOB/",
+   "lat": 51.527649,
+   "lng": -0.255321,
    "light": "green",
-   "score": 0,
+   "score": 2,
    "reasons": [
-    "already permitted"
+    "already permitted",
+    "speculative / no end-user"
    ]
   },
   {
@@ -4878,26 +4859,6 @@
    ]
   },
   {
-   "name": "NorthLanarkshire/25/01322/PAN",
-   "uid": "25/01322/PAN",
-   "address": "Land At Lancaster Avenue Chapelhall North Lanarkshire",
-   "description": "Construction of data centre building(s), together with associated development, infrastructure and utilities including flexible commercial/ industrial buildings, substation, and battery energy storage (BES) and generation (If BES greater than 50MW it will form a separate application to the ECU for Section 36 consent)",
-   "start_date": "2025-12-17",
-   "authority_name": "North Lanarkshire",
-   "area_name": "North Lanarkshire",
-   "nation": "Scotland",
-   "app_state": "Permitted",
-   "app_type": "",
-   "link": "https://www.planit.org.uk/planapplic/NorthLanarkshire/25/01322/PAN/",
-   "lat": 55.83653,
-   "lng": -3.935586,
-   "light": "green",
-   "score": 0,
-   "reasons": [
-    "already permitted"
-   ]
-  },
-  {
    "name": "Gwynedd/C25/0933/20/SO",
    "uid": "C25/0933/20/SO",
    "address": "Land At And Adjacent To The Former Ferodo Site, Griffiths Crossing, Caernarfon, LL55 1TP",
@@ -4916,6 +4877,46 @@
    "reasons": [
     "speculative / no end-user",
     "brownfield / reuse"
+   ]
+  },
+  {
+   "name": "NorthLanarkshire/25/01328/PAN",
+   "uid": "25/01328/PAN",
+   "address": "South Lanridge Farm Linrigg Road Newhouse North Lanarkshire ML1 5ND",
+   "description": "Construction of data centre building(s), together with associated development, infrastructure and utilities including flexible commercial/ industrial buildings, substation, and battery energy storage (BES) and generation (If BES greater than 50MW it will form a separate application to the ECU for Section 36 consent)",
+   "start_date": "2025-12-17",
+   "authority_name": "North Lanarkshire",
+   "area_name": "North Lanarkshire",
+   "nation": "Scotland",
+   "app_state": "Permitted",
+   "app_type": "",
+   "link": "https://www.planit.org.uk/planapplic/NorthLanarkshire/25/01328/PAN/",
+   "lat": 55.827949,
+   "lng": -3.910827,
+   "light": "green",
+   "score": 0,
+   "reasons": [
+    "already permitted"
+   ]
+  },
+  {
+   "name": "NorthLanarkshire/25/01322/PAN",
+   "uid": "25/01322/PAN",
+   "address": "Land At Lancaster Avenue Chapelhall North Lanarkshire",
+   "description": "Construction of data centre building(s), together with associated development, infrastructure and utilities including flexible commercial/ industrial buildings, substation, and battery energy storage (BES) and generation (If BES greater than 50MW it will form a separate application to the ECU for Section 36 consent)",
+   "start_date": "2025-12-17",
+   "authority_name": "North Lanarkshire",
+   "area_name": "North Lanarkshire",
+   "nation": "Scotland",
+   "app_state": "Permitted",
+   "app_type": "",
+   "link": "https://www.planit.org.uk/planapplic/NorthLanarkshire/25/01322/PAN/",
+   "lat": 55.83653,
+   "lng": -3.935586,
+   "light": "green",
+   "score": 0,
+   "reasons": [
+    "already permitted"
    ]
   },
   {
@@ -4961,27 +4962,6 @@
    ]
   },
   {
-   "name": "CentralBedfordshire/CB/25/03935/DOC",
-   "uid": "CB/25/03935/DOC",
-   "address": "Parcels 7 & 8, Linmere Houghton Regis North Site, Land on the northern edge of Houghton Regis",
-   "description": "Discharge of Conditions 24, 25, 32, 33, 35 against planning permission ref. CB/12/03613/OUT Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination. Development to comprise: up to 5,150 dwellings (Use Class C3); up to 202,500 sqm gross of additional development in Use Classes: A1, A2, A3 (retail), A4 (public house), A5 (take away); B1, B2, B8 (offices, industrial and storage and distribution); C1 (hotel), C2 (care home), D1 and D2 (community and leisure); car showroom; data centre; petrol filling station; car parking; primary substation; energy centre; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; engineering operations. All development, works and operations to be in accordance with the Development Parameters Schedule and Plans.",
-   "start_date": "2025-12-11",
-   "authority_name": "Central Bedfordshire",
-   "area_name": "Central Bedfordshire",
-   "nation": "England",
-   "app_state": "Conditions",
-   "app_type": "Conditions",
-   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/25/03935/DOC/",
-   "lat": null,
-   "lng": null,
-   "light": "green",
-   "score": 2,
-   "reasons": [
-    "already permitted",
-    "speculative / no end-user"
-   ]
-  },
-  {
    "name": "Newport/25/1071",
    "uid": "25/1071",
    "address": "Land Adjacent To Electric Substation Celtic Way Celtic Lakes Newport South Wales",
@@ -5002,40 +4982,19 @@
    ]
   },
   {
-   "name": "Hounslow/P/2025/3669",
-   "uid": "P/2025/3669",
-   "address": "Haslemere Heathrow Estate, Silver Jubilee Way, Hounslow, TW4 6NF",
-   "description": "Outline planning permission with all matters reserved except access. A demolition phase and phased redevelopment (each phase being an independent act of development) comprising data centre use (Use Class B8) of up to 50,000 sqm GEA, including ancillary offices, internal plant and equipment (including flues), and substation. In addition up to 4,150sqm GEA of work units (Use Class E(g)(i-iii), B2, B8); car parking; provision of external plant and equipment (including flues); creation of servicing areas and provision of associated services, including waste, refuse, cycle storage, and lighting; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; provision of attenuation infrastructure, engineering operations. This application is for a phased development, each phase being an independent act of development, capable of coming forward in distinct and separable phase... read more",
-   "start_date": "2025-12-10",
-   "authority_name": "Hounslow",
-   "area_name": "Hounslow",
+   "name": "CentralBedfordshire/CB/25/03935/DOC",
+   "uid": "CB/25/03935/DOC",
+   "address": "Parcels 7 & 8, Linmere Houghton Regis North Site, Land on the northern edge of Houghton Regis",
+   "description": "Discharge of Conditions 24, 25, 32, 33, 35 against planning permission ref. CB/12/03613/OUT Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination. Development to comprise: up to 5,150 dwellings (Use Class C3); up to 202,500 sqm gross of additional development in Use Classes: A1, A2, A3 (retail), A4 (public house), A5 (take away); B1, B2, B8 (offices, industrial and storage and distribution); C1 (hotel), C2 (care home), D1 and D2 (community and leisure); car showroom; data centre; petrol filling station; car parking; primary substation; energy centre; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; engineering operations. All development, works and operations to be in accordance with the Development Parameters Schedule and Plans.",
+   "start_date": "2025-12-11",
+   "authority_name": "Central Bedfordshire",
+   "area_name": "Central Bedfordshire",
    "nation": "England",
-   "app_state": "Undecided",
-   "app_type": "Outline",
-   "link": "https://www.planit.org.uk/planapplic/Hounslow/P/2025/3669/",
-   "lat": 51.472503,
-   "lng": -0.406809,
-   "light": "green",
-   "score": -1,
-   "reasons": [
-    "speculative / no end-user",
-    "brownfield / reuse"
-   ]
-  },
-  {
-   "name": "ScottishBorders/25/01835/SCR",
-   "uid": "25/01835/SCR",
-   "address": "Southside Data Centre Land At Clawbare Cottage Longformacus Duns Scottish Borders",
-   "description": "Erection of data centre and associated infrastructure",
-   "start_date": "2025-12-10",
-   "authority_name": "Scottish Borders",
-   "area_name": "Scottish Borders",
-   "nation": "Scotland",
-   "app_state": "Permitted",
-   "app_type": "Outline",
-   "link": "https://www.planit.org.uk/planapplic/ScottishBorders/25/01835/SCR/",
-   "lat": 55.784596,
-   "lng": -2.523542,
+   "app_state": "Conditions",
+   "app_type": "Conditions",
+   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/25/03935/DOC/",
+   "lat": null,
+   "lng": null,
    "light": "green",
    "score": 2,
    "reasons": [
@@ -5065,6 +5024,48 @@
    ]
   },
   {
+   "name": "ScottishBorders/25/01835/SCR",
+   "uid": "25/01835/SCR",
+   "address": "Southside Data Centre Land At Clawbare Cottage Longformacus Duns Scottish Borders",
+   "description": "Erection of data centre and associated infrastructure",
+   "start_date": "2025-12-10",
+   "authority_name": "Scottish Borders",
+   "area_name": "Scottish Borders",
+   "nation": "Scotland",
+   "app_state": "Permitted",
+   "app_type": "Outline",
+   "link": "https://www.planit.org.uk/planapplic/ScottishBorders/25/01835/SCR/",
+   "lat": 55.784596,
+   "lng": -2.523542,
+   "light": "green",
+   "score": 2,
+   "reasons": [
+    "already permitted",
+    "speculative / no end-user"
+   ]
+  },
+  {
+   "name": "Hounslow/P/2025/3669",
+   "uid": "P/2025/3669",
+   "address": "Haslemere Heathrow Estate, Silver Jubilee Way, Hounslow, TW4 6NF",
+   "description": "Outline planning permission with all matters reserved except access. A demolition phase and phased redevelopment (each phase being an independent act of development) comprising data centre use (Use Class B8) of up to 50,000 sqm GEA, including ancillary offices, internal plant and equipment (including flues), and substation. In addition up to 4,150sqm GEA of work units (Use Class E(g)(i-iii), B2, B8); car parking; provision of external plant and equipment (including flues); creation of servicing areas and provision of associated services, including waste, refuse, cycle storage, and lighting; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; provision of attenuation infrastructure, engineering operations. This application is for a phased development, each phase being an independent act of development, capable of coming forward in distinct and separable phase... read more",
+   "start_date": "2025-12-10",
+   "authority_name": "Hounslow",
+   "area_name": "Hounslow",
+   "nation": "England",
+   "app_state": "Undecided",
+   "app_type": "Outline",
+   "link": "https://www.planit.org.uk/planapplic/Hounslow/P/2025/3669/",
+   "lat": 51.472503,
+   "lng": -0.406809,
+   "light": "green",
+   "score": -1,
+   "reasons": [
+    "speculative / no end-user",
+    "brownfield / reuse"
+   ]
+  },
+  {
    "name": "NorthLanarkshire/25/01294/S42",
    "uid": "25/01294/S42",
    "address": "DataVita Data Centre York Road Chapelhall North Lanarkshire ML6 8HW",
@@ -5083,47 +5084,6 @@
    "reasons": [
     "already permitted",
     "smaller scale"
-   ]
-  },
-  {
-   "name": "Selby/SELZG2025/1247/SCN",
-   "uid": "SELZG2025/1247/SCN",
-   "address": "Drax Power Station New Road Drax Selby North Yorkshire YO8 8PH",
-   "description": "EIA Screening Opinion in relation to the erection of a data centre (Use Class B8) with ancillary office space, external plant, site access, parking, cabling, landscaping and associated works",
-   "start_date": "2025-12-09",
-   "authority_name": "Selby",
-   "area_name": "Selby",
-   "nation": "England",
-   "app_state": "Permitted",
-   "app_type": "Outline",
-   "link": "https://www.planit.org.uk/planapplic/Selby/SELZG2025/1247/SCN/",
-   "lat": 53.741973,
-   "lng": -0.996751,
-   "light": "green",
-   "score": 2,
-   "reasons": [
-    "already permitted",
-    "speculative / no end-user"
-   ]
-  },
-  {
-   "name": "WhiteHorse/P25/V2668/DIS",
-   "uid": "P25/V2668/DIS",
-   "address": "Rutherford Appleton Laboratory Diamond House Road Chilton OX11 0DE",
-   "description": "Discharge of General Biodiversity Gain (BNG) condition on application ref. P24/V1033/FUL Erection of a building to accommodate a data centre with external plant, associated acoustic barrier and boundary fencing.",
-   "start_date": "2025-12-09",
-   "authority_name": "Vale of White Horse",
-   "area_name": "Vale of White Horse",
-   "nation": "England",
-   "app_state": "Permitted",
-   "app_type": "Conditions",
-   "link": "https://www.planit.org.uk/planapplic/WhiteHorse/P25/V2668/DIS/",
-   "lat": 51.573723,
-   "lng": -1.313219,
-   "light": "green",
-   "score": 0,
-   "reasons": [
-    "already permitted"
    ]
   },
   {
@@ -5156,6 +5116,47 @@
    "app_state": "Permitted",
    "app_type": "Outline",
    "link": "https://www.planit.org.uk/planapplic/Selby/ZG2025/1247/SCN/",
+   "lat": 53.741973,
+   "lng": -0.996751,
+   "light": "green",
+   "score": 2,
+   "reasons": [
+    "already permitted",
+    "speculative / no end-user"
+   ]
+  },
+  {
+   "name": "WhiteHorse/P25/V2668/DIS",
+   "uid": "P25/V2668/DIS",
+   "address": "Rutherford Appleton Laboratory Diamond House Road Chilton OX11 0DE",
+   "description": "Discharge of General Biodiversity Gain (BNG) condition on application ref. P24/V1033/FUL Erection of a building to accommodate a data centre with external plant, associated acoustic barrier and boundary fencing.",
+   "start_date": "2025-12-09",
+   "authority_name": "Vale of White Horse",
+   "area_name": "Vale of White Horse",
+   "nation": "England",
+   "app_state": "Permitted",
+   "app_type": "Conditions",
+   "link": "https://www.planit.org.uk/planapplic/WhiteHorse/P25/V2668/DIS/",
+   "lat": 51.573723,
+   "lng": -1.313219,
+   "light": "green",
+   "score": 0,
+   "reasons": [
+    "already permitted"
+   ]
+  },
+  {
+   "name": "Selby/SELZG2025/1247/SCN",
+   "uid": "SELZG2025/1247/SCN",
+   "address": "Drax Power Station New Road Drax Selby North Yorkshire YO8 8PH",
+   "description": "EIA Screening Opinion in relation to the erection of a data centre (Use Class B8) with ancillary office space, external plant, site access, parking, cabling, landscaping and associated works",
+   "start_date": "2025-12-09",
+   "authority_name": "Selby",
+   "area_name": "Selby",
+   "nation": "England",
+   "app_state": "Permitted",
+   "app_type": "Outline",
+   "link": "https://www.planit.org.uk/planapplic/Selby/SELZG2025/1247/SCN/",
    "lat": 53.741973,
    "lng": -0.996751,
    "light": "green",
@@ -5230,27 +5231,6 @@
    ]
   },
   {
-   "name": "CentralBedfordshire/CB/25/03778/DOC",
-   "uid": "CB/25/03778/DOC",
-   "address": "Phase 3B Parcels 1 & 2, Houghton Regis North Site 1, Land on the northern edge of Houghton Regis",
-   "description": "Discharge of Condition 20 against planning permission ref. CB/12/03613/OUT (Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination. Development to comprise: up to 5,150 dwellings (Use Class C3); up to 202,500 sqm gross of additional development in Use Classes: A1, A2, A3 (retail), A4 (public house), A5 (take away); B1, B2, B8 (offices, industrial and storage and distribution); C1 (hotel), C2 (care home), D1 and D2 (community and leisure); car showroom; data centre; petrol filling station; car parking; primary substation; energy centre; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; engineering operations. All development, works and operations to be in accordance with the Development Parameters Schedule and Plans.)",
-   "start_date": "2025-11-26",
-   "authority_name": "Central Bedfordshire",
-   "area_name": "Central Bedfordshire",
-   "nation": "England",
-   "app_state": "Conditions",
-   "app_type": "Conditions",
-   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/25/03778/DOC/",
-   "lat": null,
-   "lng": null,
-   "light": "green",
-   "score": 2,
-   "reasons": [
-    "already permitted",
-    "speculative / no end-user"
-   ]
-  },
-  {
    "name": "Newport/25/1016",
    "uid": "25/1016",
    "address": "Quinn Radiators Celtic Way Celtic Lakes Newport NP10 8FS",
@@ -5269,6 +5249,27 @@
    "reasons": [
     "already permitted",
     "large campus"
+   ]
+  },
+  {
+   "name": "CentralBedfordshire/CB/25/03778/DOC",
+   "uid": "CB/25/03778/DOC",
+   "address": "Phase 3B Parcels 1 & 2, Houghton Regis North Site 1, Land on the northern edge of Houghton Regis",
+   "description": "Discharge of Condition 20 against planning permission ref. CB/12/03613/OUT (Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination. Development to comprise: up to 5,150 dwellings (Use Class C3); up to 202,500 sqm gross of additional development in Use Classes: A1, A2, A3 (retail), A4 (public house), A5 (take away); B1, B2, B8 (offices, industrial and storage and distribution); C1 (hotel), C2 (care home), D1 and D2 (community and leisure); car showroom; data centre; petrol filling station; car parking; primary substation; energy centre; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; engineering operations. All development, works and operations to be in accordance with the Development Parameters Schedule and Plans.)",
+   "start_date": "2025-11-26",
+   "authority_name": "Central Bedfordshire",
+   "area_name": "Central Bedfordshire",
+   "nation": "England",
+   "app_state": "Conditions",
+   "app_type": "Conditions",
+   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/25/03778/DOC/",
+   "lat": null,
+   "lng": null,
+   "light": "green",
+   "score": 2,
+   "reasons": [
+    "already permitted",
+    "speculative / no end-user"
    ]
   },
   {
@@ -5291,24 +5292,6 @@
     "speculative / no end-user",
     "brownfield / reuse"
    ]
-  },
-  {
-   "name": "Hertsmere/25/1668/VOC",
-   "uid": "25/1668/VOC",
-   "address": "Charleston Paddocks St Albans Road South Mimms Potters Bar Hertfordshire EN6 3ND",
-   "description": "Removal of condition 33 (restriction of use as a data centre) following grant of planning permission 23/1049/OUT.",
-   "start_date": "2025-11-21",
-   "authority_name": "Hertsmere",
-   "area_name": "Hertsmere",
-   "nation": "England",
-   "app_state": "Undecided",
-   "app_type": "Conditions",
-   "link": "https://www.planit.org.uk/planapplic/Hertsmere/25/1668/VOC/",
-   "lat": 51.686018,
-   "lng": -0.221111,
-   "light": "green",
-   "score": 0,
-   "reasons": []
   },
   {
    "name": "TowerHamlets/PA/25/01998/S",
@@ -5356,6 +5339,24 @@
    ]
   },
   {
+   "name": "Hertsmere/25/1668/VOC",
+   "uid": "25/1668/VOC",
+   "address": "Charleston Paddocks St Albans Road South Mimms Potters Bar Hertfordshire EN6 3ND",
+   "description": "Removal of condition 33 (restriction of use as a data centre) following grant of planning permission 23/1049/OUT.",
+   "start_date": "2025-11-21",
+   "authority_name": "Hertsmere",
+   "area_name": "Hertsmere",
+   "nation": "England",
+   "app_state": "Undecided",
+   "app_type": "Conditions",
+   "link": "https://www.planit.org.uk/planapplic/Hertsmere/25/1668/VOC/",
+   "lat": 51.686018,
+   "lng": -0.221111,
+   "light": "green",
+   "score": 0,
+   "reasons": []
+  },
+  {
    "name": "CentralBedfordshire/CB/25/03712/DOC",
    "uid": "CB/25/03712/DOC",
    "address": "Phase 4, Houghton Regis North 1, Land on the Northern edge of Houghton Regis",
@@ -5377,27 +5378,6 @@
    ]
   },
   {
-   "name": "Brent/25/3231",
-   "uid": "25/3231",
-   "address": "1-5 JVC Business Park & JVC House, 12 JVC Business Park, Priestley Way, London, NW2",
-   "description": "Details pursuant to Condition 7 (Remediation Report), of Variation of Conditions application reference: 21/3117, dated 01/12/2021 for Variation of condition 2 (development built in accordance to approved plans) to allow : Increase the size and height of pumphouse. amend sprinkler tanks Alterations to the gate/fencing towards the southern boundary and additional landscaping Podium of Full Planning Permission reference: 20/1828, dated 2nd October 2020, for Alterations and extensions to existing building to include roof plant and generator compound extension, external buildings to house sub-station, plant equipment and gate house, re-configuration of the car parking layout and provision of security fencing in association with its use as a data centre (Use Class B8) at JVC House",
-   "start_date": "2025-11-19",
-   "authority_name": "Brent",
-   "area_name": "Brent",
-   "nation": "England",
-   "app_state": "Permitted",
-   "app_type": "Conditions",
-   "link": "https://www.planit.org.uk/planapplic/Brent/25/3231/",
-   "lat": null,
-   "lng": null,
-   "light": "green",
-   "score": -3,
-   "reasons": [
-    "already permitted",
-    "brownfield / reuse"
-   ]
-  },
-  {
    "name": "Brent/25/3230",
    "uid": "25/3230",
    "address": "JVC Business Park & JVC House, Priestley Way and Former 717, 719 & 721 North Circular Road, Neasden, London, NW2",
@@ -5409,6 +5389,27 @@
    "app_state": "Permitted",
    "app_type": "Conditions",
    "link": "https://www.planit.org.uk/planapplic/Brent/25/3230/",
+   "lat": null,
+   "lng": null,
+   "light": "green",
+   "score": -3,
+   "reasons": [
+    "already permitted",
+    "brownfield / reuse"
+   ]
+  },
+  {
+   "name": "Brent/25/3231",
+   "uid": "25/3231",
+   "address": "1-5 JVC Business Park & JVC House, 12 JVC Business Park, Priestley Way, London, NW2",
+   "description": "Details pursuant to Condition 7 (Remediation Report), of Variation of Conditions application reference: 21/3117, dated 01/12/2021 for Variation of condition 2 (development built in accordance to approved plans) to allow : Increase the size and height of pumphouse. amend sprinkler tanks Alterations to the gate/fencing towards the southern boundary and additional landscaping Podium of Full Planning Permission reference: 20/1828, dated 2nd October 2020, for Alterations and extensions to existing building to include roof plant and generator compound extension, external buildings to house sub-station, plant equipment and gate house, re-configuration of the car parking layout and provision of security fencing in association with its use as a data centre (Use Class B8) at JVC House",
+   "start_date": "2025-11-19",
+   "authority_name": "Brent",
+   "area_name": "Brent",
+   "nation": "England",
+   "app_state": "Permitted",
+   "app_type": "Conditions",
+   "link": "https://www.planit.org.uk/planapplic/Brent/25/3231/",
    "lat": null,
    "lng": null,
    "light": "green",
@@ -5440,24 +5441,6 @@
    ]
   },
   {
-   "name": "Canterbury/CA/25/02094",
-   "uid": "CA/25/02094",
-   "address": "Shelford Farm Estate Broad Oak Road Canterbury Kent",
-   "description": "Proposed data centre building and compound, engineering operations, fencing, parking and associated works.",
-   "start_date": "2025-11-17",
-   "authority_name": "Canterbury",
-   "area_name": "Canterbury",
-   "nation": "England",
-   "app_state": "Undecided",
-   "app_type": "Full",
-   "link": "https://www.planit.org.uk/planapplic/Canterbury/CA/25/02094/",
-   "lat": 51.299252,
-   "lng": 1.104599,
-   "light": "green",
-   "score": 0,
-   "reasons": []
-  },
-  {
    "name": "SouthGloucestershire/P25/02634/RVC",
    "uid": "P25/02634/RVC",
    "address": "10 Goodrich Close Yate South Gloucestershire BS37 5YT",
@@ -5478,25 +5461,22 @@
    ]
   },
   {
-   "name": "CentralBedfordshire/CB/25/03646/NMA",
-   "uid": "CB/25/03646/NMA",
-   "address": "Local Centre Parcel, Linmere phase 1, Waterslade Way and Lime Tree Drive, Houghton Regis LU5 7AS",
-   "description": "Non-material amendment to planning permission CB/23/0387/RM (Reserved Matters: following Outline Application CB/12/03613/OUT (Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination. Development to comprise: up to 5,150 dwellings (Use Class C3); up to 202,500 sqm gross of additional development in Use Classes: A1, A2, A3 (retail), A4 (public house), A5 (take away); B1, B2, B8 (offices, industrial and storage and distribution); C1 (hotel), C2 (care home), D1 and D2 (community and leisure); car showroom; data centre; petrol filling station; car parking; primary substation; energy centre; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; engineering operations. All development, works and operations to be in accordance with the Development Parameters Schedule and Plans.) Reserved matters approval sought for layout, scale, appearance, landscaping and access relating to Local Centre Parcel, Phase 1) Amendments sought to the Neighbourhood Centre: 1. Omit all rear eastern retail ground floor windows. 2. Add external rear eastern door to convenience store. 3. Amend convenience store compound external gates, to provide dedicated means of escape door through compound wall to comply with Building Regulations. 4. Enlarge convenience store compound canopy. 5. Add convenience store compound brise soleil. 6. Amend retail rear eastern doors on site / ground floor plans generally from double to single leaf doors. 7. Addition of privacy screen to first floor apartments above convenience store.",
-   "start_date": "2025-11-14",
-   "authority_name": "Central Bedfordshire",
-   "area_name": "Central Bedfordshire",
+   "name": "Canterbury/CA/25/02094",
+   "uid": "CA/25/02094",
+   "address": "Shelford Farm Estate Broad Oak Road Canterbury Kent",
+   "description": "Proposed data centre building and compound, engineering operations, fencing, parking and associated works.",
+   "start_date": "2025-11-17",
+   "authority_name": "Canterbury",
+   "area_name": "Canterbury",
    "nation": "England",
-   "app_state": "Permitted",
-   "app_type": "Amendment",
-   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/25/03646/NMA/",
-   "lat": 51.919827,
-   "lng": -0.505685,
+   "app_state": "Undecided",
+   "app_type": "Full",
+   "link": "https://www.planit.org.uk/planapplic/Canterbury/CA/25/02094/",
+   "lat": 51.299252,
+   "lng": 1.104599,
    "light": "green",
-   "score": 2,
-   "reasons": [
-    "already permitted",
-    "speculative / no end-user"
-   ]
+   "score": 0,
+   "reasons": []
   },
   {
    "name": "WhiteHorse/P25/V2462/FUL",
@@ -5537,6 +5517,27 @@
    "reasons": [
     "already permitted",
     "smaller scale"
+   ]
+  },
+  {
+   "name": "CentralBedfordshire/CB/25/03646/NMA",
+   "uid": "CB/25/03646/NMA",
+   "address": "Local Centre Parcel, Linmere phase 1, Waterslade Way and Lime Tree Drive, Houghton Regis LU5 7AS",
+   "description": "Non-material amendment to planning permission CB/23/0387/RM (Reserved Matters: following Outline Application CB/12/03613/OUT (Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination. Development to comprise: up to 5,150 dwellings (Use Class C3); up to 202,500 sqm gross of additional development in Use Classes: A1, A2, A3 (retail), A4 (public house), A5 (take away); B1, B2, B8 (offices, industrial and storage and distribution); C1 (hotel), C2 (care home), D1 and D2 (community and leisure); car showroom; data centre; petrol filling station; car parking; primary substation; energy centre; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; engineering operations. All development, works and operations to be in accordance with the Development Parameters Schedule and Plans.) Reserved matters approval sought for layout, scale, appearance, landscaping and access relating to Local Centre Parcel, Phase 1) Amendments sought to the Neighbourhood Centre: 1. Omit all rear eastern retail ground floor windows. 2. Add external rear eastern door to convenience store. 3. Amend convenience store compound external gates, to provide dedicated means of escape door through compound wall to comply with Building Regulations. 4. Enlarge convenience store compound canopy. 5. Add convenience store compound brise soleil. 6. Amend retail rear eastern doors on site / ground floor plans generally from double to single leaf doors. 7. Addition of privacy screen to first floor apartments above convenience store.",
+   "start_date": "2025-11-14",
+   "authority_name": "Central Bedfordshire",
+   "area_name": "Central Bedfordshire",
+   "nation": "England",
+   "app_state": "Permitted",
+   "app_type": "Amendment",
+   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/25/03646/NMA/",
+   "lat": 51.919827,
+   "lng": -0.505685,
+   "light": "green",
+   "score": 2,
+   "reasons": [
+    "already permitted",
+    "speculative / no end-user"
    ]
   },
   {
@@ -5647,28 +5648,6 @@
    ]
   },
   {
-   "name": "Ealing/254196OPDCOB",
-   "uid": "254196OPDCOB",
-   "address": "Unit F 6 Premier Park Road London NW10 7NZ",
-   "description": "Demolition of existing warehouse (Class B8) and phased redevelopment of site to provide a 25, 281sqm (GEA) data centre (Class B8) comprising main data centre building (structure up to 30m above ground level) with roof mounted flues (up to 36m above ground level) and attached three storey ancillary office, modular power room gantry, containerised generator gantry, entrance pavilion, substation, boundary enclosures, internal access road, car and cycle parking, landscaping, and alterations to vehicular and pedestrian access from Premier Park Road. (out of borough)",
-   "start_date": "2025-11-03",
-   "authority_name": "Ealing",
-   "area_name": "Ealing",
-   "nation": "England",
-   "app_state": "Permitted",
-   "app_type": "Outline",
-   "link": "https://www.planit.org.uk/planapplic/Ealing/254196OPDCOB/",
-   "lat": 51.536964,
-   "lng": -0.271663,
-   "light": "green",
-   "score": -1,
-   "reasons": [
-    "already permitted",
-    "speculative / no end-user",
-    "brownfield / reuse"
-   ]
-  },
-  {
    "name": "WhiteHorse/P25/V2364/DIS",
    "uid": "P25/V2364/DIS",
    "address": "Land at former Didcot A Power Station Didcot OX11 7HA",
@@ -5682,6 +5661,28 @@
    "link": "https://www.planit.org.uk/planapplic/WhiteHorse/P25/V2364/DIS/",
    "lat": 51.623535,
    "lng": -1.260409,
+   "light": "green",
+   "score": -1,
+   "reasons": [
+    "already permitted",
+    "speculative / no end-user",
+    "brownfield / reuse"
+   ]
+  },
+  {
+   "name": "Ealing/254196OPDCOB",
+   "uid": "254196OPDCOB",
+   "address": "Unit F 6 Premier Park Road London NW10 7NZ",
+   "description": "Demolition of existing warehouse (Class B8) and phased redevelopment of site to provide a 25, 281sqm (GEA) data centre (Class B8) comprising main data centre building (structure up to 30m above ground level) with roof mounted flues (up to 36m above ground level) and attached three storey ancillary office, modular power room gantry, containerised generator gantry, entrance pavilion, substation, boundary enclosures, internal access road, car and cycle parking, landscaping, and alterations to vehicular and pedestrian access from Premier Park Road. (out of borough)",
+   "start_date": "2025-11-03",
+   "authority_name": "Ealing",
+   "area_name": "Ealing",
+   "nation": "England",
+   "app_state": "Permitted",
+   "app_type": "Outline",
+   "link": "https://www.planit.org.uk/planapplic/Ealing/254196OPDCOB/",
+   "lat": 51.536964,
+   "lng": -0.271663,
    "light": "green",
    "score": -1,
    "reasons": [
@@ -5712,27 +5713,6 @@
    ]
   },
   {
-   "name": "OldOakParkRoyal/25/0199/NMAOPDC",
-   "uid": "25/0199/NMAOPDC",
-   "address": "Chandos Road Trading Estate, Chandos Road, Park Royal, NW10 6NF",
-   "description": "Non-material amendment pursuant to planning permission 21/0150/REMOPDC dated 18/11/2021 for ‘Phase 1a Reserved Matters Application with full details of access, layout, scale, appearance and landscaping pursuant to outline planning permission reference 21/0013/OUTOPDC dated 07/09/2021 for a data centre (Use Class B8), generator building, plant, sub-station, hard and soft landscaping and associated works’ seeking changes to the external appearance of the data centre and generator building and other updates to the wider site.",
-   "start_date": "2025-10-30",
-   "authority_name": "Old Oak Park Royal",
-   "area_name": "Old Oak Park Royal",
-   "nation": "England",
-   "app_state": "Permitted",
-   "app_type": "Amendment",
-   "link": "https://www.planit.org.uk/planapplic/OldOakParkRoyal/25/0199/NMAOPDC/",
-   "lat": 51.527649,
-   "lng": -0.255321,
-   "light": "green",
-   "score": 2,
-   "reasons": [
-    "already permitted",
-    "speculative / no end-user"
-   ]
-  },
-  {
    "name": "Fylde/25/0646",
    "uid": "25/0646",
    "address": "LAND AT BLACKPOOL AIRPORT ENTERPRISE ZONE AIRPORT ACCESS ROAD FROM SQUIRES GATE LANE BLACKPOOL FY4 2QS",
@@ -5746,6 +5726,27 @@
    "link": "https://www.planit.org.uk/planapplic/Fylde/25/0646/",
    "lat": 53.778442,
    "lng": -3.041114,
+   "light": "green",
+   "score": 2,
+   "reasons": [
+    "already permitted",
+    "speculative / no end-user"
+   ]
+  },
+  {
+   "name": "OldOakParkRoyal/25/0199/NMAOPDC",
+   "uid": "25/0199/NMAOPDC",
+   "address": "Chandos Road Trading Estate, Chandos Road, Park Royal, NW10 6NF",
+   "description": "Non-material amendment pursuant to planning permission 21/0150/REMOPDC dated 18/11/2021 for ‘Phase 1a Reserved Matters Application with full details of access, layout, scale, appearance and landscaping pursuant to outline planning permission reference 21/0013/OUTOPDC dated 07/09/2021 for a data centre (Use Class B8), generator building, plant, sub-station, hard and soft landscaping and associated works’ seeking changes to the external appearance of the data centre and generator building and other updates to the wider site.",
+   "start_date": "2025-10-30",
+   "authority_name": "Old Oak Park Royal",
+   "area_name": "Old Oak Park Royal",
+   "nation": "England",
+   "app_state": "Permitted",
+   "app_type": "Amendment",
+   "link": "https://www.planit.org.uk/planapplic/OldOakParkRoyal/25/0199/NMAOPDC/",
+   "lat": 51.527649,
+   "lng": -0.255321,
    "light": "green",
    "score": 2,
    "reasons": [
@@ -5775,19 +5776,19 @@
    ]
   },
   {
-   "name": "SurreyHeath/25/1155/PCA",
-   "uid": "25/1155/PCA",
-   "address": "Land At Cody Technology Park And Ball Hill Ively Road Farnborough Hampshire",
-   "description": "Consultation from Rushmoor Borough Council in respect of application no. 25/00537/OUTPP for Outline planning application for phased development involving demolition of existing buildings and the erection of new flexible use employment floorspace (Use Classes E(g)(i)-(iii)/B2/B8 (including data centres) and associated works. All matters reserved except access at Land At Cody Technology Park And Ball Hill Ively Road Farnborough Hampshire",
+   "name": "Newark/25/SCO/00002",
+   "uid": "25/SCO/00002",
+   "address": "Land Within Former Rufford Colliery Rufford Colliery Lane Rainworth",
+   "description": "Request for EIA scoping opinion in respect of land within the former Rufford Colliery for mixed use development comprising data centre and residential development up to 400 dwellings.",
    "start_date": "2025-10-27",
-   "authority_name": "Surrey Heath",
-   "area_name": "Surrey Heath",
+   "authority_name": "Newark and Sherwood",
+   "area_name": "Newark and Sherwood",
    "nation": "England",
    "app_state": "Permitted",
    "app_type": "Outline",
-   "link": "https://www.planit.org.uk/planapplic/SurreyHeath/25/1155/PCA/",
-   "lat": null,
-   "lng": null,
+   "link": "https://www.planit.org.uk/planapplic/Newark/25/SCO/00002/",
+   "lat": 53.130743,
+   "lng": -1.111869,
    "light": "green",
    "score": -1,
    "reasons": [
@@ -5819,19 +5820,19 @@
    ]
   },
   {
-   "name": "Newark/25/SCO/00002",
-   "uid": "25/SCO/00002",
-   "address": "Land Within Former Rufford Colliery Rufford Colliery Lane Rainworth",
-   "description": "Request for EIA scoping opinion in respect of land within the former Rufford Colliery for mixed use development comprising data centre and residential development up to 400 dwellings.",
+   "name": "SurreyHeath/25/1155/PCA",
+   "uid": "25/1155/PCA",
+   "address": "Land At Cody Technology Park And Ball Hill Ively Road Farnborough Hampshire",
+   "description": "Consultation from Rushmoor Borough Council in respect of application no. 25/00537/OUTPP for Outline planning application for phased development involving demolition of existing buildings and the erection of new flexible use employment floorspace (Use Classes E(g)(i)-(iii)/B2/B8 (including data centres) and associated works. All matters reserved except access at Land At Cody Technology Park And Ball Hill Ively Road Farnborough Hampshire",
    "start_date": "2025-10-27",
-   "authority_name": "Newark and Sherwood",
-   "area_name": "Newark and Sherwood",
+   "authority_name": "Surrey Heath",
+   "area_name": "Surrey Heath",
    "nation": "England",
    "app_state": "Permitted",
    "app_type": "Outline",
-   "link": "https://www.planit.org.uk/planapplic/Newark/25/SCO/00002/",
-   "lat": 53.130743,
-   "lng": -1.111869,
+   "link": "https://www.planit.org.uk/planapplic/SurreyHeath/25/1155/PCA/",
+   "lat": null,
+   "lng": null,
    "light": "green",
    "score": -1,
    "reasons": [
@@ -5884,6 +5885,27 @@
    ]
   },
   {
+   "name": "CentralBedfordshire/CB/25/03400/RM",
+   "uid": "CB/25/03400/RM",
+   "address": "Parcels 4 and 5, Area 4, Houghton Regis North Site 1, Land on the northern edge of Houghton Regis",
+   "description": "Reserved Matters: following Outline application CB/12/03613/OUT (Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination. Development to comprise: up to 5,150 dwellings (Use Class C3); up to 202,500 sqm gross of additional development in Use Classes: A1, A2, A3 (retail), A4 (public house), A5 (take away); B1, B2, B8 (offices, industrial and storage and distribution); C1 (hotel), C2 (care home), D1 and D2 (community and leisure); car showroom; data centre; petrol filling station; car parking; primary substation; energy centre; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; engineering operations. All development, works and operations to be in accordance with the Development Parameters Schedule and Plans.). Approval of Access, Appearance, Landscaping, Layout and Scale for 259 dwellings and associated works.",
+   "start_date": "2025-10-23",
+   "authority_name": "Central Bedfordshire",
+   "area_name": "Central Bedfordshire",
+   "nation": "England",
+   "app_state": "Permitted",
+   "app_type": "Outline",
+   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/25/03400/RM/",
+   "lat": null,
+   "lng": null,
+   "light": "green",
+   "score": 2,
+   "reasons": [
+    "already permitted",
+    "speculative / no end-user"
+   ]
+  },
+  {
    "name": "Brent/25/2996",
    "uid": "25/2996",
    "address": "2025, Observation Applications, Not in Brent",
@@ -5906,19 +5928,19 @@
    ]
   },
   {
-   "name": "CentralBedfordshire/CB/25/03400/RM",
-   "uid": "CB/25/03400/RM",
-   "address": "Parcels 4 and 5, Area 4, Houghton Regis North Site 1, Land on the northern edge of Houghton Regis",
-   "description": "Reserved Matters: following Outline application CB/12/03613/OUT (Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination. Development to comprise: up to 5,150 dwellings (Use Class C3); up to 202,500 sqm gross of additional development in Use Classes: A1, A2, A3 (retail), A4 (public house), A5 (take away); B1, B2, B8 (offices, industrial and storage and distribution); C1 (hotel), C2 (care home), D1 and D2 (community and leisure); car showroom; data centre; petrol filling station; car parking; primary substation; energy centre; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; engineering operations. All development, works and operations to be in accordance with the Development Parameters Schedule and Plans.). Approval of Access, Appearance, Landscaping, Layout and Scale for 259 dwellings and associated works.",
-   "start_date": "2025-10-23",
+   "name": "CentralBedfordshire/CB/25/03382/DOC",
+   "uid": "CB/25/03382/DOC",
+   "address": "Phase 4, Parcel 6, Houghton Regis North 1, Sundon Road, Houghton Regis, LU5 5GX",
+   "description": "Discharge of Condition 20 against planning permission ref. CB/12/03613/OUT (Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination. Development to comprise: up to 5,150 dwellings (Use Class C3); up to 202,500 sqm gross of additional development in Use Classes: A1, A2, A3 (retail), A4 (public house), A5 (take away); B1, B2, B8 (offices, industrial and storage and distribution); C1 (hotel), C2 (care home), D1 and D2 (community and leisure); car showroom; data centre; petrol filling station; car parking; primary substation; energy centre; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; engineering operations. All development, works and operations to be in accordance with the Development Parameters Schedule and Plans)",
+   "start_date": "2025-10-22",
    "authority_name": "Central Bedfordshire",
    "area_name": "Central Bedfordshire",
    "nation": "England",
-   "app_state": "Permitted",
-   "app_type": "Outline",
-   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/25/03400/RM/",
-   "lat": null,
-   "lng": null,
+   "app_state": "Conditions",
+   "app_type": "Conditions",
+   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/25/03382/DOC/",
+   "lat": 51.917938,
+   "lng": -0.499234,
    "light": "green",
    "score": 2,
    "reasons": [
@@ -5948,17 +5970,17 @@
    ]
   },
   {
-   "name": "CentralBedfordshire/CB/25/03382/DOC",
-   "uid": "CB/25/03382/DOC",
-   "address": "Phase 4, Parcel 6, Houghton Regis North 1, Sundon Road, Houghton Regis, LU5 5GX",
-   "description": "Discharge of Condition 20 against planning permission ref. CB/12/03613/OUT (Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination. Development to comprise: up to 5,150 dwellings (Use Class C3); up to 202,500 sqm gross of additional development in Use Classes: A1, A2, A3 (retail), A4 (public house), A5 (take away); B1, B2, B8 (offices, industrial and storage and distribution); C1 (hotel), C2 (care home), D1 and D2 (community and leisure); car showroom; data centre; petrol filling station; car parking; primary substation; energy centre; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; engineering operations. All development, works and operations to be in accordance with the Development Parameters Schedule and Plans)",
-   "start_date": "2025-10-22",
+   "name": "CentralBedfordshire/CB/25/03320/RM",
+   "uid": "CB/25/03320/RM",
+   "address": "Phase 4 Parcel 1, Houghton Regis North 1, Sundon Road, Houghton Regis",
+   "description": "Reserved Matters following Outline Application (CB/12/03613/OUT) for up to 5,150 dwellings (Use Class C3); up to 202,500 sqm gross of additional development in Use Classes: A1, A2, A3 (retail), A4 (public house), A5 (take away); B1, B2, B8 (offices, industrial and storage and distribution); C1 (hotel), C2 (care home), D1 and D2 (community and leisure); car showroom; data centre; petrol filling station; car parking; primary substation; energy centre. Approval of all reserved matters for 58 dwellings.",
+   "start_date": "2025-10-17",
    "authority_name": "Central Bedfordshire",
    "area_name": "Central Bedfordshire",
    "nation": "England",
-   "app_state": "Conditions",
-   "app_type": "Conditions",
-   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/25/03382/DOC/",
+   "app_state": "Permitted",
+   "app_type": "Outline",
+   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/25/03320/RM/",
    "lat": 51.917938,
    "lng": -0.499234,
    "light": "green",
@@ -5986,27 +6008,6 @@
    "score": 0,
    "reasons": [
     "already permitted"
-   ]
-  },
-  {
-   "name": "CentralBedfordshire/CB/25/03320/RM",
-   "uid": "CB/25/03320/RM",
-   "address": "Phase 4 Parcel 1, Houghton Regis North 1, Sundon Road, Houghton Regis",
-   "description": "Reserved Matters following Outline Application (CB/12/03613/OUT) for up to 5,150 dwellings (Use Class C3); up to 202,500 sqm gross of additional development in Use Classes: A1, A2, A3 (retail), A4 (public house), A5 (take away); B1, B2, B8 (offices, industrial and storage and distribution); C1 (hotel), C2 (care home), D1 and D2 (community and leisure); car showroom; data centre; petrol filling station; car parking; primary substation; energy centre. Approval of all reserved matters for 58 dwellings.",
-   "start_date": "2025-10-17",
-   "authority_name": "Central Bedfordshire",
-   "area_name": "Central Bedfordshire",
-   "nation": "England",
-   "app_state": "Permitted",
-   "app_type": "Outline",
-   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/25/03320/RM/",
-   "lat": 51.917938,
-   "lng": -0.499234,
-   "light": "green",
-   "score": 2,
-   "reasons": [
-    "already permitted",
-    "speculative / no end-user"
    ]
   },
   {
@@ -6052,26 +6053,6 @@
    ]
   },
   {
-   "name": "Bucks/PL/25/4351/FA",
-   "uid": "PL/25/4351/FA",
-   "address": "Ridgeway Distribution Centre The Ridgeway Iver Buckinghamshire",
-   "description": "Demolition of all existing units and structures on site and redevelopment of site to provide data centre development comprising data centre building, MV building, 1 sprinkler water tank and pump building, security hut, substation compound including 2 switchrooms and electrical infrastructure, generator yard with 27 back-up generators, 1 diesel tank and re-fuelling area, water tanks, bin store, perimeter security fencing, car and cycle parking and associated ancillary site infrastructure.",
-   "start_date": "2025-10-15",
-   "authority_name": "Buckinghamshire",
-   "area_name": "Buckinghamshire",
-   "nation": "England",
-   "app_state": "Undecided",
-   "app_type": "Full",
-   "link": "https://www.planit.org.uk/planapplic/Bucks/PL/25/4351/FA/",
-   "lat": 51.513933,
-   "lng": -0.509589,
-   "light": "green",
-   "score": -3,
-   "reasons": [
-    "brownfield / reuse"
-   ]
-  },
-  {
    "name": "Anglesey/GWY/2025/1",
    "uid": "GWY/2025/1",
    "address": "Tir yn a ger yr hen Safle Ferodo / Land At And Adjacent To The Former Ferodo Site, Griffiths Crossing, Caernarfon, LL55 1TP",
@@ -6094,27 +6075,6 @@
    ]
   },
   {
-   "name": "CentralBedfordshire/CB/25/03289/DOC",
-   "uid": "CB/25/03289/DOC",
-   "address": "Phase 4, Parcel 6, Houghton Regis North 1, Sundon Road, Houghton Regis, LU5 5GX",
-   "description": "Discharge of Conditions 8, 24, 26, 29, 32, 33 & 35 against planning permission (CB/12/03613/OUT) (Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination. Development to comprise: up to 5,150 dwellings (Use Class C3); up to 202,500 sqm gross of additional development in Use Classes: A1, A2, A3 (retail), A4 (public house), A5 (take away); B1, B2, B8 (offices, industrial and storage and distribution); C1 (hotel), C2 (care home), D1 and D2 (community and leisure); car showroom; data centre; petrol filling station; car parking; primary substation; energy centre; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; engineering operations. All development, works and operations to be in accordance with the Development Parameters Schedule and Plans). Please see supporting Covering Letter for details",
-   "start_date": "2025-10-15",
-   "authority_name": "Central Bedfordshire",
-   "area_name": "Central Bedfordshire",
-   "nation": "England",
-   "app_state": "Conditions",
-   "app_type": "Conditions",
-   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/25/03289/DOC/",
-   "lat": 51.917938,
-   "lng": -0.499234,
-   "light": "green",
-   "score": 2,
-   "reasons": [
-    "already permitted",
-    "speculative / no end-user"
-   ]
-  },
-  {
    "name": "CentralBedfordshire/CB/25/03288/DOC",
    "uid": "CB/25/03288/DOC",
    "address": "Phase 4, Parcel 1, Houghton Regis North 1, Sundon Road, Houghton Regis, LU5 5GX",
@@ -6126,6 +6086,47 @@
    "app_state": "Conditions",
    "app_type": "Conditions",
    "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/25/03288/DOC/",
+   "lat": 51.917938,
+   "lng": -0.499234,
+   "light": "green",
+   "score": 2,
+   "reasons": [
+    "already permitted",
+    "speculative / no end-user"
+   ]
+  },
+  {
+   "name": "Bucks/PL/25/4351/FA",
+   "uid": "PL/25/4351/FA",
+   "address": "Ridgeway Distribution Centre The Ridgeway Iver Buckinghamshire",
+   "description": "Demolition of all existing units and structures on site and redevelopment of site to provide data centre development comprising data centre building, MV building, 1 sprinkler water tank and pump building, security hut, substation compound including 2 switchrooms and electrical infrastructure, generator yard with 27 back-up generators, 1 diesel tank and re-fuelling area, water tanks, bin store, perimeter security fencing, car and cycle parking and associated ancillary site infrastructure.",
+   "start_date": "2025-10-15",
+   "authority_name": "Buckinghamshire",
+   "area_name": "Buckinghamshire",
+   "nation": "England",
+   "app_state": "Undecided",
+   "app_type": "Full",
+   "link": "https://www.planit.org.uk/planapplic/Bucks/PL/25/4351/FA/",
+   "lat": 51.513933,
+   "lng": -0.509589,
+   "light": "green",
+   "score": -3,
+   "reasons": [
+    "brownfield / reuse"
+   ]
+  },
+  {
+   "name": "CentralBedfordshire/CB/25/03289/DOC",
+   "uid": "CB/25/03289/DOC",
+   "address": "Phase 4, Parcel 6, Houghton Regis North 1, Sundon Road, Houghton Regis, LU5 5GX",
+   "description": "Discharge of Conditions 8, 24, 26, 29, 32, 33 & 35 against planning permission (CB/12/03613/OUT) (Outline planning permission with the details of access, appearance, landscaping, layout and scale reserved for later determination. Development to comprise: up to 5,150 dwellings (Use Class C3); up to 202,500 sqm gross of additional development in Use Classes: A1, A2, A3 (retail), A4 (public house), A5 (take away); B1, B2, B8 (offices, industrial and storage and distribution); C1 (hotel), C2 (care home), D1 and D2 (community and leisure); car showroom; data centre; petrol filling station; car parking; primary substation; energy centre; and for the laying out of the buildings; routes and open spaces within the development; and all associated works and operations including but not limited to: demolition; earthworks; engineering operations. All development, works and operations to be in accordance with the Development Parameters Schedule and Plans). Please see supporting Covering Letter for details",
+   "start_date": "2025-10-15",
+   "authority_name": "Central Bedfordshire",
+   "area_name": "Central Bedfordshire",
+   "nation": "England",
+   "app_state": "Conditions",
+   "app_type": "Conditions",
+   "link": "https://www.planit.org.uk/planapplic/CentralBedfordshire/CB/25/03289/DOC/",
    "lat": 51.917938,
    "lng": -0.499234,
    "light": "green",
